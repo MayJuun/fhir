@@ -169,9 +169,7 @@ QuestionnaireResponseAnswer _$QuestionnaireResponseAnswerFromJson(
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     valueBoolean: json['valueBoolean'] as bool,
-    valueDecimal: json['valueDecimal'] == null
-        ? null
-        : Decimal.fromJson(json['valueDecimal'] as String),
+    valueDecimal: (json['valueDecimal'] as num)?.toDouble(),
     valueInteger: json['valueInteger'] as int,
     valueDate: json['valueDate'] == null
         ? null
@@ -222,7 +220,7 @@ Map<String, dynamic> _$QuestionnaireResponseAnswerToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('valueBoolean', instance.valueBoolean);
-  writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal);
   writeNotNull('valueInteger', instance.valueInteger);
   writeNotNull('valueDate', instance.valueDate?.toJson());
   writeNotNull('valueDateTime', instance.valueDateTime?.toJson());

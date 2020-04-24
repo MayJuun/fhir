@@ -75,7 +75,7 @@ class ObservationDefinitionQuantitativeDetails {
   List<Extension> modifierExtension;
   CodeableConcept customaryUnit;
   CodeableConcept unit;
-  Decimal conversionFactor;
+  double conversionFactor;
   int decimalPrecision;
 
   ObservationDefinitionQuantitativeDetails({

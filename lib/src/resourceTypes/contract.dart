@@ -284,7 +284,7 @@ class ContractAnswer {
   List<Extension> extension;
   List<Extension> modifierExtension;
   bool valueBoolean;
-  Decimal valueDecimal;
+  double valueDecimal;
   int valueInteger;
   Date valueDate;
   FhirDateTime valueDateTime;
@@ -400,8 +400,8 @@ class ContractValuedItem {
   FhirDateTime effectiveTime;
   Quantity quantity;
   Money unitPrice;
-  Decimal factor;
-  Decimal points;
+  double factor;
+  double points;
   Money net;
   String payment;
   FhirDateTime paymentDate;

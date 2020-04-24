@@ -11,7 +11,7 @@ part 'duration.g.dart';
 class Duration {
   String id;
   List<Extension> extension;
-  Decimal value;
+  double value;
   AmountComparator comparator;
   String unit;
   FhirUri system;

@@ -48,7 +48,7 @@ class ChargeItem {
   Reference costCenter;
   Quantity quantity;
   List<CodeableConcept> bodysite;
-  Decimal factorOverride;
+  double factorOverride;
   Money priceOverride;
   String overrideReason;
   Reference enterer;

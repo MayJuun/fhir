@@ -66,9 +66,7 @@ Coverage _$CoverageFromJson(Map<String, dynamic> json) {
             ? null
             : CoverageClass.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    order: json['order'] == null
-        ? null
-        : PositiveInt.fromJson(json['order'] as String),
+    order: json['order'] as int,
     network: json['network'] as String,
     costToBeneficiary: (json['costToBeneficiary'] as List)
         ?.map((e) => e == null
@@ -115,7 +113,7 @@ Map<String, dynamic> _$CoverageToJson(Coverage instance) {
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('payor', instance.payor?.map((e) => e?.toJson())?.toList());
   writeNotNull('clas', instance.clas?.map((e) => e?.toJson())?.toList());
-  writeNotNull('order', instance.order?.toJson());
+  writeNotNull('order', instance.order);
   writeNotNull('network', instance.network);
   writeNotNull('costToBeneficiary',
       instance.costToBeneficiary?.map((e) => e?.toJson())?.toList());

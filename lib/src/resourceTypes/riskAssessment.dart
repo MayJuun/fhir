@@ -87,10 +87,10 @@ class RiskAssessmentPrediction {
   List<Extension> extension;
   List<Extension> modifierExtension;
   CodeableConcept outcome;
-  Decimal probabilityDecimal;
+  double probabilityDecimal;
   Range probabilityRange;
   CodeableConcept qualitativeRisk;
-  Decimal relativeRisk;
+  double relativeRisk;
   Period whenPeriod;
   Range whenRange;
   String rationale;

@@ -156,9 +156,7 @@ AccountCoverage _$AccountCoverageFromJson(Map<String, dynamic> json) {
     coverage: json['coverage'] == null
         ? null
         : Reference.fromJson(json['coverage'] as Map<String, dynamic>),
-    priority: json['priority'] == null
-        ? null
-        : PositiveInt.fromJson(json['priority'] as String),
+    priority: json['priority'] as int,
   );
 }
 
@@ -177,7 +175,7 @@ Map<String, dynamic> _$AccountCoverageToJson(AccountCoverage instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('coverage', instance.coverage?.toJson());
-  writeNotNull('priority', instance.priority?.toJson());
+  writeNotNull('priority', instance.priority);
   return val;
 }
 

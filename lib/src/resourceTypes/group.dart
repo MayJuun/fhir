@@ -33,7 +33,7 @@ class Group {
   bool actual;
   CodeableConcept code;
   String name;
-  UnsignedInt quantity;
+  int quantity;
   Reference managingEntity;
   List<GroupCharacteristic> characteristic;
   List<GroupMember> member;

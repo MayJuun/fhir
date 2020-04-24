@@ -26,9 +26,7 @@ Bundle _$BundleFromJson(Map<String, dynamic> json) {
     timestamp: json['timestamp'] == null
         ? null
         : Instant.fromJson(json['timestamp'] as String),
-    total: json['total'] == null
-        ? null
-        : UnsignedInt.fromJson(json['total'] as String),
+    total: json['total'] as int,
     link: (json['link'] as List)
         ?.map((e) =>
             e == null ? null : BundleLink.fromJson(e as Map<String, dynamic>))
@@ -60,7 +58,7 @@ Map<String, dynamic> _$BundleToJson(Bundle instance) {
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('type', instance.type);
   writeNotNull('timestamp', instance.timestamp?.toJson());
-  writeNotNull('total', instance.total?.toJson());
+  writeNotNull('total', instance.total);
   writeNotNull('link', instance.link?.map((e) => e?.toJson())?.toList());
   writeNotNull('entry', instance.entry?.map((e) => e?.toJson())?.toList());
   writeNotNull('signature', instance.signature?.toJson());
@@ -120,7 +118,7 @@ BundleEntry _$BundleEntryFromJson(Map<String, dynamic> json) {
     fullUrl: json['fullUrl'] == null
         ? null
         : FhirUri.fromJson(json['fullUrl'] as String),
-    resource: json['resource'] == null ? null : resourceList(json['resource']),
+    resource: json['resource'],
     search: json['search'] == null
         ? null
         : BundleSearch.fromJson(json['search'] as Map<String, dynamic>),
@@ -168,9 +166,7 @@ BundleSearch _$BundleSearchFromJson(Map<String, dynamic> json) {
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     mode: json['mode'] as String,
-    score: json['score'] == null
-        ? null
-        : Decimal.fromJson(json['score'] as String),
+    score: (json['score'] as num)?.toDouble(),
   );
 }
 
@@ -189,7 +185,7 @@ Map<String, dynamic> _$BundleSearchToJson(BundleSearch instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('mode', instance.mode);
-  writeNotNull('score', instance.score?.toJson());
+  writeNotNull('score', instance.score);
   return val;
 }
 
@@ -257,7 +253,7 @@ BundleResponse _$BundleResponseFromJson(Map<String, dynamic> json) {
     lastModified: json['lastModified'] == null
         ? null
         : Instant.fromJson(json['lastModified'] as String),
-    outcome: json['outcome'] == null ? null : resourceList(json['outcome']),
+    outcome: json['outcome'],
   );
 }
 

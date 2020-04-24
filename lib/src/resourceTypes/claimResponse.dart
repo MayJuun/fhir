@@ -107,7 +107,7 @@ class ClaimResponseItem {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt itemSequence;
+  int itemSequence;
   List<PositiveInt> noteNumber;
   List<ClaimResponseAdjudication> adjudication;
   List<ClaimResponseDetail> detail;
@@ -135,7 +135,7 @@ class ClaimResponseAdjudication {
   CodeableConcept category;
   CodeableConcept reason;
   Money amount;
-  Decimal value;
+  double value;
 
   ClaimResponseAdjudication({
     this.id,
@@ -157,7 +157,7 @@ class ClaimResponseDetail {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt detailSequence;
+  int detailSequence;
   List<PositiveInt> noteNumber;
   List<ClaimResponseAdjudication> adjudication;
   List<ClaimResponseSubDetail> subDetail;
@@ -182,7 +182,7 @@ class ClaimResponseSubDetail {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt subDetailSequence;
+  int subDetailSequence;
   List<PositiveInt> noteNumber;
   List<ClaimResponseAdjudication> adjudication;
 
@@ -219,7 +219,7 @@ class ClaimResponseAddItem {
   Reference locationReference;
   Quantity quantity;
   Money unitPrice;
-  Decimal factor;
+  double factor;
   Money net;
   CodeableConcept bodySite;
   List<CodeableConcept> subSite;
@@ -268,7 +268,7 @@ class ClaimResponseDetail1 {
   List<CodeableConcept> modifier;
   Quantity quantity;
   Money unitPrice;
-  Decimal factor;
+  double factor;
   Money net;
   List<PositiveInt> noteNumber;
   List<ClaimResponseAdjudication> adjudication;
@@ -303,7 +303,7 @@ class ClaimResponseSubDetail1 {
   List<CodeableConcept> modifier;
   Quantity quantity;
   Money unitPrice;
-  Decimal factor;
+  double factor;
   Money net;
   List<PositiveInt> noteNumber;
   List<ClaimResponseAdjudication> adjudication;
@@ -382,7 +382,7 @@ class ClaimResponseProcessNote {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt number;
+  int number;
   String type;
   String text;
   CodeableConcept language;
@@ -407,7 +407,7 @@ class ClaimResponseInsurance {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt sequence;
+  int sequence;
   bool focal;
   Reference coverage;
   String businessArrangement;
@@ -434,9 +434,9 @@ class ClaimResponseError {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt itemSequence;
-  PositiveInt detailSequence;
-  PositiveInt subDetailSequence;
+  int itemSequence;
+  int detailSequence;
+  int subDetailSequence;
   CodeableConcept code;
 
   ClaimResponseError({

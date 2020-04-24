@@ -201,9 +201,7 @@ TaskRestriction _$TaskRestrictionFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    repetitions: json['repetitions'] == null
-        ? null
-        : PositiveInt.fromJson(json['repetitions'] as String),
+    repetitions: json['repetitions'] as int,
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -228,7 +226,7 @@ Map<String, dynamic> _$TaskRestrictionToJson(TaskRestriction instance) {
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('repetitions', instance.repetitions?.toJson());
+  writeNotNull('repetitions', instance.repetitions);
   writeNotNull('period', instance.period?.toJson());
   writeNotNull(
       'recipient', instance.recipient?.map((e) => e?.toJson())?.toList());
@@ -265,9 +263,7 @@ TaskInput _$TaskInputFromJson(Map<String, dynamic> json) {
     valueDateTime: json['valueDateTime'] == null
         ? null
         : FhirDateTime.fromJson(json['valueDateTime'] as String),
-    valueDecimal: json['valueDecimal'] == null
-        ? null
-        : Decimal.fromJson(json['valueDecimal'] as String),
+    valueDecimal: (json['valueDecimal'] as num)?.toDouble(),
     valueId:
         json['valueId'] == null ? null : Id.fromJson(json['valueId'] as String),
     valueInstant: json['valueInstant'] == null
@@ -280,16 +276,12 @@ TaskInput _$TaskInputFromJson(Map<String, dynamic> json) {
     valueOid: json['valueOid'] == null
         ? null
         : Oid.fromJson(json['valueOid'] as String),
-    valuePositiveInt: json['valuePositiveInt'] == null
-        ? null
-        : PositiveInt.fromJson(json['valuePositiveInt'] as String),
+    valuePositiveInt: json['valuePositiveInt'] as int,
     valueString: json['valueString'] as String,
     valueTime: json['valueTime'] == null
         ? null
         : Time.fromJson(json['valueTime'] as String),
-    valueUnsignedInt: json['valueUnsignedInt'] == null
-        ? null
-        : UnsignedInt.fromJson(json['valueUnsignedInt'] as String),
+    valueUnsignedInt: json['valueUnsignedInt'] as int,
     valueUri: json['valueUri'] == null
         ? null
         : FhirUri.fromJson(json['valueUri'] as String),
@@ -426,16 +418,16 @@ Map<String, dynamic> _$TaskInputToJson(TaskInput instance) {
   writeNotNull('valueCode', instance.valueCode?.toJson());
   writeNotNull('valueDate', instance.valueDate?.toJson());
   writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
-  writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal);
   writeNotNull('valueId', instance.valueId?.toJson());
   writeNotNull('valueInstant', instance.valueInstant?.toJson());
   writeNotNull('valueInteger', instance.valueInteger);
   writeNotNull('valueMarkdown', instance.valueMarkdown?.toJson());
   writeNotNull('valueOid', instance.valueOid?.toJson());
-  writeNotNull('valuePositiveInt', instance.valuePositiveInt?.toJson());
+  writeNotNull('valuePositiveInt', instance.valuePositiveInt);
   writeNotNull('valueString', instance.valueString);
   writeNotNull('valueTime', instance.valueTime?.toJson());
-  writeNotNull('valueUnsignedInt', instance.valueUnsignedInt?.toJson());
+  writeNotNull('valueUnsignedInt', instance.valueUnsignedInt);
   writeNotNull('valueUri', instance.valueUri?.toJson());
   writeNotNull('valueUrl', instance.valueUrl?.toJson());
   writeNotNull('valueUuid', instance.valueUuid?.toJson());
@@ -505,9 +497,7 @@ TaskOutput _$TaskOutputFromJson(Map<String, dynamic> json) {
     valueDateTime: json['valueDateTime'] == null
         ? null
         : FhirDateTime.fromJson(json['valueDateTime'] as String),
-    valueDecimal: json['valueDecimal'] == null
-        ? null
-        : Decimal.fromJson(json['valueDecimal'] as String),
+    valueDecimal: (json['valueDecimal'] as num)?.toDouble(),
     valueId:
         json['valueId'] == null ? null : Id.fromJson(json['valueId'] as String),
     valueInstant: json['valueInstant'] == null
@@ -520,16 +510,12 @@ TaskOutput _$TaskOutputFromJson(Map<String, dynamic> json) {
     valueOid: json['valueOid'] == null
         ? null
         : Oid.fromJson(json['valueOid'] as String),
-    valuePositiveInt: json['valuePositiveInt'] == null
-        ? null
-        : PositiveInt.fromJson(json['valuePositiveInt'] as String),
+    valuePositiveInt: json['valuePositiveInt'] as int,
     valueString: json['valueString'] as String,
     valueTime: json['valueTime'] == null
         ? null
         : Time.fromJson(json['valueTime'] as String),
-    valueUnsignedInt: json['valueUnsignedInt'] == null
-        ? null
-        : UnsignedInt.fromJson(json['valueUnsignedInt'] as String),
+    valueUnsignedInt: json['valueUnsignedInt'] as int,
     valueUri: json['valueUri'] == null
         ? null
         : FhirUri.fromJson(json['valueUri'] as String),
@@ -666,16 +652,16 @@ Map<String, dynamic> _$TaskOutputToJson(TaskOutput instance) {
   writeNotNull('valueCode', instance.valueCode?.toJson());
   writeNotNull('valueDate', instance.valueDate?.toJson());
   writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
-  writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal);
   writeNotNull('valueId', instance.valueId?.toJson());
   writeNotNull('valueInstant', instance.valueInstant?.toJson());
   writeNotNull('valueInteger', instance.valueInteger);
   writeNotNull('valueMarkdown', instance.valueMarkdown?.toJson());
   writeNotNull('valueOid', instance.valueOid?.toJson());
-  writeNotNull('valuePositiveInt', instance.valuePositiveInt?.toJson());
+  writeNotNull('valuePositiveInt', instance.valuePositiveInt);
   writeNotNull('valueString', instance.valueString);
   writeNotNull('valueTime', instance.valueTime?.toJson());
-  writeNotNull('valueUnsignedInt', instance.valueUnsignedInt?.toJson());
+  writeNotNull('valueUnsignedInt', instance.valueUnsignedInt);
   writeNotNull('valueUri', instance.valueUri?.toJson());
   writeNotNull('valueUrl', instance.valueUrl?.toJson());
   writeNotNull('valueUuid', instance.valueUuid?.toJson());

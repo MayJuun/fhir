@@ -124,7 +124,7 @@ class MedicationRequestDispenseRequest {
   MedicationRequestInitialFill initialFill;
   Duration dispenseInterval;
   Period validityPeriod;
-  UnsignedInt numberOfRepeatsAllowed;
+  int numberOfRepeatsAllowed;
   Quantity quantity;
   Duration expectedSupplyDuration;
   Reference performer;

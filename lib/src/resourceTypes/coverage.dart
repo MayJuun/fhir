@@ -39,7 +39,7 @@ class Coverage {
   Period period;
   List<Reference> payor;
   List<CoverageClass> clas;
-  PositiveInt order;
+  int order;
   String network;
   List<CoverageCostToBeneficiary> costToBeneficiary;
   bool subrogation;

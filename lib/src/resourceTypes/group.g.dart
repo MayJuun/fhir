@@ -41,9 +41,7 @@ Group _$GroupFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     name: json['name'] as String,
-    quantity: json['quantity'] == null
-        ? null
-        : UnsignedInt.fromJson(json['quantity'] as String),
+    quantity: json['quantity'] as int,
     managingEntity: json['managingEntity'] == null
         ? null
         : Reference.fromJson(json['managingEntity'] as Map<String, dynamic>),
@@ -85,7 +83,7 @@ Map<String, dynamic> _$GroupToJson(Group instance) {
   writeNotNull('actual', instance.actual);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('name', instance.name);
-  writeNotNull('quantity', instance.quantity?.toJson());
+  writeNotNull('quantity', instance.quantity);
   writeNotNull('managingEntity', instance.managingEntity?.toJson());
   writeNotNull('characteristic',
       instance.characteristic?.map((e) => e?.toJson())?.toList());

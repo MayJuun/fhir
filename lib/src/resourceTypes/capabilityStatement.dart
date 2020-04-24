@@ -351,7 +351,7 @@ class CapabilityStatementMessaging {
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<CapabilityStatementEndpoint> endpoint;
-  UnsignedInt reliableCache;
+  int reliableCache;
   Markdown documentation;
   List<CapabilityStatementSupportedMessage> supportedMessage;
 

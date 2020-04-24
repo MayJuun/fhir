@@ -11,11 +11,11 @@ class SampledData {
   String id;
   List<Extension> extension;
   Quantity origin;
-  Decimal period;
-  Decimal factor;
-  Decimal lowerLimit;
-  Decimal upperLimit;
-  PositiveInt dimensions;
+  double period;
+  double factor;
+  double lowerLimit;
+  double upperLimit;
+  int dimensions;
   String data;
 
   SampledData({

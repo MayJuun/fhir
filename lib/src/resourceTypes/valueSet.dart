@@ -242,7 +242,7 @@ class ValueSetParameter {
   String valueString;
   bool valueBoolean;
   int valueInteger;
-  Decimal valueDecimal;
+  double valueDecimal;
   FhirUri valueUri;
   Code valueCode;
   FhirDateTime valueDateTime;

@@ -173,9 +173,7 @@ EpisodeOfCareDiagnosis _$EpisodeOfCareDiagnosisFromJson(
     role: json['role'] == null
         ? null
         : CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
-    rank: json['rank'] == null
-        ? null
-        : PositiveInt.fromJson(json['rank'] as String),
+    rank: json['rank'] as int,
   );
 }
 
@@ -196,6 +194,6 @@ Map<String, dynamic> _$EpisodeOfCareDiagnosisToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('condition', instance.condition?.toJson());
   writeNotNull('role', instance.role?.toJson());
-  writeNotNull('rank', instance.rank?.toJson());
+  writeNotNull('rank', instance.rank);
   return val;
 }

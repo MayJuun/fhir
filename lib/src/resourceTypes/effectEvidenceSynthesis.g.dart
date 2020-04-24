@@ -325,9 +325,7 @@ EffectEvidenceSynthesisEffectEstimate
         ? null
         : CodeableConcept.fromJson(
             json['variantState'] as Map<String, dynamic>),
-    value: json['value'] == null
-        ? null
-        : Decimal.fromJson(json['value'] as String),
+    value: (json['value'] as num)?.toDouble(),
     unitOfMeasure: json['unitOfMeasure'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -359,7 +357,7 @@ Map<String, dynamic> _$EffectEvidenceSynthesisEffectEstimateToJson(
   writeNotNull('description', instance.description);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('variantState', instance.variantState?.toJson());
-  writeNotNull('value', instance.value?.toJson());
+  writeNotNull('value', instance.value);
   writeNotNull('unitOfMeasure', instance.unitOfMeasure?.toJson());
   writeNotNull('precisionEstimate',
       instance.precisionEstimate?.map((e) => e?.toJson())?.toList());
@@ -382,12 +380,9 @@ EffectEvidenceSynthesisPrecisionEstimate
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    level: json['level'] == null
-        ? null
-        : Decimal.fromJson(json['level'] as String),
-    from:
-        json['from'] == null ? null : Decimal.fromJson(json['from'] as String),
-    to: json['to'] == null ? null : Decimal.fromJson(json['to'] as String),
+    level: (json['level'] as num)?.toDouble(),
+    from: (json['from'] as num)?.toDouble(),
+    to: (json['to'] as num)?.toDouble(),
   );
 }
 
@@ -407,9 +402,9 @@ Map<String, dynamic> _$EffectEvidenceSynthesisPrecisionEstimateToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', instance.type?.toJson());
-  writeNotNull('level', instance.level?.toJson());
-  writeNotNull('from', instance.from?.toJson());
-  writeNotNull('to', instance.to?.toJson());
+  writeNotNull('level', instance.level);
+  writeNotNull('from', instance.from);
+  writeNotNull('to', instance.to);
   return val;
 }
 

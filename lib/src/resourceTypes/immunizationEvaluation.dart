@@ -36,9 +36,9 @@ class ImmunizationEvaluation {
   List<CodeableConcept> doseStatusReason;
   String description;
   String series;
-  PositiveInt doseNumberPositiveInt;
+  int doseNumberPositiveInt;
   String doseNumberString;
-  PositiveInt seriesDosesPositiveInt;
+  int seriesDosesPositiveInt;
   String seriesDosesString;
 
   ImmunizationEvaluation({

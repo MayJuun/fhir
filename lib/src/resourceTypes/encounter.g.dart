@@ -321,9 +321,7 @@ EncounterDiagnosis _$EncounterDiagnosisFromJson(Map<String, dynamic> json) {
     use: json['use'] == null
         ? null
         : CodeableConcept.fromJson(json['use'] as Map<String, dynamic>),
-    rank: json['rank'] == null
-        ? null
-        : PositiveInt.fromJson(json['rank'] as String),
+    rank: json['rank'] as int,
   );
 }
 
@@ -343,7 +341,7 @@ Map<String, dynamic> _$EncounterDiagnosisToJson(EncounterDiagnosis instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('condition', instance.condition?.toJson());
   writeNotNull('use', instance.use?.toJson());
-  writeNotNull('rank', instance.rank?.toJson());
+  writeNotNull('rank', instance.rank);
   return val;
 }
 

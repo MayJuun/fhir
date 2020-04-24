@@ -36,12 +36,12 @@ class Appointment {
   CodeableConcept appointmentType;
   List<CodeableConcept> reasonCode;
   List<Reference> reasonReference;
-  UnsignedInt priority;
+  int priority;
   String description;
   List<Reference> supportingInformation;
   Instant start;
   Instant end;
-  PositiveInt minutesDuration;
+  int minutesDuration;
   List<Reference> slot;
   FhirDateTime created;
   String comment;

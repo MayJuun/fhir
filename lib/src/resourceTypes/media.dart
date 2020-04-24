@@ -46,10 +46,10 @@ class Media {
   CodeableConcept bodySite;
   String deviceName;
   Reference device;
-  PositiveInt height;
-  PositiveInt width;
-  PositiveInt frames;
-  Decimal duration;
+  int height;
+  int width;
+  int frames;
+  double duration;
   Attachment content;
   List<Annotation> note;
 

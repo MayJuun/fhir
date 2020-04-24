@@ -94,7 +94,7 @@ class EpisodeOfCareDiagnosis {
   List<Extension> modifierExtension;
   Reference condition;
   CodeableConcept role;
-  PositiveInt rank;
+  int rank;
 
   EpisodeOfCareDiagnosis({
     this.id,

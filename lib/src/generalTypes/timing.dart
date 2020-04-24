@@ -39,20 +39,20 @@ class TimingRepeat {
   Duration boundsDuration;
   Range boundsRange;
   Period boundsPeriod;
-  PositiveInt count;
-  PositiveInt countMax;
-  Decimal duration;
-  Decimal durationMax;
+  int count;
+  int countMax;
+  double duration;
+  double durationMax;
   TimingUnit durationUnit;
-  PositiveInt frequency;
-  PositiveInt frequencyMax;
-  Decimal period;
-  Decimal periodMax;
+  int frequency;
+  int frequencyMax;
+  double period;
+  double periodMax;
   TimingUnit periodUnit;
   List<Code> dayOfWeek;
   List<Time> timeOfDay;
   List<TimingWhen> when;
-  UnsignedInt offset;
+  int offset;
 
   TimingRepeat({
     this.id,

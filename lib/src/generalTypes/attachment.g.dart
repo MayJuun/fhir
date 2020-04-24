@@ -23,9 +23,7 @@ Attachment _$AttachmentFromJson(Map<String, dynamic> json) {
         ? null
         : Base64Binary.fromJson(json['data'] as String),
     url: json['url'] == null ? null : Url.fromJson(json['url'] as String),
-    size: json['size'] == null
-        ? null
-        : UnsignedInt.fromJson(json['size'] as String),
+    size: json['size'] as int,
     hash: json['hash'] == null
         ? null
         : Base64Binary.fromJson(json['hash'] as String),
@@ -52,7 +50,7 @@ Map<String, dynamic> _$AttachmentToJson(Attachment instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('data', instance.data?.toJson());
   writeNotNull('url', instance.url?.toJson());
-  writeNotNull('size', instance.size?.toJson());
+  writeNotNull('size', instance.size);
   writeNotNull('hash', instance.hash?.toJson());
   writeNotNull('title', instance.title);
   writeNotNull('creation', instance.creation?.toJson());

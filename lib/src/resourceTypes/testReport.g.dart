@@ -39,9 +39,7 @@ TestReport _$TestReportFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(json['testScript'] as Map<String, dynamic>),
     result: json['result'] as String,
-    score: json['score'] == null
-        ? null
-        : Decimal.fromJson(json['score'] as String),
+    score: (json['score'] as num)?.toDouble(),
     tester: json['tester'] as String,
     issued: json['issued'] == null
         ? null
@@ -89,7 +87,7 @@ Map<String, dynamic> _$TestReportToJson(TestReport instance) {
   writeNotNull('status', instance.status);
   writeNotNull('testScript', instance.testScript?.toJson());
   writeNotNull('result', instance.result);
-  writeNotNull('score', instance.score?.toJson());
+  writeNotNull('score', instance.score);
   writeNotNull('tester', instance.tester);
   writeNotNull('issued', instance.issued?.toJson());
   writeNotNull(

@@ -417,9 +417,7 @@ ValueSetParameter _$ValueSetParameterFromJson(Map<String, dynamic> json) {
     valueString: json['valueString'] as String,
     valueBoolean: json['valueBoolean'] as bool,
     valueInteger: json['valueInteger'] as int,
-    valueDecimal: json['valueDecimal'] == null
-        ? null
-        : Decimal.fromJson(json['valueDecimal'] as String),
+    valueDecimal: (json['valueDecimal'] as num)?.toDouble(),
     valueUri: json['valueUri'] == null
         ? null
         : FhirUri.fromJson(json['valueUri'] as String),
@@ -450,7 +448,7 @@ Map<String, dynamic> _$ValueSetParameterToJson(ValueSetParameter instance) {
   writeNotNull('valueString', instance.valueString);
   writeNotNull('valueBoolean', instance.valueBoolean);
   writeNotNull('valueInteger', instance.valueInteger);
-  writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal);
   writeNotNull('valueUri', instance.valueUri?.toJson());
   writeNotNull('valueCode', instance.valueCode?.toJson());
   writeNotNull('valueDateTime', instance.valueDateTime?.toJson());

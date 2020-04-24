@@ -16,9 +16,7 @@ ContactPoint _$ContactPointFromJson(Map<String, dynamic> json) {
     system: _$enumDecodeNullable(_$ContactPointSystemEnumMap, json['system']),
     value: json['value'] as String,
     use: _$enumDecodeNullable(_$ContactPointUseEnumMap, json['use']),
-    rank: json['rank'] == null
-        ? null
-        : PositiveInt.fromJson(json['rank'] as String),
+    rank: json['rank'] as int,
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -40,7 +38,7 @@ Map<String, dynamic> _$ContactPointToJson(ContactPoint instance) {
   writeNotNull('system', _$ContactPointSystemEnumMap[instance.system]);
   writeNotNull('value', instance.value);
   writeNotNull('use', _$ContactPointUseEnumMap[instance.use]);
-  writeNotNull('rank', instance.rank?.toJson());
+  writeNotNull('rank', instance.rank);
   writeNotNull('period', instance.period?.toJson());
   return val;
 }

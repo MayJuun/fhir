@@ -108,28 +108,18 @@ VisionPrescriptionLensSpecification
         ? null
         : CodeableConcept.fromJson(json['product'] as Map<String, dynamic>),
     eye: json['eye'] as String,
-    sphere: json['sphere'] == null
-        ? null
-        : Decimal.fromJson(json['sphere'] as String),
-    cylinder: json['cylinder'] == null
-        ? null
-        : Decimal.fromJson(json['cylinder'] as String),
+    sphere: (json['sphere'] as num)?.toDouble(),
+    cylinder: (json['cylinder'] as num)?.toDouble(),
     axis: json['axis'] as int,
     prism: (json['prism'] as List)
         ?.map((e) => e == null
             ? null
             : VisionPrescriptionPrism.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    add: json['add'] == null ? null : Decimal.fromJson(json['add'] as String),
-    power: json['power'] == null
-        ? null
-        : Decimal.fromJson(json['power'] as String),
-    backCurve: json['backCurve'] == null
-        ? null
-        : Decimal.fromJson(json['backCurve'] as String),
-    diameter: json['diameter'] == null
-        ? null
-        : Decimal.fromJson(json['diameter'] as String),
+    add: (json['add'] as num)?.toDouble(),
+    power: (json['power'] as num)?.toDouble(),
+    backCurve: (json['backCurve'] as num)?.toDouble(),
+    diameter: (json['diameter'] as num)?.toDouble(),
     duration: json['duration'] == null
         ? null
         : Quantity.fromJson(json['duration'] as Map<String, dynamic>),
@@ -159,14 +149,14 @@ Map<String, dynamic> _$VisionPrescriptionLensSpecificationToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('product', instance.product?.toJson());
   writeNotNull('eye', instance.eye);
-  writeNotNull('sphere', instance.sphere?.toJson());
-  writeNotNull('cylinder', instance.cylinder?.toJson());
+  writeNotNull('sphere', instance.sphere);
+  writeNotNull('cylinder', instance.cylinder);
   writeNotNull('axis', instance.axis);
   writeNotNull('prism', instance.prism?.map((e) => e?.toJson())?.toList());
-  writeNotNull('add', instance.add?.toJson());
-  writeNotNull('power', instance.power?.toJson());
-  writeNotNull('backCurve', instance.backCurve?.toJson());
-  writeNotNull('diameter', instance.diameter?.toJson());
+  writeNotNull('add', instance.add);
+  writeNotNull('power', instance.power);
+  writeNotNull('backCurve', instance.backCurve);
+  writeNotNull('diameter', instance.diameter);
   writeNotNull('duration', instance.duration?.toJson());
   writeNotNull('color', instance.color);
   writeNotNull('brand', instance.brand);
@@ -186,9 +176,7 @@ VisionPrescriptionPrism _$VisionPrescriptionPrismFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    amount: json['amount'] == null
-        ? null
-        : Decimal.fromJson(json['amount'] as String),
+    amount: (json['amount'] as num)?.toDouble(),
     base: json['base'] as String,
   );
 }
@@ -208,7 +196,7 @@ Map<String, dynamic> _$VisionPrescriptionPrismToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('amount', instance.amount?.toJson());
+  writeNotNull('amount', instance.amount);
   writeNotNull('base', instance.base);
   return val;
 }

@@ -190,12 +190,8 @@ ClaimResponseItem _$ClaimResponseItemFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    itemSequence: json['itemSequence'] == null
-        ? null
-        : PositiveInt.fromJson(json['itemSequence'] as String),
-    noteNumber: (json['noteNumber'] as List)
-        ?.map((e) => e == null ? null : PositiveInt.fromJson(e as String))
-        ?.toList(),
+    itemSequence: json['itemSequence'] as int,
+    noteNumber: json['noteNumber'] as List,
     adjudication: (json['adjudication'] as List)
         ?.map((e) => e == null
             ? null
@@ -223,9 +219,8 @@ Map<String, dynamic> _$ClaimResponseItemToJson(ClaimResponseItem instance) {
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('itemSequence', instance.itemSequence?.toJson());
-  writeNotNull(
-      'noteNumber', instance.noteNumber?.map((e) => e?.toJson())?.toList());
+  writeNotNull('itemSequence', instance.itemSequence);
+  writeNotNull('noteNumber', instance.noteNumber);
   writeNotNull(
       'adjudication', instance.adjudication?.map((e) => e?.toJson())?.toList());
   writeNotNull('detail', instance.detail?.map((e) => e?.toJson())?.toList());
@@ -253,9 +248,7 @@ ClaimResponseAdjudication _$ClaimResponseAdjudicationFromJson(
     amount: json['amount'] == null
         ? null
         : Money.fromJson(json['amount'] as Map<String, dynamic>),
-    value: json['value'] == null
-        ? null
-        : Decimal.fromJson(json['value'] as String),
+    value: (json['value'] as num)?.toDouble(),
   );
 }
 
@@ -277,7 +270,7 @@ Map<String, dynamic> _$ClaimResponseAdjudicationToJson(
   writeNotNull('category', instance.category?.toJson());
   writeNotNull('reason', instance.reason?.toJson());
   writeNotNull('amount', instance.amount?.toJson());
-  writeNotNull('value', instance.value?.toJson());
+  writeNotNull('value', instance.value);
   return val;
 }
 
@@ -292,12 +285,8 @@ ClaimResponseDetail _$ClaimResponseDetailFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    detailSequence: json['detailSequence'] == null
-        ? null
-        : PositiveInt.fromJson(json['detailSequence'] as String),
-    noteNumber: (json['noteNumber'] as List)
-        ?.map((e) => e == null ? null : PositiveInt.fromJson(e as String))
-        ?.toList(),
+    detailSequence: json['detailSequence'] as int,
+    noteNumber: json['noteNumber'] as List,
     adjudication: (json['adjudication'] as List)
         ?.map((e) => e == null
             ? null
@@ -325,9 +314,8 @@ Map<String, dynamic> _$ClaimResponseDetailToJson(ClaimResponseDetail instance) {
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('detailSequence', instance.detailSequence?.toJson());
-  writeNotNull(
-      'noteNumber', instance.noteNumber?.map((e) => e?.toJson())?.toList());
+  writeNotNull('detailSequence', instance.detailSequence);
+  writeNotNull('noteNumber', instance.noteNumber);
   writeNotNull(
       'adjudication', instance.adjudication?.map((e) => e?.toJson())?.toList());
   writeNotNull(
@@ -347,12 +335,8 @@ ClaimResponseSubDetail _$ClaimResponseSubDetailFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    subDetailSequence: json['subDetailSequence'] == null
-        ? null
-        : PositiveInt.fromJson(json['subDetailSequence'] as String),
-    noteNumber: (json['noteNumber'] as List)
-        ?.map((e) => e == null ? null : PositiveInt.fromJson(e as String))
-        ?.toList(),
+    subDetailSequence: json['subDetailSequence'] as int,
+    noteNumber: json['noteNumber'] as List,
     adjudication: (json['adjudication'] as List)
         ?.map((e) => e == null
             ? null
@@ -376,9 +360,8 @@ Map<String, dynamic> _$ClaimResponseSubDetailToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('subDetailSequence', instance.subDetailSequence?.toJson());
-  writeNotNull(
-      'noteNumber', instance.noteNumber?.map((e) => e?.toJson())?.toList());
+  writeNotNull('subDetailSequence', instance.subDetailSequence);
+  writeNotNull('noteNumber', instance.noteNumber);
   writeNotNull(
       'adjudication', instance.adjudication?.map((e) => e?.toJson())?.toList());
   return val;
@@ -395,15 +378,9 @@ ClaimResponseAddItem _$ClaimResponseAddItemFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    itemSequence: (json['itemSequence'] as List)
-        ?.map((e) => e == null ? null : PositiveInt.fromJson(e as String))
-        ?.toList(),
-    detailSequence: (json['detailSequence'] as List)
-        ?.map((e) => e == null ? null : PositiveInt.fromJson(e as String))
-        ?.toList(),
-    subdetailSequence: (json['subdetailSequence'] as List)
-        ?.map((e) => e == null ? null : PositiveInt.fromJson(e as String))
-        ?.toList(),
+    itemSequence: json['itemSequence'] as List,
+    detailSequence: json['detailSequence'] as List,
+    subdetailSequence: json['subdetailSequence'] as List,
     provider: (json['provider'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -444,9 +421,7 @@ ClaimResponseAddItem _$ClaimResponseAddItemFromJson(Map<String, dynamic> json) {
     unitPrice: json['unitPrice'] == null
         ? null
         : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
-    factor: json['factor'] == null
-        ? null
-        : Decimal.fromJson(json['factor'] as String),
+    factor: (json['factor'] as num)?.toDouble(),
     net: json['net'] == null
         ? null
         : Money.fromJson(json['net'] as Map<String, dynamic>),
@@ -458,9 +433,7 @@ ClaimResponseAddItem _$ClaimResponseAddItemFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    noteNumber: (json['noteNumber'] as List)
-        ?.map((e) => e == null ? null : PositiveInt.fromJson(e as String))
-        ?.toList(),
+    noteNumber: json['noteNumber'] as List,
     adjudication: (json['adjudication'] as List)
         ?.map((e) => e == null
             ? null
@@ -489,12 +462,9 @@ Map<String, dynamic> _$ClaimResponseAddItemToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      'itemSequence', instance.itemSequence?.map((e) => e?.toJson())?.toList());
-  writeNotNull('detailSequence',
-      instance.detailSequence?.map((e) => e?.toJson())?.toList());
-  writeNotNull('subdetailSequence',
-      instance.subdetailSequence?.map((e) => e?.toJson())?.toList());
+  writeNotNull('itemSequence', instance.itemSequence);
+  writeNotNull('detailSequence', instance.detailSequence);
+  writeNotNull('subdetailSequence', instance.subdetailSequence);
   writeNotNull(
       'provider', instance.provider?.map((e) => e?.toJson())?.toList());
   writeNotNull('productOrService', instance.productOrService?.toJson());
@@ -510,12 +480,11 @@ Map<String, dynamic> _$ClaimResponseAddItemToJson(
   writeNotNull('locationReference', instance.locationReference?.toJson());
   writeNotNull('quantity', instance.quantity?.toJson());
   writeNotNull('unitPrice', instance.unitPrice?.toJson());
-  writeNotNull('factor', instance.factor?.toJson());
+  writeNotNull('factor', instance.factor);
   writeNotNull('net', instance.net?.toJson());
   writeNotNull('bodySite', instance.bodySite?.toJson());
   writeNotNull('subSite', instance.subSite?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      'noteNumber', instance.noteNumber?.map((e) => e?.toJson())?.toList());
+  writeNotNull('noteNumber', instance.noteNumber);
   writeNotNull(
       'adjudication', instance.adjudication?.map((e) => e?.toJson())?.toList());
   writeNotNull('detail', instance.detail?.map((e) => e?.toJson())?.toList());
@@ -548,15 +517,11 @@ ClaimResponseDetail1 _$ClaimResponseDetail1FromJson(Map<String, dynamic> json) {
     unitPrice: json['unitPrice'] == null
         ? null
         : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
-    factor: json['factor'] == null
-        ? null
-        : Decimal.fromJson(json['factor'] as String),
+    factor: (json['factor'] as num)?.toDouble(),
     net: json['net'] == null
         ? null
         : Money.fromJson(json['net'] as Map<String, dynamic>),
-    noteNumber: (json['noteNumber'] as List)
-        ?.map((e) => e == null ? null : PositiveInt.fromJson(e as String))
-        ?.toList(),
+    noteNumber: json['noteNumber'] as List,
     adjudication: (json['adjudication'] as List)
         ?.map((e) => e == null
             ? null
@@ -590,10 +555,9 @@ Map<String, dynamic> _$ClaimResponseDetail1ToJson(
       'modifier', instance.modifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('quantity', instance.quantity?.toJson());
   writeNotNull('unitPrice', instance.unitPrice?.toJson());
-  writeNotNull('factor', instance.factor?.toJson());
+  writeNotNull('factor', instance.factor);
   writeNotNull('net', instance.net?.toJson());
-  writeNotNull(
-      'noteNumber', instance.noteNumber?.map((e) => e?.toJson())?.toList());
+  writeNotNull('noteNumber', instance.noteNumber);
   writeNotNull(
       'adjudication', instance.adjudication?.map((e) => e?.toJson())?.toList());
   writeNotNull(
@@ -628,15 +592,11 @@ ClaimResponseSubDetail1 _$ClaimResponseSubDetail1FromJson(
     unitPrice: json['unitPrice'] == null
         ? null
         : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
-    factor: json['factor'] == null
-        ? null
-        : Decimal.fromJson(json['factor'] as String),
+    factor: (json['factor'] as num)?.toDouble(),
     net: json['net'] == null
         ? null
         : Money.fromJson(json['net'] as Map<String, dynamic>),
-    noteNumber: (json['noteNumber'] as List)
-        ?.map((e) => e == null ? null : PositiveInt.fromJson(e as String))
-        ?.toList(),
+    noteNumber: json['noteNumber'] as List,
     adjudication: (json['adjudication'] as List)
         ?.map((e) => e == null
             ? null
@@ -665,10 +625,9 @@ Map<String, dynamic> _$ClaimResponseSubDetail1ToJson(
       'modifier', instance.modifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('quantity', instance.quantity?.toJson());
   writeNotNull('unitPrice', instance.unitPrice?.toJson());
-  writeNotNull('factor', instance.factor?.toJson());
+  writeNotNull('factor', instance.factor);
   writeNotNull('net', instance.net?.toJson());
-  writeNotNull(
-      'noteNumber', instance.noteNumber?.map((e) => e?.toJson())?.toList());
+  writeNotNull('noteNumber', instance.noteNumber);
   writeNotNull(
       'adjudication', instance.adjudication?.map((e) => e?.toJson())?.toList());
   return val;
@@ -780,9 +739,7 @@ ClaimResponseProcessNote _$ClaimResponseProcessNoteFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    number: json['number'] == null
-        ? null
-        : PositiveInt.fromJson(json['number'] as String),
+    number: json['number'] as int,
     type: json['type'] as String,
     text: json['text'] as String,
     language: json['language'] == null
@@ -806,7 +763,7 @@ Map<String, dynamic> _$ClaimResponseProcessNoteToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('number', instance.number?.toJson());
+  writeNotNull('number', instance.number);
   writeNotNull('type', instance.type);
   writeNotNull('text', instance.text);
   writeNotNull('language', instance.language?.toJson());
@@ -825,9 +782,7 @@ ClaimResponseInsurance _$ClaimResponseInsuranceFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    sequence: json['sequence'] == null
-        ? null
-        : PositiveInt.fromJson(json['sequence'] as String),
+    sequence: json['sequence'] as int,
     focal: json['focal'] as bool,
     coverage: json['coverage'] == null
         ? null
@@ -854,7 +809,7 @@ Map<String, dynamic> _$ClaimResponseInsuranceToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('sequence', instance.sequence?.toJson());
+  writeNotNull('sequence', instance.sequence);
   writeNotNull('focal', instance.focal);
   writeNotNull('coverage', instance.coverage?.toJson());
   writeNotNull('businessArrangement', instance.businessArrangement);
@@ -873,15 +828,9 @@ ClaimResponseError _$ClaimResponseErrorFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    itemSequence: json['itemSequence'] == null
-        ? null
-        : PositiveInt.fromJson(json['itemSequence'] as String),
-    detailSequence: json['detailSequence'] == null
-        ? null
-        : PositiveInt.fromJson(json['detailSequence'] as String),
-    subDetailSequence: json['subDetailSequence'] == null
-        ? null
-        : PositiveInt.fromJson(json['subDetailSequence'] as String),
+    itemSequence: json['itemSequence'] as int,
+    detailSequence: json['detailSequence'] as int,
+    subDetailSequence: json['subDetailSequence'] as int,
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -902,9 +851,9 @@ Map<String, dynamic> _$ClaimResponseErrorToJson(ClaimResponseError instance) {
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('itemSequence', instance.itemSequence?.toJson());
-  writeNotNull('detailSequence', instance.detailSequence?.toJson());
-  writeNotNull('subDetailSequence', instance.subDetailSequence?.toJson());
+  writeNotNull('itemSequence', instance.itemSequence);
+  writeNotNull('detailSequence', instance.detailSequence);
+  writeNotNull('subDetailSequence', instance.subDetailSequence);
   writeNotNull('code', instance.code?.toJson());
   return val;
 }

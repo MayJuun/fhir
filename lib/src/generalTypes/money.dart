@@ -9,7 +9,7 @@ part 'money.g.dart';
 class Money {
   String id;
   List<Extension> extension;
-  Decimal value;
+  double value;
   Code currency;
 
   Money({

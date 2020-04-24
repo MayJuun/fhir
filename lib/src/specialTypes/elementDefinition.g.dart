@@ -44,9 +44,7 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
         ? null
         : Markdown.fromJson(json['requirements'] as String),
     alias: (json['alias'] as List)?.map((e) => e as String)?.toList(),
-    min: json['min'] == null
-        ? null
-        : UnsignedInt.fromJson(json['min'] as String),
+    min: json['min'] as int,
     max: json['max'] as String,
     base: json['base'] == null
         ? null
@@ -75,9 +73,7 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
     defaultValueDateTime: json['defaultValueDateTime'] == null
         ? null
         : FhirDateTime.fromJson(json['defaultValueDateTime'] as String),
-    defaultValueDecimal: json['defaultValueDecimal'] == null
-        ? null
-        : Decimal.fromJson(json['defaultValueDecimal'] as String),
+    defaultValueDecimal: (json['defaultValueDecimal'] as num)?.toDouble(),
     defaultValueId: json['defaultValueId'] == null
         ? null
         : Id.fromJson(json['defaultValueId'] as String),
@@ -91,16 +87,12 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
     defaultValueOid: json['defaultValueOid'] == null
         ? null
         : Oid.fromJson(json['defaultValueOid'] as String),
-    defaultValuePositiveInt: json['defaultValuePositiveInt'] == null
-        ? null
-        : PositiveInt.fromJson(json['defaultValuePositiveInt'] as String),
+    defaultValuePositiveInt: json['defaultValuePositiveInt'] as int,
     defaultValueString: json['defaultValueString'] as String,
     defaultValueTime: json['defaultValueTime'] == null
         ? null
         : Time.fromJson(json['defaultValueTime'] as String),
-    defaultValueUnsignedInt: json['defaultValueUnsignedInt'] == null
-        ? null
-        : UnsignedInt.fromJson(json['defaultValueUnsignedInt'] as String),
+    defaultValueUnsignedInt: json['defaultValueUnsignedInt'] as int,
     defaultValueUri: json['defaultValueUri'] == null
         ? null
         : FhirUri.fromJson(json['defaultValueUri'] as String),
@@ -243,9 +235,7 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
     fixedDateTime: json['fixedDateTime'] == null
         ? null
         : FhirDateTime.fromJson(json['fixedDateTime'] as String),
-    fixedDecimal: json['fixedDecimal'] == null
-        ? null
-        : Decimal.fromJson(json['fixedDecimal'] as String),
+    fixedDecimal: (json['fixedDecimal'] as num)?.toDouble(),
     fixedId:
         json['fixedId'] == null ? null : Id.fromJson(json['fixedId'] as String),
     fixedInstant: json['fixedInstant'] == null
@@ -258,16 +248,12 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
     fixedOid: json['fixedOid'] == null
         ? null
         : Oid.fromJson(json['fixedOid'] as String),
-    fixedPositiveInt: json['fixedPositiveInt'] == null
-        ? null
-        : PositiveInt.fromJson(json['fixedPositiveInt'] as String),
+    fixedPositiveInt: json['fixedPositiveInt'] as int,
     fixedString: json['fixedString'] as String,
     fixedTime: json['fixedTime'] == null
         ? null
         : Time.fromJson(json['fixedTime'] as String),
-    fixedUnsignedInt: json['fixedUnsignedInt'] == null
-        ? null
-        : UnsignedInt.fromJson(json['fixedUnsignedInt'] as String),
+    fixedUnsignedInt: json['fixedUnsignedInt'] as int,
     fixedUri: json['fixedUri'] == null
         ? null
         : FhirUri.fromJson(json['fixedUri'] as String),
@@ -529,16 +515,10 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
     minValueTime: json['minValueTime'] == null
         ? null
         : Time.fromJson(json['minValueTime'] as String),
-    minValueDecimal: json['minValueDecimal'] == null
-        ? null
-        : Decimal.fromJson(json['minValueDecimal'] as String),
+    minValueDecimal: (json['minValueDecimal'] as num)?.toDouble(),
     minValueInteger: json['minValueInteger'] as int,
-    minValuePositiveInt: json['minValuePositiveInt'] == null
-        ? null
-        : PositiveInt.fromJson(json['minValuePositiveInt'] as String),
-    minValueUnsignedInt: json['minValueUnsignedInt'] == null
-        ? null
-        : UnsignedInt.fromJson(json['minValueUnsignedInt'] as String),
+    minValuePositiveInt: json['minValuePositiveInt'] as int,
+    minValueUnsignedInt: json['minValueUnsignedInt'] as int,
     minValueQuantity: json['minValueQuantity'] == null
         ? null
         : Quantity.fromJson(json['minValueQuantity'] as Map<String, dynamic>),
@@ -554,16 +534,10 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
     maxValueTime: json['maxValueTime'] == null
         ? null
         : Time.fromJson(json['maxValueTime'] as String),
-    maxValueDecimal: json['maxValueDecimal'] == null
-        ? null
-        : Decimal.fromJson(json['maxValueDecimal'] as String),
+    maxValueDecimal: (json['maxValueDecimal'] as num)?.toDouble(),
     maxValueInteger: json['maxValueInteger'] as int,
-    maxValuePositiveInt: json['maxValuePositiveInt'] == null
-        ? null
-        : PositiveInt.fromJson(json['maxValuePositiveInt'] as String),
-    maxValueUnsignedInt: json['maxValueUnsignedInt'] == null
-        ? null
-        : UnsignedInt.fromJson(json['maxValueUnsignedInt'] as String),
+    maxValuePositiveInt: json['maxValuePositiveInt'] as int,
+    maxValueUnsignedInt: json['maxValueUnsignedInt'] as int,
     maxValueQuantity: json['maxValueQuantity'] == null
         ? null
         : Quantity.fromJson(json['maxValueQuantity'] as Map<String, dynamic>),
@@ -622,7 +596,7 @@ Map<String, dynamic> _$ElementDefinitionToJson(ElementDefinition instance) {
   writeNotNull('comment', instance.comment?.toJson());
   writeNotNull('requirements', instance.requirements?.toJson());
   writeNotNull('alias', instance.alias);
-  writeNotNull('min', instance.min?.toJson());
+  writeNotNull('min', instance.min);
   writeNotNull('max', instance.max);
   writeNotNull('base', instance.base?.toJson());
   writeNotNull('contentReference', instance.contentReference?.toJson());
@@ -635,18 +609,16 @@ Map<String, dynamic> _$ElementDefinitionToJson(ElementDefinition instance) {
   writeNotNull('defaultValueCode', instance.defaultValueCode?.toJson());
   writeNotNull('defaultValueDate', instance.defaultValueDate?.toJson());
   writeNotNull('defaultValueDateTime', instance.defaultValueDateTime?.toJson());
-  writeNotNull('defaultValueDecimal', instance.defaultValueDecimal?.toJson());
+  writeNotNull('defaultValueDecimal', instance.defaultValueDecimal);
   writeNotNull('defaultValueId', instance.defaultValueId?.toJson());
   writeNotNull('defaultValueInstant', instance.defaultValueInstant?.toJson());
   writeNotNull('defaultValueInteger', instance.defaultValueInteger);
   writeNotNull('defaultValueMarkdown', instance.defaultValueMarkdown?.toJson());
   writeNotNull('defaultValueOid', instance.defaultValueOid?.toJson());
-  writeNotNull(
-      'defaultValuePositiveInt', instance.defaultValuePositiveInt?.toJson());
+  writeNotNull('defaultValuePositiveInt', instance.defaultValuePositiveInt);
   writeNotNull('defaultValueString', instance.defaultValueString);
   writeNotNull('defaultValueTime', instance.defaultValueTime?.toJson());
-  writeNotNull(
-      'defaultValueUnsignedInt', instance.defaultValueUnsignedInt?.toJson());
+  writeNotNull('defaultValueUnsignedInt', instance.defaultValueUnsignedInt);
   writeNotNull('defaultValueUri', instance.defaultValueUri?.toJson());
   writeNotNull('defaultValueUrl', instance.defaultValueUrl?.toJson());
   writeNotNull('defaultValueUuid', instance.defaultValueUuid?.toJson());
@@ -707,16 +679,16 @@ Map<String, dynamic> _$ElementDefinitionToJson(ElementDefinition instance) {
   writeNotNull('fixedCode', instance.fixedCode?.toJson());
   writeNotNull('fixedDate', instance.fixedDate?.toJson());
   writeNotNull('fixedDateTime', instance.fixedDateTime?.toJson());
-  writeNotNull('fixedDecimal', instance.fixedDecimal?.toJson());
+  writeNotNull('fixedDecimal', instance.fixedDecimal);
   writeNotNull('fixedId', instance.fixedId?.toJson());
   writeNotNull('fixedInstant', instance.fixedInstant?.toJson());
   writeNotNull('fixedInteger', instance.fixedInteger);
   writeNotNull('fixedMarkdown', instance.fixedMarkdown?.toJson());
   writeNotNull('fixedOid', instance.fixedOid?.toJson());
-  writeNotNull('fixedPositiveInt', instance.fixedPositiveInt?.toJson());
+  writeNotNull('fixedPositiveInt', instance.fixedPositiveInt);
   writeNotNull('fixedString', instance.fixedString);
   writeNotNull('fixedTime', instance.fixedTime?.toJson());
-  writeNotNull('fixedUnsignedInt', instance.fixedUnsignedInt?.toJson());
+  writeNotNull('fixedUnsignedInt', instance.fixedUnsignedInt);
   writeNotNull('fixedUri', instance.fixedUri?.toJson());
   writeNotNull('fixedUrl', instance.fixedUrl?.toJson());
   writeNotNull('fixedUuid', instance.fixedUuid?.toJson());
@@ -813,19 +785,19 @@ Map<String, dynamic> _$ElementDefinitionToJson(ElementDefinition instance) {
   writeNotNull('minValueDateTime', instance.minValueDateTime?.toJson());
   writeNotNull('minValueInstant', instance.minValueInstant?.toJson());
   writeNotNull('minValueTime', instance.minValueTime?.toJson());
-  writeNotNull('minValueDecimal', instance.minValueDecimal?.toJson());
+  writeNotNull('minValueDecimal', instance.minValueDecimal);
   writeNotNull('minValueInteger', instance.minValueInteger);
-  writeNotNull('minValuePositiveInt', instance.minValuePositiveInt?.toJson());
-  writeNotNull('minValueUnsignedInt', instance.minValueUnsignedInt?.toJson());
+  writeNotNull('minValuePositiveInt', instance.minValuePositiveInt);
+  writeNotNull('minValueUnsignedInt', instance.minValueUnsignedInt);
   writeNotNull('minValueQuantity', instance.minValueQuantity?.toJson());
   writeNotNull('maxValueDate', instance.maxValueDate?.toJson());
   writeNotNull('maxValueDateTime', instance.maxValueDateTime?.toJson());
   writeNotNull('maxValueInstant', instance.maxValueInstant?.toJson());
   writeNotNull('maxValueTime', instance.maxValueTime?.toJson());
-  writeNotNull('maxValueDecimal', instance.maxValueDecimal?.toJson());
+  writeNotNull('maxValueDecimal', instance.maxValueDecimal);
   writeNotNull('maxValueInteger', instance.maxValueInteger);
-  writeNotNull('maxValuePositiveInt', instance.maxValuePositiveInt?.toJson());
-  writeNotNull('maxValueUnsignedInt', instance.maxValueUnsignedInt?.toJson());
+  writeNotNull('maxValuePositiveInt', instance.maxValuePositiveInt);
+  writeNotNull('maxValueUnsignedInt', instance.maxValueUnsignedInt);
   writeNotNull('maxValueQuantity', instance.maxValueQuantity?.toJson());
   writeNotNull('maxLength', instance.maxLength);
   writeNotNull(
@@ -995,9 +967,7 @@ ElementDefinitionBase _$ElementDefinitionBaseFromJson(
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     path: json['path'] as String,
-    min: json['min'] == null
-        ? null
-        : UnsignedInt.fromJson(json['min'] as String),
+    min: json['min'] as int,
     max: json['max'] as String,
   );
 }
@@ -1018,7 +988,7 @@ Map<String, dynamic> _$ElementDefinitionBaseToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('path', instance.path);
-  writeNotNull('min', instance.min?.toJson());
+  writeNotNull('min', instance.min);
   writeNotNull('max', instance.max);
   return val;
 }
@@ -1122,9 +1092,7 @@ ElementDefinitionExample _$ElementDefinitionExampleFromJson(
     valueDateTime: json['valueDateTime'] == null
         ? null
         : FhirDateTime.fromJson(json['valueDateTime'] as String),
-    valueDecimal: json['valueDecimal'] == null
-        ? null
-        : Decimal.fromJson(json['valueDecimal'] as String),
+    valueDecimal: (json['valueDecimal'] as num)?.toDouble(),
     valueId:
         json['valueId'] == null ? null : Id.fromJson(json['valueId'] as String),
     valueInstant: json['valueInstant'] == null
@@ -1137,16 +1105,12 @@ ElementDefinitionExample _$ElementDefinitionExampleFromJson(
     valueOid: json['valueOid'] == null
         ? null
         : Oid.fromJson(json['valueOid'] as String),
-    valuePositiveInt: json['valuePositiveInt'] == null
-        ? null
-        : PositiveInt.fromJson(json['valuePositiveInt'] as String),
+    valuePositiveInt: json['valuePositiveInt'] as int,
     valueString: json['valueString'] as String,
     valueTime: json['valueTime'] == null
         ? null
         : Time.fromJson(json['valueTime'] as String),
-    valueUnsignedInt: json['valueUnsignedInt'] == null
-        ? null
-        : UnsignedInt.fromJson(json['valueUnsignedInt'] as String),
+    valueUnsignedInt: json['valueUnsignedInt'] as int,
     valueUri: json['valueUri'] == null
         ? null
         : FhirUri.fromJson(json['valueUri'] as String),
@@ -1284,16 +1248,16 @@ Map<String, dynamic> _$ElementDefinitionExampleToJson(
   writeNotNull('valueCode', instance.valueCode?.toJson());
   writeNotNull('valueDate', instance.valueDate?.toJson());
   writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
-  writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal);
   writeNotNull('valueId', instance.valueId?.toJson());
   writeNotNull('valueInstant', instance.valueInstant?.toJson());
   writeNotNull('valueInteger', instance.valueInteger);
   writeNotNull('valueMarkdown', instance.valueMarkdown?.toJson());
   writeNotNull('valueOid', instance.valueOid?.toJson());
-  writeNotNull('valuePositiveInt', instance.valuePositiveInt?.toJson());
+  writeNotNull('valuePositiveInt', instance.valuePositiveInt);
   writeNotNull('valueString', instance.valueString);
   writeNotNull('valueTime', instance.valueTime?.toJson());
-  writeNotNull('valueUnsignedInt', instance.valueUnsignedInt?.toJson());
+  writeNotNull('valueUnsignedInt', instance.valueUnsignedInt);
   writeNotNull('valueUri', instance.valueUri?.toJson());
   writeNotNull('valueUrl', instance.valueUrl?.toJson());
   writeNotNull('valueUuid', instance.valueUuid?.toJson());

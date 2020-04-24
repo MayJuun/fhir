@@ -103,7 +103,7 @@ class InvoiceLineItem {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt sequence;
+  int sequence;
   Reference chargeItemReference;
   CodeableConcept chargeItemCodeableConcept;
   List<InvoicePriceComponent> priceComponent;
@@ -130,7 +130,7 @@ class InvoicePriceComponent {
   List<Extension> modifierExtension;
   String type;
   CodeableConcept code;
-  Decimal factor;
+  double factor;
   Money amount;
 
   InvoicePriceComponent({

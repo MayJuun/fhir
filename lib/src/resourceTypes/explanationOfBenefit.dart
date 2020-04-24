@@ -62,7 +62,7 @@ class ExplanationOfBenefit {
   List<ExplanationOfBenefitSupportingInfo> supportingInfo;
   List<ExplanationOfBenefitDiagnosis> diagnosis;
   List<ExplanationOfBenefitProcedure> procedure;
-  PositiveInt precedence;
+  int precedence;
   List<ExplanationOfBenefitInsurance> insurance;
   ExplanationOfBenefitAccident accident;
   List<ExplanationOfBenefitItem> item;
@@ -184,7 +184,7 @@ class ExplanationOfBenefitCareTeam {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt sequence;
+  int sequence;
   Reference provider;
   bool responsible;
   CodeableConcept role;
@@ -211,7 +211,7 @@ class ExplanationOfBenefitSupportingInfo {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt sequence;
+  int sequence;
   CodeableConcept category;
   CodeableConcept code;
   Date timingDate;
@@ -252,7 +252,7 @@ class ExplanationOfBenefitDiagnosis {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt sequence;
+  int sequence;
   CodeableConcept diagnosisCodeableConcept;
   Reference diagnosisReference;
   List<CodeableConcept> type;
@@ -281,7 +281,7 @@ class ExplanationOfBenefitProcedure {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt sequence;
+  int sequence;
   List<CodeableConcept> type;
   FhirDateTime date;
   CodeableConcept procedureCodeableConcept;
@@ -358,7 +358,7 @@ class ExplanationOfBenefitItem {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt sequence;
+  int sequence;
   List<PositiveInt> careTeamSequence;
   List<PositiveInt> diagnosisSequence;
   List<PositiveInt> procedureSequence;
@@ -375,7 +375,7 @@ class ExplanationOfBenefitItem {
   Reference locationReference;
   Quantity quantity;
   Money unitPrice;
-  Decimal factor;
+  double factor;
   Money net;
   List<Reference> udi;
   CodeableConcept bodySite;
@@ -430,7 +430,7 @@ class ExplanationOfBenefitAdjudication {
   CodeableConcept category;
   CodeableConcept reason;
   Money amount;
-  Decimal value;
+  double value;
 
   ExplanationOfBenefitAdjudication({
     this.id,
@@ -454,7 +454,7 @@ class ExplanationOfBenefitDetail {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt sequence;
+  int sequence;
   CodeableConcept revenue;
   CodeableConcept category;
   CodeableConcept productOrService;
@@ -462,7 +462,7 @@ class ExplanationOfBenefitDetail {
   List<CodeableConcept> programCode;
   Quantity quantity;
   Money unitPrice;
-  Decimal factor;
+  double factor;
   Money net;
   List<Reference> udi;
   List<PositiveInt> noteNumber;
@@ -499,7 +499,7 @@ class ExplanationOfBenefitSubDetail {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt sequence;
+  int sequence;
   CodeableConcept revenue;
   CodeableConcept category;
   CodeableConcept productOrService;
@@ -507,7 +507,7 @@ class ExplanationOfBenefitSubDetail {
   List<CodeableConcept> programCode;
   Quantity quantity;
   Money unitPrice;
-  Decimal factor;
+  double factor;
   Money net;
   List<Reference> udi;
   List<PositiveInt> noteNumber;
@@ -556,7 +556,7 @@ class ExplanationOfBenefitAddItem {
   Reference locationReference;
   Quantity quantity;
   Money unitPrice;
-  Decimal factor;
+  double factor;
   Money net;
   CodeableConcept bodySite;
   List<CodeableConcept> subSite;
@@ -605,7 +605,7 @@ class ExplanationOfBenefitDetail1 {
   List<CodeableConcept> modifier;
   Quantity quantity;
   Money unitPrice;
-  Decimal factor;
+  double factor;
   Money net;
   List<PositiveInt> noteNumber;
   List<ExplanationOfBenefitAdjudication> adjudication;
@@ -640,7 +640,7 @@ class ExplanationOfBenefitSubDetail1 {
   List<CodeableConcept> modifier;
   Quantity quantity;
   Money unitPrice;
-  Decimal factor;
+  double factor;
   Money net;
   List<PositiveInt> noteNumber;
   List<ExplanationOfBenefitAdjudication> adjudication;
@@ -719,7 +719,7 @@ class ExplanationOfBenefitProcessNote {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt number;
+  int number;
   String type;
   String text;
   CodeableConcept language;
@@ -781,10 +781,10 @@ class ExplanationOfBenefitFinancial {
   List<Extension> extension;
   List<Extension> modifierExtension;
   CodeableConcept type;
-  UnsignedInt allowedUnsignedInt;
+  int allowedUnsignedInt;
   String allowedString;
   Money allowedMoney;
-  UnsignedInt usedUnsignedInt;
+  int usedUnsignedInt;
   Money usedMoney;
 
   ExplanationOfBenefitFinancial({

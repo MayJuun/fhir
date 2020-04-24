@@ -246,9 +246,7 @@ QuestionnaireEnableWhen _$QuestionnaireEnableWhenFromJson(
     question: json['question'] as String,
     operator: json['operator'] as String,
     answerBoolean: json['answerBoolean'] as bool,
-    answerDecimal: json['answerDecimal'] == null
-        ? null
-        : Decimal.fromJson(json['answerDecimal'] as String),
+    answerDecimal: (json['answerDecimal'] as num)?.toDouble(),
     answerInteger: json['answerInteger'] as int,
     answerDate: json['answerDate'] == null
         ? null
@@ -290,7 +288,7 @@ Map<String, dynamic> _$QuestionnaireEnableWhenToJson(
   writeNotNull('question', instance.question);
   writeNotNull('operator', instance.operator);
   writeNotNull('answerBoolean', instance.answerBoolean);
-  writeNotNull('answerDecimal', instance.answerDecimal?.toJson());
+  writeNotNull('answerDecimal', instance.answerDecimal);
   writeNotNull('answerInteger', instance.answerInteger);
   writeNotNull('answerDate', instance.answerDate?.toJson());
   writeNotNull('answerDateTime', instance.answerDateTime?.toJson());
@@ -369,9 +367,7 @@ QuestionnaireInitial _$QuestionnaireInitialFromJson(Map<String, dynamic> json) {
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     valueBoolean: json['valueBoolean'] as bool,
-    valueDecimal: json['valueDecimal'] == null
-        ? null
-        : Decimal.fromJson(json['valueDecimal'] as String),
+    valueDecimal: (json['valueDecimal'] as num)?.toDouble(),
     valueInteger: json['valueInteger'] as int,
     valueDate: json['valueDate'] == null
         ? null
@@ -417,7 +413,7 @@ Map<String, dynamic> _$QuestionnaireInitialToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('valueBoolean', instance.valueBoolean);
-  writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal);
   writeNotNull('valueInteger', instance.valueInteger);
   writeNotNull('valueDate', instance.valueDate?.toJson());
   writeNotNull('valueDateTime', instance.valueDateTime?.toJson());

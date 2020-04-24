@@ -239,9 +239,7 @@ MedicationRequestDispenseRequest _$MedicationRequestDispenseRequestFromJson(
     validityPeriod: json['validityPeriod'] == null
         ? null
         : Period.fromJson(json['validityPeriod'] as Map<String, dynamic>),
-    numberOfRepeatsAllowed: json['numberOfRepeatsAllowed'] == null
-        ? null
-        : UnsignedInt.fromJson(json['numberOfRepeatsAllowed'] as String),
+    numberOfRepeatsAllowed: json['numberOfRepeatsAllowed'] as int,
     quantity: json['quantity'] == null
         ? null
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
@@ -273,8 +271,7 @@ Map<String, dynamic> _$MedicationRequestDispenseRequestToJson(
   writeNotNull('initialFill', instance.initialFill?.toJson());
   writeNotNull('dispenseInterval', instance.dispenseInterval?.toJson());
   writeNotNull('validityPeriod', instance.validityPeriod?.toJson());
-  writeNotNull(
-      'numberOfRepeatsAllowed', instance.numberOfRepeatsAllowed?.toJson());
+  writeNotNull('numberOfRepeatsAllowed', instance.numberOfRepeatsAllowed);
   writeNotNull('quantity', instance.quantity?.toJson());
   writeNotNull(
       'expectedSupplyDuration', instance.expectedSupplyDuration?.toJson());

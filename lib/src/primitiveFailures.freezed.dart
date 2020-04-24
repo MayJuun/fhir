@@ -42,12 +42,6 @@ class _$PrimitiveFailureTearOff {
     );
   }
 
-  InvalidDecimal<T> invalidDecimal<T>({@required T failedValue}) {
-    return InvalidDecimal<T>(
-      failedValue: failedValue,
-    );
-  }
-
   InvalidId<T> invalidId<T>({@required T failedValue}) {
     return InvalidId<T>(
       failedValue: failedValue,
@@ -72,20 +66,8 @@ class _$PrimitiveFailureTearOff {
     );
   }
 
-  InvalidPositiveInt<T> invalidPositiveInt<T>({@required T failedValue}) {
-    return InvalidPositiveInt<T>(
-      failedValue: failedValue,
-    );
-  }
-
   InvalidTime<T> invalidTime<T>({@required T failedValue}) {
     return InvalidTime<T>(
-      failedValue: failedValue,
-    );
-  }
-
-  InvalidUnsignedInt<T> invalidUnsignedInt<T>({@required T failedValue}) {
-    return InvalidUnsignedInt<T>(
       failedValue: failedValue,
     );
   }
@@ -122,14 +104,11 @@ mixin _$PrimitiveFailure<T> {
     @required Result invalidCode(T failedValue),
     @required Result invalidDate(T failedValue),
     @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
     @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
@@ -141,14 +120,11 @@ mixin _$PrimitiveFailure<T> {
     Result invalidCode(T failedValue),
     Result invalidDate(T failedValue),
     Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
     Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
@@ -161,14 +137,11 @@ mixin _$PrimitiveFailure<T> {
     @required Result invalidCode(InvalidCode<T> value),
     @required Result invalidDate(InvalidDate<T> value),
     @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
     @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
@@ -180,14 +153,11 @@ mixin _$PrimitiveFailure<T> {
     Result invalidCode(InvalidCode<T> value),
     Result invalidDate(InvalidDate<T> value),
     Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
     Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
@@ -291,14 +261,11 @@ class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
     @required Result invalidCode(T failedValue),
     @required Result invalidDate(T failedValue),
     @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
     @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
@@ -308,14 +275,11 @@ class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -330,14 +294,11 @@ class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
     Result invalidCode(T failedValue),
     Result invalidDate(T failedValue),
     Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
     Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
@@ -358,14 +319,11 @@ class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
     @required Result invalidCode(InvalidCode<T> value),
     @required Result invalidDate(InvalidDate<T> value),
     @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
     @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
@@ -375,14 +333,11 @@ class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -397,14 +352,11 @@ class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
     Result invalidCode(InvalidCode<T> value),
     Result invalidDate(InvalidDate<T> value),
     Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
     Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
@@ -495,14 +447,11 @@ class _$InvalidCanonical<T> implements InvalidCanonical<T> {
     @required Result invalidCode(T failedValue),
     @required Result invalidDate(T failedValue),
     @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
     @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
@@ -512,14 +461,11 @@ class _$InvalidCanonical<T> implements InvalidCanonical<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -534,14 +480,11 @@ class _$InvalidCanonical<T> implements InvalidCanonical<T> {
     Result invalidCode(T failedValue),
     Result invalidDate(T failedValue),
     Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
     Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
@@ -562,14 +505,11 @@ class _$InvalidCanonical<T> implements InvalidCanonical<T> {
     @required Result invalidCode(InvalidCode<T> value),
     @required Result invalidDate(InvalidDate<T> value),
     @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
     @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
@@ -579,14 +519,11 @@ class _$InvalidCanonical<T> implements InvalidCanonical<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -601,14 +538,11 @@ class _$InvalidCanonical<T> implements InvalidCanonical<T> {
     Result invalidCode(InvalidCode<T> value),
     Result invalidDate(InvalidDate<T> value),
     Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
     Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
@@ -699,14 +633,11 @@ class _$InvalidCode<T> implements InvalidCode<T> {
     @required Result invalidCode(T failedValue),
     @required Result invalidDate(T failedValue),
     @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
     @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
@@ -716,14 +647,11 @@ class _$InvalidCode<T> implements InvalidCode<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -738,14 +666,11 @@ class _$InvalidCode<T> implements InvalidCode<T> {
     Result invalidCode(T failedValue),
     Result invalidDate(T failedValue),
     Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
     Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
@@ -766,14 +691,11 @@ class _$InvalidCode<T> implements InvalidCode<T> {
     @required Result invalidCode(InvalidCode<T> value),
     @required Result invalidDate(InvalidDate<T> value),
     @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
     @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
@@ -783,14 +705,11 @@ class _$InvalidCode<T> implements InvalidCode<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -805,14 +724,11 @@ class _$InvalidCode<T> implements InvalidCode<T> {
     Result invalidCode(InvalidCode<T> value),
     Result invalidDate(InvalidDate<T> value),
     Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
     Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
@@ -902,14 +818,11 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     @required Result invalidCode(T failedValue),
     @required Result invalidDate(T failedValue),
     @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
     @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
@@ -919,14 +832,11 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -941,14 +851,11 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     Result invalidCode(T failedValue),
     Result invalidDate(T failedValue),
     Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
     Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
@@ -969,14 +876,11 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     @required Result invalidCode(InvalidCode<T> value),
     @required Result invalidDate(InvalidDate<T> value),
     @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
     @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
@@ -986,14 +890,11 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -1008,14 +909,11 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     Result invalidCode(InvalidCode<T> value),
     Result invalidDate(InvalidDate<T> value),
     Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
     Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
@@ -1105,14 +1003,11 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
     @required Result invalidCode(T failedValue),
     @required Result invalidDate(T failedValue),
     @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
     @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
@@ -1122,14 +1017,11 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -1144,14 +1036,11 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
     Result invalidCode(T failedValue),
     Result invalidDate(T failedValue),
     Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
     Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
@@ -1172,14 +1061,11 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
     @required Result invalidCode(InvalidCode<T> value),
     @required Result invalidDate(InvalidDate<T> value),
     @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
     @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
@@ -1189,14 +1075,11 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -1211,14 +1094,11 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
     Result invalidCode(InvalidCode<T> value),
     Result invalidDate(InvalidDate<T> value),
     Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
     Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
@@ -1240,209 +1120,6 @@ abstract class InvalidDateTime<T> implements PrimitiveFailure<T> {
   T get failedValue;
   @override
   $InvalidDateTimeCopyWith<T, InvalidDateTime<T>> get copyWith;
-}
-
-abstract class $InvalidDecimalCopyWith<T, $Res>
-    implements $PrimitiveFailureCopyWith<T, $Res> {
-  factory $InvalidDecimalCopyWith(
-          InvalidDecimal<T> value, $Res Function(InvalidDecimal<T>) then) =
-      _$InvalidDecimalCopyWithImpl<T, $Res>;
-  @override
-  $Res call({T failedValue});
-}
-
-class _$InvalidDecimalCopyWithImpl<T, $Res>
-    extends _$PrimitiveFailureCopyWithImpl<T, $Res>
-    implements $InvalidDecimalCopyWith<T, $Res> {
-  _$InvalidDecimalCopyWithImpl(
-      InvalidDecimal<T> _value, $Res Function(InvalidDecimal<T>) _then)
-      : super(_value, (v) => _then(v as InvalidDecimal<T>));
-
-  @override
-  InvalidDecimal<T> get _value => super._value as InvalidDecimal<T>;
-
-  @override
-  $Res call({
-    Object failedValue = freezed,
-  }) {
-    return _then(InvalidDecimal<T>(
-      failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as T,
-    ));
-  }
-}
-
-class _$InvalidDecimal<T> implements InvalidDecimal<T> {
-  const _$InvalidDecimal({@required this.failedValue})
-      : assert(failedValue != null);
-
-  @override
-  final T failedValue;
-
-  @override
-  String toString() {
-    return 'PrimitiveFailure<$T>.invalidDecimal(failedValue: $failedValue)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is InvalidDecimal<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
-
-  @override
-  $InvalidDecimalCopyWith<T, InvalidDecimal<T>> get copyWith =>
-      _$InvalidDecimalCopyWithImpl<T, InvalidDecimal<T>>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-  }) {
-    assert(invalidBase64Binary != null);
-    assert(invalidCanonical != null);
-    assert(invalidCode != null);
-    assert(invalidDate != null);
-    assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
-    assert(invalidId != null);
-    assert(invalidInstant != null);
-    assert(invalidMarkdown != null);
-    assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
-    assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
-    assert(invalidFhirUri != null);
-    assert(invalidUrl != null);
-    assert(invalidUuid != null);
-    return invalidDecimal(failedValue);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (invalidDecimal != null) {
-      return invalidDecimal(failedValue);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidUrl(InvalidUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-  }) {
-    assert(invalidBase64Binary != null);
-    assert(invalidCanonical != null);
-    assert(invalidCode != null);
-    assert(invalidDate != null);
-    assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
-    assert(invalidId != null);
-    assert(invalidInstant != null);
-    assert(invalidMarkdown != null);
-    assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
-    assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
-    assert(invalidFhirUri != null);
-    assert(invalidUrl != null);
-    assert(invalidUuid != null);
-    return invalidDecimal(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidUrl(InvalidUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (invalidDecimal != null) {
-      return invalidDecimal(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class InvalidDecimal<T> implements PrimitiveFailure<T> {
-  const factory InvalidDecimal({@required T failedValue}) = _$InvalidDecimal<T>;
-
-  @override
-  T get failedValue;
-  @override
-  $InvalidDecimalCopyWith<T, InvalidDecimal<T>> get copyWith;
 }
 
 abstract class $InvalidIdCopyWith<T, $Res>
@@ -1511,14 +1188,11 @@ class _$InvalidId<T> implements InvalidId<T> {
     @required Result invalidCode(T failedValue),
     @required Result invalidDate(T failedValue),
     @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
     @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
@@ -1528,14 +1202,11 @@ class _$InvalidId<T> implements InvalidId<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -1550,14 +1221,11 @@ class _$InvalidId<T> implements InvalidId<T> {
     Result invalidCode(T failedValue),
     Result invalidDate(T failedValue),
     Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
     Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
@@ -1578,14 +1246,11 @@ class _$InvalidId<T> implements InvalidId<T> {
     @required Result invalidCode(InvalidCode<T> value),
     @required Result invalidDate(InvalidDate<T> value),
     @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
     @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
@@ -1595,14 +1260,11 @@ class _$InvalidId<T> implements InvalidId<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -1617,14 +1279,11 @@ class _$InvalidId<T> implements InvalidId<T> {
     Result invalidCode(InvalidCode<T> value),
     Result invalidDate(InvalidDate<T> value),
     Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
     Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
@@ -1714,14 +1373,11 @@ class _$InvalidInstant<T> implements InvalidInstant<T> {
     @required Result invalidCode(T failedValue),
     @required Result invalidDate(T failedValue),
     @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
     @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
@@ -1731,14 +1387,11 @@ class _$InvalidInstant<T> implements InvalidInstant<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -1753,14 +1406,11 @@ class _$InvalidInstant<T> implements InvalidInstant<T> {
     Result invalidCode(T failedValue),
     Result invalidDate(T failedValue),
     Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
     Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
@@ -1781,14 +1431,11 @@ class _$InvalidInstant<T> implements InvalidInstant<T> {
     @required Result invalidCode(InvalidCode<T> value),
     @required Result invalidDate(InvalidDate<T> value),
     @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
     @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
@@ -1798,14 +1445,11 @@ class _$InvalidInstant<T> implements InvalidInstant<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -1820,14 +1464,11 @@ class _$InvalidInstant<T> implements InvalidInstant<T> {
     Result invalidCode(InvalidCode<T> value),
     Result invalidDate(InvalidDate<T> value),
     Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
     Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
@@ -1917,14 +1558,11 @@ class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
     @required Result invalidCode(T failedValue),
     @required Result invalidDate(T failedValue),
     @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
     @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
@@ -1934,14 +1572,11 @@ class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -1956,14 +1591,11 @@ class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
     Result invalidCode(T failedValue),
     Result invalidDate(T failedValue),
     Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
     Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
@@ -1984,14 +1616,11 @@ class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
     @required Result invalidCode(InvalidCode<T> value),
     @required Result invalidDate(InvalidDate<T> value),
     @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
     @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
@@ -2001,14 +1630,11 @@ class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -2023,14 +1649,11 @@ class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
     Result invalidCode(InvalidCode<T> value),
     Result invalidDate(InvalidDate<T> value),
     Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
     Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
@@ -2121,14 +1744,11 @@ class _$InvalidOid<T> implements InvalidOid<T> {
     @required Result invalidCode(T failedValue),
     @required Result invalidDate(T failedValue),
     @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
     @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
@@ -2138,14 +1758,11 @@ class _$InvalidOid<T> implements InvalidOid<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -2160,14 +1777,11 @@ class _$InvalidOid<T> implements InvalidOid<T> {
     Result invalidCode(T failedValue),
     Result invalidDate(T failedValue),
     Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
     Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
@@ -2188,14 +1802,11 @@ class _$InvalidOid<T> implements InvalidOid<T> {
     @required Result invalidCode(InvalidCode<T> value),
     @required Result invalidDate(InvalidDate<T> value),
     @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
     @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
@@ -2205,14 +1816,11 @@ class _$InvalidOid<T> implements InvalidOid<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -2227,14 +1835,11 @@ class _$InvalidOid<T> implements InvalidOid<T> {
     Result invalidCode(InvalidCode<T> value),
     Result invalidDate(InvalidDate<T> value),
     Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
     Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
@@ -2255,211 +1860,6 @@ abstract class InvalidOid<T> implements PrimitiveFailure<T> {
   T get failedValue;
   @override
   $InvalidOidCopyWith<T, InvalidOid<T>> get copyWith;
-}
-
-abstract class $InvalidPositiveIntCopyWith<T, $Res>
-    implements $PrimitiveFailureCopyWith<T, $Res> {
-  factory $InvalidPositiveIntCopyWith(InvalidPositiveInt<T> value,
-          $Res Function(InvalidPositiveInt<T>) then) =
-      _$InvalidPositiveIntCopyWithImpl<T, $Res>;
-  @override
-  $Res call({T failedValue});
-}
-
-class _$InvalidPositiveIntCopyWithImpl<T, $Res>
-    extends _$PrimitiveFailureCopyWithImpl<T, $Res>
-    implements $InvalidPositiveIntCopyWith<T, $Res> {
-  _$InvalidPositiveIntCopyWithImpl(
-      InvalidPositiveInt<T> _value, $Res Function(InvalidPositiveInt<T>) _then)
-      : super(_value, (v) => _then(v as InvalidPositiveInt<T>));
-
-  @override
-  InvalidPositiveInt<T> get _value => super._value as InvalidPositiveInt<T>;
-
-  @override
-  $Res call({
-    Object failedValue = freezed,
-  }) {
-    return _then(InvalidPositiveInt<T>(
-      failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as T,
-    ));
-  }
-}
-
-class _$InvalidPositiveInt<T> implements InvalidPositiveInt<T> {
-  const _$InvalidPositiveInt({@required this.failedValue})
-      : assert(failedValue != null);
-
-  @override
-  final T failedValue;
-
-  @override
-  String toString() {
-    return 'PrimitiveFailure<$T>.invalidPositiveInt(failedValue: $failedValue)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is InvalidPositiveInt<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
-
-  @override
-  $InvalidPositiveIntCopyWith<T, InvalidPositiveInt<T>> get copyWith =>
-      _$InvalidPositiveIntCopyWithImpl<T, InvalidPositiveInt<T>>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-  }) {
-    assert(invalidBase64Binary != null);
-    assert(invalidCanonical != null);
-    assert(invalidCode != null);
-    assert(invalidDate != null);
-    assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
-    assert(invalidId != null);
-    assert(invalidInstant != null);
-    assert(invalidMarkdown != null);
-    assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
-    assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
-    assert(invalidFhirUri != null);
-    assert(invalidUrl != null);
-    assert(invalidUuid != null);
-    return invalidPositiveInt(failedValue);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (invalidPositiveInt != null) {
-      return invalidPositiveInt(failedValue);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidUrl(InvalidUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-  }) {
-    assert(invalidBase64Binary != null);
-    assert(invalidCanonical != null);
-    assert(invalidCode != null);
-    assert(invalidDate != null);
-    assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
-    assert(invalidId != null);
-    assert(invalidInstant != null);
-    assert(invalidMarkdown != null);
-    assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
-    assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
-    assert(invalidFhirUri != null);
-    assert(invalidUrl != null);
-    assert(invalidUuid != null);
-    return invalidPositiveInt(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidUrl(InvalidUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (invalidPositiveInt != null) {
-      return invalidPositiveInt(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class InvalidPositiveInt<T> implements PrimitiveFailure<T> {
-  const factory InvalidPositiveInt({@required T failedValue}) =
-      _$InvalidPositiveInt<T>;
-
-  @override
-  T get failedValue;
-  @override
-  $InvalidPositiveIntCopyWith<T, InvalidPositiveInt<T>> get copyWith;
 }
 
 abstract class $InvalidTimeCopyWith<T, $Res>
@@ -2529,14 +1929,11 @@ class _$InvalidTime<T> implements InvalidTime<T> {
     @required Result invalidCode(T failedValue),
     @required Result invalidDate(T failedValue),
     @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
     @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
@@ -2546,14 +1943,11 @@ class _$InvalidTime<T> implements InvalidTime<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -2568,14 +1962,11 @@ class _$InvalidTime<T> implements InvalidTime<T> {
     Result invalidCode(T failedValue),
     Result invalidDate(T failedValue),
     Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
     Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
@@ -2596,14 +1987,11 @@ class _$InvalidTime<T> implements InvalidTime<T> {
     @required Result invalidCode(InvalidCode<T> value),
     @required Result invalidDate(InvalidDate<T> value),
     @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
     @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
@@ -2613,14 +2001,11 @@ class _$InvalidTime<T> implements InvalidTime<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -2635,14 +2020,11 @@ class _$InvalidTime<T> implements InvalidTime<T> {
     Result invalidCode(InvalidCode<T> value),
     Result invalidDate(InvalidDate<T> value),
     Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
     Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
@@ -2663,211 +2045,6 @@ abstract class InvalidTime<T> implements PrimitiveFailure<T> {
   T get failedValue;
   @override
   $InvalidTimeCopyWith<T, InvalidTime<T>> get copyWith;
-}
-
-abstract class $InvalidUnsignedIntCopyWith<T, $Res>
-    implements $PrimitiveFailureCopyWith<T, $Res> {
-  factory $InvalidUnsignedIntCopyWith(InvalidUnsignedInt<T> value,
-          $Res Function(InvalidUnsignedInt<T>) then) =
-      _$InvalidUnsignedIntCopyWithImpl<T, $Res>;
-  @override
-  $Res call({T failedValue});
-}
-
-class _$InvalidUnsignedIntCopyWithImpl<T, $Res>
-    extends _$PrimitiveFailureCopyWithImpl<T, $Res>
-    implements $InvalidUnsignedIntCopyWith<T, $Res> {
-  _$InvalidUnsignedIntCopyWithImpl(
-      InvalidUnsignedInt<T> _value, $Res Function(InvalidUnsignedInt<T>) _then)
-      : super(_value, (v) => _then(v as InvalidUnsignedInt<T>));
-
-  @override
-  InvalidUnsignedInt<T> get _value => super._value as InvalidUnsignedInt<T>;
-
-  @override
-  $Res call({
-    Object failedValue = freezed,
-  }) {
-    return _then(InvalidUnsignedInt<T>(
-      failedValue:
-          failedValue == freezed ? _value.failedValue : failedValue as T,
-    ));
-  }
-}
-
-class _$InvalidUnsignedInt<T> implements InvalidUnsignedInt<T> {
-  const _$InvalidUnsignedInt({@required this.failedValue})
-      : assert(failedValue != null);
-
-  @override
-  final T failedValue;
-
-  @override
-  String toString() {
-    return 'PrimitiveFailure<$T>.invalidUnsignedInt(failedValue: $failedValue)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is InvalidUnsignedInt<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
-
-  @override
-  $InvalidUnsignedIntCopyWith<T, InvalidUnsignedInt<T>> get copyWith =>
-      _$InvalidUnsignedIntCopyWithImpl<T, InvalidUnsignedInt<T>>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-  }) {
-    assert(invalidBase64Binary != null);
-    assert(invalidCanonical != null);
-    assert(invalidCode != null);
-    assert(invalidDate != null);
-    assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
-    assert(invalidId != null);
-    assert(invalidInstant != null);
-    assert(invalidMarkdown != null);
-    assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
-    assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
-    assert(invalidFhirUri != null);
-    assert(invalidUrl != null);
-    assert(invalidUuid != null);
-    return invalidUnsignedInt(failedValue);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (invalidUnsignedInt != null) {
-      return invalidUnsignedInt(failedValue);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidUrl(InvalidUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-  }) {
-    assert(invalidBase64Binary != null);
-    assert(invalidCanonical != null);
-    assert(invalidCode != null);
-    assert(invalidDate != null);
-    assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
-    assert(invalidId != null);
-    assert(invalidInstant != null);
-    assert(invalidMarkdown != null);
-    assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
-    assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
-    assert(invalidFhirUri != null);
-    assert(invalidUrl != null);
-    assert(invalidUuid != null);
-    return invalidUnsignedInt(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidUrl(InvalidUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (invalidUnsignedInt != null) {
-      return invalidUnsignedInt(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class InvalidUnsignedInt<T> implements PrimitiveFailure<T> {
-  const factory InvalidUnsignedInt({@required T failedValue}) =
-      _$InvalidUnsignedInt<T>;
-
-  @override
-  T get failedValue;
-  @override
-  $InvalidUnsignedIntCopyWith<T, InvalidUnsignedInt<T>> get copyWith;
 }
 
 abstract class $InvalidFhirUriCopyWith<T, $Res>
@@ -2937,14 +2114,11 @@ class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
     @required Result invalidCode(T failedValue),
     @required Result invalidDate(T failedValue),
     @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
     @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
@@ -2954,14 +2128,11 @@ class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -2976,14 +2147,11 @@ class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
     Result invalidCode(T failedValue),
     Result invalidDate(T failedValue),
     Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
     Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
@@ -3004,14 +2172,11 @@ class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
     @required Result invalidCode(InvalidCode<T> value),
     @required Result invalidDate(InvalidDate<T> value),
     @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
     @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
@@ -3021,14 +2186,11 @@ class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -3043,14 +2205,11 @@ class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
     Result invalidCode(InvalidCode<T> value),
     Result invalidDate(InvalidDate<T> value),
     Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
     Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
@@ -3140,14 +2299,11 @@ class _$InvalidUrl<T> implements InvalidUrl<T> {
     @required Result invalidCode(T failedValue),
     @required Result invalidDate(T failedValue),
     @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
     @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
@@ -3157,14 +2313,11 @@ class _$InvalidUrl<T> implements InvalidUrl<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -3179,14 +2332,11 @@ class _$InvalidUrl<T> implements InvalidUrl<T> {
     Result invalidCode(T failedValue),
     Result invalidDate(T failedValue),
     Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
     Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
@@ -3207,14 +2357,11 @@ class _$InvalidUrl<T> implements InvalidUrl<T> {
     @required Result invalidCode(InvalidCode<T> value),
     @required Result invalidDate(InvalidDate<T> value),
     @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
     @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
@@ -3224,14 +2371,11 @@ class _$InvalidUrl<T> implements InvalidUrl<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -3246,14 +2390,11 @@ class _$InvalidUrl<T> implements InvalidUrl<T> {
     Result invalidCode(InvalidCode<T> value),
     Result invalidDate(InvalidDate<T> value),
     Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
     Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
@@ -3343,14 +2484,11 @@ class _$InvalidUuid<T> implements InvalidUuid<T> {
     @required Result invalidCode(T failedValue),
     @required Result invalidDate(T failedValue),
     @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
     @required Result invalidId(T failedValue),
     @required Result invalidInstant(T failedValue),
     @required Result invalidMarkdown(T failedValue),
     @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
     @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
@@ -3360,14 +2498,11 @@ class _$InvalidUuid<T> implements InvalidUuid<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -3382,14 +2517,11 @@ class _$InvalidUuid<T> implements InvalidUuid<T> {
     Result invalidCode(T failedValue),
     Result invalidDate(T failedValue),
     Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
     Result invalidId(T failedValue),
     Result invalidInstant(T failedValue),
     Result invalidMarkdown(T failedValue),
     Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
     Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
@@ -3410,14 +2542,11 @@ class _$InvalidUuid<T> implements InvalidUuid<T> {
     @required Result invalidCode(InvalidCode<T> value),
     @required Result invalidDate(InvalidDate<T> value),
     @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
     @required Result invalidId(InvalidId<T> value),
     @required Result invalidInstant(InvalidInstant<T> value),
     @required Result invalidMarkdown(InvalidMarkdown<T> value),
     @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
     @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
@@ -3427,14 +2556,11 @@ class _$InvalidUuid<T> implements InvalidUuid<T> {
     assert(invalidCode != null);
     assert(invalidDate != null);
     assert(invalidFhirDateTime != null);
-    assert(invalidDecimal != null);
     assert(invalidId != null);
     assert(invalidInstant != null);
     assert(invalidMarkdown != null);
     assert(invalidOid != null);
-    assert(invalidPositiveInt != null);
     assert(invalidTime != null);
-    assert(invalidUnsignedInt != null);
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
@@ -3449,14 +2575,11 @@ class _$InvalidUuid<T> implements InvalidUuid<T> {
     Result invalidCode(InvalidCode<T> value),
     Result invalidDate(InvalidDate<T> value),
     Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
     Result invalidId(InvalidId<T> value),
     Result invalidInstant(InvalidInstant<T> value),
     Result invalidMarkdown(InvalidMarkdown<T> value),
     Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
     Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),

@@ -101,7 +101,7 @@ class QuestionnaireResponseAnswer {
   List<Extension> extension;
   List<Extension> modifierExtension;
   bool valueBoolean;
-  Decimal valueDecimal;
+  double valueDecimal;
   int valueInteger;
   Date valueDate;
   FhirDateTime valueDateTime;

@@ -150,7 +150,7 @@ class ClaimCareTeam {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt sequence;
+  int sequence;
   Reference provider;
   bool responsible;
   CodeableConcept role;
@@ -177,7 +177,7 @@ class ClaimSupportingInfo {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt sequence;
+  int sequence;
   CodeableConcept category;
   CodeableConcept code;
   Date timingDate;
@@ -216,7 +216,7 @@ class ClaimDiagnosis {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt sequence;
+  int sequence;
   CodeableConcept diagnosisCodeableConcept;
   Reference diagnosisReference;
   List<CodeableConcept> type;
@@ -245,7 +245,7 @@ class ClaimProcedure {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt sequence;
+  int sequence;
   List<CodeableConcept> type;
   FhirDateTime date;
   CodeableConcept procedureCodeableConcept;
@@ -274,7 +274,7 @@ class ClaimInsurance {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt sequence;
+  int sequence;
   bool focal;
   Identifier identifier;
   Reference coverage;
@@ -330,7 +330,7 @@ class ClaimItem {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt sequence;
+  int sequence;
   List<PositiveInt> careTeamSequence;
   List<PositiveInt> diagnosisSequence;
   List<PositiveInt> procedureSequence;
@@ -347,7 +347,7 @@ class ClaimItem {
   Reference locationReference;
   Quantity quantity;
   Money unitPrice;
-  Decimal factor;
+  double factor;
   Money net;
   List<Reference> udi;
   CodeableConcept bodySite;
@@ -395,7 +395,7 @@ class ClaimDetail {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt sequence;
+  int sequence;
   CodeableConcept revenue;
   CodeableConcept category;
   CodeableConcept productOrService;
@@ -403,7 +403,7 @@ class ClaimDetail {
   List<CodeableConcept> programCode;
   Quantity quantity;
   Money unitPrice;
-  Decimal factor;
+  double factor;
   Money net;
   List<Reference> udi;
   List<ClaimSubDetail> subDetail;
@@ -436,7 +436,7 @@ class ClaimSubDetail {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt sequence;
+  int sequence;
   CodeableConcept revenue;
   CodeableConcept category;
   CodeableConcept productOrService;
@@ -444,7 +444,7 @@ class ClaimSubDetail {
   List<CodeableConcept> programCode;
   Quantity quantity;
   Money unitPrice;
-  Decimal factor;
+  double factor;
   Money net;
   List<Reference> udi;
 

@@ -13,7 +13,7 @@ class ContactPoint {
   ContactPointSystem system;
   String value;
   ContactPointUse use;
-  PositiveInt rank;
+  int rank;
   Period period;
 
   ContactPoint({

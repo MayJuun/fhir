@@ -140,9 +140,7 @@ CoverageEligibilityRequestSupportingInfo
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    sequence: json['sequence'] == null
-        ? null
-        : PositiveInt.fromJson(json['sequence'] as String),
+    sequence: json['sequence'] as int,
     information: json['information'] == null
         ? null
         : Reference.fromJson(json['information'] as Map<String, dynamic>),
@@ -165,7 +163,7 @@ Map<String, dynamic> _$CoverageEligibilityRequestSupportingInfoToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('sequence', instance.sequence?.toJson());
+  writeNotNull('sequence', instance.sequence);
   writeNotNull('information', instance.information?.toJson());
   writeNotNull('appliesToAll', instance.appliesToAll);
   return val;
@@ -224,9 +222,7 @@ CoverageEligibilityRequestItem _$CoverageEligibilityRequestItemFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    supportingInfoSequence: (json['supportingInfoSequence'] as List)
-        ?.map((e) => e == null ? null : PositiveInt.fromJson(e as String))
-        ?.toList(),
+    supportingInfoSequence: json['supportingInfoSequence'] as List,
     category: json['category'] == null
         ? null
         : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
@@ -279,8 +275,7 @@ Map<String, dynamic> _$CoverageEligibilityRequestItemToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('supportingInfoSequence',
-      instance.supportingInfoSequence?.map((e) => e?.toJson())?.toList());
+  writeNotNull('supportingInfoSequence', instance.supportingInfoSequence);
   writeNotNull('category', instance.category?.toJson());
   writeNotNull('productOrService', instance.productOrService?.toJson());
   writeNotNull(

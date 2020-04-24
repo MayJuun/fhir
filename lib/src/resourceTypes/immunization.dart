@@ -181,9 +181,9 @@ class ImmunizationProtocolApplied {
   String series;
   Reference authority;
   List<CodeableConcept> targetDisease;
-  PositiveInt doseNumberPositiveInt;
+  int doseNumberPositiveInt;
   String doseNumberString;
-  PositiveInt seriesDosesPositiveInt;
+  int seriesDosesPositiveInt;
   String seriesDosesString;
 
   ImmunizationProtocolApplied({

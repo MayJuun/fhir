@@ -344,13 +344,9 @@ ImmunizationProtocolApplied _$ImmunizationProtocolAppliedFromJson(
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    doseNumberPositiveInt: json['doseNumberPositiveInt'] == null
-        ? null
-        : PositiveInt.fromJson(json['doseNumberPositiveInt'] as String),
+    doseNumberPositiveInt: json['doseNumberPositiveInt'] as int,
     doseNumberString: json['doseNumberString'] as String,
-    seriesDosesPositiveInt: json['seriesDosesPositiveInt'] == null
-        ? null
-        : PositiveInt.fromJson(json['seriesDosesPositiveInt'] as String),
+    seriesDosesPositiveInt: json['seriesDosesPositiveInt'] as int,
     seriesDosesString: json['seriesDosesString'] as String,
   );
 }
@@ -374,11 +370,9 @@ Map<String, dynamic> _$ImmunizationProtocolAppliedToJson(
   writeNotNull('authority', instance.authority?.toJson());
   writeNotNull('targetDisease',
       instance.targetDisease?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      'doseNumberPositiveInt', instance.doseNumberPositiveInt?.toJson());
+  writeNotNull('doseNumberPositiveInt', instance.doseNumberPositiveInt);
   writeNotNull('doseNumberString', instance.doseNumberString);
-  writeNotNull(
-      'seriesDosesPositiveInt', instance.seriesDosesPositiveInt?.toJson());
+  writeNotNull('seriesDosesPositiveInt', instance.seriesDosesPositiveInt);
   writeNotNull('seriesDosesString', instance.seriesDosesString);
   return val;
 }

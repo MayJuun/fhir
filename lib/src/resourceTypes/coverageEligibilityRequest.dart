@@ -81,7 +81,7 @@ class CoverageEligibilityRequestSupportingInfo {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt sequence;
+  int sequence;
   Reference information;
   bool appliesToAll;
 

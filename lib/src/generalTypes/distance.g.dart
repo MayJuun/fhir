@@ -13,9 +13,7 @@ Distance _$DistanceFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    value: json['value'] == null
-        ? null
-        : Decimal.fromJson(json['value'] as String),
+    value: (json['value'] as num)?.toDouble(),
     comparator:
         _$enumDecodeNullable(_$AmountComparatorEnumMap, json['comparator']),
     unit: json['unit'] as String,
@@ -38,7 +36,7 @@ Map<String, dynamic> _$DistanceToJson(Distance instance) {
   writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('value', instance.value?.toJson());
+  writeNotNull('value', instance.value);
   writeNotNull('comparator', _$AmountComparatorEnumMap[instance.comparator]);
   writeNotNull('unit', instance.unit);
   writeNotNull('system', instance.system?.toJson());

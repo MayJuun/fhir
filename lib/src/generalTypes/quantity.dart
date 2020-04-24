@@ -11,7 +11,7 @@ part 'quantity.g.dart';
 class Quantity {
   String id;
   List<Extension> extension;
-  Decimal value;
+  double value;
   AmountComparator comparator;
   String unit;
   FhirUri system;

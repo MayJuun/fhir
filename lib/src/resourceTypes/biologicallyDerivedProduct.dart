@@ -151,7 +151,7 @@ class BiologicallyDerivedProductStorage {
   List<Extension> extension;
   List<Extension> modifierExtension;
   String description;
-  Decimal temperature;
+  double temperature;
   String scale;
   Period duration;
 

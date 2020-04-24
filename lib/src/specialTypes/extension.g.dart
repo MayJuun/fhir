@@ -7,7 +7,6 @@ part of 'extension.dart';
 // **************************************************************************
 
 Extension _$ExtensionFromJson(Map<String, dynamic> json) {
-  print(json['valueDecimal']);
   return Extension(
     id: json['id'] as String,
     extension: (json['extension'] as List)
@@ -31,9 +30,7 @@ Extension _$ExtensionFromJson(Map<String, dynamic> json) {
     valueDateTime: json['valueDateTime'] == null
         ? null
         : FhirDateTime.fromJson(json['valueDateTime'] as String),
-    valueDecimal: json['valueDecimal'] == null
-        ? null
-        : Decimal.fromJson(json['valueDecimal'] as String),
+    valueDecimal: (json['valueDecimal'] as num)?.toDouble(),
     valueId:
         json['valueId'] == null ? null : Id.fromJson(json['valueId'] as String),
     valueInstant: json['valueInstant'] == null
@@ -46,16 +43,12 @@ Extension _$ExtensionFromJson(Map<String, dynamic> json) {
     valueOid: json['valueOid'] == null
         ? null
         : Oid.fromJson(json['valueOid'] as String),
-    valuePositiveInt: json['valuePositiveInt'] == null
-        ? null
-        : PositiveInt.fromJson(json['valuePositiveInt'] as String),
+    valuePositiveInt: json['valuePositiveInt'] as int,
     valueString: json['valueString'] as String,
     valueTime: json['valueTime'] == null
         ? null
         : Time.fromJson(json['valueTime'] as String),
-    valueUnsignedInt: json['valueUnsignedInt'] == null
-        ? null
-        : UnsignedInt.fromJson(json['valueUnsignedInt'] as String),
+    valueUnsignedInt: json['valueUnsignedInt'] as int,
     valueUri: json['valueUri'] == null
         ? null
         : FhirUri.fromJson(json['valueUri'] as String),
@@ -190,16 +183,16 @@ Map<String, dynamic> _$ExtensionToJson(Extension instance) {
   writeNotNull('valueCode', instance.valueCode?.toJson());
   writeNotNull('valueDate', instance.valueDate?.toJson());
   writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
-  writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal);
   writeNotNull('valueId', instance.valueId?.toJson());
   writeNotNull('valueInstant', instance.valueInstant?.toJson());
   writeNotNull('valueInteger', instance.valueInteger);
   writeNotNull('valueMarkdown', instance.valueMarkdown?.toJson());
   writeNotNull('valueOid', instance.valueOid?.toJson());
-  writeNotNull('valuePositiveInt', instance.valuePositiveInt?.toJson());
+  writeNotNull('valuePositiveInt', instance.valuePositiveInt);
   writeNotNull('valueString', instance.valueString);
   writeNotNull('valueTime', instance.valueTime?.toJson());
-  writeNotNull('valueUnsignedInt', instance.valueUnsignedInt?.toJson());
+  writeNotNull('valueUnsignedInt', instance.valueUnsignedInt);
   writeNotNull('valueUri', instance.valueUri?.toJson());
   writeNotNull('valueUrl', instance.valueUrl?.toJson());
   writeNotNull('valueUuid', instance.valueUuid?.toJson());

@@ -265,9 +265,7 @@ BiologicallyDerivedProductStorage _$BiologicallyDerivedProductStorageFromJson(
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     description: json['description'] as String,
-    temperature: json['temperature'] == null
-        ? null
-        : Decimal.fromJson(json['temperature'] as String),
+    temperature: (json['temperature'] as num)?.toDouble(),
     scale: json['scale'] as String,
     duration: json['duration'] == null
         ? null
@@ -291,7 +289,7 @@ Map<String, dynamic> _$BiologicallyDerivedProductStorageToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
-  writeNotNull('temperature', instance.temperature?.toJson());
+  writeNotNull('temperature', instance.temperature);
   writeNotNull('scale', instance.scale);
   writeNotNull('duration', instance.duration?.toJson());
   return val;

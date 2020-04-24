@@ -36,9 +36,7 @@ DataRequirement _$DataRequirementFromJson(Map<String, dynamic> json) {
             ? null
             : DataRequirementDateFilter.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    limit: json['limit'] == null
-        ? null
-        : PositiveInt.fromJson(json['limit'] as String),
+    limit: json['limit'] as int,
     sort: (json['sort'] as List)
         ?.map((e) => e == null
             ? null
@@ -69,7 +67,7 @@ Map<String, dynamic> _$DataRequirementToJson(DataRequirement instance) {
       'codeFilter', instance.codeFilter?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'dateFilter', instance.dateFilter?.map((e) => e?.toJson())?.toList());
-  writeNotNull('limit', instance.limit?.toJson());
+  writeNotNull('limit', instance.limit);
   writeNotNull('sort', instance.sort?.map((e) => e?.toJson())?.toList());
   return val;
 }

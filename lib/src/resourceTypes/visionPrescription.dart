@@ -67,14 +67,14 @@ class VisionPrescriptionLensSpecification {
   List<Extension> modifierExtension;
   CodeableConcept product;
   String eye;
-  Decimal sphere;
-  Decimal cylinder;
+  double sphere;
+  double cylinder;
   int axis;
   List<VisionPrescriptionPrism> prism;
-  Decimal add;
-  Decimal power;
-  Decimal backCurve;
-  Decimal diameter;
+  double add;
+  double power;
+  double backCurve;
+  double diameter;
   Quantity duration;
   String color;
   String brand;
@@ -112,7 +112,7 @@ class VisionPrescriptionPrism {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  Decimal amount;
+  double amount;
   String base;
 
   VisionPrescriptionPrism({

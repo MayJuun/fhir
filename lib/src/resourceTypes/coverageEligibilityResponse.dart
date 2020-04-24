@@ -156,10 +156,10 @@ class CoverageEligibilityResponseBenefit {
   List<Extension> extension;
   List<Extension> modifierExtension;
   CodeableConcept type;
-  UnsignedInt allowedUnsignedInt;
+  int allowedUnsignedInt;
   String allowedString;
   Money allowedMoney;
-  UnsignedInt usedUnsignedInt;
+  int usedUnsignedInt;
   String usedString;
   Money usedMoney;
 

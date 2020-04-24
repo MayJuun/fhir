@@ -30,7 +30,7 @@ class TestReport {
   String status;
   Reference testScript;
   String result;
-  Decimal score;
+  double score;
   String tester;
   FhirDateTime issued;
   List<TestReportParticipant> participant;

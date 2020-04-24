@@ -37,8 +37,8 @@ class ImagingStudy {
   Reference referrer;
   List<Reference> interpreter;
   List<Reference> endpoint;
-  UnsignedInt numberOfSeries;
-  UnsignedInt numberOfInstances;
+  int numberOfSeries;
+  int numberOfInstances;
   Reference procedureReference;
   List<CodeableConcept> procedureCode;
   Reference location;
@@ -90,10 +90,10 @@ class ImagingStudySeries {
   List<Extension> extension;
   List<Extension> modifierExtension;
   Id uid;
-  UnsignedInt number;
+  int number;
   Coding modality;
   String description;
-  UnsignedInt numberOfInstances;
+  int numberOfInstances;
   List<Reference> endpoint;
   Coding bodySite;
   Coding laterality;
@@ -153,7 +153,7 @@ class ImagingStudyInstance {
   List<Extension> modifierExtension;
   Id uid;
   Coding sopClass;
-  UnsignedInt number;
+  int number;
   String title;
 
   ImagingStudyInstance({

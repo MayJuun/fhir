@@ -144,7 +144,7 @@ class TaskRestriction {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  PositiveInt repetitions;
+  int repetitions;
   Period period;
   List<Reference> recipient;
 
@@ -174,16 +174,16 @@ class TaskInput {
   Code valueCode;
   Date valueDate;
   FhirDateTime valueDateTime;
-  Decimal valueDecimal;
+  double valueDecimal;
   Id valueId;
   Instant valueInstant;
   int valueInteger;
   Markdown valueMarkdown;
   Oid valueOid;
-  PositiveInt valuePositiveInt;
+  int valuePositiveInt;
   String valueString;
   Time valueTime;
-  UnsignedInt valueUnsignedInt;
+  int valueUnsignedInt;
   FhirUri valueUri;
   Url valueUrl;
   Uuid valueUuid;
@@ -293,16 +293,16 @@ class TaskOutput {
   Code valueCode;
   Date valueDate;
   FhirDateTime valueDateTime;
-  Decimal valueDecimal;
+  double valueDecimal;
   Id valueId;
   Instant valueInstant;
   int valueInteger;
   Markdown valueMarkdown;
   Oid valueOid;
-  PositiveInt valuePositiveInt;
+  int valuePositiveInt;
   String valueString;
   Time valueTime;
-  UnsignedInt valueUnsignedInt;
+  int valueUnsignedInt;
   FhirUri valueUri;
   Url valueUrl;
   Uuid valueUuid;

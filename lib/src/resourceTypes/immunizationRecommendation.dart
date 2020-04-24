@@ -66,9 +66,9 @@ class ImmunizationRecommendationRecommendation {
   List<ImmunizationRecommendationDateCriterion> dateCriterion;
   String description;
   String series;
-  PositiveInt doseNumberPositiveInt;
+  int doseNumberPositiveInt;
   String doseNumberString;
-  PositiveInt seriesDosesPositiveInt;
+  int seriesDosesPositiveInt;
   String seriesDosesString;
   List<Reference> supportingImmunization;
   List<Reference> supportingPatientInformation;

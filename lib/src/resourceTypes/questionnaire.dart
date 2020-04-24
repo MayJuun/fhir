@@ -152,7 +152,7 @@ class QuestionnaireEnableWhen {
   String question;
   String operator;
   bool answerBoolean;
-  Decimal answerDecimal;
+  double answerDecimal;
   int answerInteger;
   Date answerDate;
   FhirDateTime answerDateTime;
@@ -222,7 +222,7 @@ class QuestionnaireInitial {
   List<Extension> extension;
   List<Extension> modifierExtension;
   bool valueBoolean;
-  Decimal valueDecimal;
+  double valueDecimal;
   int valueInteger;
   Date valueDate;
   FhirDateTime valueDateTime;

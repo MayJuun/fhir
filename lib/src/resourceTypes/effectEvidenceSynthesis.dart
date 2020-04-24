@@ -175,7 +175,7 @@ class EffectEvidenceSynthesisEffectEstimate {
   String description;
   CodeableConcept type;
   CodeableConcept variantState;
-  Decimal value;
+  double value;
   CodeableConcept unitOfMeasure;
   List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate;
 
@@ -204,9 +204,9 @@ class EffectEvidenceSynthesisPrecisionEstimate {
   List<Extension> extension;
   List<Extension> modifierExtension;
   CodeableConcept type;
-  Decimal level;
-  Decimal from;
-  Decimal to;
+  double level;
+  double from;
+  double to;
 
   EffectEvidenceSynthesisPrecisionEstimate({
     this.id,

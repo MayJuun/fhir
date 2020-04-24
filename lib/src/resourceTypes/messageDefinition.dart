@@ -103,7 +103,7 @@ class MessageDefinitionFocus {
   List<Extension> modifierExtension;
   Code code;
   Canonical profile;
-  UnsignedInt min;
+  int min;
   String max;
 
   MessageDefinitionFocus({

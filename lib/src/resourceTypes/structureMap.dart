@@ -237,16 +237,16 @@ class StructureMapSource {
   Code defaultValueCode;
   Date defaultValueDate;
   FhirDateTime defaultValueDateTime;
-  Decimal defaultValueDecimal;
+  double defaultValueDecimal;
   Id defaultValueId;
   Instant defaultValueInstant;
   int defaultValueInteger;
   Markdown defaultValueMarkdown;
   Oid defaultValueOid;
-  PositiveInt defaultValuePositiveInt;
+  int defaultValuePositiveInt;
   String defaultValueString;
   Time defaultValueTime;
-  UnsignedInt defaultValueUnsignedInt;
+  int defaultValueUnsignedInt;
   FhirUri defaultValueUri;
   Url defaultValueUrl;
   Uuid defaultValueUuid;
@@ -401,7 +401,7 @@ class StructureMapParameter {
   String valueString;
   bool valueBoolean;
   int valueInteger;
-  Decimal valueDecimal;
+  double valueDecimal;
 
   StructureMapParameter({
     this.id,

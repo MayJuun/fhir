@@ -142,7 +142,7 @@ class RiskEvidenceSynthesisRiskEstimate {
   List<Extension> modifierExtension;
   String description;
   CodeableConcept type;
-  Decimal value;
+  double value;
   CodeableConcept unitOfMeasure;
   int denominatorCount;
   int numeratorCount;
@@ -174,9 +174,9 @@ class RiskEvidenceSynthesisPrecisionEstimate {
   List<Extension> extension;
   List<Extension> modifierExtension;
   CodeableConcept type;
-  Decimal level;
-  Decimal from;
-  Decimal to;
+  double level;
+  double from;
+  double to;
 
   RiskEvidenceSynthesisPrecisionEstimate({
     this.id,

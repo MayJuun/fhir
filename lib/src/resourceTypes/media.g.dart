@@ -83,18 +83,10 @@ Media _$MediaFromJson(Map<String, dynamic> json) {
     device: json['device'] == null
         ? null
         : Reference.fromJson(json['device'] as Map<String, dynamic>),
-    height: json['height'] == null
-        ? null
-        : PositiveInt.fromJson(json['height'] as String),
-    width: json['width'] == null
-        ? null
-        : PositiveInt.fromJson(json['width'] as String),
-    frames: json['frames'] == null
-        ? null
-        : PositiveInt.fromJson(json['frames'] as String),
-    duration: json['duration'] == null
-        ? null
-        : Decimal.fromJson(json['duration'] as String),
+    height: json['height'] as int,
+    width: json['width'] as int,
+    frames: json['frames'] as int,
+    duration: (json['duration'] as num)?.toDouble(),
     content: json['content'] == null
         ? null
         : Attachment.fromJson(json['content'] as Map<String, dynamic>),
@@ -143,10 +135,10 @@ Map<String, dynamic> _$MediaToJson(Media instance) {
   writeNotNull('bodySite', instance.bodySite?.toJson());
   writeNotNull('deviceName', instance.deviceName);
   writeNotNull('device', instance.device?.toJson());
-  writeNotNull('height', instance.height?.toJson());
-  writeNotNull('width', instance.width?.toJson());
-  writeNotNull('frames', instance.frames?.toJson());
-  writeNotNull('duration', instance.duration?.toJson());
+  writeNotNull('height', instance.height);
+  writeNotNull('width', instance.width);
+  writeNotNull('frames', instance.frames);
+  writeNotNull('duration', instance.duration);
   writeNotNull('content', instance.content?.toJson());
   writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
   return val;

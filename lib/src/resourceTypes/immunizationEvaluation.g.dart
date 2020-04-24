@@ -63,13 +63,9 @@ ImmunizationEvaluation _$ImmunizationEvaluationFromJson(
         ?.toList(),
     description: json['description'] as String,
     series: json['series'] as String,
-    doseNumberPositiveInt: json['doseNumberPositiveInt'] == null
-        ? null
-        : PositiveInt.fromJson(json['doseNumberPositiveInt'] as String),
+    doseNumberPositiveInt: json['doseNumberPositiveInt'] as int,
     doseNumberString: json['doseNumberString'] as String,
-    seriesDosesPositiveInt: json['seriesDosesPositiveInt'] == null
-        ? null
-        : PositiveInt.fromJson(json['seriesDosesPositiveInt'] as String),
+    seriesDosesPositiveInt: json['seriesDosesPositiveInt'] as int,
     seriesDosesString: json['seriesDosesString'] as String,
   );
 }
@@ -107,11 +103,9 @@ Map<String, dynamic> _$ImmunizationEvaluationToJson(
       instance.doseStatusReason?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
   writeNotNull('series', instance.series);
-  writeNotNull(
-      'doseNumberPositiveInt', instance.doseNumberPositiveInt?.toJson());
+  writeNotNull('doseNumberPositiveInt', instance.doseNumberPositiveInt);
   writeNotNull('doseNumberString', instance.doseNumberString);
-  writeNotNull(
-      'seriesDosesPositiveInt', instance.seriesDosesPositiveInt?.toJson());
+  writeNotNull('seriesDosesPositiveInt', instance.seriesDosesPositiveInt);
   writeNotNull('seriesDosesString', instance.seriesDosesString);
   return val;
 }

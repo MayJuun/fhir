@@ -11,7 +11,7 @@ part 'count.g.dart';
 class Count {
   String id;
   List<Extension> extension;
-  Decimal value;
+  double value;
   AmountComparator comparator;
   String unit;
   FhirUri system;

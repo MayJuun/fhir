@@ -67,9 +67,7 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    priority: json['priority'] == null
-        ? null
-        : UnsignedInt.fromJson(json['priority'] as String),
+    priority: json['priority'] as int,
     description: json['description'] as String,
     supportingInformation: (json['supportingInformation'] as List)
         ?.map((e) =>
@@ -79,9 +77,7 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
         ? null
         : Instant.fromJson(json['start'] as String),
     end: json['end'] == null ? null : Instant.fromJson(json['end'] as String),
-    minutesDuration: json['minutesDuration'] == null
-        ? null
-        : PositiveInt.fromJson(json['minutesDuration'] as String),
+    minutesDuration: json['minutesDuration'] as int,
     slot: (json['slot'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -141,13 +137,13 @@ Map<String, dynamic> _$AppointmentToJson(Appointment instance) {
       'reasonCode', instance.reasonCode?.map((e) => e?.toJson())?.toList());
   writeNotNull('reasonReference',
       instance.reasonReference?.map((e) => e?.toJson())?.toList());
-  writeNotNull('priority', instance.priority?.toJson());
+  writeNotNull('priority', instance.priority);
   writeNotNull('description', instance.description);
   writeNotNull('supportingInformation',
       instance.supportingInformation?.map((e) => e?.toJson())?.toList());
   writeNotNull('start', instance.start?.toJson());
   writeNotNull('end', instance.end?.toJson());
-  writeNotNull('minutesDuration', instance.minutesDuration?.toJson());
+  writeNotNull('minutesDuration', instance.minutesDuration);
   writeNotNull('slot', instance.slot?.map((e) => e?.toJson())?.toList());
   writeNotNull('created', instance.created?.toJson());
   writeNotNull('comment', instance.comment);

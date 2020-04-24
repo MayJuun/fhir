@@ -50,7 +50,7 @@ class CodeSystem {
   bool versionNeeded;
   String content;
   Canonical supplements;
-  UnsignedInt count;
+  int count;
   List<CodeSystemFilter> filter;
   List<CodeSystemProperty> property;
   List<CodeSystemConcept> concept;
@@ -211,7 +211,7 @@ class CodeSystemProperty1 {
   int valueInteger;
   bool valueBoolean;
   FhirDateTime valueDateTime;
-  Decimal valueDecimal;
+  double valueDecimal;
 
   CodeSystemProperty1({
     this.id,

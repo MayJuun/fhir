@@ -78,9 +78,7 @@ CodeSystem _$CodeSystemFromJson(Map<String, dynamic> json) {
     supplements: json['supplements'] == null
         ? null
         : Canonical.fromJson(json['supplements'] as String),
-    count: json['count'] == null
-        ? null
-        : UnsignedInt.fromJson(json['count'] as String),
+    count: json['count'] as int,
     filter: (json['filter'] as List)
         ?.map((e) => e == null
             ? null
@@ -143,7 +141,7 @@ Map<String, dynamic> _$CodeSystemToJson(CodeSystem instance) {
   writeNotNull('versionNeeded', instance.versionNeeded);
   writeNotNull('content', instance.content);
   writeNotNull('supplements', instance.supplements?.toJson());
-  writeNotNull('count', instance.count?.toJson());
+  writeNotNull('count', instance.count);
   writeNotNull('filter', instance.filter?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'property', instance.property?.map((e) => e?.toJson())?.toList());
@@ -356,9 +354,7 @@ CodeSystemProperty1 _$CodeSystemProperty1FromJson(Map<String, dynamic> json) {
     valueDateTime: json['valueDateTime'] == null
         ? null
         : FhirDateTime.fromJson(json['valueDateTime'] as String),
-    valueDecimal: json['valueDecimal'] == null
-        ? null
-        : Decimal.fromJson(json['valueDecimal'] as String),
+    valueDecimal: (json['valueDecimal'] as num)?.toDouble(),
   );
 }
 
@@ -383,6 +379,6 @@ Map<String, dynamic> _$CodeSystemProperty1ToJson(CodeSystemProperty1 instance) {
   writeNotNull('valueInteger', instance.valueInteger);
   writeNotNull('valueBoolean', instance.valueBoolean);
   writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
-  writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal);
   return val;
 }

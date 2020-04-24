@@ -87,9 +87,7 @@ ChargeItem _$ChargeItemFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    factorOverride: json['factorOverride'] == null
-        ? null
-        : Decimal.fromJson(json['factorOverride'] as String),
+    factorOverride: (json['factorOverride'] as num)?.toDouble(),
     priceOverride: json['priceOverride'] == null
         ? null
         : Money.fromJson(json['priceOverride'] as Map<String, dynamic>),
@@ -174,7 +172,7 @@ Map<String, dynamic> _$ChargeItemToJson(ChargeItem instance) {
   writeNotNull('quantity', instance.quantity?.toJson());
   writeNotNull(
       'bodysite', instance.bodysite?.map((e) => e?.toJson())?.toList());
-  writeNotNull('factorOverride', instance.factorOverride?.toJson());
+  writeNotNull('factorOverride', instance.factorOverride);
   writeNotNull('priceOverride', instance.priceOverride?.toJson());
   writeNotNull('overrideReason', instance.overrideReason);
   writeNotNull('enterer', instance.enterer?.toJson());

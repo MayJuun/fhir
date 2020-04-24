@@ -277,16 +277,12 @@ CoverageEligibilityResponseBenefit _$CoverageEligibilityResponseBenefitFromJson(
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    allowedUnsignedInt: json['allowedUnsignedInt'] == null
-        ? null
-        : UnsignedInt.fromJson(json['allowedUnsignedInt'] as String),
+    allowedUnsignedInt: json['allowedUnsignedInt'] as int,
     allowedString: json['allowedString'] as String,
     allowedMoney: json['allowedMoney'] == null
         ? null
         : Money.fromJson(json['allowedMoney'] as Map<String, dynamic>),
-    usedUnsignedInt: json['usedUnsignedInt'] == null
-        ? null
-        : UnsignedInt.fromJson(json['usedUnsignedInt'] as String),
+    usedUnsignedInt: json['usedUnsignedInt'] as int,
     usedString: json['usedString'] as String,
     usedMoney: json['usedMoney'] == null
         ? null
@@ -310,10 +306,10 @@ Map<String, dynamic> _$CoverageEligibilityResponseBenefitToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', instance.type?.toJson());
-  writeNotNull('allowedUnsignedInt', instance.allowedUnsignedInt?.toJson());
+  writeNotNull('allowedUnsignedInt', instance.allowedUnsignedInt);
   writeNotNull('allowedString', instance.allowedString);
   writeNotNull('allowedMoney', instance.allowedMoney?.toJson());
-  writeNotNull('usedUnsignedInt', instance.usedUnsignedInt?.toJson());
+  writeNotNull('usedUnsignedInt', instance.usedUnsignedInt);
   writeNotNull('usedString', instance.usedString);
   writeNotNull('usedMoney', instance.usedMoney?.toJson());
   return val;

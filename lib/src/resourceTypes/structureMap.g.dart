@@ -351,9 +351,7 @@ StructureMapSource _$StructureMapSourceFromJson(Map<String, dynamic> json) {
     defaultValueDateTime: json['defaultValueDateTime'] == null
         ? null
         : FhirDateTime.fromJson(json['defaultValueDateTime'] as String),
-    defaultValueDecimal: json['defaultValueDecimal'] == null
-        ? null
-        : Decimal.fromJson(json['defaultValueDecimal'] as String),
+    defaultValueDecimal: (json['defaultValueDecimal'] as num)?.toDouble(),
     defaultValueId: json['defaultValueId'] == null
         ? null
         : Id.fromJson(json['defaultValueId'] as String),
@@ -367,16 +365,12 @@ StructureMapSource _$StructureMapSourceFromJson(Map<String, dynamic> json) {
     defaultValueOid: json['defaultValueOid'] == null
         ? null
         : Oid.fromJson(json['defaultValueOid'] as String),
-    defaultValuePositiveInt: json['defaultValuePositiveInt'] == null
-        ? null
-        : PositiveInt.fromJson(json['defaultValuePositiveInt'] as String),
+    defaultValuePositiveInt: json['defaultValuePositiveInt'] as int,
     defaultValueString: json['defaultValueString'] as String,
     defaultValueTime: json['defaultValueTime'] == null
         ? null
         : Time.fromJson(json['defaultValueTime'] as String),
-    defaultValueUnsignedInt: json['defaultValueUnsignedInt'] == null
-        ? null
-        : UnsignedInt.fromJson(json['defaultValueUnsignedInt'] as String),
+    defaultValueUnsignedInt: json['defaultValueUnsignedInt'] as int,
     defaultValueUri: json['defaultValueUri'] == null
         ? null
         : FhirUri.fromJson(json['defaultValueUri'] as String),
@@ -537,18 +531,16 @@ Map<String, dynamic> _$StructureMapSourceToJson(StructureMapSource instance) {
   writeNotNull('defaultValueCode', instance.defaultValueCode?.toJson());
   writeNotNull('defaultValueDate', instance.defaultValueDate?.toJson());
   writeNotNull('defaultValueDateTime', instance.defaultValueDateTime?.toJson());
-  writeNotNull('defaultValueDecimal', instance.defaultValueDecimal?.toJson());
+  writeNotNull('defaultValueDecimal', instance.defaultValueDecimal);
   writeNotNull('defaultValueId', instance.defaultValueId?.toJson());
   writeNotNull('defaultValueInstant', instance.defaultValueInstant?.toJson());
   writeNotNull('defaultValueInteger', instance.defaultValueInteger);
   writeNotNull('defaultValueMarkdown', instance.defaultValueMarkdown?.toJson());
   writeNotNull('defaultValueOid', instance.defaultValueOid?.toJson());
-  writeNotNull(
-      'defaultValuePositiveInt', instance.defaultValuePositiveInt?.toJson());
+  writeNotNull('defaultValuePositiveInt', instance.defaultValuePositiveInt);
   writeNotNull('defaultValueString', instance.defaultValueString);
   writeNotNull('defaultValueTime', instance.defaultValueTime?.toJson());
-  writeNotNull(
-      'defaultValueUnsignedInt', instance.defaultValueUnsignedInt?.toJson());
+  writeNotNull('defaultValueUnsignedInt', instance.defaultValueUnsignedInt);
   writeNotNull('defaultValueUri', instance.defaultValueUri?.toJson());
   writeNotNull('defaultValueUrl', instance.defaultValueUrl?.toJson());
   writeNotNull('defaultValueUuid', instance.defaultValueUuid?.toJson());
@@ -683,9 +675,7 @@ StructureMapParameter _$StructureMapParameterFromJson(
     valueString: json['valueString'] as String,
     valueBoolean: json['valueBoolean'] as bool,
     valueInteger: json['valueInteger'] as int,
-    valueDecimal: json['valueDecimal'] == null
-        ? null
-        : Decimal.fromJson(json['valueDecimal'] as String),
+    valueDecimal: (json['valueDecimal'] as num)?.toDouble(),
   );
 }
 
@@ -708,7 +698,7 @@ Map<String, dynamic> _$StructureMapParameterToJson(
   writeNotNull('valueString', instance.valueString);
   writeNotNull('valueBoolean', instance.valueBoolean);
   writeNotNull('valueInteger', instance.valueInteger);
-  writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal);
   return val;
 }
 

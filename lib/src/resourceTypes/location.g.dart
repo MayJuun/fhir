@@ -134,15 +134,9 @@ LocationPosition _$LocationPositionFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    longitude: json['longitude'] == null
-        ? null
-        : Decimal.fromJson(json['longitude'] as String),
-    latitude: json['latitude'] == null
-        ? null
-        : Decimal.fromJson(json['latitude'] as String),
-    altitude: json['altitude'] == null
-        ? null
-        : Decimal.fromJson(json['altitude'] as String),
+    longitude: (json['longitude'] as num)?.toDouble(),
+    latitude: (json['latitude'] as num)?.toDouble(),
+    altitude: (json['altitude'] as num)?.toDouble(),
   );
 }
 
@@ -160,9 +154,9 @@ Map<String, dynamic> _$LocationPositionToJson(LocationPosition instance) {
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('longitude', instance.longitude?.toJson());
-  writeNotNull('latitude', instance.latitude?.toJson());
-  writeNotNull('altitude', instance.altitude?.toJson());
+  writeNotNull('longitude', instance.longitude);
+  writeNotNull('latitude', instance.latitude);
+  writeNotNull('altitude', instance.altitude);
   return val;
 }
 

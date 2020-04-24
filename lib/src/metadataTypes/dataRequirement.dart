@@ -22,7 +22,7 @@ class DataRequirement {
   List<String> mustSupport;
   List<DataRequirementCodeFilter> codeFilter;
   List<DataRequirementDateFilter> dateFilter;
-  PositiveInt limit;
+  int limit;
   List<DataRequirementSort> sort;
 
   DataRequirement({

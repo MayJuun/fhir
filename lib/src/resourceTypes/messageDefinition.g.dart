@@ -169,9 +169,7 @@ MessageDefinitionFocus _$MessageDefinitionFocusFromJson(
     profile: json['profile'] == null
         ? null
         : Canonical.fromJson(json['profile'] as String),
-    min: json['min'] == null
-        ? null
-        : UnsignedInt.fromJson(json['min'] as String),
+    min: json['min'] as int,
     max: json['max'] as String,
   );
 }
@@ -193,7 +191,7 @@ Map<String, dynamic> _$MessageDefinitionFocusToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('profile', instance.profile?.toJson());
-  writeNotNull('min', instance.min?.toJson());
+  writeNotNull('min', instance.min);
   writeNotNull('max', instance.max);
   return val;
 }

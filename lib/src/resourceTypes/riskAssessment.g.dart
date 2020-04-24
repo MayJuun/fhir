@@ -151,9 +151,7 @@ RiskAssessmentPrediction _$RiskAssessmentPredictionFromJson(
     outcome: json['outcome'] == null
         ? null
         : CodeableConcept.fromJson(json['outcome'] as Map<String, dynamic>),
-    probabilityDecimal: json['probabilityDecimal'] == null
-        ? null
-        : Decimal.fromJson(json['probabilityDecimal'] as String),
+    probabilityDecimal: (json['probabilityDecimal'] as num)?.toDouble(),
     probabilityRange: json['probabilityRange'] == null
         ? null
         : Range.fromJson(json['probabilityRange'] as Map<String, dynamic>),
@@ -161,9 +159,7 @@ RiskAssessmentPrediction _$RiskAssessmentPredictionFromJson(
         ? null
         : CodeableConcept.fromJson(
             json['qualitativeRisk'] as Map<String, dynamic>),
-    relativeRisk: json['relativeRisk'] == null
-        ? null
-        : Decimal.fromJson(json['relativeRisk'] as String),
+    relativeRisk: (json['relativeRisk'] as num)?.toDouble(),
     whenPeriod: json['whenPeriod'] == null
         ? null
         : Period.fromJson(json['whenPeriod'] as Map<String, dynamic>),
@@ -190,10 +186,10 @@ Map<String, dynamic> _$RiskAssessmentPredictionToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('outcome', instance.outcome?.toJson());
-  writeNotNull('probabilityDecimal', instance.probabilityDecimal?.toJson());
+  writeNotNull('probabilityDecimal', instance.probabilityDecimal);
   writeNotNull('probabilityRange', instance.probabilityRange?.toJson());
   writeNotNull('qualitativeRisk', instance.qualitativeRisk?.toJson());
-  writeNotNull('relativeRisk', instance.relativeRisk?.toJson());
+  writeNotNull('relativeRisk', instance.relativeRisk);
   writeNotNull('whenPeriod', instance.whenPeriod?.toJson());
   writeNotNull('whenRange', instance.whenRange?.toJson());
   writeNotNull('rationale', instance.rationale);

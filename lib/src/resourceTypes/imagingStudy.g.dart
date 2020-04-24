@@ -63,12 +63,8 @@ ImagingStudy _$ImagingStudyFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    numberOfSeries: json['numberOfSeries'] == null
-        ? null
-        : UnsignedInt.fromJson(json['numberOfSeries'] as String),
-    numberOfInstances: json['numberOfInstances'] == null
-        ? null
-        : UnsignedInt.fromJson(json['numberOfInstances'] as String),
+    numberOfSeries: json['numberOfSeries'] as int,
+    numberOfInstances: json['numberOfInstances'] as int,
     procedureReference: json['procedureReference'] == null
         ? null
         : Reference.fromJson(
@@ -136,8 +132,8 @@ Map<String, dynamic> _$ImagingStudyToJson(ImagingStudy instance) {
       'interpreter', instance.interpreter?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'endpoint', instance.endpoint?.map((e) => e?.toJson())?.toList());
-  writeNotNull('numberOfSeries', instance.numberOfSeries?.toJson());
-  writeNotNull('numberOfInstances', instance.numberOfInstances?.toJson());
+  writeNotNull('numberOfSeries', instance.numberOfSeries);
+  writeNotNull('numberOfInstances', instance.numberOfInstances);
   writeNotNull('procedureReference', instance.procedureReference?.toJson());
   writeNotNull('procedureCode',
       instance.procedureCode?.map((e) => e?.toJson())?.toList());
@@ -164,16 +160,12 @@ ImagingStudySeries _$ImagingStudySeriesFromJson(Map<String, dynamic> json) {
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     uid: json['uid'] == null ? null : Id.fromJson(json['uid'] as String),
-    number: json['number'] == null
-        ? null
-        : UnsignedInt.fromJson(json['number'] as String),
+    number: json['number'] as int,
     modality: json['modality'] == null
         ? null
         : Coding.fromJson(json['modality'] as Map<String, dynamic>),
     description: json['description'] as String,
-    numberOfInstances: json['numberOfInstances'] == null
-        ? null
-        : UnsignedInt.fromJson(json['numberOfInstances'] as String),
+    numberOfInstances: json['numberOfInstances'] as int,
     endpoint: (json['endpoint'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -219,10 +211,10 @@ Map<String, dynamic> _$ImagingStudySeriesToJson(ImagingStudySeries instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('uid', instance.uid?.toJson());
-  writeNotNull('number', instance.number?.toJson());
+  writeNotNull('number', instance.number);
   writeNotNull('modality', instance.modality?.toJson());
   writeNotNull('description', instance.description);
-  writeNotNull('numberOfInstances', instance.numberOfInstances?.toJson());
+  writeNotNull('numberOfInstances', instance.numberOfInstances);
   writeNotNull(
       'endpoint', instance.endpoint?.map((e) => e?.toJson())?.toList());
   writeNotNull('bodySite', instance.bodySite?.toJson());
@@ -293,9 +285,7 @@ ImagingStudyInstance _$ImagingStudyInstanceFromJson(Map<String, dynamic> json) {
     sopClass: json['sopClass'] == null
         ? null
         : Coding.fromJson(json['sopClass'] as Map<String, dynamic>),
-    number: json['number'] == null
-        ? null
-        : UnsignedInt.fromJson(json['number'] as String),
+    number: json['number'] as int,
     title: json['title'] as String,
   );
 }
@@ -317,7 +307,7 @@ Map<String, dynamic> _$ImagingStudyInstanceToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('uid', instance.uid?.toJson());
   writeNotNull('sopClass', instance.sopClass?.toJson());
-  writeNotNull('number', instance.number?.toJson());
+  writeNotNull('number', instance.number);
   writeNotNull('title', instance.title);
   return val;
 }

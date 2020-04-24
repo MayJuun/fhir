@@ -83,9 +83,9 @@ class LocationPosition {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  Decimal longitude;
-  Decimal latitude;
-  Decimal altitude;
+  double longitude;
+  double latitude;
+  double altitude;
 
   LocationPosition({
     this.id,

@@ -70,7 +70,7 @@ class AccountCoverage {
   List<Extension> extension;
   List<Extension> modifierExtension;
   Reference coverage;
-  PositiveInt priority;
+  int priority;
 
   AccountCoverage({
     this.id,

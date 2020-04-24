@@ -70,32 +70,16 @@ TimingRepeat _$TimingRepeatFromJson(Map<String, dynamic> json) {
     boundsPeriod: json['boundsPeriod'] == null
         ? null
         : Period.fromJson(json['boundsPeriod'] as Map<String, dynamic>),
-    count: json['count'] == null
-        ? null
-        : PositiveInt.fromJson(json['count'] as String),
-    countMax: json['countMax'] == null
-        ? null
-        : PositiveInt.fromJson(json['countMax'] as String),
-    duration: json['duration'] == null
-        ? null
-        : Decimal.fromJson(json['duration'] as String),
-    durationMax: json['durationMax'] == null
-        ? null
-        : Decimal.fromJson(json['durationMax'] as String),
+    count: json['count'] as int,
+    countMax: json['countMax'] as int,
+    duration: (json['duration'] as num)?.toDouble(),
+    durationMax: (json['durationMax'] as num)?.toDouble(),
     durationUnit:
         _$enumDecodeNullable(_$TimingUnitEnumMap, json['durationUnit']),
-    frequency: json['frequency'] == null
-        ? null
-        : PositiveInt.fromJson(json['frequency'] as String),
-    frequencyMax: json['frequencyMax'] == null
-        ? null
-        : PositiveInt.fromJson(json['frequencyMax'] as String),
-    period: json['period'] == null
-        ? null
-        : Decimal.fromJson(json['period'] as String),
-    periodMax: json['periodMax'] == null
-        ? null
-        : Decimal.fromJson(json['periodMax'] as String),
+    frequency: json['frequency'] as int,
+    frequencyMax: json['frequencyMax'] as int,
+    period: (json['period'] as num)?.toDouble(),
+    periodMax: (json['periodMax'] as num)?.toDouble(),
     periodUnit: _$enumDecodeNullable(_$TimingUnitEnumMap, json['periodUnit']),
     dayOfWeek: (json['dayOfWeek'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
@@ -106,9 +90,7 @@ TimingRepeat _$TimingRepeatFromJson(Map<String, dynamic> json) {
     when: (json['when'] as List)
         ?.map((e) => _$enumDecodeNullable(_$TimingWhenEnumMap, e))
         ?.toList(),
-    offset: json['offset'] == null
-        ? null
-        : UnsignedInt.fromJson(json['offset'] as String),
+    offset: json['offset'] as int,
   );
 }
 
@@ -129,15 +111,15 @@ Map<String, dynamic> _$TimingRepeatToJson(TimingRepeat instance) {
   writeNotNull('boundsDuration', instance.boundsDuration?.inMicroseconds);
   writeNotNull('boundsRange', instance.boundsRange?.toJson());
   writeNotNull('boundsPeriod', instance.boundsPeriod?.toJson());
-  writeNotNull('count', instance.count?.toJson());
-  writeNotNull('countMax', instance.countMax?.toJson());
-  writeNotNull('duration', instance.duration?.toJson());
-  writeNotNull('durationMax', instance.durationMax?.toJson());
+  writeNotNull('count', instance.count);
+  writeNotNull('countMax', instance.countMax);
+  writeNotNull('duration', instance.duration);
+  writeNotNull('durationMax', instance.durationMax);
   writeNotNull('durationUnit', _$TimingUnitEnumMap[instance.durationUnit]);
-  writeNotNull('frequency', instance.frequency?.toJson());
-  writeNotNull('frequencyMax', instance.frequencyMax?.toJson());
-  writeNotNull('period', instance.period?.toJson());
-  writeNotNull('periodMax', instance.periodMax?.toJson());
+  writeNotNull('frequency', instance.frequency);
+  writeNotNull('frequencyMax', instance.frequencyMax);
+  writeNotNull('period', instance.period);
+  writeNotNull('periodMax', instance.periodMax);
   writeNotNull('periodUnit', _$TimingUnitEnumMap[instance.periodUnit]);
   writeNotNull(
       'dayOfWeek', instance.dayOfWeek?.map((e) => e?.toJson())?.toList());
@@ -145,7 +127,7 @@ Map<String, dynamic> _$TimingRepeatToJson(TimingRepeat instance) {
       'timeOfDay', instance.timeOfDay?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'when', instance.when?.map((e) => _$TimingWhenEnumMap[e])?.toList());
-  writeNotNull('offset', instance.offset?.toJson());
+  writeNotNull('offset', instance.offset);
   return val;
 }
 

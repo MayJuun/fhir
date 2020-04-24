@@ -373,9 +373,7 @@ ContractSecurityLabel _$ContractSecurityLabelFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    number: (json['number'] as List)
-        ?.map((e) => e == null ? null : UnsignedInt.fromJson(e as String))
-        ?.toList(),
+    number: json['number'] as List,
     classification: json['classification'] == null
         ? null
         : Coding.fromJson(json['classification'] as Map<String, dynamic>),
@@ -405,7 +403,7 @@ Map<String, dynamic> _$ContractSecurityLabelToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('number', instance.number?.map((e) => e?.toJson())?.toList());
+  writeNotNull('number', instance.number);
   writeNotNull('classification', instance.classification?.toJson());
   writeNotNull(
       'category', instance.category?.map((e) => e?.toJson())?.toList());
@@ -454,9 +452,7 @@ ContractOffer _$ContractOfferFromJson(Map<String, dynamic> json) {
         ?.toList(),
     text: json['text'] as String,
     linkId: (json['linkId'] as List)?.map((e) => e as String)?.toList(),
-    securityLabelNumber: (json['securityLabelNumber'] as List)
-        ?.map((e) => e == null ? null : UnsignedInt.fromJson(e as String))
-        ?.toList(),
+    securityLabelNumber: json['securityLabelNumber'] as List,
   );
 }
 
@@ -485,8 +481,7 @@ Map<String, dynamic> _$ContractOfferToJson(ContractOffer instance) {
   writeNotNull('answer', instance.answer?.map((e) => e?.toJson())?.toList());
   writeNotNull('text', instance.text);
   writeNotNull('linkId', instance.linkId);
-  writeNotNull('securityLabelNumber',
-      instance.securityLabelNumber?.map((e) => e?.toJson())?.toList());
+  writeNotNull('securityLabelNumber', instance.securityLabelNumber);
   return val;
 }
 
@@ -543,9 +538,7 @@ ContractAnswer _$ContractAnswerFromJson(Map<String, dynamic> json) {
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     valueBoolean: json['valueBoolean'] as bool,
-    valueDecimal: json['valueDecimal'] == null
-        ? null
-        : Decimal.fromJson(json['valueDecimal'] as String),
+    valueDecimal: (json['valueDecimal'] as num)?.toDouble(),
     valueInteger: json['valueInteger'] as int,
     valueDate: json['valueDate'] == null
         ? null
@@ -590,7 +583,7 @@ Map<String, dynamic> _$ContractAnswerToJson(ContractAnswer instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('valueBoolean', instance.valueBoolean);
-  writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal);
   writeNotNull('valueInteger', instance.valueInteger);
   writeNotNull('valueDate', instance.valueDate?.toJson());
   writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
@@ -661,9 +654,7 @@ ContractAsset _$ContractAssetFromJson(Map<String, dynamic> json) {
             ? null
             : ContractAnswer.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    securityLabelNumber: (json['securityLabelNumber'] as List)
-        ?.map((e) => e == null ? null : UnsignedInt.fromJson(e as String))
-        ?.toList(),
+    securityLabelNumber: json['securityLabelNumber'] as List,
     valuedItem: (json['valuedItem'] as List)
         ?.map((e) => e == null
             ? null
@@ -702,8 +693,7 @@ Map<String, dynamic> _$ContractAssetToJson(ContractAsset instance) {
   writeNotNull('text', instance.text);
   writeNotNull('linkId', instance.linkId);
   writeNotNull('answer', instance.answer?.map((e) => e?.toJson())?.toList());
-  writeNotNull('securityLabelNumber',
-      instance.securityLabelNumber?.map((e) => e?.toJson())?.toList());
+  writeNotNull('securityLabelNumber', instance.securityLabelNumber);
   writeNotNull(
       'valuedItem', instance.valuedItem?.map((e) => e?.toJson())?.toList());
   return val;
@@ -782,12 +772,8 @@ ContractValuedItem _$ContractValuedItemFromJson(Map<String, dynamic> json) {
     unitPrice: json['unitPrice'] == null
         ? null
         : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
-    factor: json['factor'] == null
-        ? null
-        : Decimal.fromJson(json['factor'] as String),
-    points: json['points'] == null
-        ? null
-        : Decimal.fromJson(json['points'] as String),
+    factor: (json['factor'] as num)?.toDouble(),
+    points: (json['points'] as num)?.toDouble(),
     net: json['net'] == null
         ? null
         : Money.fromJson(json['net'] as Map<String, dynamic>),
@@ -802,9 +788,7 @@ ContractValuedItem _$ContractValuedItemFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(json['recipient'] as Map<String, dynamic>),
     linkId: (json['linkId'] as List)?.map((e) => e as String)?.toList(),
-    securityLabelNumber: (json['securityLabelNumber'] as List)
-        ?.map((e) => e == null ? null : UnsignedInt.fromJson(e as String))
-        ?.toList(),
+    securityLabelNumber: json['securityLabelNumber'] as List,
   );
 }
 
@@ -829,16 +813,15 @@ Map<String, dynamic> _$ContractValuedItemToJson(ContractValuedItem instance) {
   writeNotNull('effectiveTime', instance.effectiveTime?.toJson());
   writeNotNull('quantity', instance.quantity?.toJson());
   writeNotNull('unitPrice', instance.unitPrice?.toJson());
-  writeNotNull('factor', instance.factor?.toJson());
-  writeNotNull('points', instance.points?.toJson());
+  writeNotNull('factor', instance.factor);
+  writeNotNull('points', instance.points);
   writeNotNull('net', instance.net?.toJson());
   writeNotNull('payment', instance.payment);
   writeNotNull('paymentDate', instance.paymentDate?.toJson());
   writeNotNull('responsible', instance.responsible?.toJson());
   writeNotNull('recipient', instance.recipient?.toJson());
   writeNotNull('linkId', instance.linkId);
-  writeNotNull('securityLabelNumber',
-      instance.securityLabelNumber?.map((e) => e?.toJson())?.toList());
+  writeNotNull('securityLabelNumber', instance.securityLabelNumber);
   return val;
 }
 
@@ -919,9 +902,7 @@ ContractAction _$ContractActionFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    securityLabelNumber: (json['securityLabelNumber'] as List)
-        ?.map((e) => e == null ? null : UnsignedInt.fromJson(e as String))
-        ?.toList(),
+    securityLabelNumber: json['securityLabelNumber'] as List,
   );
 }
 
@@ -965,8 +946,7 @@ Map<String, dynamic> _$ContractActionToJson(ContractAction instance) {
   writeNotNull('reason', instance.reason);
   writeNotNull('reasonLinkId', instance.reasonLinkId);
   writeNotNull('note', instance.note?.map((e) => e?.toJson())?.toList());
-  writeNotNull('securityLabelNumber',
-      instance.securityLabelNumber?.map((e) => e?.toJson())?.toList());
+  writeNotNull('securityLabelNumber', instance.securityLabelNumber);
   return val;
 }
 

@@ -140,9 +140,7 @@ ObservationDefinitionQuantitativeDetails
     unit: json['unit'] == null
         ? null
         : CodeableConcept.fromJson(json['unit'] as Map<String, dynamic>),
-    conversionFactor: json['conversionFactor'] == null
-        ? null
-        : Decimal.fromJson(json['conversionFactor'] as String),
+    conversionFactor: (json['conversionFactor'] as num)?.toDouble(),
     decimalPrecision: json['decimalPrecision'] as int,
   );
 }
@@ -164,7 +162,7 @@ Map<String, dynamic> _$ObservationDefinitionQuantitativeDetailsToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('customaryUnit', instance.customaryUnit?.toJson());
   writeNotNull('unit', instance.unit?.toJson());
-  writeNotNull('conversionFactor', instance.conversionFactor?.toJson());
+  writeNotNull('conversionFactor', instance.conversionFactor);
   writeNotNull('decimalPrecision', instance.decimalPrecision);
   return val;
 }

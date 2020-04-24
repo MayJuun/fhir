@@ -257,29 +257,14 @@ MolecularSequenceQuality _$MolecularSequenceQualityFromJson(
     method: json['method'] == null
         ? null
         : CodeableConcept.fromJson(json['method'] as Map<String, dynamic>),
-    truthTP: json['truthTP'] == null
-        ? null
-        : Decimal.fromJson(json['truthTP'] as String),
-    queryTP: json['queryTP'] == null
-        ? null
-        : Decimal.fromJson(json['queryTP'] as String),
-    truthFN: json['truthFN'] == null
-        ? null
-        : Decimal.fromJson(json['truthFN'] as String),
-    queryFP: json['queryFP'] == null
-        ? null
-        : Decimal.fromJson(json['queryFP'] as String),
-    gtFP:
-        json['gtFP'] == null ? null : Decimal.fromJson(json['gtFP'] as String),
-    precision: json['precision'] == null
-        ? null
-        : Decimal.fromJson(json['precision'] as String),
-    recall: json['recall'] == null
-        ? null
-        : Decimal.fromJson(json['recall'] as String),
-    fScore: json['fScore'] == null
-        ? null
-        : Decimal.fromJson(json['fScore'] as String),
+    truthTP: (json['truthTP'] as num)?.toDouble(),
+    queryTP: (json['queryTP'] as num)?.toDouble(),
+    truthFN: (json['truthFN'] as num)?.toDouble(),
+    queryFP: (json['queryFP'] as num)?.toDouble(),
+    gtFP: (json['gtFP'] as num)?.toDouble(),
+    precision: (json['precision'] as num)?.toDouble(),
+    recall: (json['recall'] as num)?.toDouble(),
+    fScore: (json['fScore'] as num)?.toDouble(),
     roc: json['roc'] == null
         ? null
         : MolecularSequenceRoc.fromJson(json['roc'] as Map<String, dynamic>),
@@ -307,14 +292,14 @@ Map<String, dynamic> _$MolecularSequenceQualityToJson(
   writeNotNull('end', instance.end);
   writeNotNull('score', instance.score?.toJson());
   writeNotNull('method', instance.method?.toJson());
-  writeNotNull('truthTP', instance.truthTP?.toJson());
-  writeNotNull('queryTP', instance.queryTP?.toJson());
-  writeNotNull('truthFN', instance.truthFN?.toJson());
-  writeNotNull('queryFP', instance.queryFP?.toJson());
-  writeNotNull('gtFP', instance.gtFP?.toJson());
-  writeNotNull('precision', instance.precision?.toJson());
-  writeNotNull('recall', instance.recall?.toJson());
-  writeNotNull('fScore', instance.fScore?.toJson());
+  writeNotNull('truthTP', instance.truthTP);
+  writeNotNull('queryTP', instance.queryTP);
+  writeNotNull('truthFN', instance.truthFN);
+  writeNotNull('queryFP', instance.queryFP);
+  writeNotNull('gtFP', instance.gtFP);
+  writeNotNull('precision', instance.precision);
+  writeNotNull('recall', instance.recall);
+  writeNotNull('fScore', instance.fScore);
   writeNotNull('roc', instance.roc?.toJson());
   return val;
 }
@@ -334,15 +319,9 @@ MolecularSequenceRoc _$MolecularSequenceRocFromJson(Map<String, dynamic> json) {
     numTP: (json['numTP'] as List)?.map((e) => e as int)?.toList(),
     numFP: (json['numFP'] as List)?.map((e) => e as int)?.toList(),
     numFN: (json['numFN'] as List)?.map((e) => e as int)?.toList(),
-    precision: (json['precision'] as List)
-        ?.map((e) => e == null ? null : Decimal.fromJson(e as String))
-        ?.toList(),
-    sensitivity: (json['sensitivity'] as List)
-        ?.map((e) => e == null ? null : Decimal.fromJson(e as String))
-        ?.toList(),
-    fMeasure: (json['fMeasure'] as List)
-        ?.map((e) => e == null ? null : Decimal.fromJson(e as String))
-        ?.toList(),
+    precision: json['precision'] as List,
+    sensitivity: json['sensitivity'] as List,
+    fMeasure: json['fMeasure'] as List,
   );
 }
 
@@ -365,12 +344,9 @@ Map<String, dynamic> _$MolecularSequenceRocToJson(
   writeNotNull('numTP', instance.numTP);
   writeNotNull('numFP', instance.numFP);
   writeNotNull('numFN', instance.numFN);
-  writeNotNull(
-      'precision', instance.precision?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      'sensitivity', instance.sensitivity?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      'fMeasure', instance.fMeasure?.map((e) => e?.toJson())?.toList());
+  writeNotNull('precision', instance.precision);
+  writeNotNull('sensitivity', instance.sensitivity);
+  writeNotNull('fMeasure', instance.fMeasure);
   return val;
 }
 

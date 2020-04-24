@@ -382,9 +382,7 @@ InsurancePlanGeneralCost _$InsurancePlanGeneralCostFromJson(
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    groupSize: json['groupSize'] == null
-        ? null
-        : PositiveInt.fromJson(json['groupSize'] as String),
+    groupSize: json['groupSize'] as int,
     cost: json['cost'] == null
         ? null
         : Money.fromJson(json['cost'] as Map<String, dynamic>),
@@ -408,7 +406,7 @@ Map<String, dynamic> _$InsurancePlanGeneralCostToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', instance.type?.toJson());
-  writeNotNull('groupSize', instance.groupSize?.toJson());
+  writeNotNull('groupSize', instance.groupSize);
   writeNotNull('cost', instance.cost?.toJson());
   writeNotNull('comment', instance.comment);
   return val;

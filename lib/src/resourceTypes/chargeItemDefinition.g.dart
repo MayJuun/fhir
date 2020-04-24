@@ -261,9 +261,7 @@ ChargeItemDefinitionPriceComponent _$ChargeItemDefinitionPriceComponentFromJson(
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-    factor: json['factor'] == null
-        ? null
-        : Decimal.fromJson(json['factor'] as String),
+    factor: (json['factor'] as num)?.toDouble(),
     amount: json['amount'] == null
         ? null
         : Money.fromJson(json['amount'] as Map<String, dynamic>),
@@ -287,7 +285,7 @@ Map<String, dynamic> _$ChargeItemDefinitionPriceComponentToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('code', instance.code?.toJson());
-  writeNotNull('factor', instance.factor?.toJson());
+  writeNotNull('factor', instance.factor);
   writeNotNull('amount', instance.amount?.toJson());
   return val;
 }

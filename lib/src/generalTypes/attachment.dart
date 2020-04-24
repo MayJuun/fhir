@@ -16,7 +16,7 @@ class Attachment {
   Code language;
   Base64Binary data;
   Url url;
-  UnsignedInt size;
+  int size;
   Base64Binary hash;
   String title;
   FhirDateTime creation;

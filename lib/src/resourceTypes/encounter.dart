@@ -163,7 +163,7 @@ class EncounterDiagnosis {
   List<Extension> modifierExtension;
   Reference condition;
   CodeableConcept use;
-  PositiveInt rank;
+  int rank;
 
   EncounterDiagnosis({
     this.id,

@@ -22,7 +22,7 @@ class Bundle {
   Identifier identifier;
   String type;
   Instant timestamp;
-  UnsignedInt total;
+  int total;
   List<BundleLink> link;
   List<BundleEntry> entry;
   Signature signature;
@@ -102,7 +102,7 @@ class BundleSearch {
   List<Extension> extension;
   List<Extension> modifierExtension;
   String mode;
-  Decimal score;
+  double score;
 
   BundleSearch({
     this.id,

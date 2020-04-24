@@ -148,14 +148,14 @@ class MolecularSequenceQuality {
   int end;
   Quantity score;
   CodeableConcept method;
-  Decimal truthTP;
-  Decimal queryTP;
-  Decimal truthFN;
-  Decimal queryFP;
-  Decimal gtFP;
-  Decimal precision;
-  Decimal recall;
-  Decimal fScore;
+  double truthTP;
+  double queryTP;
+  double truthFN;
+  double queryFP;
+  double gtFP;
+  double precision;
+  double recall;
+  double fScore;
   MolecularSequenceRoc roc;
 
   MolecularSequenceQuality({

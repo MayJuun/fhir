@@ -202,7 +202,7 @@ class InsurancePlanGeneralCost {
   List<Extension> extension;
   List<Extension> modifierExtension;
   CodeableConcept type;
-  PositiveInt groupSize;
+  int groupSize;
   Money cost;
   String comment;
 

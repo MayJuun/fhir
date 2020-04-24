@@ -644,9 +644,7 @@ CapabilityStatementMessaging _$CapabilityStatementMessagingFromJson(
             ? null
             : CapabilityStatementEndpoint.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    reliableCache: json['reliableCache'] == null
-        ? null
-        : UnsignedInt.fromJson(json['reliableCache'] as String),
+    reliableCache: json['reliableCache'] as int,
     documentation: json['documentation'] == null
         ? null
         : Markdown.fromJson(json['documentation'] as String),
@@ -676,7 +674,7 @@ Map<String, dynamic> _$CapabilityStatementMessagingToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'endpoint', instance.endpoint?.map((e) => e?.toJson())?.toList());
-  writeNotNull('reliableCache', instance.reliableCache?.toJson());
+  writeNotNull('reliableCache', instance.reliableCache);
   writeNotNull('documentation', instance.documentation?.toJson());
   writeNotNull('supportedMessage',
       instance.supportedMessage?.map((e) => e?.toJson())?.toList());

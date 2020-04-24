@@ -177,9 +177,7 @@ InvoiceLineItem _$InvoiceLineItemFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    sequence: json['sequence'] == null
-        ? null
-        : PositiveInt.fromJson(json['sequence'] as String),
+    sequence: json['sequence'] as int,
     chargeItemReference: json['chargeItemReference'] == null
         ? null
         : Reference.fromJson(
@@ -210,7 +208,7 @@ Map<String, dynamic> _$InvoiceLineItemToJson(InvoiceLineItem instance) {
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('sequence', instance.sequence?.toJson());
+  writeNotNull('sequence', instance.sequence);
   writeNotNull('chargeItemReference', instance.chargeItemReference?.toJson());
   writeNotNull('chargeItemCodeableConcept',
       instance.chargeItemCodeableConcept?.toJson());
@@ -235,9 +233,7 @@ InvoicePriceComponent _$InvoicePriceComponentFromJson(
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-    factor: json['factor'] == null
-        ? null
-        : Decimal.fromJson(json['factor'] as String),
+    factor: (json['factor'] as num)?.toDouble(),
     amount: json['amount'] == null
         ? null
         : Money.fromJson(json['amount'] as Map<String, dynamic>),
@@ -261,7 +257,7 @@ Map<String, dynamic> _$InvoicePriceComponentToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', instance.type);
   writeNotNull('code', instance.code?.toJson());
-  writeNotNull('factor', instance.factor?.toJson());
+  writeNotNull('factor', instance.factor);
   writeNotNull('amount', instance.amount?.toJson());
   return val;
 }

@@ -149,7 +149,7 @@ class ChargeItemDefinitionPriceComponent {
   List<Extension> modifierExtension;
   Code type;
   CodeableConcept code;
-  Decimal factor;
+  double factor;
   Money amount;
 
   ChargeItemDefinitionPriceComponent({
