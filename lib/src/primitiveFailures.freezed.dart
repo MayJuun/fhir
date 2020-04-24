@@ -253,9 +253,7 @@ class _$InvalidBase64BinaryCopyWithImpl<T, $Res>
   }
 }
 
-class _$InvalidBase64Binary<T>
-    with DiagnosticableTreeMixin
-    implements InvalidBase64Binary<T> {
+class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
   const _$InvalidBase64Binary({@required this.failedValue})
       : assert(failedValue != null);
 
@@ -263,17 +261,8 @@ class _$InvalidBase64Binary<T>
   final T failedValue;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'PrimitiveFailure<$T>.invalidBase64Binary(failedValue: $failedValue)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'PrimitiveFailure<$T>.invalidBase64Binary'))
-      ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
   @override
@@ -469,9 +458,7 @@ class _$InvalidCanonicalCopyWithImpl<T, $Res>
   }
 }
 
-class _$InvalidCanonical<T>
-    with DiagnosticableTreeMixin
-    implements InvalidCanonical<T> {
+class _$InvalidCanonical<T> implements InvalidCanonical<T> {
   const _$InvalidCanonical({@required this.failedValue})
       : assert(failedValue != null);
 
@@ -479,17 +466,8 @@ class _$InvalidCanonical<T>
   final T failedValue;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'PrimitiveFailure<$T>.invalidCanonical(failedValue: $failedValue)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(
-          DiagnosticsProperty('type', 'PrimitiveFailure<$T>.invalidCanonical'))
-      ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
   @override
@@ -684,7 +662,7 @@ class _$InvalidCodeCopyWithImpl<T, $Res>
   }
 }
 
-class _$InvalidCode<T> with DiagnosticableTreeMixin implements InvalidCode<T> {
+class _$InvalidCode<T> implements InvalidCode<T> {
   const _$InvalidCode({@required this.failedValue})
       : assert(failedValue != null);
 
@@ -692,16 +670,8 @@ class _$InvalidCode<T> with DiagnosticableTreeMixin implements InvalidCode<T> {
   final T failedValue;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'PrimitiveFailure<$T>.invalidCode(failedValue: $failedValue)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'PrimitiveFailure<$T>.invalidCode'))
-      ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
   @override
@@ -895,7 +865,7 @@ class _$InvalidDateCopyWithImpl<T, $Res>
   }
 }
 
-class _$InvalidDate<T> with DiagnosticableTreeMixin implements InvalidDate<T> {
+class _$InvalidDate<T> implements InvalidDate<T> {
   const _$InvalidDate({@required this.failedValue})
       : assert(failedValue != null);
 
@@ -903,16 +873,8 @@ class _$InvalidDate<T> with DiagnosticableTreeMixin implements InvalidDate<T> {
   final T failedValue;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'PrimitiveFailure<$T>.invalidDate(failedValue: $failedValue)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'PrimitiveFailure<$T>.invalidDate'))
-      ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
   @override
@@ -1106,9 +1068,7 @@ class _$InvalidDateTimeCopyWithImpl<T, $Res>
   }
 }
 
-class _$InvalidDateTime<T>
-    with DiagnosticableTreeMixin
-    implements InvalidDateTime<T> {
+class _$InvalidDateTime<T> implements InvalidDateTime<T> {
   const _$InvalidDateTime({@required this.failedValue})
       : assert(failedValue != null);
 
@@ -1116,17 +1076,8 @@ class _$InvalidDateTime<T>
   final T failedValue;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'PrimitiveFailure<$T>.invalidFhirDateTime(failedValue: $failedValue)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'PrimitiveFailure<$T>.invalidFhirDateTime'))
-      ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
   @override
@@ -1321,9 +1272,7 @@ class _$InvalidDecimalCopyWithImpl<T, $Res>
   }
 }
 
-class _$InvalidDecimal<T>
-    with DiagnosticableTreeMixin
-    implements InvalidDecimal<T> {
+class _$InvalidDecimal<T> implements InvalidDecimal<T> {
   const _$InvalidDecimal({@required this.failedValue})
       : assert(failedValue != null);
 
@@ -1331,16 +1280,8 @@ class _$InvalidDecimal<T>
   final T failedValue;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'PrimitiveFailure<$T>.invalidDecimal(failedValue: $failedValue)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'PrimitiveFailure<$T>.invalidDecimal'))
-      ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
   @override
@@ -1534,23 +1475,15 @@ class _$InvalidIdCopyWithImpl<T, $Res>
   }
 }
 
-class _$InvalidId<T> with DiagnosticableTreeMixin implements InvalidId<T> {
+class _$InvalidId<T> implements InvalidId<T> {
   const _$InvalidId({@required this.failedValue}) : assert(failedValue != null);
 
   @override
   final T failedValue;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'PrimitiveFailure<$T>.invalidId(failedValue: $failedValue)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'PrimitiveFailure<$T>.invalidId'))
-      ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
   @override
@@ -1744,9 +1677,7 @@ class _$InvalidInstantCopyWithImpl<T, $Res>
   }
 }
 
-class _$InvalidInstant<T>
-    with DiagnosticableTreeMixin
-    implements InvalidInstant<T> {
+class _$InvalidInstant<T> implements InvalidInstant<T> {
   const _$InvalidInstant({@required this.failedValue})
       : assert(failedValue != null);
 
@@ -1754,16 +1685,8 @@ class _$InvalidInstant<T>
   final T failedValue;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'PrimitiveFailure<$T>.invalidInstant(failedValue: $failedValue)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'PrimitiveFailure<$T>.invalidInstant'))
-      ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
   @override
@@ -1957,9 +1880,7 @@ class _$InvalidMarkdownCopyWithImpl<T, $Res>
   }
 }
 
-class _$InvalidMarkdown<T>
-    with DiagnosticableTreeMixin
-    implements InvalidMarkdown<T> {
+class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
   const _$InvalidMarkdown({@required this.failedValue})
       : assert(failedValue != null);
 
@@ -1967,16 +1888,8 @@ class _$InvalidMarkdown<T>
   final T failedValue;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'PrimitiveFailure<$T>.invalidMarkdown(failedValue: $failedValue)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'PrimitiveFailure<$T>.invalidMarkdown'))
-      ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
   @override
@@ -2171,7 +2084,7 @@ class _$InvalidOidCopyWithImpl<T, $Res>
   }
 }
 
-class _$InvalidOid<T> with DiagnosticableTreeMixin implements InvalidOid<T> {
+class _$InvalidOid<T> implements InvalidOid<T> {
   const _$InvalidOid({@required this.failedValue})
       : assert(failedValue != null);
 
@@ -2179,16 +2092,8 @@ class _$InvalidOid<T> with DiagnosticableTreeMixin implements InvalidOid<T> {
   final T failedValue;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'PrimitiveFailure<$T>.invalidOid(failedValue: $failedValue)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'PrimitiveFailure<$T>.invalidOid'))
-      ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
   @override
@@ -2382,9 +2287,7 @@ class _$InvalidPositiveIntCopyWithImpl<T, $Res>
   }
 }
 
-class _$InvalidPositiveInt<T>
-    with DiagnosticableTreeMixin
-    implements InvalidPositiveInt<T> {
+class _$InvalidPositiveInt<T> implements InvalidPositiveInt<T> {
   const _$InvalidPositiveInt({@required this.failedValue})
       : assert(failedValue != null);
 
@@ -2392,17 +2295,8 @@ class _$InvalidPositiveInt<T>
   final T failedValue;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'PrimitiveFailure<$T>.invalidPositiveInt(failedValue: $failedValue)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'PrimitiveFailure<$T>.invalidPositiveInt'))
-      ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
   @override
@@ -2598,7 +2492,7 @@ class _$InvalidTimeCopyWithImpl<T, $Res>
   }
 }
 
-class _$InvalidTime<T> with DiagnosticableTreeMixin implements InvalidTime<T> {
+class _$InvalidTime<T> implements InvalidTime<T> {
   const _$InvalidTime({@required this.failedValue})
       : assert(failedValue != null);
 
@@ -2606,16 +2500,8 @@ class _$InvalidTime<T> with DiagnosticableTreeMixin implements InvalidTime<T> {
   final T failedValue;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'PrimitiveFailure<$T>.invalidTime(failedValue: $failedValue)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'PrimitiveFailure<$T>.invalidTime'))
-      ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
   @override
@@ -2809,9 +2695,7 @@ class _$InvalidUnsignedIntCopyWithImpl<T, $Res>
   }
 }
 
-class _$InvalidUnsignedInt<T>
-    with DiagnosticableTreeMixin
-    implements InvalidUnsignedInt<T> {
+class _$InvalidUnsignedInt<T> implements InvalidUnsignedInt<T> {
   const _$InvalidUnsignedInt({@required this.failedValue})
       : assert(failedValue != null);
 
@@ -2819,17 +2703,8 @@ class _$InvalidUnsignedInt<T>
   final T failedValue;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'PrimitiveFailure<$T>.invalidUnsignedInt(failedValue: $failedValue)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'PrimitiveFailure<$T>.invalidUnsignedInt'))
-      ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
   @override
@@ -3025,9 +2900,7 @@ class _$InvalidFhirUriCopyWithImpl<T, $Res>
   }
 }
 
-class _$InvalidFhirUri<T>
-    with DiagnosticableTreeMixin
-    implements InvalidFhirUri<T> {
+class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
   const _$InvalidFhirUri({@required this.failedValue})
       : assert(failedValue != null);
 
@@ -3035,16 +2908,8 @@ class _$InvalidFhirUri<T>
   final T failedValue;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'PrimitiveFailure<$T>.invalidFhirUri(failedValue: $failedValue)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'PrimitiveFailure<$T>.invalidFhirUri'))
-      ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
   @override
@@ -3238,7 +3103,7 @@ class _$InvalidUrlCopyWithImpl<T, $Res>
   }
 }
 
-class _$InvalidUrl<T> with DiagnosticableTreeMixin implements InvalidUrl<T> {
+class _$InvalidUrl<T> implements InvalidUrl<T> {
   const _$InvalidUrl({@required this.failedValue})
       : assert(failedValue != null);
 
@@ -3246,16 +3111,8 @@ class _$InvalidUrl<T> with DiagnosticableTreeMixin implements InvalidUrl<T> {
   final T failedValue;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'PrimitiveFailure<$T>.invalidUrl(failedValue: $failedValue)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'PrimitiveFailure<$T>.invalidUrl'))
-      ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
   @override
@@ -3449,7 +3306,7 @@ class _$InvalidUuidCopyWithImpl<T, $Res>
   }
 }
 
-class _$InvalidUuid<T> with DiagnosticableTreeMixin implements InvalidUuid<T> {
+class _$InvalidUuid<T> implements InvalidUuid<T> {
   const _$InvalidUuid({@required this.failedValue})
       : assert(failedValue != null);
 
@@ -3457,16 +3314,8 @@ class _$InvalidUuid<T> with DiagnosticableTreeMixin implements InvalidUuid<T> {
   final T failedValue;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'PrimitiveFailure<$T>.invalidUuid(failedValue: $failedValue)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'PrimitiveFailure<$T>.invalidUuid'))
-      ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
   @override

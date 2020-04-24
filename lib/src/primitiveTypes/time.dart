@@ -1,12 +1,11 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter/material.dart';
 
 import '../primitiveFailures.dart';
 import '../primitiveObjects.dart';
 
-class Time extends PrimitiveObject<TimeOfDay> {
+class Time extends PrimitiveObject<Duration> {
   @override
-  final Either<PrimitiveFailure<String>, TimeOfDay> value;
+  final Either<PrimitiveFailure<String>, Duration> value;
 
   factory Time(String value) {
     assert(value != null);

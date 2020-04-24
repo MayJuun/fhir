@@ -1,6 +1,5 @@
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:flutter/material.dart';
 import 'package:string_validator/string_validator.dart';
 
 import 'primitiveFailures.dart';
@@ -89,12 +88,12 @@ Either<PrimitiveFailure<String>, int> validatePositiveInt(String value) =>
             ? left(PrimitiveFailure.invalidPositiveInt(failedValue: value))
             : right(int.parse(value));
 
-Either<PrimitiveFailure<String>, TimeOfDay> validateTime(String value) =>
+Either<PrimitiveFailure<String>, Duration> validateTime(String value) =>
     hasMatch(r"""^([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?$""",
             value)
-        ? right(TimeOfDay(
-            hour: int.parse(value.split(':')[0]),
-            minute: int.parse(value.split(':')[1])))
+        ? right(Duration(
+            hours: int.parse(value.split(':')[0]),
+            minutes: int.parse(value.split(':')[1])))
         : left(PrimitiveFailure.invalidTime(failedValue: value));
 
 Either<PrimitiveFailure<String>, int> validateUnsignedInt(String value) =>
