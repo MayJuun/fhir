@@ -7,6 +7,7 @@ part of 'extension.dart';
 // **************************************************************************
 
 Extension _$ExtensionFromJson(Map<String, dynamic> json) {
+  print(json['valueDecimal']);
   return Extension(
     id: json['id'] as String,
     extension: (json['extension'] as List)
