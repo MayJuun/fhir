@@ -19,7 +19,7 @@ part 'encounter.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Encounter {
-  static const String resourceType = 'Encounter';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -53,6 +53,7 @@ class Encounter {
   Reference partOf;
 
   Encounter({
+    this.resourceType = 'Encounter',
     this.id,
     this.meta,
     this.implicitRules,

@@ -21,7 +21,7 @@ part 'allergyIntolerance.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class AllergyIntolerance {
-  static const String resourceType = 'AllergyIntolerance';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -52,6 +52,7 @@ class AllergyIntolerance {
   List<AllergyIntoleranceReaction> reaction;
 
   AllergyIntolerance({
+    this.resourceType = 'AllergyIntolerance',
     this.id,
     this.meta,
     this.implicitRules,

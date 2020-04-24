@@ -20,7 +20,7 @@ part 'condition.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Condition {
-  static const String resourceType = 'Condition';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -56,6 +56,7 @@ class Condition {
   List<Annotation> note;
 
   Condition({
+    this.resourceType = 'Condition',
     this.id,
     this.meta,
     this.implicitRules,

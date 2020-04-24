@@ -16,7 +16,7 @@ part 'bundle.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Bundle {
-  static const String resourceType = 'Bundle';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -30,6 +30,7 @@ class Bundle {
   Signature signature;
 
   Bundle({
+    this.resourceType = 'Bundle',
     this.id,
     this.meta,
     this.implicitRules,

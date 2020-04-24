@@ -20,7 +20,7 @@ part 'immunization.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Immunization {
-  static const String resourceType = 'Immunization';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -60,6 +60,7 @@ class Immunization {
   List<ImmunizationProtocolApplied> protocolApplied;
 
   Immunization({
+    this.resourceType = 'Immunization',
     this.id,
     this.meta,
     this.implicitRules,

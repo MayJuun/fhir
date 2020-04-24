@@ -17,7 +17,7 @@ part 'organization.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Organization {
-  static const String resourceType = 'Organization';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -38,6 +38,7 @@ class Organization {
   List<Reference> endpoint;
 
   Organization({
+    this.resourceType = 'Organization',
     this.id,
     this.meta,
     this.implicitRules,

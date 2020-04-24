@@ -25,7 +25,7 @@ part 'observation.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Observation {
-  static const String resourceType = 'Observation';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -73,6 +73,7 @@ class Observation {
   List<ObservationComponent> component;
 
   Observation({
+    this.resourceType = 'Observation',
     this.id,
     this.meta,
     this.implicitRules,
