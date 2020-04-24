@@ -51,11 +51,6 @@ Either<PrimitiveFailure<String>, String> validateDate(String value) =>
         ? right(value)
         : left(PrimitiveFailure.invalidDate(failedValue: value));
 
-Either<PrimitiveFailure<String>, double> validateDecimal(String value) =>
-    double.tryParse(value) != null
-        ? right(double.parse(value))
-        : left(PrimitiveFailure.invalidDecimal(failedValue: value));
-
 Either<PrimitiveFailure<String>, DateTime> validateFhirDateTime(String value) =>
     isDate(value)
         ? right(DateTime.parse(value))
@@ -81,13 +76,6 @@ Either<PrimitiveFailure<String>, String> validateOid(String value) =>
         ? right(value)
         : left(PrimitiveFailure.invalidOid(failedValue: value));
 
-Either<PrimitiveFailure<String>, int> validatePositiveInt(String value) =>
-    int.tryParse(value) == null
-        ? left(PrimitiveFailure.invalidPositiveInt(failedValue: value))
-        : int.parse(value) <= 0
-            ? left(PrimitiveFailure.invalidPositiveInt(failedValue: value))
-            : right(int.parse(value));
-
 Either<PrimitiveFailure<String>, Duration> validateTime(String value) =>
     hasMatch(r"""^([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?$""",
             value)
@@ -95,13 +83,6 @@ Either<PrimitiveFailure<String>, Duration> validateTime(String value) =>
             hours: int.parse(value.split(':')[0]),
             minutes: int.parse(value.split(':')[1])))
         : left(PrimitiveFailure.invalidTime(failedValue: value));
-
-Either<PrimitiveFailure<String>, int> validateUnsignedInt(String value) =>
-    int.tryParse(value) == null
-        ? left(PrimitiveFailure.invalidUnsignedInt(failedValue: value))
-        : int.parse(value) <= 0
-            ? left(PrimitiveFailure.invalidUnsignedInt(failedValue: value))
-            : right(int.parse(value));
 
 Either<PrimitiveFailure<String>, String> validateFhirUri(String value) =>
     isURL(value)

@@ -19,9 +19,6 @@ abstract class PrimitiveFailure<T> with _$PrimitiveFailure<T> {
   const factory PrimitiveFailure.invalidFhirDateTime({
     @required T failedValue,
   }) = InvalidDateTime<T>;
-  const factory PrimitiveFailure.invalidDecimal({
-    @required T failedValue,
-  }) = InvalidDecimal<T>;
   const factory PrimitiveFailure.invalidId({
     @required T failedValue,
   }) = InvalidId<T>;
@@ -34,15 +31,9 @@ abstract class PrimitiveFailure<T> with _$PrimitiveFailure<T> {
   const factory PrimitiveFailure.invalidOid({
     @required T failedValue,
   }) = InvalidOid<T>;
-  const factory PrimitiveFailure.invalidPositiveInt({
-    @required T failedValue,
-  }) = InvalidPositiveInt<T>;
   const factory PrimitiveFailure.invalidTime({
     @required T failedValue,
   }) = InvalidTime<T>;
-  const factory PrimitiveFailure.invalidUnsignedInt({
-    @required T failedValue,
-  }) = InvalidUnsignedInt<T>;
   const factory PrimitiveFailure.invalidFhirUri({
     @required T failedValue,
   }) = InvalidFhirUri<T>;
