@@ -319,9 +319,15 @@ MolecularSequenceRoc _$MolecularSequenceRocFromJson(Map<String, dynamic> json) {
     numTP: (json['numTP'] as List)?.map((e) => e as int)?.toList(),
     numFP: (json['numFP'] as List)?.map((e) => e as int)?.toList(),
     numFN: (json['numFN'] as List)?.map((e) => e as int)?.toList(),
-    precision: json['precision'] as List,
-    sensitivity: json['sensitivity'] as List,
-    fMeasure: json['fMeasure'] as List,
+    precision: (json['precision'] as List)
+        ?.map((e) => (e as num)?.toDouble())
+        ?.toList(),
+    sensitivity: (json['sensitivity'] as List)
+        ?.map((e) => (e as num)?.toDouble())
+        ?.toList(),
+    fMeasure: (json['fMeasure'] as List)
+        ?.map((e) => (e as num)?.toDouble())
+        ?.toList(),
   );
 }
 

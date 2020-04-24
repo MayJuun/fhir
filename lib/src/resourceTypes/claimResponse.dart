@@ -108,7 +108,7 @@ class ClaimResponseItem {
   List<Extension> extension;
   List<Extension> modifierExtension;
   int itemSequence;
-  List<PositiveInt> noteNumber;
+  List<int> noteNumber;
   List<ClaimResponseAdjudication> adjudication;
   List<ClaimResponseDetail> detail;
 
@@ -158,7 +158,7 @@ class ClaimResponseDetail {
   List<Extension> extension;
   List<Extension> modifierExtension;
   int detailSequence;
-  List<PositiveInt> noteNumber;
+  List<int> noteNumber;
   List<ClaimResponseAdjudication> adjudication;
   List<ClaimResponseSubDetail> subDetail;
 
@@ -183,7 +183,7 @@ class ClaimResponseSubDetail {
   List<Extension> extension;
   List<Extension> modifierExtension;
   int subDetailSequence;
-  List<PositiveInt> noteNumber;
+  List<int> noteNumber;
   List<ClaimResponseAdjudication> adjudication;
 
   ClaimResponseSubDetail({
@@ -205,9 +205,9 @@ class ClaimResponseAddItem {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  List<PositiveInt> itemSequence;
-  List<PositiveInt> detailSequence;
-  List<PositiveInt> subdetailSequence;
+  List<int> itemSequence;
+  List<int> detailSequence;
+  List<int> subdetailSequence;
   List<Reference> provider;
   CodeableConcept productOrService;
   List<CodeableConcept> modifier;
@@ -223,7 +223,7 @@ class ClaimResponseAddItem {
   Money net;
   CodeableConcept bodySite;
   List<CodeableConcept> subSite;
-  List<PositiveInt> noteNumber;
+  List<int> noteNumber;
   List<ClaimResponseAdjudication> adjudication;
   List<ClaimResponseDetail1> detail;
 
@@ -270,7 +270,7 @@ class ClaimResponseDetail1 {
   Money unitPrice;
   double factor;
   Money net;
-  List<PositiveInt> noteNumber;
+  List<int> noteNumber;
   List<ClaimResponseAdjudication> adjudication;
   List<ClaimResponseSubDetail1> subDetail;
 
@@ -305,7 +305,7 @@ class ClaimResponseSubDetail1 {
   Money unitPrice;
   double factor;
   Money net;
-  List<PositiveInt> noteNumber;
+  List<int> noteNumber;
   List<ClaimResponseAdjudication> adjudication;
 
   ClaimResponseSubDetail1({

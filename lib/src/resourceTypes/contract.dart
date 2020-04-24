@@ -200,7 +200,7 @@ class ContractSecurityLabel {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  List<UnsignedInt> number;
+  List<int> number;
   Coding classification;
   List<Coding> category;
   List<Coding> control;
@@ -234,7 +234,7 @@ class ContractOffer {
   List<ContractAnswer> answer;
   String text;
   List<String> linkId;
-  List<UnsignedInt> securityLabelNumber;
+  List<int> securityLabelNumber;
 
   ContractOffer({
     this.id,
@@ -337,7 +337,7 @@ class ContractAsset {
   String text;
   List<String> linkId;
   List<ContractAnswer> answer;
-  List<UnsignedInt> securityLabelNumber;
+  List<int> securityLabelNumber;
   List<ContractValuedItem> valuedItem;
 
   ContractAsset({
@@ -408,7 +408,7 @@ class ContractValuedItem {
   Reference responsible;
   Reference recipient;
   List<String> linkId;
-  List<UnsignedInt> securityLabelNumber;
+  List<int> securityLabelNumber;
 
   ContractValuedItem({
     this.id,
@@ -463,7 +463,7 @@ class ContractAction {
   List<String> reason;
   List<String> reasonLinkId;
   List<Annotation> note;
-  List<UnsignedInt> securityLabelNumber;
+  List<int> securityLabelNumber;
 
   ContractAction({
     this.id,

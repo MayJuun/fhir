@@ -222,7 +222,9 @@ CoverageEligibilityRequestItem _$CoverageEligibilityRequestItemFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    supportingInfoSequence: json['supportingInfoSequence'] as List,
+    supportingInfoSequence: (json['supportingInfoSequence'] as List)
+        ?.map((e) => e as int)
+        ?.toList(),
     category: json['category'] == null
         ? null
         : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),

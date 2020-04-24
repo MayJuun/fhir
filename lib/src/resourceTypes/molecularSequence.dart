@@ -193,9 +193,9 @@ class MolecularSequenceRoc {
   List<int> numTP;
   List<int> numFP;
   List<int> numFN;
-  List<Decimal> precision;
-  List<Decimal> sensitivity;
-  List<Decimal> fMeasure;
+  List<double> precision;
+  List<double> sensitivity;
+  List<double> fMeasure;
 
   MolecularSequenceRoc({
     this.id,

@@ -191,7 +191,7 @@ ClaimResponseItem _$ClaimResponseItemFromJson(Map<String, dynamic> json) {
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     itemSequence: json['itemSequence'] as int,
-    noteNumber: json['noteNumber'] as List,
+    noteNumber: (json['noteNumber'] as List)?.map((e) => e as int)?.toList(),
     adjudication: (json['adjudication'] as List)
         ?.map((e) => e == null
             ? null
@@ -286,7 +286,7 @@ ClaimResponseDetail _$ClaimResponseDetailFromJson(Map<String, dynamic> json) {
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     detailSequence: json['detailSequence'] as int,
-    noteNumber: json['noteNumber'] as List,
+    noteNumber: (json['noteNumber'] as List)?.map((e) => e as int)?.toList(),
     adjudication: (json['adjudication'] as List)
         ?.map((e) => e == null
             ? null
@@ -336,7 +336,7 @@ ClaimResponseSubDetail _$ClaimResponseSubDetailFromJson(
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     subDetailSequence: json['subDetailSequence'] as int,
-    noteNumber: json['noteNumber'] as List,
+    noteNumber: (json['noteNumber'] as List)?.map((e) => e as int)?.toList(),
     adjudication: (json['adjudication'] as List)
         ?.map((e) => e == null
             ? null
@@ -378,9 +378,12 @@ ClaimResponseAddItem _$ClaimResponseAddItemFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    itemSequence: json['itemSequence'] as List,
-    detailSequence: json['detailSequence'] as List,
-    subdetailSequence: json['subdetailSequence'] as List,
+    itemSequence:
+        (json['itemSequence'] as List)?.map((e) => e as int)?.toList(),
+    detailSequence:
+        (json['detailSequence'] as List)?.map((e) => e as int)?.toList(),
+    subdetailSequence:
+        (json['subdetailSequence'] as List)?.map((e) => e as int)?.toList(),
     provider: (json['provider'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -433,7 +436,7 @@ ClaimResponseAddItem _$ClaimResponseAddItemFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    noteNumber: json['noteNumber'] as List,
+    noteNumber: (json['noteNumber'] as List)?.map((e) => e as int)?.toList(),
     adjudication: (json['adjudication'] as List)
         ?.map((e) => e == null
             ? null
@@ -521,7 +524,7 @@ ClaimResponseDetail1 _$ClaimResponseDetail1FromJson(Map<String, dynamic> json) {
     net: json['net'] == null
         ? null
         : Money.fromJson(json['net'] as Map<String, dynamic>),
-    noteNumber: json['noteNumber'] as List,
+    noteNumber: (json['noteNumber'] as List)?.map((e) => e as int)?.toList(),
     adjudication: (json['adjudication'] as List)
         ?.map((e) => e == null
             ? null
@@ -596,7 +599,7 @@ ClaimResponseSubDetail1 _$ClaimResponseSubDetail1FromJson(
     net: json['net'] == null
         ? null
         : Money.fromJson(json['net'] as Map<String, dynamic>),
-    noteNumber: json['noteNumber'] as List,
+    noteNumber: (json['noteNumber'] as List)?.map((e) => e as int)?.toList(),
     adjudication: (json['adjudication'] as List)
         ?.map((e) => e == null
             ? null

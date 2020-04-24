@@ -131,7 +131,7 @@ class CoverageEligibilityRequestItem {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  List<PositiveInt> supportingInfoSequence;
+  List<int> supportingInfoSequence;
   CodeableConcept category;
   CodeableConcept productOrService;
   List<CodeableConcept> modifier;

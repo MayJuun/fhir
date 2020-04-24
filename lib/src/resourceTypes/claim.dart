@@ -331,10 +331,10 @@ class ClaimItem {
   List<Extension> extension;
   List<Extension> modifierExtension;
   int sequence;
-  List<PositiveInt> careTeamSequence;
-  List<PositiveInt> diagnosisSequence;
-  List<PositiveInt> procedureSequence;
-  List<PositiveInt> informationSequence;
+  List<int> careTeamSequence;
+  List<int> diagnosisSequence;
+  List<int> procedureSequence;
+  List<int> informationSequence;
   CodeableConcept revenue;
   CodeableConcept category;
   CodeableConcept productOrService;

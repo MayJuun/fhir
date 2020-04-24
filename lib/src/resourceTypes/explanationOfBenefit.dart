@@ -359,10 +359,10 @@ class ExplanationOfBenefitItem {
   List<Extension> extension;
   List<Extension> modifierExtension;
   int sequence;
-  List<PositiveInt> careTeamSequence;
-  List<PositiveInt> diagnosisSequence;
-  List<PositiveInt> procedureSequence;
-  List<PositiveInt> informationSequence;
+  List<int> careTeamSequence;
+  List<int> diagnosisSequence;
+  List<int> procedureSequence;
+  List<int> informationSequence;
   CodeableConcept revenue;
   CodeableConcept category;
   CodeableConcept productOrService;
@@ -381,7 +381,7 @@ class ExplanationOfBenefitItem {
   CodeableConcept bodySite;
   List<CodeableConcept> subSite;
   List<Reference> encounter;
-  List<PositiveInt> noteNumber;
+  List<int> noteNumber;
   List<ExplanationOfBenefitAdjudication> adjudication;
   List<ExplanationOfBenefitDetail> detail;
 
@@ -465,7 +465,7 @@ class ExplanationOfBenefitDetail {
   double factor;
   Money net;
   List<Reference> udi;
-  List<PositiveInt> noteNumber;
+  List<int> noteNumber;
   List<ExplanationOfBenefitAdjudication> adjudication;
   List<ExplanationOfBenefitSubDetail> subDetail;
 
@@ -510,7 +510,7 @@ class ExplanationOfBenefitSubDetail {
   double factor;
   Money net;
   List<Reference> udi;
-  List<PositiveInt> noteNumber;
+  List<int> noteNumber;
   List<ExplanationOfBenefitAdjudication> adjudication;
 
   ExplanationOfBenefitSubDetail({
@@ -542,9 +542,9 @@ class ExplanationOfBenefitAddItem {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  List<PositiveInt> itemSequence;
-  List<PositiveInt> detailSequence;
-  List<PositiveInt> subDetailSequence;
+  List<int> itemSequence;
+  List<int> detailSequence;
+  List<int> subDetailSequence;
   List<Reference> provider;
   CodeableConcept productOrService;
   List<CodeableConcept> modifier;
@@ -560,7 +560,7 @@ class ExplanationOfBenefitAddItem {
   Money net;
   CodeableConcept bodySite;
   List<CodeableConcept> subSite;
-  List<PositiveInt> noteNumber;
+  List<int> noteNumber;
   List<ExplanationOfBenefitAdjudication> adjudication;
   List<ExplanationOfBenefitDetail1> detail;
 
@@ -607,7 +607,7 @@ class ExplanationOfBenefitDetail1 {
   Money unitPrice;
   double factor;
   Money net;
-  List<PositiveInt> noteNumber;
+  List<int> noteNumber;
   List<ExplanationOfBenefitAdjudication> adjudication;
   List<ExplanationOfBenefitSubDetail1> subDetail;
 
@@ -642,7 +642,7 @@ class ExplanationOfBenefitSubDetail1 {
   Money unitPrice;
   double factor;
   Money net;
-  List<PositiveInt> noteNumber;
+  List<int> noteNumber;
   List<ExplanationOfBenefitAdjudication> adjudication;
 
   ExplanationOfBenefitSubDetail1({

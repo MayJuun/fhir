@@ -695,10 +695,14 @@ ExplanationOfBenefitItem _$ExplanationOfBenefitItemFromJson(
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     sequence: json['sequence'] as int,
-    careTeamSequence: json['careTeamSequence'] as List,
-    diagnosisSequence: json['diagnosisSequence'] as List,
-    procedureSequence: json['procedureSequence'] as List,
-    informationSequence: json['informationSequence'] as List,
+    careTeamSequence:
+        (json['careTeamSequence'] as List)?.map((e) => e as int)?.toList(),
+    diagnosisSequence:
+        (json['diagnosisSequence'] as List)?.map((e) => e as int)?.toList(),
+    procedureSequence:
+        (json['procedureSequence'] as List)?.map((e) => e as int)?.toList(),
+    informationSequence:
+        (json['informationSequence'] as List)?.map((e) => e as int)?.toList(),
     revenue: json['revenue'] == null
         ? null
         : CodeableConcept.fromJson(json['revenue'] as Map<String, dynamic>),
@@ -761,7 +765,7 @@ ExplanationOfBenefitItem _$ExplanationOfBenefitItemFromJson(
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    noteNumber: json['noteNumber'] as List,
+    noteNumber: (json['noteNumber'] as List)?.map((e) => e as int)?.toList(),
     adjudication: (json['adjudication'] as List)
         ?.map((e) => e == null
             ? null
@@ -919,7 +923,7 @@ ExplanationOfBenefitDetail _$ExplanationOfBenefitDetailFromJson(
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    noteNumber: json['noteNumber'] as List,
+    noteNumber: (json['noteNumber'] as List)?.map((e) => e as int)?.toList(),
     adjudication: (json['adjudication'] as List)
         ?.map((e) => e == null
             ? null
@@ -1017,7 +1021,7 @@ ExplanationOfBenefitSubDetail _$ExplanationOfBenefitSubDetailFromJson(
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    noteNumber: json['noteNumber'] as List,
+    noteNumber: (json['noteNumber'] as List)?.map((e) => e as int)?.toList(),
     adjudication: (json['adjudication'] as List)
         ?.map((e) => e == null
             ? null
@@ -1073,9 +1077,12 @@ ExplanationOfBenefitAddItem _$ExplanationOfBenefitAddItemFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    itemSequence: json['itemSequence'] as List,
-    detailSequence: json['detailSequence'] as List,
-    subDetailSequence: json['subDetailSequence'] as List,
+    itemSequence:
+        (json['itemSequence'] as List)?.map((e) => e as int)?.toList(),
+    detailSequence:
+        (json['detailSequence'] as List)?.map((e) => e as int)?.toList(),
+    subDetailSequence:
+        (json['subDetailSequence'] as List)?.map((e) => e as int)?.toList(),
     provider: (json['provider'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -1128,7 +1135,7 @@ ExplanationOfBenefitAddItem _$ExplanationOfBenefitAddItemFromJson(
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    noteNumber: json['noteNumber'] as List,
+    noteNumber: (json['noteNumber'] as List)?.map((e) => e as int)?.toList(),
     adjudication: (json['adjudication'] as List)
         ?.map((e) => e == null
             ? null
@@ -1218,7 +1225,7 @@ ExplanationOfBenefitDetail1 _$ExplanationOfBenefitDetail1FromJson(
     net: json['net'] == null
         ? null
         : Money.fromJson(json['net'] as Map<String, dynamic>),
-    noteNumber: json['noteNumber'] as List,
+    noteNumber: (json['noteNumber'] as List)?.map((e) => e as int)?.toList(),
     adjudication: (json['adjudication'] as List)
         ?.map((e) => e == null
             ? null
@@ -1295,7 +1302,7 @@ ExplanationOfBenefitSubDetail1 _$ExplanationOfBenefitSubDetail1FromJson(
     net: json['net'] == null
         ? null
         : Money.fromJson(json['net'] as Map<String, dynamic>),
-    noteNumber: json['noteNumber'] as List,
+    noteNumber: (json['noteNumber'] as List)?.map((e) => e as int)?.toList(),
     adjudication: (json['adjudication'] as List)
         ?.map((e) => e == null
             ? null

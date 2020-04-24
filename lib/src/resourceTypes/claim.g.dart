@@ -606,10 +606,14 @@ ClaimItem _$ClaimItemFromJson(Map<String, dynamic> json) {
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     sequence: json['sequence'] as int,
-    careTeamSequence: json['careTeamSequence'] as List,
-    diagnosisSequence: json['diagnosisSequence'] as List,
-    procedureSequence: json['procedureSequence'] as List,
-    informationSequence: json['informationSequence'] as List,
+    careTeamSequence:
+        (json['careTeamSequence'] as List)?.map((e) => e as int)?.toList(),
+    diagnosisSequence:
+        (json['diagnosisSequence'] as List)?.map((e) => e as int)?.toList(),
+    procedureSequence:
+        (json['procedureSequence'] as List)?.map((e) => e as int)?.toList(),
+    informationSequence:
+        (json['informationSequence'] as List)?.map((e) => e as int)?.toList(),
     revenue: json['revenue'] == null
         ? null
         : CodeableConcept.fromJson(json['revenue'] as Map<String, dynamic>),

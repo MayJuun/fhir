@@ -373,7 +373,7 @@ ContractSecurityLabel _$ContractSecurityLabelFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    number: json['number'] as List,
+    number: (json['number'] as List)?.map((e) => e as int)?.toList(),
     classification: json['classification'] == null
         ? null
         : Coding.fromJson(json['classification'] as Map<String, dynamic>),
@@ -452,7 +452,8 @@ ContractOffer _$ContractOfferFromJson(Map<String, dynamic> json) {
         ?.toList(),
     text: json['text'] as String,
     linkId: (json['linkId'] as List)?.map((e) => e as String)?.toList(),
-    securityLabelNumber: json['securityLabelNumber'] as List,
+    securityLabelNumber:
+        (json['securityLabelNumber'] as List)?.map((e) => e as int)?.toList(),
   );
 }
 
@@ -654,7 +655,8 @@ ContractAsset _$ContractAssetFromJson(Map<String, dynamic> json) {
             ? null
             : ContractAnswer.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    securityLabelNumber: json['securityLabelNumber'] as List,
+    securityLabelNumber:
+        (json['securityLabelNumber'] as List)?.map((e) => e as int)?.toList(),
     valuedItem: (json['valuedItem'] as List)
         ?.map((e) => e == null
             ? null
@@ -788,7 +790,8 @@ ContractValuedItem _$ContractValuedItemFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(json['recipient'] as Map<String, dynamic>),
     linkId: (json['linkId'] as List)?.map((e) => e as String)?.toList(),
-    securityLabelNumber: json['securityLabelNumber'] as List,
+    securityLabelNumber:
+        (json['securityLabelNumber'] as List)?.map((e) => e as int)?.toList(),
   );
 }
 
@@ -902,7 +905,8 @@ ContractAction _$ContractActionFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    securityLabelNumber: json['securityLabelNumber'] as List,
+    securityLabelNumber:
+        (json['securityLabelNumber'] as List)?.map((e) => e as int)?.toList(),
   );
 }
 
