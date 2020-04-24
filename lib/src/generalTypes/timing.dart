@@ -1,10 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import '../primitiveTypes/code.dart';
-import '../primitiveTypes/decimal.dart';
-import '../primitiveTypes/positiveInt.dart';
 import '../primitiveTypes/time.dart';
-import '../primitiveTypes/unsignedInt.dart';
 import '../specialTypes/extension.dart';
 import 'codeableConcept.dart';
 import 'period.dart';

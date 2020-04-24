@@ -3,7 +3,6 @@ import 'package:json_annotation/json_annotation.dart';
 import '../functions.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/uri.dart';
-import '../primitiveTypes/decimal.dart';
 import '../specialTypes/extension.dart';
 
 part 'count.g.dart';

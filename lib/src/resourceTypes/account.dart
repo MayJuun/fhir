@@ -3,7 +3,6 @@ import 'package:meta/meta.dart';
 
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
-import '../primitiveTypes/positiveInt.dart';
 import '../primitiveTypes/uri.dart';
 import '../generalTypes/period.dart';
 import '../specialTypes/reference.dart';

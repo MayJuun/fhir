@@ -2,10 +2,8 @@ import 'package:json_annotation/json_annotation.dart';
 
 import '../resourceList.dart';
 import '../primitiveTypes/code.dart';
-import '../primitiveTypes/decimal.dart';
 import '../primitiveTypes/id.dart';
 import '../primitiveTypes/instant.dart';
-import '../primitiveTypes/unsignedInt.dart';
 import '../primitiveTypes/uri.dart';
 import '../specialTypes/extension.dart';
 import '../generalTypes/signature.dart';

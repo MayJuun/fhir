@@ -6,7 +6,6 @@ import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/id.dart';
 import '../primitiveTypes/markdown.dart';
-import '../primitiveTypes/unsignedInt.dart';
 import '../primitiveTypes/uri.dart';
 import '../primitiveTypes/url.dart';
 import '../generalTypes/coding.dart';

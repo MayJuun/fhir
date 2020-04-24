@@ -1,7 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import '../primitiveTypes/code.dart';
-import '../primitiveTypes/decimal.dart';
 import '../specialTypes/extension.dart';
 
 part 'money.g.dart';

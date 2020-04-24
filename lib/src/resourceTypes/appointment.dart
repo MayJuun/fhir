@@ -5,8 +5,6 @@ import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/id.dart';
 import '../primitiveTypes/instant.dart';
-import '../primitiveTypes/positiveInt.dart';
-import '../primitiveTypes/unsignedInt.dart';
 import '../primitiveTypes/uri.dart';
 import '../generalTypes/period.dart';
 import '../specialTypes/reference.dart';

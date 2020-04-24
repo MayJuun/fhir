@@ -1,8 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
-import '../primitiveTypes/decimal.dart';
-import '../primitiveTypes/positiveInt.dart';
 import '../specialTypes/extension.dart';
 import 'quantity.dart';
 

@@ -1,6 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../primitiveTypes/decimal.dart';
 import '../primitiveTypes/time.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';

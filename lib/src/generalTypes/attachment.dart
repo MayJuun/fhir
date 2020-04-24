@@ -2,7 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 import '../specialTypes/extension.dart';
 import '../primitiveTypes/fhirDateTime.dart';
-import '../primitiveTypes/unsignedInt.dart';
 import '../primitiveTypes/url.dart';
 import '../primitiveTypes/base64binary.dart';
 import '../primitiveTypes/code.dart';

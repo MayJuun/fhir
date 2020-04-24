@@ -2,12 +2,9 @@ import 'package:json_annotation/json_annotation.dart';
 
 import '../primitiveTypes/base64binary.dart';
 import '../primitiveTypes/oid.dart';
-import '../primitiveTypes/unsignedInt.dart';
 import '../primitiveTypes/uuid.dart';
-import '../primitiveTypes/decimal.dart';
 import '../primitiveTypes/time.dart';
 import '../primitiveTypes/date.dart';
-import '../primitiveTypes/positiveInt.dart';
 import '../primitiveTypes/url.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/canonical.dart';

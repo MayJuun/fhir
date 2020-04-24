@@ -1,7 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import '../specialTypes/extension.dart';
-import '../primitiveTypes/positiveInt.dart';
 
 import 'period.dart';
 

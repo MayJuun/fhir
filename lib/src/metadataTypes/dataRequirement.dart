@@ -3,7 +3,6 @@ import 'package:json_annotation/json_annotation.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/code.dart';
-import '../primitiveTypes/positiveInt.dart';
 import '../generalTypes/coding.dart';
 import '../generalTypes/period.dart';
 import '../generalTypes/codeableConcept.dart';

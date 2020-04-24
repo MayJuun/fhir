@@ -2,8 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
 import '../primitiveTypes/date.dart';
-import '../primitiveTypes/decimal.dart';
-import '../primitiveTypes/positiveInt.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/id.dart';

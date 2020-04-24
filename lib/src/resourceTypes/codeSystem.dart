@@ -1,9 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import '../primitiveTypes/canonical.dart';
-import '../primitiveTypes/decimal.dart';
 import '../primitiveTypes/markdown.dart';
-import '../primitiveTypes/unsignedInt.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/id.dart';
