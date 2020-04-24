@@ -19,7 +19,7 @@ abstract class PrimitiveObject<T> {
   int get hashCode => value.hashCode;
 
   @override
-  String toString() => 'Value($value)';
+  String toString() => result();
 
   String result() => value.fold(
         (failure) => '${failure.runtimeType}:${failure.failedValue.toString()}',
