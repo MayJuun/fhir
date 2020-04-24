@@ -7,7 +7,6 @@ part of 'contactPoint.dart';
 // **************************************************************************
 
 ContactPoint _$ContactPointFromJson(Map<String, dynamic> json) {
-  print(json['rank']);
   return ContactPoint(
     id: json['id'] as String,
     extension: (json['extension'] as List)

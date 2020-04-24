@@ -9,6 +9,7 @@ class Decimal extends PrimitiveObject<double> {
 
   factory Decimal(String value) {
     assert(value != null);
+    print(value);
     return Decimal._(
       validateDecimal(value),
     );
