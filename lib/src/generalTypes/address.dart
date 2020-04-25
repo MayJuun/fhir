@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../specialTypes/extension.dart';
 import 'period.dart';
 
@@ -40,24 +43,50 @@ class Address {
   Map<String, dynamic> toJson() => _$AddressToJson(this);
 }
 
-enum AddressUse {
-  @JsonValue('home')
-  home,
-  @JsonValue('work')
-  work,
-  @JsonValue('temp')
-  temp,
-  @JsonValue('old')
-  old,
-  @JsonValue('billing')
-  billing,
+class AddressUse extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+
+  factory AddressUse(String value) {
+    assert(value != null);
+    return AddressUse._(
+      validateEnum(
+        value,
+        [
+          'home',
+          'work',
+          'temp',
+          'old',
+          'billing',
+        ],
+      ),
+    );
+  }
+  const AddressUse._(this.value);
+
+  factory AddressUse.fromJson(String json) => AddressUse(json);
+  String toJson() => result();
 }
 
-enum AddressType {
-  @JsonValue('postal')
-  postal,
-  @JsonValue('physical')
-  physical,
-  @JsonValue('both')
-  both,
+class AddressType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+
+  factory AddressType(String value) {
+    assert(value != null);
+    return AddressType._(
+      validateEnum(
+        value,
+        [
+          'postal',
+          'physical',
+          'both',
+        ],
+      ),
+    );
+  }
+  const AddressType._(this.value);
+
+  factory AddressType.fromJson(String json) => AddressType(json);
+  String toJson() => result();
 }

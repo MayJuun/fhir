@@ -8,6 +8,7 @@ part of 'visionPrescription.dart';
 
 VisionPrescription _$VisionPrescriptionFromJson(Map<String, dynamic> json) {
   return VisionPrescription(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -69,6 +70,7 @@ Map<String, dynamic> _$VisionPrescriptionToJson(VisionPrescription instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -177,7 +179,10 @@ VisionPrescriptionPrism _$VisionPrescriptionPrismFromJson(
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     amount: (json['amount'] as num)?.toDouble(),
-    base: json['base'] as String,
+    base: json['base'] == null
+        ? null
+        : VisionPrescriptionPrism.fromJson(
+            json['base'] as Map<String, dynamic>),
   );
 }
 
@@ -197,6 +202,6 @@ Map<String, dynamic> _$VisionPrescriptionPrismToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('amount', instance.amount);
-  writeNotNull('base', instance.base);
+  writeNotNull('base', instance.base?.toJson());
   return val;
 }

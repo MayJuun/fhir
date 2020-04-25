@@ -43,4 +43,7 @@ abstract class PrimitiveFailure<T> with _$PrimitiveFailure<T> {
   const factory PrimitiveFailure.invalidUuid({
     @required T failedValue,
   }) = InvalidUuid<T>;
+  const factory PrimitiveFailure.invalidEnum({
+    @required T failedValue,
+  }) = InvalidEnum<T>;
 }

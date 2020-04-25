@@ -89,6 +89,12 @@ class _$PrimitiveFailureTearOff {
       failedValue: failedValue,
     );
   }
+
+  InvalidEnum<T> invalidEnum<T>({@required T failedValue}) {
+    return InvalidEnum<T>(
+      failedValue: failedValue,
+    );
+  }
 }
 
 // ignore: unused_element
@@ -112,6 +118,7 @@ mixin _$PrimitiveFailure<T> {
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
+    @required Result invalidEnum(T failedValue),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
@@ -128,6 +135,7 @@ mixin _$PrimitiveFailure<T> {
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
+    Result invalidEnum(T failedValue),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -145,6 +153,7 @@ mixin _$PrimitiveFailure<T> {
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
+    @required Result invalidEnum(InvalidEnum<T> value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
@@ -161,6 +170,7 @@ mixin _$PrimitiveFailure<T> {
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
+    Result invalidEnum(InvalidEnum<T> value),
     @required Result orElse(),
   });
 
@@ -269,6 +279,7 @@ class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
+    @required Result invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -283,6 +294,7 @@ class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidBase64Binary(failedValue);
   }
 
@@ -302,6 +314,7 @@ class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
+    Result invalidEnum(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -327,6 +340,7 @@ class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
+    @required Result invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -341,6 +355,7 @@ class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidBase64Binary(this);
   }
 
@@ -360,6 +375,7 @@ class _$InvalidBase64Binary<T> implements InvalidBase64Binary<T> {
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
+    Result invalidEnum(InvalidEnum<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -455,6 +471,7 @@ class _$InvalidCanonical<T> implements InvalidCanonical<T> {
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
+    @required Result invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -469,6 +486,7 @@ class _$InvalidCanonical<T> implements InvalidCanonical<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidCanonical(failedValue);
   }
 
@@ -488,6 +506,7 @@ class _$InvalidCanonical<T> implements InvalidCanonical<T> {
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
+    Result invalidEnum(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -513,6 +532,7 @@ class _$InvalidCanonical<T> implements InvalidCanonical<T> {
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
+    @required Result invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -527,6 +547,7 @@ class _$InvalidCanonical<T> implements InvalidCanonical<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidCanonical(this);
   }
 
@@ -546,6 +567,7 @@ class _$InvalidCanonical<T> implements InvalidCanonical<T> {
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
+    Result invalidEnum(InvalidEnum<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -641,6 +663,7 @@ class _$InvalidCode<T> implements InvalidCode<T> {
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
+    @required Result invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -655,6 +678,7 @@ class _$InvalidCode<T> implements InvalidCode<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidCode(failedValue);
   }
 
@@ -674,6 +698,7 @@ class _$InvalidCode<T> implements InvalidCode<T> {
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
+    Result invalidEnum(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -699,6 +724,7 @@ class _$InvalidCode<T> implements InvalidCode<T> {
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
+    @required Result invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -713,6 +739,7 @@ class _$InvalidCode<T> implements InvalidCode<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidCode(this);
   }
 
@@ -732,6 +759,7 @@ class _$InvalidCode<T> implements InvalidCode<T> {
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
+    Result invalidEnum(InvalidEnum<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -826,6 +854,7 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
+    @required Result invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -840,6 +869,7 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidDate(failedValue);
   }
 
@@ -859,6 +889,7 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
+    Result invalidEnum(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -884,6 +915,7 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
+    @required Result invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -898,6 +930,7 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidDate(this);
   }
 
@@ -917,6 +950,7 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
+    Result invalidEnum(InvalidEnum<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1011,6 +1045,7 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
+    @required Result invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -1025,6 +1060,7 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidFhirDateTime(failedValue);
   }
 
@@ -1044,6 +1080,7 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
+    Result invalidEnum(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1069,6 +1106,7 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
+    @required Result invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -1083,6 +1121,7 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidFhirDateTime(this);
   }
 
@@ -1102,6 +1141,7 @@ class _$InvalidDateTime<T> implements InvalidDateTime<T> {
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
+    Result invalidEnum(InvalidEnum<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1196,6 +1236,7 @@ class _$InvalidId<T> implements InvalidId<T> {
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
+    @required Result invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -1210,6 +1251,7 @@ class _$InvalidId<T> implements InvalidId<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidId(failedValue);
   }
 
@@ -1229,6 +1271,7 @@ class _$InvalidId<T> implements InvalidId<T> {
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
+    Result invalidEnum(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1254,6 +1297,7 @@ class _$InvalidId<T> implements InvalidId<T> {
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
+    @required Result invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -1268,6 +1312,7 @@ class _$InvalidId<T> implements InvalidId<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidId(this);
   }
 
@@ -1287,6 +1332,7 @@ class _$InvalidId<T> implements InvalidId<T> {
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
+    Result invalidEnum(InvalidEnum<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1381,6 +1427,7 @@ class _$InvalidInstant<T> implements InvalidInstant<T> {
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
+    @required Result invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -1395,6 +1442,7 @@ class _$InvalidInstant<T> implements InvalidInstant<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidInstant(failedValue);
   }
 
@@ -1414,6 +1462,7 @@ class _$InvalidInstant<T> implements InvalidInstant<T> {
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
+    Result invalidEnum(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1439,6 +1488,7 @@ class _$InvalidInstant<T> implements InvalidInstant<T> {
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
+    @required Result invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -1453,6 +1503,7 @@ class _$InvalidInstant<T> implements InvalidInstant<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidInstant(this);
   }
 
@@ -1472,6 +1523,7 @@ class _$InvalidInstant<T> implements InvalidInstant<T> {
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
+    Result invalidEnum(InvalidEnum<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1566,6 +1618,7 @@ class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
+    @required Result invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -1580,6 +1633,7 @@ class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidMarkdown(failedValue);
   }
 
@@ -1599,6 +1653,7 @@ class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
+    Result invalidEnum(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1624,6 +1679,7 @@ class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
+    @required Result invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -1638,6 +1694,7 @@ class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidMarkdown(this);
   }
 
@@ -1657,6 +1714,7 @@ class _$InvalidMarkdown<T> implements InvalidMarkdown<T> {
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
+    Result invalidEnum(InvalidEnum<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1752,6 +1810,7 @@ class _$InvalidOid<T> implements InvalidOid<T> {
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
+    @required Result invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -1766,6 +1825,7 @@ class _$InvalidOid<T> implements InvalidOid<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidOid(failedValue);
   }
 
@@ -1785,6 +1845,7 @@ class _$InvalidOid<T> implements InvalidOid<T> {
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
+    Result invalidEnum(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1810,6 +1871,7 @@ class _$InvalidOid<T> implements InvalidOid<T> {
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
+    @required Result invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -1824,6 +1886,7 @@ class _$InvalidOid<T> implements InvalidOid<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidOid(this);
   }
 
@@ -1843,6 +1906,7 @@ class _$InvalidOid<T> implements InvalidOid<T> {
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
+    Result invalidEnum(InvalidEnum<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1937,6 +2001,7 @@ class _$InvalidTime<T> implements InvalidTime<T> {
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
+    @required Result invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -1951,6 +2016,7 @@ class _$InvalidTime<T> implements InvalidTime<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidTime(failedValue);
   }
 
@@ -1970,6 +2036,7 @@ class _$InvalidTime<T> implements InvalidTime<T> {
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
+    Result invalidEnum(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1995,6 +2062,7 @@ class _$InvalidTime<T> implements InvalidTime<T> {
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
+    @required Result invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -2009,6 +2077,7 @@ class _$InvalidTime<T> implements InvalidTime<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidTime(this);
   }
 
@@ -2028,6 +2097,7 @@ class _$InvalidTime<T> implements InvalidTime<T> {
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
+    Result invalidEnum(InvalidEnum<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2122,6 +2192,7 @@ class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
+    @required Result invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -2136,6 +2207,7 @@ class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidFhirUri(failedValue);
   }
 
@@ -2155,6 +2227,7 @@ class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
+    Result invalidEnum(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2180,6 +2253,7 @@ class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
+    @required Result invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -2194,6 +2268,7 @@ class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidFhirUri(this);
   }
 
@@ -2213,6 +2288,7 @@ class _$InvalidFhirUri<T> implements InvalidFhirUri<T> {
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
+    Result invalidEnum(InvalidEnum<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2307,6 +2383,7 @@ class _$InvalidUrl<T> implements InvalidUrl<T> {
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
+    @required Result invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -2321,6 +2398,7 @@ class _$InvalidUrl<T> implements InvalidUrl<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidUrl(failedValue);
   }
 
@@ -2340,6 +2418,7 @@ class _$InvalidUrl<T> implements InvalidUrl<T> {
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
+    Result invalidEnum(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2365,6 +2444,7 @@ class _$InvalidUrl<T> implements InvalidUrl<T> {
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
+    @required Result invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -2379,6 +2459,7 @@ class _$InvalidUrl<T> implements InvalidUrl<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidUrl(this);
   }
 
@@ -2398,6 +2479,7 @@ class _$InvalidUrl<T> implements InvalidUrl<T> {
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
+    Result invalidEnum(InvalidEnum<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2492,6 +2574,7 @@ class _$InvalidUuid<T> implements InvalidUuid<T> {
     @required Result invalidFhirUri(T failedValue),
     @required Result invalidUrl(T failedValue),
     @required Result invalidUuid(T failedValue),
+    @required Result invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -2506,6 +2589,7 @@ class _$InvalidUuid<T> implements InvalidUuid<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidUuid(failedValue);
   }
 
@@ -2525,6 +2609,7 @@ class _$InvalidUuid<T> implements InvalidUuid<T> {
     Result invalidFhirUri(T failedValue),
     Result invalidUrl(T failedValue),
     Result invalidUuid(T failedValue),
+    Result invalidEnum(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2550,6 +2635,7 @@ class _$InvalidUuid<T> implements InvalidUuid<T> {
     @required Result invalidFhirUri(InvalidFhirUri<T> value),
     @required Result invalidUrl(InvalidUrl<T> value),
     @required Result invalidUuid(InvalidUuid<T> value),
+    @required Result invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidCanonical != null);
@@ -2564,6 +2650,7 @@ class _$InvalidUuid<T> implements InvalidUuid<T> {
     assert(invalidFhirUri != null);
     assert(invalidUrl != null);
     assert(invalidUuid != null);
+    assert(invalidEnum != null);
     return invalidUuid(this);
   }
 
@@ -2583,6 +2670,7 @@ class _$InvalidUuid<T> implements InvalidUuid<T> {
     Result invalidFhirUri(InvalidFhirUri<T> value),
     Result invalidUrl(InvalidUrl<T> value),
     Result invalidUuid(InvalidUuid<T> value),
+    Result invalidEnum(InvalidEnum<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2600,4 +2688,195 @@ abstract class InvalidUuid<T> implements PrimitiveFailure<T> {
   T get failedValue;
   @override
   $InvalidUuidCopyWith<T, InvalidUuid<T>> get copyWith;
+}
+
+abstract class $InvalidEnumCopyWith<T, $Res>
+    implements $PrimitiveFailureCopyWith<T, $Res> {
+  factory $InvalidEnumCopyWith(
+          InvalidEnum<T> value, $Res Function(InvalidEnum<T>) then) =
+      _$InvalidEnumCopyWithImpl<T, $Res>;
+  @override
+  $Res call({T failedValue});
+}
+
+class _$InvalidEnumCopyWithImpl<T, $Res>
+    extends _$PrimitiveFailureCopyWithImpl<T, $Res>
+    implements $InvalidEnumCopyWith<T, $Res> {
+  _$InvalidEnumCopyWithImpl(
+      InvalidEnum<T> _value, $Res Function(InvalidEnum<T>) _then)
+      : super(_value, (v) => _then(v as InvalidEnum<T>));
+
+  @override
+  InvalidEnum<T> get _value => super._value as InvalidEnum<T>;
+
+  @override
+  $Res call({
+    Object failedValue = freezed,
+  }) {
+    return _then(InvalidEnum<T>(
+      failedValue:
+          failedValue == freezed ? _value.failedValue : failedValue as T,
+    ));
+  }
+}
+
+class _$InvalidEnum<T> implements InvalidEnum<T> {
+  const _$InvalidEnum({@required this.failedValue})
+      : assert(failedValue != null);
+
+  @override
+  final T failedValue;
+
+  @override
+  String toString() {
+    return 'PrimitiveFailure<$T>.invalidEnum(failedValue: $failedValue)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InvalidEnum<T> &&
+            (identical(other.failedValue, failedValue) ||
+                const DeepCollectionEquality()
+                    .equals(other.failedValue, failedValue)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+
+  @override
+  $InvalidEnumCopyWith<T, InvalidEnum<T>> get copyWith =>
+      _$InvalidEnumCopyWithImpl<T, InvalidEnum<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result invalidBase64Binary(T failedValue),
+    @required Result invalidCanonical(T failedValue),
+    @required Result invalidCode(T failedValue),
+    @required Result invalidDate(T failedValue),
+    @required Result invalidFhirDateTime(T failedValue),
+    @required Result invalidId(T failedValue),
+    @required Result invalidInstant(T failedValue),
+    @required Result invalidMarkdown(T failedValue),
+    @required Result invalidOid(T failedValue),
+    @required Result invalidTime(T failedValue),
+    @required Result invalidFhirUri(T failedValue),
+    @required Result invalidUrl(T failedValue),
+    @required Result invalidUuid(T failedValue),
+    @required Result invalidEnum(T failedValue),
+  }) {
+    assert(invalidBase64Binary != null);
+    assert(invalidCanonical != null);
+    assert(invalidCode != null);
+    assert(invalidDate != null);
+    assert(invalidFhirDateTime != null);
+    assert(invalidId != null);
+    assert(invalidInstant != null);
+    assert(invalidMarkdown != null);
+    assert(invalidOid != null);
+    assert(invalidTime != null);
+    assert(invalidFhirUri != null);
+    assert(invalidUrl != null);
+    assert(invalidUuid != null);
+    assert(invalidEnum != null);
+    return invalidEnum(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result invalidBase64Binary(T failedValue),
+    Result invalidCanonical(T failedValue),
+    Result invalidCode(T failedValue),
+    Result invalidDate(T failedValue),
+    Result invalidFhirDateTime(T failedValue),
+    Result invalidId(T failedValue),
+    Result invalidInstant(T failedValue),
+    Result invalidMarkdown(T failedValue),
+    Result invalidOid(T failedValue),
+    Result invalidTime(T failedValue),
+    Result invalidFhirUri(T failedValue),
+    Result invalidUrl(T failedValue),
+    Result invalidUuid(T failedValue),
+    Result invalidEnum(T failedValue),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (invalidEnum != null) {
+      return invalidEnum(failedValue);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required Result invalidCanonical(InvalidCanonical<T> value),
+    @required Result invalidCode(InvalidCode<T> value),
+    @required Result invalidDate(InvalidDate<T> value),
+    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
+    @required Result invalidId(InvalidId<T> value),
+    @required Result invalidInstant(InvalidInstant<T> value),
+    @required Result invalidMarkdown(InvalidMarkdown<T> value),
+    @required Result invalidOid(InvalidOid<T> value),
+    @required Result invalidTime(InvalidTime<T> value),
+    @required Result invalidFhirUri(InvalidFhirUri<T> value),
+    @required Result invalidUrl(InvalidUrl<T> value),
+    @required Result invalidUuid(InvalidUuid<T> value),
+    @required Result invalidEnum(InvalidEnum<T> value),
+  }) {
+    assert(invalidBase64Binary != null);
+    assert(invalidCanonical != null);
+    assert(invalidCode != null);
+    assert(invalidDate != null);
+    assert(invalidFhirDateTime != null);
+    assert(invalidId != null);
+    assert(invalidInstant != null);
+    assert(invalidMarkdown != null);
+    assert(invalidOid != null);
+    assert(invalidTime != null);
+    assert(invalidFhirUri != null);
+    assert(invalidUrl != null);
+    assert(invalidUuid != null);
+    assert(invalidEnum != null);
+    return invalidEnum(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result invalidBase64Binary(InvalidBase64Binary<T> value),
+    Result invalidCanonical(InvalidCanonical<T> value),
+    Result invalidCode(InvalidCode<T> value),
+    Result invalidDate(InvalidDate<T> value),
+    Result invalidFhirDateTime(InvalidDateTime<T> value),
+    Result invalidId(InvalidId<T> value),
+    Result invalidInstant(InvalidInstant<T> value),
+    Result invalidMarkdown(InvalidMarkdown<T> value),
+    Result invalidOid(InvalidOid<T> value),
+    Result invalidTime(InvalidTime<T> value),
+    Result invalidFhirUri(InvalidFhirUri<T> value),
+    Result invalidUrl(InvalidUrl<T> value),
+    Result invalidUuid(InvalidUuid<T> value),
+    Result invalidEnum(InvalidEnum<T> value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (invalidEnum != null) {
+      return invalidEnum(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class InvalidEnum<T> implements PrimitiveFailure<T> {
+  const factory InvalidEnum({@required T failedValue}) = _$InvalidEnum<T>;
+
+  @override
+  T get failedValue;
+  @override
+  $InvalidEnumCopyWith<T, InvalidEnum<T>> get copyWith;
 }

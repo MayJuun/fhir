@@ -57,7 +57,7 @@ Either<PrimitiveFailure<String>, DateTime> validateFhirDateTime(String value) =>
         : left(PrimitiveFailure.invalidFhirDateTime(failedValue: value));
 
 Either<PrimitiveFailure<String>, String> validateId(String value) =>
-    hasMatch(r"""^[A-Za-z0-9\\-\\.]{1,64}$""", value)
+    hasMatch(r"""^[A-Za-z0-9\-\\.]{1,64}$""", value)
         ? right(value)
         : left(PrimitiveFailure.invalidId(failedValue: value));
 
@@ -98,3 +98,9 @@ Either<PrimitiveFailure<String>, String> validateUuid(String value) =>
     isUUID(value)
         ? right(value)
         : left(PrimitiveFailure.invalidUuid(failedValue: value));
+
+Either<PrimitiveFailure<String>, String> validateEnum(
+        String value, List<String> enums) =>
+    enums.contains(value)
+        ? right(value)
+        : left(PrimitiveFailure.invalidEnum(failedValue: value));

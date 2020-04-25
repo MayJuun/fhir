@@ -13,8 +13,11 @@ Address _$AddressFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    use: _$enumDecodeNullable(_$AddressUseEnumMap, json['use']),
-    type: _$enumDecodeNullable(_$AddressTypeEnumMap, json['type']),
+    use:
+        json['use'] == null ? null : AddressUse.fromJson(json['use'] as String),
+    type: json['type'] == null
+        ? null
+        : AddressType.fromJson(json['type'] as String),
     text: json['text'] as String,
     line: (json['line'] as List)?.map((e) => e as String)?.toList(),
     city: json['city'] as String,
@@ -40,8 +43,8 @@ Map<String, dynamic> _$AddressToJson(Address instance) {
   writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('use', _$AddressUseEnumMap[instance.use]);
-  writeNotNull('type', _$AddressTypeEnumMap[instance.type]);
+  writeNotNull('use', instance.use?.toJson());
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('text', instance.text);
   writeNotNull('line', instance.line);
   writeNotNull('city', instance.city);
@@ -52,49 +55,3 @@ Map<String, dynamic> _$AddressToJson(Address instance) {
   writeNotNull('period', instance.period?.toJson());
   return val;
 }
-
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
-}
-
-const _$AddressUseEnumMap = {
-  AddressUse.home: 'home',
-  AddressUse.work: 'work',
-  AddressUse.temp: 'temp',
-  AddressUse.old: 'old',
-  AddressUse.billing: 'billing',
-};
-
-const _$AddressTypeEnumMap = {
-  AddressType.postal: 'postal',
-  AddressType.physical: 'physical',
-  AddressType.both: 'both',
-};

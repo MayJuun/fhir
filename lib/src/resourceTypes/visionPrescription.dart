@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/id.dart';
@@ -18,7 +21,7 @@ part 'visionPrescription.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class VisionPrescription {
-  static const String resourceType = 'VisionPrescription';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -37,6 +40,7 @@ class VisionPrescription {
   List<VisionPrescriptionLensSpecification> lensSpecification;
 
   VisionPrescription({
+    this.resourceType = 'VisionPrescription',
     this.id,
     this.meta,
     this.implicitRules,
@@ -113,7 +117,7 @@ class VisionPrescriptionPrism {
   List<Extension> extension;
   List<Extension> modifierExtension;
   double amount;
-  String base;
+  VisionPrescriptionPrism base;
 
   VisionPrescriptionPrism({
     this.id,
@@ -126,4 +130,29 @@ class VisionPrescriptionPrism {
   factory VisionPrescriptionPrism.fromJson(Map<String, dynamic> json) =>
       _$VisionPrescriptionPrismFromJson(json);
   Map<String, dynamic> toJson() => _$VisionPrescriptionPrismToJson(this);
+}
+
+class VisionPrescriptionPrismBase extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+
+  factory VisionPrescriptionPrismBase(String value) {
+    assert(value != null);
+    return VisionPrescriptionPrismBase._(
+      validateEnum(
+        value,
+        [
+          'up',
+          'down',
+          'in',
+          'out',
+        ],
+      ),
+    );
+  }
+  const VisionPrescriptionPrismBase._(this.value);
+
+  factory VisionPrescriptionPrismBase.fromJson(String json) =>
+      VisionPrescriptionPrismBase(json);
+  String toJson() => result();
 }
