@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/id.dart';
@@ -119,38 +122,90 @@ class AllergyIntoleranceReaction {
   Map<String, dynamic> toJson() => _$AllergyIntoleranceReactionToJson(this);
 }
 
-enum AllergyIntoleranceType {
-  @JsonValue('allergy')
-  allergy,
-  @JsonValue('intolerance')
-  intolerance,
+class AllergyIntoleranceCategory extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory AllergyIntoleranceCategory(String value) {
+    assert(value != null);
+    return AllergyIntoleranceCategory._(
+      validateEnum(
+        value,
+        [
+          "food",
+          "medication",
+          "environment",
+          "biologic",
+        ],
+      ),
+    );
+  }
+  const AllergyIntoleranceCategory._(this.value);
+  factory AllergyIntoleranceCategory.fromJson(String json) =>
+      AllergyIntoleranceCategory(json);
+  String toJson() => result();
 }
 
-enum AllergyIntoleranceCategory {
-  @JsonValue('food')
-  food,
-  @JsonValue('medication')
-  medication,
-  @JsonValue('environment')
-  environment,
-  @JsonValue('biologic')
-  biologic,
+class AllergyIntoleranceType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory AllergyIntoleranceType(String value) {
+    assert(value != null);
+    return AllergyIntoleranceType._(
+      validateEnum(
+        value,
+        [
+          'allergy',
+          'intolerance',
+        ],
+      ),
+    );
+  }
+  const AllergyIntoleranceType._(this.value);
+  factory AllergyIntoleranceType.fromJson(String json) =>
+      AllergyIntoleranceType(json);
+  String toJson() => result();
 }
 
-enum AllergyIntoleranceCriticality {
-  @JsonValue('low')
-  low,
-  @JsonValue('high')
-  high,
-  @JsonValue('unable-to-assess')
-  unable_to_assess,
+class AllergyIntoleranceCriticality extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory AllergyIntoleranceCriticality(String value) {
+    assert(value != null);
+    return AllergyIntoleranceCriticality._(
+      validateEnum(
+        value,
+        [
+          'low',
+          'high',
+          'unable-to-assess',
+        ],
+      ),
+    );
+  }
+  const AllergyIntoleranceCriticality._(this.value);
+  factory AllergyIntoleranceCriticality.fromJson(String json) =>
+      AllergyIntoleranceCriticality(json);
+  String toJson() => result();
 }
 
-enum AllergyIntoleranceReactionSeverity {
-  @JsonValue('mild')
-  mild,
-  @JsonValue('moderate')
-  moderate,
-  @JsonValue('severe')
-  severe,
+class AllergyIntoleranceReactionSeverity extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory AllergyIntoleranceReactionSeverity(String value) {
+    assert(value != null);
+    return AllergyIntoleranceReactionSeverity._(
+      validateEnum(
+        value,
+        [
+          'mild',
+          'moderate',
+          'severe',
+        ],
+      ),
+    );
+  }
+  const AllergyIntoleranceReactionSeverity._(this.value);
+  factory AllergyIntoleranceReactionSeverity.fromJson(String json) =>
+      AllergyIntoleranceReactionSeverity(json);
+  String toJson() => result();
 }

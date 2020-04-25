@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/id.dart';
@@ -16,7 +19,7 @@ part 'adverseEvent.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class AdverseEvent {
-  static const String resourceType = 'AdverseEvent';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -47,6 +50,7 @@ class AdverseEvent {
   List<Reference> study;
 
   AdverseEvent({
+    this.resourceType = 'AdverseEvent',
     this.id,
     this.meta,
     this.implicitRules,
@@ -128,9 +132,23 @@ class AdverseEventCausality {
   Map<String, dynamic> toJson() => _$AdverseEventCausalityToJson(this);
 }
 
-enum AdverseEventActuality {
-  @JsonValue('actual')
-  actual,
-  @JsonValue('potential')
-  potential,
+class AdverseEventActuality extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory AdverseEventActuality(String value) {
+    assert(value != null);
+    return AdverseEventActuality._(
+      validateEnum(
+        value,
+        [
+          'actual',
+          'potential',
+        ],
+      ),
+    );
+  }
+  const AdverseEventActuality._(this.value);
+  factory AdverseEventActuality.fromJson(String json) =>
+      AdverseEventActuality(json);
+  String toJson() => result();
 }

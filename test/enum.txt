@@ -1,36 +1,3 @@
-class ElementDefinitionSlicingRules extends PrimitiveObject<String> {  @override  final Either<PrimitiveFailure<String>, String> value;
-  factory ElementDefinitionSlicingRules(String value) {    assert(value != null);    return ElementDefinitionSlicingRules._(      validateEnum(        value,        ['closed','open','openAtEnd',],),);}const ElementDefinitionSlicingRules._(this.value);
-factory ElementDefinitionSlicingRules.fromJson(String json) => ElementDefinitionSlicingRules(json);String toJson() => result();}
-class ElementDefinitionDiscriminatorType extends PrimitiveObject<String> {  @override  final Either<PrimitiveFailure<String>, String> value;
-  factory ElementDefinitionDiscriminatorType(String value) {    assert(value != null);    return ElementDefinitionDiscriminatorType._(      validateEnum(        value,        ['value','exists','pattern','type','profile',],),);}const ElementDefinitionDiscriminatorType._(this.value);
-factory ElementDefinitionDiscriminatorType.fromJson(String json) => ElementDefinitionDiscriminatorType(json);String toJson() => result();}
-class ElementDefinitionTypeVersioning extends PrimitiveObject<String> {  @override  final Either<PrimitiveFailure<String>, String> value;
-  factory ElementDefinitionTypeVersioning(String value) {    assert(value != null);    return ElementDefinitionTypeVersioning._(      validateEnum(        value,        ['either','independent','specific',],),);}const ElementDefinitionTypeVersioning._(this.value);
-factory ElementDefinitionTypeVersioning.fromJson(String json) => ElementDefinitionTypeVersioning(json);String toJson() => result();}
-class ElementDefinitionConstraintSeverity extends PrimitiveObject<String> {  @override  final Either<PrimitiveFailure<String>, String> value;
-  factory ElementDefinitionConstraintSeverity(String value) {    assert(value != null);    return ElementDefinitionConstraintSeverity._(      validateEnum(        value,        ['error','warning',],),);}const ElementDefinitionConstraintSeverity._(this.value);
-factory ElementDefinitionConstraintSeverity.fromJson(String json) => ElementDefinitionConstraintSeverity(json);String toJson() => result();}
-class ElementDefinitionBindingStrength extends PrimitiveObject<String> {  @override  final Either<PrimitiveFailure<String>, String> value;
-  factory ElementDefinitionBindingStrength(String value) {    assert(value != null);    return ElementDefinitionBindingStrength._(      validateEnum(        value,        ['required','extensible','preferred','example',],),);}const ElementDefinitionBindingStrength._(this.value);
-factory ElementDefinitionBindingStrength.fromJson(String json) => ElementDefinitionBindingStrength(json);String toJson() => result();}
-class AccountStatus extends PrimitiveObject<String> {  @override  final Either<PrimitiveFailure<String>, String> value;
-  factory AccountStatus(String value) {    assert(value != null);    return AccountStatus._(      validateEnum(        value,        ['active','inactive','entered-in-error','on-hold','unknown',],),);}const AccountStatus._(this.value);
-factory AccountStatus.fromJson(String json) => AccountStatus(json);String toJson() => result();}
-class ActivityDefinitionStatus extends PrimitiveObject<String> {  @override  final Either<PrimitiveFailure<String>, String> value;
-  factory ActivityDefinitionStatus(String value) {    assert(value != null);    return ActivityDefinitionStatus._(      validateEnum(        value,        ['draft','active','retired','unknown',],),);}const ActivityDefinitionStatus._(this.value);
-factory ActivityDefinitionStatus.fromJson(String json) => ActivityDefinitionStatus(json);String toJson() => result();}
-class AdverseEventActuality extends PrimitiveObject<String> {  @override  final Either<PrimitiveFailure<String>, String> value;
-  factory AdverseEventActuality(String value) {    assert(value != null);    return AdverseEventActuality._(      validateEnum(        value,        ['actual','potential',],),);}const AdverseEventActuality._(this.value);
-factory AdverseEventActuality.fromJson(String json) => AdverseEventActuality(json);String toJson() => result();}
-class AllergyIntoleranceType extends PrimitiveObject<String> {  @override  final Either<PrimitiveFailure<String>, String> value;
-  factory AllergyIntoleranceType(String value) {    assert(value != null);    return AllergyIntoleranceType._(      validateEnum(        value,        ['allergy','intolerance',],),);}const AllergyIntoleranceType._(this.value);
-factory AllergyIntoleranceType.fromJson(String json) => AllergyIntoleranceType(json);String toJson() => result();}
-class AllergyIntoleranceCriticality extends PrimitiveObject<String> {  @override  final Either<PrimitiveFailure<String>, String> value;
-  factory AllergyIntoleranceCriticality(String value) {    assert(value != null);    return AllergyIntoleranceCriticality._(      validateEnum(        value,        ['low','high','unable-to-assess',],),);}const AllergyIntoleranceCriticality._(this.value);
-factory AllergyIntoleranceCriticality.fromJson(String json) => AllergyIntoleranceCriticality(json);String toJson() => result();}
-class AllergyIntoleranceReactionSeverity extends PrimitiveObject<String> {  @override  final Either<PrimitiveFailure<String>, String> value;
-  factory AllergyIntoleranceReactionSeverity(String value) {    assert(value != null);    return AllergyIntoleranceReactionSeverity._(      validateEnum(        value,        ['mild','moderate','severe',],),);}const AllergyIntoleranceReactionSeverity._(this.value);
-factory AllergyIntoleranceReactionSeverity.fromJson(String json) => AllergyIntoleranceReactionSeverity(json);String toJson() => result();}
 class AppointmentStatus extends PrimitiveObject<String> {  @override  final Either<PrimitiveFailure<String>, String> value;
   factory AppointmentStatus(String value) {    assert(value != null);    return AppointmentStatus._(      validateEnum(        value,        ['proposed','pending','booked','arrived','fulfilled','cancelled','noshow','entered-in-error','checked-in','waitlist',],),);}const AppointmentStatus._(this.value);
 factory AppointmentStatus.fromJson(String json) => AppointmentStatus(json);String toJson() => result();}

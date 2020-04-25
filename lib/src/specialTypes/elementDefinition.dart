@@ -1,3 +1,4 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import '../generalTypes/address.dart';
@@ -27,6 +28,8 @@ import '../metadataTypes/parameterDefinition.dart';
 import '../metadataTypes/relatedArtifact.dart';
 import '../metadataTypes/triggerDefinition.dart';
 import '../metadataTypes/usageContext.dart';
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/base64binary.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/code.dart';
@@ -753,73 +756,160 @@ class ElementDefinitionMapping {
   Map<String, dynamic> toJson() => _$ElementDefinitionMappingToJson(this);
 }
 
-enum ElementDefinitionRepresentation {
-  @JsonValue("xmlAttr")
-  xmlAttr,
-  @JsonValue("xmlText")
-  xmlText,
-  @JsonValue("typeAttr")
-  typeAttr,
-  @JsonValue("cdaText")
-  cdaText,
-  @JsonValue("xhtml")
-  xhtml,
+class ElementDefinitionRepresentation extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ElementDefinitionRepresentation(String value) {
+    assert(value != null);
+    return ElementDefinitionRepresentation._(
+      validateEnum(
+        value,
+        [
+          'xmlAttr',
+          'xmlText',
+          'typeAttr',
+          'cdaText',
+          'xhtml',
+        ],
+      ),
+    );
+  }
+  const ElementDefinitionRepresentation._(this.value);
+  factory ElementDefinitionRepresentation.fromJson(String json) =>
+      ElementDefinitionRepresentation(json);
+  String toJson() => result();
 }
 
-enum ElementDefinitionSlicingRules {
-  @JsonValue("closed")
-  closed,
-  @JsonValue("open")
-  open,
-  @JsonValue("openAtEnd")
-  openAtEnd,
+class ElementDefinitionTypeAggregation extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ElementDefinitionTypeAggregation(String value) {
+    assert(value != null);
+    return ElementDefinitionTypeAggregation._(
+      validateEnum(
+        value,
+        [
+          'contained',
+          'referenced',
+          'bundled',
+        ],
+      ),
+    );
+  }
+  const ElementDefinitionTypeAggregation._(this.value);
+  factory ElementDefinitionTypeAggregation.fromJson(String json) =>
+      ElementDefinitionTypeAggregation(json);
+  String toJson() => result();
 }
 
-enum ElementDefinitionDiscriminatorType {
-  @JsonValue("value")
-  value,
-  @JsonValue("exists")
-  exists,
-  @JsonValue("pattern")
-  pattern,
-  @JsonValue("type")
-  type,
-  @JsonValue("profile")
-  profile,
+class ElementDefinitionSlicingRules extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ElementDefinitionSlicingRules(String value) {
+    assert(value != null);
+    return ElementDefinitionSlicingRules._(
+      validateEnum(
+        value,
+        [
+          'closed',
+          'open',
+          'openAtEnd',
+        ],
+      ),
+    );
+  }
+  const ElementDefinitionSlicingRules._(this.value);
+  factory ElementDefinitionSlicingRules.fromJson(String json) =>
+      ElementDefinitionSlicingRules(json);
+  String toJson() => result();
 }
 
-enum ElementDefinitionTypeAggregation {
-  @JsonValue("contained")
-  contained,
-  @JsonValue("referenced")
-  referenced,
-  @JsonValue("bundled")
-  bundled,
+class ElementDefinitionDiscriminatorType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ElementDefinitionDiscriminatorType(String value) {
+    assert(value != null);
+    return ElementDefinitionDiscriminatorType._(
+      validateEnum(
+        value,
+        [
+          'value',
+          'exists',
+          'pattern',
+          'type',
+          'profile',
+        ],
+      ),
+    );
+  }
+  const ElementDefinitionDiscriminatorType._(this.value);
+  factory ElementDefinitionDiscriminatorType.fromJson(String json) =>
+      ElementDefinitionDiscriminatorType(json);
+  String toJson() => result();
 }
 
-enum ElementDefinitionTypeVersioning {
-  @JsonValue("either")
-  either,
-  @JsonValue("independent")
-  independent,
-  @JsonValue("specific")
-  specific,
+class ElementDefinitionTypeVersioning extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ElementDefinitionTypeVersioning(String value) {
+    assert(value != null);
+    return ElementDefinitionTypeVersioning._(
+      validateEnum(
+        value,
+        [
+          'either',
+          'independent',
+          'specific',
+        ],
+      ),
+    );
+  }
+  const ElementDefinitionTypeVersioning._(this.value);
+  factory ElementDefinitionTypeVersioning.fromJson(String json) =>
+      ElementDefinitionTypeVersioning(json);
+  String toJson() => result();
 }
 
-enum ElementDefinitionConstraintSeverity {
-  @JsonValue('error')
-  error,
-  @JsonValue('warning')
-  warning,
+class ElementDefinitionConstraintSeverity extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ElementDefinitionConstraintSeverity(String value) {
+    assert(value != null);
+    return ElementDefinitionConstraintSeverity._(
+      validateEnum(
+        value,
+        [
+          'error',
+          'warning',
+        ],
+      ),
+    );
+  }
+  const ElementDefinitionConstraintSeverity._(this.value);
+  factory ElementDefinitionConstraintSeverity.fromJson(String json) =>
+      ElementDefinitionConstraintSeverity(json);
+  String toJson() => result();
 }
 
-enum ElementDefinitionBindingStrength {
-  @JsonValue("required")
-  required,
-  @JsonValue("extensible")
-  extensible,
-  @JsonValue("preferred")
-  preferred,
-  @JsonValue("example")
-  example,
+class ElementDefinitionBindingStrength extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ElementDefinitionBindingStrength(String value) {
+    assert(value != null);
+    return ElementDefinitionBindingStrength._(
+      validateEnum(
+        value,
+        [
+          'required',
+          'extensible',
+          'preferred',
+          'example',
+        ],
+      ),
+    );
+  }
+  const ElementDefinitionBindingStrength._(this.value);
+  factory ElementDefinitionBindingStrength.fromJson(String json) =>
+      ElementDefinitionBindingStrength(json);
+  String toJson() => result();
 }

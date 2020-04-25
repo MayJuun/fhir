@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/date.dart';
@@ -30,7 +33,7 @@ part 'activityDefinition.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ActivityDefinition {
-  static const String resourceType = 'ActivityDefinition';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -45,7 +48,7 @@ class ActivityDefinition {
   String name;
   String title;
   String subtitle;
-  ActivityStatus status;
+  ActivityDefinitionStatus status;
   bool experimental;
   CodeableConcept subjectCodeableConcept;
   Reference subjectReference;
@@ -94,6 +97,7 @@ class ActivityDefinition {
   List<ActivityDefinitionDynamicValue> dynamicValue;
 
   ActivityDefinition({
+    this.resourceType = 'ActivityDefinition',
     this.id,
     this.meta,
     this.implicitRules,
@@ -204,13 +208,25 @@ class ActivityDefinitionDynamicValue {
   Map<String, dynamic> toJson() => _$ActivityDefinitionDynamicValueToJson(this);
 }
 
-enum ActivityStatus {
-  @JsonValue("draft")
-  draft,
-  @JsonValue("active")
-  active,
-  @JsonValue("retired")
-  retired,
-  @JsonValue("unknown")
-  unknown,
+class ActivityDefinitionStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ActivityDefinitionStatus(String value) {
+    assert(value != null);
+    return ActivityDefinitionStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const ActivityDefinitionStatus._(this.value);
+  factory ActivityDefinitionStatus.fromJson(String json) =>
+      ActivityDefinitionStatus(json);
+  String toJson() => result();
 }

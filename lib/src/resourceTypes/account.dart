@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
 import '../primitiveTypes/uri.dart';
@@ -16,7 +19,7 @@ part 'account.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Account {
-  static const String resourceType = 'Account';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -38,6 +41,7 @@ class Account {
   Reference partOf;
 
   Account({
+    this.resourceType = 'Account',
     this.id,
     this.meta,
     this.implicitRules,
@@ -108,15 +112,25 @@ class AccountGuarantor {
   Map<String, dynamic> toJson() => _$AccountGuarantorToJson(this);
 }
 
-enum AccountStatus {
-  @JsonValue('active')
-  active,
-  @JsonValue('inactive')
-  inactive,
-  @JsonValue('entered-in-error')
-  entered_in_error,
-  @JsonValue('on-hold')
-  on_hold,
-  @JsonValue('unknown')
-  unknown,
+class AccountStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory AccountStatus(String value) {
+    assert(value != null);
+    return AccountStatus._(
+      validateEnum(
+        value,
+        [
+          'active',
+          'inactive',
+          'entered-in-error',
+          'on-hold',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const AccountStatus._(this.value);
+  factory AccountStatus.fromJson(String json) => AccountStatus(json);
+  String toJson() => result();
 }
