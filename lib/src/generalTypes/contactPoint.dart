@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../specialTypes/extension.dart';
 
 import 'period.dart';
@@ -31,32 +34,50 @@ class ContactPoint {
   Map<String, dynamic> toJson() => _$ContactPointToJson(this);
 }
 
-enum ContactPointSystem {
-  @JsonValue('phone')
-  phone,
-  @JsonValue('fax')
-  fax,
-  @JsonValue('email')
-  email,
-  @JsonValue('pager')
-  pager,
-  @JsonValue('url')
-  url,
-  @JsonValue('sms')
-  sms,
-  @JsonValue('other')
-  other,
+class ContactPointSystem extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ContactPointSystem(String value) {
+    assert(value != null);
+    return ContactPointSystem._(
+      validateEnum(
+        value,
+        [
+          'phone',
+          'fax',
+          'email',
+          'pager',
+          'url',
+          'sms',
+          'other',
+        ],
+      ),
+    );
+  }
+  const ContactPointSystem._(this.value);
+  factory ContactPointSystem.fromJson(String json) => ContactPointSystem(json);
+  String toJson() => result();
 }
 
-enum ContactPointUse {
-  @JsonValue('home')
-  home,
-  @JsonValue('work')
-  work,
-  @JsonValue('temp')
-  temp,
-  @JsonValue('old')
-  old,
-  @JsonValue('mobile')
-  mobile,
+class ContactPointUse extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ContactPointUse(String value) {
+    assert(value != null);
+    return ContactPointUse._(
+      validateEnum(
+        value,
+        [
+          'home',
+          'work',
+          'temp',
+          'old',
+          'mobile',
+        ],
+      ),
+    );
+  }
+  const ContactPointUse._(this.value);
+  factory ContactPointUse.fromJson(String json) => ContactPointUse(json);
+  String toJson() => result();
 }

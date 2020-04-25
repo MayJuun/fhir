@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/code.dart';
@@ -117,9 +120,23 @@ class DataRequirementSort {
   Map<String, dynamic> toJson() => _$DataRequirementSortToJson(this);
 }
 
-enum DataRequirementSortDirection {
-  @JsonValue('ascending')
-  ascending,
-  @JsonValue('descending')
-  descending,
+class DataRequirementSortDirection extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory DataRequirementSortDirection(String value) {
+    assert(value != null);
+    return DataRequirementSortDirection._(
+      validateEnum(
+        value,
+        [
+          'ascending',
+          'descending',
+        ],
+      ),
+    );
+  }
+  const DataRequirementSortDirection._(this.value);
+  factory DataRequirementSortDirection.fromJson(String json) =>
+      DataRequirementSortDirection(json);
+  String toJson() => result();
 }

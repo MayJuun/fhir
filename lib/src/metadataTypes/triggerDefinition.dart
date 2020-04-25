@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../generalTypes/timing.dart';
@@ -41,21 +44,29 @@ class TriggerDefinition {
   Map<String, dynamic> toJson() => _$TriggerDefinitionToJson(this);
 }
 
-enum TriggerDefinitionType {
-  @JsonValue("named-event")
-  namedEvent,
-  @JsonValue("periodic")
-  periodic,
-  @JsonValue("data-changed")
-  dataChanged,
-  @JsonValue("data-added")
-  dataAdded,
-  @JsonValue("data-modified")
-  dataModified,
-  @JsonValue("data-removed")
-  dataRemoved,
-  @JsonValue("data-accessed")
-  dataAccessed,
-  @JsonValue("data-access-ended")
-  dataAccessEnded,
+class TriggerDefinitionType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory TriggerDefinitionType(String value) {
+    assert(value != null);
+    return TriggerDefinitionType._(
+      validateEnum(
+        value,
+        [
+          'named-event',
+          'periodic',
+          'data-changed',
+          'data-added',
+          'data-modified',
+          'data-removed',
+          'data-accessed',
+          'data-access-ended',
+        ],
+      ),
+    );
+  }
+  const TriggerDefinitionType._(this.value);
+  factory TriggerDefinitionType.fromJson(String json) =>
+      TriggerDefinitionType(json);
+  String toJson() => result();
 }

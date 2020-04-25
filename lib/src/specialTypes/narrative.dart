@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import 'extension.dart';
 
 part 'narrative.g.dart';
@@ -24,13 +27,26 @@ class Narrative {
   Map<String, dynamic> toJson() => _$NarrativeToJson(this);
 }
 
-enum NarrativeStatus {
-  @JsonValue('generated')
-  generated,
-  @JsonValue('extensions')
-  extensions,
-  @JsonValue('additional')
-  additional,
-  @JsonValue('empty')
-  empty,
+class NarrativeStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+
+  factory NarrativeStatus(String value) {
+    assert(value != null);
+    return NarrativeStatus._(
+      validateEnum(
+        value,
+        [
+          'generated',
+          'extensions',
+          'additional',
+          'empty',
+        ],
+      ),
+    );
+  }
+  const NarrativeStatus._(this.value);
+
+  factory NarrativeStatus.fromJson(String json) => NarrativeStatus(json);
+  String toJson() => result();
 }

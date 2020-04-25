@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/uri.dart';
 import '../specialTypes/extension.dart';
 import '../specialTypes/reference.dart';
@@ -35,15 +38,25 @@ class Identifier {
   Map<String, dynamic> toJson() => _$IdentifierToJson(this);
 }
 
-enum IdentifierUse {
-  @JsonValue("usual")
-  usual,
-  @JsonValue("official")
-  official,
-  @JsonValue("temp")
-  temp,
-  @JsonValue("secondary")
-  secondary,
-  @JsonValue("old")
-  old,
+class IdentifierUse extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory IdentifierUse(String value) {
+    assert(value != null);
+    return IdentifierUse._(
+      validateEnum(
+        value,
+        [
+          'usual',
+          'official',
+          'temp',
+          'secondary',
+          'old',
+        ],
+      ),
+    );
+  }
+  const IdentifierUse._(this.value);
+  factory IdentifierUse.fromJson(String json) => IdentifierUse(json);
+  String toJson() => result();
 }

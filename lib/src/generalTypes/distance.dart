@@ -1,6 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '../functions.dart';
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/uri.dart';
 import '../specialTypes/extension.dart';
@@ -12,7 +14,7 @@ class Distance {
   String id;
   List<Extension> extension;
   double value;
-  AmountComparator comparator;
+  DistanceComparator comparator;
   String unit;
   FhirUri system;
   Code code;
@@ -30,4 +32,26 @@ class Distance {
   factory Distance.fromJson(Map<String, dynamic> json) =>
       _$DistanceFromJson(json);
   Map<String, dynamic> toJson() => _$DistanceToJson(this);
+}
+
+class DistanceComparator extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory DistanceComparator(String value) {
+    assert(value != null);
+    return DistanceComparator._(
+      validateEnum(
+        value,
+        [
+          '<',
+          '<=',
+          '>=',
+          '>',
+        ],
+      ),
+    );
+  }
+  const DistanceComparator._(this.value);
+  factory DistanceComparator.fromJson(String json) => DistanceComparator(json);
+  String toJson() => result();
 }

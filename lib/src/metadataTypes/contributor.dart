@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../specialTypes/extension.dart';
 import 'contactDetail.dart';
 
@@ -26,13 +29,24 @@ class Contributor {
   Map<String, dynamic> toJson() => _$ContributorToJson(this);
 }
 
-enum ContributorType {
-  @JsonValue("author")
-  author,
-  @JsonValue("editor")
-  editor,
-  @JsonValue("reviewer")
-  reviewer,
-  @JsonValue("endorser")
-  endorser,
+class ContributorType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ContributorType(String value) {
+    assert(value != null);
+    return ContributorType._(
+      validateEnum(
+        value,
+        [
+          'author',
+          'editor',
+          'reviewer',
+          'endorser',
+        ],
+      ),
+    );
+  }
+  const ContributorType._(this.value);
+  factory ContributorType.fromJson(String json) => ContributorType(json);
+  String toJson() => result();
 }

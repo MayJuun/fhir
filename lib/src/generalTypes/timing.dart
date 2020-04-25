@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/time.dart';
 import '../specialTypes/extension.dart';
@@ -43,15 +46,15 @@ class TimingRepeat {
   int countMax;
   double duration;
   double durationMax;
-  TimingUnit durationUnit;
+  TimingRepeatUnit durationUnit;
   int frequency;
   int frequencyMax;
   double period;
   double periodMax;
-  TimingUnit periodUnit;
+  TimingRepeatUnit periodUnit;
   List<Code> dayOfWeek;
   List<Time> timeOfDay;
-  List<TimingWhen> when;
+  List<TimingRepeatWhen> when;
   int offset;
 
   TimingRepeat({
@@ -82,74 +85,71 @@ class TimingRepeat {
   Map<String, dynamic> toJson() => _$TimingRepeatToJson(this);
 }
 
-enum TimingUnit {
-  @JsonValue('s')
-  s,
-  @JsonValue('min')
-  min,
-  @JsonValue('h')
-  h,
-  @JsonValue('d')
-  d,
-  @JsonValue('wk')
-  wk,
-  @JsonValue('mo')
-  mo,
-  @JsonValue('a')
-  a,
+class TimingRepeatWhen extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory TimingRepeatWhen(String value) {
+    assert(value != null);
+    return TimingRepeatWhen._(
+      validateEnum(
+        value,
+        [
+          'MORN',
+          'MORN.early',
+          'MORN.late',
+          'NOON',
+          'AFT',
+          'AFT.early',
+          'AFT.late',
+          'EVE',
+          'EVE.early',
+          'EVE.late',
+          'NIGHT',
+          'PHS',
+          'HS',
+          'WAKE',
+          'C',
+          'CM',
+          'CD',
+          'CV',
+          'AC',
+          'ACM',
+          'ACD',
+          'ACV',
+          'PC',
+          'PCM',
+          'PCD',
+          'PCV',
+        ],
+      ),
+    );
+  }
+  const TimingRepeatWhen._(this.value);
+  factory TimingRepeatWhen.fromJson(String json) => TimingRepeatWhen(json);
+  String toJson() => result();
 }
 
-enum TimingWhen {
-  @JsonValue('MORN')
-  morn,
-  @JsonValue('MORN.early')
-  mornEarly,
-  @JsonValue('MORN.late')
-  mornLate,
-  @JsonValue('NOON')
-  noon,
-  @JsonValue('AFT')
-  aft,
-  @JsonValue('AFT.early')
-  aftEarly,
-  @JsonValue('AFT.late')
-  aftLate,
-  @JsonValue('EVE')
-  eve,
-  @JsonValue('EVE.early')
-  eveEarly,
-  @JsonValue('EVE.late')
-  eveLate,
-  @JsonValue('NIGHT')
-  eveNight,
-  @JsonValue('PHS')
-  phs,
-  @JsonValue('HS')
-  hs,
-  @JsonValue('WAKE')
-  wake,
-  @JsonValue('C')
-  c,
-  @JsonValue('CM')
-  cm,
-  @JsonValue('CD')
-  cd,
-  @JsonValue('CV')
-  cv,
-  @JsonValue('AC')
-  ac,
-  @JsonValue('ACM')
-  acm,
-  @JsonValue('ACD')
-  acd,
-  @JsonValue('ACV')
-  acv,
-  @JsonValue('PC')
-  pc,
-  @JsonValue('PCM')
-  pcm,
-  @JsonValue('PCD')
-  pcd,
-  @JsonValue('PCV')
-  pcv,
+class TimingRepeatUnit extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory TimingRepeatUnit(String value) {
+    assert(value != null);
+    return TimingRepeatUnit._(
+      validateEnum(
+        value,
+        [
+          's',
+          'min',
+          'h',
+          'd',
+          'wk',
+          'mo',
+          'a',
+        ],
+      ),
+    );
+  }
+  const TimingRepeatUnit._(this.value);
+  factory TimingRepeatUnit.fromJson(String json) => TimingRepeatUnit(json);
+  String toJson() => result();
 }

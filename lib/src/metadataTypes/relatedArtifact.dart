@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/url.dart';
@@ -37,21 +40,29 @@ class RelatedArtifact {
   Map<String, dynamic> toJson() => _$RelatedArtifactToJson(this);
 }
 
-enum RelatedArtifactType {
-  @JsonValue("documentation")
-  documentation,
-  @JsonValue("justification")
-  justification,
-  @JsonValue("citation")
-  citation,
-  @JsonValue("predecessor")
-  predecessor,
-  @JsonValue("successor")
-  successor,
-  @JsonValue("derived-from")
-  derivedFrom,
-  @JsonValue("depends-on")
-  dependsOn,
-  @JsonValue("composed-of")
-  composedOf,
+class RelatedArtifactType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory RelatedArtifactType(String value) {
+    assert(value != null);
+    return RelatedArtifactType._(
+      validateEnum(
+        value,
+        [
+          'documentation',
+          'justification',
+          'citation',
+          'predecessor',
+          'successor',
+          'derived-from',
+          'depends-on',
+          'composed-of',
+        ],
+      ),
+    );
+  }
+  const RelatedArtifactType._(this.value);
+  factory RelatedArtifactType.fromJson(String json) =>
+      RelatedArtifactType(json);
+  String toJson() => result();
 }

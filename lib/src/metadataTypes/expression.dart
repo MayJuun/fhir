@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/id.dart';
 import '../primitiveTypes/uri.dart';
 import '../specialTypes/extension.dart';
@@ -31,11 +34,23 @@ class Expression {
   Map<String, dynamic> toJson() => _$ExpressionToJson(this);
 }
 
-enum ExpressionLanguage {
-  @JsonValue('text/cql')
-  textCql,
-  @JsonValue('text/fhirpath')
-  textFhirpath,
-  @JsonValue('application/x-fhir-query')
-  applicationXFhirQuery,
+class ExpressionLanguage extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ExpressionLanguage(String value) {
+    assert(value != null);
+    return ExpressionLanguage._(
+      validateEnum(
+        value,
+        [
+          'text/cql',
+          'text/fhirpath',
+          'application/x-fhir-query',
+        ],
+      ),
+    );
+  }
+  const ExpressionLanguage._(this.value);
+  factory ExpressionLanguage.fromJson(String json) => ExpressionLanguage(json);
+  String toJson() => result();
 }

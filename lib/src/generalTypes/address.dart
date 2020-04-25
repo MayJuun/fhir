@@ -46,7 +46,6 @@ class Address {
 class AddressUse extends PrimitiveObject<String> {
   @override
   final Either<PrimitiveFailure<String>, String> value;
-
   factory AddressUse(String value) {
     assert(value != null);
     return AddressUse._(
@@ -63,7 +62,6 @@ class AddressUse extends PrimitiveObject<String> {
     );
   }
   const AddressUse._(this.value);
-
   factory AddressUse.fromJson(String json) => AddressUse(json);
   String toJson() => result();
 }
@@ -71,7 +69,6 @@ class AddressUse extends PrimitiveObject<String> {
 class AddressType extends PrimitiveObject<String> {
   @override
   final Either<PrimitiveFailure<String>, String> value;
-
   factory AddressType(String value) {
     assert(value != null);
     return AddressType._(
@@ -86,7 +83,6 @@ class AddressType extends PrimitiveObject<String> {
     );
   }
   const AddressType._(this.value);
-
   factory AddressType.fromJson(String json) => AddressType(json);
   String toJson() => result();
 }

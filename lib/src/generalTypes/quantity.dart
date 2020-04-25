@@ -1,6 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '../functions.dart';
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/uri.dart';
 import '../specialTypes/extension.dart';
@@ -12,7 +14,7 @@ class Quantity {
   String id;
   List<Extension> extension;
   double value;
-  AmountComparator comparator;
+  QuantityComparator comparator;
   String unit;
   FhirUri system;
   Code code;
@@ -30,4 +32,26 @@ class Quantity {
   factory Quantity.fromJson(Map<String, dynamic> json) =>
       _$QuantityFromJson(json);
   Map<String, dynamic> toJson() => _$QuantityToJson(this);
+}
+
+class QuantityComparator extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory QuantityComparator(String value) {
+    assert(value != null);
+    return QuantityComparator._(
+      validateEnum(
+        value,
+        [
+          '<',
+          '<=',
+          '>=',
+          '>',
+        ],
+      ),
+    );
+  }
+  const QuantityComparator._(this.value);
+  factory QuantityComparator.fromJson(String json) => QuantityComparator(json);
+  String toJson() => result();
 }

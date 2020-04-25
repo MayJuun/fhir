@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import '../generalTypes/period.dart';
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../specialTypes/extension.dart';
 
 part 'humanName.g.dart';
@@ -34,19 +37,27 @@ class HumanName {
   Map<String, dynamic> toJson() => _$HumanNameToJson(this);
 }
 
-enum HumanNameUse {
-  @JsonValue('usual')
-  usual,
-  @JsonValue('official')
-  official,
-  @JsonValue('temp')
-  temp,
-  @JsonValue('nickname')
-  nickname,
-  @JsonValue('anonymous')
-  anonymous,
-  @JsonValue('old')
-  old,
-  @JsonValue('maiden')
-  maiden,
+class HumanNameUse extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory HumanNameUse(String value) {
+    assert(value != null);
+    return HumanNameUse._(
+      validateEnum(
+        value,
+        [
+          'usual',
+          'official',
+          'temp',
+          'nickname',
+          'anonymous',
+          'old',
+          'maiden',
+        ],
+      ),
+    );
+  }
+  const HumanNameUse._(this.value);
+  factory HumanNameUse.fromJson(String json) => HumanNameUse(json);
+  String toJson() => result();
 }
