@@ -1,6 +1,10 @@
+import 'package:dartz/dartz.dart';
+import 'package:fhir/fhir.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/instant.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
@@ -17,7 +21,7 @@ part 'deviceMetric.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class DeviceMetric {
-  static const String resourceType = 'DeviceMetric';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -31,13 +35,14 @@ class DeviceMetric {
   CodeableConcept unit;
   Reference source;
   Reference parent;
-  String operationalStatus;
-  String color;
-  String category;
+  DeviceMetricOperationalStatus operationalStatus;
+  DeviceMetricColor color;
+  DeviceMetricCategory category;
   Timing measurementPeriod;
   List<DeviceMetricCalibration> calibration;
 
   DeviceMetric({
+    this.resourceType = 'DeviceMetric',
     this.id,
     this.meta,
     this.implicitRules,
@@ -68,8 +73,8 @@ class DeviceMetricCalibration {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String type;
-  String state;
+  DeviceMetricCalibrationType type;
+  DeviceMetricCalibrationState state;
   Instant time;
 
   DeviceMetricCalibration({
@@ -84,4 +89,122 @@ class DeviceMetricCalibration {
   factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricCalibrationFromJson(json);
   Map<String, dynamic> toJson() => _$DeviceMetricCalibrationToJson(this);
+}
+
+class DeviceMetricOperationalStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory DeviceMetricOperationalStatus(String value) {
+    assert(value != null);
+    return DeviceMetricOperationalStatus._(
+      validateEnum(
+        value,
+        [
+          'on',
+          'off',
+          'standby',
+          'entered-in-error',
+        ],
+      ),
+    );
+  }
+  const DeviceMetricOperationalStatus._(this.value);
+  factory DeviceMetricOperationalStatus.fromJson(String json) =>
+      DeviceMetricOperationalStatus(json);
+  String toJson() => result();
+}
+
+class DeviceMetricColor extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory DeviceMetricColor(String value) {
+    assert(value != null);
+    return DeviceMetricColor._(
+      validateEnum(
+        value,
+        [
+          'black',
+          'red',
+          'green',
+          'yellow',
+          'blue',
+          'magenta',
+          'cyan',
+          'white',
+        ],
+      ),
+    );
+  }
+  const DeviceMetricColor._(this.value);
+  factory DeviceMetricColor.fromJson(String json) => DeviceMetricColor(json);
+  String toJson() => result();
+}
+
+class DeviceMetricCategory extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory DeviceMetricCategory(String value) {
+    assert(value != null);
+    return DeviceMetricCategory._(
+      validateEnum(
+        value,
+        [
+          'measurement',
+          'setting',
+          'calculation',
+          'unspecified',
+        ],
+      ),
+    );
+  }
+  const DeviceMetricCategory._(this.value);
+  factory DeviceMetricCategory.fromJson(String json) =>
+      DeviceMetricCategory(json);
+  String toJson() => result();
+}
+
+class DeviceMetricCalibrationType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory DeviceMetricCalibrationType(String value) {
+    assert(value != null);
+    return DeviceMetricCalibrationType._(
+      validateEnum(
+        value,
+        [
+          'unspecified',
+          'offset',
+          'gain',
+          'two-point',
+        ],
+      ),
+    );
+  }
+  const DeviceMetricCalibrationType._(this.value);
+  factory DeviceMetricCalibrationType.fromJson(String json) =>
+      DeviceMetricCalibrationType(json);
+  String toJson() => result();
+}
+
+class DeviceMetricCalibrationState extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory DeviceMetricCalibrationState(String value) {
+    assert(value != null);
+    return DeviceMetricCalibrationState._(
+      validateEnum(
+        value,
+        [
+          'not-calibrated',
+          'calibration-required',
+          'calibrated',
+          'unspecified',
+        ],
+      ),
+    );
+  }
+  const DeviceMetricCalibrationState._(this.value);
+  factory DeviceMetricCalibrationState.fromJson(String json) =>
+      DeviceMetricCalibrationState(json);
+  String toJson() => result();
 }

@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/code.dart';
@@ -19,7 +22,7 @@ part 'codeSystem.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class CodeSystem {
-  static const String resourceType = 'CodeSystem';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -33,7 +36,7 @@ class CodeSystem {
   String version;
   String name;
   String title;
-  String status;
+  CodeSystemStatus status;
   bool experimental;
   FhirDateTime date;
   String publisher;
@@ -45,10 +48,10 @@ class CodeSystem {
   Markdown copyright;
   bool caseSensitive;
   Canonical valueSet;
-  String hierarchyMeaning;
+  CodeSystemHierarchyMeaning hierarchyMeaning;
   bool compositional;
   bool versionNeeded;
-  String content;
+  CodeSystemContent content;
   Canonical supplements;
   int count;
   List<CodeSystemFilter> filter;
@@ -56,6 +59,7 @@ class CodeSystem {
   List<CodeSystemConcept> concept;
 
   CodeSystem({
+    this.resourceType = 'CodeSystem',
     this.id,
     this.meta,
     this.implicitRules,
@@ -130,7 +134,7 @@ class CodeSystemProperty {
   Code code;
   FhirUri uri;
   String description;
-  String type;
+  CodeSystemPropertyType type;
 
   CodeSystemProperty({
     this.id,
@@ -230,4 +234,99 @@ class CodeSystemProperty1 {
   factory CodeSystemProperty1.fromJson(Map<String, dynamic> json) =>
       _$CodeSystemProperty1FromJson(json);
   Map<String, dynamic> toJson() => _$CodeSystemProperty1ToJson(this);
+}
+
+class CodeSystemStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CodeSystemStatus(String value) {
+    assert(value != null);
+    return CodeSystemStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const CodeSystemStatus._(this.value);
+  factory CodeSystemStatus.fromJson(String json) => CodeSystemStatus(json);
+  String toJson() => result();
+}
+
+class CodeSystemHierarchyMeaning extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+
+  factory CodeSystemHierarchyMeaning(String value) {
+    assert(value != null);
+    return CodeSystemHierarchyMeaning._(
+      validateEnum(
+        value,
+        [
+          'grouped-by',
+          'is-a',
+          'part-of',
+          'classified-with',
+        ],
+      ),
+    );
+  }
+  const CodeSystemHierarchyMeaning._(this.value);
+  factory CodeSystemHierarchyMeaning.fromJson(String json) =>
+      CodeSystemHierarchyMeaning(json);
+  String toJson() => result();
+}
+
+class CodeSystemContent extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CodeSystemContent(String value) {
+    assert(value != null);
+    return CodeSystemContent._(
+      validateEnum(
+        value,
+        [
+          'not-present',
+          'example',
+          'fragment',
+          'complete',
+          'supplement',
+        ],
+      ),
+    );
+  }
+  const CodeSystemContent._(this.value);
+  factory CodeSystemContent.fromJson(String json) => CodeSystemContent(json);
+  String toJson() => result();
+}
+
+class CodeSystemPropertyType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CodeSystemPropertyType(String value) {
+    assert(value != null);
+    return CodeSystemPropertyType._(
+      validateEnum(
+        value,
+        [
+          'code',
+          'Coding',
+          'string',
+          'integer',
+          'boolean',
+          'dateTime',
+          'decimal',
+        ],
+      ),
+    );
+  }
+  const CodeSystemPropertyType._(this.value);
+  factory CodeSystemPropertyType.fromJson(String json) =>
+      CodeSystemPropertyType(json);
+  String toJson() => result();
 }

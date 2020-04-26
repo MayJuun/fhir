@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
 import '../primitiveTypes/uri.dart';
@@ -16,7 +19,7 @@ part 'episodeOfCare.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class EpisodeOfCare {
-  static const String resourceType = 'EpisodeOfCare';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -26,7 +29,7 @@ class EpisodeOfCare {
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<Identifier> identifier;
-  String status;
+  EpisodeOfCareStatus status;
   List<EpisodeOfCareStatusHistory> statusHistory;
   List<CodeableConcept> type;
   List<EpisodeOfCareDiagnosis> diagnosis;
@@ -39,6 +42,7 @@ class EpisodeOfCare {
   List<Reference> account;
 
   EpisodeOfCare({
+    this.resourceType = 'EpisodeOfCare',
     this.id,
     this.meta,
     this.implicitRules,
@@ -71,7 +75,7 @@ class EpisodeOfCareStatusHistory {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String status;
+  EpisodeOfCareStatusHistoryStatus status;
   Period period;
 
   EpisodeOfCareStatusHistory({
@@ -108,4 +112,56 @@ class EpisodeOfCareDiagnosis {
   factory EpisodeOfCareDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$EpisodeOfCareDiagnosisFromJson(json);
   Map<String, dynamic> toJson() => _$EpisodeOfCareDiagnosisToJson(this);
+}
+
+class EpisodeOfCareStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory EpisodeOfCareStatus(String value) {
+    assert(value != null);
+    return EpisodeOfCareStatus._(
+      validateEnum(
+        value,
+        [
+          'planned',
+          'waitlist',
+          'active',
+          'onhold',
+          'finished',
+          'cancelled',
+          'entered-in-error',
+        ],
+      ),
+    );
+  }
+  const EpisodeOfCareStatus._(this.value);
+  factory EpisodeOfCareStatus.fromJson(String json) =>
+      EpisodeOfCareStatus(json);
+  String toJson() => result();
+}
+
+class EpisodeOfCareStatusHistoryStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory EpisodeOfCareStatusHistoryStatus(String value) {
+    assert(value != null);
+    return EpisodeOfCareStatusHistoryStatus._(
+      validateEnum(
+        value,
+        [
+          'planned',
+          'waitlist',
+          'active',
+          'onhold',
+          'finished',
+          'cancelled',
+          'entered-in-error',
+        ],
+      ),
+    );
+  }
+  const EpisodeOfCareStatusHistoryStatus._(this.value);
+  factory EpisodeOfCareStatusHistoryStatus.fromJson(String json) =>
+      EpisodeOfCareStatusHistoryStatus(json);
+  String toJson() => result();
 }

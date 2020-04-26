@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/fhirDateTime.dart';
@@ -22,7 +25,7 @@ part 'claim.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Claim {
-  static const String resourceType = 'Claim';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -35,7 +38,7 @@ class Claim {
   Code status;
   CodeableConcept type;
   CodeableConcept subType;
-  String use;
+  ClaimUse use;
   Reference patient;
   Period billablePeriod;
   FhirDateTime created;
@@ -60,6 +63,7 @@ class Claim {
   Money total;
 
   Claim({
+    this.resourceType = 'Claim',
     this.id,
     this.meta,
     this.implicitRules,
@@ -468,4 +472,25 @@ class ClaimSubDetail {
   factory ClaimSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimSubDetailFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimSubDetailToJson(this);
+}
+
+class ClaimUse extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ClaimUse(String value) {
+    assert(value != null);
+    return ClaimUse._(
+      validateEnum(
+        value,
+        [
+          'claim',
+          'preauthorization',
+          'predetermination',
+        ],
+      ),
+    );
+  }
+  const ClaimUse._(this.value);
+  factory ClaimUse.fromJson(String json) => ClaimUse(json);
+  String toJson() => result();
 }

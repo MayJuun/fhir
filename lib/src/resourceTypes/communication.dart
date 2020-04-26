@@ -18,7 +18,7 @@ part 'communication.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Communication {
-  static const String resourceType = 'Communication';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -52,6 +52,7 @@ class Communication {
   List<Annotation> note;
 
   Communication({
+    this.resourceType = 'Communication',
     this.id,
     this.meta,
     this.implicitRules,

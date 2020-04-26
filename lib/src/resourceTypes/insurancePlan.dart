@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
 import '../primitiveTypes/uri.dart';
@@ -21,7 +24,7 @@ part 'insurancePlan.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class InsurancePlan {
-  static const String resourceType = 'InsurancePlan';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -31,7 +34,7 @@ class InsurancePlan {
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<Identifier> identifier;
-  String status;
+  InsurancePlanStatus status;
   List<CodeableConcept> type;
   String name;
   List<String> alias;
@@ -46,6 +49,7 @@ class InsurancePlan {
   List<InsurancePlanPlan> plan;
 
   InsurancePlan({
+    this.resourceType = 'InsurancePlan',
     this.id,
     this.meta,
     this.implicitRules,
@@ -286,4 +290,27 @@ class InsurancePlanCost {
   factory InsurancePlanCost.fromJson(Map<String, dynamic> json) =>
       _$InsurancePlanCostFromJson(json);
   Map<String, dynamic> toJson() => _$InsurancePlanCostToJson(this);
+}
+
+class InsurancePlanStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory InsurancePlanStatus(String value) {
+    assert(value != null);
+    return InsurancePlanStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const InsurancePlanStatus._(this.value);
+  factory InsurancePlanStatus.fromJson(String json) =>
+      InsurancePlanStatus(json);
+  String toJson() => result();
 }

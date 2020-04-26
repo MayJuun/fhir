@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
@@ -19,7 +22,7 @@ part 'coverageEligibilityResponse.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class CoverageEligibilityResponse {
-  static const String resourceType = 'CoverageEligibilityResponse';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -37,7 +40,7 @@ class CoverageEligibilityResponse {
   FhirDateTime created;
   Reference requestor;
   Reference request;
-  String outcome;
+  CoverageEligibilityResponseOutcome outcome;
   String disposition;
   Reference insurer;
   List<CoverageEligibilityResponseInsurance> insurance;
@@ -46,6 +49,7 @@ class CoverageEligibilityResponse {
   List<CoverageEligibilityResponseError> error;
 
   CoverageEligibilityResponse({
+    this.resourceType = 'CoverageEligibilityResponse',
     this.id,
     this.meta,
     this.implicitRules,
@@ -202,4 +206,27 @@ class CoverageEligibilityResponseError {
       _$CoverageEligibilityResponseErrorFromJson(json);
   Map<String, dynamic> toJson() =>
       _$CoverageEligibilityResponseErrorToJson(this);
+}
+
+class CoverageEligibilityResponseOutcome extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CoverageEligibilityResponseOutcome(String value) {
+    assert(value != null);
+    return CoverageEligibilityResponseOutcome._(
+      validateEnum(
+        value,
+        [
+          'queued',
+          'complete',
+          'error',
+          'partial',
+        ],
+      ),
+    );
+  }
+  const CoverageEligibilityResponseOutcome._(this.value);
+  factory CoverageEligibilityResponseOutcome.fromJson(String json) =>
+      CoverageEligibilityResponseOutcome(json);
+  String toJson() => result();
 }

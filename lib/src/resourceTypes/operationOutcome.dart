@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
 import '../primitiveTypes/uri.dart';
@@ -13,7 +16,7 @@ part 'operationOutcome.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class OperationOutcome {
-  static const String resourceType = 'OperationOutcome';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -25,6 +28,7 @@ class OperationOutcome {
   List<OperationOutcomeIssue> issue;
 
   OperationOutcome({
+    this.resourceType = 'OperationOutcome',
     this.id,
     this.meta,
     this.implicitRules,
@@ -46,8 +50,8 @@ class OperationOutcomeIssue {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String severity;
-  String code;
+  OperationOutcomeIssueSeverity severity;
+  OperationOutcomeIssueCode code;
   CodeableConcept details;
   String diagnostics;
   List<String> location;
@@ -68,4 +72,77 @@ class OperationOutcomeIssue {
   factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeIssueFromJson(json);
   Map<String, dynamic> toJson() => _$OperationOutcomeIssueToJson(this);
+}
+
+class OperationOutcomeIssueSeverity extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory OperationOutcomeIssueSeverity(String value) {
+    assert(value != null);
+    return OperationOutcomeIssueSeverity._(
+      validateEnum(
+        value,
+        [
+          'fatal',
+          'error',
+          'warning',
+          'information',
+        ],
+      ),
+    );
+  }
+  const OperationOutcomeIssueSeverity._(this.value);
+  factory OperationOutcomeIssueSeverity.fromJson(String json) =>
+      OperationOutcomeIssueSeverity(json);
+  String toJson() => result();
+}
+
+class OperationOutcomeIssueCode extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory OperationOutcomeIssueCode(String value) {
+    assert(value != null);
+    return OperationOutcomeIssueCode._(
+      validateEnum(
+        value,
+        [
+          'invalid',
+          'structure',
+          'required',
+          'value',
+          'invariant',
+          'security',
+          'login',
+          'unknown',
+          'expired',
+          'forbidden',
+          'suppressed',
+          'processing',
+          'not-supported',
+          'duplicate',
+          'multiple-matches',
+          'not-found',
+          'deleted',
+          'too-long',
+          'code-invalid',
+          'extension',
+          'too-costly',
+          'business-rule',
+          'conflict',
+          'transient',
+          'lock-error',
+          'no-store',
+          'exception',
+          'timeout',
+          'incomplete',
+          'throttled',
+          'informational',
+        ],
+      ),
+    );
+  }
+  const OperationOutcomeIssueCode._(this.value);
+  factory OperationOutcomeIssueCode.fromJson(String json) =>
+      OperationOutcomeIssueCode(json);
+  String toJson() => result();
 }

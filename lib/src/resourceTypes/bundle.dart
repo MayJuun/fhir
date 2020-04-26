@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../resourceList.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
@@ -20,7 +23,7 @@ class Bundle {
   FhirUri implicitRules;
   Code language;
   Identifier identifier;
-  String type;
+  BundleType type;
   Instant timestamp;
   int total;
   List<BundleLink> link;
@@ -101,7 +104,7 @@ class BundleSearch {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String mode;
+  BundleSearchMode mode;
   double score;
 
   BundleSearch({
@@ -122,7 +125,7 @@ class BundleRequest {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String method;
+  BundleRequestMethod method;
   FhirUri url;
   String ifNoneMatch;
   Instant ifModifiedSince;
@@ -171,4 +174,77 @@ class BundleResponse {
   factory BundleResponse.fromJson(Map<String, dynamic> json) =>
       _$BundleResponseFromJson(json);
   Map<String, dynamic> toJson() => _$BundleResponseToJson(this);
+}
+
+class BundleType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory BundleType(String value) {
+    assert(value != null);
+    return BundleType._(
+      validateEnum(
+        value,
+        [
+          'document',
+          'message',
+          'transaction',
+          'transaction-response',
+          'batch',
+          'batch-response',
+          'history',
+          'searchset',
+          'collection',
+        ],
+      ),
+    );
+  }
+  const BundleType._(this.value);
+  factory BundleType.fromJson(String json) => BundleType(json);
+  String toJson() => result();
+}
+
+class BundleSearchMode extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory BundleSearchMode(String value) {
+    assert(value != null);
+    return BundleSearchMode._(
+      validateEnum(
+        value,
+        [
+          'match',
+          'include',
+          'outcome',
+        ],
+      ),
+    );
+  }
+  const BundleSearchMode._(this.value);
+  factory BundleSearchMode.fromJson(String json) => BundleSearchMode(json);
+  String toJson() => result();
+}
+
+class BundleRequestMethod extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory BundleRequestMethod(String value) {
+    assert(value != null);
+    return BundleRequestMethod._(
+      validateEnum(
+        value,
+        [
+          'GET',
+          'HEAD',
+          'POST',
+          'PUT',
+          'DELETE',
+          'PATCH',
+        ],
+      ),
+    );
+  }
+  const BundleRequestMethod._(this.value);
+  factory BundleRequestMethod.fromJson(String json) =>
+      BundleRequestMethod(json);
+  String toJson() => result();
 }

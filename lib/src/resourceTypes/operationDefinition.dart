@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/code.dart';
@@ -18,7 +21,7 @@ part 'operationDefinition.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class OperationDefinition {
-  static const String resourceType = 'OperationDefinition';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -31,8 +34,8 @@ class OperationDefinition {
   String version;
   String name;
   String title;
-  String status;
-  String kind;
+  OperationDefinitionStatus status;
+  OperationDefinitionKind kind;
   bool experimental;
   FhirDateTime date;
   String publisher;
@@ -55,6 +58,7 @@ class OperationDefinition {
   List<OperationDefinitionOverload> overload;
 
   OperationDefinition({
+    this.resourceType = 'OperationDefinition',
     this.id,
     this.meta,
     this.implicitRules,
@@ -102,13 +106,13 @@ class OperationDefinitionParameter {
   List<Extension> extension;
   List<Extension> modifierExtension;
   Code name;
-  String use;
+  OperationDefinitionParameterUse use;
   int min;
   String max;
   String documentation;
   Code type;
   List<Canonical> targetProfile;
-  String searchType;
+  OperationDefinitionParameterSearchType searchType;
   OperationDefinitionBinding binding;
   List<OperationDefinitionReferencedFrom> referencedFrom;
   List<OperationDefinitionParameter> part;
@@ -140,7 +144,7 @@ class OperationDefinitionBinding {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String strength;
+  OperationDefinitionBindingStrength strength;
   Canonical valueSet;
 
   OperationDefinitionBinding({
@@ -198,4 +202,120 @@ class OperationDefinitionOverload {
   factory OperationDefinitionOverload.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionOverloadFromJson(json);
   Map<String, dynamic> toJson() => _$OperationDefinitionOverloadToJson(this);
+}
+
+class OperationDefinitionStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory OperationDefinitionStatus(String value) {
+    assert(value != null);
+    return OperationDefinitionStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const OperationDefinitionStatus._(this.value);
+  factory OperationDefinitionStatus.fromJson(String json) =>
+      OperationDefinitionStatus(json);
+  String toJson() => result();
+}
+
+class OperationDefinitionKind extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory OperationDefinitionKind(String value) {
+    assert(value != null);
+    return OperationDefinitionKind._(
+      validateEnum(
+        value,
+        [
+          'operation',
+          'query',
+        ],
+      ),
+    );
+  }
+  const OperationDefinitionKind._(this.value);
+  factory OperationDefinitionKind.fromJson(String json) =>
+      OperationDefinitionKind(json);
+  String toJson() => result();
+}
+
+class OperationDefinitionParameterUse extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory OperationDefinitionParameterUse(String value) {
+    assert(value != null);
+    return OperationDefinitionParameterUse._(
+      validateEnum(
+        value,
+        [
+          'in',
+          'out',
+        ],
+      ),
+    );
+  }
+  const OperationDefinitionParameterUse._(this.value);
+  factory OperationDefinitionParameterUse.fromJson(String json) =>
+      OperationDefinitionParameterUse(json);
+  String toJson() => result();
+}
+
+class OperationDefinitionParameterSearchType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory OperationDefinitionParameterSearchType(String value) {
+    assert(value != null);
+    return OperationDefinitionParameterSearchType._(
+      validateEnum(
+        value,
+        [
+          'number',
+          'date',
+          'string',
+          'token',
+          'reference',
+          'composite',
+          'quantity',
+          'uri',
+          'special',
+        ],
+      ),
+    );
+  }
+  const OperationDefinitionParameterSearchType._(this.value);
+  factory OperationDefinitionParameterSearchType.fromJson(String json) =>
+      OperationDefinitionParameterSearchType(json);
+  String toJson() => result();
+}
+
+class OperationDefinitionBindingStrength extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory OperationDefinitionBindingStrength(String value) {
+    assert(value != null);
+    return OperationDefinitionBindingStrength._(
+      validateEnum(
+        value,
+        [
+          'required',
+          'extensible',
+          'preferred',
+          'example',
+        ],
+      ),
+    );
+  }
+  const OperationDefinitionBindingStrength._(this.value);
+  factory OperationDefinitionBindingStrength.fromJson(String json) =>
+      OperationDefinitionBindingStrength(json);
+  String toJson() => result();
 }

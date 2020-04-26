@@ -21,7 +21,7 @@ part 'nutritionOrder.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class NutritionOrder {
-  static const String resourceType = 'NutritionOrder';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -49,6 +49,7 @@ class NutritionOrder {
   List<Annotation> note;
 
   NutritionOrder({
+    this.resourceType = 'NutritionOrder',
     this.id,
     this.meta,
     this.implicitRules,

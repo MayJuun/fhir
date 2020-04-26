@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
@@ -21,7 +24,7 @@ part 'goal.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Goal {
-  static const String resourceType = 'Goal';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -31,7 +34,7 @@ class Goal {
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<Identifier> identifier;
-  String lifecycleStatus;
+  GoalLifecycleStatus lifecycleStatus;
   CodeableConcept achievementStatus;
   List<CodeableConcept> category;
   CodeableConcept priority;
@@ -49,6 +52,7 @@ class Goal {
   List<Reference> outcomeReference;
 
   Goal({
+    this.resourceType = 'Goal',
     this.id,
     this.meta,
     this.implicitRules,
@@ -115,4 +119,32 @@ class GoalTarget {
   factory GoalTarget.fromJson(Map<String, dynamic> json) =>
       _$GoalTargetFromJson(json);
   Map<String, dynamic> toJson() => _$GoalTargetToJson(this);
+}
+
+class GoalLifecycleStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory GoalLifecycleStatus(String value) {
+    assert(value != null);
+    return GoalLifecycleStatus._(
+      validateEnum(
+        value,
+        [
+          'proposed',
+          'planned',
+          'accepted',
+          'active',
+          'on-hold',
+          'completed',
+          'cancelled',
+          'entered-in-error',
+          'rejected',
+        ],
+      ),
+    );
+  }
+  const GoalLifecycleStatus._(this.value);
+  factory GoalLifecycleStatus.fromJson(String json) =>
+      GoalLifecycleStatus(json);
+  String toJson() => result();
 }

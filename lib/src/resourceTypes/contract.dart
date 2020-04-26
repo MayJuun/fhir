@@ -27,7 +27,7 @@ part 'contract.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Contract {
-  static const String resourceType = 'Contract';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -73,6 +73,7 @@ class Contract {
   Reference legallyBindingReference;
 
   Contract({
+    this.resourceType = 'Contract',
     this.id,
     this.meta,
     this.implicitRules,

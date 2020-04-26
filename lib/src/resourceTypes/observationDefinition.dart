@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
 import '../primitiveTypes/uri.dart';
@@ -16,7 +19,7 @@ part 'observationDefinition.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ObservationDefinition {
-  static const String resourceType = 'ObservationDefinition';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -40,6 +43,7 @@ class ObservationDefinition {
   Reference criticalCodedValueSet;
 
   ObservationDefinition({
+    this.resourceType = 'ObservationDefinition',
     this.id,
     this.meta,
     this.implicitRules,
@@ -100,11 +104,11 @@ class ObservationDefinitionQualifiedInterval {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String category;
+  ObservationDefinitionQualifiedIntervalCategory category;
   Range range;
   CodeableConcept context;
   List<CodeableConcept> appliesTo;
-  String gender;
+  ObservationDefinitionQualifiedIntervalGender gender;
   Range age;
   Range gestationalAge;
   String condition;
@@ -128,4 +132,52 @@ class ObservationDefinitionQualifiedInterval {
       _$ObservationDefinitionQualifiedIntervalFromJson(json);
   Map<String, dynamic> toJson() =>
       _$ObservationDefinitionQualifiedIntervalToJson(this);
+}
+
+class ObservationDefinitionQualifiedIntervalCategory
+    extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ObservationDefinitionQualifiedIntervalCategory(String value) {
+    assert(value != null);
+    return ObservationDefinitionQualifiedIntervalCategory._(
+      validateEnum(
+        value,
+        [
+          'reference',
+          'critical',
+          'absolute',
+        ],
+      ),
+    );
+  }
+  const ObservationDefinitionQualifiedIntervalCategory._(this.value);
+  factory ObservationDefinitionQualifiedIntervalCategory.fromJson(
+          String json) =>
+      ObservationDefinitionQualifiedIntervalCategory(json);
+  String toJson() => result();
+}
+
+class ObservationDefinitionQualifiedIntervalGender
+    extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ObservationDefinitionQualifiedIntervalGender(String value) {
+    assert(value != null);
+    return ObservationDefinitionQualifiedIntervalGender._(
+      validateEnum(
+        value,
+        [
+          'male',
+          'female',
+          'other',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const ObservationDefinitionQualifiedIntervalGender._(this.value);
+  factory ObservationDefinitionQualifiedIntervalGender.fromJson(String json) =>
+      ObservationDefinitionQualifiedIntervalGender(json);
+  String toJson() => result();
 }

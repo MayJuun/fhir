@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/code.dart';
@@ -39,7 +42,7 @@ class Evidence {
   String title;
   String shortTitle;
   String subtitle;
-  String status;
+  EvidenceStatus status;
   FhirDateTime date;
   String publisher;
   List<ContactDetail> contact;
@@ -103,4 +106,26 @@ class Evidence {
   factory Evidence.fromJson(Map<String, dynamic> json) =>
       _$EvidenceFromJson(json);
   Map<String, dynamic> toJson() => _$EvidenceToJson(this);
+}
+
+class EvidenceStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory EvidenceStatus(String value) {
+    assert(value != null);
+    return EvidenceStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const EvidenceStatus._(this.value);
+  factory EvidenceStatus.fromJson(String json) => EvidenceStatus(json);
+  String toJson() => result();
 }

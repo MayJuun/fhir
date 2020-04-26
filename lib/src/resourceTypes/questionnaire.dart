@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/time.dart';
@@ -25,7 +28,7 @@ part 'questionnaire.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Questionnaire {
-  static const String resourceType = 'Questionnaire';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -40,7 +43,7 @@ class Questionnaire {
   String name;
   String title;
   List<Canonical> derivedFrom;
-  String status;
+  QuestionnaireStatus status;
   bool experimental;
   List<Code> subjectType;
   FhirDateTime date;
@@ -58,6 +61,7 @@ class Questionnaire {
   List<QuestionnaireItem> item;
 
   Questionnaire({
+    this.resourceType = 'Questionnaire',
     this.id,
     this.meta,
     this.implicitRules,
@@ -105,9 +109,9 @@ class QuestionnaireItem {
   List<Coding> code;
   String prefix;
   String text;
-  String type;
+  QuestionnaireItemType type;
   List<QuestionnaireEnableWhen> enableWhen;
-  String enableBehavior;
+  QuestionnaireItemEnableBehavior enableBehavior;
   bool required;
   bool repeats;
   bool readOnly;
@@ -150,7 +154,7 @@ class QuestionnaireEnableWhen {
   List<Extension> extension;
   List<Extension> modifierExtension;
   String question;
-  String operator;
+  QuestionnaireEnableWhenOperator operator;
   bool answerBoolean;
   double answerDecimal;
   int answerInteger;
@@ -255,4 +259,109 @@ class QuestionnaireInitial {
   factory QuestionnaireInitial.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireInitialFromJson(json);
   Map<String, dynamic> toJson() => _$QuestionnaireInitialToJson(this);
+}
+
+class QuestionnaireStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory QuestionnaireStatus(String value) {
+    assert(value != null);
+    return QuestionnaireStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const QuestionnaireStatus._(this.value);
+  factory QuestionnaireStatus.fromJson(String json) =>
+      QuestionnaireStatus(json);
+  String toJson() => result();
+}
+
+class QuestionnaireItemType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory QuestionnaireItemType(String value) {
+    assert(value != null);
+    return QuestionnaireItemType._(
+      validateEnum(
+        value,
+        [
+          'group',
+          'display',
+          'boolean',
+          'decimal',
+          'integer',
+          'date',
+          'dateTime',
+          'time',
+          'string',
+          'text',
+          'url',
+          'choice',
+          'open-choice',
+          'attachment',
+          'reference',
+          'quantity',
+        ],
+      ),
+    );
+  }
+  const QuestionnaireItemType._(this.value);
+  factory QuestionnaireItemType.fromJson(String json) =>
+      QuestionnaireItemType(json);
+  String toJson() => result();
+}
+
+class QuestionnaireItemEnableBehavior extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory QuestionnaireItemEnableBehavior(String value) {
+    assert(value != null);
+    return QuestionnaireItemEnableBehavior._(
+      validateEnum(
+        value,
+        [
+          'all',
+          'any',
+        ],
+      ),
+    );
+  }
+  const QuestionnaireItemEnableBehavior._(this.value);
+  factory QuestionnaireItemEnableBehavior.fromJson(String json) =>
+      QuestionnaireItemEnableBehavior(json);
+  String toJson() => result();
+}
+
+class QuestionnaireEnableWhenOperator extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory QuestionnaireEnableWhenOperator(String value) {
+    assert(value != null);
+    return QuestionnaireEnableWhenOperator._(
+      validateEnum(
+        value,
+        [
+          'exists',
+          '=',
+          '!=',
+          '>',
+          '<',
+          '>=',
+          '<=',
+        ],
+      ),
+    );
+  }
+  const QuestionnaireEnableWhenOperator._(this.value);
+  factory QuestionnaireEnableWhenOperator.fromJson(String json) =>
+      QuestionnaireEnableWhenOperator(json);
+  String toJson() => result();
 }

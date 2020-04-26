@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
@@ -35,7 +38,7 @@ class Patient {
   bool active;
   List<HumanName> name;
   List<ContactPoint> telecom;
-  String gender;
+  PatientGender gender;
   Date birthDate;
   bool deceasedBoolean;
   FhirDateTime deceasedDateTime;
@@ -94,7 +97,7 @@ class PatientContact {
   HumanName name;
   List<ContactPoint> telecom;
   Address address;
-  String gender;
+  PatientContactGender gender;
   Reference organization;
   Period period;
 
@@ -143,7 +146,7 @@ class PatientLink {
   List<Extension> extension;
   List<Extension> modifierExtension;
   Reference other;
-  String type;
+  PatientLinkType type;
 
   PatientLink({
     this.id,
@@ -156,4 +159,71 @@ class PatientLink {
   factory PatientLink.fromJson(Map<String, dynamic> json) =>
       _$PatientLinkFromJson(json);
   Map<String, dynamic> toJson() => _$PatientLinkToJson(this);
+}
+
+class PatientGender extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory PatientGender(String value) {
+    assert(value != null);
+    return PatientGender._(
+      validateEnum(
+        value,
+        [
+          'male',
+          'female',
+          'other',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const PatientGender._(this.value);
+  factory PatientGender.fromJson(String json) => PatientGender(json);
+  String toJson() => result();
+}
+
+class PatientContactGender extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory PatientContactGender(String value) {
+    assert(value != null);
+    return PatientContactGender._(
+      validateEnum(
+        value,
+        [
+          'male',
+          'female',
+          'other',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const PatientContactGender._(this.value);
+  factory PatientContactGender.fromJson(String json) =>
+      PatientContactGender(json);
+  String toJson() => result();
+}
+
+class PatientLinkType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory PatientLinkType(String value) {
+    assert(value != null);
+    return PatientLinkType._(
+      validateEnum(
+        value,
+        [
+          'replaced-by',
+          'replaces',
+          'refer',
+          'seealso',
+        ],
+      ),
+    );
+  }
+  const PatientLinkType._(this.value);
+  factory PatientLinkType.fromJson(String json) => PatientLinkType(json);
+  String toJson() => result();
 }

@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/url.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
@@ -19,7 +22,7 @@ part 'endpoint.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Endpoint {
-  static const String resourceType = 'Endpoint';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -29,7 +32,7 @@ class Endpoint {
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<Identifier> identifier;
-  String status;
+  EndpointStatus status;
   Coding connectionType;
   String name;
   Reference managingOrganization;
@@ -41,6 +44,7 @@ class Endpoint {
   List<String> header;
 
   Endpoint({
+    this.resourceType = 'Endpoint',
     this.id,
     this.meta,
     this.implicitRules,
@@ -65,4 +69,28 @@ class Endpoint {
   factory Endpoint.fromJson(Map<String, dynamic> json) =>
       _$EndpointFromJson(json);
   Map<String, dynamic> toJson() => _$EndpointToJson(this);
+}
+
+class EndpointStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory EndpointStatus(String value) {
+    assert(value != null);
+    return EndpointStatus._(
+      validateEnum(
+        value,
+        [
+          'active',
+          'suspended',
+          'error',
+          'off',
+          'entered-in-error',
+          'test',
+        ],
+      ),
+    );
+  }
+  const EndpointStatus._(this.value);
+  factory EndpointStatus.fromJson(String json) => EndpointStatus(json);
+  String toJson() => result();
 }

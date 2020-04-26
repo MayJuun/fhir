@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/id.dart';
@@ -18,7 +21,7 @@ part 'imagingStudy.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ImagingStudy {
-  static const String resourceType = 'ImagingStudy';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -28,7 +31,7 @@ class ImagingStudy {
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<Identifier> identifier;
-  String status;
+  ImagingStudyStatus status;
   List<Coding> modality;
   Reference subject;
   Reference encounter;
@@ -49,6 +52,7 @@ class ImagingStudy {
   List<ImagingStudySeries> series;
 
   ImagingStudy({
+    this.resourceType = 'ImagingStudy',
     this.id,
     this.meta,
     this.implicitRules,
@@ -169,4 +173,27 @@ class ImagingStudyInstance {
   factory ImagingStudyInstance.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudyInstanceFromJson(json);
   Map<String, dynamic> toJson() => _$ImagingStudyInstanceToJson(this);
+}
+
+class ImagingStudyStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ImagingStudyStatus(String value) {
+    assert(value != null);
+    return ImagingStudyStatus._(
+      validateEnum(
+        value,
+        [
+          'registered',
+          'available',
+          'cancelled',
+          'entered-in-error',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const ImagingStudyStatus._(this.value);
+  factory ImagingStudyStatus.fromJson(String json) => ImagingStudyStatus(json);
+  String toJson() => result();
 }

@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/code.dart';
@@ -17,7 +20,7 @@ part 'graphDefinition.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class GraphDefinition {
-  static const String resourceType = 'GraphDefinition';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -29,7 +32,7 @@ class GraphDefinition {
   FhirUri url;
   String version;
   String name;
-  String status;
+  GraphDefinitionStatus status;
   bool experimental;
   FhirDateTime date;
   String publisher;
@@ -43,6 +46,7 @@ class GraphDefinition {
   List<GraphDefinitionLink> link;
 
   GraphDefinition({
+    this.resourceType = 'GraphDefinition',
     this.id,
     this.meta,
     this.implicitRules,
@@ -134,9 +138,9 @@ class GraphDefinitionCompartment {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String use;
+  GraphDefinitionCompartmentUse use;
   Code code;
-  String rule;
+  GraphDefinitionCompartmentRule rule;
   String expression;
   String description;
 
@@ -154,4 +158,71 @@ class GraphDefinitionCompartment {
   factory GraphDefinitionCompartment.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionCompartmentFromJson(json);
   Map<String, dynamic> toJson() => _$GraphDefinitionCompartmentToJson(this);
+}
+
+class GraphDefinitionStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory GraphDefinitionStatus(String value) {
+    assert(value != null);
+    return GraphDefinitionStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const GraphDefinitionStatus._(this.value);
+  factory GraphDefinitionStatus.fromJson(String json) =>
+      GraphDefinitionStatus(json);
+  String toJson() => result();
+}
+
+class GraphDefinitionCompartmentUse extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory GraphDefinitionCompartmentUse(String value) {
+    assert(value != null);
+    return GraphDefinitionCompartmentUse._(
+      validateEnum(
+        value,
+        [
+          'condition',
+          'requirement',
+        ],
+      ),
+    );
+  }
+  const GraphDefinitionCompartmentUse._(this.value);
+  factory GraphDefinitionCompartmentUse.fromJson(String json) =>
+      GraphDefinitionCompartmentUse(json);
+  String toJson() => result();
+}
+
+class GraphDefinitionCompartmentRule extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory GraphDefinitionCompartmentRule(String value) {
+    assert(value != null);
+    return GraphDefinitionCompartmentRule._(
+      validateEnum(
+        value,
+        [
+          'identical',
+          'matching',
+          'different',
+          'custom',
+        ],
+      ),
+    );
+  }
+  const GraphDefinitionCompartmentRule._(this.value);
+  factory GraphDefinitionCompartmentRule.fromJson(String json) =>
+      GraphDefinitionCompartmentRule(json);
+  String toJson() => result();
 }

@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/time.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
@@ -18,7 +21,7 @@ part 'location.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Location {
-  static const String resourceType = 'Location';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -28,12 +31,12 @@ class Location {
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<Identifier> identifier;
-  String status;
+  LocationStatus status;
   Coding operationalStatus;
   String name;
   List<String> alias;
   String description;
-  String mode;
+  LocationMode mode;
   List<CodeableConcept> type;
   List<ContactPoint> telecom;
   Address address;
@@ -46,6 +49,7 @@ class Location {
   List<Reference> endpoint;
 
   Location({
+    this.resourceType = 'Location',
     this.id,
     this.meta,
     this.implicitRules,
@@ -124,4 +128,45 @@ class LocationHoursOfOperation {
   factory LocationHoursOfOperation.fromJson(Map<String, dynamic> json) =>
       _$LocationHoursOfOperationFromJson(json);
   Map<String, dynamic> toJson() => _$LocationHoursOfOperationToJson(this);
+}
+
+class LocationStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory LocationStatus(String value) {
+    assert(value != null);
+    return LocationStatus._(
+      validateEnum(
+        value,
+        [
+          'active',
+          'suspended',
+          'inactive',
+        ],
+      ),
+    );
+  }
+  const LocationStatus._(this.value);
+  factory LocationStatus.fromJson(String json) => LocationStatus(json);
+  String toJson() => result();
+}
+
+class LocationMode extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory LocationMode(String value) {
+    assert(value != null);
+    return LocationMode._(
+      validateEnum(
+        value,
+        [
+          'instance',
+          'kind',
+        ],
+      ),
+    );
+  }
+  const LocationMode._(this.value);
+  factory LocationMode.fromJson(String json) => LocationMode(json);
+  String toJson() => result();
 }

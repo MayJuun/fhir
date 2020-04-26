@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/code.dart';
@@ -22,7 +25,7 @@ part 'familyMemberHistory.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class FamilyMemberHistory {
-  static const String resourceType = 'FamilyMemberHistory';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -34,7 +37,7 @@ class FamilyMemberHistory {
   List<Identifier> identifier;
   List<Canonical> instantiatesCanonical;
   List<FhirUri> instantiatesUri;
-  String status;
+  FamilyMemberHistoryStatus status;
   CodeableConcept dataAbsentReason;
   Reference patient;
   FhirDateTime date;
@@ -59,6 +62,7 @@ class FamilyMemberHistory {
   List<FamilyMemberHistoryCondition> condition;
 
   FamilyMemberHistory({
+    this.resourceType = 'FamilyMemberHistory',
     this.id,
     this.meta,
     this.implicitRules,
@@ -131,4 +135,27 @@ class FamilyMemberHistoryCondition {
   factory FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
       _$FamilyMemberHistoryConditionFromJson(json);
   Map<String, dynamic> toJson() => _$FamilyMemberHistoryConditionToJson(this);
+}
+
+class FamilyMemberHistoryStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory FamilyMemberHistoryStatus(String value) {
+    assert(value != null);
+    return FamilyMemberHistoryStatus._(
+      validateEnum(
+        value,
+        [
+          'partial',
+          'completed',
+          'entered-in-error',
+          'health-unknown',
+        ],
+      ),
+    );
+  }
+  const FamilyMemberHistoryStatus._(this.value);
+  factory FamilyMemberHistoryStatus.fromJson(String json) =>
+      FamilyMemberHistoryStatus(json);
+  String toJson() => result();
 }

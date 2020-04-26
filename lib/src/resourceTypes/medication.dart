@@ -16,7 +16,7 @@ part 'medication.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Medication {
-  static const String resourceType = 'Medication';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -35,6 +35,7 @@ class Medication {
   MedicationBatch batch;
 
   Medication({
+    this.resourceType = 'Medication',
     this.id,
     this.meta,
     this.implicitRules,

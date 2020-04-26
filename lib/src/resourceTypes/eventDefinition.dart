@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/code.dart';
@@ -23,7 +26,7 @@ part 'eventDefinition.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class EventDefinition {
-  static const String resourceType = 'EventDefinition';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -38,7 +41,7 @@ class EventDefinition {
   String name;
   String title;
   String subtitle;
-  String status;
+  EventDefinitionStatus status;
   bool experimental;
   CodeableConcept subjectCodeableConcept;
   Reference subjectReference;
@@ -63,6 +66,7 @@ class EventDefinition {
   List<TriggerDefinition> trigger;
 
   EventDefinition({
+    this.resourceType = 'EventDefinition',
     this.id,
     this.meta,
     this.implicitRules,
@@ -105,4 +109,27 @@ class EventDefinition {
   factory EventDefinition.fromJson(Map<String, dynamic> json) =>
       _$EventDefinitionFromJson(json);
   Map<String, dynamic> toJson() => _$EventDefinitionToJson(this);
+}
+
+class EventDefinitionStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory EventDefinitionStatus(String value) {
+    assert(value != null);
+    return EventDefinitionStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const EventDefinitionStatus._(this.value);
+  factory EventDefinitionStatus.fromJson(String json) =>
+      EventDefinitionStatus(json);
+  String toJson() => result();
 }

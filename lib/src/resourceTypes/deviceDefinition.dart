@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
 import '../primitiveTypes/uri.dart';
@@ -20,7 +23,7 @@ part 'deviceDefinition.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class DeviceDefinition {
-  static const String resourceType = 'DeviceDefinition';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -54,6 +57,7 @@ class DeviceDefinition {
   List<DeviceDefinitionMaterial> material;
 
   DeviceDefinition({
+    this.resourceType = 'DeviceDefinition',
     this.id,
     this.meta,
     this.implicitRules,
@@ -123,7 +127,7 @@ class DeviceDefinitionDeviceName {
   List<Extension> extension;
   List<Extension> modifierExtension;
   String name;
-  String type;
+  DeviceDefinitionDeviceNameType type;
 
   DeviceDefinitionDeviceName({
     this.id,
@@ -224,4 +228,29 @@ class DeviceDefinitionMaterial {
   factory DeviceDefinitionMaterial.fromJson(Map<String, dynamic> json) =>
       _$DeviceDefinitionMaterialFromJson(json);
   Map<String, dynamic> toJson() => _$DeviceDefinitionMaterialToJson(this);
+}
+
+class DeviceDefinitionDeviceNameType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory DeviceDefinitionDeviceNameType(String value) {
+    assert(value != null);
+    return DeviceDefinitionDeviceNameType._(
+      validateEnum(
+        value,
+        [
+          'udi-label-name',
+          'user-friendly-name',
+          'patient-reported-name',
+          'manufacturer-name',
+          'model-name',
+          'other',
+        ],
+      ),
+    );
+  }
+  const DeviceDefinitionDeviceNameType._(this.value);
+  factory DeviceDefinitionDeviceNameType.fromJson(String json) =>
+      DeviceDefinitionDeviceNameType(json);
+  String toJson() => result();
 }

@@ -16,7 +16,7 @@ part 'bodyStructure.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class BodyStructure {
-  static const String resourceType = 'BodyStructure';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -35,6 +35,7 @@ class BodyStructure {
   Reference patient;
 
   BodyStructure({
+    this.resourceType = 'BodyStructure',
     this.id,
     this.meta,
     this.implicitRules,

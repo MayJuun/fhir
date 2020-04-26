@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/id.dart';
@@ -16,7 +19,7 @@ part 'documentManifest.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class DocumentManifest {
-  static const String resourceType = 'DocumentManifest';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -27,7 +30,7 @@ class DocumentManifest {
   List<Extension> modifierExtension;
   Identifier masterIdentifier;
   List<Identifier> identifier;
-  String status;
+  DocumentManifestStatus status;
   CodeableConcept type;
   Reference subject;
   FhirDateTime created;
@@ -39,6 +42,7 @@ class DocumentManifest {
   List<DocumentManifestRelated> related;
 
   DocumentManifest({
+    this.resourceType = 'DocumentManifest',
     this.id,
     this.meta,
     this.implicitRules,
@@ -85,4 +89,26 @@ class DocumentManifestRelated {
   factory DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestRelatedFromJson(json);
   Map<String, dynamic> toJson() => _$DocumentManifestRelatedToJson(this);
+}
+
+class DocumentManifestStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory DocumentManifestStatus(String value) {
+    assert(value != null);
+    return DocumentManifestStatus._(
+      validateEnum(
+        value,
+        [
+          'current',
+          'superseded',
+          'entered-in-error',
+        ],
+      ),
+    );
+  }
+  const DocumentManifestStatus._(this.value);
+  factory DocumentManifestStatus.fromJson(String json) =>
+      DocumentManifestStatus(json);
+  String toJson() => result();
 }

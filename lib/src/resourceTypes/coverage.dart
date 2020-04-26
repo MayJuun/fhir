@@ -18,7 +18,7 @@ part 'coverage.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Coverage {
-  static const String resourceType = 'Coverage';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -46,6 +46,7 @@ class Coverage {
   List<Reference> contract;
 
   Coverage({
+    this.resourceType = 'Coverage',
     this.id,
     this.meta,
     this.implicitRules,

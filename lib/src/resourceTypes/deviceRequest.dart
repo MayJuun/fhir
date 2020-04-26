@@ -22,7 +22,7 @@ part 'deviceRequest.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class DeviceRequest {
-  static const String resourceType = 'DeviceRequest';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -60,6 +60,7 @@ class DeviceRequest {
   List<Reference> relevantHistory;
 
   DeviceRequest({
+    this.resourceType = 'DeviceRequest',
     this.id,
     this.meta,
     this.implicitRules,

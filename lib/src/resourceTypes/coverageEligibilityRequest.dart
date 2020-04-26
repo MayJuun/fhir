@@ -20,7 +20,7 @@ part 'coverageEligibilityRequest.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class CoverageEligibilityRequest {
-  static const String resourceType = 'CoverageEligibilityRequest';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -46,6 +46,7 @@ class CoverageEligibilityRequest {
   List<CoverageEligibilityRequestItem> item;
 
   CoverageEligibilityRequest({
+    this.resourceType = 'CoverageEligibilityRequest',
     this.id,
     this.meta,
     this.implicitRules,

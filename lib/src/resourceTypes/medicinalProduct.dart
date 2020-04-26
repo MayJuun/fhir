@@ -18,7 +18,7 @@ part 'medicinalProduct.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class MedicinalProduct {
-  static const String resourceType = 'MedicinalProduct';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -50,6 +50,7 @@ class MedicinalProduct {
   List<MedicinalProductSpecialDesignation> specialDesignation;
 
   MedicinalProduct({
+    this.resourceType = 'MedicinalProduct',
     this.id,
     this.meta,
     this.implicitRules,

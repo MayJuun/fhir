@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/code.dart';
@@ -18,7 +21,7 @@ part 'exampleScenario.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ExampleScenario {
-  static const String resourceType = 'ExampleScenario';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -31,7 +34,7 @@ class ExampleScenario {
   List<Identifier> identifier;
   String version;
   String name;
-  String status;
+  ExampleScenarioStatus status;
   bool experimental;
   FhirDateTime date;
   String publisher;
@@ -46,6 +49,7 @@ class ExampleScenario {
   List<Canonical> workflow;
 
   ExampleScenario({
+    this.resourceType = 'ExampleScenario',
     this.id,
     this.meta,
     this.implicitRules,
@@ -84,7 +88,7 @@ class ExampleScenarioActor {
   List<Extension> extension;
   List<Extension> modifierExtension;
   String actorId;
-  String type;
+  ExampleScenarioActorType type;
   String name;
   Markdown description;
 
@@ -286,4 +290,48 @@ class ExampleScenarioAlternative {
   factory ExampleScenarioAlternative.fromJson(Map<String, dynamic> json) =>
       _$ExampleScenarioAlternativeFromJson(json);
   Map<String, dynamic> toJson() => _$ExampleScenarioAlternativeToJson(this);
+}
+
+class ExampleScenarioStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ExampleScenarioStatus(String value) {
+    assert(value != null);
+    return ExampleScenarioStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const ExampleScenarioStatus._(this.value);
+  factory ExampleScenarioStatus.fromJson(String json) =>
+      ExampleScenarioStatus(json);
+  String toJson() => result();
+}
+
+class ExampleScenarioActorType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ExampleScenarioActorType(String value) {
+    assert(value != null);
+    return ExampleScenarioActorType._(
+      validateEnum(
+        value,
+        [
+          'person',
+          'entity',
+        ],
+      ),
+    );
+  }
+  const ExampleScenarioActorType._(this.value);
+  factory ExampleScenarioActorType.fromJson(String json) =>
+      ExampleScenarioActorType(json);
+  String toJson() => result();
 }

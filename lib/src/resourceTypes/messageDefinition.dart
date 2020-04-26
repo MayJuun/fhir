@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/code.dart';
@@ -20,7 +23,7 @@ part 'messageDefinition.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class MessageDefinition {
-  static const String resourceType = 'MessageDefinition';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -35,7 +38,7 @@ class MessageDefinition {
   String name;
   String title;
   List<Canonical> replaces;
-  String status;
+  MessageDefinitionStatus status;
   bool experimental;
   FhirDateTime date;
   String publisher;
@@ -49,13 +52,14 @@ class MessageDefinition {
   List<Canonical> parent;
   Coding eventCoding;
   FhirUri eventUri;
-  String category;
+  MessageDefinitionCategory category;
   List<MessageDefinitionFocus> focus;
-  String responseRequired;
+  MessageDefinitionResponseRequired responseRequired;
   List<MessageDefinitionAllowedResponse> allowedResponse;
   List<Canonical> graph;
 
   MessageDefinition({
+    this.resourceType = 'MessageDefinition',
     this.id,
     this.meta,
     this.implicitRules,
@@ -142,4 +146,72 @@ class MessageDefinitionAllowedResponse {
       _$MessageDefinitionAllowedResponseFromJson(json);
   Map<String, dynamic> toJson() =>
       _$MessageDefinitionAllowedResponseToJson(this);
+}
+
+class MessageDefinitionStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory MessageDefinitionStatus(String value) {
+    assert(value != null);
+    return MessageDefinitionStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const MessageDefinitionStatus._(this.value);
+  factory MessageDefinitionStatus.fromJson(String json) =>
+      MessageDefinitionStatus(json);
+  String toJson() => result();
+}
+
+class MessageDefinitionCategory extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory MessageDefinitionCategory(String value) {
+    assert(value != null);
+    return MessageDefinitionCategory._(
+      validateEnum(
+        value,
+        [
+          'consequence',
+          'currency',
+          'notification',
+        ],
+      ),
+    );
+  }
+  const MessageDefinitionCategory._(this.value);
+  factory MessageDefinitionCategory.fromJson(String json) =>
+      MessageDefinitionCategory(json);
+  String toJson() => result();
+}
+
+class MessageDefinitionResponseRequired extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory MessageDefinitionResponseRequired(String value) {
+    assert(value != null);
+    return MessageDefinitionResponseRequired._(
+      validateEnum(
+        value,
+        [
+          'always',
+          'on-error',
+          'never',
+          'on-success',
+        ],
+      ),
+    );
+  }
+  const MessageDefinitionResponseRequired._(this.value);
+  factory MessageDefinitionResponseRequired.fromJson(String json) =>
+      MessageDefinitionResponseRequired(json);
+  String toJson() => result();
 }

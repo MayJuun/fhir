@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/id.dart';
@@ -19,7 +22,7 @@ part 'consent.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Consent {
-  static const String resourceType = 'Consent';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -29,7 +32,7 @@ class Consent {
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<Identifier> identifier;
-  String status;
+  ConsentStatus status;
   CodeableConcept scope;
   List<CodeableConcept> category;
   Reference patient;
@@ -44,6 +47,7 @@ class Consent {
   ConsentProvision provision;
 
   Consent({
+    this.resourceType = 'Consent',
     this.id,
     this.meta,
     this.implicitRules,
@@ -122,7 +126,7 @@ class ConsentProvision {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String type;
+  ConsentProvisionType type;
   Period period;
   List<ConsentActor> actor;
   List<CodeableConcept> action;
@@ -182,7 +186,7 @@ class ConsentData {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String meaning;
+  ConsentDataMeaning meaning;
   Reference reference;
 
   ConsentData({
@@ -196,4 +200,71 @@ class ConsentData {
   factory ConsentData.fromJson(Map<String, dynamic> json) =>
       _$ConsentDataFromJson(json);
   Map<String, dynamic> toJson() => _$ConsentDataToJson(this);
+}
+
+class ConsentStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ConsentStatus(String value) {
+    assert(value != null);
+    return ConsentStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'proposed',
+          'active',
+          'rejected',
+          'inactive',
+          'entered-in-error',
+        ],
+      ),
+    );
+  }
+  const ConsentStatus._(this.value);
+  factory ConsentStatus.fromJson(String json) => ConsentStatus(json);
+  String toJson() => result();
+}
+
+class ConsentProvisionType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ConsentProvisionType(String value) {
+    assert(value != null);
+    return ConsentProvisionType._(
+      validateEnum(
+        value,
+        [
+          'deny',
+          'permit',
+        ],
+      ),
+    );
+  }
+  const ConsentProvisionType._(this.value);
+  factory ConsentProvisionType.fromJson(String json) =>
+      ConsentProvisionType(json);
+  String toJson() => result();
+}
+
+class ConsentDataMeaning extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ConsentDataMeaning(String value) {
+    assert(value != null);
+    return ConsentDataMeaning._(
+      validateEnum(
+        value,
+        [
+          'instance',
+          'related',
+          'dependents',
+          'authoredby',
+        ],
+      ),
+    );
+  }
+  const ConsentDataMeaning._(this.value);
+  factory ConsentDataMeaning.fromJson(String json) => ConsentDataMeaning(json);
+  String toJson() => result();
 }

@@ -14,7 +14,7 @@ part 'enrollmentRequest.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class EnrollmentRequest {
-  static const String resourceType = 'EnrollmentRequest';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -32,6 +32,7 @@ class EnrollmentRequest {
   Reference coverage;
 
   EnrollmentRequest({
+    this.resourceType = 'EnrollmentRequest',
     this.id,
     this.meta,
     this.implicitRules,

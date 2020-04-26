@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/canonical.dart';
@@ -31,7 +34,7 @@ part 'planDefinition.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class PlanDefinition {
-  static const String resourceType = 'PlanDefinition';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -47,7 +50,7 @@ class PlanDefinition {
   String title;
   String subtitle;
   CodeableConcept type;
-  String status;
+  PlanDefinitionStatus status;
   bool experimental;
   CodeableConcept subjectCodeableConcept;
   Reference subjectReference;
@@ -74,6 +77,7 @@ class PlanDefinition {
   List<PlanDefinitionAction> action;
 
   PlanDefinition({
+    this.resourceType = 'PlanDefinition',
     this.id,
     this.meta,
     this.implicitRules,
@@ -208,11 +212,11 @@ class PlanDefinitionAction {
   Timing timingTiming;
   List<PlanDefinitionParticipant> participant;
   CodeableConcept type;
-  String groupingBehavior;
-  String selectionBehavior;
-  String requiredBehavior;
-  String precheckBehavior;
-  String cardinalityBehavior;
+  PlanDefinitionActionGroupingBehavior groupingBehavior;
+  PlanDefinitionActionSelectionBehavior selectionBehavior;
+  PlanDefinitionActionRequiredBehavior requiredBehavior;
+  PlanDefinitionActionPrecheckBehavior precheckBehavior;
+  PlanDefinitionActionCardinalityBehavior cardinalityBehavior;
   Canonical definitionCanonical;
   FhirUri definitionUri;
   Canonical transform;
@@ -269,7 +273,7 @@ class PlanDefinitionCondition {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String kind;
+  PlanDefinitionConditionKind kind;
   Expression expression;
 
   PlanDefinitionCondition({
@@ -291,7 +295,7 @@ class PlanDefinitionRelatedAction {
   List<Extension> extension;
   List<Extension> modifierExtension;
   Id actionId;
-  String relationship;
+  PlanDefinitionRelatedActionRelationship relationship;
   Duration offsetDuration;
   Range offsetRange;
 
@@ -315,7 +319,7 @@ class PlanDefinitionParticipant {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String type;
+  PlanDefinitionParticipantType type;
   CodeableConcept role;
 
   PlanDefinitionParticipant({
@@ -350,4 +354,211 @@ class PlanDefinitionDynamicValue {
   factory PlanDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
       _$PlanDefinitionDynamicValueFromJson(json);
   Map<String, dynamic> toJson() => _$PlanDefinitionDynamicValueToJson(this);
+}
+
+class PlanDefinitionStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory PlanDefinitionStatus(String value) {
+    assert(value != null);
+    return PlanDefinitionStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const PlanDefinitionStatus._(this.value);
+  factory PlanDefinitionStatus.fromJson(String json) =>
+      PlanDefinitionStatus(json);
+  String toJson() => result();
+}
+
+class PlanDefinitionActionGroupingBehavior extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory PlanDefinitionActionGroupingBehavior(String value) {
+    assert(value != null);
+    return PlanDefinitionActionGroupingBehavior._(
+      validateEnum(
+        value,
+        [
+          'visual-group',
+          'logical-group',
+          'sentence-group',
+        ],
+      ),
+    );
+  }
+  const PlanDefinitionActionGroupingBehavior._(this.value);
+  factory PlanDefinitionActionGroupingBehavior.fromJson(String json) =>
+      PlanDefinitionActionGroupingBehavior(json);
+  String toJson() => result();
+}
+
+class PlanDefinitionActionSelectionBehavior extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory PlanDefinitionActionSelectionBehavior(String value) {
+    assert(value != null);
+    return PlanDefinitionActionSelectionBehavior._(
+      validateEnum(
+        value,
+        [
+          'any',
+          'all',
+          'all-or-none',
+          'exactly-one',
+          'at-most-one',
+          'one-or-more',
+        ],
+      ),
+    );
+  }
+  const PlanDefinitionActionSelectionBehavior._(this.value);
+  factory PlanDefinitionActionSelectionBehavior.fromJson(String json) =>
+      PlanDefinitionActionSelectionBehavior(json);
+  String toJson() => result();
+}
+
+class PlanDefinitionActionRequiredBehavior extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory PlanDefinitionActionRequiredBehavior(String value) {
+    assert(value != null);
+    return PlanDefinitionActionRequiredBehavior._(
+      validateEnum(
+        value,
+        [
+          'must',
+          'could',
+          'must-unless-documented',
+        ],
+      ),
+    );
+  }
+  const PlanDefinitionActionRequiredBehavior._(this.value);
+  factory PlanDefinitionActionRequiredBehavior.fromJson(String json) =>
+      PlanDefinitionActionRequiredBehavior(json);
+  String toJson() => result();
+}
+
+class PlanDefinitionActionPrecheckBehavior extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory PlanDefinitionActionPrecheckBehavior(String value) {
+    assert(value != null);
+    return PlanDefinitionActionPrecheckBehavior._(
+      validateEnum(
+        value,
+        [
+          'yes',
+          'no',
+        ],
+      ),
+    );
+  }
+  const PlanDefinitionActionPrecheckBehavior._(this.value);
+  factory PlanDefinitionActionPrecheckBehavior.fromJson(String json) =>
+      PlanDefinitionActionPrecheckBehavior(json);
+  String toJson() => result();
+}
+
+class PlanDefinitionActionCardinalityBehavior extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory PlanDefinitionActionCardinalityBehavior(String value) {
+    assert(value != null);
+    return PlanDefinitionActionCardinalityBehavior._(
+      validateEnum(
+        value,
+        [
+          'single',
+          'multiple',
+        ],
+      ),
+    );
+  }
+  const PlanDefinitionActionCardinalityBehavior._(this.value);
+  factory PlanDefinitionActionCardinalityBehavior.fromJson(String json) =>
+      PlanDefinitionActionCardinalityBehavior(json);
+  String toJson() => result();
+}
+
+class PlanDefinitionConditionKind extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory PlanDefinitionConditionKind(String value) {
+    assert(value != null);
+    return PlanDefinitionConditionKind._(
+      validateEnum(
+        value,
+        [
+          'applicability',
+          'start',
+          'stop',
+        ],
+      ),
+    );
+  }
+  const PlanDefinitionConditionKind._(this.value);
+  factory PlanDefinitionConditionKind.fromJson(String json) =>
+      PlanDefinitionConditionKind(json);
+  String toJson() => result();
+}
+
+class PlanDefinitionRelatedActionRelationship extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory PlanDefinitionRelatedActionRelationship(String value) {
+    assert(value != null);
+    return PlanDefinitionRelatedActionRelationship._(
+      validateEnum(
+        value,
+        [
+          'before-start',
+          'before',
+          'before-end',
+          'concurrent-with-start',
+          'concurrent',
+          'concurrent-with-end',
+          'after-start',
+          'after',
+          'after-end',
+        ],
+      ),
+    );
+  }
+  const PlanDefinitionRelatedActionRelationship._(this.value);
+  factory PlanDefinitionRelatedActionRelationship.fromJson(String json) =>
+      PlanDefinitionRelatedActionRelationship(json);
+  String toJson() => result();
+}
+
+class PlanDefinitionParticipantType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory PlanDefinitionParticipantType(String value) {
+    assert(value != null);
+    return PlanDefinitionParticipantType._(
+      validateEnum(
+        value,
+        [
+          'patient',
+          'practitioner',
+          'related-person',
+          'device',
+        ],
+      ),
+    );
+  }
+  const PlanDefinitionParticipantType._(this.value);
+  factory PlanDefinitionParticipantType.fromJson(String json) =>
+      PlanDefinitionParticipantType(json);
+  String toJson() => result();
 }

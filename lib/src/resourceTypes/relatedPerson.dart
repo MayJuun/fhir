@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
@@ -21,7 +24,7 @@ part 'relatedPerson.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RelatedPerson {
-  static const String resourceType = 'ReltedPerson';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -36,7 +39,7 @@ class RelatedPerson {
   List<CodeableConcept> relationship;
   List<HumanName> name;
   List<ContactPoint> telecom;
-  String gender;
+  RelatedPersonGender gender;
   Date birthDate;
   List<Address> address;
   List<Attachment> photo;
@@ -44,6 +47,7 @@ class RelatedPerson {
   List<RelatedPersonCommunication> communication;
 
   RelatedPerson({
+    this.resourceType = 'ReltedPerson',
     this.id,
     this.meta,
     this.implicitRules,
@@ -90,4 +94,27 @@ class RelatedPersonCommunication {
   factory RelatedPersonCommunication.fromJson(Map<String, dynamic> json) =>
       _$RelatedPersonCommunicationFromJson(json);
   Map<String, dynamic> toJson() => _$RelatedPersonCommunicationToJson(this);
+}
+
+class RelatedPersonGender extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory RelatedPersonGender(String value) {
+    assert(value != null);
+    return RelatedPersonGender._(
+      validateEnum(
+        value,
+        [
+          'male',
+          'female',
+          'other',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const RelatedPersonGender._(this.value);
+  factory RelatedPersonGender.fromJson(String json) =>
+      RelatedPersonGender(json);
+  String toJson() => result();
 }

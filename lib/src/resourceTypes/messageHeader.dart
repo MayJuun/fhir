@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/url.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/code.dart';
@@ -18,7 +21,7 @@ part 'messageHeader.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class MessageHeader {
-  static const String resourceType = 'MessageHeader';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -41,6 +44,7 @@ class MessageHeader {
   Canonical definition;
 
   MessageHeader({
+    this.resourceType = 'MessageHeader',
     this.id,
     this.meta,
     this.implicitRules,
@@ -126,7 +130,7 @@ class MessageHeaderResponse {
   List<Extension> extension;
   List<Extension> modifierExtension;
   Id identifier;
-  String code;
+  MessageHeaderResponseCode code;
   Reference details;
 
   MessageHeaderResponse({
@@ -141,4 +145,26 @@ class MessageHeaderResponse {
   factory MessageHeaderResponse.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderResponseFromJson(json);
   Map<String, dynamic> toJson() => _$MessageHeaderResponseToJson(this);
+}
+
+class MessageHeaderResponseCode extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory MessageHeaderResponseCode(String value) {
+    assert(value != null);
+    return MessageHeaderResponseCode._(
+      validateEnum(
+        value,
+        [
+          'ok',
+          'transient-error',
+          'fatal-error',
+        ],
+      ),
+    );
+  }
+  const MessageHeaderResponseCode._(this.value);
+  factory MessageHeaderResponseCode.fromJson(String json) =>
+      MessageHeaderResponseCode(json);
+  String toJson() => result();
 }

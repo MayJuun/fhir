@@ -18,7 +18,7 @@ part 'clinicalImpression.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ClinicalImpression {
-  static const String resourceType = 'ClinicalImpression';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -50,6 +50,7 @@ class ClinicalImpression {
   List<Annotation> note;
 
   ClinicalImpression({
+    this.resourceType = 'ClinicalImpression',
     this.id,
     this.meta,
     this.implicitRules,

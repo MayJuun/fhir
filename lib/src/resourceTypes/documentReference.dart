@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/instant.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
@@ -19,7 +22,7 @@ part 'documentReference.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class DocumentReference {
-  static const String resourceType = 'DocumentReference';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -30,7 +33,7 @@ class DocumentReference {
   List<Extension> modifierExtension;
   Identifier masterIdentifier;
   List<Identifier> identifier;
-  String status;
+  DocumentReferenceStatus status;
   Code docStatus;
   CodeableConcept type;
   List<CodeableConcept> category;
@@ -46,6 +49,7 @@ class DocumentReference {
   DocumentReferenceContext context;
 
   DocumentReference({
+    this.resourceType = 'DocumentReference',
     this.id,
     this.meta,
     this.implicitRules,
@@ -82,7 +86,7 @@ class DocumentReferenceRelatesTo {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String code;
+  DocumentReferenceRelatesToCode code;
   Reference target;
 
   DocumentReferenceRelatesTo({
@@ -148,4 +152,49 @@ class DocumentReferenceContext {
   factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContextFromJson(json);
   Map<String, dynamic> toJson() => _$DocumentReferenceContextToJson(this);
+}
+
+class DocumentReferenceStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory DocumentReferenceStatus(String value) {
+    assert(value != null);
+    return DocumentReferenceStatus._(
+      validateEnum(
+        value,
+        [
+          'current',
+          'superseded',
+          'entered-in-error',
+        ],
+      ),
+    );
+  }
+  const DocumentReferenceStatus._(this.value);
+  factory DocumentReferenceStatus.fromJson(String json) =>
+      DocumentReferenceStatus(json);
+  String toJson() => result();
+}
+
+class DocumentReferenceRelatesToCode extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory DocumentReferenceRelatesToCode(String value) {
+    assert(value != null);
+    return DocumentReferenceRelatesToCode._(
+      validateEnum(
+        value,
+        [
+          'replaces',
+          'transforms',
+          'signs',
+          'appends',
+        ],
+      ),
+    );
+  }
+  const DocumentReferenceRelatesToCode._(this.value);
+  factory DocumentReferenceRelatesToCode.fromJson(String json) =>
+      DocumentReferenceRelatesToCode(json);
+  String toJson() => result();
 }

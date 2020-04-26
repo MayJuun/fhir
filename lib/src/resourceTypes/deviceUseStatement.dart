@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/id.dart';
@@ -19,7 +22,7 @@ part 'deviceUseStatement.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class DeviceUseStatement {
-  static const String resourceType = 'DeviceUseStatement';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -30,7 +33,7 @@ class DeviceUseStatement {
   List<Extension> modifierExtension;
   List<Identifier> identifier;
   List<Reference> basedOn;
-  String status;
+  DeviceUseStatementStatus status;
   Reference subject;
   List<Reference> derivedFrom;
   Timing timingTiming;
@@ -45,6 +48,7 @@ class DeviceUseStatement {
   List<Annotation> note;
 
   DeviceUseStatement({
+    this.resourceType = 'DeviceUseStatement',
     this.id,
     this.meta,
     this.implicitRules,
@@ -73,4 +77,29 @@ class DeviceUseStatement {
   factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$DeviceUseStatementFromJson(json);
   Map<String, dynamic> toJson() => _$DeviceUseStatementToJson(this);
+}
+
+class DeviceUseStatementStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory DeviceUseStatementStatus(String value) {
+    assert(value != null);
+    return DeviceUseStatementStatus._(
+      validateEnum(
+        value,
+        [
+          'active',
+          'completed',
+          'entered-in-error',
+          'intended',
+          'stopped',
+          'on-hold',
+        ],
+      ),
+    );
+  }
+  const DeviceUseStatementStatus._(this.value);
+  factory DeviceUseStatementStatus.fromJson(String json) =>
+      DeviceUseStatementStatus(json);
+  String toJson() => result();
 }

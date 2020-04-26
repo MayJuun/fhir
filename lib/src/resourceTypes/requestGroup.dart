@@ -24,7 +24,7 @@ part 'requestGroup.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RequestGroup {
-  static const String resourceType = 'RequestGroup';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -53,6 +53,7 @@ class RequestGroup {
   List<RequestGroupAction> action;
 
   RequestGroup({
+    this.resourceType = 'RequestGroup',
     this.id,
     this.meta,
     this.implicitRules,

@@ -18,7 +18,7 @@ part 'paymentNotice.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class PaymentNotice {
-  static const String resourceType = 'PaymentNotice';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -41,6 +41,7 @@ class PaymentNotice {
   CodeableConcept paymentStatus;
 
   PaymentNotice({
+    this.resourceType = 'PaymentNotice',
     this.id,
     this.meta,
     this.implicitRules,

@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/id.dart';
@@ -17,7 +20,7 @@ part 'catalogEntry.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class CatalogEntry {
-  static const String resourceType = 'CatalogEntry';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -32,7 +35,7 @@ class CatalogEntry {
   Reference referencedItem;
   List<Identifier> additionalIdentifier;
   List<CodeableConcept> classification;
-  String status;
+  CatalogEntryStatus status;
   Period validityPeriod;
   FhirDateTime validTo;
   FhirDateTime lastUpdated;
@@ -41,6 +44,7 @@ class CatalogEntry {
   List<CatalogEntryRelatedEntry> relatedEntry;
 
   CatalogEntry({
+    this.resourceType = 'CatalogEntry',
     this.id,
     this.meta,
     this.implicitRules,
@@ -74,7 +78,7 @@ class CatalogEntryRelatedEntry {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String relationtype;
+  CatalogEntryRelatedEntryRelationtype relationtype;
   Reference item;
 
   CatalogEntryRelatedEntry({
@@ -88,4 +92,47 @@ class CatalogEntryRelatedEntry {
   factory CatalogEntryRelatedEntry.fromJson(Map<String, dynamic> json) =>
       _$CatalogEntryRelatedEntryFromJson(json);
   Map<String, dynamic> toJson() => _$CatalogEntryRelatedEntryToJson(this);
+}
+
+class CatalogEntryStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CatalogEntryStatus(String value) {
+    assert(value != null);
+    return CatalogEntryStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const CatalogEntryStatus._(this.value);
+  factory CatalogEntryStatus.fromJson(String json) => CatalogEntryStatus(json);
+  String toJson() => result();
+}
+
+class CatalogEntryRelatedEntryRelationtype extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CatalogEntryRelatedEntryRelationtype(String value) {
+    assert(value != null);
+    return CatalogEntryRelatedEntryRelationtype._(
+      validateEnum(
+        value,
+        [
+          'triggers',
+          'is-replaced-by',
+        ],
+      ),
+    );
+  }
+  const CatalogEntryRelatedEntryRelationtype._(this.value);
+  factory CatalogEntryRelatedEntryRelationtype.fromJson(String json) =>
+      CatalogEntryRelatedEntryRelationtype(json);
+  String toJson() => result();
 }

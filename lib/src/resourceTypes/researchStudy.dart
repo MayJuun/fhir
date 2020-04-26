@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
@@ -19,7 +22,7 @@ part 'researchStudy.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ResearchStudy {
-  static const String resourceType = 'ResearchStudy';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -32,7 +35,7 @@ class ResearchStudy {
   String title;
   List<Reference> protocol;
   List<Reference> partOf;
-  String status;
+  ResearchStudyStatus status;
   CodeableConcept primaryPurposeType;
   CodeableConcept phase;
   List<CodeableConcept> category;
@@ -54,6 +57,7 @@ class ResearchStudy {
   List<ResearchStudyObjective> objective;
 
   ResearchStudy({
+    this.resourceType = 'ResearchStudy',
     this.id,
     this.meta,
     this.implicitRules,
@@ -135,4 +139,34 @@ class ResearchStudyObjective {
   factory ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyObjectiveFromJson(json);
   Map<String, dynamic> toJson() => _$ResearchStudyObjectiveToJson(this);
+}
+
+class ResearchStudyStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ResearchStudyStatus(String value) {
+    assert(value != null);
+    return ResearchStudyStatus._(
+      validateEnum(
+        value,
+        [
+          'active',
+          'administratively-completed',
+          'approved',
+          'closed-to-accrual',
+          'closed-to-accrual-and-intervention',
+          'completed',
+          'disapproved',
+          'in-review',
+          'temporarily-closed-to-accrual',
+          'temporarily-closed-to-accrual-and-intervention',
+          'withdrawn',
+        ],
+      ),
+    );
+  }
+  const ResearchStudyStatus._(this.value);
+  factory ResearchStudyStatus.fromJson(String json) =>
+      ResearchStudyStatus(json);
+  String toJson() => result();
 }

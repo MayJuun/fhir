@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
@@ -15,7 +18,7 @@ part 'compartmentDefinition.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class CompartmentDefinition {
-  static const String resourceType = 'CompartmentDefinition';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -27,7 +30,7 @@ class CompartmentDefinition {
   FhirUri url;
   String version;
   String name;
-  String status;
+  CompartmentDefinitionStatus status;
   bool experimental;
   FhirDateTime date;
   String publisher;
@@ -35,11 +38,12 @@ class CompartmentDefinition {
   Markdown description;
   List<UsageContext> useContext;
   Markdown purpose;
-  String code;
+  CompartmentDefinitionCode code;
   bool search;
   List<CompartmentDefinitionResource> resource;
 
   CompartmentDefinition({
+    this.resourceType = 'CompartmentDefinition',
     this.id,
     this.meta,
     this.implicitRules,
@@ -90,4 +94,51 @@ class CompartmentDefinitionResource {
   factory CompartmentDefinitionResource.fromJson(Map<String, dynamic> json) =>
       _$CompartmentDefinitionResourceFromJson(json);
   Map<String, dynamic> toJson() => _$CompartmentDefinitionResourceToJson(this);
+}
+
+class CompartmentDefinitionStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CompartmentDefinitionStatus(String value) {
+    assert(value != null);
+    return CompartmentDefinitionStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const CompartmentDefinitionStatus._(this.value);
+  factory CompartmentDefinitionStatus.fromJson(String json) =>
+      CompartmentDefinitionStatus(json);
+  String toJson() => result();
+}
+
+class CompartmentDefinitionCode extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CompartmentDefinitionCode(String value) {
+    assert(value != null);
+    return CompartmentDefinitionCode._(
+      validateEnum(
+        value,
+        [
+          'Patient',
+          'Encounter',
+          'RelatedPerson',
+          'Practitioner',
+          'Device',
+        ],
+      ),
+    );
+  }
+  const CompartmentDefinitionCode._(this.value);
+  factory CompartmentDefinitionCode.fromJson(String json) =>
+      CompartmentDefinitionCode(json);
+  String toJson() => result();
 }

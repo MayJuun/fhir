@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/base64binary.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
@@ -19,7 +22,7 @@ part 'auditEvent.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class AuditEvent {
-  static const String resourceType = 'AuditEvent';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -41,6 +44,7 @@ class AuditEvent {
   List<AuditEventEntity> entity;
 
   AuditEvent({
+    this.resourceType = 'AuditEvent',
     this.id,
     this.meta,
     this.implicitRules,
@@ -208,39 +212,71 @@ class AuditEventDetail {
   Map<String, dynamic> toJson() => _$AuditEventDetailToJson(this);
 }
 
-enum AuditEventAction {
-  @JsonValue('C')
-  c,
-  @JsonValue('R')
-  r,
-  @JsonValue('U')
-  u,
-  @JsonValue('D')
-  d,
-  @JsonValue('E')
-  e,
+class AuditEventAction extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory AuditEventAction(String value) {
+    assert(value != null);
+    return AuditEventAction._(
+      validateEnum(
+        value,
+        [
+          'C',
+          'R',
+          'U',
+          'D',
+          'E',
+        ],
+      ),
+    );
+  }
+  const AuditEventAction._(this.value);
+  factory AuditEventAction.fromJson(String json) => AuditEventAction(json);
+  String toJson() => result();
 }
 
-enum AuditEventOutcome {
-  @JsonValue('0')
-  zero,
-  @JsonValue('4')
-  four,
-  @JsonValue('8')
-  eight,
-  @JsonValue('12')
-  twelve,
+class AuditEventOutcome extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory AuditEventOutcome(String value) {
+    assert(value != null);
+    return AuditEventOutcome._(
+      validateEnum(
+        value,
+        [
+          '0',
+          '4',
+          '8',
+          '12',
+        ],
+      ),
+    );
+  }
+  const AuditEventOutcome._(this.value);
+  factory AuditEventOutcome.fromJson(String json) => AuditEventOutcome(json);
+  String toJson() => result();
 }
 
-enum AuditEventNetworkType {
-  @JsonValue('1')
-  one,
-  @JsonValue('2')
-  two,
-  @JsonValue('3')
-  three,
-  @JsonValue('4')
-  four,
-  @JsonValue('5')
-  five,
+class AuditEventNetworkType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory AuditEventNetworkType(String value) {
+    assert(value != null);
+    return AuditEventNetworkType._(
+      validateEnum(
+        value,
+        [
+          '1',
+          '2',
+          '3',
+          '4',
+          '5',
+        ],
+      ),
+    );
+  }
+  const AuditEventNetworkType._(this.value);
+  factory AuditEventNetworkType.fromJson(String json) =>
+      AuditEventNetworkType(json);
+  String toJson() => result();
 }

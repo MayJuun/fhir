@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
 import '../primitiveTypes/uri.dart';
@@ -16,7 +19,7 @@ part 'flag.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Flag {
-  static const String resourceType = 'Flag';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -26,7 +29,7 @@ class Flag {
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<Identifier> identifier;
-  String status;
+  FlagStatus status;
   List<CodeableConcept> category;
   CodeableConcept code;
   Reference subject;
@@ -35,6 +38,7 @@ class Flag {
   Reference author;
 
   Flag({
+    this.resourceType = 'Flag',
     this.id,
     this.meta,
     this.implicitRules,
@@ -55,4 +59,25 @@ class Flag {
 
   factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
   Map<String, dynamic> toJson() => _$FlagToJson(this);
+}
+
+class FlagStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory FlagStatus(String value) {
+    assert(value != null);
+    return FlagStatus._(
+      validateEnum(
+        value,
+        [
+          'active',
+          'inactive',
+          'entered-in-error',
+        ],
+      ),
+    );
+  }
+  const FlagStatus._(this.value);
+  factory FlagStatus.fromJson(String json) => FlagStatus(json);
+  String toJson() => result();
 }

@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/canonical.dart';
@@ -24,7 +27,7 @@ part 'measure.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Measure {
-  static const String resourceType = 'Measure';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -39,7 +42,7 @@ class Measure {
   String name;
   String title;
   String subtitle;
-  String status;
+  MeasureStatus status;
   bool experimental;
   CodeableConcept subjectCodeableConcept;
   Reference subjectReference;
@@ -77,6 +80,7 @@ class Measure {
   List<MeasureSupplementalData> supplementalData;
 
   Measure({
+    this.resourceType = 'Measure',
     this.id,
     this.meta,
     this.implicitRules,
@@ -253,4 +257,26 @@ class MeasureSupplementalData {
   factory MeasureSupplementalData.fromJson(Map<String, dynamic> json) =>
       _$MeasureSupplementalDataFromJson(json);
   Map<String, dynamic> toJson() => _$MeasureSupplementalDataToJson(this);
+}
+
+class MeasureStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory MeasureStatus(String value) {
+    assert(value != null);
+    return MeasureStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const MeasureStatus._(this.value);
+  factory MeasureStatus.fromJson(String json) => MeasureStatus(json);
+  String toJson() => result();
 }

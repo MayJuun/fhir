@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/time.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
@@ -37,7 +40,7 @@ class Observation {
   List<Identifier> identifier;
   List<Reference> basedOn;
   List<Reference> partOf;
-  String status;
+  ObservationStatus status;
   List<CodeableConcept> category;
   CodeableConcept code;
   Reference subject;
@@ -200,4 +203,30 @@ class ObservationComponent {
   factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
       _$ObservationComponentFromJson(json);
   Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
+}
+
+class ObservationStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ObservationStatus(String value) {
+    assert(value != null);
+    return ObservationStatus._(
+      validateEnum(
+        value,
+        [
+          'registered',
+          'preliminary',
+          'final',
+          'amended',
+          'corrected',
+          'cancelled',
+          'entered-in-error',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const ObservationStatus._(this.value);
+  factory ObservationStatus.fromJson(String json) => ObservationStatus(json);
+  String toJson() => result();
 }

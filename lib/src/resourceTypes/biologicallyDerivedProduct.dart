@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/id.dart';
@@ -16,7 +19,7 @@ part 'biologicallyDerivedProduct.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class BiologicallyDerivedProduct {
-  static const String resourceType = 'BiologicallyDerivedProduct';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -26,9 +29,9 @@ class BiologicallyDerivedProduct {
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<Identifier> identifier;
-  String productCategory;
+  BiologicallyDerivedProductCategory productCategory;
   CodeableConcept productCode;
-  String status;
+  BiologicallyDerivedProductStatus status;
   List<Reference> request;
   int quantity;
   List<Reference> parent;
@@ -38,6 +41,7 @@ class BiologicallyDerivedProduct {
   List<BiologicallyDerivedProductStorage> storage;
 
   BiologicallyDerivedProduct({
+    this.resourceType = 'BiologicallyDerivedProduct',
     this.id,
     this.meta,
     this.implicitRules,
@@ -152,7 +156,7 @@ class BiologicallyDerivedProductStorage {
   List<Extension> modifierExtension;
   String description;
   double temperature;
-  String scale;
+  BiologicallyDerivedProductStorageScale scale;
   Period duration;
 
   BiologicallyDerivedProductStorage({
@@ -170,4 +174,71 @@ class BiologicallyDerivedProductStorage {
       _$BiologicallyDerivedProductStorageFromJson(json);
   Map<String, dynamic> toJson() =>
       _$BiologicallyDerivedProductStorageToJson(this);
+}
+
+class BiologicallyDerivedProductCategory extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory BiologicallyDerivedProductCategory(String value) {
+    assert(value != null);
+    return BiologicallyDerivedProductCategory._(
+      validateEnum(
+        value,
+        [
+          'organ',
+          'tissue',
+          'fluid',
+          'cells',
+          'biologicalAgent',
+        ],
+      ),
+    );
+  }
+  const BiologicallyDerivedProductCategory._(this.value);
+  factory BiologicallyDerivedProductCategory.fromJson(String json) =>
+      BiologicallyDerivedProductCategory(json);
+  String toJson() => result();
+}
+
+class BiologicallyDerivedProductStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory BiologicallyDerivedProductStatus(String value) {
+    assert(value != null);
+    return BiologicallyDerivedProductStatus._(
+      validateEnum(
+        value,
+        [
+          'available',
+          'unavailable',
+        ],
+      ),
+    );
+  }
+  const BiologicallyDerivedProductStatus._(this.value);
+  factory BiologicallyDerivedProductStatus.fromJson(String json) =>
+      BiologicallyDerivedProductStatus(json);
+  String toJson() => result();
+}
+
+class BiologicallyDerivedProductStorageScale extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory BiologicallyDerivedProductStorageScale(String value) {
+    assert(value != null);
+    return BiologicallyDerivedProductStorageScale._(
+      validateEnum(
+        value,
+        [
+          'farenheit',
+          'celsius',
+          'kelvin',
+        ],
+      ),
+    );
+  }
+  const BiologicallyDerivedProductStorageScale._(this.value);
+  factory BiologicallyDerivedProductStorageScale.fromJson(String json) =>
+      BiologicallyDerivedProductStorageScale(json);
+  String toJson() => result();
 }

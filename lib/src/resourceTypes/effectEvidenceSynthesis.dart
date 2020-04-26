@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/code.dart';
@@ -23,7 +26,7 @@ part 'effectEvidenceSynthesis.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class EffectEvidenceSynthesis {
-  static const String resourceType = 'EffectEvidenceSynthesis';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -37,7 +40,7 @@ class EffectEvidenceSynthesis {
   String version;
   String name;
   String title;
-  String status;
+  EffectEvidenceSynthesisStatus status;
   FhirDateTime date;
   String publisher;
   List<ContactDetail> contact;
@@ -67,6 +70,7 @@ class EffectEvidenceSynthesis {
   List<EffectEvidenceSynthesisCertainty> certainty;
 
   EffectEvidenceSynthesis({
+    this.resourceType = 'EffectEvidenceSynthesis',
     this.id,
     this.meta,
     this.implicitRules,
@@ -146,7 +150,7 @@ class EffectEvidenceSynthesisResultsByExposure {
   List<Extension> extension;
   List<Extension> modifierExtension;
   String description;
-  String exposureState;
+  EffectEvidenceSynthesisResultsByExposureState exposureState;
   CodeableConcept variantState;
   Reference riskEvidenceSynthesis;
 
@@ -273,4 +277,49 @@ class EffectEvidenceSynthesisCertaintySubcomponent {
       _$EffectEvidenceSynthesisCertaintySubcomponentFromJson(json);
   Map<String, dynamic> toJson() =>
       _$EffectEvidenceSynthesisCertaintySubcomponentToJson(this);
+}
+
+class EffectEvidenceSynthesisStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory EffectEvidenceSynthesisStatus(String value) {
+    assert(value != null);
+    return EffectEvidenceSynthesisStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const EffectEvidenceSynthesisStatus._(this.value);
+  factory EffectEvidenceSynthesisStatus.fromJson(String json) =>
+      EffectEvidenceSynthesisStatus(json);
+  String toJson() => result();
+}
+
+class EffectEvidenceSynthesisResultsByExposureState
+    extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory EffectEvidenceSynthesisResultsByExposureState(String value) {
+    assert(value != null);
+    return EffectEvidenceSynthesisResultsByExposureState._(
+      validateEnum(
+        value,
+        [
+          'exposure',
+          'exposure-alternative',
+        ],
+      ),
+    );
+  }
+  const EffectEvidenceSynthesisResultsByExposureState._(this.value);
+  factory EffectEvidenceSynthesisResultsByExposureState.fromJson(String json) =>
+      EffectEvidenceSynthesisResultsByExposureState(json);
+  String toJson() => result();
 }

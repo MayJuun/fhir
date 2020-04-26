@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/instant.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
@@ -18,7 +21,7 @@ part 'provenance.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Provenance {
-  static const String resourceType = 'Provenance';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -40,6 +43,7 @@ class Provenance {
   List<Signature> signature;
 
   Provenance({
+    this.resourceType = 'Provenance',
     this.id,
     this.meta,
     this.implicitRules,
@@ -96,7 +100,7 @@ class ProvenanceEntity {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String role;
+  ProvenanceEntityRole role;
   Reference what;
   List<ProvenanceAgent> agent;
 
@@ -112,4 +116,28 @@ class ProvenanceEntity {
   factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceEntityFromJson(json);
   Map<String, dynamic> toJson() => _$ProvenanceEntityToJson(this);
+}
+
+class ProvenanceEntityRole extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ProvenanceEntityRole(String value) {
+    assert(value != null);
+    return ProvenanceEntityRole._(
+      validateEnum(
+        value,
+        [
+          'derivation',
+          'revision',
+          'quotation',
+          'source',
+          'removal',
+        ],
+      ),
+    );
+  }
+  const ProvenanceEntityRole._(this.value);
+  factory ProvenanceEntityRole.fromJson(String json) =>
+      ProvenanceEntityRole(json);
+  String toJson() => result();
 }

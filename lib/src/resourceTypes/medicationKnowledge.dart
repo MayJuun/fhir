@@ -21,7 +21,7 @@ part 'medicationKnowledge.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class MedicationKnowledge {
-  static const String resourceType = 'MedicationKnowledge';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -55,6 +55,7 @@ class MedicationKnowledge {
   List<MedicationKnowledgeKinetics> kinetics;
 
   MedicationKnowledge({
+    this.resourceType = 'MedicationKnowledge',
     this.id,
     this.meta,
     this.implicitRules,

@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
@@ -19,7 +22,7 @@ part 'measureReport.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class MeasureReport {
-  static const String resourceType = 'MeasureReport';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -29,8 +32,8 @@ class MeasureReport {
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<Identifier> identifier;
-  String status;
-  String type;
+  MeasureReportStatus status;
+  MeasureReportType type;
   Canonical measure;
   Reference subject;
   FhirDateTime date;
@@ -41,6 +44,7 @@ class MeasureReport {
   List<Reference> evaluatedResource;
 
   MeasureReport({
+    this.resourceType = 'MeasureReport',
     this.id,
     this.meta,
     this.implicitRules,
@@ -203,4 +207,48 @@ class MeasureReportPopulation1 {
   factory MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportPopulation1FromJson(json);
   Map<String, dynamic> toJson() => _$MeasureReportPopulation1ToJson(this);
+}
+
+class MeasureReportStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory MeasureReportStatus(String value) {
+    assert(value != null);
+    return MeasureReportStatus._(
+      validateEnum(
+        value,
+        [
+          'complete',
+          'pending',
+          'error',
+        ],
+      ),
+    );
+  }
+  const MeasureReportStatus._(this.value);
+  factory MeasureReportStatus.fromJson(String json) =>
+      MeasureReportStatus(json);
+  String toJson() => result();
+}
+
+class MeasureReportType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory MeasureReportType(String value) {
+    assert(value != null);
+    return MeasureReportType._(
+      validateEnum(
+        value,
+        [
+          'individual',
+          'subject-list',
+          'summary',
+          'data-collection',
+        ],
+      ),
+    );
+  }
+  const MeasureReportType._(this.value);
+  factory MeasureReportType.fromJson(String json) => MeasureReportType(json);
+  String toJson() => result();
 }

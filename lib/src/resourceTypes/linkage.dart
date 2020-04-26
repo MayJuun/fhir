@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
 import '../primitiveTypes/uri.dart';
@@ -13,7 +16,7 @@ part 'linkage.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Linkage {
-  static const String resourceType = 'Linkage';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -27,6 +30,7 @@ class Linkage {
   List<LinkageItem> item;
 
   Linkage({
+    this.resourceType = 'Linkage',
     this.id,
     this.meta,
     this.implicitRules,
@@ -50,7 +54,7 @@ class LinkageItem {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String type;
+  LinkageItemType type;
   Reference resource;
 
   LinkageItem({
@@ -64,4 +68,25 @@ class LinkageItem {
   factory LinkageItem.fromJson(Map<String, dynamic> json) =>
       _$LinkageItemFromJson(json);
   Map<String, dynamic> toJson() => _$LinkageItemToJson(this);
+}
+
+class LinkageItemType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory LinkageItemType(String value) {
+    assert(value != null);
+    return LinkageItemType._(
+      validateEnum(
+        value,
+        [
+          'source',
+          'alternate',
+          'historical',
+        ],
+      ),
+    );
+  }
+  const LinkageItemType._(this.value);
+  factory LinkageItemType.fromJson(String json) => LinkageItemType(json);
+  String toJson() => result();
 }

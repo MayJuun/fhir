@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
 import '../primitiveTypes/uri.dart';
@@ -28,7 +31,7 @@ class Encounter {
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<Identifier> identifier;
-  String status;
+  EncounterStatus status;
   List<EncounterStatusHistory> statusHistory;
   Coding clas;
   List<EncounterClassHistory> classHistory;
@@ -96,7 +99,7 @@ class EncounterStatusHistory {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String status;
+  EncounterStatusHistoryStatus status;
   Period period;
 
   EncounterStatusHistory({
@@ -220,7 +223,7 @@ class EncounterLocation {
   List<Extension> extension;
   List<Extension> modifierExtension;
   Reference location;
-  String status;
+  EncounterLocationStatus status;
   CodeableConcept physicalType;
   Period period;
 
@@ -237,4 +240,82 @@ class EncounterLocation {
   factory EncounterLocation.fromJson(Map<String, dynamic> json) =>
       _$EncounterLocationFromJson(json);
   Map<String, dynamic> toJson() => _$EncounterLocationToJson(this);
+}
+
+class EncounterStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory EncounterStatus(String value) {
+    assert(value != null);
+    return EncounterStatus._(
+      validateEnum(
+        value,
+        [
+          'planned',
+          'arrived',
+          'triaged',
+          'in-progress',
+          'onleave',
+          'finished',
+          'cancelled',
+          'entered-in-error',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const EncounterStatus._(this.value);
+  factory EncounterStatus.fromJson(String json) => EncounterStatus(json);
+  String toJson() => result();
+}
+
+class EncounterStatusHistoryStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory EncounterStatusHistoryStatus(String value) {
+    assert(value != null);
+    return EncounterStatusHistoryStatus._(
+      validateEnum(
+        value,
+        [
+          'planned',
+          'arrived',
+          'triaged',
+          'in-progress',
+          'onleave',
+          'finished',
+          'cancelled',
+          'entered-in-error',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const EncounterStatusHistoryStatus._(this.value);
+  factory EncounterStatusHistoryStatus.fromJson(String json) =>
+      EncounterStatusHistoryStatus(json);
+  String toJson() => result();
+}
+
+class EncounterLocationStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory EncounterLocationStatus(String value) {
+    assert(value != null);
+    return EncounterLocationStatus._(
+      validateEnum(
+        value,
+        [
+          'planned',
+          'active',
+          'reserved',
+          'completed',
+        ],
+      ),
+    );
+  }
+  const EncounterLocationStatus._(this.value);
+  factory EncounterLocationStatus.fromJson(String json) =>
+      EncounterLocationStatus(json);
+  String toJson() => result();
 }

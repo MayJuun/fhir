@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
@@ -22,7 +25,7 @@ part 'chargeItem.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ChargeItem {
-  static const String resourceType = 'ChargeItem';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -34,7 +37,7 @@ class ChargeItem {
   List<Identifier> identifier;
   List<FhirUri> definitionUri;
   List<Canonical> definitionCanonical;
-  String status;
+  ChargeItemStatus status;
   List<Reference> partOf;
   CodeableConcept code;
   Reference subject;
@@ -62,6 +65,7 @@ class ChargeItem {
   List<Reference> supportingInformation;
 
   ChargeItem({
+    this.resourceType = 'ChargeItem',
     this.id,
     this.meta,
     this.implicitRules,
@@ -125,4 +129,29 @@ class ChargeItemPerformer {
   factory ChargeItemPerformer.fromJson(Map<String, dynamic> json) =>
       _$ChargeItemPerformerFromJson(json);
   Map<String, dynamic> toJson() => _$ChargeItemPerformerToJson(this);
+}
+
+class ChargeItemStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ChargeItemStatus(String value) {
+    assert(value != null);
+    return ChargeItemStatus._(
+      validateEnum(
+        value,
+        [
+          'planned',
+          'billable',
+          'not-billable',
+          'aborted',
+          'billed',
+          'entered-in-error',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const ChargeItemStatus._(this.value);
+  factory ChargeItemStatus.fromJson(String json) => ChargeItemStatus(json);
+  String toJson() => result();
 }

@@ -17,7 +17,7 @@ part 'practitionerRole.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class PractitionerRole {
-  static const String resourceType = 'PractitionerRole';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -42,6 +42,7 @@ class PractitionerRole {
   List<Reference> endpoint;
 
   PractitionerRole({
+    this.resourceType = 'PractitionerRole',
     this.id,
     this.meta,
     this.implicitRules,

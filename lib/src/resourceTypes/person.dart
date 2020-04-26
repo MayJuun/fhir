@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
@@ -31,7 +34,7 @@ class Person {
   List<Identifier> identifier;
   List<HumanName> name;
   List<ContactPoint> telecom;
-  String gender;
+  PersonGender gender;
   Date birthDate;
   List<Address> address;
   Attachment photo;
@@ -70,7 +73,7 @@ class PersonLink {
   List<Extension> extension;
   List<Extension> modifierExtension;
   Reference target;
-  String assurance;
+  PersonLinkAssurance assurance;
 
   PersonLink({
     this.id,
@@ -83,4 +86,49 @@ class PersonLink {
   factory PersonLink.fromJson(Map<String, dynamic> json) =>
       _$PersonLinkFromJson(json);
   Map<String, dynamic> toJson() => _$PersonLinkToJson(this);
+}
+
+class PersonGender extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory PersonGender(String value) {
+    assert(value != null);
+    return PersonGender._(
+      validateEnum(
+        value,
+        [
+          'male',
+          'female',
+          'other',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const PersonGender._(this.value);
+  factory PersonGender.fromJson(String json) => PersonGender(json);
+  String toJson() => result();
+}
+
+class PersonLinkAssurance extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory PersonLinkAssurance(String value) {
+    assert(value != null);
+    return PersonLinkAssurance._(
+      validateEnum(
+        value,
+        [
+          'level1',
+          'level2',
+          'level3',
+          'level4',
+        ],
+      ),
+    );
+  }
+  const PersonLinkAssurance._(this.value);
+  factory PersonLinkAssurance.fromJson(String json) =>
+      PersonLinkAssurance(json);
+  String toJson() => result();
 }

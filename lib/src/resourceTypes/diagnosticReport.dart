@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/instant.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
@@ -19,7 +22,7 @@ part 'diagnosticReport.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class DiagnosticReport {
-  static const String resourceType = 'DiagnosticReport';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -30,7 +33,7 @@ class DiagnosticReport {
   List<Extension> modifierExtension;
   List<Identifier> identifier;
   List<Reference> basedOn;
-  String status;
+  DiagnosticReportStatus status;
   List<CodeableConcept> category;
   CodeableConcept code;
   Reference subject;
@@ -49,6 +52,7 @@ class DiagnosticReport {
   List<Attachment> presentedForm;
 
   DiagnosticReport({
+    this.resourceType = 'DiagnosticReport',
     this.id,
     this.meta,
     this.implicitRules,
@@ -102,4 +106,33 @@ class DiagnosticReportMedia {
   factory DiagnosticReportMedia.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticReportMediaFromJson(json);
   Map<String, dynamic> toJson() => _$DiagnosticReportMediaToJson(this);
+}
+
+class DiagnosticReportStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory DiagnosticReportStatus(String value) {
+    assert(value != null);
+    return DiagnosticReportStatus._(
+      validateEnum(
+        value,
+        [
+          'registered',
+          'partial',
+          'preliminary',
+          'final',
+          'amended',
+          'corrected',
+          'appended',
+          'cancelled',
+          'entered-in-error',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const DiagnosticReportStatus._(this.value);
+  factory DiagnosticReportStatus.fromJson(String json) =>
+      DiagnosticReportStatus(json);
+  String toJson() => result();
 }

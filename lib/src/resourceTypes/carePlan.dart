@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
@@ -21,7 +24,7 @@ part 'carePlan.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class CarePlan {
-  static const String resourceType = 'CarePlan';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -55,6 +58,7 @@ class CarePlan {
   List<Annotation> note;
 
   CarePlan({
+    this.resourceType = 'CarePlan',
     this.id,
     this.meta,
     this.implicitRules,
@@ -132,7 +136,7 @@ class CarePlanDetail {
   List<CodeableConcept> reasonCode;
   List<Reference> reasonReference;
   List<Reference> goal;
-  String status;
+  CarePlanDetailStatus status;
   CodeableConcept statusReason;
   bool doNotPerform;
   Timing scheduledTiming;
@@ -175,4 +179,32 @@ class CarePlanDetail {
   factory CarePlanDetail.fromJson(Map<String, dynamic> json) =>
       _$CarePlanDetailFromJson(json);
   Map<String, dynamic> toJson() => _$CarePlanDetailToJson(this);
+}
+
+class CarePlanDetailStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CarePlanDetailStatus(String value) {
+    assert(value != null);
+    return CarePlanDetailStatus._(
+      validateEnum(
+        value,
+        [
+          'not-started',
+          'scheduled',
+          'in-progress',
+          'on-hold',
+          'completed',
+          'cancelled',
+          'stopped',
+          'unknown',
+          'entered-in-error',
+        ],
+      ),
+    );
+  }
+  const CarePlanDetailStatus._(this.value);
+  factory CarePlanDetailStatus.fromJson(String json) =>
+      CarePlanDetailStatus(json);
+  String toJson() => result();
 }

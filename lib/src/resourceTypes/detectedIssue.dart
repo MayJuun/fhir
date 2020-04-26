@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/id.dart';
@@ -17,7 +20,7 @@ part 'detectedIssue.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class DetectedIssue {
-  static const String resourceType = 'DetectedIssue';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -29,7 +32,7 @@ class DetectedIssue {
   List<Identifier> identifier;
   Code status;
   CodeableConcept code;
-  String severity;
+  DetectedIssueSeverity severity;
   Reference patient;
   FhirDateTime identifiedDateTime;
   Period identifiedPeriod;
@@ -41,6 +44,7 @@ class DetectedIssue {
   List<DetectedIssueMitigation> mitigation;
 
   DetectedIssue({
+    this.resourceType = 'DetectedIssue',
     this.id,
     this.meta,
     this.implicitRules,
@@ -111,4 +115,26 @@ class DetectedIssueMitigation {
   factory DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
       _$DetectedIssueMitigationFromJson(json);
   Map<String, dynamic> toJson() => _$DetectedIssueMitigationToJson(this);
+}
+
+class DetectedIssueSeverity extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory DetectedIssueSeverity(String value) {
+    assert(value != null);
+    return DetectedIssueSeverity._(
+      validateEnum(
+        value,
+        [
+          'high',
+          'moderate',
+          'low',
+        ],
+      ),
+    );
+  }
+  const DetectedIssueSeverity._(this.value);
+  factory DetectedIssueSeverity.fromJson(String json) =>
+      DetectedIssueSeverity(json);
+  String toJson() => result();
 }

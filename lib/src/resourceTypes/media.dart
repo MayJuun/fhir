@@ -20,7 +20,7 @@ part 'media.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Media {
-  static const String resourceType = 'Media';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -54,6 +54,7 @@ class Media {
   List<Annotation> note;
 
   Media({
+    this.resourceType = 'Media',
     this.id,
     this.meta,
     this.implicitRules,

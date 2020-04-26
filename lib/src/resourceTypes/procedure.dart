@@ -21,7 +21,7 @@ part 'procedure.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Procedure {
-  static const String resourceType = 'Procedure';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -64,6 +64,7 @@ class Procedure {
   List<CodeableConcept> usedCode;
 
   Procedure({
+    this.resourceType = 'Procedure',
     this.id,
     this.meta,
     this.implicitRules,

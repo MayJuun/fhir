@@ -22,7 +22,7 @@ part 'medicationRequest.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class MedicationRequest {
-  static const String resourceType = 'MedicationRequest';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -67,6 +67,7 @@ class MedicationRequest {
   List<Reference> eventHistory;
 
   MedicationRequest({
+    this.resourceType = 'MedicationRequest',
     this.id,
     this.meta,
     this.implicitRules,

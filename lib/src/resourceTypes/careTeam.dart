@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
 import '../primitiveTypes/uri.dart';
@@ -17,7 +20,7 @@ part 'careTeam.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class CareTeam {
-  static const String resourceType = 'CareTeam';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -27,7 +30,7 @@ class CareTeam {
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<Identifier> identifier;
-  String status;
+  CareTeamStatus status;
   List<CodeableConcept> category;
   String name;
   Reference subject;
@@ -41,6 +44,7 @@ class CareTeam {
   List<Annotation> note;
 
   CareTeam({
+    this.resourceType = 'CareTeam',
     this.id,
     this.meta,
     this.implicitRules,
@@ -92,4 +96,27 @@ class CareTeamParticipant {
   factory CareTeamParticipant.fromJson(Map<String, dynamic> json) =>
       _$CareTeamParticipantFromJson(json);
   Map<String, dynamic> toJson() => _$CareTeamParticipantToJson(this);
+}
+
+class CareTeamStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CareTeamStatus(String value) {
+    assert(value != null);
+    return CareTeamStatus._(
+      validateEnum(
+        value,
+        [
+          'proposed',
+          'active',
+          'suspended',
+          'inactive',
+          'entered-in-error',
+        ],
+      ),
+    );
+  }
+  const CareTeamStatus._(this.value);
+  factory CareTeamStatus.fromJson(String json) => CareTeamStatus(json);
+  String toJson() => result();
 }

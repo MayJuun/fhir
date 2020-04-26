@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
@@ -19,7 +22,7 @@ part 'paymentReconciliation.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class PaymentReconciliation {
-  static const String resourceType = 'PaymentReconciliation';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -35,7 +38,7 @@ class PaymentReconciliation {
   Reference paymentIssuer;
   Reference request;
   Reference requestor;
-  String outcome;
+  PaymentReconciliationOutcome outcome;
   String disposition;
   Date paymentDate;
   Money paymentAmount;
@@ -45,6 +48,7 @@ class PaymentReconciliation {
   List<PaymentReconciliationProcessNote> processNote;
 
   PaymentReconciliation({
+    this.resourceType = 'PaymentReconciliation',
     this.id,
     this.meta,
     this.implicitRules,
@@ -117,7 +121,7 @@ class PaymentReconciliationProcessNote {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String type;
+  PaymentReconciliationProcessNoteType type;
   String text;
 
   PaymentReconciliationProcessNote({
@@ -133,4 +137,49 @@ class PaymentReconciliationProcessNote {
       _$PaymentReconciliationProcessNoteFromJson(json);
   Map<String, dynamic> toJson() =>
       _$PaymentReconciliationProcessNoteToJson(this);
+}
+
+class PaymentReconciliationOutcome extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory PaymentReconciliationOutcome(String value) {
+    assert(value != null);
+    return PaymentReconciliationOutcome._(
+      validateEnum(
+        value,
+        [
+          'queued',
+          'complete',
+          'error',
+          'partial',
+        ],
+      ),
+    );
+  }
+  const PaymentReconciliationOutcome._(this.value);
+  factory PaymentReconciliationOutcome.fromJson(String json) =>
+      PaymentReconciliationOutcome(json);
+  String toJson() => result();
+}
+
+class PaymentReconciliationProcessNoteType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory PaymentReconciliationProcessNoteType(String value) {
+    assert(value != null);
+    return PaymentReconciliationProcessNoteType._(
+      validateEnum(
+        value,
+        [
+          'display',
+          'print',
+          'printoper',
+        ],
+      ),
+    );
+  }
+  const PaymentReconciliationProcessNoteType._(this.value);
+  factory PaymentReconciliationProcessNoteType.fromJson(String json) =>
+      PaymentReconciliationProcessNoteType(json);
+  String toJson() => result();
 }

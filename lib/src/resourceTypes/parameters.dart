@@ -50,7 +50,7 @@ part 'parameters.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Parameters {
-  static const String resourceType = 'Parameters';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -58,6 +58,7 @@ class Parameters {
   List<ParametersParameter> parameter;
 
   Parameters({
+    this.resourceType = 'Parameters',
     this.id,
     this.meta,
     this.implicitRules,

@@ -16,7 +16,7 @@ part 'appointmentResponse.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class AppointmentResponse {
-  static const String resourceType = 'AppointmentResponse';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -35,6 +35,7 @@ class AppointmentResponse {
   String comment;
 
   AppointmentResponse({
+    this.resourceType = 'AppointmentResponse',
     this.id,
     this.meta,
     this.implicitRules,

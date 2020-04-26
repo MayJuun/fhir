@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/code.dart';
@@ -19,7 +22,7 @@ part 'conceptMap.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ConceptMap {
-  static const String resourceType = 'ConceptMap';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -33,7 +36,7 @@ class ConceptMap {
   String version;
   String name;
   String title;
-  String status;
+  ConceptMapStatus status;
   bool experimental;
   FhirDateTime date;
   String publisher;
@@ -50,6 +53,7 @@ class ConceptMap {
   List<ConceptMapGroup> group;
 
   ConceptMap({
+    this.resourceType = 'ConceptMap',
     this.id,
     this.meta,
     this.implicitRules,
@@ -144,7 +148,7 @@ class ConceptMapTarget {
   List<Extension> modifierExtension;
   Code code;
   String display;
-  String equivalence;
+  ConceptMapTargetEquivalence equivalence;
   String comment;
   List<ConceptMapDependsOn> dependsOn;
   List<ConceptMapDependsOn> product;
@@ -196,7 +200,7 @@ class ConceptMapUnmapped {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String mode;
+  ConceptMapUnmappedMode mode;
   Code code;
   String display;
   Canonical url;
@@ -214,4 +218,77 @@ class ConceptMapUnmapped {
   factory ConceptMapUnmapped.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapUnmappedFromJson(json);
   Map<String, dynamic> toJson() => _$ConceptMapUnmappedToJson(this);
+}
+
+class ConceptMapStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ConceptMapStatus(String value) {
+    assert(value != null);
+    return ConceptMapStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const ConceptMapStatus._(this.value);
+  factory ConceptMapStatus.fromJson(String json) => ConceptMapStatus(json);
+  String toJson() => result();
+}
+
+class ConceptMapTargetEquivalence extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ConceptMapTargetEquivalence(String value) {
+    assert(value != null);
+    return ConceptMapTargetEquivalence._(
+      validateEnum(
+        value,
+        [
+          'relatedto',
+          'equivalent',
+          'equal',
+          'wider',
+          'subsumes',
+          'narrower',
+          'specializes',
+          'inexact',
+          'unmatched',
+          'disjoint',
+        ],
+      ),
+    );
+  }
+  const ConceptMapTargetEquivalence._(this.value);
+  factory ConceptMapTargetEquivalence.fromJson(String json) =>
+      ConceptMapTargetEquivalence(json);
+  String toJson() => result();
+}
+
+class ConceptMapUnmappedMode extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ConceptMapUnmappedMode(String value) {
+    assert(value != null);
+    return ConceptMapUnmappedMode._(
+      validateEnum(
+        value,
+        [
+          'provided',
+          'fixed',
+          'other-map',
+        ],
+      ),
+    );
+  }
+  const ConceptMapUnmappedMode._(this.value);
+  factory ConceptMapUnmappedMode.fromJson(String json) =>
+      ConceptMapUnmappedMode(json);
+  String toJson() => result();
 }

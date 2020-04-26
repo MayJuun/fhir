@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
 import '../primitiveTypes/uri.dart';
@@ -18,7 +21,7 @@ part 'group.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Group {
-  static const String resourceType = 'Group';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -29,7 +32,7 @@ class Group {
   List<Extension> modifierExtension;
   List<Identifier> identifier;
   bool active;
-  String type;
+  GroupType type;
   bool actual;
   CodeableConcept code;
   String name;
@@ -39,6 +42,7 @@ class Group {
   List<GroupMember> member;
 
   Group({
+    this.resourceType = 'Group',
     this.id,
     this.meta,
     this.implicitRules,
@@ -117,4 +121,28 @@ class GroupMember {
   factory GroupMember.fromJson(Map<String, dynamic> json) =>
       _$GroupMemberFromJson(json);
   Map<String, dynamic> toJson() => _$GroupMemberToJson(this);
+}
+
+class GroupType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory GroupType(String value) {
+    assert(value != null);
+    return GroupType._(
+      validateEnum(
+        value,
+        [
+          'person',
+          'animal',
+          'practitioner',
+          'device',
+          'medication',
+          'substance',
+        ],
+      ),
+    );
+  }
+  const GroupType._(this.value);
+  factory GroupType.fromJson(String json) => GroupType(json);
+  String toJson() => result();
 }

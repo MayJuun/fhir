@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/base64binary.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
@@ -20,7 +23,7 @@ part 'device.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Device {
-  static const String resourceType = 'Device';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -32,7 +35,7 @@ class Device {
   List<Identifier> identifier;
   Reference definition;
   List<DeviceUdiCarrier> udiCarrier;
-  String status;
+  DeviceStatus status;
   List<CodeableConcept> statusReason;
   String distinctIdentifier;
   String manufacturer;
@@ -57,6 +60,7 @@ class Device {
   Reference parent;
 
   Device({
+    this.resourceType = 'Device',
     this.id,
     this.meta,
     this.implicitRules,
@@ -107,7 +111,7 @@ class DeviceUdiCarrier {
   FhirUri jurisdiction;
   Base64Binary carrierAIDC;
   String carrierHRF;
-  String entryType;
+  DeviceUdiCarrierEntryType entryType;
 
   DeviceUdiCarrier({
     this.id,
@@ -132,7 +136,7 @@ class DeviceDeviceName {
   List<Extension> extension;
   List<Extension> modifierExtension;
   String name;
-  String type;
+  DeviceDeviceNameType type;
 
   DeviceDeviceName({
     this.id,
@@ -212,4 +216,76 @@ class DeviceProperty {
   factory DeviceProperty.fromJson(Map<String, dynamic> json) =>
       _$DevicePropertyFromJson(json);
   Map<String, dynamic> toJson() => _$DevicePropertyToJson(this);
+}
+
+class DeviceStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory DeviceStatus(String value) {
+    assert(value != null);
+    return DeviceStatus._(
+      validateEnum(
+        value,
+        [
+          'active',
+          'inactive',
+          'entered-in-error',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const DeviceStatus._(this.value);
+  factory DeviceStatus.fromJson(String json) => DeviceStatus(json);
+  String toJson() => result();
+}
+
+class DeviceUdiCarrierEntryType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory DeviceUdiCarrierEntryType(String value) {
+    assert(value != null);
+    return DeviceUdiCarrierEntryType._(
+      validateEnum(
+        value,
+        [
+          'barcode',
+          'rfid',
+          'manual',
+          'card',
+          'self-reported',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const DeviceUdiCarrierEntryType._(this.value);
+  factory DeviceUdiCarrierEntryType.fromJson(String json) =>
+      DeviceUdiCarrierEntryType(json);
+  String toJson() => result();
+}
+
+class DeviceDeviceNameType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory DeviceDeviceNameType(String value) {
+    assert(value != null);
+    return DeviceDeviceNameType._(
+      validateEnum(
+        value,
+        [
+          'udi-label-name',
+          'user-friendly-name',
+          'patient-reported-name',
+          'manufacturer-name',
+          'model-name',
+          'other',
+        ],
+      ),
+    );
+  }
+  const DeviceDeviceNameType._(this.value);
+  factory DeviceDeviceNameType.fromJson(String json) =>
+      DeviceDeviceNameType(json);
+  String toJson() => result();
 }

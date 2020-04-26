@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/markdown.dart';
@@ -23,7 +26,7 @@ part 'researchDefinition.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ResearchDefinition {
-  static const String resourceType = 'ResearchDefinition';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -39,7 +42,7 @@ class ResearchDefinition {
   String title;
   String shortTitle;
   String subtitle;
-  String status;
+  ResearchDefinitionStatus status;
   bool experimental;
   CodeableConcept subjectCodeableConcept;
   Reference subjectReference;
@@ -69,6 +72,7 @@ class ResearchDefinition {
   Reference outcome;
 
   ResearchDefinition({
+    this.resourceType = 'ResearchDefinition',
     this.id,
     this.meta,
     this.implicitRules,
@@ -117,4 +121,27 @@ class ResearchDefinition {
   factory ResearchDefinition.fromJson(Map<String, dynamic> json) =>
       _$ResearchDefinitionFromJson(json);
   Map<String, dynamic> toJson() => _$ResearchDefinitionToJson(this);
+}
+
+class ResearchDefinitionStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ResearchDefinitionStatus(String value) {
+    assert(value != null);
+    return ResearchDefinitionStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const ResearchDefinitionStatus._(this.value);
+  factory ResearchDefinitionStatus.fromJson(String json) =>
+      ResearchDefinitionStatus(json);
+  String toJson() => result();
 }

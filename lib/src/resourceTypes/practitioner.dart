@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
@@ -35,7 +38,7 @@ class Practitioner {
   List<HumanName> name;
   List<ContactPoint> telecom;
   List<Address> address;
-  String gender;
+  PractitionerGender gender;
   Date birthDate;
   List<Attachment> photo;
   List<PractitionerQualification> qualification;
@@ -91,4 +94,26 @@ class PractitionerQualification {
   factory PractitionerQualification.fromJson(Map<String, dynamic> json) =>
       _$PractitionerQualificationFromJson(json);
   Map<String, dynamic> toJson() => _$PractitionerQualificationToJson(this);
+}
+
+class PractitionerGender extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory PractitionerGender(String value) {
+    assert(value != null);
+    return PractitionerGender._(
+      validateEnum(
+        value,
+        [
+          'male',
+          'female',
+          'other',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const PractitionerGender._(this.value);
+  factory PractitionerGender.fromJson(String json) => PractitionerGender(json);
+  String toJson() => result();
 }

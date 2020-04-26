@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/canonical.dart';
@@ -29,7 +32,7 @@ part 'evidenceVariable.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class EvidenceVariable {
-  static const String resourceType = 'EvidenceVariable';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -45,7 +48,7 @@ class EvidenceVariable {
   String title;
   String shortTitle;
   String subtitle;
-  String status;
+  EvidenceVariableStatus status;
   FhirDateTime date;
   String publisher;
   List<ContactDetail> contact;
@@ -63,10 +66,11 @@ class EvidenceVariable {
   List<ContactDetail> reviewer;
   List<ContactDetail> endorser;
   List<RelatedArtifact> relatedArtifact;
-  String type;
+  EvidenceVariableType type;
   List<EvidenceVariableCharacteristic> characteristic;
 
   EvidenceVariable({
+    this.resourceType = 'EvidenceVariable',
     this.id,
     this.meta,
     this.implicitRules,
@@ -128,7 +132,7 @@ class EvidenceVariableCharacteristic {
   Duration participantEffectiveDuration;
   Timing participantEffectiveTiming;
   Duration timeFromStart;
-  String groupMeasure;
+  EvidenceVariableCharacteristicGroupMeasure groupMeasure;
 
   EvidenceVariableCharacteristic({
     this.id,
@@ -154,4 +158,75 @@ class EvidenceVariableCharacteristic {
   factory EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableCharacteristicFromJson(json);
   Map<String, dynamic> toJson() => _$EvidenceVariableCharacteristicToJson(this);
+}
+
+class EvidenceVariableStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory EvidenceVariableStatus(String value) {
+    assert(value != null);
+    return EvidenceVariableStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const EvidenceVariableStatus._(this.value);
+  factory EvidenceVariableStatus.fromJson(String json) =>
+      EvidenceVariableStatus(json);
+  String toJson() => result();
+}
+
+class EvidenceVariableType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory EvidenceVariableType(String value) {
+    assert(value != null);
+    return EvidenceVariableType._(
+      validateEnum(
+        value,
+        [
+          'dichotomous',
+          'continuous',
+          'descriptive',
+        ],
+      ),
+    );
+  }
+  const EvidenceVariableType._(this.value);
+  factory EvidenceVariableType.fromJson(String json) =>
+      EvidenceVariableType(json);
+  String toJson() => result();
+}
+
+class EvidenceVariableCharacteristicGroupMeasure
+    extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory EvidenceVariableCharacteristicGroupMeasure(String value) {
+    assert(value != null);
+    return EvidenceVariableCharacteristicGroupMeasure._(
+      validateEnum(
+        value,
+        [
+          'mean',
+          'median',
+          'mean-of-mean',
+          'mean-of-median',
+          'median-of-mean',
+          'median-of-median',
+        ],
+      ),
+    );
+  }
+  const EvidenceVariableCharacteristicGroupMeasure._(this.value);
+  factory EvidenceVariableCharacteristicGroupMeasure.fromJson(String json) =>
+      EvidenceVariableCharacteristicGroupMeasure(json);
+  String toJson() => result();
 }

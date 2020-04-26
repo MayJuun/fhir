@@ -1,6 +1,10 @@
+import 'package:dartz/dartz.dart';
+import 'package:fhir/fhir.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
@@ -21,7 +25,7 @@ part 'capabilityStatement.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class CapabilityStatement {
-  static const String resourceType = 'CapabilityStatement';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -34,7 +38,7 @@ class CapabilityStatement {
   String version;
   String name;
   String title;
-  String status;
+  CapabilityStatementStatus status;
   bool experimental;
   FhirDateTime date;
   String publisher;
@@ -44,12 +48,12 @@ class CapabilityStatement {
   List<CodeableConcept> jurisdiction;
   Markdown purpose;
   Markdown copyright;
-  String kind;
+  CapabilityStatementKind kind;
   List<Canonical> instantiates;
   List<Canonical> imports;
   CapabilityStatementSoftware software;
   CapabilityStatementImplementation implementation;
-  String fhirVersion;
+  CapabilityStatementFhirVersion fhirVersion;
   List<Code> format;
   List<Code> patchFormat;
   List<Canonical> implementationGuide;
@@ -58,6 +62,7 @@ class CapabilityStatement {
   List<CapabilityStatementDocument> document;
 
   CapabilityStatement({
+    this.resourceType = 'CapabilityStatement',
     this.id,
     this.meta,
     this.implicitRules,
@@ -152,7 +157,7 @@ class CapabilityStatementRest {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String mode;
+  CapabilityStatementRestMode mode;
   Markdown documentation;
   CapabilityStatementSecurity security;
   List<CapabilityStatementResource> resource;
@@ -213,13 +218,13 @@ class CapabilityStatementResource {
   List<Canonical> supportedProfile;
   Markdown documentation;
   List<CapabilityStatementInteraction> interaction;
-  String versioning;
+  CapabilityStatementResourceVersioning versioning;
   bool readHistory;
   bool updateCreate;
   bool conditionalCreate;
-  String conditionalRead;
+  CapabilityStatementResourceConditionalRead conditionalRead;
   bool conditionalUpdate;
-  String conditionalDelete;
+  CapabilityStatementResourceConditionalDelete conditionalDelete;
   List<String> referencePolicy;
   List<String> searchInclude;
   List<String> searchRevInclude;
@@ -259,7 +264,7 @@ class CapabilityStatementInteraction {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String code;
+  CapabilityStatementInteractionCode code;
   Markdown documentation;
 
   CapabilityStatementInteraction({
@@ -396,7 +401,7 @@ class CapabilityStatementSupportedMessage {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String mode;
+  CapabilityStatementSupportedMessageMode mode;
   Canonical definition;
 
   CapabilityStatementSupportedMessage({
@@ -419,7 +424,7 @@ class CapabilityStatementDocument {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String mode;
+  CapabilityStatementDocumentMode mode;
   Markdown documentation;
   Canonical profile;
 
@@ -435,4 +440,301 @@ class CapabilityStatementDocument {
   factory CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementDocumentFromJson(json);
   Map<String, dynamic> toJson() => _$CapabilityStatementDocumentToJson(this);
+}
+
+class CapabilityStatementStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CapabilityStatementStatus(String value) {
+    assert(value != null);
+    return CapabilityStatementStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const CapabilityStatementStatus._(this.value);
+  factory CapabilityStatementStatus.fromJson(String json) =>
+      CapabilityStatementStatus(json);
+  String toJson() => result();
+}
+
+class CapabilityStatementKind extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CapabilityStatementKind(String value) {
+    assert(value != null);
+    return CapabilityStatementKind._(
+      validateEnum(
+        value,
+        [
+          'instance',
+          'capability',
+          'requirements',
+        ],
+      ),
+    );
+  }
+  const CapabilityStatementKind._(this.value);
+  factory CapabilityStatementKind.fromJson(String json) =>
+      CapabilityStatementKind(json);
+  String toJson() => result();
+}
+
+class CapabilityStatementFhirVersion extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CapabilityStatementFhirVersion(String value) {
+    assert(value != null);
+    return CapabilityStatementFhirVersion._(
+      validateEnum(
+        value,
+        [
+          '0.01',
+          '0.05',
+          '0.06',
+          '0.11',
+          '0.0.80',
+          '0.0.81',
+          '0.0.82',
+          '0.4.0',
+          '0.5.0',
+          '1.0.0',
+          '1.0.1',
+          '1.0.2',
+          '1.1.0',
+          '1.4.0',
+          '1.6.0',
+          '1.8.0',
+          '3.0.0',
+          '3.0.1',
+          '3.3.0',
+          '3.5.0',
+          '4.0.0',
+          '4.0.1',
+        ],
+      ),
+    );
+  }
+  const CapabilityStatementFhirVersion._(this.value);
+  factory CapabilityStatementFhirVersion.fromJson(String json) =>
+      CapabilityStatementFhirVersion(json);
+  String toJson() => result();
+}
+
+class CapabilityStatementRestMode extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CapabilityStatementRestMode(String value) {
+    assert(value != null);
+    return CapabilityStatementRestMode._(
+      validateEnum(
+        value,
+        [
+          'client',
+          'server',
+        ],
+      ),
+    );
+  }
+  const CapabilityStatementRestMode._(this.value);
+  factory CapabilityStatementRestMode.fromJson(String json) =>
+      CapabilityStatementRestMode(json);
+  String toJson() => result();
+}
+
+class CapabilityStatementResourceVersioning extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CapabilityStatementResourceVersioning(String value) {
+    assert(value != null);
+    return CapabilityStatementResourceVersioning._(
+      validateEnum(
+        value,
+        [
+          'no-version',
+          'versioned',
+          'versioned-update',
+        ],
+      ),
+    );
+  }
+  const CapabilityStatementResourceVersioning._(this.value);
+  factory CapabilityStatementResourceVersioning.fromJson(String json) =>
+      CapabilityStatementResourceVersioning(json);
+  String toJson() => result();
+}
+
+class CapabilityStatementResourceConditionalRead
+    extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CapabilityStatementResourceConditionalRead(String value) {
+    assert(value != null);
+    return CapabilityStatementResourceConditionalRead._(
+      validateEnum(
+        value,
+        [
+          'not-supported',
+          'modified-since',
+          'not-match',
+          'full-support',
+        ],
+      ),
+    );
+  }
+  const CapabilityStatementResourceConditionalRead._(this.value);
+  factory CapabilityStatementResourceConditionalRead.fromJson(String json) =>
+      CapabilityStatementResourceConditionalRead(json);
+  String toJson() => result();
+}
+
+class CapabilityStatementResourceConditionalDelete
+    extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CapabilityStatementResourceConditionalDelete(String value) {
+    assert(value != null);
+    return CapabilityStatementResourceConditionalDelete._(
+      validateEnum(
+        value,
+        [
+          'not-supported',
+          'single',
+          'multiple',
+        ],
+      ),
+    );
+  }
+  const CapabilityStatementResourceConditionalDelete._(this.value);
+  factory CapabilityStatementResourceConditionalDelete.fromJson(String json) =>
+      CapabilityStatementResourceConditionalDelete(json);
+  String toJson() => result();
+}
+
+class CapabilityStatementInteractionCode extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CapabilityStatementInteractionCode(String value) {
+    assert(value != null);
+    return CapabilityStatementInteractionCode._(
+      validateEnum(
+        value,
+        [
+          'read',
+          'vread',
+          'update',
+          'patch',
+          'delete',
+          'history-instance',
+          'history-type',
+          'create',
+          'search-type',
+        ],
+      ),
+    );
+  }
+  const CapabilityStatementInteractionCode._(this.value);
+  factory CapabilityStatementInteractionCode.fromJson(String json) =>
+      CapabilityStatementInteractionCode(json);
+  String toJson() => result();
+}
+
+class CapabilityStatementSearchParamType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CapabilityStatementSearchParamType(String value) {
+    assert(value != null);
+    return CapabilityStatementSearchParamType._(
+      validateEnum(
+        value,
+        [
+          'number',
+          'date',
+          'string',
+          'token',
+          'reference',
+          'composite',
+          'quantity',
+          'uri',
+          'special',
+        ],
+      ),
+    );
+  }
+  const CapabilityStatementSearchParamType._(this.value);
+  factory CapabilityStatementSearchParamType.fromJson(String json) =>
+      CapabilityStatementSearchParamType(json);
+  String toJson() => result();
+}
+
+class CapabilityStatementInteraction1Code extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CapabilityStatementInteraction1Code(String value) {
+    assert(value != null);
+    return CapabilityStatementInteraction1Code._(
+      validateEnum(
+        value,
+        [
+          'transaction',
+          'batch',
+          'search-system',
+          'history-system',
+        ],
+      ),
+    );
+  }
+  const CapabilityStatementInteraction1Code._(this.value);
+  factory CapabilityStatementInteraction1Code.fromJson(String json) =>
+      CapabilityStatementInteraction1Code(json);
+  String toJson() => result();
+}
+
+class CapabilityStatementSupportedMessageMode extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CapabilityStatementSupportedMessageMode(String value) {
+    assert(value != null);
+    return CapabilityStatementSupportedMessageMode._(
+      validateEnum(
+        value,
+        [
+          'sender',
+          'receiver',
+        ],
+      ),
+    );
+  }
+  const CapabilityStatementSupportedMessageMode._(this.value);
+  factory CapabilityStatementSupportedMessageMode.fromJson(String json) =>
+      CapabilityStatementSupportedMessageMode(json);
+  String toJson() => result();
+}
+
+class CapabilityStatementDocumentMode extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory CapabilityStatementDocumentMode(String value) {
+    assert(value != null);
+    return CapabilityStatementDocumentMode._(
+      validateEnum(
+        value,
+        [
+          'producer',
+          'consumer',
+        ],
+      ),
+    );
+  }
+  const CapabilityStatementDocumentMode._(this.value);
+  factory CapabilityStatementDocumentMode.fromJson(String json) =>
+      CapabilityStatementDocumentMode(json);
+  String toJson() => result();
 }

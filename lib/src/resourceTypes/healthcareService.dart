@@ -19,7 +19,7 @@ part 'healthcareService.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class HealthcareService {
-  static const String resourceType = 'HealthcareService';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -54,6 +54,7 @@ class HealthcareService {
   List<Reference> endpoint;
 
   HealthcareService({
+    this.resourceType = 'HealthcareService',
     this.id,
     this.meta,
     this.implicitRules,

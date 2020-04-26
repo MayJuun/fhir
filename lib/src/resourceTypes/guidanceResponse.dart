@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
@@ -18,7 +21,7 @@ part 'guidanceResponse.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class GuidanceResponse {
-  static const String resourceType = 'GuidanceResponse';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -32,7 +35,7 @@ class GuidanceResponse {
   FhirUri moduleUri;
   Canonical moduleCanonical;
   CodeableConcept moduleCodeableConcept;
-  String status;
+  GuidanceResponseStatus status;
   Reference subject;
   Reference encounter;
   FhirDateTime occurrenceDateTime;
@@ -46,6 +49,7 @@ class GuidanceResponse {
   List<DataRequirement> dataRequirement;
 
   GuidanceResponse({
+    this.resourceType = 'GuidanceResponse',
     this.id,
     this.meta,
     this.implicitRules,
@@ -76,4 +80,29 @@ class GuidanceResponse {
   factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$GuidanceResponseFromJson(json);
   Map<String, dynamic> toJson() => _$GuidanceResponseToJson(this);
+}
+
+class GuidanceResponseStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory GuidanceResponseStatus(String value) {
+    assert(value != null);
+    return GuidanceResponseStatus._(
+      validateEnum(
+        value,
+        [
+          'success',
+          'data-requested',
+          'data-required',
+          'in-progress',
+          'failure',
+          'entered-in-error',
+        ],
+      ),
+    );
+  }
+  const GuidanceResponseStatus._(this.value);
+  factory GuidanceResponseStatus.fromJson(String json) =>
+      GuidanceResponseStatus(json);
+  String toJson() => result();
 }

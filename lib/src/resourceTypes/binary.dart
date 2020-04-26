@@ -11,7 +11,7 @@ part 'binary.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Binary {
-  static const String resourceType = 'Binary';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -21,6 +21,7 @@ class Binary {
   Base64Binary data;
 
   Binary({
+    this.resourceType = 'Binary',
     this.id,
     this.meta,
     this.implicitRules,

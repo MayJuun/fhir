@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
@@ -22,7 +25,7 @@ part 'claimResponse.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ClaimResponse {
-  static const String resourceType = 'ClaimResponse';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -60,6 +63,7 @@ class ClaimResponse {
   List<ClaimResponseError> error;
 
   ClaimResponse({
+    this.resourceType = 'ClaimResponse',
     this.id,
     this.meta,
     this.implicitRules,
@@ -383,7 +387,7 @@ class ClaimResponseProcessNote {
   List<Extension> extension;
   List<Extension> modifierExtension;
   int number;
-  String type;
+  ClaimResponseProcessNoteType type;
   String text;
   CodeableConcept language;
 
@@ -452,4 +456,26 @@ class ClaimResponseError {
   factory ClaimResponseError.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseErrorFromJson(json);
   Map<String, dynamic> toJson() => _$ClaimResponseErrorToJson(this);
+}
+
+class ClaimResponseProcessNoteType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ClaimResponseProcessNoteType(String value) {
+    assert(value != null);
+    return ClaimResponseProcessNoteType._(
+      validateEnum(
+        value,
+        [
+          'display',
+          'print',
+          'printoper',
+        ],
+      ),
+    );
+  }
+  const ClaimResponseProcessNoteType._(this.value);
+  factory ClaimResponseProcessNoteType.fromJson(String json) =>
+      ClaimResponseProcessNoteType(json);
+  String toJson() => result();
 }

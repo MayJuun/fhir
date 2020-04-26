@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/time.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/date.dart';
@@ -20,7 +23,7 @@ part 'questionnaireResponse.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class QuestionnaireResponse {
-  static const String resourceType = 'QuestionnaireResponse';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -33,7 +36,7 @@ class QuestionnaireResponse {
   List<Reference> basedOn;
   List<Reference> partOf;
   Canonical questionnaire;
-  String status;
+  QuestionnaireResponseStatus status;
   Reference subject;
   Reference encounter;
   FhirDateTime authored;
@@ -42,6 +45,7 @@ class QuestionnaireResponse {
   List<QuestionnaireResponseItem> item;
 
   QuestionnaireResponse({
+    this.resourceType = 'QuestionnaireResponse',
     this.id,
     this.meta,
     this.implicitRules,
@@ -136,4 +140,28 @@ class QuestionnaireResponseAnswer {
   factory QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseAnswerFromJson(json);
   Map<String, dynamic> toJson() => _$QuestionnaireResponseAnswerToJson(this);
+}
+
+class QuestionnaireResponseStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory QuestionnaireResponseStatus(String value) {
+    assert(value != null);
+    return QuestionnaireResponseStatus._(
+      validateEnum(
+        value,
+        [
+          'in-progress',
+          'completed',
+          'amended',
+          'entered-in-error',
+          'stopped',
+        ],
+      ),
+    );
+  }
+  const QuestionnaireResponseStatus._(this.value);
+  factory QuestionnaireResponseStatus.fromJson(String json) =>
+      QuestionnaireResponseStatus(json);
+  String toJson() => result();
 }

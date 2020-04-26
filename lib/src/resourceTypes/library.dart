@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/code.dart';
@@ -25,7 +28,7 @@ part 'library.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Library {
-  static const String resourceType = 'Library';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -40,7 +43,7 @@ class Library {
   String name;
   String title;
   String subtitle;
-  String status;
+  LibraryStatus status;
   bool experimental;
   CodeableConcept type;
   CodeableConcept subjectCodeableConcept;
@@ -68,6 +71,7 @@ class Library {
   List<Attachment> content;
 
   Library({
+    this.resourceType = 'Library',
     this.id,
     this.meta,
     this.implicitRules,
@@ -113,4 +117,26 @@ class Library {
   factory Library.fromJson(Map<String, dynamic> json) =>
       _$LibraryFromJson(json);
   Map<String, dynamic> toJson() => _$LibraryToJson(this);
+}
+
+class LibraryStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory LibraryStatus(String value) {
+    assert(value != null);
+    return LibraryStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const LibraryStatus._(this.value);
+  factory LibraryStatus.fromJson(String json) => LibraryStatus(json);
+  String toJson() => result();
 }

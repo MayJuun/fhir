@@ -1,6 +1,10 @@
+import 'package:dartz/dartz.dart';
+import 'package:fhir/fhir.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
@@ -23,7 +27,7 @@ part 'explanationOfBenefit.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ExplanationOfBenefit {
-  static const String resourceType = 'ExplanationOfBenefit';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -33,7 +37,7 @@ class ExplanationOfBenefit {
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<Identifier> identifier;
-  String status;
+  ExplanationOfBenefitStatus status;
   CodeableConcept type;
   CodeableConcept subType;
   Code use;
@@ -77,6 +81,7 @@ class ExplanationOfBenefit {
   List<ExplanationOfBenefitBenefitBalance> benefitBalance;
 
   ExplanationOfBenefit({
+    this.resourceType = 'ExplanationOfBenefit',
     this.id,
     this.meta,
     this.implicitRules,
@@ -720,7 +725,7 @@ class ExplanationOfBenefitProcessNote {
   List<Extension> extension;
   List<Extension> modifierExtension;
   int number;
-  String type;
+  ExplanationOfBenefitProcessNote type;
   String text;
   CodeableConcept language;
 
@@ -802,4 +807,49 @@ class ExplanationOfBenefitFinancial {
   factory ExplanationOfBenefitFinancial.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitFinancialFromJson(json);
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitFinancialToJson(this);
+}
+
+class ExplanationOfBenefitStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ExplanationOfBenefitStatus(String value) {
+    assert(value != null);
+    return ExplanationOfBenefitStatus._(
+      validateEnum(
+        value,
+        [
+          'active',
+          'cancelled',
+          'draft',
+          'entered-in-error',
+        ],
+      ),
+    );
+  }
+  const ExplanationOfBenefitStatus._(this.value);
+  factory ExplanationOfBenefitStatus.fromJson(String json) =>
+      ExplanationOfBenefitStatus(json);
+  String toJson() => result();
+}
+
+class ExplanationOfBenefitProcessNoteType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ExplanationOfBenefitProcessNoteType(String value) {
+    assert(value != null);
+    return ExplanationOfBenefitProcessNoteType._(
+      validateEnum(
+        value,
+        [
+          'display',
+          'print',
+          'printoper',
+        ],
+      ),
+    );
+  }
+  const ExplanationOfBenefitProcessNoteType._(this.value);
+  factory ExplanationOfBenefitProcessNoteType.fromJson(String json) =>
+      ExplanationOfBenefitProcessNoteType(json);
+  String toJson() => result();
 }

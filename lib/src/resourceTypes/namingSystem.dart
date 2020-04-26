@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
@@ -18,7 +21,7 @@ part 'namingSystem.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class NamingSystem {
-  static const String resourceType = 'NamingSystem';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -28,8 +31,8 @@ class NamingSystem {
   List<Extension> extension;
   List<Extension> modifierExtension;
   String name;
-  String status;
-  String kind;
+  NamingSystemStatus status;
+  NamingSystemKind kind;
   FhirDateTime date;
   String publisher;
   List<ContactDetail> contact;
@@ -42,6 +45,7 @@ class NamingSystem {
   List<NamingSystemUniqueId> uniqueId;
 
   NamingSystem({
+    this.resourceType = 'NamingSystem',
     this.id,
     this.meta,
     this.implicitRules,
@@ -75,7 +79,7 @@ class NamingSystemUniqueId {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String type;
+  NamingSystemUniqueIdType type;
   String value;
   bool preferred;
   String comment;
@@ -95,4 +99,70 @@ class NamingSystemUniqueId {
   factory NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
       _$NamingSystemUniqueIdFromJson(json);
   Map<String, dynamic> toJson() => _$NamingSystemUniqueIdToJson(this);
+}
+
+class NamingSystemStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory NamingSystemStatus(String value) {
+    assert(value != null);
+    return NamingSystemStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const NamingSystemStatus._(this.value);
+  factory NamingSystemStatus.fromJson(String json) => NamingSystemStatus(json);
+  String toJson() => result();
+}
+
+class NamingSystemKind extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory NamingSystemKind(String value) {
+    assert(value != null);
+    return NamingSystemKind._(
+      validateEnum(
+        value,
+        [
+          'codesystem',
+          'identifier',
+          'root',
+        ],
+      ),
+    );
+  }
+  const NamingSystemKind._(this.value);
+  factory NamingSystemKind.fromJson(String json) => NamingSystemKind(json);
+  String toJson() => result();
+}
+
+class NamingSystemUniqueIdType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory NamingSystemUniqueIdType(String value) {
+    assert(value != null);
+    return NamingSystemUniqueIdType._(
+      validateEnum(
+        value,
+        [
+          'oid',
+          'uuid',
+          'uri',
+          'other',
+        ],
+      ),
+    );
+  }
+  const NamingSystemUniqueIdType._(this.value);
+  factory NamingSystemUniqueIdType.fromJson(String json) =>
+      NamingSystemUniqueIdType(json);
+  String toJson() => result();
 }

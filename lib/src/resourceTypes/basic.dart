@@ -16,7 +16,7 @@ part 'basic.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Basic {
-  static const String resourceType = 'Basic';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -32,6 +32,7 @@ class Basic {
   Reference author;
 
   Basic({
+    this.resourceType = 'Basic',
     this.id,
     this.meta,
     this.implicitRules,

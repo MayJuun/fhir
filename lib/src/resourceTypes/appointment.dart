@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/id.dart';
@@ -18,7 +21,7 @@ part 'appointment.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Appointment {
-  static const String resourceType = 'Appointment';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -51,6 +54,7 @@ class Appointment {
   List<Period> requestedPeriod;
 
   Appointment({
+    this.resourceType = 'Appointment',
     this.id,
     this.meta,
     this.implicitRules,
@@ -115,45 +119,75 @@ class AppointmentParticipant {
   Map<String, dynamic> toJson() => _$AppointmentParticipantToJson(this);
 }
 
-enum AppointmentStatus {
-  @JsonValue("proposed")
-  proposted,
-  @JsonValue("pending")
-  pending,
-  @JsonValue("booked")
-  booked,
-  @JsonValue("arrived")
-  arrived,
-  @JsonValue("fulfilled")
-  fulfilled,
-  @JsonValue("cancelled")
-  cancelled,
-  @JsonValue("noshow")
-  noshow,
-  @JsonValue("entered-in-error")
-  entered_in_error,
-  @JsonValue("checked-in")
-  checked_in,
-  @JsonValue("waitlist")
-  waitlist,
+class AppointmentStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory AppointmentStatus(String value) {
+    assert(value != null);
+    return AppointmentStatus._(
+      validateEnum(
+        value,
+        [
+          'proposed',
+          'pending',
+          'booked',
+          'arrived',
+          'fulfilled',
+          'cancelled',
+          'noshow',
+          'entered-in-error',
+          'checked-in',
+          'waitlist',
+        ],
+      ),
+    );
+  }
+  const AppointmentStatus._(this.value);
+  factory AppointmentStatus.fromJson(String json) => AppointmentStatus(json);
+  String toJson() => result();
 }
 
-enum AppointmentParticipantRequired {
-  @JsonValue('required')
-  required,
-  @JsonValue('optional')
-  optional,
-  @JsonValue('information-only')
-  information_only,
+class AppointmentParticipantRequired extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory AppointmentParticipantRequired(String value) {
+    assert(value != null);
+    return AppointmentParticipantRequired._(
+      validateEnum(
+        value,
+        [
+          'required',
+          'optional',
+          'information-only',
+        ],
+      ),
+    );
+  }
+  const AppointmentParticipantRequired._(this.value);
+  factory AppointmentParticipantRequired.fromJson(String json) =>
+      AppointmentParticipantRequired(json);
+  String toJson() => result();
 }
 
-enum AppointmentParticipantStatus {
-  @JsonValue("accepted")
-  accepted,
-  @JsonValue("declined")
-  declined,
-  @JsonValue("tentative")
-  tentative,
-  @JsonValue("needs-action")
-  needs_action,
+class AppointmentParticipantStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory AppointmentParticipantStatus(String value) {
+    assert(value != null);
+    return AppointmentParticipantStatus._(
+      validateEnum(
+        value,
+        [
+          'accepted',
+          'declined',
+          'tentative',
+          'needs-action',
+        ],
+      ),
+    );
+  }
+  const AppointmentParticipantStatus._(this.value);
+  factory AppointmentParticipantStatus.fromJson(String json) =>
+      AppointmentParticipantStatus(json);
+  String toJson() => result();
 }
