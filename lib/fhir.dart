@@ -34,6 +34,20 @@ export 'src/metadataTypes/relatedArtifact.dart';
 export 'src/metadataTypes/triggerDefinition.dart';
 export 'src/metadataTypes/usageContext.dart';
 
+export 'src/primitiveTypes/base64binary.dart';
+export 'src/primitiveTypes/canonical.dart';
+export 'src/primitiveTypes/code.dart';
+export 'src/primitiveTypes/date.dart';
+export 'src/primitiveTypes/fhirDateTime.dart';
+export 'src/primitiveTypes/id.dart';
+export 'src/primitiveTypes/instant.dart';
+export 'src/primitiveTypes/markdown.dart';
+export 'src/primitiveTypes/oid.dart';
+export 'src/primitiveTypes/time.dart';
+export 'src/primitiveTypes/uri.dart';
+export 'src/primitiveTypes/url.dart';
+export 'src/primitiveTypes/uuid.dart';
+
 export 'src/resourceTypes/account.dart';
 export 'src/resourceTypes/activityDefinition.dart';
 export 'src/resourceTypes/adverseEvent.dart';
