@@ -149,7 +149,7 @@ Map<String, dynamic> _$BundleEntryToJson(BundleEntry instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('link', instance.link?.map((e) => e?.toJson())?.toList());
   writeNotNull('fullUrl', instance.fullUrl?.toJson());
-  writeNotNull('resource', instance.resource);
+  writeNotNull('resource', instance.resource.toJson());
   writeNotNull('search', instance.search?.toJson());
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('response', instance.response?.toJson());
@@ -280,6 +280,6 @@ Map<String, dynamic> _$BundleResponseToJson(BundleResponse instance) {
   writeNotNull('location', instance.location?.toJson());
   writeNotNull('etag', instance.etag);
   writeNotNull('lastModified', instance.lastModified?.toJson());
-  writeNotNull('outcome', instance.outcome);
+  writeNotNull('outcome', instance.outcome.toJson());
   return val;
 }
