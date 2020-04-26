@@ -14,7 +14,7 @@ part 'substanceNucleicAcid.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class SubstanceNucleicAcid {
-  static const String resourceType = 'SubstanceNucleicAcid';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -30,6 +30,7 @@ class SubstanceNucleicAcid {
   List<SubstanceNucleicAcidSubunit> subunit;
 
   SubstanceNucleicAcid({
+    this.resourceType = 'SubstanceNucleicAcid',
     this.id,
     this.meta,
     this.implicitRules,

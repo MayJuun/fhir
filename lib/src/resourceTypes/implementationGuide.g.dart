@@ -8,6 +8,7 @@ part of 'implementationGuide.dart';
 
 ImplementationGuide _$ImplementationGuideFromJson(Map<String, dynamic> json) {
   return ImplementationGuide(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -34,7 +35,9 @@ ImplementationGuide _$ImplementationGuideFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : ImplementationGuideStatus.fromJson(json['status'] as String),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -63,7 +66,9 @@ ImplementationGuide _$ImplementationGuideFromJson(Map<String, dynamic> json) {
     packageId: json['packageId'] == null
         ? null
         : Id.fromJson(json['packageId'] as String),
-    license: json['license'] as String,
+    license: json['license'] == null
+        ? null
+        : ImplementationGuideLicense.fromJson(json['license'] as String),
     fhirVersion:
         (json['fhirVersion'] as List)?.map((e) => e as String)?.toList(),
     dependsOn: (json['dependsOn'] as List)
@@ -96,6 +101,7 @@ Map<String, dynamic> _$ImplementationGuideToJson(ImplementationGuide instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -110,7 +116,7 @@ Map<String, dynamic> _$ImplementationGuideToJson(ImplementationGuide instance) {
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
@@ -122,7 +128,7 @@ Map<String, dynamic> _$ImplementationGuideToJson(ImplementationGuide instance) {
       'jurisdiction', instance.jurisdiction?.map((e) => e?.toJson())?.toList());
   writeNotNull('copyright', instance.copyright?.toJson());
   writeNotNull('packageId', instance.packageId?.toJson());
-  writeNotNull('license', instance.license);
+  writeNotNull('license', instance.license?.toJson());
   writeNotNull('fhirVersion', instance.fhirVersion);
   writeNotNull(
       'dependsOn', instance.dependsOn?.map((e) => e?.toJson())?.toList());
@@ -388,7 +394,10 @@ ImplementationGuidePage _$ImplementationGuidePageFromJson(
         ? null
         : Reference.fromJson(json['nameReference'] as Map<String, dynamic>),
     title: json['title'] as String,
-    generation: json['generation'] as String,
+    generation: json['generation'] == null
+        ? null
+        : ImplementationGuidePageGeneration.fromJson(
+            json['generation'] as String),
     page: (json['page'] as List)
         ?.map((e) => e == null
             ? null
@@ -415,7 +424,7 @@ Map<String, dynamic> _$ImplementationGuidePageToJson(
   writeNotNull('nameUrl', instance.nameUrl?.toJson());
   writeNotNull('nameReference', instance.nameReference?.toJson());
   writeNotNull('title', instance.title);
-  writeNotNull('generation', instance.generation);
+  writeNotNull('generation', instance.generation?.toJson());
   writeNotNull('page', instance.page?.map((e) => e?.toJson())?.toList());
   return val;
 }
@@ -432,7 +441,9 @@ ImplementationGuideParameter _$ImplementationGuideParameterFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    code: json['code'] as String,
+    code: json['code'] == null
+        ? null
+        : ImplementationGuideParameterCode.fromJson(json['code'] as String),
     value: json['value'] as String,
   );
 }
@@ -452,7 +463,7 @@ Map<String, dynamic> _$ImplementationGuideParameterToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('code', instance.code);
+  writeNotNull('code', instance.code?.toJson());
   writeNotNull('value', instance.value);
   return val;
 }

@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/base64binary.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/date.dart';
@@ -52,7 +55,7 @@ part 'task.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Task {
-  static const String resourceType = 'Task';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -67,10 +70,10 @@ class Task {
   List<Reference> basedOn;
   Identifier groupIdentifier;
   List<Reference> partOf;
-  String status;
+  TaskStatus status;
   CodeableConcept statusReason;
   CodeableConcept businessStatus;
-  String intent;
+  TaskIntent intent;
   Code priority;
   CodeableConcept code;
   String description;
@@ -94,6 +97,7 @@ class Task {
   List<TaskOutput> output;
 
   Task({
+    this.resourceType = 'Task',
     this.id,
     this.meta,
     this.implicitRules,
@@ -398,4 +402,61 @@ class TaskOutput {
   factory TaskOutput.fromJson(Map<String, dynamic> json) =>
       _$TaskOutputFromJson(json);
   Map<String, dynamic> toJson() => _$TaskOutputToJson(this);
+}
+
+class TaskStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory TaskStatus(String value) {
+    assert(value != null);
+    return TaskStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'requested',
+          'received',
+          'accepted',
+          'rejected',
+          'ready',
+          'cancelled',
+          'in-progress',
+          'on-hold',
+          'failed',
+          'completed',
+          'entered-in-error',
+        ],
+      ),
+    );
+  }
+  const TaskStatus._(this.value);
+  factory TaskStatus.fromJson(String json) => TaskStatus(json);
+  String toJson() => result();
+}
+
+class TaskIntent extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory TaskIntent(String value) {
+    assert(value != null);
+    return TaskIntent._(
+      validateEnum(
+        value,
+        [
+          'unknown',
+          'proposal',
+          'plan',
+          'order',
+          'original-order',
+          'reflex-order',
+          'filler-order',
+          'instance-order',
+          'option',
+        ],
+      ),
+    );
+  }
+  const TaskIntent._(this.value);
+  factory TaskIntent.fromJson(String json) => TaskIntent(json);
+  String toJson() => result();
 }

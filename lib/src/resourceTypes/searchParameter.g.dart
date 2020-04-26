@@ -8,6 +8,7 @@ part of 'searchParameter.dart';
 
 SearchParameter _$SearchParameterFromJson(Map<String, dynamic> json) {
   return SearchParameter(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -36,7 +37,9 @@ SearchParameter _$SearchParameterFromJson(Map<String, dynamic> json) {
     derivedFrom: json['derivedFrom'] == null
         ? null
         : Canonical.fromJson(json['derivedFrom'] as String),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : SearchParameterStatus.fromJson(json['status'] as String),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -66,10 +69,14 @@ SearchParameter _$SearchParameterFromJson(Map<String, dynamic> json) {
     base: (json['base'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
         ?.toList(),
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : SearchParameterType.fromJson(json['type'] as String),
     expression: json['expression'] as String,
     xpath: json['xpath'] as String,
-    xpathUsage: json['xpathUsage'] as String,
+    xpathUsage: json['xpathUsage'] == null
+        ? null
+        : SearchParameterXpathUsage.fromJson(json['xpathUsage'] as String),
     target: (json['target'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
         ?.toList(),
@@ -95,6 +102,7 @@ Map<String, dynamic> _$SearchParameterToJson(SearchParameter instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -109,7 +117,7 @@ Map<String, dynamic> _$SearchParameterToJson(SearchParameter instance) {
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('derivedFrom', instance.derivedFrom?.toJson());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
@@ -122,10 +130,10 @@ Map<String, dynamic> _$SearchParameterToJson(SearchParameter instance) {
   writeNotNull('purpose', instance.purpose?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('base', instance.base?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('expression', instance.expression);
   writeNotNull('xpath', instance.xpath);
-  writeNotNull('xpathUsage', instance.xpathUsage);
+  writeNotNull('xpathUsage', instance.xpathUsage?.toJson());
   writeNotNull('target', instance.target?.map((e) => e?.toJson())?.toList());
   writeNotNull('multipleOr', instance.multipleOr);
   writeNotNull('multipleAnd', instance.multipleAnd);

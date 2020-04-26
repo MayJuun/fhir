@@ -103,7 +103,10 @@ SpecimenDefinitionTypeTested _$SpecimenDefinitionTypeTestedFromJson(
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    preference: json['preference'] as String,
+    preference: json['preference'] == null
+        ? null
+        : SpecimenDefinitionTypeTestedPreference.fromJson(
+            json['preference'] as String),
     container: json['container'] == null
         ? null
         : SpecimenDefinitionContainer.fromJson(
@@ -142,7 +145,7 @@ Map<String, dynamic> _$SpecimenDefinitionTypeTestedToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('isDerived', instance.isDerived);
   writeNotNull('type', instance.type?.toJson());
-  writeNotNull('preference', instance.preference);
+  writeNotNull('preference', instance.preference?.toJson());
   writeNotNull('container', instance.container?.toJson());
   writeNotNull('requirement', instance.requirement);
   writeNotNull('retentionTime', instance.retentionTime?.toJson());

@@ -8,6 +8,7 @@ part of 'goal.dart';
 
 Goal _$GoalFromJson(Map<String, dynamic> json) {
   return Goal(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -34,7 +35,9 @@ Goal _$GoalFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    lifecycleStatus: json['lifecycleStatus'] as String,
+    lifecycleStatus: json['lifecycleStatus'] == null
+        ? null
+        : GoalLifecycleStatus.fromJson(json['lifecycleStatus'] as String),
     achievementStatus: json['achievementStatus'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -100,6 +103,7 @@ Map<String, dynamic> _$GoalToJson(Goal instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -112,7 +116,7 @@ Map<String, dynamic> _$GoalToJson(Goal instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('lifecycleStatus', instance.lifecycleStatus);
+  writeNotNull('lifecycleStatus', instance.lifecycleStatus?.toJson());
   writeNotNull('achievementStatus', instance.achievementStatus?.toJson());
   writeNotNull(
       'category', instance.category?.map((e) => e?.toJson())?.toList());

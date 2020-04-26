@@ -9,6 +9,7 @@ part of 'biologicallyDerivedProduct.dart';
 BiologicallyDerivedProduct _$BiologicallyDerivedProductFromJson(
     Map<String, dynamic> json) {
   return BiologicallyDerivedProduct(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -35,11 +36,16 @@ BiologicallyDerivedProduct _$BiologicallyDerivedProductFromJson(
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    productCategory: json['productCategory'] as String,
+    productCategory: json['productCategory'] == null
+        ? null
+        : BiologicallyDerivedProductCategory.fromJson(
+            json['productCategory'] as String),
     productCode: json['productCode'] == null
         ? null
         : CodeableConcept.fromJson(json['productCode'] as Map<String, dynamic>),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : BiologicallyDerivedProductStatus.fromJson(json['status'] as String),
     request: (json['request'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -82,6 +88,7 @@ Map<String, dynamic> _$BiologicallyDerivedProductToJson(
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -94,9 +101,9 @@ Map<String, dynamic> _$BiologicallyDerivedProductToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('productCategory', instance.productCategory);
+  writeNotNull('productCategory', instance.productCategory?.toJson());
   writeNotNull('productCode', instance.productCode?.toJson());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('request', instance.request?.map((e) => e?.toJson())?.toList());
   writeNotNull('quantity', instance.quantity);
   writeNotNull('parent', instance.parent?.map((e) => e?.toJson())?.toList());
@@ -266,7 +273,10 @@ BiologicallyDerivedProductStorage _$BiologicallyDerivedProductStorageFromJson(
         ?.toList(),
     description: json['description'] as String,
     temperature: (json['temperature'] as num)?.toDouble(),
-    scale: json['scale'] as String,
+    scale: json['scale'] == null
+        ? null
+        : BiologicallyDerivedProductStorageScale.fromJson(
+            json['scale'] as String),
     duration: json['duration'] == null
         ? null
         : Period.fromJson(json['duration'] as Map<String, dynamic>),
@@ -290,7 +300,7 @@ Map<String, dynamic> _$BiologicallyDerivedProductStorageToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
   writeNotNull('temperature', instance.temperature);
-  writeNotNull('scale', instance.scale);
+  writeNotNull('scale', instance.scale?.toJson());
   writeNotNull('duration', instance.duration?.toJson());
   return val;
 }

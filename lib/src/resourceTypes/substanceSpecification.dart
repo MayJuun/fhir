@@ -19,7 +19,7 @@ part 'substanceSpecification.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class SubstanceSpecification {
-  static const String resourceType = 'SubstanceSpecification';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -49,6 +49,7 @@ class SubstanceSpecification {
   Reference sourceMaterial;
 
   SubstanceSpecification({
+    this.resourceType = 'SubstanceSpecification',
     this.id,
     this.meta,
     this.implicitRules,

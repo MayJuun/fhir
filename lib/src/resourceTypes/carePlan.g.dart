@@ -8,6 +8,7 @@ part of 'carePlan.dart';
 
 CarePlan _$CarePlanFromJson(Map<String, dynamic> json) {
   return CarePlan(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -119,6 +120,7 @@ Map<String, dynamic> _$CarePlanToJson(CarePlan instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -257,7 +259,9 @@ CarePlanDetail _$CarePlanDetailFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : CarePlanDetailStatus.fromJson(json['status'] as String),
     statusReason: json['statusReason'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -319,7 +323,7 @@ Map<String, dynamic> _$CarePlanDetailToJson(CarePlanDetail instance) {
   writeNotNull('reasonReference',
       instance.reasonReference?.map((e) => e?.toJson())?.toList());
   writeNotNull('goal', instance.goal?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('statusReason', instance.statusReason?.toJson());
   writeNotNull('doNotPerform', instance.doNotPerform);
   writeNotNull('scheduledTiming', instance.scheduledTiming?.toJson());

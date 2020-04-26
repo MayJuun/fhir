@@ -23,7 +23,7 @@ part 'serviceRequest.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ServiceRequest {
-  static const String resourceType = 'ServiceRequest';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -72,6 +72,7 @@ class ServiceRequest {
   List<Reference> relevantHistory;
 
   ServiceRequest({
+    this.resourceType = 'ServiceRequest',
     this.id,
     this.meta,
     this.implicitRules,

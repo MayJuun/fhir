@@ -18,7 +18,7 @@ part 'verificationResult.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class VerificationResult {
-  static const String resourceType = 'VerificationResult';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -43,6 +43,7 @@ class VerificationResult {
   List<VerificationResultValidator> validator;
 
   VerificationResult({
+    this.resourceType = 'VerificationResult',
     this.id,
     this.meta,
     this.implicitRules,

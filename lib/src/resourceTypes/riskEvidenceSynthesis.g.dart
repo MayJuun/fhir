@@ -9,6 +9,7 @@ part of 'riskEvidenceSynthesis.dart';
 RiskEvidenceSynthesis _$RiskEvidenceSynthesisFromJson(
     Map<String, dynamic> json) {
   return RiskEvidenceSynthesis(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -39,7 +40,9 @@ RiskEvidenceSynthesis _$RiskEvidenceSynthesisFromJson(
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : RiskEvidenceSynthesisStatus.fromJson(json['status'] as String),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -150,6 +153,7 @@ Map<String, dynamic> _$RiskEvidenceSynthesisToJson(
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -166,7 +170,7 @@ Map<String, dynamic> _$RiskEvidenceSynthesisToJson(
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());

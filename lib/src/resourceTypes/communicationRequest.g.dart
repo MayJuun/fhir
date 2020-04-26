@@ -8,6 +8,7 @@ part of 'communicationRequest.dart';
 
 CommunicationRequest _$CommunicationRequestFromJson(Map<String, dynamic> json) {
   return CommunicationRequest(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -125,6 +126,7 @@ Map<String, dynamic> _$CommunicationRequestToJson(
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

@@ -8,6 +8,7 @@ part of 'detectedIssue.dart';
 
 DetectedIssue _$DetectedIssueFromJson(Map<String, dynamic> json) {
   return DetectedIssue(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -39,7 +40,9 @@ DetectedIssue _$DetectedIssueFromJson(Map<String, dynamic> json) {
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-    severity: json['severity'] as String,
+    severity: json['severity'] == null
+        ? null
+        : DetectedIssueSeverity.fromJson(json['severity'] as String),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -82,6 +85,7 @@ Map<String, dynamic> _$DetectedIssueToJson(DetectedIssue instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -96,7 +100,7 @@ Map<String, dynamic> _$DetectedIssueToJson(DetectedIssue instance) {
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('code', instance.code?.toJson());
-  writeNotNull('severity', instance.severity);
+  writeNotNull('severity', instance.severity?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('identifiedDateTime', instance.identifiedDateTime?.toJson());
   writeNotNull('identifiedPeriod', instance.identifiedPeriod?.toJson());

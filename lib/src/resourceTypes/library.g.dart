@@ -8,6 +8,7 @@ part of 'library.dart';
 
 Library _$LibraryFromJson(Map<String, dynamic> json) {
   return Library(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -39,7 +40,9 @@ Library _$LibraryFromJson(Map<String, dynamic> json) {
     name: json['name'] as String,
     title: json['title'] as String,
     subtitle: json['subtitle'] as String,
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : LibraryStatus.fromJson(json['status'] as String),
     experimental: json['experimental'] as bool,
     type: json['type'] == null
         ? null
@@ -144,6 +147,7 @@ Map<String, dynamic> _$LibraryToJson(Library instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -161,7 +165,7 @@ Map<String, dynamic> _$LibraryToJson(Library instance) {
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
   writeNotNull('subtitle', instance.subtitle);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull(

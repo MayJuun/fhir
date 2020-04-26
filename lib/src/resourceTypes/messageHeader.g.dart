@@ -8,6 +8,7 @@ part of 'messageHeader.dart';
 
 MessageHeader _$MessageHeaderFromJson(Map<String, dynamic> json) {
   return MessageHeader(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -82,6 +83,7 @@ Map<String, dynamic> _$MessageHeaderToJson(MessageHeader instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -215,7 +217,9 @@ MessageHeaderResponse _$MessageHeaderResponseFromJson(
     identifier: json['identifier'] == null
         ? null
         : Id.fromJson(json['identifier'] as String),
-    code: json['code'] as String,
+    code: json['code'] == null
+        ? null
+        : MessageHeaderResponseCode.fromJson(json['code'] as String),
     details: json['details'] == null
         ? null
         : Reference.fromJson(json['details'] as Map<String, dynamic>),
@@ -238,7 +242,7 @@ Map<String, dynamic> _$MessageHeaderResponseToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('code', instance.code);
+  writeNotNull('code', instance.code?.toJson());
   writeNotNull('details', instance.details?.toJson());
   return val;
 }

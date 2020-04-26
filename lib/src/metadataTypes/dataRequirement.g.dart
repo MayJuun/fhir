@@ -179,8 +179,9 @@ DataRequirementSort _$DataRequirementSortFromJson(Map<String, dynamic> json) {
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     path: json['path'] as String,
-    direction: _$enumDecodeNullable(
-        _$DataRequirementSortDirectionEnumMap, json['direction']),
+    direction: json['direction'] == null
+        ? null
+        : DataRequirementSortDirection.fromJson(json['direction'] as String),
   );
 }
 
@@ -199,44 +200,6 @@ Map<String, dynamic> _$DataRequirementSortToJson(DataRequirementSort instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('path', instance.path);
-  writeNotNull(
-      'direction', _$DataRequirementSortDirectionEnumMap[instance.direction]);
+  writeNotNull('direction', instance.direction?.toJson());
   return val;
 }
-
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
-}
-
-const _$DataRequirementSortDirectionEnumMap = {
-  DataRequirementSortDirection.ascending: 'ascending',
-  DataRequirementSortDirection.descending: 'descending',
-};

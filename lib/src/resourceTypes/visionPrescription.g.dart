@@ -109,7 +109,10 @@ VisionPrescriptionLensSpecification
     product: json['product'] == null
         ? null
         : CodeableConcept.fromJson(json['product'] as Map<String, dynamic>),
-    eye: json['eye'] as String,
+    eye: json['eye'] == null
+        ? null
+        : VisionPrescriptionLensSpecificationEye.fromJson(
+            json['eye'] as String),
     sphere: (json['sphere'] as num)?.toDouble(),
     cylinder: (json['cylinder'] as num)?.toDouble(),
     axis: json['axis'] as int,
@@ -150,7 +153,7 @@ Map<String, dynamic> _$VisionPrescriptionLensSpecificationToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('product', instance.product?.toJson());
-  writeNotNull('eye', instance.eye);
+  writeNotNull('eye', instance.eye?.toJson());
   writeNotNull('sphere', instance.sphere);
   writeNotNull('cylinder', instance.cylinder);
   writeNotNull('axis', instance.axis);
@@ -181,8 +184,7 @@ VisionPrescriptionPrism _$VisionPrescriptionPrismFromJson(
     amount: (json['amount'] as num)?.toDouble(),
     base: json['base'] == null
         ? null
-        : VisionPrescriptionPrism.fromJson(
-            json['base'] as Map<String, dynamic>),
+        : VisionPrescriptionPrismBase.fromJson(json['base'] as String),
   );
 }
 

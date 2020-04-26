@@ -13,7 +13,9 @@ TriggerDefinition _$TriggerDefinitionFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: _$enumDecodeNullable(_$TriggerDefinitionTypeEnumMap, json['type']),
+    type: json['type'] == null
+        ? null
+        : TriggerDefinitionType.fromJson(json['type'] as String),
     name: json['name'] as String,
     timingTiming: json['timingTiming'] == null
         ? null
@@ -50,7 +52,7 @@ Map<String, dynamic> _$TriggerDefinitionToJson(TriggerDefinition instance) {
   writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', _$TriggerDefinitionTypeEnumMap[instance.type]);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('timingTiming', instance.timingTiming?.toJson());
   writeNotNull('timingReference', instance.timingReference?.toJson());
@@ -60,46 +62,3 @@ Map<String, dynamic> _$TriggerDefinitionToJson(TriggerDefinition instance) {
   writeNotNull('condition', instance.condition?.toJson());
   return val;
 }
-
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
-}
-
-const _$TriggerDefinitionTypeEnumMap = {
-  TriggerDefinitionType.namedEvent: 'named-event',
-  TriggerDefinitionType.periodic: 'periodic',
-  TriggerDefinitionType.dataChanged: 'data-changed',
-  TriggerDefinitionType.dataAdded: 'data-added',
-  TriggerDefinitionType.dataModified: 'data-modified',
-  TriggerDefinitionType.dataRemoved: 'data-removed',
-  TriggerDefinitionType.dataAccessed: 'data-accessed',
-  TriggerDefinitionType.dataAccessEnded: 'data-access-ended',
-};

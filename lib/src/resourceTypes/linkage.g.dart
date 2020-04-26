@@ -8,6 +8,7 @@ part of 'linkage.dart';
 
 Linkage _$LinkageFromJson(Map<String, dynamic> json) {
   return Linkage(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -50,6 +51,7 @@ Map<String, dynamic> _$LinkageToJson(Linkage instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -77,7 +79,9 @@ LinkageItem _$LinkageItemFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : LinkageItemType.fromJson(json['type'] as String),
     resource: json['resource'] == null
         ? null
         : Reference.fromJson(json['resource'] as Map<String, dynamic>),
@@ -98,7 +102,7 @@ Map<String, dynamic> _$LinkageItemToJson(LinkageItem instance) {
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('resource', instance.resource?.toJson());
   return val;
 }

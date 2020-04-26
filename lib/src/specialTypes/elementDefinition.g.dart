@@ -19,8 +19,9 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
         ?.toList(),
     path: json['path'] as String,
     representation: (json['representation'] as List)
-        ?.map((e) =>
-            _$enumDecodeNullable(_$ElementDefinitionRepresentationEnumMap, e))
+        ?.map((e) => e == null
+            ? null
+            : ElementDefinitionRepresentation.fromJson(e as String))
         ?.toList(),
     sliceName: json['sliceName'] as String,
     sliceIsConstraining: json['sliceIsConstraining'] as bool,
@@ -581,11 +582,8 @@ Map<String, dynamic> _$ElementDefinitionToJson(ElementDefinition instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('path', instance.path);
-  writeNotNull(
-      'representation',
-      instance.representation
-          ?.map((e) => _$ElementDefinitionRepresentationEnumMap[e])
-          ?.toList());
+  writeNotNull('representation',
+      instance.representation?.map((e) => e?.toJson())?.toList());
   writeNotNull('sliceName', instance.sliceName);
   writeNotNull('sliceIsConstraining', instance.sliceIsConstraining);
   writeNotNull('label', instance.label);
@@ -813,46 +811,6 @@ Map<String, dynamic> _$ElementDefinitionToJson(ElementDefinition instance) {
   return val;
 }
 
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
-}
-
-const _$ElementDefinitionRepresentationEnumMap = {
-  ElementDefinitionRepresentation.xmlAttr: 'xmlAttr',
-  ElementDefinitionRepresentation.xmlText: 'xmlText',
-  ElementDefinitionRepresentation.typeAttr: 'typeAttr',
-  ElementDefinitionRepresentation.cdaText: 'cdaText',
-  ElementDefinitionRepresentation.xhtml: 'xhtml',
-};
-
 ElementDefinitionSlicing _$ElementDefinitionSlicingFromJson(
     Map<String, dynamic> json) {
   return ElementDefinitionSlicing(
@@ -873,8 +831,9 @@ ElementDefinitionSlicing _$ElementDefinitionSlicingFromJson(
         ?.toList(),
     description: json['description'] as String,
     ordered: json['ordered'] as bool,
-    rules: _$enumDecodeNullable(
-        _$ElementDefinitionSlicingRulesEnumMap, json['rules']),
+    rules: json['rules'] == null
+        ? null
+        : ElementDefinitionSlicingRules.fromJson(json['rules'] as String),
   );
 }
 
@@ -897,15 +856,9 @@ Map<String, dynamic> _$ElementDefinitionSlicingToJson(
       instance.discriminator?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
   writeNotNull('ordered', instance.ordered);
-  writeNotNull('rules', _$ElementDefinitionSlicingRulesEnumMap[instance.rules]);
+  writeNotNull('rules', instance.rules?.toJson());
   return val;
 }
-
-const _$ElementDefinitionSlicingRulesEnumMap = {
-  ElementDefinitionSlicingRules.closed: 'closed',
-  ElementDefinitionSlicingRules.open: 'open',
-  ElementDefinitionSlicingRules.openAtEnd: 'openAtEnd',
-};
 
 ElementDefinitionDiscriminator _$ElementDefinitionDiscriminatorFromJson(
     Map<String, dynamic> json) {
@@ -919,8 +872,9 @@ ElementDefinitionDiscriminator _$ElementDefinitionDiscriminatorFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: _$enumDecodeNullable(
-        _$ElementDefinitionDiscriminatorTypeEnumMap, json['type']),
+    type: json['type'] == null
+        ? null
+        : ElementDefinitionDiscriminatorType.fromJson(json['type'] as String),
     path: json['path'] as String,
   );
 }
@@ -940,19 +894,10 @@ Map<String, dynamic> _$ElementDefinitionDiscriminatorToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      'type', _$ElementDefinitionDiscriminatorTypeEnumMap[instance.type]);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('path', instance.path);
   return val;
 }
-
-const _$ElementDefinitionDiscriminatorTypeEnumMap = {
-  ElementDefinitionDiscriminatorType.value: 'value',
-  ElementDefinitionDiscriminatorType.exists: 'exists',
-  ElementDefinitionDiscriminatorType.pattern: 'pattern',
-  ElementDefinitionDiscriminatorType.type: 'type',
-  ElementDefinitionDiscriminatorType.profile: 'profile',
-};
 
 ElementDefinitionBase _$ElementDefinitionBaseFromJson(
     Map<String, dynamic> json) {
@@ -1014,11 +959,14 @@ ElementDefinitionType _$ElementDefinitionTypeFromJson(
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
         ?.toList(),
     aggregation: (json['aggregation'] as List)
-        ?.map((e) =>
-            _$enumDecodeNullable(_$ElementDefinitionTypeAggregationEnumMap, e))
+        ?.map((e) => e == null
+            ? null
+            : ElementDefinitionTypeAggregation.fromJson(e as String))
         ?.toList(),
-    versioning: _$enumDecodeNullable(
-        _$ElementDefinitionTypeVersioningEnumMap, json['versioning']),
+    versioning: json['versioning'] == null
+        ? null
+        : ElementDefinitionTypeVersioning.fromJson(
+            json['versioning'] as String),
   );
 }
 
@@ -1042,26 +990,10 @@ Map<String, dynamic> _$ElementDefinitionTypeToJson(
   writeNotNull('targetProfile',
       instance.targetProfile?.map((e) => e?.toJson())?.toList());
   writeNotNull(
-      'aggregation',
-      instance.aggregation
-          ?.map((e) => _$ElementDefinitionTypeAggregationEnumMap[e])
-          ?.toList());
-  writeNotNull('versioning',
-      _$ElementDefinitionTypeVersioningEnumMap[instance.versioning]);
+      'aggregation', instance.aggregation?.map((e) => e?.toJson())?.toList());
+  writeNotNull('versioning', instance.versioning?.toJson());
   return val;
 }
-
-const _$ElementDefinitionTypeAggregationEnumMap = {
-  ElementDefinitionTypeAggregation.contained: 'contained',
-  ElementDefinitionTypeAggregation.referenced: 'referenced',
-  ElementDefinitionTypeAggregation.bundled: 'bundled',
-};
-
-const _$ElementDefinitionTypeVersioningEnumMap = {
-  ElementDefinitionTypeVersioning.either: 'either',
-  ElementDefinitionTypeVersioning.independent: 'independent',
-  ElementDefinitionTypeVersioning.specific: 'specific',
-};
 
 ElementDefinitionExample _$ElementDefinitionExampleFromJson(
     Map<String, dynamic> json) {
@@ -1311,8 +1243,10 @@ ElementDefinitionConstraint _$ElementDefinitionConstraintFromJson(
         ?.toList(),
     key: json['key'] == null ? null : Id.fromJson(json['key'] as String),
     requirements: json['requirements'] as String,
-    severity: _$enumDecodeNullable(
-        _$ElementDefinitionConstraintSeverityEnumMap, json['severity']),
+    severity: json['severity'] == null
+        ? null
+        : ElementDefinitionConstraintSeverity.fromJson(
+            json['severity'] as String),
     human: json['human'] as String,
     expression: json['expression'] as String,
     xpath: json['xpath'] as String,
@@ -1339,19 +1273,13 @@ Map<String, dynamic> _$ElementDefinitionConstraintToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('key', instance.key?.toJson());
   writeNotNull('requirements', instance.requirements);
-  writeNotNull('severity',
-      _$ElementDefinitionConstraintSeverityEnumMap[instance.severity]);
+  writeNotNull('severity', instance.severity?.toJson());
   writeNotNull('human', instance.human);
   writeNotNull('expression', instance.expression);
   writeNotNull('xpath', instance.xpath);
   writeNotNull('source', instance.source?.toJson());
   return val;
 }
-
-const _$ElementDefinitionConstraintSeverityEnumMap = {
-  ElementDefinitionConstraintSeverity.error: 'error',
-  ElementDefinitionConstraintSeverity.warning: 'warning',
-};
 
 ElementDefinitionBinding _$ElementDefinitionBindingFromJson(
     Map<String, dynamic> json) {
@@ -1365,8 +1293,9 @@ ElementDefinitionBinding _$ElementDefinitionBindingFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    strength: _$enumDecodeNullable(
-        _$ElementDefinitionBindingStrengthEnumMap, json['strength']),
+    strength: json['strength'] == null
+        ? null
+        : ElementDefinitionBindingStrength.fromJson(json['strength'] as String),
     description: json['description'] as String,
     valueSet: json['valueSet'] == null
         ? null
@@ -1389,19 +1318,11 @@ Map<String, dynamic> _$ElementDefinitionBindingToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      'strength', _$ElementDefinitionBindingStrengthEnumMap[instance.strength]);
+  writeNotNull('strength', instance.strength?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('valueSet', instance.valueSet?.toJson());
   return val;
 }
-
-const _$ElementDefinitionBindingStrengthEnumMap = {
-  ElementDefinitionBindingStrength.required: 'required',
-  ElementDefinitionBindingStrength.extensible: 'extensible',
-  ElementDefinitionBindingStrength.preferred: 'preferred',
-  ElementDefinitionBindingStrength.example: 'example',
-};
 
 ElementDefinitionMapping _$ElementDefinitionMappingFromJson(
     Map<String, dynamic> json) {

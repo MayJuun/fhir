@@ -8,6 +8,7 @@ part of 'measure.dart';
 
 Measure _$MeasureFromJson(Map<String, dynamic> json) {
   return Measure(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -39,7 +40,9 @@ Measure _$MeasureFromJson(Map<String, dynamic> json) {
     name: json['name'] as String,
     title: json['title'] as String,
     subtitle: json['subtitle'] as String,
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : MeasureStatus.fromJson(json['status'] as String),
     experimental: json['experimental'] as bool,
     subjectCodeableConcept: json['subjectCodeableConcept'] == null
         ? null
@@ -173,6 +176,7 @@ Map<String, dynamic> _$MeasureToJson(Measure instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -190,7 +194,7 @@ Map<String, dynamic> _$MeasureToJson(Measure instance) {
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
   writeNotNull('subtitle', instance.subtitle);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull(
       'subjectCodeableConcept', instance.subjectCodeableConcept?.toJson());

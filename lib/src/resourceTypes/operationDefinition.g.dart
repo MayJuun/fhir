@@ -8,6 +8,7 @@ part of 'operationDefinition.dart';
 
 OperationDefinition _$OperationDefinitionFromJson(Map<String, dynamic> json) {
   return OperationDefinition(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -34,8 +35,12 @@ OperationDefinition _$OperationDefinitionFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: json['status'] as String,
-    kind: json['kind'] as String,
+    status: json['status'] == null
+        ? null
+        : OperationDefinitionStatus.fromJson(json['status'] as String),
+    kind: json['kind'] == null
+        ? null
+        : OperationDefinitionKind.fromJson(json['kind'] as String),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -103,6 +108,7 @@ Map<String, dynamic> _$OperationDefinitionToJson(OperationDefinition instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -117,8 +123,8 @@ Map<String, dynamic> _$OperationDefinitionToJson(OperationDefinition instance) {
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', instance.status);
-  writeNotNull('kind', instance.kind);
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('kind', instance.kind?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
@@ -160,7 +166,9 @@ OperationDefinitionParameter _$OperationDefinitionParameterFromJson(
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     name: json['name'] == null ? null : Code.fromJson(json['name'] as String),
-    use: json['use'] as String,
+    use: json['use'] == null
+        ? null
+        : OperationDefinitionParameterUse.fromJson(json['use'] as String),
     min: json['min'] as int,
     max: json['max'] as String,
     documentation: json['documentation'] as String,
@@ -168,7 +176,10 @@ OperationDefinitionParameter _$OperationDefinitionParameterFromJson(
     targetProfile: (json['targetProfile'] as List)
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
         ?.toList(),
-    searchType: json['searchType'] as String,
+    searchType: json['searchType'] == null
+        ? null
+        : OperationDefinitionParameterSearchType.fromJson(
+            json['searchType'] as String),
     binding: json['binding'] == null
         ? null
         : OperationDefinitionBinding.fromJson(
@@ -203,14 +214,14 @@ Map<String, dynamic> _$OperationDefinitionParameterToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('name', instance.name?.toJson());
-  writeNotNull('use', instance.use);
+  writeNotNull('use', instance.use?.toJson());
   writeNotNull('min', instance.min);
   writeNotNull('max', instance.max);
   writeNotNull('documentation', instance.documentation);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('targetProfile',
       instance.targetProfile?.map((e) => e?.toJson())?.toList());
-  writeNotNull('searchType', instance.searchType);
+  writeNotNull('searchType', instance.searchType?.toJson());
   writeNotNull('binding', instance.binding?.toJson());
   writeNotNull('referencedFrom',
       instance.referencedFrom?.map((e) => e?.toJson())?.toList());
@@ -230,7 +241,10 @@ OperationDefinitionBinding _$OperationDefinitionBindingFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    strength: json['strength'] as String,
+    strength: json['strength'] == null
+        ? null
+        : OperationDefinitionBindingStrength.fromJson(
+            json['strength'] as String),
     valueSet: json['valueSet'] == null
         ? null
         : Canonical.fromJson(json['valueSet'] as String),
@@ -252,7 +266,7 @@ Map<String, dynamic> _$OperationDefinitionBindingToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('strength', instance.strength);
+  writeNotNull('strength', instance.strength?.toJson());
   writeNotNull('valueSet', instance.valueSet?.toJson());
   return val;
 }

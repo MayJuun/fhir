@@ -8,6 +8,7 @@ part of 'explanationOfBenefit.dart';
 
 ExplanationOfBenefit _$ExplanationOfBenefitFromJson(Map<String, dynamic> json) {
   return ExplanationOfBenefit(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -34,7 +35,9 @@ ExplanationOfBenefit _$ExplanationOfBenefitFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : ExplanationOfBenefitStatus.fromJson(json['status'] as String),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -198,6 +201,7 @@ Map<String, dynamic> _$ExplanationOfBenefitToJson(
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -210,7 +214,7 @@ Map<String, dynamic> _$ExplanationOfBenefitToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('subType', instance.subType?.toJson());
   writeNotNull('use', instance.use?.toJson());
@@ -1450,7 +1454,10 @@ ExplanationOfBenefitProcessNote _$ExplanationOfBenefitProcessNoteFromJson(
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     number: json['number'] as int,
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : ExplanationOfBenefitProcessNote.fromJson(
+            json['type'] as Map<String, dynamic>),
     text: json['text'] as String,
     language: json['language'] == null
         ? null
@@ -1474,7 +1481,7 @@ Map<String, dynamic> _$ExplanationOfBenefitProcessNoteToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('number', instance.number);
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('text', instance.text);
   writeNotNull('language', instance.language?.toJson());
   return val;

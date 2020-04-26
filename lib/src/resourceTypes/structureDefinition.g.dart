@@ -8,6 +8,7 @@ part of 'structureDefinition.dart';
 
 StructureDefinition _$StructureDefinitionFromJson(Map<String, dynamic> json) {
   return StructureDefinition(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -38,7 +39,9 @@ StructureDefinition _$StructureDefinitionFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : StructureDefinitionStatus.fromJson(json['status'] as String),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -71,13 +74,18 @@ StructureDefinition _$StructureDefinitionFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    fhirVersion: json['fhirVersion'] as String,
+    fhirVersion: json['fhirVersion'] == null
+        ? null
+        : StructureDefinitionFhirVersion.fromJson(
+            json['fhirVersion'] as String),
     mapping: (json['mapping'] as List)
         ?.map((e) => e == null
             ? null
             : StructureDefinitionMapping.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    kind: json['kind'] as String,
+    kind: json['kind'] == null
+        ? null
+        : StructureDefinitionKind.fromJson(json['kind'] as String),
     abstract: json['abstract'] as bool,
     context: (json['context'] as List)
         ?.map((e) => e == null
@@ -91,7 +99,9 @@ StructureDefinition _$StructureDefinitionFromJson(Map<String, dynamic> json) {
     baseDefinition: json['baseDefinition'] == null
         ? null
         : Canonical.fromJson(json['baseDefinition'] as String),
-    derivation: json['derivation'] as String,
+    derivation: json['derivation'] == null
+        ? null
+        : StructureDefinitionDerivation.fromJson(json['derivation'] as String),
     snapshot: json['snapshot'] == null
         ? null
         : StructureDefinitionSnapshot.fromJson(
@@ -112,6 +122,7 @@ Map<String, dynamic> _$StructureDefinitionToJson(StructureDefinition instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -128,7 +139,7 @@ Map<String, dynamic> _$StructureDefinitionToJson(StructureDefinition instance) {
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
@@ -141,15 +152,15 @@ Map<String, dynamic> _$StructureDefinitionToJson(StructureDefinition instance) {
   writeNotNull('purpose', instance.purpose?.toJson());
   writeNotNull('copyright', instance.copyright?.toJson());
   writeNotNull('keyword', instance.keyword?.map((e) => e?.toJson())?.toList());
-  writeNotNull('fhirVersion', instance.fhirVersion);
+  writeNotNull('fhirVersion', instance.fhirVersion?.toJson());
   writeNotNull('mapping', instance.mapping?.map((e) => e?.toJson())?.toList());
-  writeNotNull('kind', instance.kind);
+  writeNotNull('kind', instance.kind?.toJson());
   writeNotNull('abstract', instance.abstract);
   writeNotNull('context', instance.context?.map((e) => e?.toJson())?.toList());
   writeNotNull('contextInvariant', instance.contextInvariant);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('baseDefinition', instance.baseDefinition?.toJson());
-  writeNotNull('derivation', instance.derivation);
+  writeNotNull('derivation', instance.derivation?.toJson());
   writeNotNull('snapshot', instance.snapshot?.toJson());
   writeNotNull('differential', instance.differential?.toJson());
   return val;
@@ -210,7 +221,9 @@ StructureDefinitionContext _$StructureDefinitionContextFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : StructureDefinitionContextType.fromJson(json['type'] as String),
     expression: json['expression'] as String,
   );
 }
@@ -230,7 +243,7 @@ Map<String, dynamic> _$StructureDefinitionContextToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('expression', instance.expression);
   return val;
 }

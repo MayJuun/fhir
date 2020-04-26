@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/id.dart';
@@ -19,7 +22,7 @@ part 'specimen.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Specimen {
-  static const String resourceType = 'Specimen';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -30,7 +33,7 @@ class Specimen {
   List<Extension> modifierExtension;
   List<Identifier> identifier;
   Identifier accessionIdentifier;
-  String status;
+  SpecimenStatus status;
   CodeableConcept type;
   Reference subject;
   FhirDateTime receivedTime;
@@ -43,6 +46,7 @@ class Specimen {
   List<Annotation> note;
 
   Specimen({
+    this.resourceType = 'Specimen',
     this.id,
     this.meta,
     this.implicitRules,
@@ -162,4 +166,26 @@ class SpecimenContainer {
   factory SpecimenContainer.fromJson(Map<String, dynamic> json) =>
       _$SpecimenContainerFromJson(json);
   Map<String, dynamic> toJson() => _$SpecimenContainerToJson(this);
+}
+
+class SpecimenStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory SpecimenStatus(String value) {
+    assert(value != null);
+    return SpecimenStatus._(
+      validateEnum(
+        value,
+        [
+          'available',
+          'unavailable',
+          'unsatisfactory',
+          'entered-in-error',
+        ],
+      ),
+    );
+  }
+  const SpecimenStatus._(this.value);
+  factory SpecimenStatus.fromJson(String json) => SpecimenStatus(json);
+  String toJson() => result();
 }

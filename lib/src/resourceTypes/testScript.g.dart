@@ -8,6 +8,7 @@ part of 'testScript.dart';
 
 TestScript _$TestScriptFromJson(Map<String, dynamic> json) {
   return TestScript(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -37,7 +38,9 @@ TestScript _$TestScriptFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : TestScriptStatus.fromJson(json['status'] as String),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -116,6 +119,7 @@ Map<String, dynamic> _$TestScriptToJson(TestScript instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -131,7 +135,7 @@ Map<String, dynamic> _$TestScriptToJson(TestScript instance) {
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
@@ -553,7 +557,9 @@ TestScriptOperation _$TestScriptOperationFromJson(Map<String, dynamic> json) {
         : Code.fromJson(json['contentType'] as String),
     destination: json['destination'] as int,
     encodeRequestUrl: json['encodeRequestUrl'] as bool,
-    method: json['method'] as String,
+    method: json['method'] == null
+        ? null
+        : TestScriptOperationMethod.fromJson(json['method'] as String),
     origin: json['origin'] as int,
     params: json['params'] as String,
     requestHeader: (json['requestHeader'] as List)
@@ -599,7 +605,7 @@ Map<String, dynamic> _$TestScriptOperationToJson(TestScriptOperation instance) {
   writeNotNull('contentType', instance.contentType?.toJson());
   writeNotNull('destination', instance.destination);
   writeNotNull('encodeRequestUrl', instance.encodeRequestUrl);
-  writeNotNull('method', instance.method);
+  writeNotNull('method', instance.method?.toJson());
   writeNotNull('origin', instance.origin);
   writeNotNull('params', instance.params);
   writeNotNull('requestHeader',
@@ -662,7 +668,9 @@ TestScriptAssert _$TestScriptAssertFromJson(Map<String, dynamic> json) {
         ?.toList(),
     label: json['label'] as String,
     description: json['description'] as String,
-    direction: json['direction'] as String,
+    direction: json['direction'] == null
+        ? null
+        : TestScriptAssertDirection.fromJson(json['direction'] as String),
     compareToSourceId: json['compareToSourceId'] as String,
     compareToSourceExpression: json['compareToSourceExpression'] as String,
     compareToSourcePath: json['compareToSourcePath'] as String,
@@ -673,14 +681,21 @@ TestScriptAssert _$TestScriptAssertFromJson(Map<String, dynamic> json) {
     headerField: json['headerField'] as String,
     minimumId: json['minimumId'] as String,
     navigationLinks: json['navigationLinks'] as bool,
-    operator: json['operator'] as String,
+    operator: json['operator'] == null
+        ? null
+        : TestScriptAssertOperator.fromJson(json['operator'] as String),
     path: json['path'] as String,
-    requestMethod: json['requestMethod'] as String,
+    requestMethod: json['requestMethod'] == null
+        ? null
+        : TestScriptAssertRequestMethod.fromJson(
+            json['requestMethod'] as String),
     requestURL: json['requestURL'] as String,
     resource: json['resource'] == null
         ? null
         : Code.fromJson(json['resource'] as String),
-    response: json['response'] as String,
+    response: json['response'] == null
+        ? null
+        : TestScriptAssertResponse.fromJson(json['response'] as String),
     responseCode: json['responseCode'] as String,
     sourceId: json['sourceId'] == null
         ? null
@@ -709,7 +724,7 @@ Map<String, dynamic> _$TestScriptAssertToJson(TestScriptAssert instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('label', instance.label);
   writeNotNull('description', instance.description);
-  writeNotNull('direction', instance.direction);
+  writeNotNull('direction', instance.direction?.toJson());
   writeNotNull('compareToSourceId', instance.compareToSourceId);
   writeNotNull('compareToSourceExpression', instance.compareToSourceExpression);
   writeNotNull('compareToSourcePath', instance.compareToSourcePath);
@@ -718,12 +733,12 @@ Map<String, dynamic> _$TestScriptAssertToJson(TestScriptAssert instance) {
   writeNotNull('headerField', instance.headerField);
   writeNotNull('minimumId', instance.minimumId);
   writeNotNull('navigationLinks', instance.navigationLinks);
-  writeNotNull('operator', instance.operator);
+  writeNotNull('operator', instance.operator?.toJson());
   writeNotNull('path', instance.path);
-  writeNotNull('requestMethod', instance.requestMethod);
+  writeNotNull('requestMethod', instance.requestMethod?.toJson());
   writeNotNull('requestURL', instance.requestURL);
   writeNotNull('resource', instance.resource?.toJson());
-  writeNotNull('response', instance.response);
+  writeNotNull('response', instance.response?.toJson());
   writeNotNull('responseCode', instance.responseCode);
   writeNotNull('sourceId', instance.sourceId?.toJson());
   writeNotNull('validateProfileId', instance.validateProfileId?.toJson());

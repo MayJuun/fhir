@@ -8,6 +8,7 @@ part of 'molecularSequence.dart';
 
 MolecularSequence _$MolecularSequenceFromJson(Map<String, dynamic> json) {
   return MolecularSequence(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -34,7 +35,9 @@ MolecularSequence _$MolecularSequenceFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : MolecularSequenceType.fromJson(json['type'] as String),
     coordinateSystem: json['coordinateSystem'] as int,
     patient: json['patient'] == null
         ? null
@@ -94,6 +97,7 @@ Map<String, dynamic> _$MolecularSequenceToJson(MolecularSequence instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -106,7 +110,7 @@ Map<String, dynamic> _$MolecularSequenceToJson(MolecularSequence instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('coordinateSystem', instance.coordinateSystem);
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('specimen', instance.specimen?.toJson());
@@ -142,7 +146,10 @@ MolecularSequenceReferenceSeq _$MolecularSequenceReferenceSeqFromJson(
         ? null
         : CodeableConcept.fromJson(json['chromosome'] as Map<String, dynamic>),
     genomeBuild: json['genomeBuild'] as String,
-    orientation: json['orientation'] as String,
+    orientation: json['orientation'] == null
+        ? null
+        : MolecularSequenceReferenceSeqOrientation.fromJson(
+            json['orientation'] as String),
     referenceSeqId: json['referenceSeqId'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -152,7 +159,10 @@ MolecularSequenceReferenceSeq _$MolecularSequenceReferenceSeqFromJson(
         : Reference.fromJson(
             json['referenceSeqPointer'] as Map<String, dynamic>),
     referenceSeqString: json['referenceSeqString'] as String,
-    strand: json['strand'] as String,
+    strand: json['strand'] == null
+        ? null
+        : MolecularSequenceReferenceSeqStrand.fromJson(
+            json['strand'] as String),
     windowStart: json['windowStart'] as int,
     windowEnd: json['windowEnd'] as int,
   );
@@ -175,11 +185,11 @@ Map<String, dynamic> _$MolecularSequenceReferenceSeqToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('chromosome', instance.chromosome?.toJson());
   writeNotNull('genomeBuild', instance.genomeBuild);
-  writeNotNull('orientation', instance.orientation);
+  writeNotNull('orientation', instance.orientation?.toJson());
   writeNotNull('referenceSeqId', instance.referenceSeqId?.toJson());
   writeNotNull('referenceSeqPointer', instance.referenceSeqPointer?.toJson());
   writeNotNull('referenceSeqString', instance.referenceSeqString);
-  writeNotNull('strand', instance.strand);
+  writeNotNull('strand', instance.strand?.toJson());
   writeNotNull('windowStart', instance.windowStart);
   writeNotNull('windowEnd', instance.windowEnd);
   return val;
@@ -244,7 +254,9 @@ MolecularSequenceQuality _$MolecularSequenceQualityFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : MolecularSequenceQualityType.fromJson(json['type'] as String),
     standardSequence: json['standardSequence'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -286,7 +298,7 @@ Map<String, dynamic> _$MolecularSequenceQualityToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('standardSequence', instance.standardSequence?.toJson());
   writeNotNull('start', instance.start);
   writeNotNull('end', instance.end);
@@ -368,7 +380,9 @@ MolecularSequenceRepository _$MolecularSequenceRepositoryFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : MolecularSequenceRepositoryType.fromJson(json['type'] as String),
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
     name: json['name'] as String,
     datasetId: json['datasetId'] as String,
@@ -392,7 +406,7 @@ Map<String, dynamic> _$MolecularSequenceRepositoryToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('datasetId', instance.datasetId);

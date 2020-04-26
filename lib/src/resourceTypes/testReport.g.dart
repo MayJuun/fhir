@@ -8,6 +8,7 @@ part of 'testReport.dart';
 
 TestReport _$TestReportFromJson(Map<String, dynamic> json) {
   return TestReport(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -34,11 +35,15 @@ TestReport _$TestReportFromJson(Map<String, dynamic> json) {
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     name: json['name'] as String,
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : TestReportStatus.fromJson(json['status'] as String),
     testScript: json['testScript'] == null
         ? null
         : Reference.fromJson(json['testScript'] as Map<String, dynamic>),
-    result: json['result'] as String,
+    result: json['result'] == null
+        ? null
+        : TestReportResult.fromJson(json['result'] as String),
     score: (json['score'] as num)?.toDouble(),
     tester: json['tester'] as String,
     issued: json['issued'] == null
@@ -72,6 +77,7 @@ Map<String, dynamic> _$TestReportToJson(TestReport instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -84,9 +90,9 @@ Map<String, dynamic> _$TestReportToJson(TestReport instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('name', instance.name);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('testScript', instance.testScript?.toJson());
-  writeNotNull('result', instance.result);
+  writeNotNull('result', instance.result?.toJson());
   writeNotNull('score', instance.score);
   writeNotNull('tester', instance.tester);
   writeNotNull('issued', instance.issued?.toJson());
@@ -110,7 +116,9 @@ TestReportParticipant _$TestReportParticipantFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : TestReportParticipantType.fromJson(json['type'] as String),
     uri: json['uri'] == null ? null : FhirUri.fromJson(json['uri'] as String),
     display: json['display'] as String,
   );
@@ -131,7 +139,7 @@ Map<String, dynamic> _$TestReportParticipantToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('uri', instance.uri?.toJson());
   writeNotNull('display', instance.display);
   return val;
@@ -225,7 +233,9 @@ TestReportOperation _$TestReportOperationFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    result: json['result'] as String,
+    result: json['result'] == null
+        ? null
+        : TestReportOperationResult.fromJson(json['result'] as String),
     message: json['message'] == null
         ? null
         : Markdown.fromJson(json['message'] as String),
@@ -249,7 +259,7 @@ Map<String, dynamic> _$TestReportOperationToJson(TestReportOperation instance) {
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('result', instance.result);
+  writeNotNull('result', instance.result?.toJson());
   writeNotNull('message', instance.message?.toJson());
   writeNotNull('detail', instance.detail?.toJson());
   return val;
@@ -266,7 +276,9 @@ TestReportAssert _$TestReportAssertFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    result: json['result'] as String,
+    result: json['result'] == null
+        ? null
+        : TestReportAssertResult.fromJson(json['result'] as String),
     message: json['message'] == null
         ? null
         : Markdown.fromJson(json['message'] as String),
@@ -288,7 +300,7 @@ Map<String, dynamic> _$TestReportAssertToJson(TestReportAssert instance) {
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('result', instance.result);
+  writeNotNull('result', instance.result?.toJson());
   writeNotNull('message', instance.message?.toJson());
   writeNotNull('detail', instance.detail);
   return val;

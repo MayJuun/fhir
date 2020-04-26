@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
 import '../primitiveTypes/uri.dart';
@@ -62,7 +65,7 @@ class SpecimenDefinitionTypeTested {
   List<Extension> modifierExtension;
   bool isDerived;
   CodeableConcept type;
-  String preference;
+  SpecimenDefinitionTypeTestedPreference preference;
   SpecimenDefinitionContainer container;
   String requirement;
   Duration retentionTime;
@@ -167,4 +170,25 @@ class SpecimenDefinitionHandling {
   factory SpecimenDefinitionHandling.fromJson(Map<String, dynamic> json) =>
       _$SpecimenDefinitionHandlingFromJson(json);
   Map<String, dynamic> toJson() => _$SpecimenDefinitionHandlingToJson(this);
+}
+
+class SpecimenDefinitionTypeTestedPreference extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory SpecimenDefinitionTypeTestedPreference(String value) {
+    assert(value != null);
+    return SpecimenDefinitionTypeTestedPreference._(
+      validateEnum(
+        value,
+        [
+          'preferred',
+          'alternate',
+        ],
+      ),
+    );
+  }
+  const SpecimenDefinitionTypeTestedPreference._(this.value);
+  factory SpecimenDefinitionTypeTestedPreference.fromJson(String json) =>
+      SpecimenDefinitionTypeTestedPreference(json);
+  String toJson() => result();
 }

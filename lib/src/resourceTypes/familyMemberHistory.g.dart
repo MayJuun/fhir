@@ -8,6 +8,7 @@ part of 'familyMemberHistory.dart';
 
 FamilyMemberHistory _$FamilyMemberHistoryFromJson(Map<String, dynamic> json) {
   return FamilyMemberHistory(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -40,7 +41,9 @@ FamilyMemberHistory _$FamilyMemberHistoryFromJson(Map<String, dynamic> json) {
     instantiatesUri: (json['instantiatesUri'] as List)
         ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : FamilyMemberHistoryStatus.fromJson(json['status'] as String),
     dataAbsentReason: json['dataAbsentReason'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -115,6 +118,7 @@ Map<String, dynamic> _$FamilyMemberHistoryToJson(FamilyMemberHistory instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -131,7 +135,7 @@ Map<String, dynamic> _$FamilyMemberHistoryToJson(FamilyMemberHistory instance) {
       instance.instantiatesCanonical?.map((e) => e?.toJson())?.toList());
   writeNotNull('instantiatesUri',
       instance.instantiatesUri?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('dataAbsentReason', instance.dataAbsentReason?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('date', instance.date?.toJson());

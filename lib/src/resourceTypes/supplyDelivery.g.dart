@@ -8,6 +8,7 @@ part of 'supplyDelivery.dart';
 
 SupplyDelivery _$SupplyDeliveryFromJson(Map<String, dynamic> json) {
   return SupplyDelivery(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -42,7 +43,9 @@ SupplyDelivery _$SupplyDeliveryFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : SupplyDeliveryStatus.fromJson(json['status'] as String),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -84,6 +87,7 @@ Map<String, dynamic> _$SupplyDeliveryToJson(SupplyDelivery instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -98,7 +102,7 @@ Map<String, dynamic> _$SupplyDeliveryToJson(SupplyDelivery instance) {
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson())?.toList());
   writeNotNull('partOf', instance.partOf?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('suppliedItem', instance.suppliedItem?.toJson());

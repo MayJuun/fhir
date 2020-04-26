@@ -8,6 +8,7 @@ part of 'invoice.dart';
 
 Invoice _$InvoiceFromJson(Map<String, dynamic> json) {
   return Invoice(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -34,7 +35,9 @@ Invoice _$InvoiceFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : InvoiceStatus.fromJson(json['status'] as String),
     cancelledReason: json['cancelledReason'] as String,
     type: json['type'] == null
         ? null
@@ -94,6 +97,7 @@ Map<String, dynamic> _$InvoiceToJson(Invoice instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -106,7 +110,7 @@ Map<String, dynamic> _$InvoiceToJson(Invoice instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('cancelledReason', instance.cancelledReason);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
@@ -229,7 +233,9 @@ InvoicePriceComponent _$InvoicePriceComponentFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : InvoicePriceComponentType.fromJson(json['type'] as String),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -255,7 +261,7 @@ Map<String, dynamic> _$InvoicePriceComponentToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('factor', instance.factor);
   writeNotNull('amount', instance.amount?.toJson());

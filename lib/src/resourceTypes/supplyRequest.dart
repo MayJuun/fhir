@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/id.dart';
@@ -20,7 +23,7 @@ part 'supplyRequest.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class SupplyRequest {
-  static const String resourceType = 'SupplyRequest';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -30,7 +33,7 @@ class SupplyRequest {
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<Identifier> identifier;
-  String status;
+  SupplyRequestStatus status;
   CodeableConcept category;
   Code priority;
   CodeableConcept itemCodeableConcept;
@@ -49,6 +52,7 @@ class SupplyRequest {
   Reference deliverTo;
 
   SupplyRequest({
+    this.resourceType = 'SupplyRequest',
     this.id,
     this.meta,
     this.implicitRules,
@@ -107,4 +111,30 @@ class SupplyRequestParameter {
   factory SupplyRequestParameter.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestParameterFromJson(json);
   Map<String, dynamic> toJson() => _$SupplyRequestParameterToJson(this);
+}
+
+class SupplyRequestStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory SupplyRequestStatus(String value) {
+    assert(value != null);
+    return SupplyRequestStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'suspended',
+          'cancelled',
+          'completed',
+          'entered-in-error',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const SupplyRequestStatus._(this.value);
+  factory SupplyRequestStatus.fromJson(String json) =>
+      SupplyRequestStatus(json);
+  String toJson() => result();
 }

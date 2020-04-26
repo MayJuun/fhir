@@ -8,6 +8,7 @@ part of 'deviceDefinition.dart';
 
 DeviceDefinition _$DeviceDefinitionFromJson(Map<String, dynamic> json) {
   return DeviceDefinition(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -128,6 +129,7 @@ Map<String, dynamic> _$DeviceDefinitionToJson(DeviceDefinition instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -231,7 +233,9 @@ DeviceDefinitionDeviceName _$DeviceDefinitionDeviceNameFromJson(
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     name: json['name'] as String,
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : DeviceDefinitionDeviceNameType.fromJson(json['type'] as String),
   );
 }
 
@@ -251,7 +255,7 @@ Map<String, dynamic> _$DeviceDefinitionDeviceNameToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('name', instance.name);
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   return val;
 }
 

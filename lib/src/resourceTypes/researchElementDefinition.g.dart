@@ -9,6 +9,7 @@ part of 'researchElementDefinition.dart';
 ResearchElementDefinition _$ResearchElementDefinitionFromJson(
     Map<String, dynamic> json) {
   return ResearchElementDefinition(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -41,7 +42,9 @@ ResearchElementDefinition _$ResearchElementDefinitionFromJson(
     title: json['title'] as String,
     shortTitle: json['shortTitle'] as String,
     subtitle: json['subtitle'] as String,
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : ResearchElementDefinitionStatus.fromJson(json['status'] as String),
     experimental: json['experimental'] as bool,
     subjectCodeableConcept: json['subjectCodeableConcept'] == null
         ? null
@@ -121,8 +124,13 @@ ResearchElementDefinition _$ResearchElementDefinitionFromJson(
     library: (json['library'] as List)
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
         ?.toList(),
-    type: json['type'] as String,
-    variableType: json['variableType'] as String,
+    type: json['type'] == null
+        ? null
+        : ResearchElementDefinitionType.fromJson(json['type'] as String),
+    variableType: json['variableType'] == null
+        ? null
+        : ResearchElementDefinitionVariableType.fromJson(
+            json['variableType'] as String),
     characteristic: (json['characteristic'] as List)
         ?.map((e) => e == null
             ? null
@@ -142,6 +150,7 @@ Map<String, dynamic> _$ResearchElementDefinitionToJson(
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -160,7 +169,7 @@ Map<String, dynamic> _$ResearchElementDefinitionToJson(
   writeNotNull('title', instance.title);
   writeNotNull('shortTitle', instance.shortTitle);
   writeNotNull('subtitle', instance.subtitle);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull(
       'subjectCodeableConcept', instance.subjectCodeableConcept?.toJson());
@@ -190,8 +199,8 @@ Map<String, dynamic> _$ResearchElementDefinitionToJson(
   writeNotNull('relatedArtifact',
       instance.relatedArtifact?.map((e) => e?.toJson())?.toList());
   writeNotNull('library', instance.library?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type);
-  writeNotNull('variableType', instance.variableType);
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('variableType', instance.variableType?.toJson());
   writeNotNull('characteristic',
       instance.characteristic?.map((e) => e?.toJson())?.toList());
   return val;
@@ -252,7 +261,10 @@ ResearchElementDefinitionCharacteristic
         ? null
         : Duration.fromJson(
             json['studyEffectiveTimeFromStart'] as Map<String, dynamic>),
-    studyEffectiveGroupMeasure: json['studyEffectiveGroupMeasure'] as String,
+    studyEffectiveGroupMeasure: json['studyEffectiveGroupMeasure'] == null
+        ? null
+        : ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure
+            .fromJson(json['studyEffectiveGroupMeasure'] as String),
     participantEffectiveDescription:
         json['participantEffectiveDescription'] as String,
     participantEffectiveDateTime: json['participantEffectiveDateTime'] == null
@@ -275,8 +287,12 @@ ResearchElementDefinitionCharacteristic
             ? null
             : Duration.fromJson(json['participantEffectiveTimeFromStart']
                 as Map<String, dynamic>),
-    participantEffectiveGroupMeasure:
-        json['participantEffectiveGroupMeasure'] as String,
+    participantEffectiveGroupMeasure: json[
+                'participantEffectiveGroupMeasure'] ==
+            null
+        ? null
+        : ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure
+            .fromJson(json['participantEffectiveGroupMeasure'] as String),
   );
 }
 
@@ -314,8 +330,8 @@ Map<String, dynamic> _$ResearchElementDefinitionCharacteristicToJson(
   writeNotNull('studyEffectiveTiming', instance.studyEffectiveTiming?.toJson());
   writeNotNull('studyEffectiveTimeFromStart',
       instance.studyEffectiveTimeFromStart?.toJson());
-  writeNotNull(
-      'studyEffectiveGroupMeasure', instance.studyEffectiveGroupMeasure);
+  writeNotNull('studyEffectiveGroupMeasure',
+      instance.studyEffectiveGroupMeasure?.toJson());
   writeNotNull('participantEffectiveDescription',
       instance.participantEffectiveDescription);
   writeNotNull('participantEffectiveDateTime',
@@ -329,6 +345,6 @@ Map<String, dynamic> _$ResearchElementDefinitionCharacteristicToJson(
   writeNotNull('participantEffectiveTimeFromStart',
       instance.participantEffectiveTimeFromStart?.toJson());
   writeNotNull('participantEffectiveGroupMeasure',
-      instance.participantEffectiveGroupMeasure);
+      instance.participantEffectiveGroupMeasure?.toJson());
   return val;
 }

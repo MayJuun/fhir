@@ -8,6 +8,7 @@ part of 'composition.dart';
 
 Composition _$CompositionFromJson(Map<String, dynamic> json) {
   return Composition(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -33,7 +34,9 @@ Composition _$CompositionFromJson(Map<String, dynamic> json) {
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : CompositionStatus.fromJson(json['status'] as String),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -94,6 +97,7 @@ Map<String, dynamic> _$CompositionToJson(Composition instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -105,7 +109,7 @@ Map<String, dynamic> _$CompositionToJson(Composition instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull(
       'category', instance.category?.map((e) => e?.toJson())?.toList());
@@ -136,7 +140,9 @@ CompositionAttester _$CompositionAttesterFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    mode: json['mode'] as String,
+    mode: json['mode'] == null
+        ? null
+        : CompositionAttesterMode.fromJson(json['mode'] as String),
     time: json['time'] == null
         ? null
         : FhirDateTime.fromJson(json['time'] as String),
@@ -160,7 +166,7 @@ Map<String, dynamic> _$CompositionAttesterToJson(CompositionAttester instance) {
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('mode', instance.mode);
+  writeNotNull('mode', instance.mode?.toJson());
   writeNotNull('time', instance.time?.toJson());
   writeNotNull('party', instance.party?.toJson());
   return val;

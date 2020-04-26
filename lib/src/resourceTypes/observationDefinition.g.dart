@@ -9,6 +9,7 @@ part of 'observationDefinition.dart';
 ObservationDefinition _$ObservationDefinitionFromJson(
     Map<String, dynamic> json) {
   return ObservationDefinition(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -89,6 +90,7 @@ Map<String, dynamic> _$ObservationDefinitionToJson(
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -180,7 +182,10 @@ ObservationDefinitionQualifiedInterval
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    category: json['category'] as String,
+    category: json['category'] == null
+        ? null
+        : ObservationDefinitionQualifiedIntervalCategory.fromJson(
+            json['category'] as String),
     range: json['range'] == null
         ? null
         : Range.fromJson(json['range'] as Map<String, dynamic>),
@@ -192,7 +197,10 @@ ObservationDefinitionQualifiedInterval
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    gender: json['gender'] as String,
+    gender: json['gender'] == null
+        ? null
+        : ObservationDefinitionQualifiedIntervalGender.fromJson(
+            json['gender'] as String),
     age: json['age'] == null
         ? null
         : Range.fromJson(json['age'] as Map<String, dynamic>),
@@ -218,12 +226,12 @@ Map<String, dynamic> _$ObservationDefinitionQualifiedIntervalToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('category', instance.category);
+  writeNotNull('category', instance.category?.toJson());
   writeNotNull('range', instance.range?.toJson());
   writeNotNull('context', instance.context?.toJson());
   writeNotNull(
       'appliesTo', instance.appliesTo?.map((e) => e?.toJson())?.toList());
-  writeNotNull('gender', instance.gender);
+  writeNotNull('gender', instance.gender?.toJson());
   writeNotNull('age', instance.age?.toJson());
   writeNotNull('gestationalAge', instance.gestationalAge?.toJson());
   writeNotNull('condition', instance.condition);

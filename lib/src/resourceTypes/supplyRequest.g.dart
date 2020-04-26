@@ -8,6 +8,7 @@ part of 'supplyRequest.dart';
 
 SupplyRequest _$SupplyRequestFromJson(Map<String, dynamic> json) {
   return SupplyRequest(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -34,7 +35,9 @@ SupplyRequest _$SupplyRequestFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : SupplyRequestStatus.fromJson(json['status'] as String),
     category: json['category'] == null
         ? null
         : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
@@ -102,6 +105,7 @@ Map<String, dynamic> _$SupplyRequestToJson(SupplyRequest instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -114,7 +118,7 @@ Map<String, dynamic> _$SupplyRequestToJson(SupplyRequest instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('category', instance.category?.toJson());
   writeNotNull('priority', instance.priority?.toJson());
   writeNotNull('itemCodeableConcept', instance.itemCodeableConcept?.toJson());

@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/base64binary.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/date.dart';
@@ -52,7 +55,7 @@ part 'structureMap.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class StructureMap {
-  static const String resourceType = 'StructureMap';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -66,7 +69,7 @@ class StructureMap {
   String version;
   String name;
   String title;
-  String status;
+  StructureMapStatus status;
   bool experimental;
   FhirDateTime date;
   String publisher;
@@ -81,6 +84,7 @@ class StructureMap {
   List<StructureMapGroup> group;
 
   StructureMap({
+    this.resourceType = 'StructureMap',
     this.id,
     this.meta,
     this.implicitRules,
@@ -120,7 +124,7 @@ class StructureMapStructure {
   List<Extension> extension;
   List<Extension> modifierExtension;
   Canonical url;
-  String mode;
+  StructureMapStructureMode mode;
   String alias;
   String documentation;
 
@@ -146,7 +150,7 @@ class StructureMapGroup {
   List<Extension> modifierExtension;
   Id name;
   Id extend;
-  String typeMode;
+  StructureMapGroupTypeMode typeMode;
   String documentation;
   List<StructureMapInput> input;
   List<StructureMapRule> rule;
@@ -175,7 +179,7 @@ class StructureMapInput {
   List<Extension> modifierExtension;
   Id name;
   String type;
-  String mode;
+  StructureMapInputMode mode;
   String documentation;
 
   StructureMapInput({
@@ -282,7 +286,7 @@ class StructureMapSource {
   Dosage defaultValueDosage;
   Meta defaultValueMeta;
   String element;
-  String listMode;
+  StructureMapSourceListMode listMode;
   Id variable;
   String condition;
   String check;
@@ -365,12 +369,12 @@ class StructureMapTarget {
   List<Extension> extension;
   List<Extension> modifierExtension;
   Id context;
-  String contextType;
+  StructureMapTargetContextType contextType;
   String element;
   Id variable;
   List<String> listMode;
   Id listRuleId;
-  String transform;
+  StructureMapTargetTransform transform;
   List<StructureMapParameter> parameter;
 
   StructureMapTarget({
@@ -438,4 +442,173 @@ class StructureMapDependent {
   factory StructureMapDependent.fromJson(Map<String, dynamic> json) =>
       _$StructureMapDependentFromJson(json);
   Map<String, dynamic> toJson() => _$StructureMapDependentToJson(this);
+}
+
+class StructureMapStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory StructureMapStatus(String value) {
+    assert(value != null);
+    return StructureMapStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const StructureMapStatus._(this.value);
+  factory StructureMapStatus.fromJson(String json) => StructureMapStatus(json);
+  String toJson() => result();
+}
+
+class StructureMapStructureMode extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory StructureMapStructureMode(String value) {
+    assert(value != null);
+    return StructureMapStructureMode._(
+      validateEnum(
+        value,
+        [
+          'source',
+          'queried',
+          'target',
+          'produced',
+        ],
+      ),
+    );
+  }
+  const StructureMapStructureMode._(this.value);
+  factory StructureMapStructureMode.fromJson(String json) =>
+      StructureMapStructureMode(json);
+  String toJson() => result();
+}
+
+class StructureMapGroupTypeMode extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory StructureMapGroupTypeMode(String value) {
+    assert(value != null);
+    return StructureMapGroupTypeMode._(
+      validateEnum(
+        value,
+        [
+          'none',
+          'types',
+          'type-and-types',
+        ],
+      ),
+    );
+  }
+  const StructureMapGroupTypeMode._(this.value);
+  factory StructureMapGroupTypeMode.fromJson(String json) =>
+      StructureMapGroupTypeMode(json);
+  String toJson() => result();
+}
+
+class StructureMapInputMode extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory StructureMapInputMode(String value) {
+    assert(value != null);
+    return StructureMapInputMode._(
+      validateEnum(
+        value,
+        [
+          'source',
+          'target',
+        ],
+      ),
+    );
+  }
+  const StructureMapInputMode._(this.value);
+  factory StructureMapInputMode.fromJson(String json) =>
+      StructureMapInputMode(json);
+  String toJson() => result();
+}
+
+class StructureMapSourceListMode extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory StructureMapSourceListMode(String value) {
+    assert(value != null);
+    return StructureMapSourceListMode._(
+      validateEnum(
+        value,
+        [
+          'first',
+          'not_first',
+          'last',
+          'not_last',
+          'only_one',
+        ],
+      ),
+    );
+  }
+  const StructureMapSourceListMode._(this.value);
+  factory StructureMapSourceListMode.fromJson(String json) =>
+      StructureMapSourceListMode(json);
+  String toJson() => result();
+}
+
+class StructureMapTargetContextType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory StructureMapTargetContextType(String value) {
+    assert(value != null);
+    return StructureMapTargetContextType._(
+      validateEnum(
+        value,
+        [
+          'type',
+          'variable',
+        ],
+      ),
+    );
+  }
+  const StructureMapTargetContextType._(this.value);
+  factory StructureMapTargetContextType.fromJson(String json) =>
+      StructureMapTargetContextType(json);
+  String toJson() => result();
+}
+
+class StructureMapTargetTransform extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory StructureMapTargetTransform(String value) {
+    assert(value != null);
+    return StructureMapTargetTransform._(
+      validateEnum(
+        value,
+        [
+          'create',
+          'copy',
+          'truncate',
+          'escape',
+          'cast',
+          'append',
+          'translate',
+          'reference',
+          'dateOp',
+          'uuid',
+          'pointer',
+          'evaluate',
+          'cc',
+          'c',
+          'qty',
+          'id',
+          'cp',
+        ],
+      ),
+    );
+  }
+  const StructureMapTargetTransform._(this.value);
+  factory StructureMapTargetTransform.fromJson(String json) =>
+      StructureMapTargetTransform(json);
+  String toJson() => result();
 }

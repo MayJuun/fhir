@@ -8,6 +8,7 @@ part of 'medicationStatement.dart';
 
 MedicationStatement _$MedicationStatementFromJson(Map<String, dynamic> json) {
   return MedicationStatement(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -111,6 +112,7 @@ Map<String, dynamic> _$MedicationStatementToJson(MedicationStatement instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

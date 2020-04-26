@@ -8,6 +8,7 @@ part of 'auditEvent.dart';
 
 AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) {
   return AuditEvent(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -37,14 +38,18 @@ AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    action: _$enumDecodeNullable(_$AuditEventActionEnumMap, json['action']),
+    action: json['action'] == null
+        ? null
+        : AuditEventAction.fromJson(json['action'] as String),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
     recorded: json['recorded'] == null
         ? null
         : Instant.fromJson(json['recorded'] as String),
-    outcome: _$enumDecodeNullable(_$AuditEventOutcomeEnumMap, json['outcome']),
+    outcome: json['outcome'] == null
+        ? null
+        : AuditEventOutcome.fromJson(json['outcome'] as String),
     outcomeDesc: json['outcomeDesc'] as String,
     purposeOfEvent: (json['purposeOfEvent'] as List)
         ?.map((e) => e == null
@@ -76,6 +81,7 @@ Map<String, dynamic> _$AuditEventToJson(AuditEvent instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -88,10 +94,10 @@ Map<String, dynamic> _$AuditEventToJson(AuditEvent instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('subtype', instance.subtype?.map((e) => e?.toJson())?.toList());
-  writeNotNull('action', _$AuditEventActionEnumMap[instance.action]);
+  writeNotNull('action', instance.action?.toJson());
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('recorded', instance.recorded?.toJson());
-  writeNotNull('outcome', _$AuditEventOutcomeEnumMap[instance.outcome]);
+  writeNotNull('outcome', instance.outcome?.toJson());
   writeNotNull('outcomeDesc', instance.outcomeDesc);
   writeNotNull('purposeOfEvent',
       instance.purposeOfEvent?.map((e) => e?.toJson())?.toList());
@@ -100,53 +106,6 @@ Map<String, dynamic> _$AuditEventToJson(AuditEvent instance) {
   writeNotNull('entity', instance.entity?.map((e) => e?.toJson())?.toList());
   return val;
 }
-
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
-}
-
-const _$AuditEventActionEnumMap = {
-  AuditEventAction.c: 'C',
-  AuditEventAction.r: 'R',
-  AuditEventAction.u: 'U',
-  AuditEventAction.d: 'D',
-  AuditEventAction.e: 'E',
-};
-
-const _$AuditEventOutcomeEnumMap = {
-  AuditEventOutcome.zero: '0',
-  AuditEventOutcome.four: '4',
-  AuditEventOutcome.eight: '8',
-  AuditEventOutcome.twelve: '12',
-};
 
 AuditEventAgent _$AuditEventAgentFromJson(Map<String, dynamic> json) {
   return AuditEventAgent(
@@ -234,7 +193,9 @@ AuditEventNetwork _$AuditEventNetworkFromJson(Map<String, dynamic> json) {
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     address: json['address'] as String,
-    type: _$enumDecodeNullable(_$AuditEventNetworkTypeEnumMap, json['type']),
+    type: json['type'] == null
+        ? null
+        : AuditEventNetworkType.fromJson(json['type'] as String),
   );
 }
 
@@ -253,17 +214,9 @@ Map<String, dynamic> _$AuditEventNetworkToJson(AuditEventNetwork instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('address', instance.address);
-  writeNotNull('type', _$AuditEventNetworkTypeEnumMap[instance.type]);
+  writeNotNull('type', instance.type?.toJson());
   return val;
 }
-
-const _$AuditEventNetworkTypeEnumMap = {
-  AuditEventNetworkType.one: '1',
-  AuditEventNetworkType.two: '2',
-  AuditEventNetworkType.three: '3',
-  AuditEventNetworkType.four: '4',
-  AuditEventNetworkType.five: '5',
-};
 
 AuditEventSource _$AuditEventSourceFromJson(Map<String, dynamic> json) {
   return AuditEventSource(

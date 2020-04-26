@@ -8,6 +8,7 @@ part of 'documentManifest.dart';
 
 DocumentManifest _$DocumentManifestFromJson(Map<String, dynamic> json) {
   return DocumentManifest(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -37,7 +38,9 @@ DocumentManifest _$DocumentManifestFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : DocumentManifestStatus.fromJson(json['status'] as String),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -80,6 +83,7 @@ Map<String, dynamic> _$DocumentManifestToJson(DocumentManifest instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -93,7 +97,7 @@ Map<String, dynamic> _$DocumentManifestToJson(DocumentManifest instance) {
   writeNotNull('masterIdentifier', instance.masterIdentifier?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('created', instance.created?.toJson());

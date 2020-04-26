@@ -8,6 +8,7 @@ part of 'researchSubject.dart';
 
 ResearchSubject _$ResearchSubjectFromJson(Map<String, dynamic> json) {
   return ResearchSubject(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -34,7 +35,9 @@ ResearchSubject _$ResearchSubjectFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : ResearchSubjectStatus.fromJson(json['status'] as String),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -61,6 +64,7 @@ Map<String, dynamic> _$ResearchSubjectToJson(ResearchSubject instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -73,7 +77,7 @@ Map<String, dynamic> _$ResearchSubjectToJson(ResearchSubject instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('study', instance.study?.toJson());
   writeNotNull('individual', instance.individual?.toJson());

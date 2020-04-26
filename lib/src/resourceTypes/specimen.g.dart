@@ -8,6 +8,7 @@ part of 'specimen.dart';
 
 Specimen _$SpecimenFromJson(Map<String, dynamic> json) {
   return Specimen(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -38,7 +39,9 @@ Specimen _$SpecimenFromJson(Map<String, dynamic> json) {
         ? null
         : Identifier.fromJson(
             json['accessionIdentifier'] as Map<String, dynamic>),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : SpecimenStatus.fromJson(json['status'] as String),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -91,6 +94,7 @@ Map<String, dynamic> _$SpecimenToJson(Specimen instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -104,7 +108,7 @@ Map<String, dynamic> _$SpecimenToJson(Specimen instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('accessionIdentifier', instance.accessionIdentifier?.toJson());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('receivedTime', instance.receivedTime?.toJson());

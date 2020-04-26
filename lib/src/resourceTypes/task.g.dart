@@ -8,6 +8,7 @@ part of 'task.dart';
 
 Task _$TaskFromJson(Map<String, dynamic> json) {
   return Task(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -51,7 +52,9 @@ Task _$TaskFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : TaskStatus.fromJson(json['status'] as String),
     statusReason: json['statusReason'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -60,7 +63,9 @@ Task _$TaskFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['businessStatus'] as Map<String, dynamic>),
-    intent: json['intent'] as String,
+    intent: json['intent'] == null
+        ? null
+        : TaskIntent.fromJson(json['intent'] as String),
     priority: json['priority'] == null
         ? null
         : Code.fromJson(json['priority'] as String),
@@ -141,6 +146,7 @@ Map<String, dynamic> _$TaskToJson(Task instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -159,10 +165,10 @@ Map<String, dynamic> _$TaskToJson(Task instance) {
   writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson())?.toList());
   writeNotNull('groupIdentifier', instance.groupIdentifier?.toJson());
   writeNotNull('partOf', instance.partOf?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('statusReason', instance.statusReason?.toJson());
   writeNotNull('businessStatus', instance.businessStatus?.toJson());
-  writeNotNull('intent', instance.intent);
+  writeNotNull('intent', instance.intent?.toJson());
   writeNotNull('priority', instance.priority?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('description', instance.description);

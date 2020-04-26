@@ -8,6 +8,7 @@ part of 'appointment.dart';
 
 Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
   return Appointment(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -34,7 +35,9 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$AppointmentStatusEnumMap, json['status']),
+    status: json['status'] == null
+        ? null
+        : AppointmentStatus.fromJson(json['status'] as String),
     cancelationReason: json['cancelationReason'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -112,6 +115,7 @@ Map<String, dynamic> _$AppointmentToJson(Appointment instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -124,7 +128,7 @@ Map<String, dynamic> _$AppointmentToJson(Appointment instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', _$AppointmentStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('cancelationReason', instance.cancelationReason?.toJson());
   writeNotNull('serviceCategory',
       instance.serviceCategory?.map((e) => e?.toJson())?.toList());
@@ -156,51 +160,6 @@ Map<String, dynamic> _$AppointmentToJson(Appointment instance) {
   return val;
 }
 
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
-}
-
-const _$AppointmentStatusEnumMap = {
-  AppointmentStatus.proposted: 'proposed',
-  AppointmentStatus.pending: 'pending',
-  AppointmentStatus.booked: 'booked',
-  AppointmentStatus.arrived: 'arrived',
-  AppointmentStatus.fulfilled: 'fulfilled',
-  AppointmentStatus.cancelled: 'cancelled',
-  AppointmentStatus.noshow: 'noshow',
-  AppointmentStatus.entered_in_error: 'entered-in-error',
-  AppointmentStatus.checked_in: 'checked-in',
-  AppointmentStatus.waitlist: 'waitlist',
-};
-
 AppointmentParticipant _$AppointmentParticipantFromJson(
     Map<String, dynamic> json) {
   return AppointmentParticipant(
@@ -221,10 +180,12 @@ AppointmentParticipant _$AppointmentParticipantFromJson(
     actor: json['actor'] == null
         ? null
         : Reference.fromJson(json['actor'] as Map<String, dynamic>),
-    required: _$enumDecodeNullable(
-        _$AppointmentParticipantRequiredEnumMap, json['required']),
-    status: _$enumDecodeNullable(
-        _$AppointmentParticipantStatusEnumMap, json['status']),
+    required: json['required'] == null
+        ? null
+        : AppointmentParticipantRequired.fromJson(json['required'] as String),
+    status: json['status'] == null
+        ? null
+        : AppointmentParticipantStatus.fromJson(json['status'] as String),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -248,23 +209,8 @@ Map<String, dynamic> _$AppointmentParticipantToJson(
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
   writeNotNull('actor', instance.actor?.toJson());
-  writeNotNull(
-      'required', _$AppointmentParticipantRequiredEnumMap[instance.required]);
-  writeNotNull(
-      'status', _$AppointmentParticipantStatusEnumMap[instance.status]);
+  writeNotNull('required', instance.required?.toJson());
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('period', instance.period?.toJson());
   return val;
 }
-
-const _$AppointmentParticipantRequiredEnumMap = {
-  AppointmentParticipantRequired.required: 'required',
-  AppointmentParticipantRequired.optional: 'optional',
-  AppointmentParticipantRequired.information_only: 'information-only',
-};
-
-const _$AppointmentParticipantStatusEnumMap = {
-  AppointmentParticipantStatus.accepted: 'accepted',
-  AppointmentParticipantStatus.declined: 'declined',
-  AppointmentParticipantStatus.tentative: 'tentative',
-  AppointmentParticipantStatus.needs_action: 'needs-action',
-};

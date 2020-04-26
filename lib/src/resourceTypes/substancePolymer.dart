@@ -14,7 +14,7 @@ part 'substancePolymer.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class SubstancePolymer {
-  static const String resourceType = 'SubstancePolymer';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -31,6 +31,7 @@ class SubstancePolymer {
   List<SubstancePolymerRepeat> repeat;
 
   SubstancePolymer({
+    this.resourceType = 'SubstancePolymer',
     this.id,
     this.meta,
     this.implicitRules,

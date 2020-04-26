@@ -70,7 +70,7 @@ class VisionPrescriptionLensSpecification {
   List<Extension> extension;
   List<Extension> modifierExtension;
   CodeableConcept product;
-  String eye;
+  VisionPrescriptionLensSpecificationEye eye;
   double sphere;
   double cylinder;
   int axis;
@@ -117,7 +117,7 @@ class VisionPrescriptionPrism {
   List<Extension> extension;
   List<Extension> modifierExtension;
   double amount;
-  VisionPrescriptionPrism base;
+  VisionPrescriptionPrismBase base;
 
   VisionPrescriptionPrism({
     this.id,
@@ -154,5 +154,26 @@ class VisionPrescriptionPrismBase extends PrimitiveObject<String> {
 
   factory VisionPrescriptionPrismBase.fromJson(String json) =>
       VisionPrescriptionPrismBase(json);
+  String toJson() => result();
+}
+
+class VisionPrescriptionLensSpecificationEye extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory VisionPrescriptionLensSpecificationEye(String value) {
+    assert(value != null);
+    return VisionPrescriptionLensSpecificationEye._(
+      validateEnum(
+        value,
+        [
+          'right',
+          'left',
+        ],
+      ),
+    );
+  }
+  const VisionPrescriptionLensSpecificationEye._(this.value);
+  factory VisionPrescriptionLensSpecificationEye.fromJson(String json) =>
+      VisionPrescriptionLensSpecificationEye(json);
   String toJson() => result();
 }

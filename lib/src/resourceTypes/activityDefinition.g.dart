@@ -8,6 +8,7 @@ part of 'activityDefinition.dart';
 
 ActivityDefinition _$ActivityDefinitionFromJson(Map<String, dynamic> json) {
   return ActivityDefinition(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -39,7 +40,9 @@ ActivityDefinition _$ActivityDefinitionFromJson(Map<String, dynamic> json) {
     name: json['name'] as String,
     title: json['title'] as String,
     subtitle: json['subtitle'] as String,
-    status: _$enumDecodeNullable(_$ActivityStatusEnumMap, json['status']),
+    status: json['status'] == null
+        ? null
+        : ActivityDefinitionStatus.fromJson(json['status'] as String),
     experimental: json['experimental'] as bool,
     subjectCodeableConcept: json['subjectCodeableConcept'] == null
         ? null
@@ -209,6 +212,7 @@ Map<String, dynamic> _$ActivityDefinitionToJson(ActivityDefinition instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -226,7 +230,7 @@ Map<String, dynamic> _$ActivityDefinitionToJson(ActivityDefinition instance) {
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
   writeNotNull('subtitle', instance.subtitle);
-  writeNotNull('status', _$ActivityStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull(
       'subjectCodeableConcept', instance.subjectCodeableConcept?.toJson());
@@ -288,45 +292,6 @@ Map<String, dynamic> _$ActivityDefinitionToJson(ActivityDefinition instance) {
       'dynamicValue', instance.dynamicValue?.map((e) => e?.toJson())?.toList());
   return val;
 }
-
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
-}
-
-const _$ActivityStatusEnumMap = {
-  ActivityStatus.draft: 'draft',
-  ActivityStatus.active: 'active',
-  ActivityStatus.retired: 'retired',
-  ActivityStatus.unknown: 'unknown',
-};
 
 ActivityDefinitionParticipant _$ActivityDefinitionParticipantFromJson(
     Map<String, dynamic> json) {

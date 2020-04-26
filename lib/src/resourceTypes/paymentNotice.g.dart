@@ -8,6 +8,7 @@ part of 'paymentNotice.dart';
 
 PaymentNotice _$PaymentNoticeFromJson(Map<String, dynamic> json) {
   return PaymentNotice(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -79,6 +80,7 @@ Map<String, dynamic> _$PaymentNoticeToJson(PaymentNotice instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

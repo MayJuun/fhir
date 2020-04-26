@@ -40,7 +40,9 @@ Evidence _$EvidenceFromJson(Map<String, dynamic> json) {
     title: json['title'] as String,
     shortTitle: json['shortTitle'] as String,
     subtitle: json['subtitle'] as String,
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : EvidenceStatus.fromJson(json['status'] as String),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -150,7 +152,7 @@ Map<String, dynamic> _$EvidenceToJson(Evidence instance) {
   writeNotNull('title', instance.title);
   writeNotNull('shortTitle', instance.shortTitle);
   writeNotNull('subtitle', instance.subtitle);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());

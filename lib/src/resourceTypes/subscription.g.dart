@@ -8,6 +8,7 @@ part of 'subscription.dart';
 
 Subscription _$SubscriptionFromJson(Map<String, dynamic> json) {
   return Subscription(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -30,7 +31,9 @@ Subscription _$SubscriptionFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : SubscriptionStatus.fromJson(json['status'] as String),
     contact: (json['contact'] as List)
         ?.map((e) =>
             e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
@@ -54,6 +57,7 @@ Map<String, dynamic> _$SubscriptionToJson(Subscription instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -64,7 +68,7 @@ Map<String, dynamic> _$SubscriptionToJson(Subscription instance) {
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
   writeNotNull('end', instance.end?.toJson());
   writeNotNull('reason', instance.reason);
@@ -85,7 +89,9 @@ SubscriptionChannel _$SubscriptionChannelFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : SubscriptionChannelType.fromJson(json['type'] as String),
     endpoint: json['endpoint'] == null
         ? null
         : Url.fromJson(json['endpoint'] as String),
@@ -110,7 +116,7 @@ Map<String, dynamic> _$SubscriptionChannelToJson(SubscriptionChannel instance) {
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('endpoint', instance.endpoint?.toJson());
   writeNotNull('payload', instance.payload?.toJson());
   writeNotNull('header', instance.header);

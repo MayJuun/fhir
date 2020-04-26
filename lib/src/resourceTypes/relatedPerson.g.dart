@@ -8,6 +8,7 @@ part of 'relatedPerson.dart';
 
 RelatedPerson _$RelatedPersonFromJson(Map<String, dynamic> json) {
   return RelatedPerson(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -51,7 +52,9 @@ RelatedPerson _$RelatedPersonFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    gender: json['gender'] as String,
+    gender: json['gender'] == null
+        ? null
+        : RelatedPersonGender.fromJson(json['gender'] as String),
     birthDate: json['birthDate'] == null
         ? null
         : Date.fromJson(json['birthDate'] as String),
@@ -83,6 +86,7 @@ Map<String, dynamic> _$RelatedPersonToJson(RelatedPerson instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -101,7 +105,7 @@ Map<String, dynamic> _$RelatedPersonToJson(RelatedPerson instance) {
       'relationship', instance.relationship?.map((e) => e?.toJson())?.toList());
   writeNotNull('name', instance.name?.map((e) => e?.toJson())?.toList());
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
-  writeNotNull('gender', instance.gender);
+  writeNotNull('gender', instance.gender?.toJson());
   writeNotNull('birthDate', instance.birthDate?.toJson());
   writeNotNull('address', instance.address?.map((e) => e?.toJson())?.toList());
   writeNotNull('photo', instance.photo?.map((e) => e?.toJson())?.toList());

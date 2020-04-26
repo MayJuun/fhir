@@ -13,7 +13,9 @@ Identifier _$IdentifierFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    use: _$enumDecodeNullable(_$IdentifierUseEnumMap, json['use']),
+    use: json['use'] == null
+        ? null
+        : IdentifierUse.fromJson(json['use'] as String),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -42,7 +44,7 @@ Map<String, dynamic> _$IdentifierToJson(Identifier instance) {
   writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('use', _$IdentifierUseEnumMap[instance.use]);
+  writeNotNull('use', instance.use?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('system', instance.system?.toJson());
   writeNotNull('value', instance.value);
@@ -50,43 +52,3 @@ Map<String, dynamic> _$IdentifierToJson(Identifier instance) {
   writeNotNull('assigner', instance.assigner?.toJson());
   return val;
 }
-
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
-}
-
-const _$IdentifierUseEnumMap = {
-  IdentifierUse.usual: 'usual',
-  IdentifierUse.official: 'official',
-  IdentifierUse.temp: 'temp',
-  IdentifierUse.secondary: 'secondary',
-  IdentifierUse.old: 'old',
-};

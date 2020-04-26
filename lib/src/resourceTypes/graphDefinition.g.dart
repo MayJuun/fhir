@@ -8,6 +8,7 @@ part of 'graphDefinition.dart';
 
 GraphDefinition _$GraphDefinitionFromJson(Map<String, dynamic> json) {
   return GraphDefinition(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -33,7 +34,9 @@ GraphDefinition _$GraphDefinitionFromJson(Map<String, dynamic> json) {
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
     version: json['version'] as String,
     name: json['name'] as String,
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : GraphDefinitionStatus.fromJson(json['status'] as String),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -81,6 +84,7 @@ Map<String, dynamic> _$GraphDefinitionToJson(GraphDefinition instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -94,7 +98,7 @@ Map<String, dynamic> _$GraphDefinitionToJson(GraphDefinition instance) {
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
@@ -224,9 +228,13 @@ GraphDefinitionCompartment _$GraphDefinitionCompartmentFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    use: json['use'] as String,
+    use: json['use'] == null
+        ? null
+        : GraphDefinitionCompartmentUse.fromJson(json['use'] as String),
     code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
-    rule: json['rule'] as String,
+    rule: json['rule'] == null
+        ? null
+        : GraphDefinitionCompartmentRule.fromJson(json['rule'] as String),
     expression: json['expression'] as String,
     description: json['description'] as String,
   );
@@ -247,9 +255,9 @@ Map<String, dynamic> _$GraphDefinitionCompartmentToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('use', instance.use);
+  writeNotNull('use', instance.use?.toJson());
   writeNotNull('code', instance.code?.toJson());
-  writeNotNull('rule', instance.rule);
+  writeNotNull('rule', instance.rule?.toJson());
   writeNotNull('expression', instance.expression);
   writeNotNull('description', instance.description);
   return val;

@@ -13,7 +13,9 @@ RelatedArtifact _$RelatedArtifactFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: _$enumDecodeNullable(_$RelatedArtifactTypeEnumMap, json['type']),
+    type: json['type'] == null
+        ? null
+        : RelatedArtifactType.fromJson(json['type'] as String),
     label: json['label'] as String,
     display: json['display'] as String,
     citation: json['citation'] == null
@@ -41,7 +43,7 @@ Map<String, dynamic> _$RelatedArtifactToJson(RelatedArtifact instance) {
   writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', _$RelatedArtifactTypeEnumMap[instance.type]);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('label', instance.label);
   writeNotNull('display', instance.display);
   writeNotNull('citation', instance.citation?.toJson());
@@ -50,46 +52,3 @@ Map<String, dynamic> _$RelatedArtifactToJson(RelatedArtifact instance) {
   writeNotNull('resource', instance.resource?.toJson());
   return val;
 }
-
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
-}
-
-const _$RelatedArtifactTypeEnumMap = {
-  RelatedArtifactType.documentation: 'documentation',
-  RelatedArtifactType.justification: 'justification',
-  RelatedArtifactType.citation: 'citation',
-  RelatedArtifactType.predecessor: 'predecessor',
-  RelatedArtifactType.successor: 'successor',
-  RelatedArtifactType.derivedFrom: 'derived-from',
-  RelatedArtifactType.dependsOn: 'depends-on',
-  RelatedArtifactType.composedOf: 'composed-of',
-};

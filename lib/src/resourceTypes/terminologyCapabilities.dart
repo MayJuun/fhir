@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/url.dart';
@@ -18,7 +21,7 @@ part 'terminologyCapabilities.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class TerminologyCapabilities {
-  static const String resourceType = 'TerminologyCapabilities';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -31,7 +34,7 @@ class TerminologyCapabilities {
   String version;
   String name;
   String title;
-  String status;
+  TerminologyCapabilitiesStatus status;
   bool experimental;
   FhirDateTime date;
   String publisher;
@@ -47,12 +50,13 @@ class TerminologyCapabilities {
   bool lockedDate;
   List<TerminologyCapabilitiesCodeSystem> codeSystem;
   TerminologyCapabilitiesExpansion expansion;
-  String codeSearch;
+  TerminologyCapabilitiesCodeSearch codeSearch;
   TerminologyCapabilitiesValidateCode validateCode;
   TerminologyCapabilitiesTranslation translation;
   TerminologyCapabilitiesClosure closure;
 
   TerminologyCapabilities({
+    this.resourceType = 'TerminologyCapabilities',
     this.id,
     this.meta,
     this.implicitRules,
@@ -323,4 +327,48 @@ class TerminologyCapabilitiesClosure {
   factory TerminologyCapabilitiesClosure.fromJson(Map<String, dynamic> json) =>
       _$TerminologyCapabilitiesClosureFromJson(json);
   Map<String, dynamic> toJson() => _$TerminologyCapabilitiesClosureToJson(this);
+}
+
+class TerminologyCapabilitiesStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory TerminologyCapabilitiesStatus(String value) {
+    assert(value != null);
+    return TerminologyCapabilitiesStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const TerminologyCapabilitiesStatus._(this.value);
+  factory TerminologyCapabilitiesStatus.fromJson(String json) =>
+      TerminologyCapabilitiesStatus(json);
+  String toJson() => result();
+}
+
+class TerminologyCapabilitiesCodeSearch extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory TerminologyCapabilitiesCodeSearch(String value) {
+    assert(value != null);
+    return TerminologyCapabilitiesCodeSearch._(
+      validateEnum(
+        value,
+        [
+          'explicit',
+          'all',
+        ],
+      ),
+    );
+  }
+  const TerminologyCapabilitiesCodeSearch._(this.value);
+  factory TerminologyCapabilitiesCodeSearch.fromJson(String json) =>
+      TerminologyCapabilitiesCodeSearch(json);
+  String toJson() => result();
 }

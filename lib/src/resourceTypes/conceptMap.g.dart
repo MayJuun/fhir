@@ -8,6 +8,7 @@ part of 'conceptMap.dart';
 
 ConceptMap _$ConceptMapFromJson(Map<String, dynamic> json) {
   return ConceptMap(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -37,7 +38,9 @@ ConceptMap _$ConceptMapFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : ConceptMapStatus.fromJson(json['status'] as String),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -95,6 +98,7 @@ Map<String, dynamic> _$ConceptMapToJson(ConceptMap instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -110,7 +114,7 @@ Map<String, dynamic> _$ConceptMapToJson(ConceptMap instance) {
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
@@ -237,7 +241,9 @@ ConceptMapTarget _$ConceptMapTargetFromJson(Map<String, dynamic> json) {
         ?.toList(),
     code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
     display: json['display'] as String,
-    equivalence: json['equivalence'] as String,
+    equivalence: json['equivalence'] == null
+        ? null
+        : ConceptMapTargetEquivalence.fromJson(json['equivalence'] as String),
     comment: json['comment'] as String,
     dependsOn: (json['dependsOn'] as List)
         ?.map((e) => e == null
@@ -268,7 +274,7 @@ Map<String, dynamic> _$ConceptMapTargetToJson(ConceptMapTarget instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('display', instance.display);
-  writeNotNull('equivalence', instance.equivalence);
+  writeNotNull('equivalence', instance.equivalence?.toJson());
   writeNotNull('comment', instance.comment);
   writeNotNull(
       'dependsOn', instance.dependsOn?.map((e) => e?.toJson())?.toList());
@@ -330,7 +336,9 @@ ConceptMapUnmapped _$ConceptMapUnmappedFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    mode: json['mode'] as String,
+    mode: json['mode'] == null
+        ? null
+        : ConceptMapUnmappedMode.fromJson(json['mode'] as String),
     code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
     display: json['display'] as String,
     url: json['url'] == null ? null : Canonical.fromJson(json['url'] as String),
@@ -351,7 +359,7 @@ Map<String, dynamic> _$ConceptMapUnmappedToJson(ConceptMapUnmapped instance) {
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('mode', instance.mode);
+  writeNotNull('mode', instance.mode?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('display', instance.display);
   writeNotNull('url', instance.url?.toJson());

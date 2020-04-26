@@ -8,6 +8,7 @@ part of 'measureReport.dart';
 
 MeasureReport _$MeasureReportFromJson(Map<String, dynamic> json) {
   return MeasureReport(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -34,8 +35,12 @@ MeasureReport _$MeasureReportFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
-    type: json['type'] as String,
+    status: json['status'] == null
+        ? null
+        : MeasureReportStatus.fromJson(json['status'] as String),
+    type: json['type'] == null
+        ? null
+        : MeasureReportType.fromJson(json['type'] as String),
     measure: json['measure'] == null
         ? null
         : Canonical.fromJson(json['measure'] as String),
@@ -76,6 +81,7 @@ Map<String, dynamic> _$MeasureReportToJson(MeasureReport instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -88,8 +94,8 @@ Map<String, dynamic> _$MeasureReportToJson(MeasureReport instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
-  writeNotNull('type', instance.type);
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('measure', instance.measure?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('date', instance.date?.toJson());

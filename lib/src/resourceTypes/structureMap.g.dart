@@ -8,6 +8,7 @@ part of 'structureMap.dart';
 
 StructureMap _$StructureMapFromJson(Map<String, dynamic> json) {
   return StructureMap(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -38,7 +39,9 @@ StructureMap _$StructureMapFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : StructureMapStatus.fromJson(json['status'] as String),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -92,6 +95,7 @@ Map<String, dynamic> _$StructureMapToJson(StructureMap instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -108,7 +112,7 @@ Map<String, dynamic> _$StructureMapToJson(StructureMap instance) {
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
@@ -140,7 +144,9 @@ StructureMapStructure _$StructureMapStructureFromJson(
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     url: json['url'] == null ? null : Canonical.fromJson(json['url'] as String),
-    mode: json['mode'] as String,
+    mode: json['mode'] == null
+        ? null
+        : StructureMapStructureMode.fromJson(json['mode'] as String),
     alias: json['alias'] as String,
     documentation: json['documentation'] as String,
   );
@@ -162,7 +168,7 @@ Map<String, dynamic> _$StructureMapStructureToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('url', instance.url?.toJson());
-  writeNotNull('mode', instance.mode);
+  writeNotNull('mode', instance.mode?.toJson());
   writeNotNull('alias', instance.alias);
   writeNotNull('documentation', instance.documentation);
   return val;
@@ -182,7 +188,9 @@ StructureMapGroup _$StructureMapGroupFromJson(Map<String, dynamic> json) {
     name: json['name'] == null ? null : Id.fromJson(json['name'] as String),
     extend:
         json['extend'] == null ? null : Id.fromJson(json['extend'] as String),
-    typeMode: json['typeMode'] as String,
+    typeMode: json['typeMode'] == null
+        ? null
+        : StructureMapGroupTypeMode.fromJson(json['typeMode'] as String),
     documentation: json['documentation'] as String,
     input: (json['input'] as List)
         ?.map((e) => e == null
@@ -213,7 +221,7 @@ Map<String, dynamic> _$StructureMapGroupToJson(StructureMapGroup instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('name', instance.name?.toJson());
   writeNotNull('extend', instance.extend?.toJson());
-  writeNotNull('typeMode', instance.typeMode);
+  writeNotNull('typeMode', instance.typeMode?.toJson());
   writeNotNull('documentation', instance.documentation);
   writeNotNull('input', instance.input?.map((e) => e?.toJson())?.toList());
   writeNotNull('rule', instance.rule?.map((e) => e?.toJson())?.toList());
@@ -233,7 +241,9 @@ StructureMapInput _$StructureMapInputFromJson(Map<String, dynamic> json) {
         ?.toList(),
     name: json['name'] == null ? null : Id.fromJson(json['name'] as String),
     type: json['type'] as String,
-    mode: json['mode'] as String,
+    mode: json['mode'] == null
+        ? null
+        : StructureMapInputMode.fromJson(json['mode'] as String),
     documentation: json['documentation'] as String,
   );
 }
@@ -254,7 +264,7 @@ Map<String, dynamic> _$StructureMapInputToJson(StructureMapInput instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('name', instance.name?.toJson());
   writeNotNull('type', instance.type);
-  writeNotNull('mode', instance.mode);
+  writeNotNull('mode', instance.mode?.toJson());
   writeNotNull('documentation', instance.documentation);
   return val;
 }
@@ -495,7 +505,9 @@ StructureMapSource _$StructureMapSourceFromJson(Map<String, dynamic> json) {
         ? null
         : Meta.fromJson(json['defaultValueMeta'] as Map<String, dynamic>),
     element: json['element'] as String,
-    listMode: json['listMode'] as String,
+    listMode: json['listMode'] == null
+        ? null
+        : StructureMapSourceListMode.fromJson(json['listMode'] as String),
     variable: json['variable'] == null
         ? null
         : Id.fromJson(json['variable'] as String),
@@ -593,7 +605,7 @@ Map<String, dynamic> _$StructureMapSourceToJson(StructureMapSource instance) {
   writeNotNull('defaultValueDosage', instance.defaultValueDosage?.toJson());
   writeNotNull('defaultValueMeta', instance.defaultValueMeta?.toJson());
   writeNotNull('element', instance.element);
-  writeNotNull('listMode', instance.listMode);
+  writeNotNull('listMode', instance.listMode?.toJson());
   writeNotNull('variable', instance.variable?.toJson());
   writeNotNull('condition', instance.condition);
   writeNotNull('check', instance.check);
@@ -614,7 +626,9 @@ StructureMapTarget _$StructureMapTargetFromJson(Map<String, dynamic> json) {
         ?.toList(),
     context:
         json['context'] == null ? null : Id.fromJson(json['context'] as String),
-    contextType: json['contextType'] as String,
+    contextType: json['contextType'] == null
+        ? null
+        : StructureMapTargetContextType.fromJson(json['contextType'] as String),
     element: json['element'] as String,
     variable: json['variable'] == null
         ? null
@@ -623,7 +637,9 @@ StructureMapTarget _$StructureMapTargetFromJson(Map<String, dynamic> json) {
     listRuleId: json['listRuleId'] == null
         ? null
         : Id.fromJson(json['listRuleId'] as String),
-    transform: json['transform'] as String,
+    transform: json['transform'] == null
+        ? null
+        : StructureMapTargetTransform.fromJson(json['transform'] as String),
     parameter: (json['parameter'] as List)
         ?.map((e) => e == null
             ? null
@@ -647,12 +663,12 @@ Map<String, dynamic> _$StructureMapTargetToJson(StructureMapTarget instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('context', instance.context?.toJson());
-  writeNotNull('contextType', instance.contextType);
+  writeNotNull('contextType', instance.contextType?.toJson());
   writeNotNull('element', instance.element);
   writeNotNull('variable', instance.variable?.toJson());
   writeNotNull('listMode', instance.listMode);
   writeNotNull('listRuleId', instance.listRuleId?.toJson());
-  writeNotNull('transform', instance.transform);
+  writeNotNull('transform', instance.transform?.toJson());
   writeNotNull(
       'parameter', instance.parameter?.map((e) => e?.toJson())?.toList());
   return val;

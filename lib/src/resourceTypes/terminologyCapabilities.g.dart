@@ -9,6 +9,7 @@ part of 'terminologyCapabilities.dart';
 TerminologyCapabilities _$TerminologyCapabilitiesFromJson(
     Map<String, dynamic> json) {
   return TerminologyCapabilities(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -35,7 +36,9 @@ TerminologyCapabilities _$TerminologyCapabilitiesFromJson(
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : TerminologyCapabilitiesStatus.fromJson(json['status'] as String),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -84,7 +87,10 @@ TerminologyCapabilities _$TerminologyCapabilitiesFromJson(
         ? null
         : TerminologyCapabilitiesExpansion.fromJson(
             json['expansion'] as Map<String, dynamic>),
-    codeSearch: json['codeSearch'] as String,
+    codeSearch: json['codeSearch'] == null
+        ? null
+        : TerminologyCapabilitiesCodeSearch.fromJson(
+            json['codeSearch'] as String),
     validateCode: json['validateCode'] == null
         ? null
         : TerminologyCapabilitiesValidateCode.fromJson(
@@ -110,6 +116,7 @@ Map<String, dynamic> _$TerminologyCapabilitiesToJson(
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -124,7 +131,7 @@ Map<String, dynamic> _$TerminologyCapabilitiesToJson(
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
@@ -143,7 +150,7 @@ Map<String, dynamic> _$TerminologyCapabilitiesToJson(
   writeNotNull(
       'codeSystem', instance.codeSystem?.map((e) => e?.toJson())?.toList());
   writeNotNull('expansion', instance.expansion?.toJson());
-  writeNotNull('codeSearch', instance.codeSearch);
+  writeNotNull('codeSearch', instance.codeSearch?.toJson());
   writeNotNull('validateCode', instance.validateCode?.toJson());
   writeNotNull('translation', instance.translation?.toJson());
   writeNotNull('closure', instance.closure?.toJson());

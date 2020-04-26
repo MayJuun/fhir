@@ -8,6 +8,7 @@ part of 'documentReference.dart';
 
 DocumentReference _$DocumentReferenceFromJson(Map<String, dynamic> json) {
   return DocumentReference(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -37,7 +38,9 @@ DocumentReference _$DocumentReferenceFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : DocumentReferenceStatus.fromJson(json['status'] as String),
     docStatus: json['docStatus'] == null
         ? null
         : Code.fromJson(json['docStatus'] as String),
@@ -96,6 +99,7 @@ Map<String, dynamic> _$DocumentReferenceToJson(DocumentReference instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -109,7 +113,7 @@ Map<String, dynamic> _$DocumentReferenceToJson(DocumentReference instance) {
   writeNotNull('masterIdentifier', instance.masterIdentifier?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('docStatus', instance.docStatus?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull(
@@ -141,7 +145,9 @@ DocumentReferenceRelatesTo _$DocumentReferenceRelatesToFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    code: json['code'] as String,
+    code: json['code'] == null
+        ? null
+        : DocumentReferenceRelatesToCode.fromJson(json['code'] as String),
     target: json['target'] == null
         ? null
         : Reference.fromJson(json['target'] as Map<String, dynamic>),
@@ -163,7 +169,7 @@ Map<String, dynamic> _$DocumentReferenceRelatesToToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('code', instance.code);
+  writeNotNull('code', instance.code?.toJson());
   writeNotNull('target', instance.target?.toJson());
   return val;
 }

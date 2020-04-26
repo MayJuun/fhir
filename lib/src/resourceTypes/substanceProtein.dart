@@ -14,7 +14,7 @@ part 'substanceProtein.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class SubstanceProtein {
-  static const String resourceType = 'SubstanceProtein';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -29,6 +29,7 @@ class SubstanceProtein {
   List<SubstanceProteinSubunit> subunit;
 
   SubstanceProtein({
+    this.resourceType = 'SubstanceProtein',
     this.id,
     this.meta,
     this.implicitRules,

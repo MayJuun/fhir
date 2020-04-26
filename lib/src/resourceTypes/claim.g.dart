@@ -8,6 +8,7 @@ part of 'claim.dart';
 
 Claim _$ClaimFromJson(Map<String, dynamic> json) {
   return Claim(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -42,7 +43,7 @@ Claim _$ClaimFromJson(Map<String, dynamic> json) {
     subType: json['subType'] == null
         ? null
         : CodeableConcept.fromJson(json['subType'] as Map<String, dynamic>),
-    use: json['use'] as String,
+    use: json['use'] == null ? null : ClaimUse.fromJson(json['use'] as String),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -135,6 +136,7 @@ Map<String, dynamic> _$ClaimToJson(Claim instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -150,7 +152,7 @@ Map<String, dynamic> _$ClaimToJson(Claim instance) {
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('subType', instance.subType?.toJson());
-  writeNotNull('use', instance.use);
+  writeNotNull('use', instance.use?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('billablePeriod', instance.billablePeriod?.toJson());
   writeNotNull('created', instance.created?.toJson());

@@ -8,6 +8,7 @@ part of 'catalogEntry.dart';
 
 CatalogEntry _$CatalogEntryFromJson(Map<String, dynamic> json) {
   return CatalogEntry(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -50,7 +51,9 @@ CatalogEntry _$CatalogEntryFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : CatalogEntryStatus.fromJson(json['status'] as String),
     validityPeriod: json['validityPeriod'] == null
         ? null
         : Period.fromJson(json['validityPeriod'] as Map<String, dynamic>),
@@ -87,6 +90,7 @@ Map<String, dynamic> _$CatalogEntryToJson(CatalogEntry instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -106,7 +110,7 @@ Map<String, dynamic> _$CatalogEntryToJson(CatalogEntry instance) {
       instance.additionalIdentifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('classification',
       instance.classification?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('validityPeriod', instance.validityPeriod?.toJson());
   writeNotNull('validTo', instance.validTo?.toJson());
   writeNotNull('lastUpdated', instance.lastUpdated?.toJson());
@@ -131,7 +135,10 @@ CatalogEntryRelatedEntry _$CatalogEntryRelatedEntryFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    relationtype: json['relationtype'] as String,
+    relationtype: json['relationtype'] == null
+        ? null
+        : CatalogEntryRelatedEntryRelationtype.fromJson(
+            json['relationtype'] as String),
     item: json['item'] == null
         ? null
         : Reference.fromJson(json['item'] as Map<String, dynamic>),
@@ -153,7 +160,7 @@ Map<String, dynamic> _$CatalogEntryRelatedEntryToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('relationtype', instance.relationtype);
+  writeNotNull('relationtype', instance.relationtype?.toJson());
   writeNotNull('item', instance.item?.toJson());
   return val;
 }

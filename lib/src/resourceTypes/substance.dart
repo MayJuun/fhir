@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/id.dart';
@@ -18,7 +21,7 @@ part 'substance.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Substance {
-  static const String resourceType = 'Substance';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -28,7 +31,7 @@ class Substance {
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<Identifier> identifier;
-  String status;
+  SubstanceStatus status;
   List<CodeableConcept> category;
   CodeableConcept code;
   String description;
@@ -36,6 +39,7 @@ class Substance {
   List<SubstanceIngredient> ingredient;
 
   Substance({
+    this.resourceType = 'Substance',
     this.id,
     this.meta,
     this.implicitRules,
@@ -102,4 +106,25 @@ class SubstanceIngredient {
   factory SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
       _$SubstanceIngredientFromJson(json);
   Map<String, dynamic> toJson() => _$SubstanceIngredientToJson(this);
+}
+
+class SubstanceStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory SubstanceStatus(String value) {
+    assert(value != null);
+    return SubstanceStatus._(
+      validateEnum(
+        value,
+        [
+          'active',
+          'inactive',
+          'entered-in-error',
+        ],
+      ),
+    );
+  }
+  const SubstanceStatus._(this.value);
+  factory SubstanceStatus.fromJson(String json) => SubstanceStatus(json);
+  String toJson() => result();
 }

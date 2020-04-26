@@ -9,6 +9,7 @@ part of 'compartmentDefinition.dart';
 CompartmentDefinition _$CompartmentDefinitionFromJson(
     Map<String, dynamic> json) {
   return CompartmentDefinition(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -34,7 +35,9 @@ CompartmentDefinition _$CompartmentDefinitionFromJson(
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
     version: json['version'] as String,
     name: json['name'] as String,
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : CompartmentDefinitionStatus.fromJson(json['status'] as String),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -55,7 +58,9 @@ CompartmentDefinition _$CompartmentDefinitionFromJson(
     purpose: json['purpose'] == null
         ? null
         : Markdown.fromJson(json['purpose'] as String),
-    code: json['code'] as String,
+    code: json['code'] == null
+        ? null
+        : CompartmentDefinitionCode.fromJson(json['code'] as String),
     search: json['search'] as bool,
     resource: (json['resource'] as List)
         ?.map((e) => e == null
@@ -75,6 +80,7 @@ Map<String, dynamic> _$CompartmentDefinitionToJson(
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -88,7 +94,7 @@ Map<String, dynamic> _$CompartmentDefinitionToJson(
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
@@ -97,7 +103,7 @@ Map<String, dynamic> _$CompartmentDefinitionToJson(
   writeNotNull(
       'useContext', instance.useContext?.map((e) => e?.toJson())?.toList());
   writeNotNull('purpose', instance.purpose?.toJson());
-  writeNotNull('code', instance.code);
+  writeNotNull('code', instance.code?.toJson());
   writeNotNull('search', instance.search);
   writeNotNull(
       'resource', instance.resource?.map((e) => e?.toJson())?.toList());

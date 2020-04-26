@@ -8,6 +8,7 @@ part of 'group.dart';
 
 Group _$GroupFromJson(Map<String, dynamic> json) {
   return Group(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -35,7 +36,9 @@ Group _$GroupFromJson(Map<String, dynamic> json) {
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     active: json['active'] as bool,
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : GroupType.fromJson(json['type'] as String),
     actual: json['actual'] as bool,
     code: json['code'] == null
         ? null
@@ -66,6 +69,7 @@ Map<String, dynamic> _$GroupToJson(Group instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -79,7 +83,7 @@ Map<String, dynamic> _$GroupToJson(Group instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('active', instance.active);
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('actual', instance.actual);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('name', instance.name);

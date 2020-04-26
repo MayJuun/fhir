@@ -44,7 +44,9 @@ Patient _$PatientFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    gender: json['gender'] as String,
+    gender: json['gender'] == null
+        ? null
+        : PatientGender.fromJson(json['gender'] as String),
     birthDate: json['birthDate'] == null
         ? null
         : Date.fromJson(json['birthDate'] as String),
@@ -116,7 +118,7 @@ Map<String, dynamic> _$PatientToJson(Patient instance) {
   writeNotNull('active', instance.active);
   writeNotNull('name', instance.name?.map((e) => e?.toJson())?.toList());
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
-  writeNotNull('gender', instance.gender);
+  writeNotNull('gender', instance.gender?.toJson());
   writeNotNull('birthDate', instance.birthDate?.toJson());
   writeNotNull('deceasedBoolean', instance.deceasedBoolean);
   writeNotNull('deceasedDateTime', instance.deceasedDateTime?.toJson());
@@ -161,7 +163,9 @@ PatientContact _$PatientContactFromJson(Map<String, dynamic> json) {
     address: json['address'] == null
         ? null
         : Address.fromJson(json['address'] as Map<String, dynamic>),
-    gender: json['gender'] as String,
+    gender: json['gender'] == null
+        ? null
+        : PatientContactGender.fromJson(json['gender'] as String),
     organization: json['organization'] == null
         ? null
         : Reference.fromJson(json['organization'] as Map<String, dynamic>),
@@ -190,7 +194,7 @@ Map<String, dynamic> _$PatientContactToJson(PatientContact instance) {
   writeNotNull('name', instance.name?.toJson());
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
   writeNotNull('address', instance.address?.toJson());
-  writeNotNull('gender', instance.gender);
+  writeNotNull('gender', instance.gender?.toJson());
   writeNotNull('organization', instance.organization?.toJson());
   writeNotNull('period', instance.period?.toJson());
   return val;
@@ -248,7 +252,9 @@ PatientLink _$PatientLinkFromJson(Map<String, dynamic> json) {
     other: json['other'] == null
         ? null
         : Reference.fromJson(json['other'] as Map<String, dynamic>),
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : PatientLinkType.fromJson(json['type'] as String),
   );
 }
 
@@ -267,6 +273,6 @@ Map<String, dynamic> _$PatientLinkToJson(PatientLink instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('other', instance.other?.toJson());
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   return val;
 }

@@ -9,6 +9,7 @@ part of 'coverageEligibilityResponse.dart';
 CoverageEligibilityResponse _$CoverageEligibilityResponseFromJson(
     Map<String, dynamic> json) {
   return CoverageEligibilityResponse(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -56,7 +57,10 @@ CoverageEligibilityResponse _$CoverageEligibilityResponseFromJson(
     request: json['request'] == null
         ? null
         : Reference.fromJson(json['request'] as Map<String, dynamic>),
-    outcome: json['outcome'] as String,
+    outcome: json['outcome'] == null
+        ? null
+        : CoverageEligibilityResponseOutcome.fromJson(
+            json['outcome'] as String),
     disposition: json['disposition'] as String,
     insurer: json['insurer'] == null
         ? null
@@ -90,6 +94,7 @@ Map<String, dynamic> _$CoverageEligibilityResponseToJson(
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -110,7 +115,7 @@ Map<String, dynamic> _$CoverageEligibilityResponseToJson(
   writeNotNull('created', instance.created?.toJson());
   writeNotNull('requestor', instance.requestor?.toJson());
   writeNotNull('request', instance.request?.toJson());
-  writeNotNull('outcome', instance.outcome);
+  writeNotNull('outcome', instance.outcome?.toJson());
   writeNotNull('disposition', instance.disposition);
   writeNotNull('insurer', instance.insurer?.toJson());
   writeNotNull(

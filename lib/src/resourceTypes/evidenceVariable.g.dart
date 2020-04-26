@@ -8,6 +8,7 @@ part of 'evidenceVariable.dart';
 
 EvidenceVariable _$EvidenceVariableFromJson(Map<String, dynamic> json) {
   return EvidenceVariable(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -40,7 +41,9 @@ EvidenceVariable _$EvidenceVariableFromJson(Map<String, dynamic> json) {
     title: json['title'] as String,
     shortTitle: json['shortTitle'] as String,
     subtitle: json['subtitle'] as String,
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : EvidenceVariableStatus.fromJson(json['status'] as String),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -108,7 +111,9 @@ EvidenceVariable _$EvidenceVariableFromJson(Map<String, dynamic> json) {
             ? null
             : RelatedArtifact.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : EvidenceVariableType.fromJson(json['type'] as String),
     characteristic: (json['characteristic'] as List)
         ?.map((e) => e == null
             ? null
@@ -127,6 +132,7 @@ Map<String, dynamic> _$EvidenceVariableToJson(EvidenceVariable instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -145,7 +151,7 @@ Map<String, dynamic> _$EvidenceVariableToJson(EvidenceVariable instance) {
   writeNotNull('title', instance.title);
   writeNotNull('shortTitle', instance.shortTitle);
   writeNotNull('subtitle', instance.subtitle);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
@@ -168,7 +174,7 @@ Map<String, dynamic> _$EvidenceVariableToJson(EvidenceVariable instance) {
       'endorser', instance.endorser?.map((e) => e?.toJson())?.toList());
   writeNotNull('relatedArtifact',
       instance.relatedArtifact?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('characteristic',
       instance.characteristic?.map((e) => e?.toJson())?.toList());
   return val;
@@ -233,7 +239,10 @@ EvidenceVariableCharacteristic _$EvidenceVariableCharacteristicFromJson(
     timeFromStart: json['timeFromStart'] == null
         ? null
         : Duration.fromJson(json['timeFromStart'] as Map<String, dynamic>),
-    groupMeasure: json['groupMeasure'] as String,
+    groupMeasure: json['groupMeasure'] == null
+        ? null
+        : EvidenceVariableCharacteristicGroupMeasure.fromJson(
+            json['groupMeasure'] as String),
   );
 }
 
@@ -274,6 +283,6 @@ Map<String, dynamic> _$EvidenceVariableCharacteristicToJson(
   writeNotNull('participantEffectiveTiming',
       instance.participantEffectiveTiming?.toJson());
   writeNotNull('timeFromStart', instance.timeFromStart?.toJson());
-  writeNotNull('groupMeasure', instance.groupMeasure);
+  writeNotNull('groupMeasure', instance.groupMeasure?.toJson());
   return val;
 }

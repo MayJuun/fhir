@@ -8,6 +8,7 @@ part of 'diagnosticReport.dart';
 
 DiagnosticReport _$DiagnosticReportFromJson(Map<String, dynamic> json) {
   return DiagnosticReport(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -38,7 +39,9 @@ DiagnosticReport _$DiagnosticReportFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : DiagnosticReportStatus.fromJson(json['status'] as String),
     category: (json['category'] as List)
         ?.map((e) => e == null
             ? null
@@ -109,6 +112,7 @@ Map<String, dynamic> _$DiagnosticReportToJson(DiagnosticReport instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -122,7 +126,7 @@ Map<String, dynamic> _$DiagnosticReportToJson(DiagnosticReport instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull(
       'category', instance.category?.map((e) => e?.toJson())?.toList());
   writeNotNull('code', instance.code?.toJson());

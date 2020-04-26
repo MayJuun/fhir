@@ -14,8 +14,9 @@ Quantity _$QuantityFromJson(Map<String, dynamic> json) {
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     value: (json['value'] as num)?.toDouble(),
-    comparator:
-        _$enumDecodeNullable(_$AmountComparatorEnumMap, json['comparator']),
+    comparator: json['comparator'] == null
+        ? null
+        : QuantityComparator.fromJson(json['comparator'] as String),
     unit: json['unit'] as String,
     system: json['system'] == null
         ? null
@@ -37,48 +38,9 @@ Map<String, dynamic> _$QuantityToJson(Quantity instance) {
   writeNotNull(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('value', instance.value);
-  writeNotNull('comparator', _$AmountComparatorEnumMap[instance.comparator]);
+  writeNotNull('comparator', instance.comparator?.toJson());
   writeNotNull('unit', instance.unit);
   writeNotNull('system', instance.system?.toJson());
   writeNotNull('code', instance.code?.toJson());
   return val;
 }
-
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
-}
-
-const _$AmountComparatorEnumMap = {
-  AmountComparator.greaterThan: '<',
-  AmountComparator.greaterOrEqual: '<=',
-  AmountComparator.lessOrEqual: '>=',
-  AmountComparator.lessThan: '>',
-};

@@ -8,6 +8,7 @@ part of 'provenance.dart';
 
 Provenance _$ProvenanceFromJson(Map<String, dynamic> json) {
   return Provenance(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -83,6 +84,7 @@ Map<String, dynamic> _$ProvenanceToJson(Provenance instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -168,7 +170,9 @@ ProvenanceEntity _$ProvenanceEntityFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    role: json['role'] as String,
+    role: json['role'] == null
+        ? null
+        : ProvenanceEntityRole.fromJson(json['role'] as String),
     what: json['what'] == null
         ? null
         : Reference.fromJson(json['what'] as Map<String, dynamic>),
@@ -194,7 +198,7 @@ Map<String, dynamic> _$ProvenanceEntityToJson(ProvenanceEntity instance) {
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('role', instance.role);
+  writeNotNull('role', instance.role?.toJson());
   writeNotNull('what', instance.what?.toJson());
   writeNotNull('agent', instance.agent?.map((e) => e?.toJson())?.toList());
   return val;

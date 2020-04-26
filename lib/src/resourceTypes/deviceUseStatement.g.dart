@@ -8,6 +8,7 @@ part of 'deviceUseStatement.dart';
 
 DeviceUseStatement _$DeviceUseStatementFromJson(Map<String, dynamic> json) {
   return DeviceUseStatement(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -38,7 +39,9 @@ DeviceUseStatement _$DeviceUseStatementFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : DeviceUseStatementStatus.fromJson(json['status'] as String),
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
@@ -92,6 +95,7 @@ Map<String, dynamic> _$DeviceUseStatementToJson(DeviceUseStatement instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -105,7 +109,7 @@ Map<String, dynamic> _$DeviceUseStatementToJson(DeviceUseStatement instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull(
       'derivedFrom', instance.derivedFrom?.map((e) => e?.toJson())?.toList());

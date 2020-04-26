@@ -16,7 +16,7 @@ part 'schedule.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Schedule {
-  static const String resourceType = 'Schedule';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -35,6 +35,7 @@ class Schedule {
   String comment;
 
   Schedule({
+    this.resourceType = 'Schedule',
     this.id,
     this.meta,
     this.implicitRules,

@@ -74,13 +74,16 @@ TimingRepeat _$TimingRepeatFromJson(Map<String, dynamic> json) {
     countMax: json['countMax'] as int,
     duration: (json['duration'] as num)?.toDouble(),
     durationMax: (json['durationMax'] as num)?.toDouble(),
-    durationUnit:
-        _$enumDecodeNullable(_$TimingUnitEnumMap, json['durationUnit']),
+    durationUnit: json['durationUnit'] == null
+        ? null
+        : TimingRepeatUnit.fromJson(json['durationUnit'] as String),
     frequency: json['frequency'] as int,
     frequencyMax: json['frequencyMax'] as int,
     period: (json['period'] as num)?.toDouble(),
     periodMax: (json['periodMax'] as num)?.toDouble(),
-    periodUnit: _$enumDecodeNullable(_$TimingUnitEnumMap, json['periodUnit']),
+    periodUnit: json['periodUnit'] == null
+        ? null
+        : TimingRepeatUnit.fromJson(json['periodUnit'] as String),
     dayOfWeek: (json['dayOfWeek'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
         ?.toList(),
@@ -88,7 +91,7 @@ TimingRepeat _$TimingRepeatFromJson(Map<String, dynamic> json) {
         ?.map((e) => e == null ? null : Time.fromJson(e as String))
         ?.toList(),
     when: (json['when'] as List)
-        ?.map((e) => _$enumDecodeNullable(_$TimingWhenEnumMap, e))
+        ?.map((e) => e == null ? null : TimingRepeatWhen.fromJson(e as String))
         ?.toList(),
     offset: json['offset'] as int,
   );
@@ -115,89 +118,17 @@ Map<String, dynamic> _$TimingRepeatToJson(TimingRepeat instance) {
   writeNotNull('countMax', instance.countMax);
   writeNotNull('duration', instance.duration);
   writeNotNull('durationMax', instance.durationMax);
-  writeNotNull('durationUnit', _$TimingUnitEnumMap[instance.durationUnit]);
+  writeNotNull('durationUnit', instance.durationUnit?.toJson());
   writeNotNull('frequency', instance.frequency);
   writeNotNull('frequencyMax', instance.frequencyMax);
   writeNotNull('period', instance.period);
   writeNotNull('periodMax', instance.periodMax);
-  writeNotNull('periodUnit', _$TimingUnitEnumMap[instance.periodUnit]);
+  writeNotNull('periodUnit', instance.periodUnit?.toJson());
   writeNotNull(
       'dayOfWeek', instance.dayOfWeek?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'timeOfDay', instance.timeOfDay?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      'when', instance.when?.map((e) => _$TimingWhenEnumMap[e])?.toList());
+  writeNotNull('when', instance.when?.map((e) => e?.toJson())?.toList());
   writeNotNull('offset', instance.offset);
   return val;
 }
-
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
-}
-
-const _$TimingUnitEnumMap = {
-  TimingUnit.s: 's',
-  TimingUnit.min: 'min',
-  TimingUnit.h: 'h',
-  TimingUnit.d: 'd',
-  TimingUnit.wk: 'wk',
-  TimingUnit.mo: 'mo',
-  TimingUnit.a: 'a',
-};
-
-const _$TimingWhenEnumMap = {
-  TimingWhen.morn: 'MORN',
-  TimingWhen.mornEarly: 'MORN.early',
-  TimingWhen.mornLate: 'MORN.late',
-  TimingWhen.noon: 'NOON',
-  TimingWhen.aft: 'AFT',
-  TimingWhen.aftEarly: 'AFT.early',
-  TimingWhen.aftLate: 'AFT.late',
-  TimingWhen.eve: 'EVE',
-  TimingWhen.eveEarly: 'EVE.early',
-  TimingWhen.eveLate: 'EVE.late',
-  TimingWhen.eveNight: 'NIGHT',
-  TimingWhen.phs: 'PHS',
-  TimingWhen.hs: 'HS',
-  TimingWhen.wake: 'WAKE',
-  TimingWhen.c: 'C',
-  TimingWhen.cm: 'CM',
-  TimingWhen.cd: 'CD',
-  TimingWhen.cv: 'CV',
-  TimingWhen.ac: 'AC',
-  TimingWhen.acm: 'ACM',
-  TimingWhen.acd: 'ACD',
-  TimingWhen.acv: 'ACV',
-  TimingWhen.pc: 'PC',
-  TimingWhen.pcm: 'PCM',
-  TimingWhen.pcd: 'PCD',
-  TimingWhen.pcv: 'PCV',
-};

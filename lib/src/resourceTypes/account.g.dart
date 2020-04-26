@@ -8,6 +8,7 @@ part of 'account.dart';
 
 Account _$AccountFromJson(Map<String, dynamic> json) {
   return Account(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -34,7 +35,9 @@ Account _$AccountFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: _$enumDecodeNullable(_$AccountStatusEnumMap, json['status']),
+    status: json['status'] == null
+        ? null
+        : AccountStatus.fromJson(json['status'] as String),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -75,6 +78,7 @@ Map<String, dynamic> _$AccountToJson(Account instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -87,7 +91,7 @@ Map<String, dynamic> _$AccountToJson(Account instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', _$AccountStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('subject', instance.subject?.map((e) => e?.toJson())?.toList());
@@ -101,46 +105,6 @@ Map<String, dynamic> _$AccountToJson(Account instance) {
   writeNotNull('partOf', instance.partOf?.toJson());
   return val;
 }
-
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
-}
-
-const _$AccountStatusEnumMap = {
-  AccountStatus.active: 'active',
-  AccountStatus.inactive: 'inactive',
-  AccountStatus.entered_in_error: 'entered-in-error',
-  AccountStatus.on_hold: 'on-hold',
-  AccountStatus.unknown: 'unknown',
-};
 
 AccountCoverage _$AccountCoverageFromJson(Map<String, dynamic> json) {
   return AccountCoverage(

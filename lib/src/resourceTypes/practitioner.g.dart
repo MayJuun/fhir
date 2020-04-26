@@ -48,7 +48,9 @@ Practitioner _$PractitionerFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Address.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    gender: json['gender'] as String,
+    gender: json['gender'] == null
+        ? null
+        : PractitionerGender.fromJson(json['gender'] as String),
     birthDate: json['birthDate'] == null
         ? null
         : Date.fromJson(json['birthDate'] as String),
@@ -95,7 +97,7 @@ Map<String, dynamic> _$PractitionerToJson(Practitioner instance) {
   writeNotNull('name', instance.name?.map((e) => e?.toJson())?.toList());
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
   writeNotNull('address', instance.address?.map((e) => e?.toJson())?.toList());
-  writeNotNull('gender', instance.gender);
+  writeNotNull('gender', instance.gender?.toJson());
   writeNotNull('birthDate', instance.birthDate?.toJson());
   writeNotNull('photo', instance.photo?.map((e) => e?.toJson())?.toList());
   writeNotNull('qualification',

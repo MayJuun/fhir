@@ -42,7 +42,9 @@ Person _$PersonFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    gender: json['gender'] as String,
+    gender: json['gender'] == null
+        ? null
+        : PersonGender.fromJson(json['gender'] as String),
     birthDate: json['birthDate'] == null
         ? null
         : Date.fromJson(json['birthDate'] as String),
@@ -88,7 +90,7 @@ Map<String, dynamic> _$PersonToJson(Person instance) {
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('name', instance.name?.map((e) => e?.toJson())?.toList());
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
-  writeNotNull('gender', instance.gender);
+  writeNotNull('gender', instance.gender?.toJson());
   writeNotNull('birthDate', instance.birthDate?.toJson());
   writeNotNull('address', instance.address?.map((e) => e?.toJson())?.toList());
   writeNotNull('photo', instance.photo?.toJson());
@@ -112,7 +114,9 @@ PersonLink _$PersonLinkFromJson(Map<String, dynamic> json) {
     target: json['target'] == null
         ? null
         : Reference.fromJson(json['target'] as Map<String, dynamic>),
-    assurance: json['assurance'] as String,
+    assurance: json['assurance'] == null
+        ? null
+        : PersonLinkAssurance.fromJson(json['assurance'] as String),
   );
 }
 
@@ -131,6 +135,6 @@ Map<String, dynamic> _$PersonLinkToJson(PersonLink instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('target', instance.target?.toJson());
-  writeNotNull('assurance', instance.assurance);
+  writeNotNull('assurance', instance.assurance?.toJson());
   return val;
 }

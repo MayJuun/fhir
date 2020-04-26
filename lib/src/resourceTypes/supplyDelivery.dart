@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/id.dart';
@@ -18,7 +21,7 @@ part 'supplyDelivery.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class SupplyDelivery {
-  static const String resourceType = 'SupplyDelivery';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -30,7 +33,7 @@ class SupplyDelivery {
   List<Identifier> identifier;
   List<Reference> basedOn;
   List<Reference> partOf;
-  String status;
+  SupplyDeliveryStatus status;
   Reference patient;
   CodeableConcept type;
   SupplyDeliverySuppliedItem suppliedItem;
@@ -42,6 +45,7 @@ class SupplyDelivery {
   List<Reference> receiver;
 
   SupplyDelivery({
+    this.resourceType = 'SupplyDelivery',
     this.id,
     this.meta,
     this.implicitRules,
@@ -91,4 +95,27 @@ class SupplyDeliverySuppliedItem {
   factory SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliverySuppliedItemFromJson(json);
   Map<String, dynamic> toJson() => _$SupplyDeliverySuppliedItemToJson(this);
+}
+
+class SupplyDeliveryStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory SupplyDeliveryStatus(String value) {
+    assert(value != null);
+    return SupplyDeliveryStatus._(
+      validateEnum(
+        value,
+        [
+          'in-progress',
+          'completed',
+          'abandoned',
+          'entered-in-error',
+        ],
+      ),
+    );
+  }
+  const SupplyDeliveryStatus._(this.value);
+  factory SupplyDeliveryStatus.fromJson(String json) =>
+      SupplyDeliveryStatus(json);
+  String toJson() => result();
 }

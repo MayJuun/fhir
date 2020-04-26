@@ -8,6 +8,7 @@ part of 'location.dart';
 
 Location _$LocationFromJson(Map<String, dynamic> json) {
   return Location(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -34,14 +35,18 @@ Location _$LocationFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : LocationStatus.fromJson(json['status'] as String),
     operationalStatus: json['operationalStatus'] == null
         ? null
         : Coding.fromJson(json['operationalStatus'] as Map<String, dynamic>),
     name: json['name'] as String,
     alias: (json['alias'] as List)?.map((e) => e as String)?.toList(),
     description: json['description'] as String,
-    mode: json['mode'] as String,
+    mode: json['mode'] == null
+        ? null
+        : LocationMode.fromJson(json['mode'] as String),
     type: (json['type'] as List)
         ?.map((e) => e == null
             ? null
@@ -90,6 +95,7 @@ Map<String, dynamic> _$LocationToJson(Location instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -102,12 +108,12 @@ Map<String, dynamic> _$LocationToJson(Location instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('operationalStatus', instance.operationalStatus?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('alias', instance.alias);
   writeNotNull('description', instance.description);
-  writeNotNull('mode', instance.mode);
+  writeNotNull('mode', instance.mode?.toJson());
   writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson())?.toList());
   writeNotNull('address', instance.address?.toJson());

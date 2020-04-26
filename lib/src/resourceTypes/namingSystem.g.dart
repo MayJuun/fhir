@@ -8,6 +8,7 @@ part of 'namingSystem.dart';
 
 NamingSystem _$NamingSystemFromJson(Map<String, dynamic> json) {
   return NamingSystem(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -31,8 +32,12 @@ NamingSystem _$NamingSystemFromJson(Map<String, dynamic> json) {
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     name: json['name'] as String,
-    status: json['status'] as String,
-    kind: json['kind'] as String,
+    status: json['status'] == null
+        ? null
+        : NamingSystemStatus.fromJson(json['status'] as String),
+    kind: json['kind'] == null
+        ? null
+        : NamingSystemKind.fromJson(json['kind'] as String),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -76,6 +81,7 @@ Map<String, dynamic> _$NamingSystemToJson(NamingSystem instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -87,8 +93,8 @@ Map<String, dynamic> _$NamingSystemToJson(NamingSystem instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('name', instance.name);
-  writeNotNull('status', instance.status);
-  writeNotNull('kind', instance.kind);
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('kind', instance.kind?.toJson());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
@@ -116,7 +122,9 @@ NamingSystemUniqueId _$NamingSystemUniqueIdFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : NamingSystemUniqueIdType.fromJson(json['type'] as String),
     value: json['value'] as String,
     preferred: json['preferred'] as bool,
     comment: json['comment'] as String,
@@ -141,7 +149,7 @@ Map<String, dynamic> _$NamingSystemUniqueIdToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('value', instance.value);
   writeNotNull('preferred', instance.preferred);
   writeNotNull('comment', instance.comment);

@@ -8,6 +8,7 @@ part of 'exampleScenario.dart';
 
 ExampleScenario _$ExampleScenarioFromJson(Map<String, dynamic> json) {
   return ExampleScenario(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -37,7 +38,9 @@ ExampleScenario _$ExampleScenarioFromJson(Map<String, dynamic> json) {
         ?.toList(),
     version: json['version'] as String,
     name: json['name'] as String,
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : ExampleScenarioStatus.fromJson(json['status'] as String),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -93,6 +96,7 @@ Map<String, dynamic> _$ExampleScenarioToJson(ExampleScenario instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -108,7 +112,7 @@ Map<String, dynamic> _$ExampleScenarioToJson(ExampleScenario instance) {
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
@@ -140,7 +144,9 @@ ExampleScenarioActor _$ExampleScenarioActorFromJson(Map<String, dynamic> json) {
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     actorId: json['actorId'] as String,
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : ExampleScenarioActorType.fromJson(json['type'] as String),
     name: json['name'] as String,
     description: json['description'] == null
         ? null
@@ -164,7 +170,7 @@ Map<String, dynamic> _$ExampleScenarioActorToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('actorId', instance.actorId);
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('description', instance.description?.toJson());
   return val;

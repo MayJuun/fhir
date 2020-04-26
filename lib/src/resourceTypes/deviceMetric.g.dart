@@ -8,6 +8,7 @@ part of 'deviceMetric.dart';
 
 DeviceMetric _$DeviceMetricFromJson(Map<String, dynamic> json) {
   return DeviceMetric(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -46,9 +47,16 @@ DeviceMetric _$DeviceMetricFromJson(Map<String, dynamic> json) {
     parent: json['parent'] == null
         ? null
         : Reference.fromJson(json['parent'] as Map<String, dynamic>),
-    operationalStatus: json['operationalStatus'] as String,
-    color: json['color'] as String,
-    category: json['category'] as String,
+    operationalStatus: json['operationalStatus'] == null
+        ? null
+        : DeviceMetricOperationalStatus.fromJson(
+            json['operationalStatus'] as String),
+    color: json['color'] == null
+        ? null
+        : DeviceMetricColor.fromJson(json['color'] as String),
+    category: json['category'] == null
+        ? null
+        : DeviceMetricCategory.fromJson(json['category'] as String),
     measurementPeriod: json['measurementPeriod'] == null
         ? null
         : Timing.fromJson(json['measurementPeriod'] as Map<String, dynamic>),
@@ -69,6 +77,7 @@ Map<String, dynamic> _$DeviceMetricToJson(DeviceMetric instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -85,9 +94,9 @@ Map<String, dynamic> _$DeviceMetricToJson(DeviceMetric instance) {
   writeNotNull('unit', instance.unit?.toJson());
   writeNotNull('source', instance.source?.toJson());
   writeNotNull('parent', instance.parent?.toJson());
-  writeNotNull('operationalStatus', instance.operationalStatus);
-  writeNotNull('color', instance.color);
-  writeNotNull('category', instance.category);
+  writeNotNull('operationalStatus', instance.operationalStatus?.toJson());
+  writeNotNull('color', instance.color?.toJson());
+  writeNotNull('category', instance.category?.toJson());
   writeNotNull('measurementPeriod', instance.measurementPeriod?.toJson());
   writeNotNull(
       'calibration', instance.calibration?.map((e) => e?.toJson())?.toList());
@@ -106,8 +115,12 @@ DeviceMetricCalibration _$DeviceMetricCalibrationFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] as String,
-    state: json['state'] as String,
+    type: json['type'] == null
+        ? null
+        : DeviceMetricCalibrationType.fromJson(json['type'] as String),
+    state: json['state'] == null
+        ? null
+        : DeviceMetricCalibrationState.fromJson(json['state'] as String),
     time:
         json['time'] == null ? null : Instant.fromJson(json['time'] as String),
   );
@@ -128,8 +141,8 @@ Map<String, dynamic> _$DeviceMetricCalibrationToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type);
-  writeNotNull('state', instance.state);
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('state', instance.state?.toJson());
   writeNotNull('time', instance.time?.toJson());
   return val;
 }

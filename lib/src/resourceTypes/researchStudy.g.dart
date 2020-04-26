@@ -8,6 +8,7 @@ part of 'researchStudy.dart';
 
 ResearchStudy _$ResearchStudyFromJson(Map<String, dynamic> json) {
   return ResearchStudy(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -43,7 +44,9 @@ ResearchStudy _$ResearchStudyFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : ResearchStudyStatus.fromJson(json['status'] as String),
     primaryPurposeType: json['primaryPurposeType'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -137,6 +140,7 @@ Map<String, dynamic> _$ResearchStudyToJson(ResearchStudy instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -153,7 +157,7 @@ Map<String, dynamic> _$ResearchStudyToJson(ResearchStudy instance) {
   writeNotNull(
       'protocol', instance.protocol?.map((e) => e?.toJson())?.toList());
   writeNotNull('partOf', instance.partOf?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('primaryPurposeType', instance.primaryPurposeType?.toJson());
   writeNotNull('phase', instance.phase?.toJson());
   writeNotNull(

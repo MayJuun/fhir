@@ -8,6 +8,7 @@ part of 'codeSystem.dart';
 
 CodeSystem _$CodeSystemFromJson(Map<String, dynamic> json) {
   return CodeSystem(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -38,7 +39,9 @@ CodeSystem _$CodeSystemFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : CodeSystemStatus.fromJson(json['status'] as String),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -71,10 +74,15 @@ CodeSystem _$CodeSystemFromJson(Map<String, dynamic> json) {
     valueSet: json['valueSet'] == null
         ? null
         : Canonical.fromJson(json['valueSet'] as String),
-    hierarchyMeaning: json['hierarchyMeaning'] as String,
+    hierarchyMeaning: json['hierarchyMeaning'] == null
+        ? null
+        : CodeSystemHierarchyMeaning.fromJson(
+            json['hierarchyMeaning'] as String),
     compositional: json['compositional'] as bool,
     versionNeeded: json['versionNeeded'] as bool,
-    content: json['content'] as String,
+    content: json['content'] == null
+        ? null
+        : CodeSystemContent.fromJson(json['content'] as String),
     supplements: json['supplements'] == null
         ? null
         : Canonical.fromJson(json['supplements'] as String),
@@ -106,6 +114,7 @@ Map<String, dynamic> _$CodeSystemToJson(CodeSystem instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -122,7 +131,7 @@ Map<String, dynamic> _$CodeSystemToJson(CodeSystem instance) {
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
@@ -136,10 +145,10 @@ Map<String, dynamic> _$CodeSystemToJson(CodeSystem instance) {
   writeNotNull('copyright', instance.copyright?.toJson());
   writeNotNull('caseSensitive', instance.caseSensitive);
   writeNotNull('valueSet', instance.valueSet?.toJson());
-  writeNotNull('hierarchyMeaning', instance.hierarchyMeaning);
+  writeNotNull('hierarchyMeaning', instance.hierarchyMeaning?.toJson());
   writeNotNull('compositional', instance.compositional);
   writeNotNull('versionNeeded', instance.versionNeeded);
-  writeNotNull('content', instance.content);
+  writeNotNull('content', instance.content?.toJson());
   writeNotNull('supplements', instance.supplements?.toJson());
   writeNotNull('count', instance.count);
   writeNotNull('filter', instance.filter?.map((e) => e?.toJson())?.toList());
@@ -205,7 +214,9 @@ CodeSystemProperty _$CodeSystemPropertyFromJson(Map<String, dynamic> json) {
     code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
     uri: json['uri'] == null ? null : FhirUri.fromJson(json['uri'] as String),
     description: json['description'] as String,
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : CodeSystemPropertyType.fromJson(json['type'] as String),
   );
 }
 
@@ -226,7 +237,7 @@ Map<String, dynamic> _$CodeSystemPropertyToJson(CodeSystemProperty instance) {
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('uri', instance.uri?.toJson());
   writeNotNull('description', instance.description);
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   return val;
 }
 

@@ -8,6 +8,7 @@ part of 'device.dart';
 
 Device _$DeviceFromJson(Map<String, dynamic> json) {
   return Device(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -42,7 +43,9 @@ Device _$DeviceFromJson(Map<String, dynamic> json) {
             ? null
             : DeviceUdiCarrier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : DeviceStatus.fromJson(json['status'] as String),
     statusReason: (json['statusReason'] as List)
         ?.map((e) => e == null
             ? null
@@ -121,6 +124,7 @@ Map<String, dynamic> _$DeviceToJson(Device instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -136,7 +140,7 @@ Map<String, dynamic> _$DeviceToJson(Device instance) {
   writeNotNull('definition', instance.definition?.toJson());
   writeNotNull(
       'udiCarrier', instance.udiCarrier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull(
       'statusReason', instance.statusReason?.map((e) => e?.toJson())?.toList());
   writeNotNull('distinctIdentifier', instance.distinctIdentifier);
@@ -188,7 +192,9 @@ DeviceUdiCarrier _$DeviceUdiCarrierFromJson(Map<String, dynamic> json) {
         ? null
         : Base64Binary.fromJson(json['carrierAIDC'] as String),
     carrierHRF: json['carrierHRF'] as String,
-    entryType: json['entryType'] as String,
+    entryType: json['entryType'] == null
+        ? null
+        : DeviceUdiCarrierEntryType.fromJson(json['entryType'] as String),
   );
 }
 
@@ -211,7 +217,7 @@ Map<String, dynamic> _$DeviceUdiCarrierToJson(DeviceUdiCarrier instance) {
   writeNotNull('jurisdiction', instance.jurisdiction?.toJson());
   writeNotNull('carrierAIDC', instance.carrierAIDC?.toJson());
   writeNotNull('carrierHRF', instance.carrierHRF);
-  writeNotNull('entryType', instance.entryType);
+  writeNotNull('entryType', instance.entryType?.toJson());
   return val;
 }
 
@@ -227,7 +233,9 @@ DeviceDeviceName _$DeviceDeviceNameFromJson(Map<String, dynamic> json) {
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     name: json['name'] as String,
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : DeviceDeviceNameType.fromJson(json['type'] as String),
   );
 }
 
@@ -246,7 +254,7 @@ Map<String, dynamic> _$DeviceDeviceNameToJson(DeviceDeviceName instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('name', instance.name);
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   return val;
 }
 

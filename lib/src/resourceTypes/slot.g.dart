@@ -8,6 +8,7 @@ part of 'slot.dart';
 
 Slot _$SlotFromJson(Map<String, dynamic> json) {
   return Slot(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -56,7 +57,9 @@ Slot _$SlotFromJson(Map<String, dynamic> json) {
     schedule: json['schedule'] == null
         ? null
         : Reference.fromJson(json['schedule'] as Map<String, dynamic>),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : SlotStatus.fromJson(json['status'] as String),
     start: json['start'] == null
         ? null
         : Instant.fromJson(json['start'] as String),
@@ -75,6 +78,7 @@ Map<String, dynamic> _$SlotToJson(Slot instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -95,7 +99,7 @@ Map<String, dynamic> _$SlotToJson(Slot instance) {
       'specialty', instance.specialty?.map((e) => e?.toJson())?.toList());
   writeNotNull('appointmentType', instance.appointmentType?.toJson());
   writeNotNull('schedule', instance.schedule?.toJson());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('start', instance.start?.toJson());
   writeNotNull('end', instance.end?.toJson());
   writeNotNull('overbooked', instance.overbooked);

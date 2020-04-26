@@ -8,6 +8,7 @@ part of 'planDefinition.dart';
 
 PlanDefinition _$PlanDefinitionFromJson(Map<String, dynamic> json) {
   return PlanDefinition(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -42,7 +43,9 @@ PlanDefinition _$PlanDefinitionFromJson(Map<String, dynamic> json) {
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : PlanDefinitionStatus.fromJson(json['status'] as String),
     experimental: json['experimental'] as bool,
     subjectCodeableConcept: json['subjectCodeableConcept'] == null
         ? null
@@ -143,6 +146,7 @@ Map<String, dynamic> _$PlanDefinitionToJson(PlanDefinition instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -161,7 +165,7 @@ Map<String, dynamic> _$PlanDefinitionToJson(PlanDefinition instance) {
   writeNotNull('title', instance.title);
   writeNotNull('subtitle', instance.subtitle);
   writeNotNull('type', instance.type?.toJson());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull(
       'subjectCodeableConcept', instance.subjectCodeableConcept?.toJson());
@@ -410,11 +414,26 @@ PlanDefinitionAction _$PlanDefinitionActionFromJson(Map<String, dynamic> json) {
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    groupingBehavior: json['groupingBehavior'] as String,
-    selectionBehavior: json['selectionBehavior'] as String,
-    requiredBehavior: json['requiredBehavior'] as String,
-    precheckBehavior: json['precheckBehavior'] as String,
-    cardinalityBehavior: json['cardinalityBehavior'] as String,
+    groupingBehavior: json['groupingBehavior'] == null
+        ? null
+        : PlanDefinitionActionGroupingBehavior.fromJson(
+            json['groupingBehavior'] as String),
+    selectionBehavior: json['selectionBehavior'] == null
+        ? null
+        : PlanDefinitionActionSelectionBehavior.fromJson(
+            json['selectionBehavior'] as String),
+    requiredBehavior: json['requiredBehavior'] == null
+        ? null
+        : PlanDefinitionActionRequiredBehavior.fromJson(
+            json['requiredBehavior'] as String),
+    precheckBehavior: json['precheckBehavior'] == null
+        ? null
+        : PlanDefinitionActionPrecheckBehavior.fromJson(
+            json['precheckBehavior'] as String),
+    cardinalityBehavior: json['cardinalityBehavior'] == null
+        ? null
+        : PlanDefinitionActionCardinalityBehavior.fromJson(
+            json['cardinalityBehavior'] as String),
     definitionCanonical: json['definitionCanonical'] == null
         ? null
         : Canonical.fromJson(json['definitionCanonical'] as String),
@@ -481,11 +500,11 @@ Map<String, dynamic> _$PlanDefinitionActionToJson(
   writeNotNull(
       'participant', instance.participant?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', instance.type?.toJson());
-  writeNotNull('groupingBehavior', instance.groupingBehavior);
-  writeNotNull('selectionBehavior', instance.selectionBehavior);
-  writeNotNull('requiredBehavior', instance.requiredBehavior);
-  writeNotNull('precheckBehavior', instance.precheckBehavior);
-  writeNotNull('cardinalityBehavior', instance.cardinalityBehavior);
+  writeNotNull('groupingBehavior', instance.groupingBehavior?.toJson());
+  writeNotNull('selectionBehavior', instance.selectionBehavior?.toJson());
+  writeNotNull('requiredBehavior', instance.requiredBehavior?.toJson());
+  writeNotNull('precheckBehavior', instance.precheckBehavior?.toJson());
+  writeNotNull('cardinalityBehavior', instance.cardinalityBehavior?.toJson());
   writeNotNull('definitionCanonical', instance.definitionCanonical?.toJson());
   writeNotNull('definitionUri', instance.definitionUri?.toJson());
   writeNotNull('transform', instance.transform?.toJson());
@@ -507,7 +526,9 @@ PlanDefinitionCondition _$PlanDefinitionConditionFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    kind: json['kind'] as String,
+    kind: json['kind'] == null
+        ? null
+        : PlanDefinitionConditionKind.fromJson(json['kind'] as String),
     expression: json['expression'] == null
         ? null
         : Expression.fromJson(json['expression'] as Map<String, dynamic>),
@@ -529,7 +550,7 @@ Map<String, dynamic> _$PlanDefinitionConditionToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('kind', instance.kind);
+  writeNotNull('kind', instance.kind?.toJson());
   writeNotNull('expression', instance.expression?.toJson());
   return val;
 }
@@ -549,7 +570,10 @@ PlanDefinitionRelatedAction _$PlanDefinitionRelatedActionFromJson(
     actionId: json['actionId'] == null
         ? null
         : Id.fromJson(json['actionId'] as String),
-    relationship: json['relationship'] as String,
+    relationship: json['relationship'] == null
+        ? null
+        : PlanDefinitionRelatedActionRelationship.fromJson(
+            json['relationship'] as String),
     offsetDuration: json['offsetDuration'] == null
         ? null
         : Duration.fromJson(json['offsetDuration'] as Map<String, dynamic>),
@@ -575,7 +599,7 @@ Map<String, dynamic> _$PlanDefinitionRelatedActionToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('actionId', instance.actionId?.toJson());
-  writeNotNull('relationship', instance.relationship);
+  writeNotNull('relationship', instance.relationship?.toJson());
   writeNotNull('offsetDuration', instance.offsetDuration?.toJson());
   writeNotNull('offsetRange', instance.offsetRange?.toJson());
   return val;
@@ -593,7 +617,9 @@ PlanDefinitionParticipant _$PlanDefinitionParticipantFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : PlanDefinitionParticipantType.fromJson(json['type'] as String),
     role: json['role'] == null
         ? null
         : CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
@@ -615,7 +641,7 @@ Map<String, dynamic> _$PlanDefinitionParticipantToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('role', instance.role?.toJson());
   return val;
 }

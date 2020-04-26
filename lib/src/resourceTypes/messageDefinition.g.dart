@@ -8,6 +8,7 @@ part of 'messageDefinition.dart';
 
 MessageDefinition _$MessageDefinitionFromJson(Map<String, dynamic> json) {
   return MessageDefinition(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -41,7 +42,9 @@ MessageDefinition _$MessageDefinitionFromJson(Map<String, dynamic> json) {
     replaces: (json['replaces'] as List)
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : MessageDefinitionStatus.fromJson(json['status'] as String),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -82,13 +85,18 @@ MessageDefinition _$MessageDefinitionFromJson(Map<String, dynamic> json) {
     eventUri: json['eventUri'] == null
         ? null
         : FhirUri.fromJson(json['eventUri'] as String),
-    category: json['category'] as String,
+    category: json['category'] == null
+        ? null
+        : MessageDefinitionCategory.fromJson(json['category'] as String),
     focus: (json['focus'] as List)
         ?.map((e) => e == null
             ? null
             : MessageDefinitionFocus.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    responseRequired: json['responseRequired'] as String,
+    responseRequired: json['responseRequired'] == null
+        ? null
+        : MessageDefinitionResponseRequired.fromJson(
+            json['responseRequired'] as String),
     allowedResponse: (json['allowedResponse'] as List)
         ?.map((e) => e == null
             ? null
@@ -110,6 +118,7 @@ Map<String, dynamic> _$MessageDefinitionToJson(MessageDefinition instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -128,7 +137,7 @@ Map<String, dynamic> _$MessageDefinitionToJson(MessageDefinition instance) {
   writeNotNull('title', instance.title);
   writeNotNull(
       'replaces', instance.replaces?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
@@ -144,9 +153,9 @@ Map<String, dynamic> _$MessageDefinitionToJson(MessageDefinition instance) {
   writeNotNull('parent', instance.parent?.map((e) => e?.toJson())?.toList());
   writeNotNull('eventCoding', instance.eventCoding?.toJson());
   writeNotNull('eventUri', instance.eventUri?.toJson());
-  writeNotNull('category', instance.category);
+  writeNotNull('category', instance.category?.toJson());
   writeNotNull('focus', instance.focus?.map((e) => e?.toJson())?.toList());
-  writeNotNull('responseRequired', instance.responseRequired);
+  writeNotNull('responseRequired', instance.responseRequired?.toJson());
   writeNotNull('allowedResponse',
       instance.allowedResponse?.map((e) => e?.toJson())?.toList());
   writeNotNull('graph', instance.graph?.map((e) => e?.toJson())?.toList());

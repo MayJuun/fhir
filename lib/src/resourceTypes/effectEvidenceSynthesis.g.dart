@@ -9,6 +9,7 @@ part of 'effectEvidenceSynthesis.dart';
 EffectEvidenceSynthesis _$EffectEvidenceSynthesisFromJson(
     Map<String, dynamic> json) {
   return EffectEvidenceSynthesis(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -39,7 +40,9 @@ EffectEvidenceSynthesis _$EffectEvidenceSynthesisFromJson(
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : EffectEvidenceSynthesisStatus.fromJson(json['status'] as String),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -162,6 +165,7 @@ Map<String, dynamic> _$EffectEvidenceSynthesisToJson(
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -178,7 +182,7 @@ Map<String, dynamic> _$EffectEvidenceSynthesisToJson(
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson())?.toList());
@@ -270,7 +274,10 @@ EffectEvidenceSynthesisResultsByExposure
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     description: json['description'] as String,
-    exposureState: json['exposureState'] as String,
+    exposureState: json['exposureState'] == null
+        ? null
+        : EffectEvidenceSynthesisResultsByExposureState.fromJson(
+            json['exposureState'] as String),
     variantState: json['variantState'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -298,7 +305,7 @@ Map<String, dynamic> _$EffectEvidenceSynthesisResultsByExposureToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
-  writeNotNull('exposureState', instance.exposureState);
+  writeNotNull('exposureState', instance.exposureState?.toJson());
   writeNotNull('variantState', instance.variantState?.toJson());
   writeNotNull(
       'riskEvidenceSynthesis', instance.riskEvidenceSynthesis?.toJson());

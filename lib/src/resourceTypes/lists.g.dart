@@ -8,6 +8,7 @@ part of 'lists.dart';
 
 Lists _$ListsFromJson(Map<String, dynamic> json) {
   return Lists(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -34,8 +35,11 @@ Lists _$ListsFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
-    mode: json['mode'] as String,
+    status: json['status'] == null
+        ? null
+        : ListStatus.fromJson(json['status'] as String),
+    mode:
+        json['mode'] == null ? null : ListMode.fromJson(json['mode'] as String),
     title: json['title'] as String,
     code: json['code'] == null
         ? null
@@ -78,6 +82,7 @@ Map<String, dynamic> _$ListsToJson(Lists instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -90,8 +95,8 @@ Map<String, dynamic> _$ListsToJson(Lists instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
-  writeNotNull('mode', instance.mode);
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('mode', instance.mode?.toJson());
   writeNotNull('title', instance.title);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('subject', instance.subject?.toJson());

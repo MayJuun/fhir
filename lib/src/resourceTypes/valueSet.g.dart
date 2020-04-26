@@ -8,6 +8,7 @@ part of 'valueSet.dart';
 
 ValueSet _$ValueSetFromJson(Map<String, dynamic> json) {
   return ValueSet(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -38,7 +39,9 @@ ValueSet _$ValueSetFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : ValueSetStatus.fromJson(json['status'] as String),
     experimental: json['experimental'] as bool,
     date: json['date'] == null
         ? null
@@ -86,6 +89,7 @@ Map<String, dynamic> _$ValueSetToJson(ValueSet instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -102,7 +106,7 @@ Map<String, dynamic> _$ValueSetToJson(ValueSet instance) {
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('publisher', instance.publisher);
@@ -320,7 +324,9 @@ ValueSetFilter _$ValueSetFilterFromJson(Map<String, dynamic> json) {
     property: json['property'] == null
         ? null
         : Code.fromJson(json['property'] as String),
-    op: json['op'] as String,
+    op: json['op'] == null
+        ? null
+        : ValueSetFilterOp.fromJson(json['op'] as String),
     value: json['value'] as String,
   );
 }
@@ -340,7 +346,7 @@ Map<String, dynamic> _$ValueSetFilterToJson(ValueSetFilter instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('property', instance.property?.toJson());
-  writeNotNull('op', instance.op);
+  writeNotNull('op', instance.op?.toJson());
   writeNotNull('value', instance.value);
   return val;
 }

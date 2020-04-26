@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/code.dart';
@@ -21,7 +24,7 @@ part 'structureDefinition.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class StructureDefinition {
-  static const String resourceType = 'StructureDefinition';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -35,7 +38,7 @@ class StructureDefinition {
   String version;
   String name;
   String title;
-  String status;
+  StructureDefinitionStatus status;
   bool experimental;
   FhirDateTime date;
   String publisher;
@@ -46,19 +49,20 @@ class StructureDefinition {
   Markdown purpose;
   Markdown copyright;
   List<Coding> keyword;
-  String fhirVersion;
+  StructureDefinitionFhirVersion fhirVersion;
   List<StructureDefinitionMapping> mapping;
-  String kind;
+  StructureDefinitionKind kind;
   bool abstract;
   List<StructureDefinitionContext> context;
   List<String> contextInvariant;
   FhirUri type;
   Canonical baseDefinition;
-  String derivation;
+  StructureDefinitionDerivation derivation;
   StructureDefinitionSnapshot snapshot;
   StructureDefinitionDifferential differential;
 
   StructureDefinition({
+    this.resourceType = 'StructureDefinition',
     this.id,
     this.meta,
     this.implicitRules,
@@ -131,7 +135,7 @@ class StructureDefinitionContext {
   String id;
   List<Extension> extension;
   List<Extension> modifierExtension;
-  String type;
+  StructureDefinitionContextType type;
   String expression;
 
   StructureDefinitionContext({
@@ -184,4 +188,134 @@ class StructureDefinitionDifferential {
       _$StructureDefinitionDifferentialFromJson(json);
   Map<String, dynamic> toJson() =>
       _$StructureDefinitionDifferentialToJson(this);
+}
+
+class StructureDefinitionStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory StructureDefinitionStatus(String value) {
+    assert(value != null);
+    return StructureDefinitionStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const StructureDefinitionStatus._(this.value);
+  factory StructureDefinitionStatus.fromJson(String json) =>
+      StructureDefinitionStatus(json);
+  String toJson() => result();
+}
+
+class StructureDefinitionFhirVersion extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory StructureDefinitionFhirVersion(String value) {
+    assert(value != null);
+    return StructureDefinitionFhirVersion._(
+      validateEnum(
+        value,
+        [
+          '0.01',
+          '0.05',
+          '0.06',
+          '0.11',
+          '0.0.80',
+          '0.0.81',
+          '0.0.82',
+          '0.4.0',
+          '0.5.0',
+          '1.0.0',
+          '1.0.1',
+          '1.0.2',
+          '1.1.0',
+          '1.4.0',
+          '1.6.0',
+          '1.8.0',
+          '3.0.0',
+          '3.0.1',
+          '3.3.0',
+          '3.5.0',
+          '4.0.0',
+          '4.0.1',
+        ],
+      ),
+    );
+  }
+  const StructureDefinitionFhirVersion._(this.value);
+  factory StructureDefinitionFhirVersion.fromJson(String json) =>
+      StructureDefinitionFhirVersion(json);
+  String toJson() => result();
+}
+
+class StructureDefinitionKind extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory StructureDefinitionKind(String value) {
+    assert(value != null);
+    return StructureDefinitionKind._(
+      validateEnum(
+        value,
+        [
+          'primitive-type',
+          'complex-type',
+          'resource',
+          'logical',
+        ],
+      ),
+    );
+  }
+  const StructureDefinitionKind._(this.value);
+  factory StructureDefinitionKind.fromJson(String json) =>
+      StructureDefinitionKind(json);
+  String toJson() => result();
+}
+
+class StructureDefinitionDerivation extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory StructureDefinitionDerivation(String value) {
+    assert(value != null);
+    return StructureDefinitionDerivation._(
+      validateEnum(
+        value,
+        [
+          'specialization',
+          'constraint',
+        ],
+      ),
+    );
+  }
+  const StructureDefinitionDerivation._(this.value);
+  factory StructureDefinitionDerivation.fromJson(String json) =>
+      StructureDefinitionDerivation(json);
+  String toJson() => result();
+}
+
+class StructureDefinitionContextType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory StructureDefinitionContextType(String value) {
+    assert(value != null);
+    return StructureDefinitionContextType._(
+      validateEnum(
+        value,
+        [
+          'fhirpath',
+          'element',
+          'extension',
+        ],
+      ),
+    );
+  }
+  const StructureDefinitionContextType._(this.value);
+  factory StructureDefinitionContextType.fromJson(String json) =>
+      StructureDefinitionContextType(json);
+  String toJson() => result();
 }

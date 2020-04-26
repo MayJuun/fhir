@@ -19,7 +19,7 @@ part 'riskAssessment.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RiskAssessment {
-  static const String resourceType = 'RiskAssessment';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -48,6 +48,7 @@ class RiskAssessment {
   List<Annotation> note;
 
   RiskAssessment({
+    this.resourceType = 'RiskAssessment',
     this.id,
     this.meta,
     this.implicitRules,

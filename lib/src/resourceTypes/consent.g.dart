@@ -8,6 +8,7 @@ part of 'consent.dart';
 
 Consent _$ConsentFromJson(Map<String, dynamic> json) {
   return Consent(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -34,7 +35,9 @@ Consent _$ConsentFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : ConsentStatus.fromJson(json['status'] as String),
     scope: json['scope'] == null
         ? null
         : CodeableConcept.fromJson(json['scope'] as Map<String, dynamic>),
@@ -91,6 +94,7 @@ Map<String, dynamic> _$ConsentToJson(Consent instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -103,7 +107,7 @@ Map<String, dynamic> _$ConsentToJson(Consent instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('scope', instance.scope?.toJson());
   writeNotNull(
       'category', instance.category?.map((e) => e?.toJson())?.toList());
@@ -212,7 +216,9 @@ ConsentProvision _$ConsentProvisionFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : ConsentProvisionType.fromJson(json['type'] as String),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -271,7 +277,7 @@ Map<String, dynamic> _$ConsentProvisionToJson(ConsentProvision instance) {
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('actor', instance.actor?.map((e) => e?.toJson())?.toList());
   writeNotNull('action', instance.action?.map((e) => e?.toJson())?.toList());
@@ -337,7 +343,9 @@ ConsentData _$ConsentDataFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    meaning: json['meaning'] as String,
+    meaning: json['meaning'] == null
+        ? null
+        : ConsentDataMeaning.fromJson(json['meaning'] as String),
     reference: json['reference'] == null
         ? null
         : Reference.fromJson(json['reference'] as Map<String, dynamic>),
@@ -358,7 +366,7 @@ Map<String, dynamic> _$ConsentDataToJson(ConsentData instance) {
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('meaning', instance.meaning);
+  writeNotNull('meaning', instance.meaning?.toJson());
   writeNotNull('reference', instance.reference?.toJson());
   return val;
 }

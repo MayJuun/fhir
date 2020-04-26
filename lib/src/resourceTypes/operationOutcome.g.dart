@@ -8,6 +8,7 @@ part of 'operationOutcome.dart';
 
 OperationOutcome _$OperationOutcomeFromJson(Map<String, dynamic> json) {
   return OperationOutcome(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -47,6 +48,7 @@ Map<String, dynamic> _$OperationOutcomeToJson(OperationOutcome instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -73,8 +75,12 @@ OperationOutcomeIssue _$OperationOutcomeIssueFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    severity: json['severity'] as String,
-    code: json['code'] as String,
+    severity: json['severity'] == null
+        ? null
+        : OperationOutcomeIssueSeverity.fromJson(json['severity'] as String),
+    code: json['code'] == null
+        ? null
+        : OperationOutcomeIssueCode.fromJson(json['code'] as String),
     details: json['details'] == null
         ? null
         : CodeableConcept.fromJson(json['details'] as Map<String, dynamic>),
@@ -99,8 +105,8 @@ Map<String, dynamic> _$OperationOutcomeIssueToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('severity', instance.severity);
-  writeNotNull('code', instance.code);
+  writeNotNull('severity', instance.severity?.toJson());
+  writeNotNull('code', instance.code?.toJson());
   writeNotNull('details', instance.details?.toJson());
   writeNotNull('diagnostics', instance.diagnostics);
   writeNotNull('location', instance.location);

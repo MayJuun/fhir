@@ -8,6 +8,7 @@ part of 'adverseEvent.dart';
 
 AdverseEvent _$AdverseEventFromJson(Map<String, dynamic> json) {
   return AdverseEvent(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -33,8 +34,9 @@ AdverseEvent _$AdverseEventFromJson(Map<String, dynamic> json) {
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    actuality:
-        _$enumDecodeNullable(_$AdverseEventActualityEnumMap, json['actuality']),
+    actuality: json['actuality'] == null
+        ? null
+        : AdverseEventActuality.fromJson(json['actuality'] as String),
     category: (json['category'] as List)
         ?.map((e) => e == null
             ? null
@@ -110,6 +112,7 @@ Map<String, dynamic> _$AdverseEventToJson(AdverseEvent instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -121,7 +124,7 @@ Map<String, dynamic> _$AdverseEventToJson(AdverseEvent instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('actuality', _$AdverseEventActualityEnumMap[instance.actuality]);
+  writeNotNull('actuality', instance.actuality?.toJson());
   writeNotNull(
       'category', instance.category?.map((e) => e?.toJson())?.toList());
   writeNotNull('event', instance.event?.toJson());
@@ -148,43 +151,6 @@ Map<String, dynamic> _$AdverseEventToJson(AdverseEvent instance) {
   writeNotNull('study', instance.study?.map((e) => e?.toJson())?.toList());
   return val;
 }
-
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
-}
-
-const _$AdverseEventActualityEnumMap = {
-  AdverseEventActuality.actual: 'actual',
-  AdverseEventActuality.potential: 'potential',
-};
 
 AdverseEventSuspectEntity _$AdverseEventSuspectEntityFromJson(
     Map<String, dynamic> json) {

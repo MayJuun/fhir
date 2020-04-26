@@ -8,6 +8,7 @@ part of 'episodeOfCare.dart';
 
 EpisodeOfCare _$EpisodeOfCareFromJson(Map<String, dynamic> json) {
   return EpisodeOfCare(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -34,7 +35,9 @@ EpisodeOfCare _$EpisodeOfCareFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : EpisodeOfCareStatus.fromJson(json['status'] as String),
     statusHistory: (json['statusHistory'] as List)
         ?.map((e) => e == null
             ? null
@@ -87,6 +90,7 @@ Map<String, dynamic> _$EpisodeOfCareToJson(EpisodeOfCare instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -99,7 +103,7 @@ Map<String, dynamic> _$EpisodeOfCareToJson(EpisodeOfCare instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('statusHistory',
       instance.statusHistory?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
@@ -128,7 +132,9 @@ EpisodeOfCareStatusHistory _$EpisodeOfCareStatusHistoryFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : EpisodeOfCareStatusHistoryStatus.fromJson(json['status'] as String),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -150,7 +156,7 @@ Map<String, dynamic> _$EpisodeOfCareStatusHistoryToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('period', instance.period?.toJson());
   return val;
 }

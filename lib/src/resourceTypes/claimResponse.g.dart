@@ -8,6 +8,7 @@ part of 'claimResponse.dart';
 
 ClaimResponse _$ClaimResponseFromJson(Map<String, dynamic> json) {
   return ClaimResponse(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -134,6 +135,7 @@ Map<String, dynamic> _$ClaimResponseToJson(ClaimResponse instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -743,7 +745,9 @@ ClaimResponseProcessNote _$ClaimResponseProcessNoteFromJson(
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     number: json['number'] as int,
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : ClaimResponseProcessNoteType.fromJson(json['type'] as String),
     text: json['text'] as String,
     language: json['language'] == null
         ? null
@@ -767,7 +771,7 @@ Map<String, dynamic> _$ClaimResponseProcessNoteToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('number', instance.number);
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('text', instance.text);
   writeNotNull('language', instance.language?.toJson());
   return val;

@@ -8,6 +8,7 @@ part of 'chargeItem.dart';
 
 ChargeItem _$ChargeItemFromJson(Map<String, dynamic> json) {
   return ChargeItem(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -40,7 +41,9 @@ ChargeItem _$ChargeItemFromJson(Map<String, dynamic> json) {
     definitionCanonical: (json['definitionCanonical'] as List)
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : ChargeItemStatus.fromJson(json['status'] as String),
     partOf: (json['partOf'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -138,6 +141,7 @@ Map<String, dynamic> _$ChargeItemToJson(ChargeItem instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -154,7 +158,7 @@ Map<String, dynamic> _$ChargeItemToJson(ChargeItem instance) {
       instance.definitionUri?.map((e) => e?.toJson())?.toList());
   writeNotNull('definitionCanonical',
       instance.definitionCanonical?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('partOf', instance.partOf?.map((e) => e?.toJson())?.toList());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('subject', instance.subject?.toJson());

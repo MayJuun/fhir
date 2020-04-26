@@ -8,6 +8,7 @@ part of 'guidanceResponse.dart';
 
 GuidanceResponse _$GuidanceResponseFromJson(Map<String, dynamic> json) {
   return GuidanceResponse(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -48,7 +49,9 @@ GuidanceResponse _$GuidanceResponseFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['moduleCodeableConcept'] as Map<String, dynamic>),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : GuidanceResponseStatus.fromJson(json['status'] as String),
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
@@ -101,6 +104,7 @@ Map<String, dynamic> _$GuidanceResponseToJson(GuidanceResponse instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -118,7 +122,7 @@ Map<String, dynamic> _$GuidanceResponseToJson(GuidanceResponse instance) {
   writeNotNull('moduleCanonical', instance.moduleCanonical?.toJson());
   writeNotNull(
       'moduleCodeableConcept', instance.moduleCodeableConcept?.toJson());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
   writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());

@@ -35,7 +35,9 @@ Encounter _$EncounterFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : EncounterStatus.fromJson(json['status'] as String),
     statusHistory: (json['statusHistory'] as List)
         ?.map((e) => e == null
             ? null
@@ -144,7 +146,7 @@ Map<String, dynamic> _$EncounterToJson(Encounter instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('statusHistory',
       instance.statusHistory?.map((e) => e?.toJson())?.toList());
   writeNotNull('clas', instance.clas?.toJson());
@@ -190,7 +192,9 @@ EncounterStatusHistory _$EncounterStatusHistoryFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : EncounterStatusHistoryStatus.fromJson(json['status'] as String),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -212,7 +216,7 @@ Map<String, dynamic> _$EncounterStatusHistoryToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('period', instance.period?.toJson());
   return val;
 }
@@ -440,7 +444,9 @@ EncounterLocation _$EncounterLocationFromJson(Map<String, dynamic> json) {
     location: json['location'] == null
         ? null
         : Reference.fromJson(json['location'] as Map<String, dynamic>),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : EncounterLocationStatus.fromJson(json['status'] as String),
     physicalType: json['physicalType'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -466,7 +472,7 @@ Map<String, dynamic> _$EncounterLocationToJson(EncounterLocation instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('location', instance.location?.toJson());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('physicalType', instance.physicalType?.toJson());
   writeNotNull('period', instance.period?.toJson());
   return val;

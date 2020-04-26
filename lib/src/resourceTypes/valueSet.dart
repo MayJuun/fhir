@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/markdown.dart';
@@ -21,7 +24,7 @@ part 'valueSet.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ValueSet {
-  static const String resourceType = 'ValueSet';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -35,7 +38,7 @@ class ValueSet {
   String version;
   String name;
   String title;
-  String status;
+  ValueSetStatus status;
   bool experimental;
   FhirDateTime date;
   String publisher;
@@ -50,6 +53,7 @@ class ValueSet {
   ValueSetExpansion expansion;
 
   ValueSet({
+    this.resourceType = 'ValueSet',
     this.id,
     this.meta,
     this.implicitRules,
@@ -187,7 +191,7 @@ class ValueSetFilter {
   List<Extension> extension;
   List<Extension> modifierExtension;
   Code property;
-  String op;
+  ValueSetFilterOp op;
   String value;
 
   ValueSetFilter({
@@ -297,4 +301,53 @@ class ValueSetContains {
   factory ValueSetContains.fromJson(Map<String, dynamic> json) =>
       _$ValueSetContainsFromJson(json);
   Map<String, dynamic> toJson() => _$ValueSetContainsToJson(this);
+}
+
+class ValueSetStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ValueSetStatus(String value) {
+    assert(value != null);
+    return ValueSetStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const ValueSetStatus._(this.value);
+  factory ValueSetStatus.fromJson(String json) => ValueSetStatus(json);
+  String toJson() => result();
+}
+
+class ValueSetFilterOp extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory ValueSetFilterOp(String value) {
+    assert(value != null);
+    return ValueSetFilterOp._(
+      validateEnum(
+        value,
+        [
+          '=',
+          'is-a',
+          'descendent-of',
+          'is-not-a',
+          'regex',
+          'in',
+          'not-in',
+          'generalizes',
+          'exists',
+        ],
+      ),
+    );
+  }
+  const ValueSetFilterOp._(this.value);
+  factory ValueSetFilterOp.fromJson(String json) => ValueSetFilterOp(json);
+  String toJson() => result();
 }

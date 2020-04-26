@@ -9,6 +9,7 @@ part of 'paymentReconciliation.dart';
 PaymentReconciliation _$PaymentReconciliationFromJson(
     Map<String, dynamic> json) {
   return PaymentReconciliation(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -52,7 +53,9 @@ PaymentReconciliation _$PaymentReconciliationFromJson(
     requestor: json['requestor'] == null
         ? null
         : Reference.fromJson(json['requestor'] as Map<String, dynamic>),
-    outcome: json['outcome'] as String,
+    outcome: json['outcome'] == null
+        ? null
+        : PaymentReconciliationOutcome.fromJson(json['outcome'] as String),
     disposition: json['disposition'] as String,
     paymentDate: json['paymentDate'] == null
         ? null
@@ -91,6 +94,7 @@ Map<String, dynamic> _$PaymentReconciliationToJson(
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -109,7 +113,7 @@ Map<String, dynamic> _$PaymentReconciliationToJson(
   writeNotNull('paymentIssuer', instance.paymentIssuer?.toJson());
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('requestor', instance.requestor?.toJson());
-  writeNotNull('outcome', instance.outcome);
+  writeNotNull('outcome', instance.outcome?.toJson());
   writeNotNull('disposition', instance.disposition);
   writeNotNull('paymentDate', instance.paymentDate?.toJson());
   writeNotNull('paymentAmount', instance.paymentAmount?.toJson());
@@ -204,7 +208,9 @@ PaymentReconciliationProcessNote _$PaymentReconciliationProcessNoteFromJson(
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : PaymentReconciliationProcessNoteType.fromJson(json['type'] as String),
     text: json['text'] as String,
   );
 }
@@ -224,7 +230,7 @@ Map<String, dynamic> _$PaymentReconciliationProcessNoteToJson(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('text', instance.text);
   return val;
 }

@@ -8,6 +8,7 @@ part of 'questionnaire.dart';
 
 Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) {
   return Questionnaire(
+    resourceType: json['resourceType'] as String,
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -41,7 +42,9 @@ Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) {
     derivedFrom: (json['derivedFrom'] as List)
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
         ?.toList(),
-    status: json['status'] as String,
+    status: json['status'] == null
+        ? null
+        : QuestionnaireStatus.fromJson(json['status'] as String),
     experimental: json['experimental'] as bool,
     subjectType: (json['subjectType'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
@@ -103,6 +106,7 @@ Map<String, dynamic> _$QuestionnaireToJson(Questionnaire instance) {
     }
   }
 
+  writeNotNull('resourceType', instance.resourceType);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -121,7 +125,7 @@ Map<String, dynamic> _$QuestionnaireToJson(Questionnaire instance) {
   writeNotNull('title', instance.title);
   writeNotNull(
       'derivedFrom', instance.derivedFrom?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('experimental', instance.experimental);
   writeNotNull(
       'subjectType', instance.subjectType?.map((e) => e?.toJson())?.toList());
@@ -164,13 +168,18 @@ QuestionnaireItem _$QuestionnaireItemFromJson(Map<String, dynamic> json) {
         ?.toList(),
     prefix: json['prefix'] as String,
     text: json['text'] as String,
-    type: json['type'] as String,
+    type: json['type'] == null
+        ? null
+        : QuestionnaireItemType.fromJson(json['type'] as String),
     enableWhen: (json['enableWhen'] as List)
         ?.map((e) => e == null
             ? null
             : QuestionnaireEnableWhen.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    enableBehavior: json['enableBehavior'] as String,
+    enableBehavior: json['enableBehavior'] == null
+        ? null
+        : QuestionnaireItemEnableBehavior.fromJson(
+            json['enableBehavior'] as String),
     required: json['required'] as bool,
     repeats: json['repeats'] as bool,
     readOnly: json['readOnly'] as bool,
@@ -215,10 +224,10 @@ Map<String, dynamic> _$QuestionnaireItemToJson(QuestionnaireItem instance) {
   writeNotNull('code', instance.code?.map((e) => e?.toJson())?.toList());
   writeNotNull('prefix', instance.prefix);
   writeNotNull('text', instance.text);
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull(
       'enableWhen', instance.enableWhen?.map((e) => e?.toJson())?.toList());
-  writeNotNull('enableBehavior', instance.enableBehavior);
+  writeNotNull('enableBehavior', instance.enableBehavior?.toJson());
   writeNotNull('required', instance.required);
   writeNotNull('repeats', instance.repeats);
   writeNotNull('readOnly', instance.readOnly);
@@ -244,7 +253,9 @@ QuestionnaireEnableWhen _$QuestionnaireEnableWhenFromJson(
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     question: json['question'] as String,
-    operator: json['operator'] as String,
+    operator: json['operator'] == null
+        ? null
+        : QuestionnaireEnableWhenOperator.fromJson(json['operator'] as String),
     answerBoolean: json['answerBoolean'] as bool,
     answerDecimal: (json['answerDecimal'] as num)?.toDouble(),
     answerInteger: json['answerInteger'] as int,
@@ -286,7 +297,7 @@ Map<String, dynamic> _$QuestionnaireEnableWhenToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('question', instance.question);
-  writeNotNull('operator', instance.operator);
+  writeNotNull('operator', instance.operator?.toJson());
   writeNotNull('answerBoolean', instance.answerBoolean);
   writeNotNull('answerDecimal', instance.answerDecimal);
   writeNotNull('answerInteger', instance.answerInteger);

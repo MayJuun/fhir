@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/code.dart';
@@ -21,7 +24,7 @@ part 'testScript.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class TestScript {
-  static const String resourceType = 'TestScript';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -35,7 +38,7 @@ class TestScript {
   String version;
   String name;
   String title;
-  String status;
+  TestScriptStatus status;
   bool experimental;
   FhirDateTime date;
   String publisher;
@@ -56,6 +59,7 @@ class TestScript {
   TestScriptTeardown teardown;
 
   TestScript({
+    this.resourceType = 'TestScript',
     this.id,
     this.meta,
     this.implicitRules,
@@ -319,7 +323,7 @@ class TestScriptOperation {
   Code contentType;
   int destination;
   bool encodeRequestUrl;
-  String method;
+  TestScriptOperationMethod method;
   int origin;
   String params;
   List<TestScriptRequestHeader> requestHeader;
@@ -385,7 +389,7 @@ class TestScriptAssert {
   List<Extension> modifierExtension;
   String label;
   String description;
-  String direction;
+  TestScriptAssertDirection direction;
   String compareToSourceId;
   String compareToSourceExpression;
   String compareToSourcePath;
@@ -394,12 +398,12 @@ class TestScriptAssert {
   String headerField;
   String minimumId;
   bool navigationLinks;
-  String operator;
+  TestScriptAssertOperator operator;
   String path;
-  String requestMethod;
+  TestScriptAssertRequestMethod requestMethod;
   String requestURL;
   Code resource;
-  String response;
+  TestScriptAssertResponse response;
   String responseCode;
   Id sourceId;
   Id validateProfileId;
@@ -519,4 +523,160 @@ class TestScriptAction2 {
   factory TestScriptAction2.fromJson(Map<String, dynamic> json) =>
       _$TestScriptAction2FromJson(json);
   Map<String, dynamic> toJson() => _$TestScriptAction2ToJson(this);
+}
+
+class TestScriptStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory TestScriptStatus(String value) {
+    assert(value != null);
+    return TestScriptStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const TestScriptStatus._(this.value);
+  factory TestScriptStatus.fromJson(String json) => TestScriptStatus(json);
+  String toJson() => result();
+}
+
+class TestScriptOperationMethod extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory TestScriptOperationMethod(String value) {
+    assert(value != null);
+    return TestScriptOperationMethod._(
+      validateEnum(
+        value,
+        [
+          'delete',
+          'get',
+          'options',
+          'patch',
+          'post',
+          'put',
+          'head',
+        ],
+      ),
+    );
+  }
+  const TestScriptOperationMethod._(this.value);
+  factory TestScriptOperationMethod.fromJson(String json) =>
+      TestScriptOperationMethod(json);
+  String toJson() => result();
+}
+
+class TestScriptAssertDirection extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory TestScriptAssertDirection(String value) {
+    assert(value != null);
+    return TestScriptAssertDirection._(
+      validateEnum(
+        value,
+        [
+          'response',
+          'request',
+        ],
+      ),
+    );
+  }
+  const TestScriptAssertDirection._(this.value);
+  factory TestScriptAssertDirection.fromJson(String json) =>
+      TestScriptAssertDirection(json);
+  String toJson() => result();
+}
+
+class TestScriptAssertOperator extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory TestScriptAssertOperator(String value) {
+    assert(value != null);
+    return TestScriptAssertOperator._(
+      validateEnum(
+        value,
+        [
+          'equals',
+          'notEquals',
+          'in',
+          'notIn',
+          'greaterThan',
+          'lessThan',
+          'empty',
+          'notEmpty',
+          'contains',
+          'notContains',
+          'eval',
+        ],
+      ),
+    );
+  }
+  const TestScriptAssertOperator._(this.value);
+  factory TestScriptAssertOperator.fromJson(String json) =>
+      TestScriptAssertOperator(json);
+  String toJson() => result();
+}
+
+class TestScriptAssertRequestMethod extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory TestScriptAssertRequestMethod(String value) {
+    assert(value != null);
+    return TestScriptAssertRequestMethod._(
+      validateEnum(
+        value,
+        [
+          'delete',
+          'get',
+          'options',
+          'patch',
+          'post',
+          'put',
+          'head',
+        ],
+      ),
+    );
+  }
+  const TestScriptAssertRequestMethod._(this.value);
+  factory TestScriptAssertRequestMethod.fromJson(String json) =>
+      TestScriptAssertRequestMethod(json);
+  String toJson() => result();
+}
+
+class TestScriptAssertResponse extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory TestScriptAssertResponse(String value) {
+    assert(value != null);
+    return TestScriptAssertResponse._(
+      validateEnum(
+        value,
+        [
+          'okay',
+          'created',
+          'noContent',
+          'notModified',
+          'bad',
+          'forbidden',
+          'notFound',
+          'methodNotAllowed',
+          'conflict',
+          'gone',
+          'preconditionFailed',
+          'unprocessable',
+        ],
+      ),
+    );
+  }
+  const TestScriptAssertResponse._(this.value);
+  factory TestScriptAssertResponse.fromJson(String json) =>
+      TestScriptAssertResponse(json);
+  String toJson() => result();
 }

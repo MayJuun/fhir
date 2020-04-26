@@ -1,6 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
+import '../primitiveFailures.dart';
+import '../primitiveObjects.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/markdown.dart';
 import '../primitiveTypes/code.dart';
@@ -18,7 +21,7 @@ part 'searchParameter.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class SearchParameter {
-  static const String resourceType = 'SearchParameter';
+  String resourceType;
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -31,7 +34,7 @@ class SearchParameter {
   String version;
   String name;
   Canonical derivedFrom;
-  String status;
+  SearchParameterStatus status;
   bool experimental;
   FhirDateTime date;
   String publisher;
@@ -42,10 +45,10 @@ class SearchParameter {
   Markdown purpose;
   Code code;
   List<Code> base;
-  String type;
+  SearchParameterType type;
   String expression;
   String xpath;
-  String xpathUsage;
+  SearchParameterXpathUsage xpathUsage;
   List<Code> target;
   bool multipleOr;
   bool multipleAnd;
@@ -55,6 +58,7 @@ class SearchParameter {
   List<SearchParameterComponent> component;
 
   SearchParameter({
+    this.resourceType = 'SearchParameter',
     this.id,
     this.meta,
     this.implicitRules,
@@ -115,4 +119,79 @@ class SearchParameterComponent {
   factory SearchParameterComponent.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterComponentFromJson(json);
   Map<String, dynamic> toJson() => _$SearchParameterComponentToJson(this);
+}
+
+class SearchParameterStatus extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory SearchParameterStatus(String value) {
+    assert(value != null);
+    return SearchParameterStatus._(
+      validateEnum(
+        value,
+        [
+          'draft',
+          'active',
+          'retired',
+          'unknown',
+        ],
+      ),
+    );
+  }
+  const SearchParameterStatus._(this.value);
+  factory SearchParameterStatus.fromJson(String json) =>
+      SearchParameterStatus(json);
+  String toJson() => result();
+}
+
+class SearchParameterType extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory SearchParameterType(String value) {
+    assert(value != null);
+    return SearchParameterType._(
+      validateEnum(
+        value,
+        [
+          'number',
+          'date',
+          'string',
+          'token',
+          'reference',
+          'composite',
+          'quantity',
+          'uri',
+          'special',
+        ],
+      ),
+    );
+  }
+  const SearchParameterType._(this.value);
+  factory SearchParameterType.fromJson(String json) =>
+      SearchParameterType(json);
+  String toJson() => result();
+}
+
+class SearchParameterXpathUsage extends PrimitiveObject<String> {
+  @override
+  final Either<PrimitiveFailure<String>, String> value;
+  factory SearchParameterXpathUsage(String value) {
+    assert(value != null);
+    return SearchParameterXpathUsage._(
+      validateEnum(
+        value,
+        [
+          'normal',
+          'phonetic',
+          'nearby',
+          'distance',
+          'other',
+        ],
+      ),
+    );
+  }
+  const SearchParameterXpathUsage._(this.value);
+  factory SearchParameterXpathUsage.fromJson(String json) =>
+      SearchParameterXpathUsage(json);
+  String toJson() => result();
 }

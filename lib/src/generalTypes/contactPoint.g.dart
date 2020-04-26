@@ -13,9 +13,13 @@ ContactPoint _$ContactPointFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    system: _$enumDecodeNullable(_$ContactPointSystemEnumMap, json['system']),
+    system: json['system'] == null
+        ? null
+        : ContactPointSystem.fromJson(json['system'] as String),
     value: json['value'] as String,
-    use: _$enumDecodeNullable(_$ContactPointUseEnumMap, json['use']),
+    use: json['use'] == null
+        ? null
+        : ContactPointUse.fromJson(json['use'] as String),
     rank: json['rank'] as int,
     period: json['period'] == null
         ? null
@@ -35,60 +39,10 @@ Map<String, dynamic> _$ContactPointToJson(ContactPoint instance) {
   writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('system', _$ContactPointSystemEnumMap[instance.system]);
+  writeNotNull('system', instance.system?.toJson());
   writeNotNull('value', instance.value);
-  writeNotNull('use', _$ContactPointUseEnumMap[instance.use]);
+  writeNotNull('use', instance.use?.toJson());
   writeNotNull('rank', instance.rank);
   writeNotNull('period', instance.period?.toJson());
   return val;
 }
-
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
-}
-
-const _$ContactPointSystemEnumMap = {
-  ContactPointSystem.phone: 'phone',
-  ContactPointSystem.fax: 'fax',
-  ContactPointSystem.email: 'email',
-  ContactPointSystem.pager: 'pager',
-  ContactPointSystem.url: 'url',
-  ContactPointSystem.sms: 'sms',
-  ContactPointSystem.other: 'other',
-};
-
-const _$ContactPointUseEnumMap = {
-  ContactPointUse.home: 'home',
-  ContactPointUse.work: 'work',
-  ContactPointUse.temp: 'temp',
-  ContactPointUse.old: 'old',
-  ContactPointUse.mobile: 'mobile',
-};
