@@ -1,3 +1,5 @@
+export 'package:freezed_annotation/freezed_annotation.dart';
+
 export 'src/draftTypes/marketingStatus.dart';
 export 'src/draftTypes/population.dart';
 export 'src/draftTypes/prodCharacteristic.dart';
