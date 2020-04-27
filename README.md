@@ -8,6 +8,22 @@ This is all based on the [R4 version of FHIR](https://hl7.org/fhir/R4/).
 
 This is the first time I've ever created a package, feedback and pull requests are welcome. I've also been started to implement type checking using [Freezed](https://pub.dev/packages/freezed). But if you run into any issues with this, either incorrect validation, or frustrating to work with returned failures, please let me know.
 
+## Things I'm working on
+
+One of my favorite FHIR backends is (Aidbox)[https://www.health-samurai.io/aidbox]. One of the things they do, however, is if there is an option as follows:
+// occurrence[x]: Vaccine administration date. One of these 2:
+  "occurrenceDateTime" : "<dateTime>",
+  "occurrenceString" : "<string>",
+
+They opt instead for:
+```
+"occurrence": { 
+  "dateTime": "<dateTime>",
+  "string": "<string>"
+}
+```
+This requires some changes in my fromJson() code so there are times when it will not properly translate queries from Aidbox.
+
 ## Formatting Notes
 
 * Class names: upper camel case.

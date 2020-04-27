@@ -50,9 +50,17 @@ Immunization _$ImmunizationFromJson(Map<String, dynamic> json) {
     encounter: json['encounter'] == null
         ? null
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-    occurrenceDateTime: json['occurrenceDateTime'] == null
-        ? null
-        : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
+    occurrenceDateTime: json['occurrenceDateTime'] != null
+        ? FhirDateTime.fromJson(json['occurrenceDateTime'] as String)
+        : json['occurrence'] == null
+            ? null
+            : json['occurrence']['dateTime'] != null
+                ? FhirDateTime.fromJson(
+                    json['occurrence']['dateTime'] as String)
+                : json['occurrence']['string'] != null
+                    ? FhirDateTime.fromJson(
+                        json['occurrence']['string'] as String)
+                    : null,
     occurrenceString: json['occurrenceString'] as String,
     recorded: json['recorded'] == null
         ? null
