@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 
-import '../primitiveFailures.dart';
-import '../primitiveObjects.dart';
+import '../res/primitiveFailures.dart';
+import '../res/primitiveObjects.dart';
 
 class FhirUri extends PrimitiveObject<String> {
   @override

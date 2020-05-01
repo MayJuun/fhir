@@ -3,8 +3,8 @@ import 'package:fhir/fhir.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
-import '../primitiveFailures.dart';
-import '../primitiveObjects.dart';
+import '../res/primitiveFailures.dart';
+import '../res/primitiveObjects.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirDateTime.dart';

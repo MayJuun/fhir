@@ -2,8 +2,8 @@ import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import '../generalTypes/period.dart';
-import '../primitiveFailures.dart';
-import '../primitiveObjects.dart';
+import '../res/primitiveFailures.dart';
+import '../res/primitiveObjects.dart';
 import '../specialTypes/extension.dart';
 
 part 'humanName.g.dart';

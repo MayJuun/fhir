@@ -2,8 +2,8 @@ import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
-import '../primitiveFailures.dart';
-import '../primitiveObjects.dart';
+import '../res/primitiveFailures.dart';
+import '../res/primitiveObjects.dart';
 import '../primitiveTypes/canonical.dart';
 import '../primitiveTypes/date.dart';
 import '../primitiveTypes/markdown.dart';

@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '../primitiveFailures.dart';
-import '../primitiveObjects.dart';
-import '../resourceList.dart';
+import '../res/primitiveFailures.dart';
+import '../res/primitiveObjects.dart';
+import '../res/resourceList.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/id.dart';
 import '../primitiveTypes/instant.dart';

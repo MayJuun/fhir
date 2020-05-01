@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 
-import '../primitiveFailures.dart';
-import '../primitiveObjects.dart';
+import '../res/primitiveFailures.dart';
+import '../res/primitiveObjects.dart';
 
 class FhirDateTime extends PrimitiveObject<DateTime> {
   @override
@@ -14,6 +14,9 @@ class FhirDateTime extends PrimitiveObject<DateTime> {
     );
   }
   const FhirDateTime._(this.value);
+
+  factory FhirDateTime.fromDateTime(DateTime value) =>
+      FhirDateTime(value.toIso8601String());
 
   factory FhirDateTime.fromJson(String json) => FhirDateTime(json);
   String toJson() => result();

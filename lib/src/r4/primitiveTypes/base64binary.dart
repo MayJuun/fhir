@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 
-import '../primitiveObjects.dart';
-import '../primitiveFailures.dart';
+import '../res/primitiveObjects.dart';
+import '../res/primitiveFailures.dart';
 
 class Base64Binary extends PrimitiveObject<String> {
   @override
