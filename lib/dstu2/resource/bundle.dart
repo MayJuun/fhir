@@ -1,6 +1,6 @@
-import 'package:fhir_dstu2/src/res/resourceList.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../res/resourceList.dart';
 import '../element/extension.dart';
 import '../element/signature.dart';
 import '../element/meta.dart';

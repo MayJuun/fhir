@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:fhir_r4/fhir_r4.dart';
+import 'package:fhir/fhir_r4.dart';
 import 'package:http/http.dart';
 
 class FhirService {

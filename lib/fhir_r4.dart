@@ -1,8 +1,6 @@
-export 'package:freezed_annotation/freezed_annotation.dart';
-
-export 'src/draftTypes.dart';
-export 'src/generalTypes.dart';
-export 'src/metadataTypes.dart';
-export 'src/primitiveTypes.dart';
-export 'src/resourceTypes.dart';
-export 'src/specialTypes.dart';
+export 'r4/draftTypes.dart';
+export 'r4/generalTypes.dart';
+export 'r4/metadataTypes.dart';
+export 'r4/primitiveTypes.dart';
+export 'r4/resourceTypes.dart';
+export 'r4/specialTypes.dart';

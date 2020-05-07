@@ -1,6 +1,4 @@
-export 'package:freezed_annotation/freezed_annotation.dart';
-
-export './src/domainResource.dart';
-export './src/elements.dart';
-export './src/quantity.dart';
-export './src/resource.dart';
+export 'stu3/domainResource.dart';
+export 'stu3/elements.dart';
+export 'stu3/quantity.dart';
+export 'stu3/resource.dart';
