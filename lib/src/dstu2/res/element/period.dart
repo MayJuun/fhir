@@ -1,2 +1,0 @@
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class Period {Period({});}@JsonSerializable(explicitToJson: true, includeIfNull: false)Period({});}@JsonSerializable(explicitToJson: true, includeIfNull: false)Period({});}@JsonSerializable(explicitToJson: true, includeIfNull: false)Period({});}@JsonSerializable(explicitToJson: true, includeIfNull: false)Period({});}@JsonSerializable(explicitToJson: true, includeIfNull: false)Period({});}

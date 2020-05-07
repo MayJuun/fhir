@@ -1,5 +1,5 @@
 name: fhir
-description: A new Flutter package project.
+description: FHIR R4, STU3 and DSTU2 for Dart & Flutter.
 version: 0.0.1
 author:
 homepage:
