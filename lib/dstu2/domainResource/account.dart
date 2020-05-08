@@ -11,10 +11,10 @@ class Account {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Identifier> identifier;
   String name;
   CodeableConcept type;
   Code status;
@@ -47,6 +47,7 @@ class Account {
     this.owner,
     this.description,
   });
+
   factory Account.fromJson(Map<String, dynamic> json) =>
       _$AccountFromJson(json);
   Map<String, dynamic> toJson() => _$AccountToJson(this);

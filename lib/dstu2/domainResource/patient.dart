@@ -11,26 +11,26 @@ class Patient {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
-  bool active;
-  HumanName name;
-  ContactPoint telecom;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Identifier> identifier;
+  Boolean active;
+  List<HumanName> name;
+  List<ContactPoint> telecom;
   Code gender;
   Date birthDate;
-  bool deceasedX;
-  Address address;
+  Boolean deceasedX;
+  List<Address> address;
   CodeableConcept maritalStatus;
-  bool multipleBirthX;
-  Attachment photo;
-  PatientContact contact;
+  Boolean multipleBirthX;
+  List<Attachment> photo;
+  List<PatientContact> contact;
   PatientAnimal animal;
-  PatientCommunication communication;
-  Reference careProvider;
+  List<PatientCommunication> communication;
+  List<Reference> careProvider;
   Reference managingOrganization;
-  PatientLink link;
+  List<PatientLink> link;
 
   Patient({
     this.id,
@@ -59,6 +59,7 @@ class Patient {
     this.managingOrganization,
     this.link,
   });
+
   factory Patient.fromJson(Map<String, dynamic> json) =>
       _$PatientFromJson(json);
   Map<String, dynamic> toJson() => _$PatientToJson(this);
@@ -67,11 +68,11 @@ class Patient {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class PatientContact {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
-  CodeableConcept relationship;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<CodeableConcept> relationship;
   HumanName name;
-  ContactPoint telecom;
+  List<ContactPoint> telecom;
   Address address;
   Code gender;
   Reference organization;
@@ -89,6 +90,7 @@ class PatientContact {
     this.organization,
     this.period,
   });
+
   factory PatientContact.fromJson(Map<String, dynamic> json) =>
       _$PatientContactFromJson(json);
   Map<String, dynamic> toJson() => _$PatientContactToJson(this);
@@ -97,8 +99,8 @@ class PatientContact {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class PatientAnimal {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   CodeableConcept species;
   CodeableConcept breed;
   CodeableConcept genderStatus;
@@ -111,6 +113,7 @@ class PatientAnimal {
     this.breed,
     this.genderStatus,
   });
+
   factory PatientAnimal.fromJson(Map<String, dynamic> json) =>
       _$PatientAnimalFromJson(json);
   Map<String, dynamic> toJson() => _$PatientAnimalToJson(this);
@@ -119,10 +122,10 @@ class PatientAnimal {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class PatientCommunication {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   CodeableConcept language;
-  bool preferred;
+  Boolean preferred;
 
   PatientCommunication({
     this.id,
@@ -131,6 +134,7 @@ class PatientCommunication {
     this.language,
     this.preferred,
   });
+
   factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
       _$PatientCommunicationFromJson(json);
   Map<String, dynamic> toJson() => _$PatientCommunicationToJson(this);
@@ -139,18 +143,8 @@ class PatientCommunication {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class PatientLink {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   Reference other;
   Code type;
-
-  PatientLink({
-    this.extension,
-    this.modifierExtension,
-    this.other,
-    this.type,
-  });
-  factory PatientLink.fromJson(Map<String, dynamic> json) =>
-      _$PatientLinkFromJson(json);
-  Map<String, dynamic> toJson() => _$PatientLinkToJson(this);
 }

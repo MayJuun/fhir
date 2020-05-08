@@ -11,23 +11,23 @@ class Coverage {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   Reference issuer;
   Identifier bin;
   Period period;
   Coding type;
   Identifier subscriberId;
-  Identifier identifier;
+  List<Identifier> identifier;
   String group;
   String plan;
   String subPlan;
-  int dependent;
-  int sequence;
+  PositiveInt dependent;
+  PositiveInt sequence;
   Reference subscriber;
   Identifier network;
-  Reference contract;
+  List<Reference> contract;
 
   Coverage({
     this.id,
@@ -53,6 +53,7 @@ class Coverage {
     this.network,
     this.contract,
   });
+
   factory Coverage.fromJson(Map<String, dynamic> json) =>
       _$CoverageFromJson(json);
   Map<String, dynamic> toJson() => _$CoverageToJson(this);

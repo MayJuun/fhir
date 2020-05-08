@@ -11,11 +11,11 @@ class Schedule {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
-  CodeableConcept type;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Identifier> identifier;
+  List<CodeableConcept> type;
   Reference actor;
   Period planningHorizon;
   String comment;
@@ -35,6 +35,7 @@ class Schedule {
     this.planningHorizon,
     this.comment,
   });
+
   factory Schedule.fromJson(Map<String, dynamic> json) =>
       _$ScheduleFromJson(json);
   Map<String, dynamic> toJson() => _$ScheduleToJson(this);

@@ -4,17 +4,16 @@ import '../../fhir_dstu2.dart';
 
 part 'composition.g.dart';
 
-
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class Composition {
+class Composition{
 Id id;
 Meta meta;
 FhirUri implicitRules;
 Code language;
 Narrative text;
-Resource contained;
-Extension extension;
-Extension modifierExtension;
+List<Resource>  contained;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
 Identifier identifier;
 FhirDateTime date;
 CodeableConcept type;
@@ -23,14 +22,14 @@ String title;
 Code status;
 Code confidentiality;
 Reference subject;
-Reference author;
-CompositionAttester attester;
+List<Reference>  author;
+List<CompositionAttester>  attester;
 Reference custodian;
-CompositionEvent event;
+List<CompositionEvent>  event;
 Reference encounter;
-CompositionSection section;
+List<CompositionSection>  section;
 
-Composition({
+Composition ({
 this.id,
 this.meta,
 this.implicitRules,
@@ -52,62 +51,60 @@ this.attester,
 this.custodian,
 this.event,
 this.encounter,
-this.section,
+this.section,});
 
-});
-factory Composition.fromJson(Map<String, dynamic> json) => _$CompositionFromJson(json);
-Map<String, dynamic> toJson() => _$CompositionToJson(this);
+factory Composition.fromJson(Map<String, dynamic> json) => _$CompositionFromJson(json);Map<String, dynamic> toJson() => _$CompositionToJson(this);
 }
+
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class CompositionAttester {
+class CompositionAttester{
 Id id;
-Extension extension;
-Extension modifierExtension;
-Code mode;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
+List<Code>  mode;
 FhirDateTime time;
 Reference party;
-Id id;
-Extension extension;
-Extension modifierExtension;
-CodeableConcept code;
-Period period;
-Reference detail;
-Id id;
-Extension extension;
-Extension modifierExtension;
-String title;
-CodeableConcept code;
-Narrative text;
-Code mode;
-CodeableConcept orderedBy;
-Reference entry;
-CodeableConcept emptyReason;
 
-CompositionAttester({
+CompositionAttester ({
 this.id,
 this.extension,
 this.modifierExtension,
 this.mode,
 this.time,
-this.party,
+this.party,});
+
+factory CompositionAttester.fromJson(Map<String, dynamic> json) => _$CompositionAttesterFromJson(json);Map<String, dynamic> toJson() => _$CompositionAttesterToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class CompositionEvent{
+Id id;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
+List<CodeableConcept>  code;
+Period period;
+List<Reference>  detail;
+
+CompositionEvent ({
 this.id,
 this.extension,
 this.modifierExtension,
 this.code,
 this.period,
-this.detail,
-this.id,
-this.extension,
-this.modifierExtension,
-this.title,
-this.code,
-this.text,
-this.mode,
-this.orderedBy,
-this.entry,
-this.emptyReason,
+this.detail,});
 
-});
-factory CompositionAttester.fromJson(Map<String, dynamic> json) => _$CompositionAttesterFromJson(json);
-Map<String, dynamic> toJson() => _$CompositionAttesterToJson(this);
+factory CompositionEvent.fromJson(Map<String, dynamic> json) => _$CompositionEventFromJson(json);Map<String, dynamic> toJson() => _$CompositionEventToJson(this);
 }
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class CompositionSection{
+Id id;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
+String title;
+CodeableConcept code;
+Narrative text;
+Code mode;
+CodeableConcept orderedBy;
+List<Reference>  entry;
+CodeableConcept emptyReason;}

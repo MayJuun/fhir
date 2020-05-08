@@ -7,12 +7,12 @@ part 'meta.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Meta {
   Id id;
-  Extension extension;
+  List<Extension> extension;
   Id versionId;
   Instant lastUpdated;
-  FhirUri profile;
-  Coding security;
-  Coding tag;
+  List<FhirUri> profile;
+  List<Coding> security;
+  List<Coding> tag;
 
   Meta({
     this.id,
@@ -23,6 +23,7 @@ class Meta {
     this.security,
     this.tag,
   });
+
   factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
   Map<String, dynamic> toJson() => _$MetaToJson(this);
 }

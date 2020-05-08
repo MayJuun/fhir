@@ -7,7 +7,7 @@ part 'identifier.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Identifier {
   Id id;
-  Extension extension;
+  List<Extension> extension;
   Code use;
   CodeableConcept type;
   FhirUri system;
@@ -25,6 +25,7 @@ class Identifier {
     this.period,
     this.assigner,
   });
+
   factory Identifier.fromJson(Map<String, dynamic> json) =>
       _$IdentifierFromJson(json);
   Map<String, dynamic> toJson() => _$IdentifierToJson(this);

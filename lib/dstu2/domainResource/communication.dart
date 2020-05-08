@@ -11,20 +11,20 @@ class Communication {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  Resource contained;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Identifier> identifier;
   CodeableConcept category;
   Reference sender;
-  Reference recipient;
-  CommunicationPayload payload;
-  CodeableConcept medium;
+  List<Reference> recipient;
+  List<CommunicationPayload> payload;
+  List<CodeableConcept> medium;
   Code status;
   Reference encounter;
   FhirDateTime sent;
   FhirDateTime received;
-  CodeableConcept reason;
+  List<CodeableConcept> reason;
   Reference subject;
   Reference requestDetail;
 
@@ -51,6 +51,7 @@ class Communication {
     this.subject,
     this.requestDetail,
   });
+
   factory Communication.fromJson(Map<String, dynamic> json) =>
       _$CommunicationFromJson(json);
   Map<String, dynamic> toJson() => _$CommunicationToJson(this);
@@ -59,8 +60,8 @@ class Communication {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class CommunicationPayload {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   String contentX;
 
   CommunicationPayload({
@@ -69,6 +70,7 @@ class CommunicationPayload {
     this.modifierExtension,
     this.contentX,
   });
+
   factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationPayloadFromJson(json);
   Map<String, dynamic> toJson() => _$CommunicationPayloadToJson(this);

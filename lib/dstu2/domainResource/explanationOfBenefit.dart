@@ -11,10 +11,10 @@ class ExplanationOfBenefit {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Identifier> identifier;
   Reference request;
   Code outcome;
   String disposition;
@@ -45,6 +45,7 @@ class ExplanationOfBenefit {
     this.requestProvider,
     this.requestOrganization,
   });
+
   factory ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitFromJson(json);
   Map<String, dynamic> toJson() => _$ExplanationOfBenefitToJson(this);

@@ -11,10 +11,10 @@ class Basic {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Identifier> identifier;
   CodeableConcept code;
   Reference subject;
   Reference author;
@@ -35,6 +35,7 @@ class Basic {
     this.author,
     this.created,
   });
+
   factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
   Map<String, dynamic> toJson() => _$BasicToJson(this);
 }

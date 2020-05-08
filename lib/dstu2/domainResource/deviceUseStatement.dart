@@ -11,15 +11,15 @@ class DeviceUseStatement {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   CodeableConcept bodySiteX;
   Period whenUsed;
   Reference device;
-  Identifier identifier;
-  CodeableConcept indication;
-  String notes;
+  List<Identifier> identifier;
+  List<CodeableConcept> indication;
+  List<String> notes;
   FhirDateTime recordedOn;
   Reference subject;
   Timing timingX;
@@ -43,6 +43,7 @@ class DeviceUseStatement {
     this.subject,
     this.timingX,
   });
+
   factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$DeviceUseStatementFromJson(json);
   Map<String, dynamic> toJson() => _$DeviceUseStatementToJson(this);

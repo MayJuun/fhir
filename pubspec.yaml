@@ -1,8 +1,8 @@
 name: fhir
 description: FHIR R4, STU3 and DSTU2 for Dart & Flutter.
 version: 0.0.1
-author:
-homepage:
+author: Grey Faulkenberry
+homepage: https://sites.google.com/view/hswtllc/home
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

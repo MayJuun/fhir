@@ -11,24 +11,24 @@ class CarePlan {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  Resource contained;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Identifier> identifier;
   Reference subject;
   Code status;
   Reference context;
   Period period;
-  Reference author;
+  List<Reference> author;
   FhirDateTime modified;
-  CodeableConcept category;
+  List<CodeableConcept> category;
   String description;
-  Reference addresses;
-  Reference support;
-  CarePlanRelatedPlan relatedPlan;
-  CarePlanParticipant participant;
-  Reference goal;
-  CarePlanActivity activity;
+  List<Reference> addresses;
+  List<Reference> support;
+  List<CarePlanRelatedPlan> relatedPlan;
+  List<CarePlanParticipant> participant;
+  List<Reference> goal;
+  List<CarePlanActivity> activity;
   Annotation note;
 
   CarePlan({
@@ -57,6 +57,7 @@ class CarePlan {
     this.activity,
     this.note,
   });
+
   factory CarePlan.fromJson(Map<String, dynamic> json) =>
       _$CarePlanFromJson(json);
   Map<String, dynamic> toJson() => _$CarePlanToJson(this);
@@ -65,8 +66,8 @@ class CarePlan {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class CarePlanRelatedPlan {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   Code code;
   Reference plan;
 
@@ -83,10 +84,11 @@ class CarePlanRelatedPlan {
   Map<String, dynamic> toJson() => _$CarePlanRelatedPlanToJson(this);
 }
 
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class CarePlanParticipant {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   CodeableConcept role;
   Reference member;
 
@@ -97,57 +99,45 @@ class CarePlanParticipant {
     this.role,
     this.member,
   });
+
   factory CarePlanParticipant.fromJson(Map<String, dynamic> json) =>
       _$CarePlanParticipantFromJson(json);
   Map<String, dynamic> toJson() => _$CarePlanParticipantToJson(this);
 }
 
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class CarePlanActivity {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
-  Reference actionResulting;
-  Annotation progress;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Reference> actionResulting;
+  List<Annotation> progress;
   Reference reference;
-  ActivityDetail detail;
-
-  CarePlanActivity({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.actionResulting,
-    this.progress,
-    this.reference,
-    this.detail,
-  });
-
-  factory CarePlanActivity.fromJson(Map<String, dynamic> json) =>
-      _$CarePlanActivityFromJson(json);
-  Map<String, dynamic> toJson() => _$CarePlanActivityToJson(this);
+  CarePlanActivityDetail detail;
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ActivityDetail {
+class CarePlanActivityDetail {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   CodeableConcept category;
   CodeableConcept code;
-  CodeableConcept reasonCode;
-  Reference reasonReference;
-  Reference goal;
+  List<CodeableConcept> reasonCode;
+  List<Reference> reasonReference;
+  List<Reference> goal;
   Code status;
   CodeableConcept statusReason;
-  bool prohibited;
+  Boolean prohibited;
   Timing scheduledX;
   Reference location;
-  Reference performer;
+  List<Reference> performer;
   CodeableConcept productX;
   Quantity dailyAmount;
   Quantity quantity;
   String description;
 
-  ActivityDetail({
+  CarePlanActivityDetail({
     this.id,
     this.extension,
     this.modifierExtension,
@@ -167,7 +157,8 @@ class ActivityDetail {
     this.quantity,
     this.description,
   });
-  factory ActivityDetail.fromJson(Map<String, dynamic> json) =>
-      _$ActivityDetailFromJson(json);
-  Map<String, dynamic> toJson() => _$ActivityDetailToJson(this);
+
+  factory CarePlanActivityDetail.fromJson(Map<String, dynamic> json) =>
+      _$CarePlanActivityDetailFromJson(json);
+  Map<String, dynamic> toJson() => _$CarePlanActivityDetailToJson(this);
 }

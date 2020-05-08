@@ -11,20 +11,20 @@ class ProcedureRequest {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Identifier> identifier;
   Reference subject;
   CodeableConcept code;
-  CodeableConcept bodySite;
+  List<CodeableConcept> bodySite;
   CodeableConcept reasonX;
   FhirDateTime scheduledX;
   Reference encounter;
   Reference performer;
   Code status;
-  Annotation notes;
-  bool asNeededX;
+  List<Annotation> notes;
+  Boolean asNeededX;
   FhirDateTime orderedOn;
   Reference orderer;
   Code priority;
@@ -53,6 +53,7 @@ class ProcedureRequest {
     this.orderer,
     this.priority,
   });
+
   factory ProcedureRequest.fromJson(Map<String, dynamic> json) =>
       _$ProcedureRequestFromJson(json);
   Map<String, dynamic> toJson() => _$ProcedureRequestToJson(this);

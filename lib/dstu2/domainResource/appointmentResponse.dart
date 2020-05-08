@@ -11,14 +11,14 @@ class AppointmentResponse {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Identifier> identifier;
   Reference appointment;
   Instant start;
   Instant end;
-  CodeableConcept participantType;
+  List<CodeableConcept> participantType;
   Reference actor;
   Code participantStatus;
   String comment;
@@ -41,6 +41,7 @@ class AppointmentResponse {
     this.participantStatus,
     this.comment,
   });
+
   factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$AppointmentResponseFromJson(json);
   Map<String, dynamic> toJson() => _$AppointmentResponseToJson(this);

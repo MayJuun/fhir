@@ -7,14 +7,15 @@ part 'backboneElement.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class BackboneElement {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
 
   BackboneElement({
     this.id,
     this.extension,
     this.modifierExtension,
   });
+
   factory BackboneElement.fromJson(Map<String, dynamic> json) =>
       _$BackboneElementFromJson(json);
   Map<String, dynamic> toJson() => _$BackboneElementToJson(this);

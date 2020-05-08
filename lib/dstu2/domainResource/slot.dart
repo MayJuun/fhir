@@ -11,16 +11,16 @@ class Slot {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Identifier> identifier;
   CodeableConcept type;
   Reference schedule;
   Code freeBusyType;
   Instant start;
   Instant end;
-  bool overbooked;
+  Boolean overbooked;
   String comment;
 
   Slot({
@@ -41,6 +41,7 @@ class Slot {
     this.overbooked,
     this.comment,
   });
+
   factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
   Map<String, dynamic> toJson() => _$SlotToJson(this);
 }

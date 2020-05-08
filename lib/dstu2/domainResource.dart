@@ -24,7 +24,6 @@ export './domainResource/deviceComponent.dart';
 export './domainResource/deviceMetric.dart';
 export './domainResource/deviceUseRequest.dart';
 export './domainResource/deviceUseStatement.dart';
-export './domainResource/diagnosticOrder.dart';
 export './domainResource/diagnosticReport.dart';
 export './domainResource/documentManifest.dart';
 export './domainResource/documentReference.dart';

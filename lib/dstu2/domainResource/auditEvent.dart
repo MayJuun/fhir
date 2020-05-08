@@ -11,13 +11,13 @@ class AuditEvent {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  Resource contained;
-  Extension extension;
-  Extension modifierExtension;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   AuditEventEvent event;
-  AuditEventParticipant participant;
+  List<AuditEventParticipant> participant;
   AuditEventSource source;
-  AuditEventObject object;
+  List<AuditEventObject> object;
 
   AuditEvent({
     this.id,
@@ -42,15 +42,15 @@ class AuditEvent {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class AuditEventEvent {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   Coding type;
-  Coding subtype;
+  List<Coding> subtype;
   Code action;
   Instant dateTime;
   Code outcome;
   String outcomeDesc;
-  Coding purposeOfEvent;
+  List<Coding> purposeOfEvent;
 
   AuditEventEvent({
     this.id,
@@ -73,19 +73,19 @@ class AuditEventEvent {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class AuditEventParticipant {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
-  CodeableConcept role;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<CodeableConcept> role;
   Reference reference;
   Identifier userId;
   String altId;
   String name;
-  bool requestor;
+  Boolean requestor;
   Reference location;
-  FhirUri policy;
+  List<FhirUri> policy;
   Coding media;
-  ParticipantNetwork network;
-  Coding purposeOfUse;
+  AuditEventParticipantNetwork network;
+  List<Coding> purposeOfUse;
 
   AuditEventParticipant({
     this.id,
@@ -112,11 +112,11 @@ class AuditEventParticipant {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class AuditEventSource {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   String site;
   Identifier identifier;
-  Coding type;
+  List<Coding> type;
 
   AuditEventSource({
     this.id,
@@ -135,49 +135,29 @@ class AuditEventSource {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class AuditEventObject {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   Identifier identifier;
   Reference reference;
   Coding type;
   Coding role;
   Coding lifecycle;
-  Coding securityLabel;
+  List<Coding> securityLabel;
   String name;
   String description;
   Base64Binary query;
-  ObjectDetail detail;
-
-  AuditEventObject({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.identifier,
-    this.reference,
-    this.type,
-    this.role,
-    this.lifecycle,
-    this.securityLabel,
-    this.name,
-    this.description,
-    this.query,
-    this.detail,
-  });
-
-  factory AuditEventObject.fromJson(Map<String, dynamic> json) =>
-      _$AuditEventObjectFromJson(json);
-  Map<String, dynamic> toJson() => _$AuditEventObjectToJson(this);
+  List<AuditEventObjectDetail> detail;
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ParticipantNetwork {
+class AuditEventParticipantNetwork {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   String address;
   Code type;
 
-  ParticipantNetwork({
+  AuditEventParticipantNetwork({
     this.id,
     this.extension,
     this.modifierExtension,
@@ -185,28 +165,16 @@ class ParticipantNetwork {
     this.type,
   });
 
-  factory ParticipantNetwork.fromJson(Map<String, dynamic> json) =>
-      _$ParticipantNetworkFromJson(json);
-  Map<String, dynamic> toJson() => _$ParticipantNetworkToJson(this);
+  factory AuditEventParticipantNetwork.fromJson(Map<String, dynamic> json) =>
+      _$AuditEventParticipantNetworkFromJson(json);
+  Map<String, dynamic> toJson() => _$AuditEventParticipantNetworkToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ObjectDetail {
+class AuditEventObjectDetail {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   String type;
   Base64Binary value;
-
-  ObjectDetail({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.value,
-  });
-
-  factory ObjectDetail.fromJson(Map<String, dynamic> json) =>
-      _$ObjectDetailFromJson(json);
-  Map<String, dynamic> toJson() => _$ObjectDetailToJson(this);
 }

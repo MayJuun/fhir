@@ -6,84 +6,82 @@ part 'imagingObjectSelection.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ImagingObjectSelection {
-Id id;
-Meta meta;
-FhirUri implicitRules;
-Code language;
-Narrative text;
-Resource contained;
-Extension extension;
-Extension modifierExtension;
-Oid uid;
-Reference patient;
-CodeableConcept title;
-String description;
-Reference author;
-FhirDateTime authoringTime;
-ImagingObjectSelectionStudy study;
+  Id id;
+  Meta meta;
+  FhirUri implicitRules;
+  Code language;
+  Narrative text;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  Oid uid;
+  Reference patient;
+  CodeableConcept title;
+  String description;
+  Reference author;
+  FhirDateTime authoringTime;
+  List<ImagingObjectSelectionStudy> study;
 
-ImagingObjectSelection({
-this.id,
-this.meta,
-this.implicitRules,
-this.language,
-this.text,
-this.contained,
-this.extension,
-this.modifierExtension,
-this.uid,
-this.patient,
-this.title,
-this.description,
-this.author,
-this.authoringTime,
-this.study,
+  ImagingObjectSelection({
+    this.id,
+    this.meta,
+    this.implicitRules,
+    this.language,
+    this.text,
+    this.contained,
+    this.extension,
+    this.modifierExtension,
+    this.uid,
+    this.patient,
+    this.title,
+    this.description,
+    this.author,
+    this.authoringTime,
+    this.study,
+  });
 
-});
-factory ImagingObjectSelection.fromJson(Map<String, dynamic> json) => _$ImagingObjectSelectionFromJson(json);
-Map<String, dynamic> toJson() => _$ImagingObjectSelectionToJson(this);
+  factory ImagingObjectSelection.fromJson(Map<String, dynamic> json) =>
+      _$ImagingObjectSelectionFromJson(json);
+  Map<String, dynamic> toJson() => _$ImagingObjectSelectionToJson(this);
 }
+
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ImagingObjectSelectionStudy {
-Id id;
-Extension extension;
-Extension modifierExtension;
-Oid uid;
-FhirUri url;
-Reference imagingStudy;
-StudySeries series;
-
-ImagingObjectSelectionStudy({
-this.id,
-this.extension,
-this.modifierExtension,
-this.uid,
-this.url,
-this.imagingStudy,
-this.series,
-
-});
-factory ImagingObjectSelectionStudy.fromJson(Map<String, dynamic> json) => _$ImagingObjectSelectionStudyFromJson(json);
-Map<String, dynamic> toJson() => _$ImagingObjectSelectionStudyToJson(this);
+  Id id;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  Oid uid;
+  FhirUri url;
+  Reference imagingStudy;
+  List<ImagingObjectSelectionStudySeries> series;
 }
+
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class StudySeries {
-Id id;
-Extension extension;
-Extension modifierExtension;
-Oid uid;
-FhirUri url;
-SeriesInstance instance;
+class ImagingObjectSelectionStudySeries {
+  Id id;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  Oid uid;
+  FhirUri url;
+  List<ImagingObjectSelectionStudySeriesInstance> instance;
+}
 
-StudySeries({
-this.id,
-this.extension,
-this.modifierExtension,
-this.uid,
-this.url,
-this.instance,
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class ImagingObjectSelectionStudySeriesInstance {
+  Id id;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  Oid sopClass;
+  Oid uid;
+  FhirUri url;
+  List<ImagingObjectSelectionStudySeriesInstanceFrames> frames;
+}
 
-});
-factory StudySeries.fromJson(Map<String, dynamic> json) => _$StudySeriesFromJson(json);
-Map<String, dynamic> toJson() => _$StudySeriesToJson(this);
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class ImagingObjectSelectionStudySeriesInstanceFrames {
+  Id id;
+  List<Extension> extension;
+  List<Extension> modifierExte;
+  List<UnsignedInt> frameNumbers;
+  FhirUri url;
 }

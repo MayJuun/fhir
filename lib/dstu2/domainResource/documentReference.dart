@@ -1,40 +1,38 @@
 import 'package:json_annotation/json_annotation.dart';
 
-
 import '../../fhir_dstu2.dart';
 
 part 'documentReference.g.dart';
 
-
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class DocumentReference {
+class DocumentReference{
 Id id;
 Meta meta;
 FhirUri implicitRules;
 Code language;
 Narrative text;
-Resource contained;
-Extension extension;
-Extension modifierExtension;
+List<Resource>  contained;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
 Identifier masterIdentifier;
-Identifier identifier;
+List<Identifier>  identifier;
 Reference subject;
 CodeableConcept type;
 CodeableConcept class;
-Reference author;
+List<Reference>  author;
 Reference custodian;
 Reference authenticator;
 FhirDateTime created;
 Instant indexed;
 Code status;
 CodeableConcept docStatus;
-DocumentReferenceRelatesTo relatesTo;
+List<DocumentReferenceRelatesTo>  relatesTo;
 String description;
-CodeableConcept securityLabel;
-DocumentReferenceContent content;
+List<CodeableConcept>  securityLabel;
+List<DocumentReferenceContent>  content;
 DocumentReferenceContext context;
 
-DocumentReference({
+DocumentReference ({
 this.id,
 this.meta,
 this.implicitRules,
@@ -59,77 +57,64 @@ this.relatesTo,
 this.description,
 this.securityLabel,
 this.content,
-this.context,
+this.context,});
 
-});
-factory DocumentReference.fromJson(Map<String, dynamic> json) => _$DocumentReferenceFromJson(json);
-Map<String, dynamic> toJson() => _$DocumentReferenceToJson(this);
+factory DocumentReference.fromJson(Map<String, dynamic> json) => _$DocumentReferenceFromJson(json);Map<String, dynamic> toJson() => _$DocumentReferenceToJson(this);
 }
+
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class DocumentReferenceRelatesTo {
+class DocumentReferenceRelatesTo{
 Id id;
-Extension extension;
-Extension modifierExtension;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
 Code code;
 Reference target;
-Id id;
-Extension extension;
-Extension modifierExtension;
-Attachment attachment;
-Coding format;
-Id id;
-Extension extension;
-Extension modifierExtension;
-Reference encounter;
-CodeableConcept event;
-Period period;
-CodeableConcept facilityType;
-CodeableConcept practiceSetting;
-Reference sourcePatientInfo;
-ContextRelated related;
 
-DocumentReferenceRelatesTo({
+DocumentReferenceRelatesTo ({
 this.id,
 this.extension,
 this.modifierExtension,
 this.code,
-this.target,
+this.target,});
+
+factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) => _$DocumentReferenceRelatesToFromJson(json);Map<String, dynamic> toJson() => _$DocumentReferenceRelatesToToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class DocumentReferenceContent{
+Id id;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
+Attachment attachment;
+List<Coding>  format;
+
+DocumentReferenceContent ({
 this.id,
 this.extension,
 this.modifierExtension,
 this.attachment,
-this.format,
-this.id,
-this.extension,
-this.modifierExtension,
-this.encounter,
-this.event,
-this.period,
-this.facilityType,
-this.practiceSetting,
-this.sourcePatientInfo,
-this.related,
+this.format,});
 
-});
-factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) => _$DocumentReferenceRelatesToFromJson(json);
-Map<String, dynamic> toJson() => _$DocumentReferenceRelatesToToJson(this);
+factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) => _$DocumentReferenceContentFromJson(json);Map<String, dynamic> toJson() => _$DocumentReferenceContentToJson(this);
 }
+
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ContextRelated {
+class DocumentReferenceContext{
 Id id;
-Extension extension;
-Extension modifierExtension;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
+Reference encounter;
+List<CodeableConcept>  event;
+Period period;
+CodeableConcept facilityType;
+CodeableConcept practiceSetting;
+Reference sourcePatientInfo;
+List<DocumentReferenceContextRelated>  related;}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class DocumentReferenceContextRelated{
+Id id;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
 Identifier identifier;
-Reference ref;
-
-ContextRelated({
-this.id,
-this.extension,
-this.modifierExtension,
-this.identifier,
-this.ref,
-
-});
-factory ContextRelated.fromJson(Map<String, dynamic> json) => _$ContextRelatedFromJson(json);
-Map<String, dynamic> toJson() => _$ContextRelatedToJson(this);
-}
+Reference ref;}

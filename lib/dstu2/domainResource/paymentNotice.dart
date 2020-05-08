@@ -11,10 +11,10 @@ class PaymentNotice {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Identifier> identifier;
   Coding ruleset;
   Coding originalRuleset;
   FhirDateTime created;
@@ -45,6 +45,7 @@ class PaymentNotice {
     this.response,
     this.paymentStatus,
   });
+
   factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$PaymentNoticeFromJson(json);
   Map<String, dynamic> toJson() => _$PaymentNoticeToJson(this);

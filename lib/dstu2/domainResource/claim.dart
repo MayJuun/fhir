@@ -11,11 +11,11 @@ class Claim {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  Resource contained;
-  Extension extension;
-  Extension modifierExtension;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   Code type;
-  Identifier identifier;
+  List<Identifier> identifier;
   Coding ruleset;
   Coding originalRuleset;
   FhirDateTime created;
@@ -31,18 +31,18 @@ class Claim {
   Reference originalPrescription;
   ClaimPayee payee;
   Reference referral;
-  ClaimDiagnosis diagnosis;
-  Coding condition;
+  List<ClaimDiagnosis> diagnosis;
+  List<Coding> condition;
   Reference patient;
-  ClaimCoverage coverage;
-  Coding exception;
+  List<ClaimCoverage> coverage;
+  List<Coding> exception;
   String school;
   Date accident;
   Coding accidentType;
-  Coding interventionException;
-  ClaimItem item;
-  Coding additionalMaterials;
-  ClaimMissingTeeth missingTeeth;
+  List<Coding> interventionException;
+  List<ClaimItem> item;
+  List<Coding> additionalMaterials;
+  List<ClaimMissingTeeth> missingTeeth;
 
   Claim({
     this.id,
@@ -91,8 +91,8 @@ class Claim {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ClaimPayee {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   Coding type;
   Reference provider;
   Reference organization;
@@ -116,9 +116,9 @@ class ClaimPayee {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ClaimDiagnosis {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
-  int sequence;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  PositiveInt sequence;
   Coding diagnosis;
 
   ClaimDiagnosis({
@@ -137,14 +137,14 @@ class ClaimDiagnosis {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ClaimCoverage {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
-  int sequence;
-  bool focal;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  PositiveInt sequence;
+  Boolean focal;
   Reference coverage;
   String businessArrangement;
   Coding relationship;
-  String preAuthRef;
+  List<String> preAuthRef;
   Reference claimResponse;
   Coding originalRuleset;
 
@@ -170,94 +170,56 @@ class ClaimCoverage {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ClaimItem {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
-  int sequence;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  PositiveInt sequence;
   Coding type;
   Reference provider;
-  int diagnosisLinkId;
+  List<PositiveInt> diagnosisLinkId;
   Coding service;
   Date serviceDate;
   Quantity quantity;
   Quantity unitPrice;
-  double factor;
-  double points;
+  Decimal factor;
+  Decimal points;
   Quantity net;
   Coding udi;
   Coding bodySite;
-  Coding subSite;
-  Coding modifier;
-  ItemDetail detail;
-  ItemProsthesis prosthesis;
-
-  ClaimItem({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.sequence,
-    this.type,
-    this.provider,
-    this.diagnosisLinkId,
-    this.service,
-    this.serviceDate,
-    this.quantity,
-    this.unitPrice,
-    this.factor,
-    this.points,
-    this.net,
-    this.udi,
-    this.bodySite,
-    this.subSite,
-    this.modifier,
-    this.detail,
-    this.prosthesis,
-  });
-
-  factory ClaimItem.fromJson(Map<String, dynamic> json) =>
-      _$ClaimItemFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimItemToJson(this);
-}
-
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ClaimMissingTeeth {
+  List<Coding> subSite;
+  List<Coding> modifier;
+  List<ClaimItemDetail> detail;
+  ClaimItemProsthesis prosthesis;
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   Coding tooth;
   Coding reason;
   Date extractionDate;
-
-  ClaimMissingTeeth({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.tooth,
-    this.reason,
-    this.extractionDate,
-  });
-
-  factory ClaimMissingTeeth.fromJson(Map<String, dynamic> json) =>
-      _$ClaimMissingTeethFromJson(json);
-  Map<String, dynamic> toJson() => _$ClaimMissingTeethToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ItemDetail {
+class ClaimItemDetail {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
-  int sequence;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  PositiveInt sequence;
   Coding type;
   Coding service;
   Quantity quantity;
   Quantity unitPrice;
-  double factor;
-  double points;
+  Decimal factor;
+  Decimal points;
   Quantity net;
   Coding udi;
-  DetailSubDetail subDetail;
+  List<ClaimItemDetailSubDetail> subDetail;
+  Id id;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  Boolean initial;
+  Date priorDate;
+  Coding priorMaterial;
 
-  ItemDetail({
+  ClaimItemProsthesis({
     this.id,
     this.extension,
     this.modifierExtension,
@@ -271,23 +233,6 @@ class ItemDetail {
     this.net,
     this.udi,
     this.subDetail,
-  });
-
-  factory ItemDetail.fromJson(Map<String, dynamic> json) =>
-      _$ItemDetailFromJson(json);
-  Map<String, dynamic> toJson() => _$ItemDetailToJson(this);
-}
-
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class ItemProsthesis {
-  Id id;
-  Extension extension;
-  Extension modifierExtension;
-  bool initial;
-  Date priorDate;
-  Coding priorMaterial;
-
-  ItemProsthesis({
     this.id,
     this.extension,
     this.modifierExtension,
@@ -296,15 +241,42 @@ class ItemProsthesis {
     this.priorMaterial,
   });
 
-  factory ItemProsthesis.fromJson(Map<String, dynamic> json) =>
-      _$ItemProsthesisFromJson(json);
-  Map<String, dynamic> toJson() => _$ItemProsthesisToJson(this);
+  factory ClaimItemProsthesis.fromJson(Map<String, dynamic> json) =>
+      _$ClaimItemProsthesisFromJson(json);
+  Map<String, dynamic> toJson() => _$ClaimItemProsthesisToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class DetailSubdetail{ 
+class ClaimItemDetailSubDetail {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
-  
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  PositiveInt sequence;
+  Coding type;
+  Coding service;
+  Quantity quantity;
+  Quantity unitPrice;
+  Decimal factor;
+  Decimal points;
+  Quantity net;
+  Coding udi;
+
+  ClaimItemDetailSubDetail({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.sequence,
+    this.type,
+    this.service,
+    this.quantity,
+    this.unitPrice,
+    this.factor,
+    this.points,
+    this.net,
+    this.udi,
+  });
+
+  factory ClaimItemDetailSubDetail.fromJson(Map<String, dynamic> json) =>
+      _$ClaimItemDetailSubDetailFromJson(json);
+  Map<String, dynamic> toJson() => _$ClaimItemDetailSubDetailToJson(this);
 }

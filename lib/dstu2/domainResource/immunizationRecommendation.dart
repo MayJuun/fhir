@@ -11,9 +11,9 @@ class ImmunizationRecommendation {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   List<Identifier> identifier;
   Reference patient;
   List<ImmunizationRecommendationRecommendation> recommendation;
@@ -31,6 +31,7 @@ class ImmunizationRecommendation {
     this.patient,
     this.recommendation,
   });
+
   factory ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationRecommendationFromJson(json);
   Map<String, dynamic> toJson() => _$ImmunizationRecommendationToJson(this);
@@ -39,68 +40,52 @@ class ImmunizationRecommendation {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ImmunizationRecommendationRecommendation {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   FhirDateTime date;
   CodeableConcept vaccineCode;
-  int doseNumber;
+  PositiveInt doseNumber;
   CodeableConcept forecastStatus;
-  List<RecommendationDateCriterion> dateCriterion;
-  RecommendationProtocol protocol;
+  List<ImmunizationRecommendationRecommendationDateCriterion> dateCriterion;
+  ImmunizationRecommendationRecommendationProtocol protocol;
   List<Reference> supportingImmunization;
-  List<Reference> supportingPatientInformation;
-
-  ImmunizationRecommendationRecommendation({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.date,
-    this.vaccineCode,
-    this.doseNumber,
-    this.forecastStatus,
-    this.dateCriterion,
-    this.protocol,
-    this.supportingImmunization,
-    this.supportingPatientInformation,
-  });
-  factory ImmunizationRecommendationRecommendation.fromJson(
-          Map<String, dynamic> json) =>
-      _$ImmunizationRecommendationRecommendationFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$ImmunizationRecommendationRecommendationToJson(this);
+  List<Reference> supportingPatientInfor;
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class RecommendationDateCriterion {
+class ImmunizationRecommendationRecommendationDateCriterion {
   Id id;
-  Extension extensio;
-  Extension modifier;
+  List<Extension> extensio;
+  List<Extension> modifier;
   CodeableConcept code;
   FhirDateTime value;
 
-  RecommendationDateCriterion({
+  ImmunizationRecommendationRecommendationDateCriterion({
     this.id,
     this.extensio,
     this.modifier,
     this.code,
     this.value,
   });
-  factory RecommendationDateCriterion.fromJson(Map<String, dynamic> json) =>
-      _$RecommendationDateCriterionFromJson(json);
-  Map<String, dynamic> toJson() => _$RecommendationDateCriterionToJson(this);
+
+  factory ImmunizationRecommendationRecommendationDateCriterion.fromJson(
+          Map<String, dynamic> json) =>
+      _$ImmunizationRecommendationRecommendationDateCriterionFromJson(json);
+  Map<String, dynamic> toJson() =>
+      _$ImmunizationRecommendationRecommendationDateCriterionToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class RecommendationProtocol {
+class ImmunizationRecommendationRecommendationProtocol {
   Id id;
-  Extension extension;
-  Extension modifierExten;
-  int doseSequence;
+  List<Extension> extension;
+  List<Extension> modifierExten;
+  Integer doseSequence;
   String description;
   Reference authority;
   String series;
 
-  RecommendationProtocol({
+  ImmunizationRecommendationRecommendationProtocol({
     this.id,
     this.extension,
     this.modifierExten,
@@ -109,7 +94,10 @@ class RecommendationProtocol {
     this.authority,
     this.series,
   });
-  factory RecommendationProtocol.fromJson(Map<String, dynamic> json) =>
-      _$RecommendationProtocolFromJson(json);
-  Map<String, dynamic> toJson() => _$RecommendationProtocolToJson(this);
+
+  factory ImmunizationRecommendationRecommendationProtocol.fromJson(
+          Map<String, dynamic> json) =>
+      _$ImmunizationRecommendationRecommendationProtocolFromJson(json);
+  Map<String, dynamic> toJson() =>
+      _$ImmunizationRecommendationRecommendationProtocolToJson(this);
 }

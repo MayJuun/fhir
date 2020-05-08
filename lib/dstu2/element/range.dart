@@ -7,7 +7,7 @@ part 'range.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Range {
   Id id;
-  Extension extension;
+  List<Extension> extension;
   Quantity low;
   Quantity high;
 
@@ -17,6 +17,7 @@ class Range {
     this.low,
     this.high,
   });
+
   factory Range.fromJson(Map<String, dynamic> json) => _$RangeFromJson(json);
   Map<String, dynamic> toJson() => _$RangeToJson(this);
 }

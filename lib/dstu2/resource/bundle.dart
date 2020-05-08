@@ -11,7 +11,7 @@ class Bundle {
   FhirUri implicitRules;
   Code language;
   Code type;
-  int total;
+  UnsignedInt total;
   List<BundleLink> link;
   List<BundleEntry> entry;
   Signature signature;
@@ -27,6 +27,7 @@ class Bundle {
     this.entry,
     this.signature,
   });
+
   factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
   Map<String, dynamic> toJson() => _$BundleToJson(this);
 }
@@ -34,8 +35,8 @@ class Bundle {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class BundleLink {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   String relation;
   FhirUri url;
 
@@ -46,6 +47,7 @@ class BundleLink {
     this.relation,
     this.url,
   });
+
   factory BundleLink.fromJson(Map<String, dynamic> json) =>
       _$BundleLinkFromJson(json);
   Map<String, dynamic> toJson() => _$BundleLinkToJson(this);
@@ -54,56 +56,41 @@ class BundleLink {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class BundleEntry {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
-  List<BundleLink> link;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   FhirUri fullUrl;
-  dynamic resource;
-  EntrySearch search;
-  EntryRequest request;
-  EntryResponse response;
-
-  BundleEntry({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.link,
-    this.fullUrl,
-    this.resource,
-    this.search,
-    this.request,
-    this.response,
-  });
-  factory BundleEntry.fromJson(Map<String, dynamic> json) =>
-      _$BundleEntryFromJson(json);
-  Map<String, dynamic> toJson() => _$BundleEntryToJson(this);
+  Resource resource;
+  BundleEntrySearch search;
+  BundleEntryRequest request;
+  BundleEntryResponse response;
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class EntrySearch {
+class BundleEntrySearch {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   Code mode;
-  double score;
+  Decimal score;
 
-  EntrySearch({
+  BundleEntrySearch({
     this.id,
     this.extension,
     this.modifierExtension,
     this.mode,
     this.score,
   });
-  factory EntrySearch.fromJson(Map<String, dynamic> json) =>
-      _$EntrySearchFromJson(json);
-  Map<String, dynamic> toJson() => _$EntrySearchToJson(this);
+
+  factory BundleEntrySearch.fromJson(Map<String, dynamic> json) =>
+      _$BundleEntrySearchFromJson(json);
+  Map<String, dynamic> toJson() => _$BundleEntrySearchToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class EntryRequest {
+class BundleEntryRequest {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   Code method;
   FhirUri url;
   String ifNoneMatch;
@@ -111,7 +98,7 @@ class EntryRequest {
   String ifMatch;
   String ifNoneExist;
 
-  EntryRequest({
+  BundleEntryRequest({
     this.id,
     this.extension,
     this.modifierExtension,
@@ -122,22 +109,23 @@ class EntryRequest {
     this.ifMatch,
     this.ifNoneExist,
   });
-  factory EntryRequest.fromJson(Map<String, dynamic> json) =>
-      _$EntryRequestFromJson(json);
-  Map<String, dynamic> toJson() => _$EntryRequestToJson(this);
+
+  factory BundleEntryRequest.fromJson(Map<String, dynamic> json) =>
+      _$BundleEntryRequestFromJson(json);
+  Map<String, dynamic> toJson() => _$BundleEntryRequestToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class EntryResponse {
+class BundleEntryResponse {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   String status;
   FhirUri location;
   String etag;
   Instant lastModified;
 
-  EntryResponse({
+  BundleEntryResponse({
     this.id,
     this.extension,
     this.modifierExtension,
@@ -146,7 +134,8 @@ class EntryResponse {
     this.etag,
     this.lastModified,
   });
-  factory EntryResponse.fromJson(Map<String, dynamic> json) =>
-      _$EntryResponseFromJson(json);
-  Map<String, dynamic> toJson() => _$EntryResponseToJson(this);
+
+  factory BundleEntryResponse.fromJson(Map<String, dynamic> json) =>
+      _$BundleEntryResponseFromJson(json);
+  Map<String, dynamic> toJson() => _$BundleEntryResponseToJson(this);
 }

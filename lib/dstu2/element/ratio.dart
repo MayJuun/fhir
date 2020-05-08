@@ -7,7 +7,7 @@ part 'ratio.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Ratio {
   Id id;
-  Extension extension;
+  List<Extension> extension;
   Quantity numerator;
   Quantity denominator;
 
@@ -17,6 +17,7 @@ class Ratio {
     this.numerator,
     this.denominator,
   });
+
   factory Ratio.fromJson(Map<String, dynamic> json) => _$RatioFromJson(json);
   Map<String, dynamic> toJson() => _$RatioToJson(this);
 }

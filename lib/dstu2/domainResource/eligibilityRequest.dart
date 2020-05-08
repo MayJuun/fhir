@@ -11,10 +11,10 @@ class EligibilityRequest {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Identifier> identifier;
   Coding ruleset;
   Coding originalRuleset;
   FhirDateTime created;
@@ -39,6 +39,7 @@ class EligibilityRequest {
     this.provider,
     this.organization,
   });
+
   factory EligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$EligibilityRequestFromJson(json);
   Map<String, dynamic> toJson() => _$EligibilityRequestToJson(this);

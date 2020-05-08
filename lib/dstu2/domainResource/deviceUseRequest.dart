@@ -11,17 +11,17 @@ class DeviceUseRequest {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   CodeableConcept bodySiteX;
   Code status;
   Reference device;
   Reference encounter;
-  Identifier identifier;
-  CodeableConcept indication;
-  String notes;
-  CodeableConcept prnReason;
+  List<Identifier> identifier;
+  List<CodeableConcept> indication;
+  List<String> notes;
+  List<CodeableConcept> prnReason;
   FhirDateTime orderedOn;
   FhirDateTime recordedOn;
   Reference subject;
@@ -51,6 +51,7 @@ class DeviceUseRequest {
     this.timingX,
     this.priority,
   });
+
   factory DeviceUseRequest.fromJson(Map<String, dynamic> json) =>
       _$DeviceUseRequestFromJson(json);
   Map<String, dynamic> toJson() => _$DeviceUseRequestToJson(this);

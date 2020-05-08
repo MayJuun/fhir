@@ -11,10 +11,10 @@ class Flag {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Identifier> identifier;
   CodeableConcept category;
   Code status;
   Period period;
@@ -41,6 +41,7 @@ class Flag {
     this.author,
     this.code,
   });
+
   factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
   Map<String, dynamic> toJson() => _$FlagToJson(this);
 }

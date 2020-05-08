@@ -11,20 +11,20 @@ class Media {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   Code type;
   CodeableConcept subtype;
-  Identifier identifier;
+  List<Identifier> identifier;
   Reference subject;
   Reference operator;
   CodeableConcept view;
   String deviceName;
-  int height;
-  int width;
-  int frames;
-  int duration;
+  PositiveInt height;
+  PositiveInt width;
+  PositiveInt frames;
+  UnsignedInt duration;
   Attachment content;
 
   Media({
@@ -49,6 +49,7 @@ class Media {
     this.duration,
     this.content,
   });
+
   factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
   Map<String, dynamic> toJson() => _$MediaToJson(this);
 }

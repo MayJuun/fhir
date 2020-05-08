@@ -7,7 +7,7 @@ part 'reference.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Reference {
   Id id;
-  Extension extension;
+  List<Extension> extension;
   String reference;
   String display;
 
@@ -17,6 +17,7 @@ class Reference {
     this.reference,
     this.display,
   });
+
   factory Reference.fromJson(Map<String, dynamic> json) =>
       _$ReferenceFromJson(json);
   Map<String, dynamic> toJson() => _$ReferenceToJson(this);

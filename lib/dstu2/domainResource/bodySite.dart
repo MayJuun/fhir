@@ -11,15 +11,15 @@ class BodySite {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   Reference patient;
-  Identifier identifier;
+  List<Identifier> identifier;
   CodeableConcept code;
-  CodeableConcept modifier;
+  List<CodeableConcept> modifier;
   String description;
-  Attachment image;
+  List<Attachment> image;
 
   BodySite({
     this.id,
@@ -37,6 +37,7 @@ class BodySite {
     this.description,
     this.image,
   });
+
   factory BodySite.fromJson(Map<String, dynamic> json) =>
       _$BodySiteFromJson(json);
   Map<String, dynamic> toJson() => _$BodySiteToJson(this);

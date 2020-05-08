@@ -7,9 +7,9 @@ part 'narrative.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Narrative {
   Id id;
-  Extension extension;
+  List<Extension> extension;
   Code status;
-  String div;
+  Xhtml div;
 
   Narrative({
     this.id,
@@ -17,6 +17,7 @@ class Narrative {
     this.status,
     this.div,
   });
+
   factory Narrative.fromJson(Map<String, dynamic> json) =>
       _$NarrativeFromJson(json);
   Map<String, dynamic> toJson() => _$NarrativeToJson(this);

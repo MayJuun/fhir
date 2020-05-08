@@ -7,38 +7,38 @@ part 'elementDefinition.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ElementDefinition {
   Id id;
-  Extension extension;
+  List<Extension> extension;
   String path;
-  Code representation;
+  List<Code> representation;
   String name;
   String label;
-  Coding code;
-  ElementDefinitionSlicing slicing;
+  List<Coding> code;
+  Element slicing;
   String short;
   Markdown definition;
   Markdown comments;
   Markdown requirements;
-  String alias;
-  int min;
-  int max;
-  ElementDefinitionBase base;
-  ElementDefinitionType type;
+  List<String> alias;
+  Integer min;
+  String max;
+  Element base;
+  List<Element> type;
   String nameReference;
-  bool defaultValueX;
+  Boolean defaultValueX;
   Markdown meaningWhenMissing;
-  bool fixedX;
-  bool patternX;
-  bool exampleX;
-  bool minValueX;
-  bool maxValueX;
-  int maxLength;
-  Id condition;
-  ElementDefinitionConstraint constraint;
-  bool mustSupport;
-  bool isModifier;
-  bool isSummary;
-  ElementDefinitionBinding bind;
-  ElementDefinitionMapping mapping;
+  Boolean fixedX;
+  Boolean patternX;
+  Boolean exampleX;
+  Boolean minValueX;
+  Boolean maxValueX;
+  Integer maxLength;
+  List<Id> condition;
+  List<Element> constraint;
+  Boolean mustSupport;
+  Boolean isModifier;
+  Boolean isSummary;
+  Element binding;
+  List<Element> mapping;
 
   ElementDefinition({
     this.id,
@@ -72,9 +72,10 @@ class ElementDefinition {
     this.mustSupport,
     this.isModifier,
     this.isSummary,
-    this.bind,
+    this.binding,
     this.mapping,
   });
+
   factory ElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionFromJson(json);
   Map<String, dynamic> toJson() => _$ElementDefinitionToJson(this);
@@ -83,10 +84,10 @@ class ElementDefinition {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ElementDefinitionSlicing {
   Id id;
-  Extension extension;
-  String discriminator;
+  List<Extension> extension;
+  List<String> discriminator;
   String description;
-  bool ordered;
+  Boolean ordered;
   Code rules;
 
   ElementDefinitionSlicing({
@@ -97,6 +98,7 @@ class ElementDefinitionSlicing {
     this.ordered,
     this.rules,
   });
+
   factory ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionSlicingFromJson(json);
   Map<String, dynamic> toJson() => _$ElementDefinitionSlicingToJson(this);
@@ -105,9 +107,9 @@ class ElementDefinitionSlicing {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ElementDefinitionBase {
   Id id;
-  Extension extension;
+  List<Extension> extension;
   String path;
-  int min;
+  Integer min;
   String max;
 
   ElementDefinitionBase({
@@ -117,6 +119,7 @@ class ElementDefinitionBase {
     this.min,
     this.max,
   });
+
   factory ElementDefinitionBase.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionBaseFromJson(json);
   Map<String, dynamic> toJson() => _$ElementDefinitionBaseToJson(this);
@@ -125,10 +128,10 @@ class ElementDefinitionBase {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ElementDefinitionType {
   Id id;
-  Extension extension;
+  List<Extension> extension;
   Code code;
-  FhirUri profile;
-  Code aggregation;
+  List<FhirUri> profile;
+  List<Code> aggregation;
 
   ElementDefinitionType({
     this.id,
@@ -137,6 +140,7 @@ class ElementDefinitionType {
     this.profile,
     this.aggregation,
   });
+
   factory ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionTypeFromJson(json);
   Map<String, dynamic> toJson() => _$ElementDefinitionTypeToJson(this);
@@ -145,7 +149,7 @@ class ElementDefinitionType {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ElementDefinitionConstraint {
   Id id;
-  Extension extension;
+  List<Extension> extension;
   Id key;
   String requirements;
   Code severity;
@@ -161,6 +165,7 @@ class ElementDefinitionConstraint {
     this.human,
     this.xpath,
   });
+
   factory ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionConstraintFromJson(json);
   Map<String, dynamic> toJson() => _$ElementDefinitionConstraintToJson(this);
@@ -169,7 +174,7 @@ class ElementDefinitionConstraint {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ElementDefinitionBinding {
   Id id;
-  Extension extension;
+  List<Extension> extension;
   Code strength;
   String description;
   FhirUri valueSetX;
@@ -181,6 +186,7 @@ class ElementDefinitionBinding {
     this.description,
     this.valueSetX,
   });
+
   factory ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionBindingFromJson(json);
   Map<String, dynamic> toJson() => _$ElementDefinitionBindingToJson(this);
@@ -189,19 +195,8 @@ class ElementDefinitionBinding {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ElementDefinitionMapping {
   Id id;
-  Extension extension;
+  List<Extension> extension;
   Id identity;
   Code language;
   String map;
-
-  ElementDefinitionMapping({
-    this.id,
-    this.extension,
-    this.identity,
-    this.language,
-    this.map,
-  });
-  factory ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
-      _$ElementDefinitionMappingFromJson(json);
-  Map<String, dynamic> toJson() => _$ElementDefinitionMappingToJson(this);
 }

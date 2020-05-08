@@ -11,12 +11,12 @@ class Device {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Identifier> identifier;
   CodeableConcept type;
-  Annotation note;
+  List<Annotation> note;
   Code status;
   String manufacturer;
   String model;
@@ -28,7 +28,7 @@ class Device {
   Reference owner;
   Reference location;
   Reference patient;
-  ContactPoint contact;
+  List<ContactPoint> contact;
   FhirUri url;
 
   Device({
@@ -57,6 +57,7 @@ class Device {
     this.contact,
     this.url,
   });
+
   factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
   Map<String, dynamic> toJson() => _$DeviceToJson(this);
 }

@@ -11,10 +11,10 @@ class EligibilityResponse {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Identifier> identifier;
   Reference request;
   Code outcome;
   String disposition;
@@ -45,6 +45,7 @@ class EligibilityResponse {
     this.requestProvider,
     this.requestOrganization,
   });
+
   factory EligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$EligibilityResponseFromJson(json);
   Map<String, dynamic> toJson() => _$EligibilityResponseToJson(this);

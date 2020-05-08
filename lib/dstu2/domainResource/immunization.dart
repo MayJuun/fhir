@@ -11,16 +11,16 @@ class Immunization {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   List<Identifier> identifier;
   Code status;
   FhirDateTime date;
   CodeableConcept vaccineCode;
   Reference patient;
-  bool wasNotGiven;
-  bool reported;
+  Boolean wasNotGiven;
+  Boolean reported;
   Reference performer;
   Reference requester;
   Reference encounter;
@@ -31,7 +31,7 @@ class Immunization {
   CodeableConcept site;
   CodeableConcept route;
   Quantity doseQuantity;
-  Annotation note;
+  List<Annotation> note;
   ImmunizationExplanation explanation;
   List<ImmunizationReaction> reaction;
   List<ImmunizationVaccinationProtocol> vaccinationProtocol;
@@ -67,6 +67,7 @@ class Immunization {
     this.reaction,
     this.vaccinationProtocol,
   });
+
   factory Immunization.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationFromJson(json);
   Map<String, dynamic> toJson() => _$ImmunizationToJson(this);
@@ -75,8 +76,8 @@ class Immunization {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ImmunizationExplanation {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   List<CodeableConcept> reason;
   List<CodeableConcept> reasonNotGiven;
 
@@ -87,6 +88,7 @@ class ImmunizationExplanation {
     this.reason,
     this.reasonNotGiven,
   });
+
   factory ImmunizationExplanation.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationExplanationFromJson(json);
   Map<String, dynamic> toJson() => _$ImmunizationExplanationToJson(this);
@@ -95,11 +97,11 @@ class ImmunizationExplanation {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ImmunizationReaction {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   FhirDateTime date;
   Reference detail;
-  bool reported;
+  Boolean reported;
 
   ImmunizationReaction({
     this.id,
@@ -109,6 +111,7 @@ class ImmunizationReaction {
     this.detail,
     this.reported,
   });
+
   factory ImmunizationReaction.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationReactionFromJson(json);
   Map<String, dynamic> toJson() => _$ImmunizationReactionToJson(this);
@@ -117,32 +120,14 @@ class ImmunizationReaction {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ImmunizationVaccinationProtocol {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
-  int doseSequence;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  PositiveInt doseSequence;
   String description;
   Reference authority;
   String series;
-  int seriesDoses;
+  PositiveInt seriesDoses;
   List<CodeableConcept> targetDisease;
   CodeableConcept doseStatus;
   CodeableConcept doseStatusReason;
-
-  ImmunizationVaccinationProtocol({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.doseSequence,
-    this.description,
-    this.authority,
-    this.series,
-    this.seriesDoses,
-    this.targetDisease,
-    this.doseStatus,
-    this.doseStatusReason,
-  });
-  factory ImmunizationVaccinationProtocol.fromJson(Map<String, dynamic> json) =>
-      _$ImmunizationVaccinationProtocolFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$ImmunizationVaccinationProtocolToJson(this);
 }

@@ -5,42 +5,42 @@ import '../../fhir_dstu2.dart';
 part 'structureDefinition.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class StructureDefinition {
+class StructureDefinition{
 Id id;
 Meta meta;
 FhirUri implicitRules;
 Code language;
 Narrative text;
-Resource contained;
-Extension extension;
-Extension modifierExtension;
+List<Resource>  contained;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
 FhirUri url;
-Identifier identifier;
+List<Identifier>  identifier;
 String version;
 String name;
 String display;
 Code status;
-bool experimental;
+Boolean experimental;
 String publisher;
-StructureDefinitionContact contact;
+List<StructureDefinitionContact>  contact;
 FhirDateTime date;
 String description;
-CodeableConcept useContext;
+List<CodeableConcept>  useContext;
 String requirements;
 String copyright;
-Coding code;
+List<Coding>  code;
 Id fhirVersion;
-StructureDefinitionMapping mapping;
+List<StructureDefinitionMapping>  mapping;
 Code kind;
 Code constrainedType;
-bool abstract;
+Boolean abstract;
 Code contextType;
-String context;
+List<String>  context;
 FhirUri base;
 StructureDefinitionSnapshot snapshot;
 StructureDefinitionDifferential differential;
 
-StructureDefinition({
+StructureDefinition ({
 this.id,
 this.meta,
 this.implicitRules,
@@ -73,58 +73,70 @@ this.contextType,
 this.context,
 this.base,
 this.snapshot,
-this.differential,
+this.differential,});
 
-});
-factory StructureDefinition.fromJson(Map<String, dynamic> json) => _$StructureDefinitionFromJson(json);
-Map<String, dynamic> toJson() => _$StructureDefinitionToJson(this);
+factory StructureDefinition.fromJson(Map<String, dynamic> json) => _$StructureDefinitionFromJson(json);Map<String, dynamic> toJson() => _$StructureDefinitionToJson(this);
 }
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
-class StructureDefinitionContact {
-Id id;
-Extension extension;
-Extension modifierExtension;
-String name;
-ContactPoint telecom;
-Id id;
-Extension extension;
-Extension modifierExtension;
-Id identity;
-FhirUri uri;
-String name;
-String comments;
-Id id;
-Extension extension;
-Extension modifierExtension;
-ElementDefinition element;
-Id id;
-Extension extension;
-Extension modifierExtension;
-ElementDefinition element;
 
-StructureDefinitionContact({
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class StructureDefinitionContact{
+Id id;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
+String name;
+List<ContactPoint>  telecom;
+
+StructureDefinitionContact ({
 this.id,
 this.extension,
 this.modifierExtension,
 this.name,
-this.telecom,
+this.telecom,});
+
+factory StructureDefinitionContact.fromJson(Map<String, dynamic> json) => _$StructureDefinitionContactFromJson(json);Map<String, dynamic> toJson() => _$StructureDefinitionContactToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class StructureDefinitionMapping{
+Id id;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
+Id identity;
+FhirUri uri;
+String name;
+String comments;
+
+StructureDefinitionMapping ({
 this.id,
 this.extension,
 this.modifierExtension,
 this.identity,
 this.uri,
 this.name,
-this.comments,
-this.id,
-this.extension,
-this.modifierExtension,
-this.element,
-this.id,
-this.extension,
-this.modifierExtension,
-this.element,
+this.comments,});
 
-});
-factory StructureDefinitionContact.fromJson(Map<String, dynamic> json) => _$StructureDefinitionContactFromJson(json);
-Map<String, dynamic> toJson() => _$StructureDefinitionContactToJson(this);
+factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) => _$StructureDefinitionMappingFromJson(json);Map<String, dynamic> toJson() => _$StructureDefinitionMappingToJson(this);
 }
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class StructureDefinitionSnapshot{
+Id id;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
+List<ElementDefinition>  element;
+
+StructureDefinitionSnapshot ({
+this.id,
+this.extension,
+this.modifierExtension,
+this.element,});
+
+factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) => _$StructureDefinitionSnapshotFromJson(json);Map<String, dynamic> toJson() => _$StructureDefinitionSnapshotToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class StructureDefinitionDifferential{
+Id id;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
+List<ElementDefinition>  element;}

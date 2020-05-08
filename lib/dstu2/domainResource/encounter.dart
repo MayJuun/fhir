@@ -5,36 +5,36 @@ import '../../fhir_dstu2.dart';
 part 'encounter.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class Encounter {
+class Encounter{
 Id id;
 Meta meta;
 FhirUri implicitRules;
 Code language;
 Narrative text;
-Resource contained;
-Extension extension;
-Extension modifierExtension;
-Identifier identifier;
+List<Resource>  contained;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
+List<Identifier>  identifier;
 Code status;
-EncounterStatusHistory statusHistory;
+List<EncounterStatusHistory>  statusHistory;
 Code class;
-CodeableConcept type;
+List<CodeableConcept>  type;
 CodeableConcept priority;
 Reference patient;
-Reference episodeOfCare;
-Reference incomingReferral;
-EncounterParticipant participant;
+List<Reference>  episodeOfCare;
+List<Reference>  incomingReferral;
+List<EncounterParticipant>  participant;
 Reference appointment;
 Period period;
 Quantity length;
-CodeableConcept reason;
-Reference indication;
+List<CodeableConcept>  reason;
+List<Reference>  indication;
 EncounterHospitalization hospitalization;
-EncounterLocation location;
+List<EncounterLocation>  location;
 Reference serviceProvider;
 Reference partOf;
 
-Encounter({
+Encounter ({
 this.id,
 this.meta,
 this.implicitRules,
@@ -61,58 +61,67 @@ this.indication,
 this.hospitalization,
 this.location,
 this.serviceProvider,
-this.partOf,
+this.partOf,});
 
-});
-factory Encounter.fromJson(Map<String, dynamic> json) => _$EncounterFromJson(json);
-Map<String, dynamic> toJson() => _$EncounterToJson(this);
+factory Encounter.fromJson(Map<String, dynamic> json) => _$EncounterFromJson(json);Map<String, dynamic> toJson() => _$EncounterToJson(this);
 }
+
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class EncounterStatusHistory {
+class EncounterStatusHistory{
 Id id;
-Extension extension;
-Extension modifierExtension;
-Code status;
-Period period;
-Id id;
-Extension extension;
-Extension modifierExtension;
-CodeableConcept type;
-Period period;
-Reference individual;
-Id id;
-Extension extension;
-Extension modifierExtension;
-Identifier preAdmissionIdentifier;
-Reference origin;
-CodeableConcept admitSource;
-Reference admittingDiagnosis;
-CodeableConcept reAdmission;
-CodeableConcept dietPreference;
-CodeableConcept specialCourtesy;
-CodeableConcept specialArrangement;
-Reference destination;
-CodeableConcept dischargeDisposition;
-Reference dischargeDiagnosis;
-Id id;
-Extension extension;
-Extension modifierExtension;
-Reference location;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
 Code status;
 Period period;
 
-EncounterStatusHistory({
+EncounterStatusHistory ({
 this.id,
 this.extension,
 this.modifierExtension,
 this.status,
-this.period,
+this.period,});
+
+factory EncounterStatusHistory.fromJson(Map<String, dynamic> json) => _$EncounterStatusHistoryFromJson(json);Map<String, dynamic> toJson() => _$EncounterStatusHistoryToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class EncounterParticipant{
+Id id;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
+List<CodeableConcept>  type;
+Period period;
+Reference individual;
+
+EncounterParticipant ({
 this.id,
 this.extension,
 this.modifierExtension,
 this.type,
 this.period,
-this.individual,
+this.individual,});
+
+factory EncounterParticipant.fromJson(Map<String, dynamic> json) => _$EncounterParticipantFromJson(json);Map<String, dynamic> toJson() => _$EncounterParticipantToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class EncounterHospitalization{
+Id id;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
+Identifier preAdmissionIdentifier;
+Reference origin;
+CodeableConcept admitSource;
+List<Reference>  admittingDiagnosis;
+CodeableConcept reAdmission;
+List<CodeableConcept>  dietPreference;
+List<CodeableConcept>  specialCourtesy;
+List<CodeableConcept>  specialArrangement;
+Reference destination;
+CodeableConcept dischargeDisposition;
+List<Reference>  dischargeDiagnosis;
+
+EncounterHospitalization ({
 this.id,
 this.extension,
 this.modifierExtension,
@@ -126,15 +135,27 @@ this.specialCourtesy,
 this.specialArrangement,
 this.destination,
 this.dischargeDisposition,
-this.dischargeDiagnosis,
+this.dischargeDiagnosis,});
+
+factory EncounterHospitalization.fromJson(Map<String, dynamic> json) => _$EncounterHospitalizationFromJson(json);Map<String, dynamic> toJson() => _$EncounterHospitalizationToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class EncounterLocation{
+Id id;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
+Reference location;
+Code status;
+Period period;
+
+EncounterLocation ({
 this.id,
 this.extension,
 this.modifierExtension,
 this.location,
 this.status,
-this.period,
+this.period,});
 
-});
-factory EncounterStatusHistory.fromJson(Map<String, dynamic> json) => _$EncounterStatusHistoryFromJson(json);
-Map<String, dynamic> toJson() => _$EncounterStatusHistoryToJson(this);
+factory EncounterLocation.fromJson(Map<String, dynamic> json) => _$EncounterLocationFromJson(json);Map<String, dynamic> toJson() => _$EncounterLocationToJson(this);
 }

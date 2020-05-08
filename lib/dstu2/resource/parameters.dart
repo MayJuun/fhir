@@ -10,7 +10,7 @@ class Parameters {
   Meta meta;
   FhirUri implicitRules;
   Code language;
-  ParametersParameter parameter;
+  List<ParametersParameter> parameter;
 
   Parameters({
     this.id,
@@ -19,6 +19,7 @@ class Parameters {
     this.language,
     this.parameter,
   });
+
   factory Parameters.fromJson(Map<String, dynamic> json) =>
       _$ParametersFromJson(json);
   Map<String, dynamic> toJson() => _$ParametersToJson(this);
@@ -27,21 +28,9 @@ class Parameters {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ParametersParameter {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   String name;
-  bool valueX;
-  dynamic resource;
-
-  ParametersParameter({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.valueX,
-    this.resource,
-  });
-  factory ParametersParameter.fromJson(Map<String, dynamic> json) =>
-      _$ParametersParameterFromJson(json);
-  Map<String, dynamic> toJson() => _$ParametersParameterToJson(this);
+  Boolean valueX;
+  Resource resource;
 }

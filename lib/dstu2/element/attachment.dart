@@ -7,12 +7,12 @@ part 'attachment.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Attachment {
   Id id;
-  Extension extension;
+  List<Extension> extension;
   Code contentType;
   Code language;
   Base64Binary data;
   FhirUri url;
-  int size;
+  UnsignedInt size;
   Base64Binary hash;
   String title;
   FhirDateTime creation;
@@ -29,6 +29,7 @@ class Attachment {
     this.title,
     this.creation,
   });
+
   factory Attachment.fromJson(Map<String, dynamic> json) =>
       _$AttachmentFromJson(json);
   Map<String, dynamic> toJson() => _$AttachmentToJson(this);

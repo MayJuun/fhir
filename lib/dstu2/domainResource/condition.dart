@@ -11,10 +11,10 @@ class Condition {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Identifier> identifier;
   Reference patient;
   Reference encounter;
   Reference asserter;
@@ -27,8 +27,8 @@ class Condition {
   FhirDateTime onsetX;
   FhirDateTime abatementX;
   ConditionStage stage;
-  ConditionEvidence evidence;
-  CodeableConcept bodySite;
+  List<ConditionEvidence> evidence;
+  List<CodeableConcept> bodySite;
   String notes;
 
   Condition({
@@ -57,6 +57,7 @@ class Condition {
     this.bodySite,
     this.notes,
   });
+
   factory Condition.fromJson(Map<String, dynamic> json) =>
       _$ConditionFromJson(json);
   Map<String, dynamic> toJson() => _$ConditionToJson(this);
@@ -65,10 +66,10 @@ class Condition {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ConditionStage {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   CodeableConcept summary;
-  Reference assessment;
+  List<Reference> assessment;
 
   ConditionStage({
     this.id,
@@ -77,6 +78,7 @@ class ConditionStage {
     this.summary,
     this.assessment,
   });
+
   factory ConditionStage.fromJson(Map<String, dynamic> json) =>
       _$ConditionStageFromJson(json);
   Map<String, dynamic> toJson() => _$ConditionStageToJson(this);
@@ -85,10 +87,10 @@ class ConditionStage {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ConditionEvidence {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   CodeableConcept code;
-  Reference detail;
+  List<Reference> detail;
 
   ConditionEvidence({
     this.id,
@@ -97,6 +99,7 @@ class ConditionEvidence {
     this.code,
     this.detail,
   });
+
   factory ConditionEvidence.fromJson(Map<String, dynamic> json) =>
       _$ConditionEvidenceFromJson(json);
   Map<String, dynamic> toJson() => _$ConditionEvidenceToJson(this);

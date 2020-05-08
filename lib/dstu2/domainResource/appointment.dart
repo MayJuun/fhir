@@ -11,21 +11,21 @@ class Appointment {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  Resource contained;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Identifier> identifier;
   Code status;
   CodeableConcept type;
   CodeableConcept reason;
-  int priority;
+  UnsignedInt priority;
   String description;
   Instant start;
   Instant end;
-  int minutesDuration;
-  Reference slot;
+  PositiveInt minutesDuration;
+  List<Reference> slot;
   String comment;
-  AppointmentParticipant participant;
+  List<AppointmentParticipant> participant;
 
   Appointment({
     this.id,
@@ -49,6 +49,7 @@ class Appointment {
     this.comment,
     this.participant,
   });
+
   factory Appointment.fromJson(Map<String, dynamic> json) =>
       _$AppointmentFromJson(json);
   Map<String, dynamic> toJson() => _$AppointmentToJson(this);
@@ -57,23 +58,10 @@ class Appointment {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class AppointmentParticipant {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
-  CodeableConcept type;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<CodeableConcept> type;
   Reference actor;
   Code required;
   Code status;
-
-  AppointmentParticipant({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.actor,
-    this.required,
-    this.status,
-  });
-  factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
-      _$AppointmentParticipantFromJson(json);
-  Map<String, dynamic> toJson() => _$AppointmentParticipantToJson(this);
 }

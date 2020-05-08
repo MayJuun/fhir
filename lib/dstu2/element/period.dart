@@ -7,7 +7,7 @@ part 'period.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class Period {
   Id id;
-  Extension extension;
+  List<Extension> extension;
   FhirDateTime start;
   FhirDateTime end;
 
@@ -17,6 +17,7 @@ class Period {
     this.start,
     this.end,
   });
+
   factory Period.fromJson(Map<String, dynamic> json) => _$PeriodFromJson(json);
   Map<String, dynamic> toJson() => _$PeriodToJson(this);
 }

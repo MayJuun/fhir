@@ -5,28 +5,28 @@ import '../../fhir_dstu2.dart';
 part 'practitioner.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class Practitioner {
+class Practitioner{
 Id id;
 Meta meta;
 FhirUri implicitRules;
 Code language;
 Narrative text;
-Resource contained;
-Extension extension;
-Extension modifierExtension;
-Identifier identifier;
-bool active;
+List<Resource>  contained;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
+List<Identifier>  identifier;
+Boolean active;
 HumanName name;
-ContactPoint telecom;
-Address address;
+List<ContactPoint>  telecom;
+List<Address>  address;
 Code gender;
 Date birthDate;
-Attachment photo;
-PractitionerPractitionerRole practitionerRole;
-PractitionerQualification qualification;
-CodeableConcept communication;
+List<Attachment>  photo;
+List<PractitionerPractitionerRole>  practitionerRole;
+List<PractitionerQualification>  qualification;
+List<CodeableConcept>  communication;
 
-Practitioner({
+Practitioner ({
 this.id,
 this.meta,
 this.implicitRules,
@@ -45,32 +45,24 @@ this.birthDate,
 this.photo,
 this.practitionerRole,
 this.qualification,
-this.communication,
+this.communication,});
 
-});
-factory Practitioner.fromJson(Map<String, dynamic> json) => _$PractitionerFromJson(json);
-Map<String, dynamic> toJson() => _$PractitionerToJson(this);
+factory Practitioner.fromJson(Map<String, dynamic> json) => _$PractitionerFromJson(json);Map<String, dynamic> toJson() => _$PractitionerToJson(this);
 }
+
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class PractitionerPractitionerRole {
+class PractitionerPractitionerRole{
 Id id;
-Extension extension;
-Extension modifierExtension;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
 Reference managingOrganization;
 CodeableConcept role;
-CodeableConcept specialty;
+List<CodeableConcept>  specialty;
 Period period;
-Reference location;
-Reference healthcareService;
-Id id;
-Extension extension;
-Extension modifierExtension;
-Identifier identifier;
-CodeableConcept code;
-Period period;
-Reference issuer;
+List<Reference>  location;
+List<Reference>  healthcareService;
 
-PractitionerPractitionerRole({
+PractitionerPractitionerRole ({
 this.id,
 this.extension,
 this.modifierExtension,
@@ -79,16 +71,29 @@ this.role,
 this.specialty,
 this.period,
 this.location,
-this.healthcareService,
+this.healthcareService,});
+
+factory PractitionerPractitionerRole.fromJson(Map<String, dynamic> json) => _$PractitionerPractitionerRoleFromJson(json);Map<String, dynamic> toJson() => _$PractitionerPractitionerRoleToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class PractitionerQualification{
+Id id;
+List<Extension>  extension;
+List<Extension>  modifierExtension;
+List<Identifier>  identifier;
+CodeableConcept code;
+Period period;
+Reference issuer;
+
+PractitionerQualification ({
 this.id,
 this.extension,
 this.modifierExtension,
 this.identifier,
 this.code,
 this.period,
-this.issuer,
+this.issuer,});
 
-});
-factory PractitionerPractitionerRole.fromJson(Map<String, dynamic> json) => _$PractitionerPractitionerRoleFromJson(json);
-Map<String, dynamic> toJson() => _$PractitionerPractitionerRoleToJson(this);
+factory PractitionerQualification.fromJson(Map<String, dynamic> json) => _$PractitionerQualificationFromJson(json);Map<String, dynamic> toJson() => _$PractitionerQualificationToJson(this);
 }

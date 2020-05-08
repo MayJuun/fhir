@@ -11,16 +11,16 @@ class OrderResponse {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Identifier> identifier;
   Reference request;
   FhirDateTime date;
   Reference who;
   Code orderStatus;
   String description;
-  Reference fulfillment;
+  List<Reference> fulfillment;
 
   OrderResponse({
     this.id,
@@ -39,6 +39,7 @@ class OrderResponse {
     this.description,
     this.fulfillment,
   });
+
   factory OrderResponse.fromJson(Map<String, dynamic> json) =>
       _$OrderResponseFromJson(json);
   Map<String, dynamic> toJson() => _$OrderResponseToJson(this);

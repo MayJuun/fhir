@@ -11,26 +11,26 @@ class ClinicalImpression {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  Resource contained;
-  Extension extension;
-  Extension modifierExtension;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   Reference patient;
   Reference assessor;
   Code status;
   FhirDateTime date;
   String description;
   Reference previous;
-  Reference problem;
+  List<Reference> problem;
   CodeableConcept triggerX;
-  ClinicalImpressionInvestigations investigations;
+  List<ClinicalImpressionInvestigations> investigations;
   FhirUri protocol;
   String summary;
-  ClinicalImpressionFinding finding;
-  CodeableConcept resolved;
-  ClinicalImpressionRuledOut ruledOut;
+  List<ClinicalImpressionFinding> finding;
+  List<CodeableConcept> resolved;
+  List<ClinicalImpressionRuledOut> ruledOut;
   String prognosis;
-  Reference plan;
-  Reference action;
+  List<Reference> plan;
+  List<Reference> action;
 
   ClinicalImpression({
     this.id,
@@ -59,6 +59,7 @@ class ClinicalImpression {
     this.plan,
     this.action,
   });
+
   factory ClinicalImpression.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionFromJson(json);
   Map<String, dynamic> toJson() => _$ClinicalImpressionToJson(this);
@@ -67,20 +68,10 @@ class ClinicalImpression {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ClinicalImpressionInvestigations {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   CodeableConcept code;
-  Reference item;
-  Id id;
-  Extension extension;
-  Extension modifierExtension;
-  CodeableConcept item;
-  String cause;
-  Id id;
-  Extension extension;
-  Extension modifierExtension;
-  CodeableConcept item;
-  String reason;
+  List<Reference> item;
 
   ClinicalImpressionInvestigations({
     this.id,
@@ -88,20 +79,53 @@ class ClinicalImpressionInvestigations {
     this.modifierExtension,
     this.code,
     this.item,
+  });
+
+  factory ClinicalImpressionInvestigations.fromJson(
+          Map<String, dynamic> json) =>
+      _$ClinicalImpressionInvestigationsFromJson(json);
+  Map<String, dynamic> toJson() =>
+      _$ClinicalImpressionInvestigationsToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class ClinicalImpressionFinding {
+  Id id;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  CodeableConcept item;
+  String cause;
+
+  ClinicalImpressionFinding({
     this.id,
     this.extension,
     this.modifierExtension,
     this.item,
     this.cause,
+  });
+
+  factory ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =>
+      _$ClinicalImpressionFindingFromJson(json);
+  Map<String, dynamic> toJson() => _$ClinicalImpressionFindingToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class ClinicalImpressionRuledOut {
+  Id id;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  CodeableConcept item;
+  String reason;
+
+  ClinicalImpressionRuledOut({
     this.id,
     this.extension,
     this.modifierExtension,
     this.item,
     this.reason,
   });
-  factory ClinicalImpressionInvestigations.fromJson(
-          Map<String, dynamic> json) =>
-      _$ClinicalImpressionInvestigationsFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$ClinicalImpressionInvestigationsToJson(this);
+
+  factory ClinicalImpressionRuledOut.fromJson(Map<String, dynamic> json) =>
+      _$ClinicalImpressionRuledOutFromJson(json);
+  Map<String, dynamic> toJson() => _$ClinicalImpressionRuledOutToJson(this);
 }

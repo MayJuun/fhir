@@ -11,10 +11,10 @@ class AllergyIntolerance {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<Identifier> identifier;
   FhirDateTime onset;
   FhirDateTime recordedDate;
   Reference recorder;
@@ -27,7 +27,7 @@ class AllergyIntolerance {
   Code category;
   FhirDateTime lastOccurence;
   Annotation note;
-  AllergyIntoleranceReaction reaction;
+  List<AllergyIntoleranceReaction> reaction;
 
   AllergyIntolerance({
     this.id,
@@ -53,6 +53,7 @@ class AllergyIntolerance {
     this.note,
     this.reaction,
   });
+
   factory AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
       _$AllergyIntoleranceFromJson(json);
   Map<String, dynamic> toJson() => _$AllergyIntoleranceToJson(this);
@@ -61,31 +62,14 @@ class AllergyIntolerance {
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class AllergyIntoleranceReaction {
   Id id;
-  Extension extension;
-  Extension modifierExtension;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   CodeableConcept substance;
   Code certainty;
-  CodeableConcept manifestation;
+  List<CodeableConcept> manifestation;
   String description;
   FhirDateTime onset;
   Code severity;
   CodeableConcept exposureRoute;
   Annotation note;
-
-  AllergyIntoleranceReaction({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.substance,
-    this.certainty,
-    this.manifestation,
-    this.description,
-    this.onset,
-    this.severity,
-    this.exposureRoute,
-    this.note,
-  });
-  factory AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
-      _$AllergyIntoleranceReactionFromJson(json);
-  Map<String, dynamic> toJson() => _$AllergyIntoleranceReactionToJson(this);
 }

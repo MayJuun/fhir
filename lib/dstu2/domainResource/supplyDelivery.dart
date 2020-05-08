@@ -11,9 +11,9 @@ class SupplyDelivery {
   FhirUri implicitRules;
   Code language;
   Narrative text;
-  dynamic contained;
-  Extension extension;
-  Extension modifierExtension;
+  List<Resource> contained;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
   Identifier identifier;
   Code status;
   Reference patient;
@@ -24,7 +24,7 @@ class SupplyDelivery {
   Period whenPrepared;
   FhirDateTime time;
   Reference destination;
-  Reference receiver;
+  List<Reference> receiver;
 
   SupplyDelivery({
     this.id,
@@ -47,6 +47,7 @@ class SupplyDelivery {
     this.destination,
     this.receiver,
   });
+
   factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliveryFromJson(json);
   Map<String, dynamic> toJson() => _$SupplyDeliveryToJson(this);
