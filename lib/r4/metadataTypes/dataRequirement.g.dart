@@ -140,7 +140,7 @@ DataRequirementDateFilter _$DataRequirementDateFilterFromJson(
         : Period.fromJson(json['valuePeriod'] as Map<String, dynamic>),
     valueDuration: json['valueDuration'] == null
         ? null
-        : Duration(microseconds: json['valueDuration'] as int),
+        : Duration.fromJson(json['valueDuration'] as Map<String, dynamic>),
   );
 }
 
@@ -163,7 +163,7 @@ Map<String, dynamic> _$DataRequirementDateFilterToJson(
   writeNotNull('searchParam', instance.searchParam);
   writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('valuePeriod', instance.valuePeriod?.toJson());
-  writeNotNull('valueDuration', instance.valueDuration?.inMicroseconds);
+  writeNotNull('valueDuration', instance.valueDuration?.toJson());
   return val;
 }
 

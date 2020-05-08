@@ -8,21 +8,16 @@ part of 'flag.dart';
 
 Flag _$FlagFromJson(Map<String, dynamic> json) {
   return Flag(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    implicitRules: json['implicitRules'],
+    language: json['language'],
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained:
-        json['contained'] == null ? null : resourceList(json['contained']),
+    contained: json['contained'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -35,8 +30,7 @@ Flag _$FlagFromJson(Map<String, dynamic> json) {
     category: json['category'] == null
         ? null
         : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'],
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -64,17 +58,17 @@ Map<String, dynamic> _$FlagToJson(Flag instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules);
+  writeNotNull('language', instance.language);
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('category', instance.category?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', instance.status);
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());

@@ -8,21 +8,16 @@ part of 'deviceUseRequest.dart';
 
 DeviceUseRequest _$DeviceUseRequestFromJson(Map<String, dynamic> json) {
   return DeviceUseRequest(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    implicitRules: json['implicitRules'],
+    language: json['language'],
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained:
-        json['contained'] == null ? null : resourceList(json['contained']),
+    contained: json['contained'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -32,8 +27,7 @@ DeviceUseRequest _$DeviceUseRequestFromJson(Map<String, dynamic> json) {
     bodySiteX: json['bodySiteX'] == null
         ? null
         : CodeableConcept.fromJson(json['bodySiteX'] as Map<String, dynamic>),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'],
     device: json['device'] == null
         ? null
         : Reference.fromJson(json['device'] as Map<String, dynamic>),
@@ -50,21 +44,15 @@ DeviceUseRequest _$DeviceUseRequestFromJson(Map<String, dynamic> json) {
     prnReason: json['prnReason'] == null
         ? null
         : CodeableConcept.fromJson(json['prnReason'] as Map<String, dynamic>),
-    orderedOn: json['orderedOn'] == null
-        ? null
-        : FhirDateTime.fromJson(json['orderedOn'] as String),
-    recordedOn: json['recordedOn'] == null
-        ? null
-        : FhirDateTime.fromJson(json['recordedOn'] as String),
+    orderedOn: json['orderedOn'],
+    recordedOn: json['recordedOn'],
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
     timingX: json['timingX'] == null
         ? null
         : Timing.fromJson(json['timingX'] as Map<String, dynamic>),
-    priority: json['priority'] == null
-        ? null
-        : Code.fromJson(json['priority'] as String),
+    priority: json['priority'],
   );
 }
 
@@ -77,26 +65,26 @@ Map<String, dynamic> _$DeviceUseRequestToJson(DeviceUseRequest instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules);
+  writeNotNull('language', instance.language);
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('bodySiteX', instance.bodySiteX?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', instance.status);
   writeNotNull('device', instance.device?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('indication', instance.indication?.toJson());
   writeNotNull('notes', instance.notes);
   writeNotNull('prnReason', instance.prnReason?.toJson());
-  writeNotNull('orderedOn', instance.orderedOn?.toJson());
-  writeNotNull('recordedOn', instance.recordedOn?.toJson());
+  writeNotNull('orderedOn', instance.orderedOn);
+  writeNotNull('recordedOn', instance.recordedOn);
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('timingX', instance.timingX?.toJson());
-  writeNotNull('priority', instance.priority?.toJson());
+  writeNotNull('priority', instance.priority);
   return val;
 }

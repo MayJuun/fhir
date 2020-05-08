@@ -8,16 +8,12 @@ part of 'period.dart';
 
 Period _$PeriodFromJson(Map<String, dynamic> json) {
   return Period(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
-    start: json['start'] == null
-        ? null
-        : FhirDateTime.fromJson(json['start'] as String),
-    end: json['end'] == null
-        ? null
-        : FhirDateTime.fromJson(json['end'] as String),
+    start: json['start'],
+    end: json['end'],
   );
 }
 
@@ -30,9 +26,9 @@ Map<String, dynamic> _$PeriodToJson(Period instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension?.toJson());
-  writeNotNull('start', instance.start?.toJson());
-  writeNotNull('end', instance.end?.toJson());
+  writeNotNull('start', instance.start);
+  writeNotNull('end', instance.end);
   return val;
 }

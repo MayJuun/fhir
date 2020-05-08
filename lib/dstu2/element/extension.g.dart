@@ -8,11 +8,11 @@ part of 'extension.dart';
 
 Extension _$ExtensionFromJson(Map<String, dynamic> json) {
   return Extension(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'],
     valueX: json['valueX'] as bool,
   );
 }
@@ -26,9 +26,9 @@ Map<String, dynamic> _$ExtensionToJson(Extension instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension?.toJson());
-  writeNotNull('url', instance.url?.toJson());
+  writeNotNull('url', instance.url);
   writeNotNull('valueX', instance.valueX);
   return val;
 }

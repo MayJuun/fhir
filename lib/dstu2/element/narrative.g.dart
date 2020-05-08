@@ -8,12 +8,11 @@ part of 'narrative.dart';
 
 Narrative _$NarrativeFromJson(Map<String, dynamic> json) {
   return Narrative(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'],
     div: json['div'] as String,
   );
 }
@@ -27,9 +26,9 @@ Map<String, dynamic> _$NarrativeToJson(Narrative instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', instance.status);
   writeNotNull('div', instance.div);
   return val;
 }

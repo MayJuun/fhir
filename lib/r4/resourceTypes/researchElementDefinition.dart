@@ -6,6 +6,8 @@ import '../../fhir_r4.dart';
 import '../../primitiveTypes/primitiveFailures.dart';
 import '../../primitiveTypes/primitiveObjects.dart';
 
+part 'researchElementDefinition.g.dart';
+
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ResearchElementDefinition {
   String resourceType;

@@ -1,16 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../primitiveTypes/id.dart';
-import '../element/meta.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../primitiveTypes/code.dart';
-import '../element/narrative.dart';
-import '../element/extension.dart';
-import '../element/identifier.dart';
-import '../element/reference.dart';
-import '../element/coding.dart';
-import '../primitiveTypes/fhirDateTime.dart';
-import '../res/resourceList.dart';
+import '../../fhir_dstu2.dart';
 
 part 'paymentNotice.g.dart';
 

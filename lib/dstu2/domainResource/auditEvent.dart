@@ -1,18 +1,6 @@
-import 'package:fhir/dstu2/primitiveTypes/base64binary.dart';
-import 'package:fhir/dstu2/primitiveTypes/instant.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../primitiveTypes/id.dart';
-import '../element/extension.dart';
-import '../element/coding.dart';
-import '../element/reference.dart';
-import '../element/identifier.dart';
-import '../element/codeableConcept.dart';
-import '../resource/resource.dart';
-import '../element/narrative.dart';
-import '../element/meta.dart';
+import '../../fhir_dstu2.dart';
 
 part 'auditEvent.g.dart';
 

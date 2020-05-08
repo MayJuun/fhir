@@ -1,9 +1,6 @@
-import '../element/meta.dart';
-import '../primitiveTypes/base64binary.dart';
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../primitiveTypes/id.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+import '../../fhir_dstu2.dart';
 
 part 'binary.g.dart';
 

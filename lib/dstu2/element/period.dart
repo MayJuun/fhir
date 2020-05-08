@@ -1,8 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../element/extension.dart';
-import '../primitiveTypes/fhirDateTime.dart';
-import '../primitiveTypes/id.dart';
+import '../../fhir_dstu2.dart';
 
 part 'period.g.dart';
 

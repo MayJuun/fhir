@@ -1,17 +1,5 @@
+import '../../fhir_dstu2.dart';
 
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/contactPoint.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/elementDefinition.dart';
-import '../element/codeableConcept.dart';
-import '../element/identifier.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../resource/resource.dart';
-import '../element/narrative.dart';
-import '../element/meta.dart';
 part 'dataElement.g.dart';
 
 

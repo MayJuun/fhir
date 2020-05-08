@@ -1,25 +1,6 @@
 
-import '../element/reference.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/reference.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/contactPoint.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/codeableConcept.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../resource/resource.dart';
-import '../element/narrative.dart';
-import '../element/meta.dart';
+import '../../fhir_dstu2.dart';
+
 part 'implementationGuide.g.dart';
 
 

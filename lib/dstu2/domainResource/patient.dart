@@ -1,21 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../element/address.dart';
-import '../element/attachment.dart';
-import '../element/codeableConcept.dart';
-import '../element/contactPoint.dart';
-import '../element/humanName.dart';
-import '../element/identifier.dart';
-import '../element/period.dart';
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/date.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../primitiveTypes/id.dart';
-import '../element/reference.dart';
-import '../element/extension.dart';
-import '../element/narrative.dart';
-import '../element/meta.dart';
-import '../res/resourceList.dart';
+import '../../fhir_dstu2.dart';
 
 part 'patient.g.dart';
 

@@ -1,9 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../primitiveTypes/id.dart';
-import '../element/extension.dart';
-import '../element/period.dart';
-import '../primitiveTypes/code.dart';
+import '../../fhir_dstu2.dart';
 
 part 'humanName.g.dart';
 

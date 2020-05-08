@@ -8,21 +8,16 @@ part of 'condition.dart';
 
 Condition _$ConditionFromJson(Map<String, dynamic> json) {
   return Condition(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    implicitRules: json['implicitRules'],
+    language: json['language'],
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained:
-        json['contained'] == null ? null : resourceList(json['contained']),
+    contained: json['contained'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -41,30 +36,20 @@ Condition _$ConditionFromJson(Map<String, dynamic> json) {
     asserter: json['asserter'] == null
         ? null
         : Reference.fromJson(json['asserter'] as Map<String, dynamic>),
-    dateRecorded: json['dateRecorded'] == null
-        ? null
-        : Date.fromJson(json['dateRecorded'] as String),
+    dateRecorded: json['dateRecorded'],
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     category: json['category'] == null
         ? null
         : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
-    clinicalStatus: json['clinicalStatus'] == null
-        ? null
-        : Code.fromJson(json['clinicalStatus'] as String),
-    verificationStatus: json['verificationStatus'] == null
-        ? null
-        : Code.fromJson(json['verificationStatus'] as String),
+    clinicalStatus: json['clinicalStatus'],
+    verificationStatus: json['verificationStatus'],
     severity: json['severity'] == null
         ? null
         : CodeableConcept.fromJson(json['severity'] as Map<String, dynamic>),
-    onsetX: json['onsetX'] == null
-        ? null
-        : FhirDateTime.fromJson(json['onsetX'] as String),
-    abatementX: json['abatementX'] == null
-        ? null
-        : FhirDateTime.fromJson(json['abatementX'] as String),
+    onsetX: json['onsetX'],
+    abatementX: json['abatementX'],
     stage: json['stage'] == null
         ? null
         : ConditionStage.fromJson(json['stage'] as Map<String, dynamic>),
@@ -87,10 +72,10 @@ Map<String, dynamic> _$ConditionToJson(Condition instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules);
+  writeNotNull('language', instance.language);
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
   writeNotNull('extension', instance.extension?.toJson());
@@ -99,14 +84,14 @@ Map<String, dynamic> _$ConditionToJson(Condition instance) {
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
   writeNotNull('asserter', instance.asserter?.toJson());
-  writeNotNull('dateRecorded', instance.dateRecorded?.toJson());
+  writeNotNull('dateRecorded', instance.dateRecorded);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('category', instance.category?.toJson());
-  writeNotNull('clinicalStatus', instance.clinicalStatus?.toJson());
-  writeNotNull('verificationStatus', instance.verificationStatus?.toJson());
+  writeNotNull('clinicalStatus', instance.clinicalStatus);
+  writeNotNull('verificationStatus', instance.verificationStatus);
   writeNotNull('severity', instance.severity?.toJson());
-  writeNotNull('onsetX', instance.onsetX?.toJson());
-  writeNotNull('abatementX', instance.abatementX?.toJson());
+  writeNotNull('onsetX', instance.onsetX);
+  writeNotNull('abatementX', instance.abatementX);
   writeNotNull('stage', instance.stage?.toJson());
   writeNotNull('evidence', instance.evidence?.toJson());
   writeNotNull('bodySite', instance.bodySite?.toJson());
@@ -116,7 +101,7 @@ Map<String, dynamic> _$ConditionToJson(Condition instance) {
 
 ConditionStage _$ConditionStageFromJson(Map<String, dynamic> json) {
   return ConditionStage(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -141,7 +126,7 @@ Map<String, dynamic> _$ConditionStageToJson(ConditionStage instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('summary', instance.summary?.toJson());
@@ -151,7 +136,7 @@ Map<String, dynamic> _$ConditionStageToJson(ConditionStage instance) {
 
 ConditionEvidence _$ConditionEvidenceFromJson(Map<String, dynamic> json) {
   return ConditionEvidence(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -176,7 +161,7 @@ Map<String, dynamic> _$ConditionEvidenceToJson(ConditionEvidence instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('code', instance.code?.toJson());

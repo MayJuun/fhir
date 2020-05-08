@@ -1,25 +1,7 @@
 
-import '../element/ratio.dart';
-import '../element/ratio.dart';
-import '../element/quantity.dart';
-import '../element/codeableConcept.dart';
-import '../element/codeableConcept.dart';
-import '../element/codeableConcept.dart';
-import '../element/timing.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/codeableConcept.dart';
-import '../element/reference.dart';
-import '../element/codeableConcept.dart';
-import '../element/codeableConcept.dart';
-import '../element/reference.dart';
-import '../element/reference.dart';
-import '../element/identifier.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../resource/resource.dart';
-import '../element/narrative.dart';
-import '../element/meta.dart';
+import '../../fhir_dstu2.dart';
+
+
 part 'medicationStatement.g.dart';
 
 

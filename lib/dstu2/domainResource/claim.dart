@@ -1,18 +1,6 @@
-import 'package:fhir/dstu2/element/identifier.dart';
-import 'package:fhir/dstu2/primitiveTypes/date.dart';
-import 'package:fhir/dstu2/primitiveTypes/fhirDateTime.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../primitiveTypes/id.dart';
-import '../element/coding.dart';
-import '../element/extension.dart';
-import '../element/quantity.dart';
-import '../element/reference.dart';
-import '../resource/resource.dart';
-import '../element/narrative.dart';
-import '../element/meta.dart';
+import '../../fhir_dstu2.dart';
 
 part 'claim.g.dart';
 

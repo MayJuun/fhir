@@ -1,18 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../primitiveTypes/id.dart';
-import '../element/meta.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../primitiveTypes/code.dart';
-import '../element/narrative.dart';
-import '../element/extension.dart';
-import '../element/identifier.dart';
-import '../element/codeableConcept.dart';
-import '../element/reference.dart';
-import '../primitiveTypes/fhirDateTime.dart';
-import '../element/period.dart';
-import '../element/timing.dart';
-import '../res/resourceList.dart';
+import '../../fhir_dstu2.dart';
 
 part 'deviceUseStatement.g.dart';
 

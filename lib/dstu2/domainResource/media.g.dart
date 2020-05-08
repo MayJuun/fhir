@@ -8,28 +8,23 @@ part of 'media.dart';
 
 Media _$MediaFromJson(Map<String, dynamic> json) {
   return Media(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    implicitRules: json['implicitRules'],
+    language: json['language'],
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained:
-        json['contained'] == null ? null : resourceList(json['contained']),
+    contained: json['contained'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : Extension.fromJson(json['modifierExtension'] as Map<String, dynamic>),
-    type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
+    type: json['type'],
     subtype: json['subtype'] == null
         ? null
         : CodeableConcept.fromJson(json['subtype'] as Map<String, dynamic>),
@@ -65,15 +60,15 @@ Map<String, dynamic> _$MediaToJson(Media instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules);
+  writeNotNull('language', instance.language);
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('type', instance.type);
   writeNotNull('subtype', instance.subtype?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('subject', instance.subject?.toJson());

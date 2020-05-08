@@ -1,12 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../primitiveTypes/id.dart';
-import '../element/extension.dart';
-import '../element/coding.dart';
-import '../primitiveTypes/base64binary.dart';
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../primitiveTypes/instant.dart';
+import '../../fhir_dstu2.dart';
 
 part 'signature.g.dart';
 

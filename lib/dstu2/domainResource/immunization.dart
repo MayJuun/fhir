@@ -1,19 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../element/codeableConcept.dart';
-import '../element/reference.dart';
-import '../element/extension.dart';
-import '../element/annotation.dart';
-import '../element/quantity.dart';
-import '../element/identifier.dart';
-import '../element/narrative.dart';
-import '../element/meta.dart';
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/date.dart';
-import '../primitiveTypes/fhirDateTime.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../primitiveTypes/id.dart';
-import '../res/resourceList.dart';
+import '../../fhir_dstu2.dart';
 
 part 'immunization.g.dart';
 

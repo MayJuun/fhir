@@ -8,35 +8,27 @@ part of 'referralRequest.dart';
 
 ReferralRequest _$ReferralRequestFromJson(Map<String, dynamic> json) {
   return ReferralRequest(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    implicitRules: json['implicitRules'],
+    language: json['language'],
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained:
-        json['contained'] == null ? null : resourceList(json['contained']),
+    contained: json['contained'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : Extension.fromJson(json['modifierExtension'] as Map<String, dynamic>),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'],
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'],
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -58,9 +50,7 @@ ReferralRequest _$ReferralRequestFromJson(Map<String, dynamic> json) {
     encounter: json['encounter'] == null
         ? null
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-    dateSent: json['dateSent'] == null
-        ? null
-        : FhirDateTime.fromJson(json['dateSent'] as String),
+    dateSent: json['dateSent'],
     reason: json['reason'] == null
         ? null
         : CodeableConcept.fromJson(json['reason'] as Map<String, dynamic>),
@@ -88,17 +78,17 @@ Map<String, dynamic> _$ReferralRequestToJson(ReferralRequest instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules);
+  writeNotNull('language', instance.language);
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', instance.status);
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('date', instance.date);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('specialty', instance.specialty?.toJson());
   writeNotNull('priority', instance.priority?.toJson());
@@ -106,7 +96,7 @@ Map<String, dynamic> _$ReferralRequestToJson(ReferralRequest instance) {
   writeNotNull('requester', instance.requester?.toJson());
   writeNotNull('recipient', instance.recipient?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
-  writeNotNull('dateSent', instance.dateSent?.toJson());
+  writeNotNull('dateSent', instance.dateSent);
   writeNotNull('reason', instance.reason?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('serviceRequested', instance.serviceRequested?.toJson());

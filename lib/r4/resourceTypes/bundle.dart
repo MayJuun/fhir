@@ -4,6 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 import '../../fhir_r4.dart';
 import '../../primitiveTypes/primitiveFailures.dart';
 import '../../primitiveTypes/primitiveObjects.dart';
+import '../resourceList.dart';
 
 part 'bundle.g.dart';
 

@@ -8,21 +8,16 @@ part of 'basic.dart';
 
 Basic _$BasicFromJson(Map<String, dynamic> json) {
   return Basic(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    implicitRules: json['implicitRules'],
+    language: json['language'],
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained:
-        json['contained'] == null ? null : resourceList(json['contained']),
+    contained: json['contained'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -41,9 +36,7 @@ Basic _$BasicFromJson(Map<String, dynamic> json) {
     author: json['author'] == null
         ? null
         : Reference.fromJson(json['author'] as Map<String, dynamic>),
-    created: json['created'] == null
-        ? null
-        : Date.fromJson(json['created'] as String),
+    created: json['created'],
   );
 }
 
@@ -56,10 +49,10 @@ Map<String, dynamic> _$BasicToJson(Basic instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules);
+  writeNotNull('language', instance.language);
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
   writeNotNull('extension', instance.extension?.toJson());
@@ -68,6 +61,6 @@ Map<String, dynamic> _$BasicToJson(Basic instance) {
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('author', instance.author?.toJson());
-  writeNotNull('created', instance.created?.toJson());
+  writeNotNull('created', instance.created);
   return val;
 }

@@ -1,12 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../primitiveTypes/id.dart';
-import '../element/extension.dart';
-import '../resource/resource.dart';
-import '../element/narrative.dart';
-import '../element/meta.dart';
+import '../../fhir_dstu2.dart';
+
 part 'communication.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)

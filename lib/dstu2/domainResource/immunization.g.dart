@@ -8,21 +8,16 @@ part of 'immunization.dart';
 
 Immunization _$ImmunizationFromJson(Map<String, dynamic> json) {
   return Immunization(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    implicitRules: json['implicitRules'],
+    language: json['language'],
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained:
-        json['contained'] == null ? null : resourceList(json['contained']),
+    contained: json['contained'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -33,11 +28,8 @@ Immunization _$ImmunizationFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    status: json['status'],
+    date: json['date'],
     vaccineCode: json['vaccineCode'] == null
         ? null
         : CodeableConcept.fromJson(json['vaccineCode'] as Map<String, dynamic>),
@@ -62,9 +54,7 @@ Immunization _$ImmunizationFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(json['location'] as Map<String, dynamic>),
     lotNumber: json['lotNumber'] as String,
-    expirationDate: json['expirationDate'] == null
-        ? null
-        : Date.fromJson(json['expirationDate'] as String),
+    expirationDate: json['expirationDate'],
     site: json['site'] == null
         ? null
         : CodeableConcept.fromJson(json['site'] as Map<String, dynamic>),
@@ -104,18 +94,18 @@ Map<String, dynamic> _$ImmunizationToJson(Immunization instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules);
+  writeNotNull('language', instance.language);
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status?.toJson());
-  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('status', instance.status);
+  writeNotNull('date', instance.date);
   writeNotNull('vaccineCode', instance.vaccineCode?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('wasNotGiven', instance.wasNotGiven);
@@ -126,7 +116,7 @@ Map<String, dynamic> _$ImmunizationToJson(Immunization instance) {
   writeNotNull('manufacturer', instance.manufacturer?.toJson());
   writeNotNull('location', instance.location?.toJson());
   writeNotNull('lotNumber', instance.lotNumber);
-  writeNotNull('expirationDate', instance.expirationDate?.toJson());
+  writeNotNull('expirationDate', instance.expirationDate);
   writeNotNull('site', instance.site?.toJson());
   writeNotNull('route', instance.route?.toJson());
   writeNotNull('doseQuantity', instance.doseQuantity?.toJson());
@@ -142,7 +132,7 @@ Map<String, dynamic> _$ImmunizationToJson(Immunization instance) {
 ImmunizationExplanation _$ImmunizationExplanationFromJson(
     Map<String, dynamic> json) {
   return ImmunizationExplanation(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -172,7 +162,7 @@ Map<String, dynamic> _$ImmunizationExplanationToJson(
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('reason', instance.reason?.map((e) => e?.toJson())?.toList());
@@ -183,16 +173,14 @@ Map<String, dynamic> _$ImmunizationExplanationToJson(
 
 ImmunizationReaction _$ImmunizationReactionFromJson(Map<String, dynamic> json) {
   return ImmunizationReaction(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : Extension.fromJson(json['modifierExtension'] as Map<String, dynamic>),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'],
     detail: json['detail'] == null
         ? null
         : Reference.fromJson(json['detail'] as Map<String, dynamic>),
@@ -210,10 +198,10 @@ Map<String, dynamic> _$ImmunizationReactionToJson(
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('date', instance.date);
   writeNotNull('detail', instance.detail?.toJson());
   writeNotNull('reported', instance.reported);
   return val;
@@ -222,7 +210,7 @@ Map<String, dynamic> _$ImmunizationReactionToJson(
 ImmunizationVaccinationProtocol _$ImmunizationVaccinationProtocolFromJson(
     Map<String, dynamic> json) {
   return ImmunizationVaccinationProtocol(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -261,7 +249,7 @@ Map<String, dynamic> _$ImmunizationVaccinationProtocolToJson(
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('doseSequence', instance.doseSequence);

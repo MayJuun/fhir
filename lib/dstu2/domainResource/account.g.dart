@@ -8,21 +8,16 @@ part of 'account.dart';
 
 Account _$AccountFromJson(Map<String, dynamic> json) {
   return Account(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    implicitRules: json['implicitRules'],
+    language: json['language'],
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained:
-        json['contained'] == null ? null : resourceList(json['contained']),
+    contained: json['contained'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -36,8 +31,7 @@ Account _$AccountFromJson(Map<String, dynamic> json) {
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'],
     activePeriod: json['activePeriod'] == null
         ? null
         : Period.fromJson(json['activePeriod'] as Map<String, dynamic>),
@@ -69,10 +63,10 @@ Map<String, dynamic> _$AccountToJson(Account instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules);
+  writeNotNull('language', instance.language);
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
   writeNotNull('extension', instance.extension?.toJson());
@@ -80,7 +74,7 @@ Map<String, dynamic> _$AccountToJson(Account instance) {
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('type', instance.type?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', instance.status);
   writeNotNull('activePeriod', instance.activePeriod?.toJson());
   writeNotNull('currency', instance.currency?.toJson());
   writeNotNull('balance', instance.balance?.toJson());

@@ -1,14 +1,4 @@
-
-import '../element/codeableConcept.dart';
-import '../element/reference.dart';
-import '../element/codeableConcept.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/reference.dart';
-import '../element/codeableConcept.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-part 'diagnosticOrder.g.dart';
+import '../../fhir_dstu2.dart';
 
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)

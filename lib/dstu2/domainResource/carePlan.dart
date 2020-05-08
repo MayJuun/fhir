@@ -1,20 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../element/reference.dart';
-import '../primitiveTypes/fhirDateTime.dart';
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../primitiveTypes/id.dart';
-import '../element/quantity.dart';
-import '../element/codeableConcept.dart';
-import '../element/timing.dart';
-import '../element/extension.dart';
-import '../element/annotation.dart';
-import '../element/period.dart';
-import '../element/identifier.dart';
-import '../resource/resource.dart';
-import '../element/narrative.dart';
-import '../element/meta.dart';
+import '../../fhir_dstu2.dart';
 
 part 'carePlan.g.dart';
 

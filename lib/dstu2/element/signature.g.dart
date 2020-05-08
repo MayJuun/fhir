@@ -8,23 +8,17 @@ part of 'signature.dart';
 
 Signature _$SignatureFromJson(Map<String, dynamic> json) {
   return Signature(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
     type: json['type'] == null
         ? null
         : Coding.fromJson(json['type'] as Map<String, dynamic>),
-    when:
-        json['when'] == null ? null : Instant.fromJson(json['when'] as String),
-    whoX:
-        json['whoX'] == null ? null : FhirUri.fromJson(json['whoX'] as String),
-    contentType: json['contentType'] == null
-        ? null
-        : Code.fromJson(json['contentType'] as String),
-    blob: json['blob'] == null
-        ? null
-        : Base64Binary.fromJson(json['blob'] as String),
+    when: json['when'],
+    whoX: json['whoX'],
+    contentType: json['contentType'],
+    blob: json['blob'],
   );
 }
 
@@ -37,12 +31,12 @@ Map<String, dynamic> _$SignatureToJson(Signature instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('type', instance.type?.toJson());
-  writeNotNull('when', instance.when?.toJson());
-  writeNotNull('whoX', instance.whoX?.toJson());
-  writeNotNull('contentType', instance.contentType?.toJson());
-  writeNotNull('blob', instance.blob?.toJson());
+  writeNotNull('when', instance.when);
+  writeNotNull('whoX', instance.whoX);
+  writeNotNull('contentType', instance.contentType);
+  writeNotNull('blob', instance.blob);
   return val;
 }

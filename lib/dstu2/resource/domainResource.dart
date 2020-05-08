@@ -1,12 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../element/extension.dart';
-import '../element/meta.dart';
-import '../element/narrative.dart';
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../primitiveTypes/id.dart';
-import '../resource/resource.dart';
+import '../../fhir_dstu2.dart';
 
 part 'domainResource.g.dart';
 

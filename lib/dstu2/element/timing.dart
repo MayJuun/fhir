@@ -1,11 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../element/codeableConcept.dart';
-import '../element/extension.dart';
-import '../element/quantity.dart';
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/fhirDateTime.dart';
-import '../primitiveTypes/id.dart';
+import '../../fhir_dstu2.dart';
 
 part 'timing.g.dart';
 

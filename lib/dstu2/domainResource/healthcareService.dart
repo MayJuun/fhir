@@ -1,29 +1,6 @@
 
-import '../element/period.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/codeableConcept.dart';
-import '../element/codeableConcept.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/codeableConcept.dart';
-import '../element/codeableConcept.dart';
-import '../element/codeableConcept.dart';
-import '../element/codeableConcept.dart';
-import '../element/reference.dart';
-import '../element/contactPoint.dart';
-import '../element/attachment.dart';
-import '../element/reference.dart';
-import '../element/codeableConcept.dart';
-import '../element/reference.dart';
-import '../element/identifier.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../resource/resource.dart';
-import '../element/narrative.dart';
-import '../element/meta.dart';
+import '../../fhir_dstu2.dart';
+
 part 'healthcareService.g.dart';
 
 

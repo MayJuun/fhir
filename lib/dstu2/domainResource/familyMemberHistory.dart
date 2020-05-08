@@ -1,21 +1,6 @@
+import '../../fhir_dstu2.dart';
 
-import '../element/annotation.dart';
-import '../element/quantity.dart';
-import '../element/codeableConcept.dart';
-import '../element/codeableConcept.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/annotation.dart';
-import '../element/quantity.dart';
-import '../element/period.dart';
-import '../element/codeableConcept.dart';
-import '../element/reference.dart';
-import '../element/identifier.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../resource/resource.dart';
-import '../element/narrative.dart';
-import '../element/meta.dart';
+
 part 'familyMemberHistory.g.dart';
 
 

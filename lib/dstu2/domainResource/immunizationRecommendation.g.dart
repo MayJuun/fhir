@@ -9,21 +9,16 @@ part of 'immunizationRecommendation.dart';
 ImmunizationRecommendation _$ImmunizationRecommendationFromJson(
     Map<String, dynamic> json) {
   return ImmunizationRecommendation(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    implicitRules: json['implicitRules'],
+    language: json['language'],
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained:
-        json['contained'] == null ? null : resourceList(json['contained']),
+    contained: json['contained'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -56,10 +51,10 @@ Map<String, dynamic> _$ImmunizationRecommendationToJson(
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules);
+  writeNotNull('language', instance.language);
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
   writeNotNull('extension', instance.extension?.toJson());
@@ -76,16 +71,14 @@ ImmunizationRecommendationRecommendation
     _$ImmunizationRecommendationRecommendationFromJson(
         Map<String, dynamic> json) {
   return ImmunizationRecommendationRecommendation(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : Extension.fromJson(json['modifierExtension'] as Map<String, dynamic>),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'],
     vaccineCode: json['vaccineCode'] == null
         ? null
         : CodeableConcept.fromJson(json['vaccineCode'] as Map<String, dynamic>),
@@ -124,10 +117,10 @@ Map<String, dynamic> _$ImmunizationRecommendationRecommendationToJson(
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('date', instance.date);
   writeNotNull('vaccineCode', instance.vaccineCode?.toJson());
   writeNotNull('doseNumber', instance.doseNumber);
   writeNotNull('forecastStatus', instance.forecastStatus?.toJson());
@@ -144,7 +137,7 @@ Map<String, dynamic> _$ImmunizationRecommendationRecommendationToJson(
 RecommendationDateCriterion _$RecommendationDateCriterionFromJson(
     Map<String, dynamic> json) {
   return RecommendationDateCriterion(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     extensio: json['extensio'] == null
         ? null
         : Extension.fromJson(json['extensio'] as Map<String, dynamic>),
@@ -154,9 +147,7 @@ RecommendationDateCriterion _$RecommendationDateCriterionFromJson(
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-    value: json['value'] == null
-        ? null
-        : FhirDateTime.fromJson(json['value'] as String),
+    value: json['value'],
   );
 }
 
@@ -170,18 +161,18 @@ Map<String, dynamic> _$RecommendationDateCriterionToJson(
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('extensio', instance.extensio?.toJson());
   writeNotNull('modifier', instance.modifier?.toJson());
   writeNotNull('code', instance.code?.toJson());
-  writeNotNull('value', instance.value?.toJson());
+  writeNotNull('value', instance.value);
   return val;
 }
 
 RecommendationProtocol _$RecommendationProtocolFromJson(
     Map<String, dynamic> json) {
   return RecommendationProtocol(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -207,7 +198,7 @@ Map<String, dynamic> _$RecommendationProtocolToJson(
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExten', instance.modifierExten?.toJson());
   writeNotNull('doseSequence', instance.doseSequence);

@@ -1,30 +1,5 @@
+import '../../fhir_dstu2.dart';
 
-import '../element/coding.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/quantity.dart';
-import '../element/reference.dart';
-import '../element/reference.dart';
-import '../element/reference.dart';
-import '../element/reference.dart';
-import '../element/coding.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/quantity.dart';
-import '../element/coding.dart';
-import '../element/reference.dart';
-import '../element/reference.dart';
-import '../element/reference.dart';
-import '../element/period.dart';
-import '../element/coding.dart';
-import '../element/coding.dart';
-import '../element/reference.dart';
-import '../element/identifier.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../resource/resource.dart';
-import '../element/narrative.dart';
-import '../element/meta.dart';
 part 'paymentReconciliation.g.dart';
 
 

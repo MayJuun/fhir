@@ -1,25 +1,5 @@
+import '../../fhir_dstu2.dart';
 
-import '../element/reference.dart';
-import '../element/period.dart';
-import '../element/codeableConcept.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/period.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/reference.dart';
-import '../element/reference.dart';
-import '../element/period.dart';
-import '../element/reference.dart';
-import '../element/reference.dart';
-import '../element/reference.dart';
-import '../element/codeableConcept.dart';
-import '../element/identifier.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../resource/resource.dart';
-import '../element/narrative.dart';
-import '../element/meta.dart';
 part 'episodeOfCare.g.dart';
 
 

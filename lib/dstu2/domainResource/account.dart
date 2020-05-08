@@ -1,18 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../primitiveTypes/id.dart';
-import '../element/reference.dart';
-import '../element/period.dart';
-import '../element/quantity.dart';
-import '../element/coding.dart';
-import '../element/codeableConcept.dart';
-import '../element/identifier.dart';
-import '../element/extension.dart';
-import '../element/narrative.dart';
-import '../element/meta.dart';
-import '../res/resourceList.dart';
+import '../../fhir_dstu2.dart';
 
 part 'account.g.dart';
 

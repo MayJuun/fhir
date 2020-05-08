@@ -12,13 +12,11 @@ Timing _$TimingFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
   )
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
+    ..id = json['id']
     ..extension = json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>)
-    ..event = json['event'] == null
-        ? null
-        : FhirDateTime.fromJson(json['event'] as String)
+    ..event = json['event']
     ..repeat = json['repeat'] == null
         ? null
         : TimingRepeat.fromJson(json['repeat'] as Map<String, dynamic>);
@@ -33,9 +31,9 @@ Map<String, dynamic> _$TimingToJson(Timing instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension?.toJson());
-  writeNotNull('event', instance.event?.toJson());
+  writeNotNull('event', instance.event);
   writeNotNull('repeat', instance.repeat?.toJson());
   writeNotNull('code', instance.code?.toJson());
   return val;
@@ -43,7 +41,7 @@ Map<String, dynamic> _$TimingToJson(Timing instance) {
 
 TimingRepeat _$TimingRepeatFromJson(Map<String, dynamic> json) {
   return TimingRepeat(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -53,17 +51,13 @@ TimingRepeat _$TimingRepeatFromJson(Map<String, dynamic> json) {
     count: json['count'] as int,
     duration: (json['duration'] as num)?.toDouble(),
     durationMax: (json['durationMax'] as num)?.toDouble(),
-    durationUnits: json['durationUnits'] == null
-        ? null
-        : Code.fromJson(json['durationUnits'] as String),
+    durationUnits: json['durationUnits'],
     frequency: json['frequency'] as int,
     frequencyMax: json['frequencyMax'] as int,
     period: (json['period'] as num)?.toDouble(),
     periodMax: (json['periodMax'] as num)?.toDouble(),
-    periodUnits: json['periodUnits'] == null
-        ? null
-        : Code.fromJson(json['periodUnits'] as String),
-    when: json['when'] == null ? null : Code.fromJson(json['when'] as String),
+    periodUnits: json['periodUnits'],
+    when: json['when'],
   );
 }
 
@@ -76,18 +70,18 @@ Map<String, dynamic> _$TimingRepeatToJson(TimingRepeat instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('boundsX', instance.boundsX?.toJson());
   writeNotNull('count', instance.count);
   writeNotNull('duration', instance.duration);
   writeNotNull('durationMax', instance.durationMax);
-  writeNotNull('durationUnits', instance.durationUnits?.toJson());
+  writeNotNull('durationUnits', instance.durationUnits);
   writeNotNull('frequency', instance.frequency);
   writeNotNull('frequencyMax', instance.frequencyMax);
   writeNotNull('period', instance.period);
   writeNotNull('periodMax', instance.periodMax);
-  writeNotNull('periodUnits', instance.periodUnits?.toJson());
-  writeNotNull('when', instance.when?.toJson());
+  writeNotNull('periodUnits', instance.periodUnits);
+  writeNotNull('when', instance.when);
   return val;
 }

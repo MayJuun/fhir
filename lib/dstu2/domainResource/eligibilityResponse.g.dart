@@ -8,21 +8,16 @@ part of 'eligibilityResponse.dart';
 
 EligibilityResponse _$EligibilityResponseFromJson(Map<String, dynamic> json) {
   return EligibilityResponse(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    implicitRules: json['implicitRules'],
+    language: json['language'],
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained:
-        json['contained'] == null ? null : resourceList(json['contained']),
+    contained: json['contained'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -35,9 +30,7 @@ EligibilityResponse _$EligibilityResponseFromJson(Map<String, dynamic> json) {
     request: json['request'] == null
         ? null
         : Reference.fromJson(json['request'] as Map<String, dynamic>),
-    outcome: json['outcome'] == null
-        ? null
-        : Code.fromJson(json['outcome'] as String),
+    outcome: json['outcome'],
     disposition: json['disposition'] as String,
     ruleset: json['ruleset'] == null
         ? null
@@ -45,9 +38,7 @@ EligibilityResponse _$EligibilityResponseFromJson(Map<String, dynamic> json) {
     originalRuleset: json['originalRuleset'] == null
         ? null
         : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
-    created: json['created'] == null
-        ? null
-        : FhirDateTime.fromJson(json['created'] as String),
+    created: json['created'],
     organization: json['organization'] == null
         ? null
         : Reference.fromJson(json['organization'] as Map<String, dynamic>),
@@ -70,21 +61,21 @@ Map<String, dynamic> _$EligibilityResponseToJson(EligibilityResponse instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules);
+  writeNotNull('language', instance.language);
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('request', instance.request?.toJson());
-  writeNotNull('outcome', instance.outcome?.toJson());
+  writeNotNull('outcome', instance.outcome);
   writeNotNull('disposition', instance.disposition);
   writeNotNull('ruleset', instance.ruleset?.toJson());
   writeNotNull('originalRuleset', instance.originalRuleset?.toJson());
-  writeNotNull('created', instance.created?.toJson());
+  writeNotNull('created', instance.created);
   writeNotNull('organization', instance.organization?.toJson());
   writeNotNull('requestProvider', instance.requestProvider?.toJson());
   writeNotNull('requestOrganization', instance.requestOrganization?.toJson());

@@ -8,21 +8,16 @@ part of 'orderResponse.dart';
 
 OrderResponse _$OrderResponseFromJson(Map<String, dynamic> json) {
   return OrderResponse(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    implicitRules: json['implicitRules'],
+    language: json['language'],
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained:
-        json['contained'] == null ? null : resourceList(json['contained']),
+    contained: json['contained'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -35,15 +30,11 @@ OrderResponse _$OrderResponseFromJson(Map<String, dynamic> json) {
     request: json['request'] == null
         ? null
         : Reference.fromJson(json['request'] as Map<String, dynamic>),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'],
     who: json['who'] == null
         ? null
         : Reference.fromJson(json['who'] as Map<String, dynamic>),
-    orderStatus: json['orderStatus'] == null
-        ? null
-        : Code.fromJson(json['orderStatus'] as String),
+    orderStatus: json['orderStatus'],
     description: json['description'] as String,
     fulfillment: json['fulfillment'] == null
         ? null
@@ -60,19 +51,19 @@ Map<String, dynamic> _$OrderResponseToJson(OrderResponse instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules);
+  writeNotNull('language', instance.language);
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('request', instance.request?.toJson());
-  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('date', instance.date);
   writeNotNull('who', instance.who?.toJson());
-  writeNotNull('orderStatus', instance.orderStatus?.toJson());
+  writeNotNull('orderStatus', instance.orderStatus);
   writeNotNull('description', instance.description);
   writeNotNull('fulfillment', instance.fulfillment?.toJson());
   return val;

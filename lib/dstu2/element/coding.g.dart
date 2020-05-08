@@ -8,15 +8,13 @@ part of 'coding.dart';
 
 Coding _$CodingFromJson(Map<String, dynamic> json) {
   return Coding(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
-    system: json['system'] == null
-        ? null
-        : FhirUri.fromJson(json['system'] as String),
+    system: json['system'],
     version: json['version'] as String,
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'],
     display: json['display'] as String,
     userSelected: json['userSelected'] as bool,
   );
@@ -31,11 +29,11 @@ Map<String, dynamic> _$CodingToJson(Coding instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension?.toJson());
-  writeNotNull('system', instance.system?.toJson());
+  writeNotNull('system', instance.system);
   writeNotNull('version', instance.version);
-  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('code', instance.code);
   writeNotNull('display', instance.display);
   writeNotNull('userSelected', instance.userSelected);
   return val;

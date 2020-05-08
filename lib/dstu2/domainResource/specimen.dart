@@ -1,31 +1,5 @@
+import '../../fhir_dstu2.dart';
 
-import '../element/codeableConcept.dart';
-import '../element/quantity.dart';
-import '../element/quantity.dart';
-import '../element/codeableConcept.dart';
-import '../element/identifier.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/reference.dart';
-import '../element/codeableConcept.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/codeableConcept.dart';
-import '../element/codeableConcept.dart';
-import '../element/quantity.dart';
-import '../element/reference.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../element/identifier.dart';
-import '../element/reference.dart';
-import '../element/reference.dart';
-import '../element/codeableConcept.dart';
-import '../element/identifier.dart';
-import '../element/extension.dart';
-import '../element/extension.dart';
-import '../resource/resource.dart';
-import '../element/narrative.dart';
-import '../element/meta.dart';
 part 'specimen.g.dart';
 
 

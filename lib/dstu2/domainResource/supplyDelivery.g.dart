@@ -8,21 +8,16 @@ part of 'supplyDelivery.dart';
 
 SupplyDelivery _$SupplyDeliveryFromJson(Map<String, dynamic> json) {
   return SupplyDelivery(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    implicitRules: json['implicitRules'],
+    language: json['language'],
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained:
-        json['contained'] == null ? null : resourceList(json['contained']),
+    contained: json['contained'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -32,8 +27,7 @@ SupplyDelivery _$SupplyDeliveryFromJson(Map<String, dynamic> json) {
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'],
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -52,9 +46,7 @@ SupplyDelivery _$SupplyDeliveryFromJson(Map<String, dynamic> json) {
     whenPrepared: json['whenPrepared'] == null
         ? null
         : Period.fromJson(json['whenPrepared'] as Map<String, dynamic>),
-    time: json['time'] == null
-        ? null
-        : FhirDateTime.fromJson(json['time'] as String),
+    time: json['time'],
     destination: json['destination'] == null
         ? null
         : Reference.fromJson(json['destination'] as Map<String, dynamic>),
@@ -73,23 +65,23 @@ Map<String, dynamic> _$SupplyDeliveryToJson(SupplyDelivery instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules);
+  writeNotNull('language', instance.language);
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', instance.status);
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('quantity', instance.quantity?.toJson());
   writeNotNull('suppliedItem', instance.suppliedItem?.toJson());
   writeNotNull('supplier', instance.supplier?.toJson());
   writeNotNull('whenPrepared', instance.whenPrepared?.toJson());
-  writeNotNull('time', instance.time?.toJson());
+  writeNotNull('time', instance.time);
   writeNotNull('destination', instance.destination?.toJson());
   writeNotNull('receiver', instance.receiver?.toJson());
   return val;

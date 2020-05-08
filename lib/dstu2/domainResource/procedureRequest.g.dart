@@ -8,21 +8,16 @@ part of 'procedureRequest.dart';
 
 ProcedureRequest _$ProcedureRequestFromJson(Map<String, dynamic> json) {
   return ProcedureRequest(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    implicitRules: json['implicitRules'],
+    language: json['language'],
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained:
-        json['contained'] == null ? null : resourceList(json['contained']),
+    contained: json['contained'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -44,30 +39,23 @@ ProcedureRequest _$ProcedureRequestFromJson(Map<String, dynamic> json) {
     reasonX: json['reasonX'] == null
         ? null
         : CodeableConcept.fromJson(json['reasonX'] as Map<String, dynamic>),
-    scheduledX: json['scheduledX'] == null
-        ? null
-        : FhirDateTime.fromJson(json['scheduledX'] as String),
+    scheduledX: json['scheduledX'],
     encounter: json['encounter'] == null
         ? null
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
     performer: json['performer'] == null
         ? null
         : Reference.fromJson(json['performer'] as Map<String, dynamic>),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'],
     notes: json['notes'] == null
         ? null
         : Annotation.fromJson(json['notes'] as Map<String, dynamic>),
     asNeededX: json['asNeededX'] as bool,
-    orderedOn: json['orderedOn'] == null
-        ? null
-        : FhirDateTime.fromJson(json['orderedOn'] as String),
+    orderedOn: json['orderedOn'],
     orderer: json['orderer'] == null
         ? null
         : Reference.fromJson(json['orderer'] as Map<String, dynamic>),
-    priority: json['priority'] == null
-        ? null
-        : Code.fromJson(json['priority'] as String),
+    priority: json['priority'],
   );
 }
 
@@ -80,10 +68,10 @@ Map<String, dynamic> _$ProcedureRequestToJson(ProcedureRequest instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules);
+  writeNotNull('language', instance.language);
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
   writeNotNull('extension', instance.extension?.toJson());
@@ -93,14 +81,14 @@ Map<String, dynamic> _$ProcedureRequestToJson(ProcedureRequest instance) {
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('bodySite', instance.bodySite?.toJson());
   writeNotNull('reasonX', instance.reasonX?.toJson());
-  writeNotNull('scheduledX', instance.scheduledX?.toJson());
+  writeNotNull('scheduledX', instance.scheduledX);
   writeNotNull('encounter', instance.encounter?.toJson());
   writeNotNull('performer', instance.performer?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', instance.status);
   writeNotNull('notes', instance.notes?.toJson());
   writeNotNull('asNeededX', instance.asNeededX);
-  writeNotNull('orderedOn', instance.orderedOn?.toJson());
+  writeNotNull('orderedOn', instance.orderedOn);
   writeNotNull('orderer', instance.orderer?.toJson());
-  writeNotNull('priority', instance.priority?.toJson());
+  writeNotNull('priority', instance.priority);
   return val;
 }

@@ -8,11 +8,11 @@ part of 'humanName.dart';
 
 HumanName _$HumanNameFromJson(Map<String, dynamic> json) {
   return HumanName(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'],
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
-    use: json['use'] == null ? null : Code.fromJson(json['use'] as String),
+    use: json['use'],
     text: json['text'] as String,
     family: json['family'] as String,
     given: json['given'] as String,
@@ -33,9 +33,9 @@ Map<String, dynamic> _$HumanNameToJson(HumanName instance) {
     }
   }
 
-  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('id', instance.id);
   writeNotNull('extension', instance.extension?.toJson());
-  writeNotNull('use', instance.use?.toJson());
+  writeNotNull('use', instance.use);
   writeNotNull('text', instance.text);
   writeNotNull('family', instance.family);
   writeNotNull('given', instance.given);

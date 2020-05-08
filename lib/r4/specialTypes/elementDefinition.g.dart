@@ -137,7 +137,8 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
             json['defaultValueDistance'] as Map<String, dynamic>),
     defaultValueDuration: json['defaultValueDuration'] == null
         ? null
-        : Duration(microseconds: json['defaultValueDuration'] as int),
+        : Duration.fromJson(
+            json['defaultValueDuration'] as Map<String, dynamic>),
     defaultValueHumanName: json['defaultValueHumanName'] == null
         ? null
         : HumanName.fromJson(
@@ -295,7 +296,7 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Distance.fromJson(json['fixedDistance'] as Map<String, dynamic>),
     fixedDuration: json['fixedDuration'] == null
         ? null
-        : Duration(microseconds: json['fixedDuration'] as int),
+        : Duration.fromJson(json['fixedDuration'] as Map<String, dynamic>),
     fixedHumanName: json['fixedHumanName'] == null
         ? null
         : HumanName.fromJson(json['fixedHumanName'] as Map<String, dynamic>),
@@ -425,7 +426,7 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Distance.fromJson(json['patternDistance'] as Map<String, dynamic>),
     patternDuration: json['patternDuration'] == null
         ? null
-        : Duration(microseconds: json['patternDuration'] as int),
+        : Duration.fromJson(json['patternDuration'] as Map<String, dynamic>),
     patternHumanName: json['patternHumanName'] == null
         ? null
         : HumanName.fromJson(json['patternHumanName'] as Map<String, dynamic>),
@@ -633,8 +634,7 @@ Map<String, dynamic> _$ElementDefinitionToJson(ElementDefinition instance) {
       'defaultValueContactPoint', instance.defaultValueContactPoint?.toJson());
   writeNotNull('defaultValueCount', instance.defaultValueCount?.toJson());
   writeNotNull('defaultValueDistance', instance.defaultValueDistance?.toJson());
-  writeNotNull(
-      'defaultValueDuration', instance.defaultValueDuration?.inMicroseconds);
+  writeNotNull('defaultValueDuration', instance.defaultValueDuration?.toJson());
   writeNotNull(
       'defaultValueHumanName', instance.defaultValueHumanName?.toJson());
   writeNotNull(
@@ -699,7 +699,7 @@ Map<String, dynamic> _$ElementDefinitionToJson(ElementDefinition instance) {
   writeNotNull('fixedContactPoint', instance.fixedContactPoint?.toJson());
   writeNotNull('fixedCount', instance.fixedCount?.toJson());
   writeNotNull('fixedDistance', instance.fixedDistance?.toJson());
-  writeNotNull('fixedDuration', instance.fixedDuration?.inMicroseconds);
+  writeNotNull('fixedDuration', instance.fixedDuration?.toJson());
   writeNotNull('fixedHumanName', instance.fixedHumanName?.toJson());
   writeNotNull('fixedIdentifier', instance.fixedIdentifier?.toJson());
   writeNotNull('fixedMoney', instance.fixedMoney?.toJson());
@@ -752,7 +752,7 @@ Map<String, dynamic> _$ElementDefinitionToJson(ElementDefinition instance) {
   writeNotNull('patternContactPoint', instance.patternContactPoint?.toJson());
   writeNotNull('patternCount', instance.patternCount?.toJson());
   writeNotNull('patternDistance', instance.patternDistance?.toJson());
-  writeNotNull('patternDuration', instance.patternDuration?.inMicroseconds);
+  writeNotNull('patternDuration', instance.patternDuration?.toJson());
   writeNotNull('patternHumanName', instance.patternHumanName?.toJson());
   writeNotNull('patternIdentifier', instance.patternIdentifier?.toJson());
   writeNotNull('patternMoney', instance.patternMoney?.toJson());
@@ -1083,7 +1083,7 @@ ElementDefinitionExample _$ElementDefinitionExampleFromJson(
         : Distance.fromJson(json['valueDistance'] as Map<String, dynamic>),
     valueDuration: json['valueDuration'] == null
         ? null
-        : Duration(microseconds: json['valueDuration'] as int),
+        : Duration.fromJson(json['valueDuration'] as Map<String, dynamic>),
     valueHumanName: json['valueHumanName'] == null
         ? null
         : HumanName.fromJson(json['valueHumanName'] as Map<String, dynamic>),
@@ -1202,7 +1202,7 @@ Map<String, dynamic> _$ElementDefinitionExampleToJson(
   writeNotNull('valueContactPoint', instance.valueContactPoint?.toJson());
   writeNotNull('valueCount', instance.valueCount?.toJson());
   writeNotNull('valueDistance', instance.valueDistance?.toJson());
-  writeNotNull('valueDuration', instance.valueDuration?.inMicroseconds);
+  writeNotNull('valueDuration', instance.valueDuration?.toJson());
   writeNotNull('valueHumanName', instance.valueHumanName?.toJson());
   writeNotNull('valueIdentifier', instance.valueIdentifier?.toJson());
   writeNotNull('valueMoney', instance.valueMoney?.toJson());
