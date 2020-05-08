@@ -2,10 +2,10 @@ import 'package:json_annotation/json_annotation.dart';
 
 import '../../fhir_dstu2.dart';
 
-part 'list.g.dart';
+part 'lists.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class List {
+class Lists {
   Id id;
   Meta meta;
   FhirUri implicitRules;
@@ -28,7 +28,7 @@ class List {
   List<ListEntry> entry;
   CodeableConcept emptyReason;
 
-  List({
+  Lists({
     this.id,
     this.meta,
     this.implicitRules,
@@ -52,8 +52,8 @@ class List {
     this.emptyReason,
   });
 
-  factory List.fromJson(Map<String, dynamic> json) => _$ListFromJson(json);
-  Map<String, dynamic> toJson() => _$ListToJson(this);
+  factory Lists.fromJson(Map<String, dynamic> json) => _$ListsFromJson(json);
+  Map<String, dynamic> toJson() => _$ListsToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)

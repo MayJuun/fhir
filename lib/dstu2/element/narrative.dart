@@ -9,7 +9,7 @@ class Narrative {
   Id id;
   List<Extension> extension;
   Code status;
-  Xhtml div;
+  String div;
 
   Narrative({
     this.id,

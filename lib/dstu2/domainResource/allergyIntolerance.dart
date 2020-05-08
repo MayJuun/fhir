@@ -72,4 +72,22 @@ class AllergyIntoleranceReaction {
   Code severity;
   CodeableConcept exposureRoute;
   Annotation note;
+
+  AllergyIntoleranceReaction({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.substance,
+    this.certainty,
+    this.manifestation,
+    this.description,
+    this.onset,
+    this.severity,
+    this.exposureRoute,
+    this.note,
+  });
+
+  factory AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
+      _$AllergyIntoleranceReactionFromJson(json);
+  Map<String, dynamic> toJson() => _$AllergyIntoleranceReactionToJson(this);
 }

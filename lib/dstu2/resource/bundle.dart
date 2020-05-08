@@ -63,6 +63,20 @@ class BundleEntry {
   BundleEntrySearch search;
   BundleEntryRequest request;
   BundleEntryResponse response;
+
+  BundleEntry({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.fullUrl,
+    this.resource,
+    this.request,
+    this.response,
+  });
+
+  factory BundleEntry.fromJson(Map<String, dynamic> json) =>
+      _$BundleEntryFromJson(json);
+  Map<String, dynamic> toJson() => _$BundleEntryToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)

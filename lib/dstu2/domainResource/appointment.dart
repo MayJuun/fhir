@@ -64,4 +64,18 @@ class AppointmentParticipant {
   Reference actor;
   Code required;
   Code status;
+
+  AppointmentParticipant({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.type,
+    this.actor,
+    this.required,
+    this.status,
+  });
+
+  factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
+      _$AppointmentParticipantFromJson(json);
+  Map<String, dynamic> toJson() => _$AppointmentParticipantToJson(this);
 }

@@ -33,4 +33,17 @@ class ParametersParameter {
   String name;
   Boolean valueX;
   Resource resource;
+
+  ParametersParameter({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.name,
+    this.valueX,
+    this.resource,
+  });
+
+  factory ParametersParameter.fromJson(Map<String, dynamic> json) =>
+      _$ParametersParameterFromJson(json);
+  Map<String, dynamic> toJson() => _$ParametersParameterToJson(this);
 }

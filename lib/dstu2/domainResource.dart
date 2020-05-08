@@ -44,7 +44,7 @@ export './domainResource/imagingStudy.dart';
 export './domainResource/immunization.dart';
 export './domainResource/immunizationRecommendation.dart';
 export './domainResource/implementationGuide.dart';
-export './domainResource/list.dart';
+export './domainResource/lists.dart';
 export './domainResource/location.dart';
 export './domainResource/media.dart';
 export './domainResource/medication.dart';
