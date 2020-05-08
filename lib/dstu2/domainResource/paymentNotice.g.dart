@@ -8,12 +8,16 @@ part of 'paymentNotice.dart';
 
 PaymentNotice _$PaymentNoticeFromJson(Map<String, dynamic> json) {
   return PaymentNotice(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'],
-    language: json['language'],
+    implicitRules: json['implicitRules'] == null
+        ? null
+        : FhirUri.fromJson(json['implicitRules'] as String),
+    language: json['language'] == null
+        ? null
+        : Code.fromJson(json['language'] as String),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -33,7 +37,9 @@ PaymentNotice _$PaymentNoticeFromJson(Map<String, dynamic> json) {
     originalRuleset: json['originalRuleset'] == null
         ? null
         : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
-    created: json['created'],
+    created: json['created'] == null
+        ? null
+        : FhirDateTime.fromJson(json['created'] as String),
     target: json['target'] == null
         ? null
         : Reference.fromJson(json['target'] as Map<String, dynamic>),
@@ -64,10 +70,10 @@ Map<String, dynamic> _$PaymentNoticeToJson(PaymentNotice instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules);
-  writeNotNull('language', instance.language);
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
   writeNotNull('extension', instance.extension?.toJson());
@@ -75,7 +81,7 @@ Map<String, dynamic> _$PaymentNoticeToJson(PaymentNotice instance) {
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('ruleset', instance.ruleset?.toJson());
   writeNotNull('originalRuleset', instance.originalRuleset?.toJson());
-  writeNotNull('created', instance.created);
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('target', instance.target?.toJson());
   writeNotNull('provider', instance.provider?.toJson());
   writeNotNull('organization', instance.organization?.toJson());

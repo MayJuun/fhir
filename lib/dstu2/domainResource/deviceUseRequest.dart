@@ -2,8 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 import '../../fhir_dstu2.dart';
 
-import '../res/resourceList.dart';
-
 part 'deviceUseRequest.g.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)

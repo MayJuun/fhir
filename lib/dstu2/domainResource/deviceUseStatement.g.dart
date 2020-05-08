@@ -8,12 +8,16 @@ part of 'deviceUseStatement.dart';
 
 DeviceUseStatement _$DeviceUseStatementFromJson(Map<String, dynamic> json) {
   return DeviceUseStatement(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'],
-    language: json['language'],
+    implicitRules: json['implicitRules'] == null
+        ? null
+        : FhirUri.fromJson(json['implicitRules'] as String),
+    language: json['language'] == null
+        ? null
+        : Code.fromJson(json['language'] as String),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -40,7 +44,9 @@ DeviceUseStatement _$DeviceUseStatementFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(json['indication'] as Map<String, dynamic>),
     notes: json['notes'] as String,
-    recordedOn: json['recordedOn'],
+    recordedOn: json['recordedOn'] == null
+        ? null
+        : FhirDateTime.fromJson(json['recordedOn'] as String),
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
@@ -59,10 +65,10 @@ Map<String, dynamic> _$DeviceUseStatementToJson(DeviceUseStatement instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules);
-  writeNotNull('language', instance.language);
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
   writeNotNull('extension', instance.extension?.toJson());
@@ -73,7 +79,7 @@ Map<String, dynamic> _$DeviceUseStatementToJson(DeviceUseStatement instance) {
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('indication', instance.indication?.toJson());
   writeNotNull('notes', instance.notes);
-  writeNotNull('recordedOn', instance.recordedOn);
+  writeNotNull('recordedOn', instance.recordedOn?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('timingX', instance.timingX?.toJson());
   return val;

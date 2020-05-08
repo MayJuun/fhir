@@ -8,12 +8,16 @@ part of 'basic.dart';
 
 Basic _$BasicFromJson(Map<String, dynamic> json) {
   return Basic(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'],
-    language: json['language'],
+    implicitRules: json['implicitRules'] == null
+        ? null
+        : FhirUri.fromJson(json['implicitRules'] as String),
+    language: json['language'] == null
+        ? null
+        : Code.fromJson(json['language'] as String),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -36,7 +40,9 @@ Basic _$BasicFromJson(Map<String, dynamic> json) {
     author: json['author'] == null
         ? null
         : Reference.fromJson(json['author'] as Map<String, dynamic>),
-    created: json['created'],
+    created: json['created'] == null
+        ? null
+        : Date.fromJson(json['created'] as String),
   );
 }
 
@@ -49,10 +55,10 @@ Map<String, dynamic> _$BasicToJson(Basic instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules);
-  writeNotNull('language', instance.language);
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
   writeNotNull('extension', instance.extension?.toJson());
@@ -61,6 +67,6 @@ Map<String, dynamic> _$BasicToJson(Basic instance) {
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('author', instance.author?.toJson());
-  writeNotNull('created', instance.created);
+  writeNotNull('created', instance.created?.toJson());
   return val;
 }

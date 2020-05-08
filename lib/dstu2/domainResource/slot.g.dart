@@ -8,12 +8,16 @@ part of 'slot.dart';
 
 Slot _$SlotFromJson(Map<String, dynamic> json) {
   return Slot(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'],
-    language: json['language'],
+    implicitRules: json['implicitRules'] == null
+        ? null
+        : FhirUri.fromJson(json['implicitRules'] as String),
+    language: json['language'] == null
+        ? null
+        : Code.fromJson(json['language'] as String),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -33,9 +37,13 @@ Slot _$SlotFromJson(Map<String, dynamic> json) {
     schedule: json['schedule'] == null
         ? null
         : Reference.fromJson(json['schedule'] as Map<String, dynamic>),
-    freeBusyType: json['freeBusyType'],
-    start: json['start'],
-    end: json['end'],
+    freeBusyType: json['freeBusyType'] == null
+        ? null
+        : Code.fromJson(json['freeBusyType'] as String),
+    start: json['start'] == null
+        ? null
+        : Instant.fromJson(json['start'] as String),
+    end: json['end'] == null ? null : Instant.fromJson(json['end'] as String),
     overbooked: json['overbooked'] as bool,
     comment: json['comment'] as String,
   );
@@ -50,10 +58,10 @@ Map<String, dynamic> _$SlotToJson(Slot instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules);
-  writeNotNull('language', instance.language);
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
   writeNotNull('extension', instance.extension?.toJson());
@@ -61,9 +69,9 @@ Map<String, dynamic> _$SlotToJson(Slot instance) {
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('schedule', instance.schedule?.toJson());
-  writeNotNull('freeBusyType', instance.freeBusyType);
-  writeNotNull('start', instance.start);
-  writeNotNull('end', instance.end);
+  writeNotNull('freeBusyType', instance.freeBusyType?.toJson());
+  writeNotNull('start', instance.start?.toJson());
+  writeNotNull('end', instance.end?.toJson());
   writeNotNull('overbooked', instance.overbooked);
   writeNotNull('comment', instance.comment);
   return val;

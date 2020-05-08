@@ -1,4 +1,8 @@
+import 'package:json_annotation/json_annotation.dart';
+
 import '../../fhir_dstu2.dart';
+
+part 'diagnosticOrder.g.dart';
 
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)

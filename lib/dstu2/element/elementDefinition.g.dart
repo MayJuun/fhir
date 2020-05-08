@@ -8,12 +8,14 @@ part of 'elementDefinition.dart';
 
 ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
   return ElementDefinition(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
     path: json['path'] as String,
-    representation: json['representation'],
+    representation: json['representation'] == null
+        ? null
+        : Code.fromJson(json['representation'] as String),
     name: json['name'] as String,
     label: json['label'] as String,
     code: json['code'] == null
@@ -24,9 +26,15 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
         : ElementDefinitionSlicing.fromJson(
             json['slicing'] as Map<String, dynamic>),
     short: json['short'] as String,
-    definition: json['definition'],
-    comments: json['comments'],
-    requirements: json['requirements'],
+    definition: json['definition'] == null
+        ? null
+        : Markdown.fromJson(json['definition'] as String),
+    comments: json['comments'] == null
+        ? null
+        : Markdown.fromJson(json['comments'] as String),
+    requirements: json['requirements'] == null
+        ? null
+        : Markdown.fromJson(json['requirements'] as String),
     alias: json['alias'] as String,
     min: json['min'] as int,
     max: json['max'] as int,
@@ -38,14 +46,18 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
         : ElementDefinitionType.fromJson(json['type'] as Map<String, dynamic>),
     nameReference: json['nameReference'] as String,
     defaultValueX: json['defaultValueX'] as bool,
-    meaningWhenMissing: json['meaningWhenMissing'],
+    meaningWhenMissing: json['meaningWhenMissing'] == null
+        ? null
+        : Markdown.fromJson(json['meaningWhenMissing'] as String),
     fixedX: json['fixedX'] as bool,
     patternX: json['patternX'] as bool,
     exampleX: json['exampleX'] as bool,
     minValueX: json['minValueX'] as bool,
     maxValueX: json['maxValueX'] as bool,
     maxLength: json['maxLength'] as int,
-    condition: json['condition'],
+    condition: json['condition'] == null
+        ? null
+        : Id.fromJson(json['condition'] as String),
     constraint: json['constraint'] == null
         ? null
         : ElementDefinitionConstraint.fromJson(
@@ -73,18 +85,18 @@ Map<String, dynamic> _$ElementDefinitionToJson(ElementDefinition instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('path', instance.path);
-  writeNotNull('representation', instance.representation);
+  writeNotNull('representation', instance.representation?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('label', instance.label);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('slicing', instance.slicing?.toJson());
   writeNotNull('short', instance.short);
-  writeNotNull('definition', instance.definition);
-  writeNotNull('comments', instance.comments);
-  writeNotNull('requirements', instance.requirements);
+  writeNotNull('definition', instance.definition?.toJson());
+  writeNotNull('comments', instance.comments?.toJson());
+  writeNotNull('requirements', instance.requirements?.toJson());
   writeNotNull('alias', instance.alias);
   writeNotNull('min', instance.min);
   writeNotNull('max', instance.max);
@@ -92,14 +104,14 @@ Map<String, dynamic> _$ElementDefinitionToJson(ElementDefinition instance) {
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('nameReference', instance.nameReference);
   writeNotNull('defaultValueX', instance.defaultValueX);
-  writeNotNull('meaningWhenMissing', instance.meaningWhenMissing);
+  writeNotNull('meaningWhenMissing', instance.meaningWhenMissing?.toJson());
   writeNotNull('fixedX', instance.fixedX);
   writeNotNull('patternX', instance.patternX);
   writeNotNull('exampleX', instance.exampleX);
   writeNotNull('minValueX', instance.minValueX);
   writeNotNull('maxValueX', instance.maxValueX);
   writeNotNull('maxLength', instance.maxLength);
-  writeNotNull('condition', instance.condition);
+  writeNotNull('condition', instance.condition?.toJson());
   writeNotNull('constraint', instance.constraint?.toJson());
   writeNotNull('mustSupport', instance.mustSupport);
   writeNotNull('isModifier', instance.isModifier);
@@ -112,14 +124,15 @@ Map<String, dynamic> _$ElementDefinitionToJson(ElementDefinition instance) {
 ElementDefinitionSlicing _$ElementDefinitionSlicingFromJson(
     Map<String, dynamic> json) {
   return ElementDefinitionSlicing(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
     discriminator: json['discriminator'] as String,
     description: json['description'] as String,
     ordered: json['ordered'] as bool,
-    rules: json['rules'],
+    rules:
+        json['rules'] == null ? null : Code.fromJson(json['rules'] as String),
   );
 }
 
@@ -133,19 +146,19 @@ Map<String, dynamic> _$ElementDefinitionSlicingToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('discriminator', instance.discriminator);
   writeNotNull('description', instance.description);
   writeNotNull('ordered', instance.ordered);
-  writeNotNull('rules', instance.rules);
+  writeNotNull('rules', instance.rules?.toJson());
   return val;
 }
 
 ElementDefinitionBase _$ElementDefinitionBaseFromJson(
     Map<String, dynamic> json) {
   return ElementDefinitionBase(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -165,7 +178,7 @@ Map<String, dynamic> _$ElementDefinitionBaseToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('path', instance.path);
   writeNotNull('min', instance.min);
@@ -176,13 +189,17 @@ Map<String, dynamic> _$ElementDefinitionBaseToJson(
 ElementDefinitionType _$ElementDefinitionTypeFromJson(
     Map<String, dynamic> json) {
   return ElementDefinitionType(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
-    code: json['code'],
-    profile: json['profile'],
-    aggregation: json['aggregation'],
+    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    profile: json['profile'] == null
+        ? null
+        : FhirUri.fromJson(json['profile'] as String),
+    aggregation: json['aggregation'] == null
+        ? null
+        : Code.fromJson(json['aggregation'] as String),
   );
 }
 
@@ -196,24 +213,26 @@ Map<String, dynamic> _$ElementDefinitionTypeToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
-  writeNotNull('code', instance.code);
-  writeNotNull('profile', instance.profile);
-  writeNotNull('aggregation', instance.aggregation);
+  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('profile', instance.profile?.toJson());
+  writeNotNull('aggregation', instance.aggregation?.toJson());
   return val;
 }
 
 ElementDefinitionConstraint _$ElementDefinitionConstraintFromJson(
     Map<String, dynamic> json) {
   return ElementDefinitionConstraint(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
-    key: json['key'],
+    key: json['key'] == null ? null : Id.fromJson(json['key'] as String),
     requirements: json['requirements'] as String,
-    severity: json['severity'],
+    severity: json['severity'] == null
+        ? null
+        : Code.fromJson(json['severity'] as String),
     human: json['human'] as String,
     xpath: json['xpath'] as String,
   );
@@ -229,11 +248,11 @@ Map<String, dynamic> _$ElementDefinitionConstraintToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
-  writeNotNull('key', instance.key);
+  writeNotNull('key', instance.key?.toJson());
   writeNotNull('requirements', instance.requirements);
-  writeNotNull('severity', instance.severity);
+  writeNotNull('severity', instance.severity?.toJson());
   writeNotNull('human', instance.human);
   writeNotNull('xpath', instance.xpath);
   return val;
@@ -242,13 +261,17 @@ Map<String, dynamic> _$ElementDefinitionConstraintToJson(
 ElementDefinitionBinding _$ElementDefinitionBindingFromJson(
     Map<String, dynamic> json) {
   return ElementDefinitionBinding(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
-    strength: json['strength'],
+    strength: json['strength'] == null
+        ? null
+        : Code.fromJson(json['strength'] as String),
     description: json['description'] as String,
-    valueSetX: json['valueSetX'],
+    valueSetX: json['valueSetX'] == null
+        ? null
+        : FhirUri.fromJson(json['valueSetX'] as String),
   );
 }
 
@@ -262,23 +285,27 @@ Map<String, dynamic> _$ElementDefinitionBindingToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
-  writeNotNull('strength', instance.strength);
+  writeNotNull('strength', instance.strength?.toJson());
   writeNotNull('description', instance.description);
-  writeNotNull('valueSetX', instance.valueSetX);
+  writeNotNull('valueSetX', instance.valueSetX?.toJson());
   return val;
 }
 
 ElementDefinitionMapping _$ElementDefinitionMappingFromJson(
     Map<String, dynamic> json) {
   return ElementDefinitionMapping(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
-    identity: json['identity'],
-    language: json['language'],
+    identity: json['identity'] == null
+        ? null
+        : Id.fromJson(json['identity'] as String),
+    language: json['language'] == null
+        ? null
+        : Code.fromJson(json['language'] as String),
     map: json['map'] as String,
   );
 }
@@ -293,10 +320,10 @@ Map<String, dynamic> _$ElementDefinitionMappingToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
-  writeNotNull('identity', instance.identity);
-  writeNotNull('language', instance.language);
+  writeNotNull('identity', instance.identity?.toJson());
+  writeNotNull('language', instance.language?.toJson());
   writeNotNull('map', instance.map);
   return val;
 }

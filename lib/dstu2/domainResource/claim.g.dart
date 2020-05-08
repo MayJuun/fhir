@@ -8,12 +8,16 @@ part of 'claim.dart';
 
 Claim _$ClaimFromJson(Map<String, dynamic> json) {
   return Claim(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'],
-    language: json['language'],
+    implicitRules: json['implicitRules'] == null
+        ? null
+        : FhirUri.fromJson(json['implicitRules'] as String),
+    language: json['language'] == null
+        ? null
+        : Code.fromJson(json['language'] as String),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -26,7 +30,7 @@ Claim _$ClaimFromJson(Map<String, dynamic> json) {
     modifierExtension: json['modifierExtension'] == null
         ? null
         : Extension.fromJson(json['modifierExtension'] as Map<String, dynamic>),
-    type: json['type'],
+    type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -36,7 +40,9 @@ Claim _$ClaimFromJson(Map<String, dynamic> json) {
     originalRuleset: json['originalRuleset'] == null
         ? null
         : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
-    created: json['created'],
+    created: json['created'] == null
+        ? null
+        : FhirDateTime.fromJson(json['created'] as String),
     target: json['target'] == null
         ? null
         : Reference.fromJson(json['target'] as Map<String, dynamic>),
@@ -46,7 +52,7 @@ Claim _$ClaimFromJson(Map<String, dynamic> json) {
     organization: json['organization'] == null
         ? null
         : Reference.fromJson(json['organization'] as Map<String, dynamic>),
-    use: json['use'],
+    use: json['use'] == null ? null : Code.fromJson(json['use'] as String),
     priority: json['priority'] == null
         ? null
         : Coding.fromJson(json['priority'] as Map<String, dynamic>),
@@ -88,7 +94,9 @@ Claim _$ClaimFromJson(Map<String, dynamic> json) {
         ? null
         : Coding.fromJson(json['exception'] as Map<String, dynamic>),
     school: json['school'] as String,
-    accident: json['accident'],
+    accident: json['accident'] == null
+        ? null
+        : Date.fromJson(json['accident'] as String),
     accidentType: json['accidentType'] == null
         ? null
         : Coding.fromJson(json['accidentType'] as Map<String, dynamic>),
@@ -118,23 +126,23 @@ Map<String, dynamic> _$ClaimToJson(Claim instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules);
-  writeNotNull('language', instance.language);
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('type', instance.type);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('ruleset', instance.ruleset?.toJson());
   writeNotNull('originalRuleset', instance.originalRuleset?.toJson());
-  writeNotNull('created', instance.created);
+  writeNotNull('created', instance.created?.toJson());
   writeNotNull('target', instance.target?.toJson());
   writeNotNull('provider', instance.provider?.toJson());
   writeNotNull('organization', instance.organization?.toJson());
-  writeNotNull('use', instance.use);
+  writeNotNull('use', instance.use?.toJson());
   writeNotNull('priority', instance.priority?.toJson());
   writeNotNull('fundsReserve', instance.fundsReserve?.toJson());
   writeNotNull('enterer', instance.enterer?.toJson());
@@ -149,7 +157,7 @@ Map<String, dynamic> _$ClaimToJson(Claim instance) {
   writeNotNull('coverage', instance.coverage?.toJson());
   writeNotNull('exception', instance.exception?.toJson());
   writeNotNull('school', instance.school);
-  writeNotNull('accident', instance.accident);
+  writeNotNull('accident', instance.accident?.toJson());
   writeNotNull('accidentType', instance.accidentType?.toJson());
   writeNotNull(
       'interventionException', instance.interventionException?.toJson());
@@ -161,7 +169,7 @@ Map<String, dynamic> _$ClaimToJson(Claim instance) {
 
 ClaimPayee _$ClaimPayeeFromJson(Map<String, dynamic> json) {
   return ClaimPayee(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -192,7 +200,7 @@ Map<String, dynamic> _$ClaimPayeeToJson(ClaimPayee instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('type', instance.type?.toJson());
@@ -204,7 +212,7 @@ Map<String, dynamic> _$ClaimPayeeToJson(ClaimPayee instance) {
 
 ClaimDiagnosis _$ClaimDiagnosisFromJson(Map<String, dynamic> json) {
   return ClaimDiagnosis(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -227,7 +235,7 @@ Map<String, dynamic> _$ClaimDiagnosisToJson(ClaimDiagnosis instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('sequence', instance.sequence);
@@ -237,7 +245,7 @@ Map<String, dynamic> _$ClaimDiagnosisToJson(ClaimDiagnosis instance) {
 
 ClaimCoverage _$ClaimCoverageFromJson(Map<String, dynamic> json) {
   return ClaimCoverage(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -272,7 +280,7 @@ Map<String, dynamic> _$ClaimCoverageToJson(ClaimCoverage instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('sequence', instance.sequence);
@@ -288,7 +296,7 @@ Map<String, dynamic> _$ClaimCoverageToJson(ClaimCoverage instance) {
 
 ClaimItem _$ClaimItemFromJson(Map<String, dynamic> json) {
   return ClaimItem(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -306,7 +314,9 @@ ClaimItem _$ClaimItemFromJson(Map<String, dynamic> json) {
     service: json['service'] == null
         ? null
         : Coding.fromJson(json['service'] as Map<String, dynamic>),
-    serviceDate: json['serviceDate'],
+    serviceDate: json['serviceDate'] == null
+        ? null
+        : Date.fromJson(json['serviceDate'] as String),
     quantity: json['quantity'] == null
         ? null
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
@@ -348,7 +358,7 @@ Map<String, dynamic> _$ClaimItemToJson(ClaimItem instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('sequence', instance.sequence);
@@ -356,7 +366,7 @@ Map<String, dynamic> _$ClaimItemToJson(ClaimItem instance) {
   writeNotNull('provider', instance.provider?.toJson());
   writeNotNull('diagnosisLinkId', instance.diagnosisLinkId);
   writeNotNull('service', instance.service?.toJson());
-  writeNotNull('serviceDate', instance.serviceDate);
+  writeNotNull('serviceDate', instance.serviceDate?.toJson());
   writeNotNull('quantity', instance.quantity?.toJson());
   writeNotNull('unitPrice', instance.unitPrice?.toJson());
   writeNotNull('factor', instance.factor);
@@ -373,7 +383,7 @@ Map<String, dynamic> _$ClaimItemToJson(ClaimItem instance) {
 
 ClaimMissingTeeth _$ClaimMissingTeethFromJson(Map<String, dynamic> json) {
   return ClaimMissingTeeth(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -386,7 +396,9 @@ ClaimMissingTeeth _$ClaimMissingTeethFromJson(Map<String, dynamic> json) {
     reason: json['reason'] == null
         ? null
         : Coding.fromJson(json['reason'] as Map<String, dynamic>),
-    extractionDate: json['extractionDate'],
+    extractionDate: json['extractionDate'] == null
+        ? null
+        : Date.fromJson(json['extractionDate'] as String),
   );
 }
 
@@ -399,18 +411,18 @@ Map<String, dynamic> _$ClaimMissingTeethToJson(ClaimMissingTeeth instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('tooth', instance.tooth?.toJson());
   writeNotNull('reason', instance.reason?.toJson());
-  writeNotNull('extractionDate', instance.extractionDate);
+  writeNotNull('extractionDate', instance.extractionDate?.toJson());
   return val;
 }
 
 ItemDetail _$ItemDetailFromJson(Map<String, dynamic> json) {
   return ItemDetail(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -451,7 +463,7 @@ Map<String, dynamic> _$ItemDetailToJson(ItemDetail instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('sequence', instance.sequence);
@@ -469,7 +481,7 @@ Map<String, dynamic> _$ItemDetailToJson(ItemDetail instance) {
 
 ItemProsthesis _$ItemProsthesisFromJson(Map<String, dynamic> json) {
   return ItemProsthesis(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -477,7 +489,9 @@ ItemProsthesis _$ItemProsthesisFromJson(Map<String, dynamic> json) {
         ? null
         : Extension.fromJson(json['modifierExtension'] as Map<String, dynamic>),
     initial: json['initial'] as bool,
-    priorDate: json['priorDate'],
+    priorDate: json['priorDate'] == null
+        ? null
+        : Date.fromJson(json['priorDate'] as String),
     priorMaterial: json['priorMaterial'] == null
         ? null
         : Coding.fromJson(json['priorMaterial'] as Map<String, dynamic>),
@@ -493,18 +507,18 @@ Map<String, dynamic> _$ItemProsthesisToJson(ItemProsthesis instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('initial', instance.initial);
-  writeNotNull('priorDate', instance.priorDate);
+  writeNotNull('priorDate', instance.priorDate?.toJson());
   writeNotNull('priorMaterial', instance.priorMaterial?.toJson());
   return val;
 }
 
 DetailSubdetail _$DetailSubdetailFromJson(Map<String, dynamic> json) {
   return DetailSubdetail()
-    ..id = json['id']
+    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
     ..extension = json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>)
@@ -522,7 +536,7 @@ Map<String, dynamic> _$DetailSubdetailToJson(DetailSubdetail instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   return val;

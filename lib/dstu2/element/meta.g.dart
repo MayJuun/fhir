@@ -8,13 +8,19 @@ part of 'meta.dart';
 
 Meta _$MetaFromJson(Map<String, dynamic> json) {
   return Meta(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
-    versionId: json['versionId'],
-    lastUpdated: json['lastUpdated'],
-    profile: json['profile'],
+    versionId: json['versionId'] == null
+        ? null
+        : Id.fromJson(json['versionId'] as String),
+    lastUpdated: json['lastUpdated'] == null
+        ? null
+        : Instant.fromJson(json['lastUpdated'] as String),
+    profile: json['profile'] == null
+        ? null
+        : FhirUri.fromJson(json['profile'] as String),
     security: json['security'] == null
         ? null
         : Coding.fromJson(json['security'] as Map<String, dynamic>),
@@ -33,11 +39,11 @@ Map<String, dynamic> _$MetaToJson(Meta instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
-  writeNotNull('versionId', instance.versionId);
-  writeNotNull('lastUpdated', instance.lastUpdated);
-  writeNotNull('profile', instance.profile);
+  writeNotNull('versionId', instance.versionId?.toJson());
+  writeNotNull('lastUpdated', instance.lastUpdated?.toJson());
+  writeNotNull('profile', instance.profile?.toJson());
   writeNotNull('security', instance.security?.toJson());
   writeNotNull('tag', instance.tag?.toJson());
   return val;

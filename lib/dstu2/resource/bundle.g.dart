@@ -20,14 +20,12 @@ Bundle _$BundleFromJson(Map<String, dynamic> json) {
         : Code.fromJson(json['language'] as String),
     type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
     total: json['total'] as int,
-    link: (json['link'] as List)
-        ?.map((e) =>
-            e == null ? null : BundleLink.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    entry: (json['entry'] as List)
-        ?.map((e) =>
-            e == null ? null : BundleEntry.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    link: json['link'] == null
+        ? null
+        : List.fromJson(json['link'] as Map<String, dynamic>),
+    entry: json['entry'] == null
+        ? null
+        : List.fromJson(json['entry'] as Map<String, dynamic>),
     signature: json['signature'] == null
         ? null
         : Signature.fromJson(json['signature'] as Map<String, dynamic>),
@@ -49,8 +47,8 @@ Map<String, dynamic> _$BundleToJson(Bundle instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('total', instance.total);
-  writeNotNull('link', instance.link?.map((e) => e?.toJson())?.toList());
-  writeNotNull('entry', instance.entry?.map((e) => e?.toJson())?.toList());
+  writeNotNull('link', instance.link?.toJson());
+  writeNotNull('entry', instance.entry?.toJson());
   writeNotNull('signature', instance.signature?.toJson());
   return val;
 }
@@ -95,14 +93,13 @@ BundleEntry _$BundleEntryFromJson(Map<String, dynamic> json) {
     modifierExtension: json['modifierExtension'] == null
         ? null
         : Extension.fromJson(json['modifierExtension'] as Map<String, dynamic>),
-    link: (json['link'] as List)
-        ?.map((e) =>
-            e == null ? null : BundleLink.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    link: json['link'] == null
+        ? null
+        : List.fromJson(json['link'] as Map<String, dynamic>),
     fullUrl: json['fullUrl'] == null
         ? null
         : FhirUri.fromJson(json['fullUrl'] as String),
-    resource: json['resource'] == null ? null : resourceList(json['resource']),
+    resource: json['resource'],
     search: json['search'] == null
         ? null
         : EntrySearch.fromJson(json['search'] as Map<String, dynamic>),
@@ -127,7 +124,7 @@ Map<String, dynamic> _$BundleEntryToJson(BundleEntry instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('link', instance.link?.map((e) => e?.toJson())?.toList());
+  writeNotNull('link', instance.link?.toJson());
   writeNotNull('fullUrl', instance.fullUrl?.toJson());
   writeNotNull('resource', instance.resource);
   writeNotNull('search', instance.search?.toJson());

@@ -8,14 +8,16 @@ part of 'annotation.dart';
 
 Annotation _$AnnotationFromJson(Map<String, dynamic> json) {
   return Annotation(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
     authorX: json['authorX'] == null
         ? null
         : Reference.fromJson(json['authorX'] as Map<String, dynamic>),
-    time: json['time'],
+    time: json['time'] == null
+        ? null
+        : FhirDateTime.fromJson(json['time'] as String),
     text: json['text'] as String,
   );
 }
@@ -29,10 +31,10 @@ Map<String, dynamic> _$AnnotationToJson(Annotation instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('authorX', instance.authorX?.toJson());
-  writeNotNull('time', instance.time);
+  writeNotNull('time', instance.time?.toJson());
   writeNotNull('text', instance.text);
   return val;
 }

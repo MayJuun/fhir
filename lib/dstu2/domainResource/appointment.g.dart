@@ -8,12 +8,16 @@ part of 'appointment.dart';
 
 Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
   return Appointment(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'],
-    language: json['language'],
+    implicitRules: json['implicitRules'] == null
+        ? null
+        : FhirUri.fromJson(json['implicitRules'] as String),
+    language: json['language'] == null
+        ? null
+        : Code.fromJson(json['language'] as String),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -29,7 +33,8 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    status: json['status'],
+    status:
+        json['status'] == null ? null : Code.fromJson(json['status'] as String),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -38,8 +43,10 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
         : CodeableConcept.fromJson(json['reason'] as Map<String, dynamic>),
     priority: json['priority'] as int,
     description: json['description'] as String,
-    start: json['start'],
-    end: json['end'],
+    start: json['start'] == null
+        ? null
+        : Instant.fromJson(json['start'] as String),
+    end: json['end'] == null ? null : Instant.fromJson(json['end'] as String),
     minutesDuration: json['minutesDuration'] as int,
     slot: json['slot'] == null
         ? null
@@ -61,22 +68,22 @@ Map<String, dynamic> _$AppointmentToJson(Appointment instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules);
-  writeNotNull('language', instance.language);
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('reason', instance.reason?.toJson());
   writeNotNull('priority', instance.priority);
   writeNotNull('description', instance.description);
-  writeNotNull('start', instance.start);
-  writeNotNull('end', instance.end);
+  writeNotNull('start', instance.start?.toJson());
+  writeNotNull('end', instance.end?.toJson());
   writeNotNull('minutesDuration', instance.minutesDuration);
   writeNotNull('slot', instance.slot?.toJson());
   writeNotNull('comment', instance.comment);
@@ -87,7 +94,7 @@ Map<String, dynamic> _$AppointmentToJson(Appointment instance) {
 AppointmentParticipant _$AppointmentParticipantFromJson(
     Map<String, dynamic> json) {
   return AppointmentParticipant(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -100,8 +107,11 @@ AppointmentParticipant _$AppointmentParticipantFromJson(
     actor: json['actor'] == null
         ? null
         : Reference.fromJson(json['actor'] as Map<String, dynamic>),
-    required: json['required'],
-    status: json['status'],
+    required: json['required'] == null
+        ? null
+        : Code.fromJson(json['required'] as String),
+    status:
+        json['status'] == null ? null : Code.fromJson(json['status'] as String),
   );
 }
 
@@ -115,12 +125,12 @@ Map<String, dynamic> _$AppointmentParticipantToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('actor', instance.actor?.toJson());
-  writeNotNull('required', instance.required);
-  writeNotNull('status', instance.status);
+  writeNotNull('required', instance.required?.toJson());
+  writeNotNull('status', instance.status?.toJson());
   return val;
 }

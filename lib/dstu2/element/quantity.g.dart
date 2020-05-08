@@ -8,15 +8,19 @@ part of 'quantity.dart';
 
 Quantity _$QuantityFromJson(Map<String, dynamic> json) {
   return Quantity(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
     value: (json['value'] as num)?.toDouble(),
-    comparator: json['comparator'],
+    comparator: json['comparator'] == null
+        ? null
+        : Code.fromJson(json['comparator'] as String),
     unit: json['unit'] as String,
-    system: json['system'],
-    code: json['code'],
+    system: json['system'] == null
+        ? null
+        : FhirUri.fromJson(json['system'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
   );
 }
 
@@ -29,12 +33,12 @@ Map<String, dynamic> _$QuantityToJson(Quantity instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('value', instance.value);
-  writeNotNull('comparator', instance.comparator);
+  writeNotNull('comparator', instance.comparator?.toJson());
   writeNotNull('unit', instance.unit);
-  writeNotNull('system', instance.system);
-  writeNotNull('code', instance.code);
+  writeNotNull('system', instance.system?.toJson());
+  writeNotNull('code', instance.code?.toJson());
   return val;
 }

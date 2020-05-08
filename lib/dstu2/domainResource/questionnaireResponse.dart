@@ -1,7 +1,8 @@
+import 'package:json_annotation/json_annotation.dart';
+
 import '../../fhir_dstu2.dart';
 
 part 'questionnaireResponse.g.dart';
-
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class QuestionnaireResponse {
@@ -55,7 +56,7 @@ String linkId;
 String title;
 String text;
 Reference subject;
-GroupQuestion question;
+QuestionnaireResponseGroupQuestion question;
 
 QuestionnaireResponseGroup({
 this.id,
@@ -72,7 +73,7 @@ factory QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) => _$Ques
 Map<String, dynamic> toJson() => _$QuestionnaireResponseGroupToJson(this);
 }
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class GroupQuestion {
+class QuestionnaireResponseGroupQuestion {
 Id id;
 Extension extension;
 Extension modifierExtension;
@@ -80,7 +81,7 @@ String linkId;
 String text;
 QuestionAnswer answer;
 
-GroupQuestion({
+QuestionnaireResponseGroupQuestion({
 this.id,
 this.extension,
 this.modifierExtension,
@@ -89,6 +90,6 @@ this.text,
 this.answer,
 
 });
-factory GroupQuestion.fromJson(Map<String, dynamic> json) => _$GroupQuestionFromJson(json);
-Map<String, dynamic> toJson() => _$GroupQuestionToJson(this);
+factory QuestionnaireResponseGroupQuestion.fromJson(Map<String, dynamic> json) => _$QuestionnaireResponseGroupQuestionFromJson(json);
+Map<String, dynamic> toJson() => _$QuestionnaireResponseGroupQuestionToJson(this);
 }

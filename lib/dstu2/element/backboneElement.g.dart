@@ -8,7 +8,7 @@ part of 'backboneElement.dart';
 
 BackboneElement _$BackboneElementFromJson(Map<String, dynamic> json) {
   return BackboneElement(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -27,7 +27,7 @@ Map<String, dynamic> _$BackboneElementToJson(BackboneElement instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   return val;

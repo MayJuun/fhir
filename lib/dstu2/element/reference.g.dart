@@ -8,7 +8,7 @@ part of 'reference.dart';
 
 Reference _$ReferenceFromJson(Map<String, dynamic> json) {
   return Reference(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -26,7 +26,7 @@ Map<String, dynamic> _$ReferenceToJson(Reference instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('reference', instance.reference);
   writeNotNull('display', instance.display);

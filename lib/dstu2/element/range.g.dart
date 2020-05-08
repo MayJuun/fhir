@@ -8,7 +8,7 @@ part of 'range.dart';
 
 Range _$RangeFromJson(Map<String, dynamic> json) {
   return Range(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -30,7 +30,7 @@ Map<String, dynamic> _$RangeToJson(Range instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('low', instance.low?.toJson());
   writeNotNull('high', instance.high?.toJson());

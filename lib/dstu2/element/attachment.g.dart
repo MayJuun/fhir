@@ -8,18 +8,28 @@ part of 'attachment.dart';
 
 Attachment _$AttachmentFromJson(Map<String, dynamic> json) {
   return Attachment(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
-    contentType: json['contentType'],
-    language: json['language'],
-    data: json['data'],
-    url: json['url'],
+    contentType: json['contentType'] == null
+        ? null
+        : Code.fromJson(json['contentType'] as String),
+    language: json['language'] == null
+        ? null
+        : Code.fromJson(json['language'] as String),
+    data: json['data'] == null
+        ? null
+        : Base64Binary.fromJson(json['data'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
     size: json['size'] as int,
-    hash: json['hash'],
+    hash: json['hash'] == null
+        ? null
+        : Base64Binary.fromJson(json['hash'] as String),
     title: json['title'] as String,
-    creation: json['creation'],
+    creation: json['creation'] == null
+        ? null
+        : FhirDateTime.fromJson(json['creation'] as String),
   );
 }
 
@@ -32,15 +42,15 @@ Map<String, dynamic> _$AttachmentToJson(Attachment instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
-  writeNotNull('contentType', instance.contentType);
-  writeNotNull('language', instance.language);
-  writeNotNull('data', instance.data);
-  writeNotNull('url', instance.url);
+  writeNotNull('contentType', instance.contentType?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('data', instance.data?.toJson());
+  writeNotNull('url', instance.url?.toJson());
   writeNotNull('size', instance.size);
-  writeNotNull('hash', instance.hash);
+  writeNotNull('hash', instance.hash?.toJson());
   writeNotNull('title', instance.title);
-  writeNotNull('creation', instance.creation);
+  writeNotNull('creation', instance.creation?.toJson());
   return val;
 }

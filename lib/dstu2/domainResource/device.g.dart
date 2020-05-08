@@ -8,12 +8,16 @@ part of 'device.dart';
 
 Device _$DeviceFromJson(Map<String, dynamic> json) {
   return Device(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'],
-    language: json['language'],
+    implicitRules: json['implicitRules'] == null
+        ? null
+        : FhirUri.fromJson(json['implicitRules'] as String),
+    language: json['language'] == null
+        ? null
+        : Code.fromJson(json['language'] as String),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -33,12 +37,17 @@ Device _$DeviceFromJson(Map<String, dynamic> json) {
     note: json['note'] == null
         ? null
         : Annotation.fromJson(json['note'] as Map<String, dynamic>),
-    status: json['status'],
+    status:
+        json['status'] == null ? null : Code.fromJson(json['status'] as String),
     manufacturer: json['manufacturer'] as String,
     model: json['model'] as String,
     version: json['version'] as String,
-    manufactureDate: json['manufactureDate'],
-    expiry: json['expiry'],
+    manufactureDate: json['manufactureDate'] == null
+        ? null
+        : FhirDateTime.fromJson(json['manufactureDate'] as String),
+    expiry: json['expiry'] == null
+        ? null
+        : FhirDateTime.fromJson(json['expiry'] as String),
     udi: json['udi'] as String,
     lotNumber: json['lotNumber'] as String,
     owner: json['owner'] == null
@@ -53,7 +62,7 @@ Device _$DeviceFromJson(Map<String, dynamic> json) {
     contact: json['contact'] == null
         ? null
         : ContactPoint.fromJson(json['contact'] as Map<String, dynamic>),
-    url: json['url'],
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
   );
 }
 
@@ -66,10 +75,10 @@ Map<String, dynamic> _$DeviceToJson(Device instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules);
-  writeNotNull('language', instance.language);
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
   writeNotNull('extension', instance.extension?.toJson());
@@ -77,18 +86,18 @@ Map<String, dynamic> _$DeviceToJson(Device instance) {
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('note', instance.note?.toJson());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('manufacturer', instance.manufacturer);
   writeNotNull('model', instance.model);
   writeNotNull('version', instance.version);
-  writeNotNull('manufactureDate', instance.manufactureDate);
-  writeNotNull('expiry', instance.expiry);
+  writeNotNull('manufactureDate', instance.manufactureDate?.toJson());
+  writeNotNull('expiry', instance.expiry?.toJson());
   writeNotNull('udi', instance.udi);
   writeNotNull('lotNumber', instance.lotNumber);
   writeNotNull('owner', instance.owner?.toJson());
   writeNotNull('location', instance.location?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('contact', instance.contact?.toJson());
-  writeNotNull('url', instance.url);
+  writeNotNull('url', instance.url?.toJson());
   return val;
 }

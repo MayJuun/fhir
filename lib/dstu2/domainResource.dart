@@ -89,7 +89,6 @@ export './domainResource/supplyRequest.dart';
 export './domainResource/testScript.dart';
 export './domainResource/valueSet.dart';
 export './domainResource/visionPrescription.dart';
-
 export './domainResource/basic.dart';
 export './domainResource/bodySite.dart';
 export './domainResource/condition.dart';

@@ -8,12 +8,16 @@ part of 'carePlan.dart';
 
 CarePlan _$CarePlanFromJson(Map<String, dynamic> json) {
   return CarePlan(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'],
-    language: json['language'],
+    implicitRules: json['implicitRules'] == null
+        ? null
+        : FhirUri.fromJson(json['implicitRules'] as String),
+    language: json['language'] == null
+        ? null
+        : Code.fromJson(json['language'] as String),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -32,7 +36,8 @@ CarePlan _$CarePlanFromJson(Map<String, dynamic> json) {
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-    status: json['status'],
+    status:
+        json['status'] == null ? null : Code.fromJson(json['status'] as String),
     context: json['context'] == null
         ? null
         : Reference.fromJson(json['context'] as Map<String, dynamic>),
@@ -42,7 +47,9 @@ CarePlan _$CarePlanFromJson(Map<String, dynamic> json) {
     author: json['author'] == null
         ? null
         : Reference.fromJson(json['author'] as Map<String, dynamic>),
-    modified: json['modified'],
+    modified: json['modified'] == null
+        ? null
+        : FhirDateTime.fromJson(json['modified'] as String),
     category: json['category'] == null
         ? null
         : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
@@ -82,21 +89,21 @@ Map<String, dynamic> _$CarePlanToJson(CarePlan instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules);
-  writeNotNull('language', instance.language);
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('context', instance.context?.toJson());
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('author', instance.author?.toJson());
-  writeNotNull('modified', instance.modified);
+  writeNotNull('modified', instance.modified?.toJson());
   writeNotNull('category', instance.category?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('addresses', instance.addresses?.toJson());
@@ -111,14 +118,14 @@ Map<String, dynamic> _$CarePlanToJson(CarePlan instance) {
 
 CarePlanRelatedPlan _$CarePlanRelatedPlanFromJson(Map<String, dynamic> json) {
   return CarePlanRelatedPlan(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
     modifierExtension: json['modifierExtension'] == null
         ? null
         : Extension.fromJson(json['modifierExtension'] as Map<String, dynamic>),
-    code: json['code'],
+    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
     plan: json['plan'] == null
         ? null
         : Reference.fromJson(json['plan'] as Map<String, dynamic>),
@@ -134,17 +141,17 @@ Map<String, dynamic> _$CarePlanRelatedPlanToJson(CarePlanRelatedPlan instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
-  writeNotNull('code', instance.code);
+  writeNotNull('code', instance.code?.toJson());
   writeNotNull('plan', instance.plan?.toJson());
   return val;
 }
 
 ActivityDetail _$ActivityDetailFromJson(Map<String, dynamic> json) {
   return ActivityDetail(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
@@ -166,7 +173,8 @@ ActivityDetail _$ActivityDetailFromJson(Map<String, dynamic> json) {
     goal: json['goal'] == null
         ? null
         : Reference.fromJson(json['goal'] as Map<String, dynamic>),
-    status: json['status'],
+    status:
+        json['status'] == null ? null : Code.fromJson(json['status'] as String),
     statusReason: json['statusReason'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -203,7 +211,7 @@ Map<String, dynamic> _$ActivityDetailToJson(ActivityDetail instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
   writeNotNull('modifierExtension', instance.modifierExtension?.toJson());
   writeNotNull('category', instance.category?.toJson());
@@ -211,7 +219,7 @@ Map<String, dynamic> _$ActivityDetailToJson(ActivityDetail instance) {
   writeNotNull('reasonCode', instance.reasonCode?.toJson());
   writeNotNull('reasonReference', instance.reasonReference?.toJson());
   writeNotNull('goal', instance.goal?.toJson());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('statusReason', instance.statusReason?.toJson());
   writeNotNull('prohibited', instance.prohibited);
   writeNotNull('scheduledX', instance.scheduledX?.toJson());

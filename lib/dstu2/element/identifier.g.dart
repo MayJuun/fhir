@@ -8,15 +8,17 @@ part of 'identifier.dart';
 
 Identifier _$IdentifierFromJson(Map<String, dynamic> json) {
   return Identifier(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
-    use: json['use'],
+    use: json['use'] == null ? null : Code.fromJson(json['use'] as String),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    system: json['system'],
+    system: json['system'] == null
+        ? null
+        : FhirUri.fromJson(json['system'] as String),
     value: json['value'] as String,
     period: json['period'] == null
         ? null
@@ -36,11 +38,11 @@ Map<String, dynamic> _$IdentifierToJson(Identifier instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
-  writeNotNull('use', instance.use);
+  writeNotNull('use', instance.use?.toJson());
   writeNotNull('type', instance.type?.toJson());
-  writeNotNull('system', instance.system);
+  writeNotNull('system', instance.system?.toJson());
   writeNotNull('value', instance.value);
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('assigner', instance.assigner?.toJson());

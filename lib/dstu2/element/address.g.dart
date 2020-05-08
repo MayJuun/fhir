@@ -8,12 +8,12 @@ part of 'address.dart';
 
 Address _$AddressFromJson(Map<String, dynamic> json) {
   return Address(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
-    use: json['use'],
-    type: json['type'],
+    use: json['use'] == null ? null : Code.fromJson(json['use'] as String),
+    type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
     text: json['text'] as String,
     line: json['line'] as String,
     city: json['city'] as String,
@@ -36,10 +36,10 @@ Map<String, dynamic> _$AddressToJson(Address instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
-  writeNotNull('use', instance.use);
-  writeNotNull('type', instance.type);
+  writeNotNull('use', instance.use?.toJson());
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('text', instance.text);
   writeNotNull('line', instance.line);
   writeNotNull('city', instance.city);

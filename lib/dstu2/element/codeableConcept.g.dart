@@ -8,14 +8,13 @@ part of 'codeableConcept.dart';
 
 CodeableConcept _$CodeableConceptFromJson(Map<String, dynamic> json) {
   return CodeableConcept(
-    id: json['id'],
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     extension: json['extension'] == null
         ? null
         : Extension.fromJson(json['extension'] as Map<String, dynamic>),
-    coding: (json['coding'] as List)
-        ?.map((e) =>
-            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    coding: json['coding'] == null
+        ? null
+        : List.fromJson(json['coding'] as Map<String, dynamic>),
     text: json['text'] as String,
   );
 }
@@ -29,9 +28,9 @@ Map<String, dynamic> _$CodeableConceptToJson(CodeableConcept instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('extension', instance.extension?.toJson());
-  writeNotNull('coding', instance.coding?.map((e) => e?.toJson())?.toList());
+  writeNotNull('coding', instance.coding?.toJson());
   writeNotNull('text', instance.text);
   return val;
 }
