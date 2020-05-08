@@ -108,29 +108,30 @@ Map<String, dynamic> _$AppointmentToJson(Appointment instance) {
 
 AppointmentParticipant _$AppointmentParticipantFromJson(
     Map<String, dynamic> json) {
-  return AppointmentParticipant()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return AppointmentParticipant(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..type = (json['type'] as List)
+        ?.toList(),
+    type: (json['type'] as List)
         ?.map((e) => e == null
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..actor = json['actor'] == null
+        ?.toList(),
+    actor: json['actor'] == null
         ? null
-        : Reference.fromJson(json['actor'] as Map<String, dynamic>)
-    ..required = json['required'] == null
+        : Reference.fromJson(json['actor'] as Map<String, dynamic>),
+    required: json['required'] == null
         ? null
-        : Code.fromJson(json['required'] as String)
-    ..status =
-        json['status'] == null ? null : Code.fromJson(json['status'] as String);
+        : Code.fromJson(json['required'] as String),
+    status:
+        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+  );
 }
 
 Map<String, dynamic> _$AppointmentParticipantToJson(

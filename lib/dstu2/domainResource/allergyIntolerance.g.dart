@@ -119,41 +119,42 @@ Map<String, dynamic> _$AllergyIntoleranceToJson(AllergyIntolerance instance) {
 
 AllergyIntoleranceReaction _$AllergyIntoleranceReactionFromJson(
     Map<String, dynamic> json) {
-  return AllergyIntoleranceReaction()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return AllergyIntoleranceReaction(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..substance = json['substance'] == null
+        ?.toList(),
+    substance: json['substance'] == null
         ? null
-        : CodeableConcept.fromJson(json['substance'] as Map<String, dynamic>)
-    ..certainty = json['certainty'] == null
+        : CodeableConcept.fromJson(json['substance'] as Map<String, dynamic>),
+    certainty: json['certainty'] == null
         ? null
-        : Code.fromJson(json['certainty'] as String)
-    ..manifestation = (json['manifestation'] as List)
+        : Code.fromJson(json['certainty'] as String),
+    manifestation: (json['manifestation'] as List)
         ?.map((e) => e == null
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..description = json['description'] as String
-    ..onset = json['onset'] == null
+        ?.toList(),
+    description: json['description'] as String,
+    onset: json['onset'] == null
         ? null
-        : FhirDateTime.fromJson(json['onset'] as String)
-    ..severity = json['severity'] == null
+        : FhirDateTime.fromJson(json['onset'] as String),
+    severity: json['severity'] == null
         ? null
-        : Code.fromJson(json['severity'] as String)
-    ..exposureRoute = json['exposureRoute'] == null
+        : Code.fromJson(json['severity'] as String),
+    exposureRoute: json['exposureRoute'] == null
         ? null
         : CodeableConcept.fromJson(
-            json['exposureRoute'] as Map<String, dynamic>)
-    ..note = json['note'] == null
+            json['exposureRoute'] as Map<String, dynamic>),
+    note: json['note'] == null
         ? null
-        : Annotation.fromJson(json['note'] as Map<String, dynamic>);
+        : Annotation.fromJson(json['note'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$AllergyIntoleranceReactionToJson(

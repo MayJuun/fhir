@@ -93,32 +93,32 @@ Map<String, dynamic> _$BundleLinkToJson(BundleLink instance) {
 }
 
 BundleEntry _$BundleEntryFromJson(Map<String, dynamic> json) {
-  return BundleEntry()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return BundleEntry(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..fullUrl = json['fullUrl'] == null
+        ?.toList(),
+    fullUrl: json['fullUrl'] == null
         ? null
-        : FhirUri.fromJson(json['fullUrl'] as String)
-    ..resource = json['resource'] == null
+        : FhirUri.fromJson(json['fullUrl'] as String),
+    resource: json['resource'] == null
         ? null
-        : Resource.fromJson(json['resource'] as Map<String, dynamic>)
-    ..search = json['search'] == null
+        : Resource.fromJson(json['resource'] as Map<String, dynamic>),
+    request: json['request'] == null
         ? null
-        : BundleEntrySearch.fromJson(json['search'] as Map<String, dynamic>)
-    ..request = json['request'] == null
-        ? null
-        : BundleEntryRequest.fromJson(json['request'] as Map<String, dynamic>)
-    ..response = json['response'] == null
+        : BundleEntryRequest.fromJson(json['request'] as Map<String, dynamic>),
+    response: json['response'] == null
         ? null
         : BundleEntryResponse.fromJson(
-            json['response'] as Map<String, dynamic>);
+            json['response'] as Map<String, dynamic>),
+  )..search = json['search'] == null
+      ? null
+      : BundleEntrySearch.fromJson(json['search'] as Map<String, dynamic>);
 }
 
 Map<String, dynamic> _$BundleEntryToJson(BundleEntry instance) {

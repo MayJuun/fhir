@@ -92,6 +92,19 @@ class ConceptMapElement {
   FhirUri codeSystem;
   Code code;
   List<ConceptMapElementTarget> target;
+
+  ConceptMapElement({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.codeSystem,
+    this.code,
+    this.target,
+  });
+
+  factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
+      _$ConceptMapElementFromJson(json);
+  Map<String, dynamic> toJson() => _$ConceptMapElementToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)

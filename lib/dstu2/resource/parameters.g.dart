@@ -45,23 +45,24 @@ Map<String, dynamic> _$ParametersToJson(Parameters instance) {
 }
 
 ParametersParameter _$ParametersParameterFromJson(Map<String, dynamic> json) {
-  return ParametersParameter()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return ParametersParameter(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..name = json['name'] as String
-    ..valueX = json['valueX'] == null
+        ?.toList(),
+    name: json['name'] as String,
+    valueX: json['valueX'] == null
         ? null
-        : Boolean.fromJson(json['valueX'] as String)
-    ..resource = json['resource'] == null
+        : Boolean.fromJson(json['valueX'] as String),
+    resource: json['resource'] == null
         ? null
-        : Resource.fromJson(json['resource'] as Map<String, dynamic>);
+        : Resource.fromJson(json['resource'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$ParametersParameterToJson(ParametersParameter instance) {

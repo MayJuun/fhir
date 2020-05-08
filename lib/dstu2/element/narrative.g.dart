@@ -15,7 +15,7 @@ Narrative _$NarrativeFromJson(Map<String, dynamic> json) {
         ?.toList(),
     status:
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
-    div: json['div'],
+    div: json['div'] as String,
   );
 }
 

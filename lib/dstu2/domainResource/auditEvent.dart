@@ -147,6 +147,26 @@ class AuditEventObject {
   String description;
   Base64Binary query;
   List<AuditEventObjectDetail> detail;
+
+  AuditEventObject({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.identifier,
+    this.reference,
+    this.type,
+    this.role,
+    this.lifecycle,
+    this.securityLabel,
+    this.name,
+    this.description,
+    this.query,
+    this.detail,
+  });
+
+  factory AuditEventObject.fromJson(Map<String, dynamic> json) =>
+      _$AuditEventObjectFromJson(json);
+  Map<String, dynamic> toJson() => _$AuditEventObjectToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)

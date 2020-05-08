@@ -114,6 +114,20 @@ class CarePlanActivity {
   List<Annotation> progress;
   Reference reference;
   CarePlanActivityDetail detail;
+
+  CarePlanActivity({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.actionResulting,
+    this.progress,
+    this.reference,
+    this.detail,
+  });
+
+  factory CarePlanActivity.fromJson(Map<String, dynamic> json) =>
+      _$CarePlanActivityFromJson(json);
+  Map<String, dynamic> toJson() => _$CarePlanActivityToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)

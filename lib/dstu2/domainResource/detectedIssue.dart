@@ -59,4 +59,17 @@ class DetectedIssueMitigation {
   CodeableConcept action;
   FhirDateTime date;
   Reference author;
+
+  DetectedIssueMitigation({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.action,
+    this.date,
+    this.author,
+  });
+
+  factory DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
+      _$DetectedIssueMitigationFromJson(json);
+  Map<String, dynamic> toJson() => _$DetectedIssueMitigationToJson(this);
 }
