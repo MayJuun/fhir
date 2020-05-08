@@ -1,16 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '../res/primitiveFailures.dart';
-import '../res/primitiveObjects.dart';
-import '../primitiveTypes/fhirDateTime.dart';
-import '../primitiveTypes/canonical.dart';
-import '../primitiveTypes/code.dart';
-import '../generalTypes/coding.dart';
-import '../generalTypes/period.dart';
-import '../generalTypes/codeableConcept.dart';
-import '../specialTypes/reference.dart';
-import '../specialTypes/extension.dart';
+import '../../fhir_r4.dart';
+import '../../primitiveTypes/primitiveFailures.dart';
+import '../../primitiveTypes/primitiveObjects.dart';
 
 part 'dataRequirement.g.dart';
 

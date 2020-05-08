@@ -1,14 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '../res/primitiveFailures.dart';
-import '../res/primitiveObjects.dart';
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/time.dart';
-import '../specialTypes/extension.dart';
-import 'codeableConcept.dart';
-import 'period.dart';
-import 'range.dart';
+import '../../fhir_r4.dart';
+import '../../primitiveTypes/primitiveFailures.dart';
+import '../../primitiveTypes/primitiveObjects.dart';
 
 part 'timing.g.dart';
 

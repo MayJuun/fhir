@@ -1,5 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
+import '../element/reference.dart';
+import '../primitiveTypes/fhirDateTime.dart';
 import '../primitiveTypes/code.dart';
 import '../primitiveTypes/fhirUri.dart';
 import '../primitiveTypes/id.dart';
@@ -81,11 +83,40 @@ class CarePlanRelatedPlan {
   Extension modifierExtension;
   Code code;
   Reference plan;
+
+  CarePlanRelatedPlan({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.code,
+    this.plan,
+  });
+
+  factory CarePlanRelatedPlan.fromJson(Map<String, dynamic> json) =>
+      _$CarePlanRelatedPlanFromJson(json);
+  Map<String, dynamic> toJson() => _$CarePlanRelatedPlanToJson(this);
+}
+
+class CarePlanParticipant {
   Id id;
   Extension extension;
   Extension modifierExtension;
   CodeableConcept role;
   Reference member;
+
+  CarePlanParticipant({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.role,
+    this.member,
+  });
+  factory CarePlanParticipant.fromJson(Map<String, dynamic> json) =>
+      _$CarePlanParticipantFromJson(json);
+  Map<String, dynamic> toJson() => _$CarePlanParticipantToJson(this);
+}
+
+class CarePlanActivity {
   Id id;
   Extension extension;
   Extension modifierExtension;
@@ -94,17 +125,7 @@ class CarePlanRelatedPlan {
   Reference reference;
   ActivityDetail detail;
 
-  CarePlanRelatedPlan({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.code,
-    this.plan,
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.role,
-    this.member,
+  CarePlanActivity({
     this.id,
     this.extension,
     this.modifierExtension,
@@ -113,9 +134,10 @@ class CarePlanRelatedPlan {
     this.reference,
     this.detail,
   });
-  factory CarePlanRelatedPlan.fromJson(Map<String, dynamic> json) =>
-      _$CarePlanRelatedPlanFromJson(json);
-  Map<String, dynamic> toJson() => _$CarePlanRelatedPlanToJson(this);
+
+  factory CarePlanActivity.fromJson(Map<String, dynamic> json) =>
+      _$CarePlanActivityFromJson(json);
+  Map<String, dynamic> toJson() => _$CarePlanActivityToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)

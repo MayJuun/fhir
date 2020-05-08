@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
 
-import '../res/primitiveFailures.dart';
-import '../res/primitiveObjects.dart';
+import 'primitiveFailures.dart';
+import 'primitiveObjects.dart';
 
-class FhirUri extends PrimitiveObject<String> {
+class FhirUri extends PrimitiveObject<Uri> {
   @override
-  final Either<PrimitiveFailure<String>, String> value;
+  final Either<PrimitiveFailure<String>, Uri> value;
 
   factory FhirUri(String value) {
     assert(value != null);

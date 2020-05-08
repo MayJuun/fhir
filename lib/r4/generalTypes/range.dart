@@ -1,7 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../specialTypes/extension.dart';
-import 'quantity.dart';
+import '../../fhir_r4.dart';
 
 part 'range.g.dart';
 

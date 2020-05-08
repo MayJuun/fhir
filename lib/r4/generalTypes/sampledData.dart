@@ -1,8 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
-import '../specialTypes/extension.dart';
-import 'quantity.dart';
+import '../../fhir_r4.dart';
 
 part 'sampledData.g.dart';
 

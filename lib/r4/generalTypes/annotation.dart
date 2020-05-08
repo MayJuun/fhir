@@ -1,9 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../primitiveTypes/markdown.dart';
-import '../primitiveTypes/fhirDateTime.dart';
-import '../specialTypes/reference.dart';
-import '../specialTypes/extension.dart';
+import '../../fhir_r4.dart';
 
 part 'annotation.g.dart';
 

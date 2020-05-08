@@ -1,15 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '../res/primitiveFailures.dart';
-import '../res/primitiveObjects.dart';
-import '../primitiveTypes/date.dart';
-import '../primitiveTypes/fhirDateTime.dart';
-import '../generalTypes/timing.dart';
-import '../specialTypes/reference.dart';
-import '../specialTypes/extension.dart';
-import 'dataRequirement.dart';
-import 'expression.dart';
+import '../../fhir_r4.dart';
+import '../../primitiveTypes/primitiveFailures.dart';
+import '../../primitiveTypes/primitiveObjects.dart';
 
 part 'triggerDefinition.g.dart';
 

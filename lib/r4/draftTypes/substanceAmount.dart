@@ -1,10 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../generalTypes/codeableConcept.dart';
-import '../generalTypes/quantity.dart';
-import '../generalTypes/range.dart';
-import '../primitiveTypes/markdown.dart';
-import '../specialTypes/extension.dart';
+import '../../fhir_r4.dart';
 
 part 'substanceAmount.g.dart';
 

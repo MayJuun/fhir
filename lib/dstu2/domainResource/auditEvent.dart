@@ -1,3 +1,5 @@
+import 'package:fhir/dstu2/primitiveTypes/base64binary.dart';
+import 'package:fhir/dstu2/primitiveTypes/instant.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import '../primitiveTypes/code.dart';
@@ -43,6 +45,7 @@ class AuditEvent {
     this.source,
     this.object,
   });
+
   factory AuditEvent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventFromJson(json);
   Map<String, dynamic> toJson() => _$AuditEventToJson(this);
@@ -60,6 +63,27 @@ class AuditEventEvent {
   Code outcome;
   String outcomeDesc;
   Coding purposeOfEvent;
+
+  AuditEventEvent({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.type,
+    this.subtype,
+    this.action,
+    this.dateTime,
+    this.outcome,
+    this.outcomeDesc,
+    this.purposeOfEvent,
+  });
+
+  factory AuditEventEvent.fromJson(Map<String, dynamic> json) =>
+      _$AuditEventEventFromJson(json);
+  Map<String, dynamic> toJson() => _$AuditEventEventToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class AuditEventParticipant {
   Id id;
   Extension extension;
   Extension modifierExtension;
@@ -74,37 +98,8 @@ class AuditEventEvent {
   Coding media;
   ParticipantNetwork network;
   Coding purposeOfUse;
-  Id id;
-  Extension extension;
-  Extension modifierExtension;
-  String site;
-  Identifier identifier;
-  Coding type;
-  Id id;
-  Extension extension;
-  Extension modifierExtension;
-  Identifier identifier;
-  Reference reference;
-  Coding type;
-  Coding role;
-  Coding lifecycle;
-  Coding securityLabel;
-  String name;
-  String description;
-  Base64Binary query;
-  ObjectDetail detail;
 
-  AuditEventEvent({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.type,
-    this.subtype,
-    this.action,
-    this.dateTime,
-    this.outcome,
-    this.outcomeDesc,
-    this.purposeOfEvent,
+  AuditEventParticipant({
     this.id,
     this.extension,
     this.modifierExtension,
@@ -119,12 +114,53 @@ class AuditEventEvent {
     this.media,
     this.network,
     this.purposeOfUse,
+  });
+
+  factory AuditEventParticipant.fromJson(Map<String, dynamic> json) =>
+      _$AuditEventParticipantFromJson(json);
+  Map<String, dynamic> toJson() => _$AuditEventParticipantToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class AuditEventSource {
+  Id id;
+  Extension extension;
+  Extension modifierExtension;
+  String site;
+  Identifier identifier;
+  Coding type;
+
+  AuditEventSource({
     this.id,
     this.extension,
     this.modifierExtension,
     this.site,
     this.identifier,
     this.type,
+  });
+
+  factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
+      _$AuditEventSourceFromJson(json);
+  Map<String, dynamic> toJson() => _$AuditEventSourceToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class AuditEventObject {
+  Id id;
+  Extension extension;
+  Extension modifierExtension;
+  Identifier identifier;
+  Reference reference;
+  Coding type;
+  Coding role;
+  Coding lifecycle;
+  Coding securityLabel;
+  String name;
+  String description;
+  Base64Binary query;
+  ObjectDetail detail;
+
+  AuditEventObject({
     this.id,
     this.extension,
     this.modifierExtension,
@@ -139,9 +175,10 @@ class AuditEventEvent {
     this.query,
     this.detail,
   });
-  factory AuditEventEvent.fromJson(Map<String, dynamic> json) =>
-      _$AuditEventEventFromJson(json);
-  Map<String, dynamic> toJson() => _$AuditEventEventToJson(this);
+
+  factory AuditEventObject.fromJson(Map<String, dynamic> json) =>
+      _$AuditEventObjectFromJson(json);
+  Map<String, dynamic> toJson() => _$AuditEventObjectToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
@@ -151,11 +188,6 @@ class ParticipantNetwork {
   Extension modifierExtension;
   String address;
   Code type;
-  Id id;
-  Extension extension;
-  Extension modifierExtension;
-  String type;
-  Base64Binary value;
 
   ParticipantNetwork({
     this.id,
@@ -163,13 +195,30 @@ class ParticipantNetwork {
     this.modifierExtension,
     this.address,
     this.type,
+  });
+
+  factory ParticipantNetwork.fromJson(Map<String, dynamic> json) =>
+      _$ParticipantNetworkFromJson(json);
+  Map<String, dynamic> toJson() => _$ParticipantNetworkToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class ObjectDetail {
+  Id id;
+  Extension extension;
+  Extension modifierExtension;
+  String type;
+  Base64Binary value;
+
+  ObjectDetail({
     this.id,
     this.extension,
     this.modifierExtension,
     this.type,
     this.value,
   });
-  factory ParticipantNetwork.fromJson(Map<String, dynamic> json) =>
-      _$ParticipantNetworkFromJson(json);
-  Map<String, dynamic> toJson() => _$ParticipantNetworkToJson(this);
+
+  factory ObjectDetail.fromJson(Map<String, dynamic> json) =>
+      _$ObjectDetailFromJson(json);
+  Map<String, dynamic> toJson() => _$ObjectDetailToJson(this);
 }

@@ -1,8 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../generalTypes/codeableConcept.dart';
-import '../generalTypes/range.dart';
-import '../specialTypes/extension.dart';
+import '../../fhir_r4.dart';
 
 part 'population.g.dart';
 

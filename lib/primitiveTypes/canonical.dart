@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../res/primitiveObjects.dart';
-import '../res/primitiveFailures.dart';
+import 'primitiveObjects.dart';
+import 'primitiveFailures.dart';
 
 @immutable
 class Canonical extends PrimitiveObject<String> {

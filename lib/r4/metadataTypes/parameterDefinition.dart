@@ -1,8 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../primitiveTypes/canonical.dart';
-import '../primitiveTypes/code.dart';
-import '../specialTypes/extension.dart';
+import '../../fhir_r4.dart';
 
 part 'parameterDefinition.g.dart';
 

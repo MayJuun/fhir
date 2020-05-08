@@ -1,9 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../generalTypes/attachment.dart';
-import '../generalTypes/codeableConcept.dart';
-import '../generalTypes/quantity.dart';
-import '../specialTypes/extension.dart';
+import '../../fhir_r4.dart';
 
 part 'prodCharacteristic.g.dart';
 

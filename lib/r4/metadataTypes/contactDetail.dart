@@ -1,7 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../generalTypes/contactPoint.dart';
-import '../specialTypes/extension.dart';
+import '../../fhir_r4.dart';
 
 part 'contactDetail.g.dart';
 

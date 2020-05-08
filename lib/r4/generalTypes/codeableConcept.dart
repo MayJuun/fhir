@@ -1,8 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../specialTypes/extension.dart';
-
-import 'coding.dart';
+import '../../fhir_r4.dart';
 
 part 'codeableConcept.g.dart';
 

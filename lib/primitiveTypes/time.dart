@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 
-import '../res/primitiveFailures.dart';
-import '../res/primitiveObjects.dart';
+import 'primitiveFailures.dart';
+import 'primitiveObjects.dart';
 
 class Time extends PrimitiveObject<Duration> {
   @override

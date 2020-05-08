@@ -1,13 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '../res/primitiveFailures.dart';
-import '../res/primitiveObjects.dart';
-import '../primitiveTypes/canonical.dart';
-import '../primitiveTypes/markdown.dart';
-import '../primitiveTypes/fhirUrl.dart';
-import '../generalTypes/attachment.dart';
-import '../specialTypes/extension.dart';
+import '../../fhir_r4.dart';
+import '../../primitiveTypes/primitiveFailures.dart';
+import '../../primitiveTypes/primitiveObjects.dart';
 
 part 'relatedArtifact.g.dart';
 

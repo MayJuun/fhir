@@ -1,13 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '../res/primitiveFailures.dart';
-import '../res/primitiveObjects.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../specialTypes/extension.dart';
-import '../specialTypes/reference.dart';
-import 'codeableConcept.dart';
-import 'period.dart';
+import '../../fhir_r4.dart';
+import '../../primitiveTypes/primitiveFailures.dart';
+import '../../primitiveTypes/primitiveObjects.dart';
 
 part 'identifier.g.dart';
 
