@@ -1,21 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
-import '../primitiveTypes/base64binary.dart';
-import '../primitiveTypes/markdown.dart';
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/id.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../generalTypes/duration.dart';
-import '../specialTypes/dosage.dart';
-import '../generalTypes/money.dart';
-import '../generalTypes/ratio.dart';
-import '../generalTypes/quantity.dart';
-import '../specialTypes/reference.dart';
-import '../generalTypes/codeableConcept.dart';
-import '../specialTypes/extension.dart';
-import '../specialTypes/narrative.dart';
-import '../specialTypes/meta.dart';
+import '../../fhir_r4.dart';
 
 part 'medicationKnowledge.g.dart';
 

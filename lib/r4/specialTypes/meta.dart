@@ -1,11 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../generalTypes/coding.dart';
-import '../primitiveTypes/canonical.dart';
-import '../primitiveTypes/id.dart';
-import '../primitiveTypes/instant.dart';
-
-import 'extension.dart';
+import '../../fhir_r4.dart';
 
 part 'meta.g.dart';
 

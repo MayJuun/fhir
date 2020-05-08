@@ -2,9 +2,9 @@ import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
-import '../res/primitiveFailures.dart';
-import '../res/primitiveObjects.dart';
-import 'extension.dart';
+import '../../fhir_r4.dart';
+import '../../primitiveTypes/primitiveFailures.dart';
+import '../../primitiveTypes/primitiveObjects.dart';
 
 part 'narrative.g.dart';
 

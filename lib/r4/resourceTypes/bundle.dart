@@ -1,17 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '../res/primitiveFailures.dart';
-import '../res/primitiveObjects.dart';
-import '../res/resourceList.dart';
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/id.dart';
-import '../primitiveTypes/instant.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../specialTypes/extension.dart';
-import '../generalTypes/signature.dart';
-import '../generalTypes/identifier.dart';
-import '../specialTypes/meta.dart';
+import '../../fhir_r4.dart';
+import '../../primitiveTypes/primitiveFailures.dart';
+import '../../primitiveTypes/primitiveObjects.dart';
 
 part 'bundle.g.dart';
 

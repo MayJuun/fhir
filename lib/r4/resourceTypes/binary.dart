@@ -1,11 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../primitiveTypes/base64binary.dart';
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/id.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../specialTypes/reference.dart';
-import '../specialTypes/meta.dart';
+import '../../fhir_r4.dart';
 
 part 'binary.g.dart';
 

@@ -1,18 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/fhirDateTime.dart';
-import '../primitiveTypes/id.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../specialTypes/reference.dart';
-import '../draftTypes/marketingStatus.dart';
-import '../generalTypes/coding.dart';
-import '../generalTypes/codeableConcept.dart';
-import '../generalTypes/identifier.dart';
-import '../specialTypes/extension.dart';
-import '../specialTypes/narrative.dart';
-import '../specialTypes/meta.dart';
+import '../../fhir_r4.dart';
 
 part 'medicinalProduct.g.dart';
 

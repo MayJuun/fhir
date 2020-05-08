@@ -1,49 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../generalTypes/address.dart';
-import '../generalTypes/age.dart';
-import '../generalTypes/annotation.dart';
-import '../generalTypes/attachment.dart';
-import '../generalTypes/codeableConcept.dart';
-import '../generalTypes/coding.dart';
-import '../generalTypes/contactPoint.dart';
-import '../generalTypes/count.dart';
-import '../generalTypes/distance.dart';
-import '../generalTypes/humanName.dart';
-import '../generalTypes/identifier.dart';
-import '../generalTypes/money.dart';
-import '../generalTypes/period.dart';
-import '../generalTypes/quantity.dart';
-import '../generalTypes/range.dart';
-import '../generalTypes/ratio.dart';
-import '../generalTypes/sampledData.dart';
-import '../generalTypes/signature.dart';
-import '../generalTypes/timing.dart';
-import '../metadataTypes/contactDetail.dart';
-import '../metadataTypes/contributor.dart';
-import '../metadataTypes/dataRequirement.dart';
-import '../metadataTypes/expression.dart';
-import '../metadataTypes/parameterDefinition.dart';
-import '../metadataTypes/relatedArtifact.dart';
-import '../metadataTypes/triggerDefinition.dart';
-import '../metadataTypes/usageContext.dart';
-import '../primitiveTypes/base64binary.dart';
-import '../primitiveTypes/canonical.dart';
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/date.dart';
-import '../primitiveTypes/fhirDateTime.dart';
-import '../primitiveTypes/id.dart';
-import '../primitiveTypes/instant.dart';
-import '../primitiveTypes/markdown.dart';
-import '../primitiveTypes/oid.dart';
-import '../primitiveTypes/time.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../primitiveTypes/fhirUrl.dart';
-import '../primitiveTypes/uuid.dart';
-
-import 'dosage.dart';
-import 'meta.dart';
-import 'reference.dart';
+import '../../fhir_r4.dart';
 
 part 'extension.g.dart';
 

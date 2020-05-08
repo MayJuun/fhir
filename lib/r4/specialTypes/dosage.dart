@@ -1,10 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../generalTypes/codeableConcept.dart';
-import '../generalTypes/quantity.dart';
-import '../generalTypes/range.dart';
-import '../generalTypes/ratio.dart';
-import '../generalTypes/timing.dart';
+import '../../fhir_r4.dart';
 
 import 'extension.dart';
 

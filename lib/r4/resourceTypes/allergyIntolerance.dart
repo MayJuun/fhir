@@ -2,23 +2,9 @@ import 'package:dartz/dartz.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
-import '../res/primitiveFailures.dart';
-import '../res/primitiveObjects.dart';
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/fhirDateTime.dart';
-import '../primitiveTypes/id.dart';
-import '../primitiveTypes/markdown.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../generalTypes/annotation.dart';
-import '../generalTypes/range.dart';
-import '../generalTypes/period.dart';
-import '../generalTypes/age.dart';
-import '../specialTypes/reference.dart';
-import '../generalTypes/codeableConcept.dart';
-import '../generalTypes/identifier.dart';
-import '../specialTypes/extension.dart';
-import '../specialTypes/narrative.dart';
-import '../specialTypes/meta.dart';
+import '../../fhir_r4.dart';
+import '../../primitiveTypes/primitiveFailures.dart';
+import '../../primitiveTypes/primitiveObjects.dart';
 
 part 'allergyIntolerance.g.dart';
 

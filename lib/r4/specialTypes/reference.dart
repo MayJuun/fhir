@@ -1,9 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../primitiveTypes/fhirUri.dart';
-import '../generalTypes/identifier.dart';
-
-import 'extension.dart';
+import '../../fhir_r4.dart';
 
 part 'reference.g.dart';
 

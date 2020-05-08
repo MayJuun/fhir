@@ -1,16 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/id.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../generalTypes/range.dart';
-import '../generalTypes/quantity.dart';
-import '../generalTypes/identifier.dart';
-import '../specialTypes/reference.dart';
-import '../generalTypes/codeableConcept.dart';
-import '../specialTypes/extension.dart';
-import '../specialTypes/narrative.dart';
-import '../specialTypes/meta.dart';
+import '../../fhir_r4.dart';
 
 part 'substanceReferenceInformation.g.dart';
 

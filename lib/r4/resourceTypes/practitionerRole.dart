@@ -1,17 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../primitiveTypes/time.dart';
-import '../primitiveTypes/code.dart';
-import '../primitiveTypes/id.dart';
-import '../primitiveTypes/fhirUri.dart';
-import '../generalTypes/contactPoint.dart';
-import '../generalTypes/codeableConcept.dart';
-import '../specialTypes/reference.dart';
-import '../generalTypes/period.dart';
-import '../generalTypes/identifier.dart';
-import '../specialTypes/extension.dart';
-import '../specialTypes/narrative.dart';
-import '../specialTypes/meta.dart';
+import '../../fhir_r4.dart';
 
 part 'practitionerRole.g.dart';
 
