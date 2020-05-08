@@ -94,46 +94,49 @@ Map<String, dynamic> _$VisionPrescriptionToJson(VisionPrescription instance) {
 
 VisionPrescriptionDispense _$VisionPrescriptionDispenseFromJson(
     Map<String, dynamic> json) {
-  return VisionPrescriptionDispense()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return VisionPrescriptionDispense(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..product = json['product'] == null
+        ?.toList(),
+    product: json['product'] == null
         ? null
-        : Coding.fromJson(json['product'] as Map<String, dynamic>)
-    ..eye = json['eye'] == null ? null : Code.fromJson(json['eye'] as String)
-    ..sphere = json['sphere'] == null
+        : Coding.fromJson(json['product'] as Map<String, dynamic>),
+    eye: json['eye'] == null ? null : Code.fromJson(json['eye'] as String),
+    sphere: json['sphere'] == null
         ? null
-        : Decimal.fromJson(json['sphere'] as String)
-    ..cylinder = json['cylinder'] == null
+        : Decimal.fromJson(json['sphere'] as String),
+    cylinder: json['cylinder'] == null
         ? null
-        : Decimal.fromJson(json['cylinder'] as String)
-    ..axis =
-        json['axis'] == null ? null : Integer.fromJson(json['axis'] as String)
-    ..prism =
-        json['prism'] == null ? null : Decimal.fromJson(json['prism'] as String)
-    ..base = json['base'] == null ? null : Code.fromJson(json['base'] as String)
-    ..add = json['add'] == null ? null : Decimal.fromJson(json['add'] as String)
-    ..power =
-        json['power'] == null ? null : Decimal.fromJson(json['power'] as String)
-    ..backCurve = json['backCurve'] == null
+        : Decimal.fromJson(json['cylinder'] as String),
+    axis:
+        json['axis'] == null ? null : Integer.fromJson(json['axis'] as String),
+    prism: json['prism'] == null
         ? null
-        : Decimal.fromJson(json['backCurve'] as String)
-    ..diameter = json['diameter'] == null
+        : Decimal.fromJson(json['prism'] as String),
+    base: json['base'] == null ? null : Code.fromJson(json['base'] as String),
+    add: json['add'] == null ? null : Decimal.fromJson(json['add'] as String),
+    power: json['power'] == null
         ? null
-        : Decimal.fromJson(json['diameter'] as String)
-    ..duration = json['duration'] == null
+        : Decimal.fromJson(json['power'] as String),
+    backCurve: json['backCurve'] == null
         ? null
-        : Quantity.fromJson(json['duration'] as Map<String, dynamic>)
-    ..color = json['color'] as String
-    ..brand = json['brand'] as String
-    ..notes = json['notes'] as String;
+        : Decimal.fromJson(json['backCurve'] as String),
+    diameter: json['diameter'] == null
+        ? null
+        : Decimal.fromJson(json['diameter'] as String),
+    duration: json['duration'] == null
+        ? null
+        : Quantity.fromJson(json['duration'] as Map<String, dynamic>),
+    color: json['color'] as String,
+    brand: json['brand'] as String,
+    notes: json['notes'] as String,
+  );
 }
 
 Map<String, dynamic> _$VisionPrescriptionDispenseToJson(

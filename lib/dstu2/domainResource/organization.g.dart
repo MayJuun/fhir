@@ -96,29 +96,30 @@ Map<String, dynamic> _$OrganizationToJson(Organization instance) {
 }
 
 OrganizationContact _$OrganizationContactFromJson(Map<String, dynamic> json) {
-  return OrganizationContact()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return OrganizationContact(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..purpose = json['purpose'] == null
+        ?.toList(),
+    purpose: json['purpose'] == null
         ? null
-        : CodeableConcept.fromJson(json['purpose'] as Map<String, dynamic>)
-    ..name = json['name'] == null
+        : CodeableConcept.fromJson(json['purpose'] as Map<String, dynamic>),
+    name: json['name'] == null
         ? null
-        : HumanName.fromJson(json['name'] as Map<String, dynamic>)
-    ..telecom = (json['telecom'] as List)
+        : HumanName.fromJson(json['name'] as Map<String, dynamic>),
+    telecom: (json['telecom'] as List)
         ?.map((e) =>
             e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..address = json['address'] == null
+        ?.toList(),
+    address: json['address'] == null
         ? null
-        : Address.fromJson(json['address'] as Map<String, dynamic>);
+        : Address.fromJson(json['address'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$OrganizationContactToJson(OrganizationContact instance) {

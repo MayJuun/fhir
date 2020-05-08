@@ -92,6 +92,23 @@ class ClaimResponseItem {
   List<PositiveInt> noteNumber;
   List<ClaimResponseItemAdjudication> adjudication;
   List<ClaimResponseItemDetail> detail;
+
+  ClaimResponseItem(
+      {this.id,
+      this.extension,
+      this.modifierExtension,
+      this.sequenceLinkId,
+      this.noteNumber,
+      this.adjudication,
+      this.detail});
+
+  factory ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseItemFromJson(json);
+  Map<String, dynamic> toJson() => _$ClaimResponseItemToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class ClaimResponseAddItem {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -101,22 +118,8 @@ class ClaimResponseItem {
   List<PositiveInt> noteNumberLinkId;
   List<ClaimResponseAddItemAdjudication> adjudication;
   List<ClaimResponseAddItemDetail> detail;
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  PositiveInt sequenceLinkId;
-  PositiveInt detailSequenceLinkId;
-  PositiveInt subdetailSequenceLinkId;
-  Coding code;
 
-  ClaimResponseError({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.sequenceLinkId,
-    this.noteNumber,
-    this.adjudication,
-    this.detail,
+  ClaimResponseAddItem({
     this.id,
     this.extension,
     this.modifierExtension,
@@ -126,6 +129,24 @@ class ClaimResponseItem {
     this.noteNumberLinkId,
     this.adjudication,
     this.detail,
+  });
+
+  factory ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseAddItemFromJson(json);
+  Map<String, dynamic> toJson() => _$ClaimResponseAddItemToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class ClaimResponseError {
+  Id id;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  PositiveInt sequenceLinkId;
+  PositiveInt detailSequenceLinkId;
+  PositiveInt subdetailSequenceLinkId;
+  Coding code;
+
+  ClaimResponseError({
     this.id,
     this.extension,
     this.modifierExtension,
@@ -176,6 +197,24 @@ class ClaimResponseCoverage {
   List<String> preAuthRef;
   Reference claimResponse;
   Coding originalRuleset;
+
+  ClaimResponseCoverage({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.sequence,
+    this.focal,
+    this.coverage,
+    this.businessArrangement,
+    this.relationship,
+    this.preAuthRef,
+    this.claimResponse,
+    this.originalRuleset,
+  });
+
+  factory ClaimResponseCoverage.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseCoverageFromJson(json);
+  Map<String, dynamic> toJson() => _$ClaimResponseCoverageToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
@@ -209,6 +248,23 @@ class ClaimResponseItemDetail {
   PositiveInt sequenceLinkId;
   List<ClaimResponseItemDetailAdjudication> adjudication;
   List<ClaimResponseItemDetailSubDetail> subDetail;
+
+  ClaimResponseItemDetail({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.sequenceLinkId,
+    this.adjudication,
+    this.subDetail,
+  });
+
+  factory ClaimResponseItemDetail.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseItemDetailFromJson(json);
+  Map<String, dynamic> toJson() => _$ClaimResponseItemDetailToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class ClaimResponseAddItemAdjudication {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -217,12 +273,6 @@ class ClaimResponseItemDetail {
   Decimal value;
 
   ClaimResponseAddItemAdjudication({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.sequenceLinkId,
-    this.adjudication,
-    this.subDetail,
     this.id,
     this.extension,
     this.modifierExtension,
@@ -246,6 +296,19 @@ class ClaimResponseAddItemDetail {
   Coding service;
   Quantity fee;
   List<ClaimResponseAddItemDetailAdjudication> adjudication;
+
+  ClaimResponseAddItemDetail({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.service,
+    this.fee,
+    this.adjudication,
+  });
+
+  factory ClaimResponseAddItemDetail.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseAddItemDetailFromJson(json);
+  Map<String, dynamic> toJson() => _$ClaimResponseAddItemDetailToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
@@ -280,6 +343,24 @@ class ClaimResponseItemDetailSubDetail {
   List<Extension> modifierExtension;
   PositiveInt sequenceLinkId;
   List<ClaimResponseItemDetailSubDetailAdjudication> adjudication;
+
+  ClaimResponseItemDetailSubDetail({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.sequenceLinkId,
+    this.adjudication,
+  });
+
+  factory ClaimResponseItemDetailSubDetail.fromJson(
+          Map<String, dynamic> json) =>
+      _$ClaimResponseItemDetailSubDetailFromJson(json);
+  Map<String, dynamic> toJson() =>
+      _$ClaimResponseItemDetailSubDetailToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class ClaimResponseAddItemDetailAdjudication {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -288,11 +369,6 @@ class ClaimResponseItemDetailSubDetail {
   Decimal value;
 
   ClaimResponseAddItemDetailAdjudication({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.sequenceLinkId,
-    this.adjudication,
     this.id,
     this.extension,
     this.modifierExtension,

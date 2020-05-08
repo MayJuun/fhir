@@ -99,4 +99,16 @@ class PaymentReconciliationNote {
   List<Extension> modifierExtension;
   Coding type;
   String text;
+
+  PaymentReconciliationNote({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.type,
+    this.text,
+  });
+
+  factory PaymentReconciliationNote.fromJson(Map<String, dynamic> json) =>
+      _$PaymentReconciliationNoteFromJson(json);
+  Map<String, dynamic> toJson() => _$PaymentReconciliationNoteToJson(this);
 }

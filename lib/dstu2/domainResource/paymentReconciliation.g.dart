@@ -187,20 +187,21 @@ Map<String, dynamic> _$PaymentReconciliationDetailToJson(
 
 PaymentReconciliationNote _$PaymentReconciliationNoteFromJson(
     Map<String, dynamic> json) {
-  return PaymentReconciliationNote()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return PaymentReconciliationNote(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..type = json['type'] == null
+        ?.toList(),
+    type: json['type'] == null
         ? null
-        : Coding.fromJson(json['type'] as Map<String, dynamic>)
-    ..text = json['text'] as String;
+        : Coding.fromJson(json['type'] as Map<String, dynamic>),
+    text: json['text'] as String,
+  );
 }
 
 Map<String, dynamic> _$PaymentReconciliationNoteToJson(

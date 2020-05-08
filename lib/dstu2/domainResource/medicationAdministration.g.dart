@@ -126,32 +126,33 @@ Map<String, dynamic> _$MedicationAdministrationToJson(
 
 MedicationAdministrationDosage _$MedicationAdministrationDosageFromJson(
     Map<String, dynamic> json) {
-  return MedicationAdministrationDosage()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return MedicationAdministrationDosage(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..text = json['text'] as String
-    ..siteX = json['siteX'] == null
+        ?.toList(),
+    text: json['text'] as String,
+    siteX: json['siteX'] == null
         ? null
-        : CodeableConcept.fromJson(json['siteX'] as Map<String, dynamic>)
-    ..route = json['route'] == null
+        : CodeableConcept.fromJson(json['siteX'] as Map<String, dynamic>),
+    route: json['route'] == null
         ? null
-        : CodeableConcept.fromJson(json['route'] as Map<String, dynamic>)
-    ..method = json['method'] == null
+        : CodeableConcept.fromJson(json['route'] as Map<String, dynamic>),
+    method: json['method'] == null
         ? null
-        : CodeableConcept.fromJson(json['method'] as Map<String, dynamic>)
-    ..quantity = json['quantity'] == null
+        : CodeableConcept.fromJson(json['method'] as Map<String, dynamic>),
+    quantity: json['quantity'] == null
         ? null
-        : Quantity.fromJson(json['quantity'] as Map<String, dynamic>)
-    ..rateX = json['rateX'] == null
+        : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
+    rateX: json['rateX'] == null
         ? null
-        : Ratio.fromJson(json['rateX'] as Map<String, dynamic>);
+        : Ratio.fromJson(json['rateX'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$MedicationAdministrationDosageToJson(

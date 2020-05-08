@@ -159,27 +159,28 @@ Map<String, dynamic> _$EpisodeOfCareStatusHistoryToJson(
 
 EpisodeOfCareCareTeam _$EpisodeOfCareCareTeamFromJson(
     Map<String, dynamic> json) {
-  return EpisodeOfCareCareTeam()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return EpisodeOfCareCareTeam(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..role = (json['role'] as List)
+        ?.toList(),
+    role: (json['role'] as List)
         ?.map((e) => e == null
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..period = json['period'] == null
+        ?.toList(),
+    period: json['period'] == null
         ? null
-        : Period.fromJson(json['period'] as Map<String, dynamic>)
-    ..member = json['member'] == null
+        : Period.fromJson(json['period'] as Map<String, dynamic>),
+    member: json['member'] == null
         ? null
-        : Reference.fromJson(json['member'] as Map<String, dynamic>);
+        : Reference.fromJson(json['member'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$EpisodeOfCareCareTeamToJson(

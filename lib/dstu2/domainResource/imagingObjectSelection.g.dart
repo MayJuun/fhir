@@ -89,27 +89,28 @@ Map<String, dynamic> _$ImagingObjectSelectionToJson(
 
 ImagingObjectSelectionStudy _$ImagingObjectSelectionStudyFromJson(
     Map<String, dynamic> json) {
-  return ImagingObjectSelectionStudy()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return ImagingObjectSelectionStudy(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..uid = json['uid'] == null ? null : Oid.fromJson(json['uid'] as String)
-    ..url = json['url'] == null ? null : FhirUri.fromJson(json['url'] as String)
-    ..imagingStudy = json['imagingStudy'] == null
+        ?.toList(),
+    uid: json['uid'] == null ? null : Oid.fromJson(json['uid'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    imagingStudy: json['imagingStudy'] == null
         ? null
-        : Reference.fromJson(json['imagingStudy'] as Map<String, dynamic>)
-    ..series = (json['series'] as List)
+        : Reference.fromJson(json['imagingStudy'] as Map<String, dynamic>),
+    series: (json['series'] as List)
         ?.map((e) => e == null
             ? null
             : ImagingObjectSelectionStudySeries.fromJson(
                 e as Map<String, dynamic>))
-        ?.toList();
+        ?.toList(),
+  );
 }
 
 Map<String, dynamic> _$ImagingObjectSelectionStudyToJson(
@@ -136,24 +137,25 @@ Map<String, dynamic> _$ImagingObjectSelectionStudyToJson(
 
 ImagingObjectSelectionStudySeries _$ImagingObjectSelectionStudySeriesFromJson(
     Map<String, dynamic> json) {
-  return ImagingObjectSelectionStudySeries()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return ImagingObjectSelectionStudySeries(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..uid = json['uid'] == null ? null : Oid.fromJson(json['uid'] as String)
-    ..url = json['url'] == null ? null : FhirUri.fromJson(json['url'] as String)
-    ..instance = (json['instance'] as List)
+        ?.toList(),
+    uid: json['uid'] == null ? null : Oid.fromJson(json['uid'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    instance: (json['instance'] as List)
         ?.map((e) => e == null
             ? null
             : ImagingObjectSelectionStudySeriesInstance.fromJson(
                 e as Map<String, dynamic>))
-        ?.toList();
+        ?.toList(),
+  );
 }
 
 Map<String, dynamic> _$ImagingObjectSelectionStudySeriesToJson(
@@ -181,27 +183,28 @@ Map<String, dynamic> _$ImagingObjectSelectionStudySeriesToJson(
 ImagingObjectSelectionStudySeriesInstance
     _$ImagingObjectSelectionStudySeriesInstanceFromJson(
         Map<String, dynamic> json) {
-  return ImagingObjectSelectionStudySeriesInstance()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return ImagingObjectSelectionStudySeriesInstance(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..sopClass = json['sopClass'] == null
+        ?.toList(),
+    sopClass: json['sopClass'] == null
         ? null
-        : Oid.fromJson(json['sopClass'] as String)
-    ..uid = json['uid'] == null ? null : Oid.fromJson(json['uid'] as String)
-    ..url = json['url'] == null ? null : FhirUri.fromJson(json['url'] as String)
-    ..frames = (json['frames'] as List)
+        : Oid.fromJson(json['sopClass'] as String),
+    uid: json['uid'] == null ? null : Oid.fromJson(json['uid'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    frames: (json['frames'] as List)
         ?.map((e) => e == null
             ? null
             : ImagingObjectSelectionStudySeriesInstanceFrames.fromJson(
                 e as Map<String, dynamic>))
-        ?.toList();
+        ?.toList(),
+  );
 }
 
 Map<String, dynamic> _$ImagingObjectSelectionStudySeriesInstanceToJson(
@@ -229,21 +232,21 @@ Map<String, dynamic> _$ImagingObjectSelectionStudySeriesInstanceToJson(
 ImagingObjectSelectionStudySeriesInstanceFrames
     _$ImagingObjectSelectionStudySeriesInstanceFramesFromJson(
         Map<String, dynamic> json) {
-  return ImagingObjectSelectionStudySeriesInstanceFrames()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return ImagingObjectSelectionStudySeriesInstanceFrames(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExte = (json['modifierExte'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..frameNumbers = (json['frameNumbers'] as List)
+        ?.toList(),
+    frameNumbers: (json['frameNumbers'] as List)
         ?.map((e) => e == null ? null : UnsignedInt.fromJson(e as String))
-        ?.toList()
-    ..url =
-        json['url'] == null ? null : FhirUri.fromJson(json['url'] as String);
+        ?.toList(),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+  );
 }
 
 Map<String, dynamic> _$ImagingObjectSelectionStudySeriesInstanceFramesToJson(
@@ -259,8 +262,8 @@ Map<String, dynamic> _$ImagingObjectSelectionStudySeriesInstanceFramesToJson(
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull(
-      'modifierExte', instance.modifierExte?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'frameNumbers', instance.frameNumbers?.map((e) => e?.toJson())?.toList());
   writeNotNull('url', instance.url?.toJson());

@@ -289,21 +289,21 @@ Map<String, dynamic> _$PatientCommunicationToJson(
 }
 
 PatientLink _$PatientLinkFromJson(Map<String, dynamic> json) {
-  return PatientLink()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return PatientLink(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..other = json['other'] == null
+        ?.toList(),
+    other: json['other'] == null
         ? null
-        : Reference.fromJson(json['other'] as Map<String, dynamic>)
-    ..type =
-        json['type'] == null ? null : Code.fromJson(json['type'] as String);
+        : Reference.fromJson(json['other'] as Map<String, dynamic>),
+    type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
+  );
 }
 
 Map<String, dynamic> _$PatientLinkToJson(PatientLink instance) {

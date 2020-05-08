@@ -82,4 +82,17 @@ class EpisodeOfCareCareTeam {
   List<CodeableConcept> role;
   Period period;
   Reference member;
+
+  EpisodeOfCareCareTeam({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.role,
+    this.period,
+    this.member,
+  });
+
+  factory EpisodeOfCareCareTeam.fromJson(Map<String, dynamic> json) =>
+      _$EpisodeOfCareCareTeamFromJson(json);
+  Map<String, dynamic> toJson() => _$EpisodeOfCareCareTeamToJson(this);
 }

@@ -79,6 +79,27 @@ class ImagingStudySeries {
   Coding laterality;
   FhirDateTime started;
   List<ImagingStudySeriesInstance> instance;
+
+  ImagingStudySeries({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.number,
+    this.modality,
+    this.uid,
+    this.description,
+    this.numberOfInstances,
+    this.availability,
+    this.url,
+    this.bodySite,
+    this.laterality,
+    this.started,
+    this.instance,
+  });
+
+  factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
+      _$ImagingStudySeriesFromJson(json);
+  Map<String, dynamic> toJson() => _$ImagingStudySeriesToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
@@ -92,4 +113,20 @@ class ImagingStudySeriesInstance {
   String type;
   String title;
   List<Attachment> content;
+
+  ImagingStudySeriesInstance({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.number,
+    this.uid,
+    this.sopClass,
+    this.type,
+    this.title,
+    this.content,
+  });
+
+  factory ImagingStudySeriesInstance.fromJson(Map<String, dynamic> json) =>
+      _$ImagingStudySeriesInstanceFromJson(json);
+  Map<String, dynamic> toJson() => _$ImagingStudySeriesInstanceToJson(this);
 }

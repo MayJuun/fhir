@@ -15,7 +15,9 @@ Encounter _$EncounterFromJson(Map<String, dynamic> json) {
     implicitRules: json['implicitRules'] == null
         ? null
         : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'],
+    language: json['language'] == null
+        ? null
+        : Code.fromJson(json['language'] as String),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -35,71 +37,73 @@ Encounter _$EncounterFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status: json['status'],
+    status:
+        json['status'] == null ? null : Code.fromJson(json['status'] as String),
     statusHistory: (json['statusHistory'] as List)
         ?.map((e) => e == null
             ? null
             : EncounterStatusHistory.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-  )
-    ..Code = json['Code']
-    ..type = (json['type'] as List)
+    classs:
+        json['classs'] == null ? null : Code.fromJson(json['classs'] as String),
+    type: (json['type'] as List)
         ?.map((e) => e == null
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..priority = json['priority'] == null
+        ?.toList(),
+    priority: json['priority'] == null
         ? null
-        : CodeableConcept.fromJson(json['priority'] as Map<String, dynamic>)
-    ..patient = json['patient'] == null
+        : CodeableConcept.fromJson(json['priority'] as Map<String, dynamic>),
+    patient: json['patient'] == null
         ? null
-        : Reference.fromJson(json['patient'] as Map<String, dynamic>)
-    ..episodeOfCare = (json['episodeOfCare'] as List)
+        : Reference.fromJson(json['patient'] as Map<String, dynamic>),
+    episodeOfCare: (json['episodeOfCare'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..incomingReferral = (json['incomingReferral'] as List)
+        ?.toList(),
+    incomingReferral: (json['incomingReferral'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..participant = (json['participant'] as List)
+        ?.toList(),
+    participant: (json['participant'] as List)
         ?.map((e) => e == null
             ? null
             : EncounterParticipant.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..appointment = json['appointment'] == null
+        ?.toList(),
+    appointment: json['appointment'] == null
         ? null
-        : Reference.fromJson(json['appointment'] as Map<String, dynamic>)
-    ..period = json['period'] == null
+        : Reference.fromJson(json['appointment'] as Map<String, dynamic>),
+    period: json['period'] == null
         ? null
-        : Period.fromJson(json['period'] as Map<String, dynamic>)
-    ..length = json['length'] == null
+        : Period.fromJson(json['period'] as Map<String, dynamic>),
+    length: json['length'] == null
         ? null
-        : Quantity.fromJson(json['length'] as Map<String, dynamic>)
-    ..reason = (json['reason'] as List)
+        : Quantity.fromJson(json['length'] as Map<String, dynamic>),
+    reason: (json['reason'] as List)
         ?.map((e) => e == null
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..indication = (json['indication'] as List)
+        ?.toList(),
+    indication: (json['indication'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..hospitalization = json['hospitalization'] == null
+        ?.toList(),
+    hospitalization: json['hospitalization'] == null
         ? null
         : EncounterHospitalization.fromJson(
-            json['hospitalization'] as Map<String, dynamic>)
-    ..location = (json['location'] as List)
+            json['hospitalization'] as Map<String, dynamic>),
+    location: (json['location'] as List)
         ?.map((e) => e == null
             ? null
             : EncounterLocation.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..serviceProvider = json['serviceProvider'] == null
+        ?.toList(),
+    serviceProvider: json['serviceProvider'] == null
         ? null
-        : Reference.fromJson(json['serviceProvider'] as Map<String, dynamic>)
-    ..partOf = json['partOf'] == null
+        : Reference.fromJson(json['serviceProvider'] as Map<String, dynamic>),
+    partOf: json['partOf'] == null
         ? null
-        : Reference.fromJson(json['partOf'] as Map<String, dynamic>);
+        : Reference.fromJson(json['partOf'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$EncounterToJson(Encounter instance) {
@@ -114,7 +118,7 @@ Map<String, dynamic> _$EncounterToJson(Encounter instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('language', instance.language);
+  writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e?.toJson())?.toList());
@@ -124,10 +128,10 @@ Map<String, dynamic> _$EncounterToJson(Encounter instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
-  writeNotNull('status', instance.status);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('statusHistory',
       instance.statusHistory?.map((e) => e?.toJson())?.toList());
-  writeNotNull('Code', instance.Code);
+  writeNotNull('classs', instance.classs?.toJson());
   writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
   writeNotNull('priority', instance.priority?.toJson());
   writeNotNull('patient', instance.patient?.toJson());

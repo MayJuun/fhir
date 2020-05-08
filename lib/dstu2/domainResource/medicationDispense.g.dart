@@ -204,28 +204,29 @@ Map<String, dynamic> _$MedicationDispenseDosageInstructionToJson(
 
 MedicationDispenseSubstitution _$MedicationDispenseSubstitutionFromJson(
     Map<String, dynamic> json) {
-  return MedicationDispenseSubstitution()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return MedicationDispenseSubstitution(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..type = json['type'] == null
+        ?.toList(),
+    type: json['type'] == null
         ? null
-        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>)
-    ..reason = (json['reason'] as List)
+        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    reason: (json['reason'] as List)
         ?.map((e) => e == null
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..responsibleParty = (json['responsibleParty'] as List)
+        ?.toList(),
+    responsibleParty: (json['responsibleParty'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList();
+        ?.toList(),
+  );
 }
 
 Map<String, dynamic> _$MedicationDispenseSubstitutionToJson(

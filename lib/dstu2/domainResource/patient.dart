@@ -147,4 +147,16 @@ class PatientLink {
   List<Extension> modifierExtension;
   Reference other;
   Code type;
+
+  PatientLink({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.other,
+    this.type,
+  });
+
+  factory PatientLink.fromJson(Map<String, dynamic> json) =>
+      _$PatientLinkFromJson(json);
+  Map<String, dynamic> toJson() => _$PatientLinkToJson(this);
 }

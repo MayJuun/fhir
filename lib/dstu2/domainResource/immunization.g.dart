@@ -243,39 +243,40 @@ Map<String, dynamic> _$ImmunizationReactionToJson(
 
 ImmunizationVaccinationProtocol _$ImmunizationVaccinationProtocolFromJson(
     Map<String, dynamic> json) {
-  return ImmunizationVaccinationProtocol()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return ImmunizationVaccinationProtocol(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..doseSequence = json['doseSequence'] == null
+        ?.toList(),
+    doseSequence: json['doseSequence'] == null
         ? null
-        : PositiveInt.fromJson(json['doseSequence'] as String)
-    ..description = json['description'] as String
-    ..authority = json['authority'] == null
+        : PositiveInt.fromJson(json['doseSequence'] as String),
+    description: json['description'] as String,
+    authority: json['authority'] == null
         ? null
-        : Reference.fromJson(json['authority'] as Map<String, dynamic>)
-    ..series = json['series'] as String
-    ..seriesDoses = json['seriesDoses'] == null
+        : Reference.fromJson(json['authority'] as Map<String, dynamic>),
+    series: json['series'] as String,
+    seriesDoses: json['seriesDoses'] == null
         ? null
-        : PositiveInt.fromJson(json['seriesDoses'] as String)
-    ..targetDisease = (json['targetDisease'] as List)
+        : PositiveInt.fromJson(json['seriesDoses'] as String),
+    targetDisease: (json['targetDisease'] as List)
         ?.map((e) => e == null
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..doseStatus = json['doseStatus'] == null
+        ?.toList(),
+    doseStatus: json['doseStatus'] == null
         ? null
-        : CodeableConcept.fromJson(json['doseStatus'] as Map<String, dynamic>)
-    ..doseStatusReason = json['doseStatusReason'] == null
+        : CodeableConcept.fromJson(json['doseStatus'] as Map<String, dynamic>),
+    doseStatusReason: json['doseStatusReason'] == null
         ? null
         : CodeableConcept.fromJson(
-            json['doseStatusReason'] as Map<String, dynamic>);
+            json['doseStatusReason'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$ImmunizationVaccinationProtocolToJson(

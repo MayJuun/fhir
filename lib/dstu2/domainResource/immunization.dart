@@ -130,4 +130,23 @@ class ImmunizationVaccinationProtocol {
   List<CodeableConcept> targetDisease;
   CodeableConcept doseStatus;
   CodeableConcept doseStatusReason;
+
+  ImmunizationVaccinationProtocol({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.doseSequence,
+    this.description,
+    this.authority,
+    this.series,
+    this.seriesDoses,
+    this.targetDisease,
+    this.doseStatus,
+    this.doseStatusReason,
+  });
+
+  factory ImmunizationVaccinationProtocol.fromJson(Map<String, dynamic> json) =>
+      _$ImmunizationVaccinationProtocolFromJson(json);
+  Map<String, dynamic> toJson() =>
+      _$ImmunizationVaccinationProtocolToJson(this);
 }

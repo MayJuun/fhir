@@ -110,4 +110,17 @@ class MedicationDispenseSubstitution {
   CodeableConcept type;
   List<CodeableConcept> reason;
   List<Reference> responsibleParty;
+
+  MedicationDispenseSubstitution({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.type,
+    this.reason,
+    this.responsibleParty,
+  });
+
+  factory MedicationDispenseSubstitution.fromJson(Map<String, dynamic> json) =>
+      _$MedicationDispenseSubstitutionFromJson(json);
+  Map<String, dynamic> toJson() => _$MedicationDispenseSubstitutionToJson(this);
 }

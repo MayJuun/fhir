@@ -114,4 +114,20 @@ class SpecimenContainer {
   Quantity capacity;
   Quantity specimenQuantity;
   CodeableConcept additiveX;
+
+  SpecimenContainer({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.identifier,
+    this.description,
+    this.type,
+    this.capacity,
+    this.specimenQuantity,
+    this.additiveX,
+  });
+
+  factory SpecimenContainer.fromJson(Map<String, dynamic> json) =>
+      _$SpecimenContainerFromJson(json);
+  Map<String, dynamic> toJson() => _$SpecimenContainerToJson(this);
 }

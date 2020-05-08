@@ -103,21 +103,22 @@ Map<String, dynamic> _$DeviceMetricToJson(DeviceMetric instance) {
 
 DeviceMetricCalibration _$DeviceMetricCalibrationFromJson(
     Map<String, dynamic> json) {
-  return DeviceMetricCalibration()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return DeviceMetricCalibration(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..type = json['type'] == null ? null : Code.fromJson(json['type'] as String)
-    ..state =
-        json['state'] == null ? null : Code.fromJson(json['state'] as String)
-    ..time =
-        json['time'] == null ? null : Instant.fromJson(json['time'] as String);
+        ?.toList(),
+    type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
+    state:
+        json['state'] == null ? null : Code.fromJson(json['state'] as String),
+    time:
+        json['time'] == null ? null : Instant.fromJson(json['time'] as String),
+  );
 }
 
 Map<String, dynamic> _$DeviceMetricCalibrationToJson(

@@ -106,22 +106,23 @@ Map<String, dynamic> _$PersonToJson(Person instance) {
 }
 
 PersonLink _$PersonLinkFromJson(Map<String, dynamic> json) {
-  return PersonLink()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return PersonLink(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..target = json['target'] == null
+        ?.toList(),
+    target: json['target'] == null
         ? null
-        : Reference.fromJson(json['target'] as Map<String, dynamic>)
-    ..assurance = json['assurance'] == null
+        : Reference.fromJson(json['target'] as Map<String, dynamic>),
+    assurance: json['assurance'] == null
         ? null
-        : Code.fromJson(json['assurance'] as String);
+        : Code.fromJson(json['assurance'] as String),
+  );
 }
 
 Map<String, dynamic> _$PersonLinkToJson(PersonLink instance) {

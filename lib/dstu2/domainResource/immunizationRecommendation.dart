@@ -49,7 +49,26 @@ class ImmunizationRecommendationRecommendation {
   List<ImmunizationRecommendationRecommendationDateCriterion> dateCriterion;
   ImmunizationRecommendationRecommendationProtocol protocol;
   List<Reference> supportingImmunization;
-  List<Reference> supportingPatientInfor;
+  List<Reference> supportingPatientInformation;
+
+  ImmunizationRecommendationRecommendation(
+      {this.id,
+      this.extension,
+      this.modifierExtension,
+      this.date,
+      this.vaccineCode,
+      this.doseNumber,
+      this.forecastStatus,
+      this.dateCriterion,
+      this.protocol,
+      this.supportingImmunization,
+      this.supportingPatientInformation});
+
+  factory ImmunizationRecommendationRecommendation.fromJson(
+          Map<String, dynamic> json) =>
+      _$ImmunizationRecommendationRecommendationFromJson(json);
+  Map<String, dynamic> toJson() =>
+      _$ImmunizationRecommendationRecommendationToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)

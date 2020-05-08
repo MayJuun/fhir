@@ -206,33 +206,34 @@ Map<String, dynamic> _$SpecimenTreatmentToJson(SpecimenTreatment instance) {
 }
 
 SpecimenContainer _$SpecimenContainerFromJson(Map<String, dynamic> json) {
-  return SpecimenContainer()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return SpecimenContainer(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..identifier = (json['identifier'] as List)
+        ?.toList(),
+    identifier: (json['identifier'] as List)
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..description = json['description'] as String
-    ..type = json['type'] == null
+        ?.toList(),
+    description: json['description'] as String,
+    type: json['type'] == null
         ? null
-        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>)
-    ..capacity = json['capacity'] == null
+        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    capacity: json['capacity'] == null
         ? null
-        : Quantity.fromJson(json['capacity'] as Map<String, dynamic>)
-    ..specimenQuantity = json['specimenQuantity'] == null
+        : Quantity.fromJson(json['capacity'] as Map<String, dynamic>),
+    specimenQuantity: json['specimenQuantity'] == null
         ? null
-        : Quantity.fromJson(json['specimenQuantity'] as Map<String, dynamic>)
-    ..additiveX = json['additiveX'] == null
+        : Quantity.fromJson(json['specimenQuantity'] as Map<String, dynamic>),
+    additiveX: json['additiveX'] == null
         ? null
-        : CodeableConcept.fromJson(json['additiveX'] as Map<String, dynamic>);
+        : CodeableConcept.fromJson(json['additiveX'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$SpecimenContainerToJson(SpecimenContainer instance) {

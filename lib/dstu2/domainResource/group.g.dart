@@ -141,25 +141,26 @@ Map<String, dynamic> _$GroupCharacteristicToJson(GroupCharacteristic instance) {
 }
 
 GroupMember _$GroupMemberFromJson(Map<String, dynamic> json) {
-  return GroupMember()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return GroupMember(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..entity = json['entity'] == null
+        ?.toList(),
+    entity: json['entity'] == null
         ? null
-        : Reference.fromJson(json['entity'] as Map<String, dynamic>)
-    ..period = json['period'] == null
+        : Reference.fromJson(json['entity'] as Map<String, dynamic>),
+    period: json['period'] == null
         ? null
-        : Period.fromJson(json['period'] as Map<String, dynamic>)
-    ..inactive = json['inactive'] == null
+        : Period.fromJson(json['period'] as Map<String, dynamic>),
+    inactive: json['inactive'] == null
         ? null
-        : Boolean.fromJson(json['inactive'] as String);
+        : Boolean.fromJson(json['inactive'] as String),
+  );
 }
 
 Map<String, dynamic> _$GroupMemberToJson(GroupMember instance) {

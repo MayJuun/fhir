@@ -136,22 +136,23 @@ Map<String, dynamic> _$SubstanceInstanceToJson(SubstanceInstance instance) {
 }
 
 SubstanceIngredient _$SubstanceIngredientFromJson(Map<String, dynamic> json) {
-  return SubstanceIngredient()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return SubstanceIngredient(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..quantity = json['quantity'] == null
+        ?.toList(),
+    quantity: json['quantity'] == null
         ? null
-        : Ratio.fromJson(json['quantity'] as Map<String, dynamic>)
-    ..substance = json['substance'] == null
+        : Ratio.fromJson(json['quantity'] as Map<String, dynamic>),
+    substance: json['substance'] == null
         ? null
-        : Reference.fromJson(json['substance'] as Map<String, dynamic>);
+        : Reference.fromJson(json['substance'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$SubstanceIngredientToJson(SubstanceIngredient instance) {

@@ -58,4 +58,16 @@ class SupplyRequestWhen {
   List<Extension> modifierExtension;
   CodeableConcept code;
   Timing schedule;
+
+  SupplyRequestWhen({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.code,
+    this.schedule,
+  });
+
+  factory SupplyRequestWhen.fromJson(Map<String, dynamic> json) =>
+      _$SupplyRequestWhenFromJson(json);
+  Map<String, dynamic> toJson() => _$SupplyRequestWhenToJson(this);
 }

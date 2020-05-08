@@ -45,7 +45,9 @@ Medication _$MedicationFromJson(Map<String, dynamic> json) {
     product: json['product'] == null
         ? null
         : MedicationProduct.fromJson(json['product'] as Map<String, dynamic>),
-    package: json['package'],
+    package: json['package'] == null
+        ? null
+        : MedicationPackage.fromJson(json['package'] as Map<String, dynamic>),
   );
 }
 
@@ -73,42 +75,35 @@ Map<String, dynamic> _$MedicationToJson(Medication instance) {
   writeNotNull('isBrand', instance.isBrand?.toJson());
   writeNotNull('manufacturer', instance.manufacturer?.toJson());
   writeNotNull('product', instance.product?.toJson());
-  writeNotNull('package', instance.package);
+  writeNotNull('package', instance.package?.toJson());
   return val;
 }
 
 MedicationProduct _$MedicationProductFromJson(Map<String, dynamic> json) {
-  return MedicationProduct()
-    ..form = json['form'] == null
+  return MedicationProduct(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
+        ?.map((e) =>
+            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) =>
+            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    form: json['form'] == null
         ? null
-        : CodeableConcept.fromJson(json['form'] as Map<String, dynamic>)
-    ..ingredient = (json['ingredient'] as List)
+        : CodeableConcept.fromJson(json['form'] as Map<String, dynamic>),
+    ingredient: (json['ingredient'] as List)
         ?.map((e) => e == null
             ? null
             : MedicationProductIngredient.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..batch = (json['batch'] as List)
+        ?.toList(),
+    batch: (json['batch'] as List)
         ?.map((e) => e == null
             ? null
             : MedicationProductBatch.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..container = json['container'] == null
-        ? null
-        : CodeableConcept.fromJson(json['container'] as Map<String, dynamic>)
-    ..content = (json['content'] as List)
-        ?.map((e) => e == null
-            ? null
-            : MedicationPackageContent.fromJson(e as Map<String, dynamic>))
-        ?.toList();
+        ?.toList(),
+  );
 }
 
 Map<String, dynamic> _$MedicationProductToJson(MedicationProduct instance) {
@@ -120,10 +115,49 @@ Map<String, dynamic> _$MedicationProductToJson(MedicationProduct instance) {
     }
   }
 
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('form', instance.form?.toJson());
   writeNotNull(
       'ingredient', instance.ingredient?.map((e) => e?.toJson())?.toList());
   writeNotNull('batch', instance.batch?.map((e) => e?.toJson())?.toList());
+  return val;
+}
+
+MedicationPackage _$MedicationPackageFromJson(Map<String, dynamic> json) {
+  return MedicationPackage(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
+        ?.map((e) =>
+            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
+        ?.map((e) =>
+            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    container: json['container'] == null
+        ? null
+        : CodeableConcept.fromJson(json['container'] as Map<String, dynamic>),
+    content: (json['content'] as List)
+        ?.map((e) => e == null
+            ? null
+            : MedicationPackageContent.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+  );
+}
+
+Map<String, dynamic> _$MedicationPackageToJson(MedicationPackage instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension?.map((e) => e?.toJson())?.toList());
@@ -216,22 +250,23 @@ Map<String, dynamic> _$MedicationProductBatchToJson(
 
 MedicationPackageContent _$MedicationPackageContentFromJson(
     Map<String, dynamic> json) {
-  return MedicationPackageContent()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return MedicationPackageContent(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..item = json['item'] == null
+        ?.toList(),
+    item: json['item'] == null
         ? null
-        : Reference.fromJson(json['item'] as Map<String, dynamic>)
-    ..amount = json['amount'] == null
+        : Reference.fromJson(json['item'] as Map<String, dynamic>),
+    amount: json['amount'] == null
         ? null
-        : Quantity.fromJson(json['amount'] as Map<String, dynamic>);
+        : Quantity.fromJson(json['amount'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$MedicationPackageContentToJson(

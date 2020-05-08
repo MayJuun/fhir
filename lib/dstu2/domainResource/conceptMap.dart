@@ -117,6 +117,21 @@ class ConceptMapElementTarget {
   Code equivalence;
   String comments;
   List<ConceptMapElementTargetDependsOn> dependsOn;
+
+  ConceptMapElementTarget({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.codeSystem,
+    this.code,
+    this.equivalence,
+    this.comments,
+    this.dependsOn,
+  });
+
+  factory ConceptMapElementTarget.fromJson(Map<String, dynamic> json) =>
+      _$ConceptMapElementTargetFromJson(json);
+  Map<String, dynamic> toJson() => _$ConceptMapElementTargetToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)

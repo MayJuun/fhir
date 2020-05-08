@@ -260,45 +260,46 @@ Map<String, dynamic> _$AuditEventSourceToJson(AuditEventSource instance) {
 }
 
 AuditEventObject _$AuditEventObjectFromJson(Map<String, dynamic> json) {
-  return AuditEventObject()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return AuditEventObject(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..identifier = json['identifier'] == null
+        ?.toList(),
+    identifier: json['identifier'] == null
         ? null
-        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>)
-    ..reference = json['reference'] == null
+        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    reference: json['reference'] == null
         ? null
-        : Reference.fromJson(json['reference'] as Map<String, dynamic>)
-    ..type = json['type'] == null
+        : Reference.fromJson(json['reference'] as Map<String, dynamic>),
+    type: json['type'] == null
         ? null
-        : Coding.fromJson(json['type'] as Map<String, dynamic>)
-    ..role = json['role'] == null
+        : Coding.fromJson(json['type'] as Map<String, dynamic>),
+    role: json['role'] == null
         ? null
-        : Coding.fromJson(json['role'] as Map<String, dynamic>)
-    ..lifecycle = json['lifecycle'] == null
+        : Coding.fromJson(json['role'] as Map<String, dynamic>),
+    lifecycle: json['lifecycle'] == null
         ? null
-        : Coding.fromJson(json['lifecycle'] as Map<String, dynamic>)
-    ..securityLabel = (json['securityLabel'] as List)
+        : Coding.fromJson(json['lifecycle'] as Map<String, dynamic>),
+    securityLabel: (json['securityLabel'] as List)
         ?.map((e) =>
             e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..name = json['name'] as String
-    ..description = json['description'] as String
-    ..query = json['query'] == null
+        ?.toList(),
+    name: json['name'] as String,
+    description: json['description'] as String,
+    query: json['query'] == null
         ? null
-        : Base64Binary.fromJson(json['query'] as String)
-    ..detail = (json['detail'] as List)
+        : Base64Binary.fromJson(json['query'] as String),
+    detail: (json['detail'] as List)
         ?.map((e) => e == null
             ? null
             : AuditEventObjectDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList();
+        ?.toList(),
+  );
 }
 
 Map<String, dynamic> _$AuditEventObjectToJson(AuditEventObject instance) {
@@ -368,20 +369,21 @@ Map<String, dynamic> _$AuditEventParticipantNetworkToJson(
 
 AuditEventObjectDetail _$AuditEventObjectDetailFromJson(
     Map<String, dynamic> json) {
-  return AuditEventObjectDetail()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return AuditEventObjectDetail(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..type = json['type'] as String
-    ..value = json['value'] == null
+        ?.toList(),
+    type: json['type'] as String,
+    value: json['value'] == null
         ? null
-        : Base64Binary.fromJson(json['value'] as String);
+        : Base64Binary.fromJson(json['value'] as String),
+  );
 }
 
 Map<String, dynamic> _$AuditEventObjectDetailToJson(

@@ -60,6 +60,24 @@ class ProvenanceAgent {
   Reference actor;
   Identifier userId;
   List<ProvenanceAgentRelatedAgent> relatedAgent;
+
+  ProvenanceAgent({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.role,
+    this.actor,
+    this.userId,
+    this.relatedAgent,
+  });
+
+  factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
+      _$ProvenanceAgentFromJson(json);
+  Map<String, dynamic> toJson() => _$ProvenanceAgentToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class ProvenanceEntity {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -69,13 +87,6 @@ class ProvenanceAgent {
   String display;
 
   ProvenanceEntity({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.role,
-    this.actor,
-    this.userId,
-    this.relatedAgent,
     this.id,
     this.extension,
     this.modifierExtension,

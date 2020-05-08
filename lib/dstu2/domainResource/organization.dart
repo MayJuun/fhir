@@ -56,4 +56,18 @@ class OrganizationContact {
   HumanName name;
   List<ContactPoint> telecom;
   Address address;
+
+  OrganizationContact({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.purpose,
+    this.name,
+    this.telecom,
+    this.address,
+  });
+
+  factory OrganizationContact.fromJson(Map<String, dynamic> json) =>
+      _$OrganizationContactFromJson(json);
+  Map<String, dynamic> toJson() => _$OrganizationContactToJson(this);
 }

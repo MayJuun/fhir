@@ -242,42 +242,44 @@ Map<String, dynamic> _$NutritionOrderSupplementToJson(
 
 NutritionOrderEnteralFormula _$NutritionOrderEnteralFormulaFromJson(
     Map<String, dynamic> json) {
-  return NutritionOrderEnteralFormula()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return NutritionOrderEnteralFormula(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..baseFormulaType = json['baseFormulaType'] == null
+        ?.toList(),
+    baseFormulaType: json['baseFormulaType'] == null
         ? null
         : CodeableConcept.fromJson(
-            json['baseFormulaType'] as Map<String, dynamic>)
-    ..baseFormulaProductName = json['baseFormulaProductName'] as String
-    ..additiveType = json['additiveType'] == null
-        ? null
-        : CodeableConcept.fromJson(json['additiveType'] as Map<String, dynamic>)
-    ..additiveProductName = json['additiveProductName'] as String
-    ..caloricDensity = json['caloricDensity'] == null
-        ? null
-        : Quantity.fromJson(json['caloricDensity'] as Map<String, dynamic>)
-    ..routeofAdministration = json['routeofAdministration'] == null
+            json['baseFormulaType'] as Map<String, dynamic>),
+    baseFormulaProductName: json['baseFormulaProductName'] as String,
+    additiveType: json['additiveType'] == null
         ? null
         : CodeableConcept.fromJson(
-            json['routeofAdministration'] as Map<String, dynamic>)
-    ..administration = (json['administration'] as List)
+            json['additiveType'] as Map<String, dynamic>),
+    additiveProductName: json['additiveProductName'] as String,
+    caloricDensity: json['caloricDensity'] == null
+        ? null
+        : Quantity.fromJson(json['caloricDensity'] as Map<String, dynamic>),
+    routeofAdministration: json['routeofAdministration'] == null
+        ? null
+        : CodeableConcept.fromJson(
+            json['routeofAdministration'] as Map<String, dynamic>),
+    administration: (json['administration'] as List)
         ?.map((e) => e == null
             ? null
             : NutritionOrderEnteralFormulaAdministration.fromJson(
                 e as Map<String, dynamic>))
-        ?.toList()
-    ..maxVolumeToDeliver = json['maxVolumeToDeliver'] == null
+        ?.toList(),
+    maxVolumeToDeliver: json['maxVolumeToDeliver'] == null
         ? null
-        : Quantity.fromJson(json['maxVolumeToDeliver'] as Map<String, dynamic>)
-    ..administrationInstruction = json['administrationInstruction'] as String;
+        : Quantity.fromJson(json['maxVolumeToDeliver'] as Map<String, dynamic>),
+    administrationInstruction: json['administrationInstruction'] as String,
+  );
 }
 
 Map<String, dynamic> _$NutritionOrderEnteralFormulaToJson(

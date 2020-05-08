@@ -59,4 +59,16 @@ class DeviceMetricCalibration {
   Code type;
   Code state;
   Instant time;
+
+  DeviceMetricCalibration(
+      {this.id,
+      this.extension,
+      this.modifierExtension,
+      this.type,
+      this.state,
+      this.time});
+
+  factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
+      _$DeviceMetricCalibrationFromJson(json);
+  Map<String, dynamic> toJson() => _$DeviceMetricCalibrationToJson(this);
 }

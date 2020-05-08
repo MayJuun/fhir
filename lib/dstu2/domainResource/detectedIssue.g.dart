@@ -104,25 +104,26 @@ Map<String, dynamic> _$DetectedIssueToJson(DetectedIssue instance) {
 
 DetectedIssueMitigation _$DetectedIssueMitigationFromJson(
     Map<String, dynamic> json) {
-  return DetectedIssueMitigation()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return DetectedIssueMitigation(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..action = json['action'] == null
+        ?.toList(),
+    action: json['action'] == null
         ? null
-        : CodeableConcept.fromJson(json['action'] as Map<String, dynamic>)
-    ..date = json['date'] == null
+        : CodeableConcept.fromJson(json['action'] as Map<String, dynamic>),
+    date: json['date'] == null
         ? null
-        : FhirDateTime.fromJson(json['date'] as String)
-    ..author = json['author'] == null
+        : FhirDateTime.fromJson(json['date'] as String),
+    author: json['author'] == null
         ? null
-        : Reference.fromJson(json['author'] as Map<String, dynamic>);
+        : Reference.fromJson(json['author'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$DetectedIssueMitigationToJson(

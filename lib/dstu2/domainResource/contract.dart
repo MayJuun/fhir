@@ -227,6 +227,17 @@ class ContractRule {
   List<Extension> extension;
   List<Extension> modifierExtension;
   Attachment contentX;
+
+  ContractRule({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.contentX,
+  });
+
+  factory ContractRule.fromJson(Map<String, dynamic> json) =>
+      _$ContractRuleFromJson(json);
+  Map<String, dynamic> toJson() => _$ContractRuleToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)

@@ -111,28 +111,29 @@ Map<String, dynamic> _$FamilyMemberHistoryToJson(FamilyMemberHistory instance) {
 
 FamilyMemberHistoryCondition _$FamilyMemberHistoryConditionFromJson(
     Map<String, dynamic> json) {
-  return FamilyMemberHistoryCondition()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return FamilyMemberHistoryCondition(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..code = json['code'] == null
+        ?.toList(),
+    code: json['code'] == null
         ? null
-        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>)
-    ..outcome = json['outcome'] == null
+        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    outcome: json['outcome'] == null
         ? null
-        : CodeableConcept.fromJson(json['outcome'] as Map<String, dynamic>)
-    ..onsetX = json['onsetX'] == null
+        : CodeableConcept.fromJson(json['outcome'] as Map<String, dynamic>),
+    onsetX: json['onsetX'] == null
         ? null
-        : Quantity.fromJson(json['onsetX'] as Map<String, dynamic>)
-    ..note = json['note'] == null
+        : Quantity.fromJson(json['onsetX'] as Map<String, dynamic>),
+    note: json['note'] == null
         ? null
-        : Annotation.fromJson(json['note'] as Map<String, dynamic>);
+        : Annotation.fromJson(json['note'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$FamilyMemberHistoryConditionToJson(

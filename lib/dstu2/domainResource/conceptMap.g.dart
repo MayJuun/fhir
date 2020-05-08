@@ -154,25 +154,26 @@ Map<String, dynamic> _$ConceptMapContactToJson(ConceptMapContact instance) {
 }
 
 ConceptMapElement _$ConceptMapElementFromJson(Map<String, dynamic> json) {
-  return ConceptMapElement()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return ConceptMapElement(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..codeSystem = json['codeSystem'] == null
+        ?.toList(),
+    codeSystem: json['codeSystem'] == null
         ? null
-        : FhirUri.fromJson(json['codeSystem'] as String)
-    ..code = json['code'] == null ? null : Code.fromJson(json['code'] as String)
-    ..target = (json['target'] as List)
+        : FhirUri.fromJson(json['codeSystem'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    target: (json['target'] as List)
         ?.map((e) => e == null
             ? null
             : ConceptMapElementTarget.fromJson(e as Map<String, dynamic>))
-        ?.toList();
+        ?.toList(),
+  );
 }
 
 Map<String, dynamic> _$ConceptMapElementToJson(ConceptMapElement instance) {
@@ -197,30 +198,31 @@ Map<String, dynamic> _$ConceptMapElementToJson(ConceptMapElement instance) {
 
 ConceptMapElementTarget _$ConceptMapElementTargetFromJson(
     Map<String, dynamic> json) {
-  return ConceptMapElementTarget()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return ConceptMapElementTarget(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..codeSystem = json['codeSystem'] == null
+        ?.toList(),
+    codeSystem: json['codeSystem'] == null
         ? null
-        : FhirUri.fromJson(json['codeSystem'] as String)
-    ..code = json['code'] == null ? null : Code.fromJson(json['code'] as String)
-    ..equivalence = json['equivalence'] == null
+        : FhirUri.fromJson(json['codeSystem'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    equivalence: json['equivalence'] == null
         ? null
-        : Code.fromJson(json['equivalence'] as String)
-    ..comments = json['comments'] as String
-    ..dependsOn = (json['dependsOn'] as List)
+        : Code.fromJson(json['equivalence'] as String),
+    comments: json['comments'] as String,
+    dependsOn: (json['dependsOn'] as List)
         ?.map((e) => e == null
             ? null
             : ConceptMapElementTargetDependsOn.fromJson(
                 e as Map<String, dynamic>))
-        ?.toList();
+        ?.toList(),
+  );
 }
 
 Map<String, dynamic> _$ConceptMapElementTargetToJson(

@@ -197,4 +197,16 @@ class AuditEventObjectDetail {
   List<Extension> modifierExtension;
   String type;
   Base64Binary value;
+
+  AuditEventObjectDetail({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.type,
+    this.value,
+  });
+
+  factory AuditEventObjectDetail.fromJson(Map<String, dynamic> json) =>
+      _$AuditEventObjectDetailFromJson(json);
+  Map<String, dynamic> toJson() => _$AuditEventObjectDetailToJson(this);
 }

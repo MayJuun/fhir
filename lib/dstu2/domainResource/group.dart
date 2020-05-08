@@ -79,4 +79,17 @@ class GroupMember {
   Reference entity;
   Period period;
   Boolean inactive;
+
+  GroupMember({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.entity,
+    this.period,
+    this.inactive,
+  });
+
+  factory GroupMember.fromJson(Map<String, dynamic> json) =>
+      _$GroupMemberFromJson(json);
+  Map<String, dynamic> toJson() => _$GroupMemberToJson(this);
 }

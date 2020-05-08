@@ -163,29 +163,30 @@ Map<String, dynamic> _$OperationDefinitionContactToJson(
 
 OperationDefinitionParameter _$OperationDefinitionParameterFromJson(
     Map<String, dynamic> json) {
-  return OperationDefinitionParameter()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return OperationDefinitionParameter(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..name = json['name'] == null ? null : Code.fromJson(json['name'] as String)
-    ..use = json['use'] == null ? null : Code.fromJson(json['use'] as String)
-    ..min = json['min'] == null ? null : Integer.fromJson(json['min'] as String)
-    ..max = json['max'] as String
-    ..documentation = json['documentation'] as String
-    ..type = json['type'] == null ? null : Code.fromJson(json['type'] as String)
-    ..profile = json['profile'] == null
+        ?.toList(),
+    name: json['name'] == null ? null : Code.fromJson(json['name'] as String),
+    use: json['use'] == null ? null : Code.fromJson(json['use'] as String),
+    min: json['min'] == null ? null : Integer.fromJson(json['min'] as String),
+    max: json['max'] as String,
+    documentation: json['documentation'] as String,
+    type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
+    profile: json['profile'] == null
         ? null
-        : Reference.fromJson(json['profile'] as Map<String, dynamic>)
-    ..binding = json['binding'] == null
+        : Reference.fromJson(json['profile'] as Map<String, dynamic>),
+    binding: json['binding'] == null
         ? null
         : OperationDefinitionParameterBinding.fromJson(
-            json['binding'] as Map<String, dynamic>);
+            json['binding'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$OperationDefinitionParameterToJson(

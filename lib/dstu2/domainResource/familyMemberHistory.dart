@@ -64,4 +64,17 @@ class FamilyMemberHistoryCondition {
   CodeableConcept outcome;
   Quantity onsetX;
   Annotation note;
+
+  FamilyMemberHistoryCondition(
+      {this.id,
+      this.extension,
+      this.modifierExtension,
+      this.code,
+      this.outcome,
+      this.onsetX,
+      this.note});
+
+  factory FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
+      _$FamilyMemberHistoryConditionFromJson(json);
+  Map<String, dynamic> toJson() => _$FamilyMemberHistoryConditionToJson(this);
 }

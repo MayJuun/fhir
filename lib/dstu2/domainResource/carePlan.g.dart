@@ -216,31 +216,32 @@ Map<String, dynamic> _$CarePlanParticipantToJson(CarePlanParticipant instance) {
 }
 
 CarePlanActivity _$CarePlanActivityFromJson(Map<String, dynamic> json) {
-  return CarePlanActivity()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return CarePlanActivity(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..actionResulting = (json['actionResulting'] as List)
+        ?.toList(),
+    actionResulting: (json['actionResulting'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..progress = (json['progress'] as List)
+        ?.toList(),
+    progress: (json['progress'] as List)
         ?.map((e) =>
             e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..reference = json['reference'] == null
+        ?.toList(),
+    reference: json['reference'] == null
         ? null
-        : Reference.fromJson(json['reference'] as Map<String, dynamic>)
-    ..detail = json['detail'] == null
+        : Reference.fromJson(json['reference'] as Map<String, dynamic>),
+    detail: json['detail'] == null
         ? null
         : CarePlanActivityDetail.fromJson(
-            json['detail'] as Map<String, dynamic>);
+            json['detail'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$CarePlanActivityToJson(CarePlanActivity instance) {

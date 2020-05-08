@@ -103,6 +103,24 @@ class OperationDefinitionParameter {
   Code type;
   Reference profile;
   OperationDefinitionParameterBinding binding;
+
+  OperationDefinitionParameter({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.name,
+    this.use,
+    this.min,
+    this.max,
+    this.documentation,
+    this.type,
+    this.profile,
+    this.binding,
+  });
+
+  factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
+      _$OperationDefinitionParameterFromJson(json);
+  Map<String, dynamic> toJson() => _$OperationDefinitionParameterToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)

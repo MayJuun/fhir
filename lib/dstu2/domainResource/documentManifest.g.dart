@@ -152,22 +152,23 @@ Map<String, dynamic> _$DocumentManifestContentToJson(
 
 DocumentManifestRelated _$DocumentManifestRelatedFromJson(
     Map<String, dynamic> json) {
-  return DocumentManifestRelated()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return DocumentManifestRelated(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..identifier = json['identifier'] == null
+        ?.toList(),
+    identifier: json['identifier'] == null
         ? null
-        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>)
-    ..ref = json['ref'] == null
+        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    ref: json['ref'] == null
         ? null
-        : Reference.fromJson(json['ref'] as Map<String, dynamic>);
+        : Reference.fromJson(json['ref'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$DocumentManifestRelatedToJson(

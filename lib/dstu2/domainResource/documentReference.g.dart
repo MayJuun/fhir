@@ -43,44 +43,54 @@ DocumentReference _$DocumentReferenceFromJson(Map<String, dynamic> json) {
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-    type: json['type'],
-  )
-    ..CodeableConcept = json['CodeableConcept']
-    ..author = (json['author'] as List)
+    type: json['type'] == null
+        ? null
+        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    classs: json['classs'] == null
+        ? null
+        : CodeableConcept.fromJson(json['classs'] as Map<String, dynamic>),
+    author: (json['author'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..custodian = json['custodian'] == null
+        ?.toList(),
+    custodian: json['custodian'] == null
         ? null
-        : Reference.fromJson(json['custodian'] as Map<String, dynamic>)
-    ..authenticator = json['authenticator'] == null
+        : Reference.fromJson(json['custodian'] as Map<String, dynamic>),
+    authenticator: json['authenticator'] == null
         ? null
-        : Reference.fromJson(json['authenticator'] as Map<String, dynamic>)
-    ..created = json['created'] == null
+        : Reference.fromJson(json['authenticator'] as Map<String, dynamic>),
+    created: json['created'] == null
         ? null
-        : FhirDateTime.fromJson(json['created'] as String)
-    ..indexed = json['indexed'] == null
+        : FhirDateTime.fromJson(json['created'] as String),
+    indexed: json['indexed'] == null
         ? null
-        : Instant.fromJson(json['indexed'] as String)
-    ..status =
-        json['status'] == null ? null : Code.fromJson(json['status'] as String)
-    ..docStatus = json['docStatus']
-    ..relatesTo = (json['relatesTo'] as List)
+        : Instant.fromJson(json['indexed'] as String),
+    status:
+        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    docStatus: json['docStatus'] == null
+        ? null
+        : CodeableConcept.fromJson(json['docStatus'] as Map<String, dynamic>),
+    relatesTo: (json['relatesTo'] as List)
         ?.map((e) => e == null
             ? null
             : DocumentReferenceRelatesTo.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..description = json['description'] as String
-    ..securityLabel = json['securityLabel'] as List
-    ..content = (json['content'] as List)
+        ?.toList(),
+    description: json['description'] as String,
+    securityLabel: (json['securityLabel'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    content: (json['content'] as List)
         ?.map((e) => e == null
             ? null
             : DocumentReferenceContent.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..context = json['context'] == null
+        ?.toList(),
+    context: json['context'] == null
         ? null
         : DocumentReferenceContext.fromJson(
-            json['context'] as Map<String, dynamic>);
+            json['context'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$DocumentReferenceToJson(DocumentReference instance) {
@@ -107,19 +117,20 @@ Map<String, dynamic> _$DocumentReferenceToJson(DocumentReference instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull('type', instance.type);
-  writeNotNull('CodeableConcept', instance.CodeableConcept);
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('classs', instance.classs?.toJson());
   writeNotNull('author', instance.author?.map((e) => e?.toJson())?.toList());
   writeNotNull('custodian', instance.custodian?.toJson());
   writeNotNull('authenticator', instance.authenticator?.toJson());
   writeNotNull('created', instance.created?.toJson());
   writeNotNull('indexed', instance.indexed?.toJson());
   writeNotNull('status', instance.status?.toJson());
-  writeNotNull('docStatus', instance.docStatus);
+  writeNotNull('docStatus', instance.docStatus?.toJson());
   writeNotNull(
       'relatesTo', instance.relatesTo?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);
-  writeNotNull('securityLabel', instance.securityLabel);
+  writeNotNull('securityLabel',
+      instance.securityLabel?.map((e) => e?.toJson())?.toList());
   writeNotNull('content', instance.content?.map((e) => e?.toJson())?.toList());
   writeNotNull('context', instance.context?.toJson());
   return val;
@@ -208,43 +219,45 @@ Map<String, dynamic> _$DocumentReferenceContentToJson(
 
 DocumentReferenceContext _$DocumentReferenceContextFromJson(
     Map<String, dynamic> json) {
-  return DocumentReferenceContext()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return DocumentReferenceContext(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..encounter = json['encounter'] == null
+        ?.toList(),
+    encounter: json['encounter'] == null
         ? null
-        : Reference.fromJson(json['encounter'] as Map<String, dynamic>)
-    ..event = (json['event'] as List)
+        : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
+    event: (json['event'] as List)
         ?.map((e) => e == null
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..period = json['period'] == null
+        ?.toList(),
+    period: json['period'] == null
         ? null
-        : Period.fromJson(json['period'] as Map<String, dynamic>)
-    ..facilityType = json['facilityType'] == null
-        ? null
-        : CodeableConcept.fromJson(json['facilityType'] as Map<String, dynamic>)
-    ..practiceSetting = json['practiceSetting'] == null
+        : Period.fromJson(json['period'] as Map<String, dynamic>),
+    facilityType: json['facilityType'] == null
         ? null
         : CodeableConcept.fromJson(
-            json['practiceSetting'] as Map<String, dynamic>)
-    ..sourcePatientInfo = json['sourcePatientInfo'] == null
+            json['facilityType'] as Map<String, dynamic>),
+    practiceSetting: json['practiceSetting'] == null
         ? null
-        : Reference.fromJson(json['sourcePatientInfo'] as Map<String, dynamic>)
-    ..related = (json['related'] as List)
+        : CodeableConcept.fromJson(
+            json['practiceSetting'] as Map<String, dynamic>),
+    sourcePatientInfo: json['sourcePatientInfo'] == null
+        ? null
+        : Reference.fromJson(json['sourcePatientInfo'] as Map<String, dynamic>),
+    related: (json['related'] as List)
         ?.map((e) => e == null
             ? null
             : DocumentReferenceContextRelated.fromJson(
                 e as Map<String, dynamic>))
-        ?.toList();
+        ?.toList(),
+  );
 }
 
 Map<String, dynamic> _$DocumentReferenceContextToJson(
@@ -274,22 +287,23 @@ Map<String, dynamic> _$DocumentReferenceContextToJson(
 
 DocumentReferenceContextRelated _$DocumentReferenceContextRelatedFromJson(
     Map<String, dynamic> json) {
-  return DocumentReferenceContextRelated()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return DocumentReferenceContextRelated(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..identifier = json['identifier'] == null
+        ?.toList(),
+    identifier: json['identifier'] == null
         ? null
-        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>)
-    ..ref = json['ref'] == null
+        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    ref: json['ref'] == null
         ? null
-        : Reference.fromJson(json['ref'] as Map<String, dynamic>);
+        : Reference.fromJson(json['ref'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$DocumentReferenceContextRelatedToJson(

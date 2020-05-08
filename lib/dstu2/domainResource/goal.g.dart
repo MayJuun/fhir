@@ -122,19 +122,20 @@ Map<String, dynamic> _$GoalToJson(Goal instance) {
 }
 
 GoalOutcome _$GoalOutcomeFromJson(Map<String, dynamic> json) {
-  return GoalOutcome()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return GoalOutcome(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..resultX = json['resultX'] == null
+        ?.toList(),
+    resultX: json['resultX'] == null
         ? null
-        : CodeableConcept.fromJson(json['resultX'] as Map<String, dynamic>);
+        : CodeableConcept.fromJson(json['resultX'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$GoalOutcomeToJson(GoalOutcome instance) {

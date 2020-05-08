@@ -70,4 +70,20 @@ class MedicationAdministrationDosage {
   CodeableConcept method;
   Quantity quantity;
   Ratio rateX;
+
+  MedicationAdministrationDosage({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.text,
+    this.siteX,
+    this.route,
+    this.method,
+    this.quantity,
+    this.rateX,
+  });
+
+  factory MedicationAdministrationDosage.fromJson(Map<String, dynamic> json) =>
+      _$MedicationAdministrationDosageFromJson(json);
+  Map<String, dynamic> toJson() => _$MedicationAdministrationDosageToJson(this);
 }

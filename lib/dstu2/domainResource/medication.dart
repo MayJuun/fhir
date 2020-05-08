@@ -49,11 +49,39 @@ class MedicationProduct {
   CodeableConcept form;
   List<MedicationProductIngredient> ingredient;
   List<MedicationProductBatch> batch;
+
+  MedicationProduct(
+      {this.id,
+      this.extension,
+      this.modifierExtension,
+      this.form,
+      this.ingredient,
+      this.batch});
+
+  factory MedicationProduct.fromJson(Map<String, dynamic> json) =>
+      _$MedicationProductFromJson(json);
+  Map<String, dynamic> toJson() => _$MedicationProductToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class MedicationPackage {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   CodeableConcept container;
   List<MedicationPackageContent> content;
+
+  MedicationPackage({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.container,
+    this.content,
+  });
+
+  factory MedicationPackage.fromJson(Map<String, dynamic> json) =>
+      _$MedicationPackageFromJson(json);
+  Map<String, dynamic> toJson() => _$MedicationPackageToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
@@ -105,4 +133,16 @@ class MedicationPackageContent {
   List<Extension> modifierExtension;
   Reference item;
   Quantity amount;
+
+  MedicationPackageContent({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.item,
+    this.amount,
+  });
+
+  factory MedicationPackageContent.fromJson(Map<String, dynamic> json) =>
+      _$MedicationPackageContentFromJson(json);
+  Map<String, dynamic> toJson() => _$MedicationPackageContentToJson(this);
 }

@@ -125,6 +125,25 @@ class NutritionOrderEnteralFormula {
   List<NutritionOrderEnteralFormulaAdministration> administration;
   Quantity maxVolumeToDeliver;
   String administrationInstruction;
+
+  NutritionOrderEnteralFormula({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.baseFormulaType,
+    this.baseFormulaProductName,
+    this.additiveType,
+    this.additiveProductName,
+    this.caloricDensity,
+    this.routeofAdministration,
+    this.administration,
+    this.maxVolumeToDeliver,
+    this.administrationInstruction,
+  });
+
+  factory NutritionOrderEnteralFormula.fromJson(Map<String, dynamic> json) =>
+      _$NutritionOrderEnteralFormulaFromJson(json);
+  Map<String, dynamic> toJson() => _$NutritionOrderEnteralFormulaToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)

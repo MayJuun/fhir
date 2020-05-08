@@ -91,34 +91,35 @@ Map<String, dynamic> _$QuestionnaireToJson(Questionnaire instance) {
 }
 
 QuestionnaireGroup _$QuestionnaireGroupFromJson(Map<String, dynamic> json) {
-  return QuestionnaireGroup()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return QuestionnaireGroup(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..linkId = json['linkId'] as String
-    ..title = json['title'] as String
-    ..concept = (json['concept'] as List)
+        ?.toList(),
+    linkId: json['linkId'] as String,
+    title: json['title'] as String,
+    concept: (json['concept'] as List)
         ?.map((e) =>
             e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..text = json['text'] as String
-    ..required = json['required'] == null
+        ?.toList(),
+    text: json['text'] as String,
+    required: json['required'] == null
         ? null
-        : Boolean.fromJson(json['required'] as String)
-    ..repeats = json['repeats'] == null
+        : Boolean.fromJson(json['required'] as String),
+    repeats: json['repeats'] == null
         ? null
-        : Boolean.fromJson(json['repeats'] as String)
-    ..question = (json['question'] as List)
+        : Boolean.fromJson(json['repeats'] as String),
+    question: (json['question'] as List)
         ?.map((e) => e == null
             ? null
             : QuestionnaireGroupQuestion.fromJson(e as Map<String, dynamic>))
-        ?.toList();
+        ?.toList(),
+  );
 }
 
 Map<String, dynamic> _$QuestionnaireGroupToJson(QuestionnaireGroup instance) {
@@ -148,36 +149,37 @@ Map<String, dynamic> _$QuestionnaireGroupToJson(QuestionnaireGroup instance) {
 
 QuestionnaireGroupQuestion _$QuestionnaireGroupQuestionFromJson(
     Map<String, dynamic> json) {
-  return QuestionnaireGroupQuestion()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return QuestionnaireGroupQuestion(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..linkId = json['linkId'] as String
-    ..concept = (json['concept'] as List)
+        ?.toList(),
+    linkId: json['linkId'] as String,
+    concept: (json['concept'] as List)
         ?.map((e) =>
             e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..text = json['text'] as String
-    ..type = json['type'] == null ? null : Code.fromJson(json['type'] as String)
-    ..required = json['required'] == null
+        ?.toList(),
+    text: json['text'] as String,
+    type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
+    required: json['required'] == null
         ? null
-        : Boolean.fromJson(json['required'] as String)
-    ..repeats = json['repeats'] == null
+        : Boolean.fromJson(json['required'] as String),
+    repeats: json['repeats'] == null
         ? null
-        : Boolean.fromJson(json['repeats'] as String)
-    ..options = json['options'] == null
+        : Boolean.fromJson(json['repeats'] as String),
+    options: json['options'] == null
         ? null
-        : Reference.fromJson(json['options'] as Map<String, dynamic>)
-    ..option = (json['option'] as List)
+        : Reference.fromJson(json['options'] as Map<String, dynamic>),
+    option: (json['option'] as List)
         ?.map((e) =>
             e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
-        ?.toList();
+        ?.toList(),
+  );
 }
 
 Map<String, dynamic> _$QuestionnaireGroupQuestionToJson(

@@ -81,4 +81,16 @@ class DocumentManifestRelated {
   List<Extension> modifierExtension;
   Identifier identifier;
   Reference ref;
+
+  DocumentManifestRelated({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.identifier,
+    this.ref,
+  });
+
+  factory DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
+      _$DocumentManifestRelatedFromJson(json);
+  Map<String, dynamic> toJson() => _$DocumentManifestRelatedToJson(this);
 }

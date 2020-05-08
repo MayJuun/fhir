@@ -59,6 +59,22 @@ class QuestionnaireGroup {
   Boolean required;
   Boolean repeats;
   List<QuestionnaireGroupQuestion> question;
+
+  QuestionnaireGroup(
+      {this.id,
+      this.extension,
+      this.modifierExtension,
+      this.linkId,
+      this.title,
+      this.concept,
+      this.text,
+      this.required,
+      this.repeats,
+      this.question});
+
+  factory QuestionnaireGroup.fromJson(Map<String, dynamic> json) =>
+      _$QuestionnaireGroupFromJson(json);
+  Map<String, dynamic> toJson() => _$QuestionnaireGroupToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
@@ -74,4 +90,22 @@ class QuestionnaireGroupQuestion {
   Boolean repeats;
   Reference options;
   List<Coding> option;
+
+  QuestionnaireGroupQuestion({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.linkId,
+    this.concept,
+    this.text,
+    this.type,
+    this.required,
+    this.repeats,
+    this.options,
+    this.option,
+  });
+
+  factory QuestionnaireGroupQuestion.fromJson(Map<String, dynamic> json) =>
+      _$QuestionnaireGroupQuestionFromJson(json);
+  Map<String, dynamic> toJson() => _$QuestionnaireGroupQuestionToJson(this);
 }

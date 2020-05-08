@@ -64,4 +64,10 @@ class GoalOutcome {
   List<Extension> extension;
   List<Extension> modifierExtension;
   CodeableConcept resultX;
+
+  GoalOutcome({this.id, this.extension, this.modifierExtension, this.resultX});
+
+  factory GoalOutcome.fromJson(Map<String, dynamic> json) =>
+      _$GoalOutcomeFromJson(json);
+  Map<String, dynamic> toJson() => _$GoalOutcomeToJson(this);
 }

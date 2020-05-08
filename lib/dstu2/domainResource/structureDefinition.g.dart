@@ -273,21 +273,22 @@ Map<String, dynamic> _$StructureDefinitionSnapshotToJson(
 
 StructureDefinitionDifferential _$StructureDefinitionDifferentialFromJson(
     Map<String, dynamic> json) {
-  return StructureDefinitionDifferential()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return StructureDefinitionDifferential(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..element = (json['element'] as List)
+        ?.toList(),
+    element: (json['element'] as List)
         ?.map((e) => e == null
             ? null
             : ElementDefinition.fromJson(e as Map<String, dynamic>))
-        ?.toList();
+        ?.toList(),
+  );
 }
 
 Map<String, dynamic> _$StructureDefinitionDifferentialToJson(

@@ -127,4 +127,17 @@ class ObservationComponent {
   CodeableConcept code;
   Quantity valueX;
   CodeableConcept dataAbsentReason;
+
+  ObservationComponent({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.code,
+    this.valueX,
+    this.dataAbsentReason,
+  });
+
+  factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
+      _$ObservationComponentFromJson(json);
+  Map<String, dynamic> toJson() => _$ObservationComponentToJson(this);
 }

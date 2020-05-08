@@ -65,4 +65,29 @@ class VisionPrescriptionDispense {
   String color;
   String brand;
   String notes;
+
+  VisionPrescriptionDispense({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.product,
+    this.eye,
+    this.sphere,
+    this.cylinder,
+    this.axis,
+    this.prism,
+    this.base,
+    this.add,
+    this.power,
+    this.backCurve,
+    this.diameter,
+    this.duration,
+    this.color,
+    this.brand,
+    this.notes,
+  });
+
+  factory VisionPrescriptionDispense.fromJson(Map<String, dynamic> json) =>
+      _$VisionPrescriptionDispenseFromJson(json);
+  Map<String, dynamic> toJson() => _$VisionPrescriptionDispenseToJson(this);
 }

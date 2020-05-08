@@ -120,41 +120,42 @@ Map<String, dynamic> _$MedicationStatementToJson(MedicationStatement instance) {
 
 MedicationStatementDosage _$MedicationStatementDosageFromJson(
     Map<String, dynamic> json) {
-  return MedicationStatementDosage()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return MedicationStatementDosage(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..text = json['text'] as String
-    ..timing = json['timing'] == null
+        ?.toList(),
+    text: json['text'] as String,
+    timing: json['timing'] == null
         ? null
-        : Timing.fromJson(json['timing'] as Map<String, dynamic>)
-    ..asNeededX = json['asNeededX'] == null
+        : Timing.fromJson(json['timing'] as Map<String, dynamic>),
+    asNeededX: json['asNeededX'] == null
         ? null
-        : Boolean.fromJson(json['asNeededX'] as String)
-    ..siteX = json['siteX'] == null
+        : Boolean.fromJson(json['asNeededX'] as String),
+    siteX: json['siteX'] == null
         ? null
-        : CodeableConcept.fromJson(json['siteX'] as Map<String, dynamic>)
-    ..route = json['route'] == null
+        : CodeableConcept.fromJson(json['siteX'] as Map<String, dynamic>),
+    route: json['route'] == null
         ? null
-        : CodeableConcept.fromJson(json['route'] as Map<String, dynamic>)
-    ..method = json['method'] == null
+        : CodeableConcept.fromJson(json['route'] as Map<String, dynamic>),
+    method: json['method'] == null
         ? null
-        : CodeableConcept.fromJson(json['method'] as Map<String, dynamic>)
-    ..quantityX = json['quantityX'] == null
+        : CodeableConcept.fromJson(json['method'] as Map<String, dynamic>),
+    quantityX: json['quantityX'] == null
         ? null
-        : Quantity.fromJson(json['quantityX'] as Map<String, dynamic>)
-    ..rateX = json['rateX'] == null
+        : Quantity.fromJson(json['quantityX'] as Map<String, dynamic>),
+    rateX: json['rateX'] == null
         ? null
-        : Ratio.fromJson(json['rateX'] as Map<String, dynamic>)
-    ..maxDosePerPeriod = json['maxDosePerPeriod'] == null
+        : Ratio.fromJson(json['rateX'] as Map<String, dynamic>),
+    maxDosePerPeriod: json['maxDosePerPeriod'] == null
         ? null
-        : Ratio.fromJson(json['maxDosePerPeriod'] as Map<String, dynamic>);
+        : Ratio.fromJson(json['maxDosePerPeriod'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$MedicationStatementDosageToJson(

@@ -71,4 +71,22 @@ class MedicationStatementDosage {
   Quantity quantityX;
   Ratio rateX;
   Ratio maxDosePerPeriod;
+
+  MedicationStatementDosage(
+      {this.id,
+      this.extension,
+      this.modifierExtension,
+      this.text,
+      this.timing,
+      this.asNeededX,
+      this.siteX,
+      this.route,
+      this.method,
+      this.quantityX,
+      this.rateX,
+      this.maxDosePerPeriod});
+
+  factory MedicationStatementDosage.fromJson(Map<String, dynamic> json) =>
+      _$MedicationStatementDosageFromJson(json);
+  Map<String, dynamic> toJson() => _$MedicationStatementDosageToJson(this);
 }

@@ -43,4 +43,19 @@ class OperationOutcomeIssue {
   CodeableConcept details;
   String diagnostics;
   List<String> location;
+
+  OperationOutcomeIssue({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.severity,
+    this.code,
+    this.details,
+    this.diagnostics,
+    this.location,
+  });
+
+  factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
+      _$OperationOutcomeIssueFromJson(json);
+  Map<String, dynamic> toJson() => _$OperationOutcomeIssueToJson(this);
 }

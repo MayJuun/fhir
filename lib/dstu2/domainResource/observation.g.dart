@@ -239,26 +239,27 @@ Map<String, dynamic> _$ObservationRelatedToJson(ObservationRelated instance) {
 }
 
 ObservationComponent _$ObservationComponentFromJson(Map<String, dynamic> json) {
-  return ObservationComponent()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return ObservationComponent(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..code = json['code'] == null
+        ?.toList(),
+    code: json['code'] == null
         ? null
-        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>)
-    ..valueX = json['valueX'] == null
+        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    valueX: json['valueX'] == null
         ? null
-        : Quantity.fromJson(json['valueX'] as Map<String, dynamic>)
-    ..dataAbsentReason = json['dataAbsentReason'] == null
+        : Quantity.fromJson(json['valueX'] as Map<String, dynamic>),
+    dataAbsentReason: json['dataAbsentReason'] == null
         ? null
         : CodeableConcept.fromJson(
-            json['dataAbsentReason'] as Map<String, dynamic>);
+            json['dataAbsentReason'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$ObservationComponentToJson(

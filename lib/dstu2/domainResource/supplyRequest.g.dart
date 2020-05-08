@@ -101,22 +101,23 @@ Map<String, dynamic> _$SupplyRequestToJson(SupplyRequest instance) {
 }
 
 SupplyRequestWhen _$SupplyRequestWhenFromJson(Map<String, dynamic> json) {
-  return SupplyRequestWhen()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return SupplyRequestWhen(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..code = json['code'] == null
+        ?.toList(),
+    code: json['code'] == null
         ? null
-        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>)
-    ..schedule = json['schedule'] == null
+        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    schedule: json['schedule'] == null
         ? null
-        : Timing.fromJson(json['schedule'] as Map<String, dynamic>);
+        : Timing.fromJson(json['schedule'] as Map<String, dynamic>),
+  );
 }
 
 Map<String, dynamic> _$SupplyRequestWhenToJson(SupplyRequestWhen instance) {

@@ -57,4 +57,16 @@ class PersonLink {
   List<Extension> modifierExtension;
   Reference target;
   Code assurance;
+
+  PersonLink({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.target,
+    this.assurance,
+  });
+
+  factory PersonLink.fromJson(Map<String, dynamic> json) =>
+      _$PersonLinkFromJson(json);
+  Map<String, dynamic> toJson() => _$PersonLinkToJson(this);
 }

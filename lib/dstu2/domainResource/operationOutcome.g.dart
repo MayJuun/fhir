@@ -67,25 +67,26 @@ Map<String, dynamic> _$OperationOutcomeToJson(OperationOutcome instance) {
 
 OperationOutcomeIssue _$OperationOutcomeIssueFromJson(
     Map<String, dynamic> json) {
-  return OperationOutcomeIssue()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return OperationOutcomeIssue(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..severity = json['severity'] == null
+        ?.toList(),
+    severity: json['severity'] == null
         ? null
-        : Code.fromJson(json['severity'] as String)
-    ..code = json['code'] == null ? null : Code.fromJson(json['code'] as String)
-    ..details = json['details'] == null
+        : Code.fromJson(json['severity'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    details: json['details'] == null
         ? null
-        : CodeableConcept.fromJson(json['details'] as Map<String, dynamic>)
-    ..diagnostics = json['diagnostics'] as String
-    ..location = (json['location'] as List)?.map((e) => e as String)?.toList();
+        : CodeableConcept.fromJson(json['details'] as Map<String, dynamic>),
+    diagnostics: json['diagnostics'] as String,
+    location: (json['location'] as List)?.map((e) => e as String)?.toList(),
+  );
 }
 
 Map<String, dynamic> _$OperationOutcomeIssueToJson(

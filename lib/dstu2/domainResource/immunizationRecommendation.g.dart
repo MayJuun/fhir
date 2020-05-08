@@ -82,47 +82,48 @@ Map<String, dynamic> _$ImmunizationRecommendationToJson(
 ImmunizationRecommendationRecommendation
     _$ImmunizationRecommendationRecommendationFromJson(
         Map<String, dynamic> json) {
-  return ImmunizationRecommendationRecommendation()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return ImmunizationRecommendationRecommendation(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..date = json['date'] == null
+        ?.toList(),
+    date: json['date'] == null
         ? null
-        : FhirDateTime.fromJson(json['date'] as String)
-    ..vaccineCode = json['vaccineCode'] == null
+        : FhirDateTime.fromJson(json['date'] as String),
+    vaccineCode: json['vaccineCode'] == null
         ? null
-        : CodeableConcept.fromJson(json['vaccineCode'] as Map<String, dynamic>)
-    ..doseNumber = json['doseNumber'] == null
+        : CodeableConcept.fromJson(json['vaccineCode'] as Map<String, dynamic>),
+    doseNumber: json['doseNumber'] == null
         ? null
-        : PositiveInt.fromJson(json['doseNumber'] as String)
-    ..forecastStatus = json['forecastStatus'] == null
+        : PositiveInt.fromJson(json['doseNumber'] as String),
+    forecastStatus: json['forecastStatus'] == null
         ? null
         : CodeableConcept.fromJson(
-            json['forecastStatus'] as Map<String, dynamic>)
-    ..dateCriterion = (json['dateCriterion'] as List)
+            json['forecastStatus'] as Map<String, dynamic>),
+    dateCriterion: (json['dateCriterion'] as List)
         ?.map((e) => e == null
             ? null
             : ImmunizationRecommendationRecommendationDateCriterion.fromJson(
                 e as Map<String, dynamic>))
-        ?.toList()
-    ..protocol = json['protocol'] == null
+        ?.toList(),
+    protocol: json['protocol'] == null
         ? null
         : ImmunizationRecommendationRecommendationProtocol.fromJson(
-            json['protocol'] as Map<String, dynamic>)
-    ..supportingImmunization = (json['supportingImmunization'] as List)
+            json['protocol'] as Map<String, dynamic>),
+    supportingImmunization: (json['supportingImmunization'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..supportingPatientInfor = (json['supportingPatientInfor'] as List)
+        ?.toList(),
+    supportingPatientInformation: (json['supportingPatientInformation'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList();
+        ?.toList(),
+  );
 }
 
 Map<String, dynamic> _$ImmunizationRecommendationRecommendationToJson(
@@ -149,8 +150,8 @@ Map<String, dynamic> _$ImmunizationRecommendationRecommendationToJson(
   writeNotNull('protocol', instance.protocol?.toJson());
   writeNotNull('supportingImmunization',
       instance.supportingImmunization?.map((e) => e?.toJson())?.toList());
-  writeNotNull('supportingPatientInfor',
-      instance.supportingPatientInfor?.map((e) => e?.toJson())?.toList());
+  writeNotNull('supportingPatientInformation',
+      instance.supportingPatientInformation?.map((e) => e?.toJson())?.toList());
   return val;
 }
 

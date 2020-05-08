@@ -127,45 +127,46 @@ Map<String, dynamic> _$ImagingStudyToJson(ImagingStudy instance) {
 }
 
 ImagingStudySeries _$ImagingStudySeriesFromJson(Map<String, dynamic> json) {
-  return ImagingStudySeries()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return ImagingStudySeries(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..number = json['number'] == null
+        ?.toList(),
+    number: json['number'] == null
         ? null
-        : UnsignedInt.fromJson(json['number'] as String)
-    ..modality = json['modality'] == null
+        : UnsignedInt.fromJson(json['number'] as String),
+    modality: json['modality'] == null
         ? null
-        : Coding.fromJson(json['modality'] as Map<String, dynamic>)
-    ..uid = json['uid'] == null ? null : Oid.fromJson(json['uid'] as String)
-    ..description = json['description'] as String
-    ..numberOfInstances = json['numberOfInstances'] == null
+        : Coding.fromJson(json['modality'] as Map<String, dynamic>),
+    uid: json['uid'] == null ? null : Oid.fromJson(json['uid'] as String),
+    description: json['description'] as String,
+    numberOfInstances: json['numberOfInstances'] == null
         ? null
-        : UnsignedInt.fromJson(json['numberOfInstances'] as String)
-    ..availability = json['availability'] == null
+        : UnsignedInt.fromJson(json['numberOfInstances'] as String),
+    availability: json['availability'] == null
         ? null
-        : Code.fromJson(json['availability'] as String)
-    ..url = json['url'] == null ? null : FhirUri.fromJson(json['url'] as String)
-    ..bodySite = json['bodySite'] == null
+        : Code.fromJson(json['availability'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    bodySite: json['bodySite'] == null
         ? null
-        : Coding.fromJson(json['bodySite'] as Map<String, dynamic>)
-    ..laterality = json['laterality'] == null
+        : Coding.fromJson(json['bodySite'] as Map<String, dynamic>),
+    laterality: json['laterality'] == null
         ? null
-        : Coding.fromJson(json['laterality'] as Map<String, dynamic>)
-    ..started = json['started'] == null
+        : Coding.fromJson(json['laterality'] as Map<String, dynamic>),
+    started: json['started'] == null
         ? null
-        : FhirDateTime.fromJson(json['started'] as String)
-    ..instance = (json['instance'] as List)
+        : FhirDateTime.fromJson(json['started'] as String),
+    instance: (json['instance'] as List)
         ?.map((e) => e == null
             ? null
             : ImagingStudySeriesInstance.fromJson(e as Map<String, dynamic>))
-        ?.toList();
+        ?.toList(),
+  );
 }
 
 Map<String, dynamic> _$ImagingStudySeriesToJson(ImagingStudySeries instance) {
@@ -199,29 +200,30 @@ Map<String, dynamic> _$ImagingStudySeriesToJson(ImagingStudySeries instance) {
 
 ImagingStudySeriesInstance _$ImagingStudySeriesInstanceFromJson(
     Map<String, dynamic> json) {
-  return ImagingStudySeriesInstance()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return ImagingStudySeriesInstance(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..modifierExtension = (json['modifierExtension'] as List)
+        ?.toList(),
+    modifierExtension: (json['modifierExtension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..number = json['number'] == null
+        ?.toList(),
+    number: json['number'] == null
         ? null
-        : UnsignedInt.fromJson(json['number'] as String)
-    ..uid = json['uid'] == null ? null : Oid.fromJson(json['uid'] as String)
-    ..sopClass = json['sopClass'] == null
+        : UnsignedInt.fromJson(json['number'] as String),
+    uid: json['uid'] == null ? null : Oid.fromJson(json['uid'] as String),
+    sopClass: json['sopClass'] == null
         ? null
-        : Oid.fromJson(json['sopClass'] as String)
-    ..type = json['type'] as String
-    ..title = json['title'] as String
-    ..content = (json['content'] as List)
+        : Oid.fromJson(json['sopClass'] as String),
+    type: json['type'] as String,
+    title: json['title'] as String,
+    content: (json['content'] as List)
         ?.map((e) =>
             e == null ? null : Attachment.fromJson(e as Map<String, dynamic>))
-        ?.toList();
+        ?.toList(),
+  );
 }
 
 Map<String, dynamic> _$ImagingStudySeriesInstanceToJson(
