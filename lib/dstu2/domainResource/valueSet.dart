@@ -99,13 +99,8 @@ class ValueSetCodeSystem {
   String version;
   Boolean caseSensitive;
   List<ValueSetCodeSystemConcept> concept;
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  List<FhirUri> import;
-  List<ValueSetComposeInclude> include;
 
-  ValueSetCompose({
+  ValueSetCodeSystem({
     this.id,
     this.extension,
     this.modifierExtension,
@@ -113,6 +108,22 @@ class ValueSetCodeSystem {
     this.version,
     this.caseSensitive,
     this.concept,
+  });
+
+  factory ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetCodeSystemFromJson(json);
+  Map<String, dynamic> toJson() => _$ValueSetCodeSystemToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class ValueSetCompose {
+  Id id;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  List<FhirUri> import;
+  List<ValueSetComposeInclude> include;
+
+  ValueSetCompose({
     this.id,
     this.extension,
     this.modifierExtension,
@@ -136,6 +147,22 @@ class ValueSetExpansion {
   Integer offset;
   List<ValueSetExpansionParameter> parameter;
   List<ValueSetExpansionContains> contains;
+
+  ValueSetExpansion({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.identifier,
+    this.timestamp,
+    this.total,
+    this.offset,
+    this.parameter,
+    this.contains,
+  });
+
+  factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetExpansionFromJson(json);
+  Map<String, dynamic> toJson() => _$ValueSetExpansionToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
@@ -174,13 +201,8 @@ class ValueSetComposeInclude {
   String version;
   List<ValueSetComposeIncludeConcept> concept;
   List<ValueSetComposeIncludeFilter> filter;
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  String name;
-  String valueX;
 
-  ValueSetExpansionParameter({
+  ValueSetComposeInclude({
     this.id,
     this.extension,
     this.modifierExtension,
@@ -188,6 +210,22 @@ class ValueSetComposeInclude {
     this.version,
     this.concept,
     this.filter,
+  });
+
+  factory ValueSetComposeInclude.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetComposeIncludeFromJson(json);
+  Map<String, dynamic> toJson() => _$ValueSetComposeIncludeToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class ValueSetExpansionParameter {
+  Id id;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  String name;
+  String valueX;
+
+  ValueSetExpansionParameter({
     this.id,
     this.extension,
     this.modifierExtension,
@@ -210,6 +248,21 @@ class ValueSetExpansionContains {
   String version;
   Code code;
   String display;
+
+  ValueSetExpansionContains({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.system,
+    this.abstract,
+    this.version,
+    this.code,
+    this.display,
+  });
+
+  factory ValueSetExpansionContains.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetExpansionContainsFromJson(json);
+  Map<String, dynamic> toJson() => _$ValueSetExpansionContainsToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)

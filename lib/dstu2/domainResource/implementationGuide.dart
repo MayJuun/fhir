@@ -115,6 +115,23 @@ class ImplementationGuidePackage {
   String name;
   String description;
   List<ImplementationGuidePackageResource> resource;
+
+  ImplementationGuidePackage({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.name,
+    this.description,
+    this.resource,
+  });
+
+  factory ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
+      _$ImplementationGuidePackageFromJson(json);
+  Map<String, dynamic> toJson() => _$ImplementationGuidePackageToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class ImplementationGuideGlobal {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -122,12 +139,6 @@ class ImplementationGuidePackage {
   Reference profile;
 
   ImplementationGuideGlobal({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.name,
-    this.description,
-    this.resource,
     this.id,
     this.extension,
     this.modifierExtension,
@@ -151,6 +162,22 @@ class ImplementationGuidePage {
   List<Code> type;
   List<String> package;
   Code format;
+
+  ImplementationGuidePage({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.source,
+    this.name,
+    this.kind,
+    this.type,
+    this.package,
+    this.format,
+  });
+
+  factory ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
+      _$ImplementationGuidePageFromJson(json);
+  Map<String, dynamic> toJson() => _$ImplementationGuidePageToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)

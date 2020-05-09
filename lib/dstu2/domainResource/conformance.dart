@@ -148,6 +148,7 @@ class ConformanceRest {
   ConformanceRestSecurity security;
   List<ConformanceRestResource> resource;
   List<ConformanceRestInteraction> interaction;
+  List<ConformanceRestResourceSearchParam> searchParam;
   Code transactionMode;
   List<ConformanceRestOperation> operation;
   List<FhirUri> compartment;
@@ -180,12 +181,43 @@ class ConformanceMessaging {
   UnsignedInt reliableCache;
   String documentation;
   List<ConformanceMessagingEvent> event;
+
+  ConformanceMessaging({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.endpoint,
+    this.reliableCache,
+    this.documentation,
+    this.event,
+  });
+
+  factory ConformanceMessagning.fromJson(Map<String, dynamic> json) =>
+      _$ConformanceMessagingFromJson(json);
+  Map<String, dynamic> toJson() => _$ConformanceMessagingToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class ConformanceDocument {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   Code mode;
   String documentation;
   Reference profile;
+
+  ConformanceDocument({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.mode,
+    this.documentation,
+    this.profile,
+  });
+
+  factory ConformanceDocument.fromJson(Map<String, dynamic> json) =>
+      _$ConformanceDocumentFromJson(json);
+  Map<String, dynamic> toJson() => _$ConformanceDocumentToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
@@ -197,6 +229,24 @@ class ConformanceRestSecurity {
   List<CodeableConcept> service;
   String description;
   List<ConformanceRestSecurityCertificate> certificate;
+
+  ConformanceRestSecurity({
+    this.id,
+    this.extension,
+    this.modifierExtension,
+    this.cors,
+    this.service,
+    this.description,
+    this.certificate,
+  });
+
+  factory ConformanceRestSecurity.fromJson(Map<String, dynamic> json) =>
+      _$ConformanceRestSecurityFromJson(json);
+  Map<String, dynamic> toJson() => _$ConformanceRestSecurityToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class ConformanceRestResource {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
@@ -212,20 +262,8 @@ class ConformanceRestSecurity {
   List<String> searchInclude;
   List<String> searchRevInclude;
   List<ConformanceRestResourceSearchParam> searchParam;
-  Id id;
-  List<Extension> extension;
-  List<Extension> modifierExtension;
-  Code code;
-  String documentation;
 
-  ConformanceRestInteraction({
-    this.id,
-    this.extension,
-    this.modifierExtension,
-    this.cors,
-    this.service,
-    this.description,
-    this.certificate,
+  ConformanceRestResource({
     this.id,
     this.extension,
     this.modifierExtension,
@@ -241,6 +279,22 @@ class ConformanceRestSecurity {
     this.searchInclude,
     this.searchRevInclude,
     this.searchParam,
+  });
+
+  factory ConformanceRestResource.fromJson(Map<String, dynamic> json) =>
+      _$ConformanceRestResourceFromJson(json);
+  Map<String, dynamic> toJson() => _$ConformanceRestResourceToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
+class ConformanceRestInteraction {
+  Id id;
+  List<Extension> extension;
+  List<Extension> modifierExtension;
+  Code code;
+  String documentation;
+
+  ConformanceRestInteraction({
     this.id,
     this.extension,
     this.modifierExtension,
@@ -349,7 +403,6 @@ class ConformanceRestSecurityCertificate {
       _$ConformanceRestSecurityCertificateToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ConformanceRestResourceInteraction {
   Id id;
   List<Extension> extension;
