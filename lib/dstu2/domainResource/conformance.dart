@@ -192,7 +192,7 @@ class ConformanceMessaging {
     this.event,
   });
 
-  factory ConformanceMessagning.fromJson(Map<String, dynamic> json) =>
+  factory ConformanceMessaging.fromJson(Map<String, dynamic> json) =>
       _$ConformanceMessagingFromJson(json);
   Map<String, dynamic> toJson() => _$ConformanceMessagingToJson(this);
 }
@@ -403,6 +403,7 @@ class ConformanceRestSecurityCertificate {
       _$ConformanceRestSecurityCertificateToJson(this);
 }
 
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class ConformanceRestResourceInteraction {
   Id id;
   List<Extension> extension;

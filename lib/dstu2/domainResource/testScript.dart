@@ -206,22 +206,22 @@ class TestScriptTest {
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class TestScriptTeardownAction {
+class TestScriptTeardown {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
   List<TestScriptTeardownAction> action;
 
-  TestScriptTeardownAction({
+  TestScriptTeardown({
     this.id,
     this.extension,
     this.modifierExtension,
     this.action,
   });
 
-  factory TestScriptTeardownAction.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptTeardownActionFromJson(json);
-  Map<String, dynamic> toJson() => _$TestScriptTeardownActionToJson(this);
+  factory TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptTeardownFromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptTeardownToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
@@ -317,11 +317,13 @@ class TestScriptTeardownAction {
   Id id;
   List<Extension> extension;
   List<Extension> modifierExtension;
+  TestScriptSetupActionOperation operation;
 
   TestScriptTeardownAction({
     this.id,
     this.extension,
     this.modifierExtension,
+    this.operation,
   });
 
   factory TestScriptTeardownAction.fromJson(Map<String, dynamic> json) =>

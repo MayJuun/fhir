@@ -199,4 +199,16 @@ class ElementDefinitionMapping {
   Id identity;
   Code language;
   String map;
+
+  ElementDefinitionMapping({
+    this.id,
+    this.extension,
+    this.identity,
+    this.language,
+    this.map,
+  });
+
+  factory ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
+      _$ElementDefinitionMappingFromJson(json);
+  Map<String, dynamic> toJson() => _$ElementDefinitionMappingToJson(this);
 }

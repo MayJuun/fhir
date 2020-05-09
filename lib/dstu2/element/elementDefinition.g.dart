@@ -334,19 +334,20 @@ Map<String, dynamic> _$ElementDefinitionBindingToJson(
 
 ElementDefinitionMapping _$ElementDefinitionMappingFromJson(
     Map<String, dynamic> json) {
-  return ElementDefinitionMapping()
-    ..id = json['id'] == null ? null : Id.fromJson(json['id'] as String)
-    ..extension = (json['extension'] as List)
+  return ElementDefinitionMapping(
+    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    extension: (json['extension'] as List)
         ?.map((e) =>
             e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList()
-    ..identity = json['identity'] == null
+        ?.toList(),
+    identity: json['identity'] == null
         ? null
-        : Id.fromJson(json['identity'] as String)
-    ..language = json['language'] == null
+        : Id.fromJson(json['identity'] as String),
+    language: json['language'] == null
         ? null
-        : Code.fromJson(json['language'] as String)
-    ..map = json['map'] as String;
+        : Code.fromJson(json['language'] as String),
+    map: json['map'] as String,
+  );
 }
 
 Map<String, dynamic> _$ElementDefinitionMappingToJson(
