@@ -35,9 +35,9 @@ class _$PaymentTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<Extension> extension,
-      List<Extension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Code status,
       Reference request,
       Reference response,
@@ -82,9 +82,9 @@ class _$PaymentTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<Extension> extension,
-      List<Extension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Code status,
       Period period,
       FhirDateTime created,
@@ -129,8 +129,8 @@ class _$PaymentTearOff {
 
   PaymentReconciliationDetail paymentReconciliationDetail(
       {String id,
-      List<Extension> extension,
-      List<Extension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Identifier identifier,
       Identifier predecessor,
       CodeableConcept type,
@@ -160,8 +160,8 @@ class _$PaymentTearOff {
 
   PaymentReconciliationProcessNote paymentReconciliationProcessNote(
       {String id,
-      List<Extension> extension,
-      List<Extension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       PaymentReconciliationProcessNoteType type,
       String text}) {
     return PaymentReconciliationProcessNote(
@@ -178,8 +178,8 @@ class _$PaymentTearOff {
 const $Payment = _$PaymentTearOff();
 
 mixin _$Payment {
-  List<Extension> get extension;
-  List<Extension> get modifierExtension;
+  List<dynamic> get extension;
+  List<dynamic> get modifierExtension;
 
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -192,9 +192,9 @@ mixin _$Payment {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Reference request,
             Reference response,
@@ -215,9 +215,9 @@ mixin _$Payment {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Period period,
             FhirDateTime created,
@@ -235,8 +235,8 @@ mixin _$Payment {
     @required
         Result paymentReconciliationDetail(
             String id,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             Identifier predecessor,
             CodeableConcept type,
@@ -250,8 +250,8 @@ mixin _$Payment {
     @required
         Result paymentReconciliationProcessNote(
             String id,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             PaymentReconciliationProcessNoteType type,
             String text),
   });
@@ -265,9 +265,9 @@ mixin _$Payment {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Reference request,
         Reference response,
@@ -287,9 +287,9 @@ mixin _$Payment {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Period period,
         FhirDateTime created,
@@ -306,8 +306,8 @@ mixin _$Payment {
         List<PaymentReconciliationProcessNote> processNote),
     Result paymentReconciliationDetail(
         String id,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         Identifier predecessor,
         CodeableConcept type,
@@ -320,8 +320,8 @@ mixin _$Payment {
         Money amount),
     Result paymentReconciliationProcessNote(
         String id,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         PaymentReconciliationProcessNoteType type,
         String text),
     @required Result orElse(),
@@ -352,7 +352,7 @@ mixin _$Payment {
 abstract class $PaymentCopyWith<$Res> {
   factory $PaymentCopyWith(Payment value, $Res Function(Payment) then) =
       _$PaymentCopyWithImpl<$Res>;
-  $Res call({List<Extension> extension, List<Extension> modifierExtension});
+  $Res call({List<dynamic> extension, List<dynamic> modifierExtension});
 }
 
 class _$PaymentCopyWithImpl<$Res> implements $PaymentCopyWith<$Res> {
@@ -368,12 +368,11 @@ class _$PaymentCopyWithImpl<$Res> implements $PaymentCopyWith<$Res> {
     Object modifierExtension = freezed,
   }) {
     return _then(_value.copyWith(
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<Extension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<Extension>,
+          : modifierExtension as List<dynamic>,
     ));
   }
 }
@@ -391,9 +390,9 @@ abstract class $PaymentNoticeCopyWith<$Res> implements $PaymentCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<Extension> extension,
-      List<Extension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Code status,
       Reference request,
       Reference response,
@@ -453,15 +452,14 @@ class _$PaymentNoticeCopyWithImpl<$Res> extends _$PaymentCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<Extension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<Extension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       status: status == freezed ? _value.status : status as Code,
       request: request == freezed ? _value.request : request as Reference,
       response: response == freezed ? _value.response : response as Reference,
@@ -524,11 +522,11 @@ class _$PaymentNotice implements PaymentNotice {
   @override
   final List<dynamic> contained;
   @override
-  final List<Extension> extension;
+  final List<dynamic> extension;
   @override
-  final List<Extension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final Code status;
   @override
@@ -661,9 +659,9 @@ class _$PaymentNotice implements PaymentNotice {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Reference request,
             Reference response,
@@ -684,9 +682,9 @@ class _$PaymentNotice implements PaymentNotice {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Period period,
             FhirDateTime created,
@@ -704,8 +702,8 @@ class _$PaymentNotice implements PaymentNotice {
     @required
         Result paymentReconciliationDetail(
             String id,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             Identifier predecessor,
             CodeableConcept type,
@@ -719,8 +717,8 @@ class _$PaymentNotice implements PaymentNotice {
     @required
         Result paymentReconciliationProcessNote(
             String id,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             PaymentReconciliationProcessNoteType type,
             String text),
   }) {
@@ -763,9 +761,9 @@ class _$PaymentNotice implements PaymentNotice {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Reference request,
         Reference response,
@@ -785,9 +783,9 @@ class _$PaymentNotice implements PaymentNotice {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Period period,
         FhirDateTime created,
@@ -804,8 +802,8 @@ class _$PaymentNotice implements PaymentNotice {
         List<PaymentReconciliationProcessNote> processNote),
     Result paymentReconciliationDetail(
         String id,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         Identifier predecessor,
         CodeableConcept type,
@@ -818,8 +816,8 @@ class _$PaymentNotice implements PaymentNotice {
         Money amount),
     Result paymentReconciliationProcessNote(
         String id,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         PaymentReconciliationProcessNoteType type,
         String text),
     @required Result orElse(),
@@ -902,9 +900,9 @@ abstract class PaymentNotice implements Payment {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<Extension> extension,
-      List<Extension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Code status,
       Reference request,
       Reference response,
@@ -928,10 +926,10 @@ abstract class PaymentNotice implements Payment {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<Extension> get extension;
+  List<dynamic> get extension;
   @override
-  List<Extension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   Code get status;
   Reference get request;
   Reference get response;
@@ -961,9 +959,9 @@ abstract class $PaymentReconciliationCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<Extension> extension,
-      List<Extension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Code status,
       Period period,
       FhirDateTime created,
@@ -1030,15 +1028,14 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<Extension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<Extension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       status: status == freezed ? _value.status : status as Code,
       period: period == freezed ? _value.period : period as Period,
       created: created == freezed ? _value.created : created as FhirDateTime,
@@ -1119,11 +1116,11 @@ class _$PaymentReconciliation implements PaymentReconciliation {
   @override
   final List<dynamic> contained;
   @override
-  final List<Extension> extension;
+  final List<dynamic> extension;
   @override
-  final List<Extension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final Code status;
   @override
@@ -1275,9 +1272,9 @@ class _$PaymentReconciliation implements PaymentReconciliation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Reference request,
             Reference response,
@@ -1298,9 +1295,9 @@ class _$PaymentReconciliation implements PaymentReconciliation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Period period,
             FhirDateTime created,
@@ -1318,8 +1315,8 @@ class _$PaymentReconciliation implements PaymentReconciliation {
     @required
         Result paymentReconciliationDetail(
             String id,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             Identifier predecessor,
             CodeableConcept type,
@@ -1333,8 +1330,8 @@ class _$PaymentReconciliation implements PaymentReconciliation {
     @required
         Result paymentReconciliationProcessNote(
             String id,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             PaymentReconciliationProcessNoteType type,
             String text),
   }) {
@@ -1380,9 +1377,9 @@ class _$PaymentReconciliation implements PaymentReconciliation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Reference request,
         Reference response,
@@ -1402,9 +1399,9 @@ class _$PaymentReconciliation implements PaymentReconciliation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Period period,
         FhirDateTime created,
@@ -1421,8 +1418,8 @@ class _$PaymentReconciliation implements PaymentReconciliation {
         List<PaymentReconciliationProcessNote> processNote),
     Result paymentReconciliationDetail(
         String id,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         Identifier predecessor,
         CodeableConcept type,
@@ -1435,8 +1432,8 @@ class _$PaymentReconciliation implements PaymentReconciliation {
         Money amount),
     Result paymentReconciliationProcessNote(
         String id,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         PaymentReconciliationProcessNoteType type,
         String text),
     @required Result orElse(),
@@ -1523,9 +1520,9 @@ abstract class PaymentReconciliation implements Payment {
           Code language,
           Narrative text,
           List<dynamic> contained,
-          List<Extension> extension,
-          List<Extension> modifierExtension,
-          List<Identifier> identifier,
+          List<dynamic> extension,
+          List<dynamic> modifierExtension,
+          List<dynamic> identifier,
           Code status,
           Period period,
           FhirDateTime created,
@@ -1553,10 +1550,10 @@ abstract class PaymentReconciliation implements Payment {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<Extension> get extension;
+  List<dynamic> get extension;
   @override
-  List<Extension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   Code get status;
   Period get period;
   FhirDateTime get created;
@@ -1584,8 +1581,8 @@ abstract class $PaymentReconciliationDetailCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<Extension> extension,
-      List<Extension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Identifier identifier,
       Identifier predecessor,
       CodeableConcept type,
@@ -1627,12 +1624,11 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
   }) {
     return _then(PaymentReconciliationDetail(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<Extension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<Extension>,
+          : modifierExtension as List<dynamic>,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       predecessor: predecessor == freezed
@@ -1676,9 +1672,9 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
   @override
   final String id;
   @override
-  final List<Extension> extension;
+  final List<dynamic> extension;
   @override
-  final List<Extension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Identifier identifier;
   @override
@@ -1779,9 +1775,9 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Reference request,
             Reference response,
@@ -1802,9 +1798,9 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Period period,
             FhirDateTime created,
@@ -1822,8 +1818,8 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
     @required
         Result paymentReconciliationDetail(
             String id,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             Identifier predecessor,
             CodeableConcept type,
@@ -1837,8 +1833,8 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
     @required
         Result paymentReconciliationProcessNote(
             String id,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             PaymentReconciliationProcessNoteType type,
             String text),
   }) {
@@ -1873,9 +1869,9 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Reference request,
         Reference response,
@@ -1895,9 +1891,9 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Period period,
         FhirDateTime created,
@@ -1914,8 +1910,8 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
         List<PaymentReconciliationProcessNote> processNote),
     Result paymentReconciliationDetail(
         String id,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         Identifier predecessor,
         CodeableConcept type,
@@ -1928,8 +1924,8 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
         Money amount),
     Result paymentReconciliationProcessNote(
         String id,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         PaymentReconciliationProcessNoteType type,
         String text),
     @required Result orElse(),
@@ -1999,8 +1995,8 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
 abstract class PaymentReconciliationDetail implements Payment {
   const factory PaymentReconciliationDetail(
       {String id,
-      List<Extension> extension,
-      List<Extension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Identifier identifier,
       Identifier predecessor,
       CodeableConcept type,
@@ -2017,9 +2013,9 @@ abstract class PaymentReconciliationDetail implements Payment {
 
   String get id;
   @override
-  List<Extension> get extension;
+  List<dynamic> get extension;
   @override
-  List<Extension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   Identifier get identifier;
   Identifier get predecessor;
   CodeableConcept get type;
@@ -2044,8 +2040,8 @@ abstract class $PaymentReconciliationProcessNoteCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<Extension> extension,
-      List<Extension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       PaymentReconciliationProcessNoteType type,
       String text});
 }
@@ -2072,12 +2068,11 @@ class _$PaymentReconciliationProcessNoteCopyWithImpl<$Res>
   }) {
     return _then(PaymentReconciliationProcessNote(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<Extension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<Extension>,
+          : modifierExtension as List<dynamic>,
       type: type == freezed
           ? _value.type
           : type as PaymentReconciliationProcessNoteType,
@@ -2099,9 +2094,9 @@ class _$PaymentReconciliationProcessNote
   @override
   final String id;
   @override
-  final List<Extension> extension;
+  final List<dynamic> extension;
   @override
-  final List<Extension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final PaymentReconciliationProcessNoteType type;
   @override
@@ -2156,9 +2151,9 @@ class _$PaymentReconciliationProcessNote
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Reference request,
             Reference response,
@@ -2179,9 +2174,9 @@ class _$PaymentReconciliationProcessNote
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Code status,
             Period period,
             FhirDateTime created,
@@ -2199,8 +2194,8 @@ class _$PaymentReconciliationProcessNote
     @required
         Result paymentReconciliationDetail(
             String id,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             Identifier predecessor,
             CodeableConcept type,
@@ -2214,8 +2209,8 @@ class _$PaymentReconciliationProcessNote
     @required
         Result paymentReconciliationProcessNote(
             String id,
-            List<Extension> extension,
-            List<Extension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             PaymentReconciliationProcessNoteType type,
             String text),
   }) {
@@ -2238,9 +2233,9 @@ class _$PaymentReconciliationProcessNote
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Reference request,
         Reference response,
@@ -2260,9 +2255,9 @@ class _$PaymentReconciliationProcessNote
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Code status,
         Period period,
         FhirDateTime created,
@@ -2279,8 +2274,8 @@ class _$PaymentReconciliationProcessNote
         List<PaymentReconciliationProcessNote> processNote),
     Result paymentReconciliationDetail(
         String id,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         Identifier predecessor,
         CodeableConcept type,
@@ -2293,8 +2288,8 @@ class _$PaymentReconciliationProcessNote
         Money amount),
     Result paymentReconciliationProcessNote(
         String id,
-        List<Extension> extension,
-        List<Extension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         PaymentReconciliationProcessNoteType type,
         String text),
     @required Result orElse(),
@@ -2352,8 +2347,8 @@ class _$PaymentReconciliationProcessNote
 abstract class PaymentReconciliationProcessNote implements Payment {
   const factory PaymentReconciliationProcessNote(
       {String id,
-      List<Extension> extension,
-      List<Extension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       PaymentReconciliationProcessNoteType type,
       String text}) = _$PaymentReconciliationProcessNote;
 
@@ -2362,9 +2357,9 @@ abstract class PaymentReconciliationProcessNote implements Payment {
 
   String get id;
   @override
-  List<Extension> get extension;
+  List<dynamic> get extension;
   @override
-  List<Extension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   PaymentReconciliationProcessNoteType get type;
   String get text;
   @override
