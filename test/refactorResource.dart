@@ -39,13 +39,43 @@ void main() async {
                 '${text.group(0)[0].toLowerCase() + text.group(0).substring(1, text.group(0).length)}'
                 '({';
             baseClass += match.group(0).replaceAll(';', ",");
-            baseClass += '}) = ${match.group(0)};';
+            baseClass += '}) = ${text.group(0)};\n\n';
           }
         }
       }
       await File(fileName).writeAsString(baseClass);
     }
   }
+
+  var finalName = './lib/r4/resource_types/resource_types_foundation.dart';
+  var finalFile = await File(finalName).readAsString();
+  finalFile +=
+      'factory ResourceTypesFoundation.fromJson(Map<String, dynamic> json => _\$ResourceTypesFoundationFromJson(json);}';
+  await File(finalName).writeAsString(finalFile);
+
+  finalName = './lib/r4/resource_types/resource_types_base.dart';
+  finalFile = await File(finalName).readAsString();
+  finalFile +=
+      'factory ResourceTypesBase.fromJson(Map<String, dynamic> json => _\$ResourceTypesBaseFromJson(json);}';
+  await File(finalName).writeAsString(finalFile);
+
+  finalName = './lib/r4/resource_types/resource_types_clinical.dart';
+  finalFile = await File(finalName).readAsString();
+  finalFile +=
+      'factory ResourceTypesClinical.fromJson(Map<String, dynamic> json => _\$ResourceTypesClinicalFromJson(json);}';
+  await File(finalName).writeAsString(finalFile);
+
+  finalName = './lib/r4/resource_types/resource_types_financial.dart';
+  finalFile = await File(finalName).readAsString();
+  finalFile +=
+      'factory ResourceTypesFinancial.fromJson(Map<String, dynamic> json => _\$ResourceTypesFinancialFromJson(json);}';
+  await File(finalName).writeAsString(finalFile);
+
+  finalName = './lib/r4/resource_types/resource_types_specialized.dart';
+  finalFile = await File(finalName).readAsString();
+  finalFile +=
+      'factory ResourceTypesSpecialized.fromJson(Map<String, dynamic> json => _\$ResourceTypesSpecializedFromJson(json);}';
+  await File(finalName).writeAsString(finalFile);
 }
 
 var foundation = [
