@@ -31,35 +31,25 @@ void main() async {
     }
   }
 
-  var finalName = './lib/r4/resource_types/resource_types_foundation.dart';
-  var finalFile = await File(finalName).readAsString();
-  finalFile +=
-      'factory .fromJson(Map<String, dynamic> json => _\$FromJson(json);}';
-  await File(finalName).writeAsString(finalFile);
-
-  finalName = './lib/r4/resource_types/resource_types_base.dart';
-  finalFile = await File(finalName).readAsString();
-  finalFile +=
-      'factory .fromJson(Map<String, dynamic> json => _\$FromJson(json);}';
-  await File(finalName).writeAsString(finalFile);
-
-  finalName = './lib/r4/resource_types/resource_types_clinical.dart';
-  finalFile = await File(finalName).readAsString();
-  finalFile +=
-      'factory .fromJson(Map<String, dynamic> json => _\$FromJson(json);}';
-  await File(finalName).writeAsString(finalFile);
-
-  finalName = './lib/r4/resource_types/resource_types_financial.dart';
-  finalFile = await File(finalName).readAsString();
-  finalFile +=
-      'factory .fromJson(Map<String, dynamic> json => _\$FromJson(json);}';
-  await File(finalName).writeAsString(finalFile);
-
-  finalName = './lib/r4/resource_types/resource_types_specialized.dart';
-  finalFile = await File(finalName).readAsString();
-  finalFile +=
-      'factory .fromJson(Map<String, dynamic> json => _\$FromJson(json);}';
-  await File(finalName).writeAsString(finalFile);
+  tempDir = Directory('./lib/r4/resource_types');
+  files = tempDir.listSync(recursive: true).toList();
+  for (var file in files) {
+    if (file.toString().contains('.dart')) {
+      var tempFile = await File(file.path.toString()).readAsString();
+      var className =
+          (file.toString().split('/').last).split('.dart')[0].split('_');
+      var newClass = '';
+      className.forEach((element) {
+        newClass +=
+            element[0].toUpperCase() + element.substring(1, element.length);
+      });
+      tempFile +=
+          'factory $newClass.fromJson(Map<String,dynamic> json) => _\$${newClass}FromJson(json);';
+      tempFile +=
+          'Map<String, dynamic> toJson() => _\$${newClass}ToJson(this);';
+      await File(file.path.toString()).writeAsString(tempFile);
+    }
+  }
 }
 
 bool superCategory(List<String> category, String className) =>
@@ -70,7 +60,7 @@ List<String> category(String className) {
   var type;
 
   if (superCategory(base, className)) {
-    file = './lib/r4/resource_types/resource_types/base/';
+    file = './lib/r4/resource_types/base/';
     if (superCategory(entities1, className)) {
       file += 'entities_1/entities_1.dart';
       type = 'Entities1';
@@ -88,7 +78,7 @@ List<String> category(String className) {
       type = 'Workflow';
     }
   } else if (superCategory(clinical, className)) {
-    file = './lib/r4/resource_types/resource_types/clinical/';
+    file = './lib/r4/resource_types/clinical/';
     if (superCategory(careprovision, className)) {
       file += 'care_provision/care_provision.dart';
       type = 'CareProvision';
@@ -106,7 +96,7 @@ List<String> category(String className) {
       type = 'Summary';
     }
   } else if (superCategory(financial, className)) {
-    file = './lib/r4/resource_types/resource_types/financial/';
+    file = './lib/r4/resource_types/financial/';
     if (superCategory(billing, className)) {
       file += 'billing/billing.dart';
       type = 'Billing';
@@ -121,7 +111,7 @@ List<String> category(String className) {
       type = 'Support';
     }
   } else if (superCategory(foundation, className)) {
-    file = './lib/r4/resource_types/resource_types/foundation/';
+    file = './lib/r4/resource_types/foundation/';
     if (superCategory(conformance, className)) {
       file += 'conformance/conformance.dart';
       type = 'Conformance';
@@ -139,15 +129,15 @@ List<String> category(String className) {
       type = 'Terminology';
     }
   } else if (superCategory(specialized, className)) {
-    file = './lib/r4/resource_types/resource_types/specialized/';
+    file = './lib/r4/resource_types/specialized/';
     if (superCategory(definitionalartifacts, className)) {
-      file += 'definitional_artifacts/definitonal_artifacts.dart';
+      file += 'definitional_artifacts/definitional_artifacts.dart';
       type = 'DefinitionalArtifacts';
     } else if (superCategory(evidencebasedmedicine, className)) {
-      file += 'evidence_based_medicine.dart';
+      file += 'evidence_based_medicine/evidence_based_medicine.dart';
       type = 'EvidenceBasedMedicine';
     } else if (superCategory(medicationdefinition, className)) {
-      file += 'medication_definition.dart';
+      file += 'medication_definition/medication_definition.dart';
       type = 'MedicationDefinition';
     } else if (superCategory(publichealthresearch, className)) {
       file += 'public_health_research/public_health_research.dart';
@@ -157,6 +147,8 @@ List<String> category(String className) {
       type = 'QualityReportingTesting';
     }
   }
+  // print(file);
+  // print(className);
 
   return [file, type];
 }

@@ -56,7 +56,7 @@ var base = [
   'encounter',
   'episodeofcare',
   'flag',
-  'list',
+  'lists',
   'library',
 ];
 
@@ -241,7 +241,7 @@ var management = [
   'encounter',
   'episodeofcare',
   'flag',
-  'list',
+  'lists',
   'library',
 ];
 
