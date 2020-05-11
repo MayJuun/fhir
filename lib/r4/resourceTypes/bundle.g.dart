@@ -120,7 +120,7 @@ BundleEntry _$BundleEntryFromJson(Map<String, dynamic> json) {
     fullUrl: json['fullUrl'] == null
         ? null
         : FhirUri.fromJson(json['fullUrl'] as String),
-    resource: json['resource'] == null ? null : resourceList(json['resource']),
+    resource: json['resource'],
     search: json['search'] == null
         ? null
         : BundleSearch.fromJson(json['search'] as Map<String, dynamic>),
@@ -149,7 +149,7 @@ Map<String, dynamic> _$BundleEntryToJson(BundleEntry instance) {
       instance.modifierExtension?.map((e) => e?.toJson())?.toList());
   writeNotNull('link', instance.link?.map((e) => e?.toJson())?.toList());
   writeNotNull('fullUrl', instance.fullUrl?.toJson());
-  writeNotNull('resource', instance.resource?.toJson());
+  writeNotNull('resource', instance.resource);
   writeNotNull('search', instance.search?.toJson());
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('response', instance.response?.toJson());
@@ -259,7 +259,7 @@ BundleResponse _$BundleResponseFromJson(Map<String, dynamic> json) {
     lastModified: json['lastModified'] == null
         ? null
         : Instant.fromJson(json['lastModified'] as String),
-    outcome: json['outcome'] == null ? null : resourceList(json['outcome']),
+    outcome: json['outcome'],
   );
 }
 
@@ -281,6 +281,6 @@ Map<String, dynamic> _$BundleResponseToJson(BundleResponse instance) {
   writeNotNull('location', instance.location?.toJson());
   writeNotNull('etag', instance.etag);
   writeNotNull('lastModified', instance.lastModified?.toJson());
-  writeNotNull('outcome', instance.outcome?.toJson());
+  writeNotNull('outcome', instance.outcome);
   return val;
 }
