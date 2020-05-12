@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_r4.dart';
-// import 'medications.enums.dart';
+import'medications.enums.dart';
 
 part 'medications.g.dart';
 part 'medications.freezed.dart';
@@ -36,7 +36,7 @@ abstract class Medications with _$Medications {
   
     }) = ImmunizationEvaluation;
   
- co nst factory Medications.medicationDispense({
+ const factory Medications.medicationDispense({
     String resourceType,
   Meta meta,
   FhirUri implicitRules,
@@ -72,7 +72,7 @@ abstract class Medications with _$Medications {
   
     }) = MedicationDispense;
   
- co nst factory Medications.medicationDispensePerformer({
+ const factory Medications.medicationDispensePerformer({
     String id,
   List<FhirExtension> modifierExtension,
   CodeableConcept function,
@@ -80,7 +80,7 @@ abstract class Medications with _$Medications {
   
     }) = MedicationDispensePerformer;
   
- co nst factory Medications.medicationDispenseSubstitution({
+ const factory Medications.medicationDispenseSubstitution({
     String id,
     List<FhirExtension> extension,
     List<FhirExtension> modifierExtension,
@@ -160,7 +160,7 @@ co  nst factory Medications.medicationIngredient({
   
     }) = MedicationStatement;
   
- co nst factory Medications.medicationRequest({
+ const factory Medications.medicationRequest({
     String resourceType,
     Id id,
     Meta meta,
@@ -204,7 +204,7 @@ co  nst factory Medications.medicationIngredient({
   
     }) = MedicationRequest;
   
- co nst factory Medications.medicationRequestDispenseRequest({
+ const factory Medications.medicationRequestDispenseRequest({
     String id,
     List<FhirExtension> extension,
     List<FhirExtension> modifierExtension,
@@ -235,7 +235,7 @@ co  nst factory Medications.medicationIngredient({
   
     }) = MedicationRequestSubstitution;
   
- co nst factory Medications.immunization({
+ const factory Medications.immunization({
     String resourceType,
     Id id,
     Meta meta,
@@ -273,7 +273,7 @@ co  nst factory Medications.medicationIngredient({
   
     }) = Immunization;
   
- co nst factory Medications.immunizationPerformer({
+ const factory Medications.immunizationPerformer({
     String id,
     List<FhirExtension> extension,
     List<FhirExtension> modifierExtension,
@@ -303,7 +303,7 @@ co  nst factory Medications.immunizationReaction({
   
     }) = ImmunizationReaction;
   
- co nst factory Medications.immunizationProtocolApplied({
+ const factory Medications.immunizationProtocolApplied({
     String id,
     List<FhirExtension> extension,
     List<FhirExtension> modifierExtension,
@@ -388,7 +388,7 @@ const factory Medications.medicationAdministrationPerformer({
   
     }) = ImmunizationRecommendation;
   
- co nst factory Medications.immunizationRecommendationRecommendation({
+ const factory Medications.immunizationRecommendationRecommendation({
     String id,
     List<FhirExtension> extension,
   List<CodeableConcept> vaccineCode,
@@ -416,7 +416,7 @@ const factory Medications.medicationAdministrationPerformer({
   
     }) = ImmunizationRecommendationDateCriterion;
   
- co nst factory Medications.medicationKnowledge({
+ const factory Medications.medicationKnowledge({
     String resourceType,
     Id id,
     Meta meta,

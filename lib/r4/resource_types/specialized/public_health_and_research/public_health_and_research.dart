@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_r4.dart';
-// import 'public_health_and_research.enums.dart';
+import'public_health_and_research.enums.dart';
 
 part 'public_health_and_research.g.dart';
 part 'public_health_and_research.freezed.dart';

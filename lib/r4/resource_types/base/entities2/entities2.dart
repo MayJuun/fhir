@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_r4.dart';
-// import 'entities2.enums.dart';
+import 'entities2.enums.dart';
 
 part 'entities2.g.dart';
 part 'entities2.freezed.dart';

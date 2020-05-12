@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_r4.dart';
-// import 'summary.enums.dart';
+import'summary.enums.dart';
 
 part 'summary.g.dart';
 part 'summary.freezed.dart';
@@ -104,7 +104,7 @@ co  nst factory Summary.allergyIntoleranceReaction({
   
     }) = AllergyIntoleranceReaction;
   
- co nst factory Summary.adverseEvent({
+ const factory Summary.adverseEvent({
     String resourceType,
     Id id,
     Meta meta,
@@ -144,7 +144,7 @@ co  nst factory Summary.adverseEventSuspectEntity({
   
     }) = AdverseEventSuspectEntity;
   
- co nst factory Summary.adverseEventCausality({
+ const factory Summary.adverseEventCausality({
     String id,
     List<FhirExtension> extension,
     List<FhirExtension> modifierExtension,
@@ -155,7 +155,7 @@ co  nst factory Summary.adverseEventSuspectEntity({
   
     }) = AdverseEventCausality;
   
- co nst factory Summary.familyMemberHistory({
+ const factory Summary.familyMemberHistory({
     String resourceType,
     Id id,
     Meta meta,
@@ -192,7 +192,7 @@ co  nst factory Summary.adverseEventSuspectEntity({
   
     }) = FamilyMemberHistory;
   
- co nst factory Summary.familyMemberHistoryCondition({
+ const factory Summary.familyMemberHistoryCondition({
     String id,
     List<FhirExtension> extension,
     List<FhirExtension> modifierExtension,
@@ -207,7 +207,7 @@ co  nst factory Summary.adverseEventSuspectEntity({
   
     }) = FamilyMemberHistoryCondition;
   
- co nst factory Summary.detectedIssue({
+ const factory Summary.detectedIssue({
     String resourceType,
     Id id,
     Meta meta,
@@ -240,7 +240,7 @@ const factory Summary.detectedIssueEvidence({
   
     }) = DetectedIssueEvidence;
   
- co nst factory Summary.detectedIssueMitigation({
+ const factory Summary.detectedIssueMitigation({
     String id,
     List<FhirExtension> extension,
     List<FhirExtension> modifierExtension,
@@ -250,7 +250,7 @@ const factory Summary.detectedIssueEvidence({
   
     }) = DetectedIssueMitigation;
   
- co nst factory Summary.condition({
+ const factory Summary.condition({
     String resourceType,
     Id id,
     Meta meta,

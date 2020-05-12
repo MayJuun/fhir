@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_r4.dart';
-// import 'support.enums.dart';
+import'support.enums.dart';
 
 part 'support.g.dart';
 part 'support.freezed.dart';
@@ -28,7 +28,7 @@ abstract class Support with _$Support {
   
     }) = EnrollmentRequest;
   
- co nst factory Support.enrollmentResponse({
+ const factory Support.enrollmentResponse({
     String resourceType,
   Meta meta,
   FhirUri implicitRules,
@@ -48,7 +48,7 @@ abstract class Support with _$Support {
   
     }) = EnrollmentResponse;
   
- co nst factory Support.coverageEligibilityResponse({
+ const factory Support.coverageEligibilityResponse({
     String resourceType,
     Id id,
     Meta meta,

@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_r4.dart';
-// import 'quality_reporting_and_testing.enums.dart';
+import 'quality_reporting_and_testing.enums.dart';
 
 part 'quality_reporting_and_testing.g.dart';
 part 'quality_reporting_and_testing.freezed.dart';
