@@ -470,5 +470,4 @@ abstract class SpecialTypes with _$SpecialTypes {
 
   factory SpecialTypes.fromJson(Map<String, dynamic> json) =>
       _$SpecialTypesFromJson(json);
-  Map<String, dynamic> toJson() => _$SpecialTypesToJson(this);
 }

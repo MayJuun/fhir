@@ -131,5 +131,4 @@ abstract class MetadataTypes with _$MetadataTypes {
 
   factory MetadataTypes.fromJson(Map<String, dynamic> json) =>
       _$MetadataTypesFromJson(json);
-  Map<String, dynamic> toJson() => _$MetadataTypesToJson(this);
 }

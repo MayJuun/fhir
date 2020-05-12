@@ -237,5 +237,4 @@ abstract class GeneralTypes with _$GeneralTypes {
 
   factory GeneralTypes.fromJson(Map<String, dynamic> json) =>
       _$GeneralTypesFromJson(json);
-  Map<String, dynamic> toJson() => _$GeneralTypesToJson(this);
 }

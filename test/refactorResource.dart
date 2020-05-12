@@ -4,7 +4,6 @@ import './typeLists.dart';
 void main() async {
   var tempDir = Directory('./lib/r4/resourceTypes');
   var files = tempDir.listSync().toList();
-  var j = 0;
   for (var file in files) {
     if (!file.toString().contains('g.dart')) {
       var className = file.toString().split('/').last.split('.dart')[0];
