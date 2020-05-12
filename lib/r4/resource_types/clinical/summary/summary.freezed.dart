@@ -80,10 +80,10 @@ class _$SummaryTearOff {
       Reference assessor,
       Reference previous,
       List<dynamic> problem,
-      List<ClinicalImpressionInvestigation> investigation,
+      List<dynamic> investigation,
       List<FhirUri> protocol,
       String summary,
-      List<ClinicalImpressionFinding> finding,
+      List<dynamic> finding,
       List<dynamic> prognosisCodeableConcept,
       List<dynamic> prognosisReference,
       List<dynamic> supportingInfo,
@@ -168,7 +168,7 @@ class _$SummaryTearOff {
       CodeableConcept clinicalStatus,
       CodeableConcept verificationStatus,
       AllergyIntoleranceType type,
-      List<AllergyIntoleranceCategory> category,
+      List<dynamic> category,
       AllergyIntoleranceCriticality criticality,
       CodeableConcept code,
       Reference patient,
@@ -183,7 +183,7 @@ class _$SummaryTearOff {
       Reference asserter,
       FhirDateTime lastOccurrence,
       List<dynamic> note,
-      List<AllergyIntoleranceReaction> reaction}) {
+      List<dynamic> reaction}) {
     return AllergyIntolerance(
       resourceType: resourceType,
       id: id,
@@ -268,7 +268,7 @@ class _$SummaryTearOff {
       CodeableConcept outcome,
       Reference recorder,
       List<dynamic> contributor,
-      List<AdverseEventSuspectEntity> suspectEntity,
+      List<dynamic> suspectEntity,
       List<dynamic> subjectMedicalHistory,
       List<dynamic> referenceDocument,
       List<dynamic> study}) {
@@ -310,7 +310,7 @@ class _$SummaryTearOff {
       List<dynamic> extension,
       List<dynamic> modifierExtension,
       Reference instance,
-      List<AdverseEventCausality> causality}) {
+      List<dynamic> causality}) {
     return AdverseEventSuspectEntity(
       id: id,
       extension: extension,
@@ -374,7 +374,7 @@ class _$SummaryTearOff {
       List<dynamic> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> note,
-      List<FamilyMemberHistoryCondition> condition}) {
+      List<dynamic> condition}) {
     return FamilyMemberHistory(
       resourceType: resourceType,
       id: id,
@@ -460,10 +460,10 @@ class _$SummaryTearOff {
       Period identifiedPeriod,
       Reference author,
       List<dynamic> implicated,
-      List<DetectedIssueEvidence> evidence,
+      List<dynamic> evidence,
       String detail,
       FhirUri reference,
-      List<DetectedIssueMitigation> mitigation}) {
+      List<dynamic> mitigation}) {
     return DetectedIssue(
       resourceType: resourceType,
       id: id,
@@ -554,8 +554,8 @@ class _$SummaryTearOff {
       FhirDateTime recordedDate,
       Reference recorder,
       Reference asserter,
-      List<ConditionStage> stage,
-      List<ConditionEvidence> evidence,
+      List<dynamic> stage,
+      List<dynamic> evidence,
       List<dynamic> note}) {
     return Condition(
       resourceType: resourceType,
@@ -655,7 +655,7 @@ class _$SummaryTearOff {
       Range performedRange,
       Reference recorder,
       Reference asserter,
-      List<ProcedurePerformer> performer,
+      List<dynamic> performer,
       Reference location,
       List<dynamic> reasonCode,
       List<dynamic> reasonReference,
@@ -666,7 +666,7 @@ class _$SummaryTearOff {
       List<dynamic> complicationDetail,
       List<dynamic> followUp,
       List<dynamic> note,
-      List<ProcedureFocalDevice> focalDevice,
+      List<dynamic> focalDevice,
       List<dynamic> usedReference,
       List<dynamic> usedCode}) {
     return Procedure(
@@ -780,10 +780,10 @@ mixin _$Summary {
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -818,7 +818,7 @@ mixin _$Summary {
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -833,7 +833,7 @@ mixin _$Summary {
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -873,7 +873,7 @@ mixin _$Summary {
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -883,7 +883,7 @@ mixin _$Summary {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -929,7 +929,7 @@ mixin _$Summary {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -963,10 +963,10 @@ mixin _$Summary {
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -1015,8 +1015,8 @@ mixin _$Summary {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -1062,7 +1062,7 @@ mixin _$Summary {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -1073,7 +1073,7 @@ mixin _$Summary {
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -1117,10 +1117,10 @@ mixin _$Summary {
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -1152,7 +1152,7 @@ mixin _$Summary {
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -1167,7 +1167,7 @@ mixin _$Summary {
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -1205,7 +1205,7 @@ mixin _$Summary {
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -1214,7 +1214,7 @@ mixin _$Summary {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -1258,7 +1258,7 @@ mixin _$Summary {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -1290,10 +1290,10 @@ mixin _$Summary {
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -1339,8 +1339,8 @@ mixin _$Summary {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -1383,7 +1383,7 @@ mixin _$Summary {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -1394,7 +1394,7 @@ mixin _$Summary {
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(
@@ -1523,10 +1523,10 @@ abstract class $ClinicalImpressionCopyWith<$Res>
       Reference assessor,
       Reference previous,
       List<dynamic> problem,
-      List<ClinicalImpressionInvestigation> investigation,
+      List<dynamic> investigation,
       List<FhirUri> protocol,
       String summary,
-      List<ClinicalImpressionFinding> finding,
+      List<dynamic> finding,
       List<dynamic> prognosisCodeableConcept,
       List<dynamic> prognosisReference,
       List<dynamic> supportingInfo,
@@ -1618,13 +1618,11 @@ class _$ClinicalImpressionCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
       problem: problem == freezed ? _value.problem : problem as List<dynamic>,
       investigation: investigation == freezed
           ? _value.investigation
-          : investigation as List<ClinicalImpressionInvestigation>,
+          : investigation as List<dynamic>,
       protocol:
           protocol == freezed ? _value.protocol : protocol as List<FhirUri>,
       summary: summary == freezed ? _value.summary : summary as String,
-      finding: finding == freezed
-          ? _value.finding
-          : finding as List<ClinicalImpressionFinding>,
+      finding: finding == freezed ? _value.finding : finding as List<dynamic>,
       prognosisCodeableConcept: prognosisCodeableConcept == freezed
           ? _value.prognosisCodeableConcept
           : prognosisCodeableConcept as List<dynamic>,
@@ -1721,13 +1719,13 @@ class _$ClinicalImpression implements ClinicalImpression {
   @override
   final List<dynamic> problem;
   @override
-  final List<ClinicalImpressionInvestigation> investigation;
+  final List<dynamic> investigation;
   @override
   final List<FhirUri> protocol;
   @override
   final String summary;
   @override
-  final List<ClinicalImpressionFinding> finding;
+  final List<dynamic> finding;
   @override
   final List<dynamic> prognosisCodeableConcept;
   @override
@@ -1886,10 +1884,10 @@ class _$ClinicalImpression implements ClinicalImpression {
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -1924,7 +1922,7 @@ class _$ClinicalImpression implements ClinicalImpression {
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -1939,7 +1937,7 @@ class _$ClinicalImpression implements ClinicalImpression {
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -1979,7 +1977,7 @@ class _$ClinicalImpression implements ClinicalImpression {
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -1989,7 +1987,7 @@ class _$ClinicalImpression implements ClinicalImpression {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -2035,7 +2033,7 @@ class _$ClinicalImpression implements ClinicalImpression {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -2069,10 +2067,10 @@ class _$ClinicalImpression implements ClinicalImpression {
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -2121,8 +2119,8 @@ class _$ClinicalImpression implements ClinicalImpression {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -2168,7 +2166,7 @@ class _$ClinicalImpression implements ClinicalImpression {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -2179,7 +2177,7 @@ class _$ClinicalImpression implements ClinicalImpression {
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -2276,10 +2274,10 @@ class _$ClinicalImpression implements ClinicalImpression {
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -2311,7 +2309,7 @@ class _$ClinicalImpression implements ClinicalImpression {
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -2326,7 +2324,7 @@ class _$ClinicalImpression implements ClinicalImpression {
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -2364,7 +2362,7 @@ class _$ClinicalImpression implements ClinicalImpression {
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -2373,7 +2371,7 @@ class _$ClinicalImpression implements ClinicalImpression {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -2417,7 +2415,7 @@ class _$ClinicalImpression implements ClinicalImpression {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -2449,10 +2447,10 @@ class _$ClinicalImpression implements ClinicalImpression {
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -2498,8 +2496,8 @@ class _$ClinicalImpression implements ClinicalImpression {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -2542,7 +2540,7 @@ class _$ClinicalImpression implements ClinicalImpression {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -2553,7 +2551,7 @@ class _$ClinicalImpression implements ClinicalImpression {
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(
@@ -2720,10 +2718,10 @@ abstract class ClinicalImpression implements Summary {
       Reference assessor,
       Reference previous,
       List<dynamic> problem,
-      List<ClinicalImpressionInvestigation> investigation,
+      List<dynamic> investigation,
       List<FhirUri> protocol,
       String summary,
-      List<ClinicalImpressionFinding> finding,
+      List<dynamic> finding,
       List<dynamic> prognosisCodeableConcept,
       List<dynamic> prognosisReference,
       List<dynamic> supportingInfo,
@@ -2756,10 +2754,10 @@ abstract class ClinicalImpression implements Summary {
   Reference get assessor;
   Reference get previous;
   List<dynamic> get problem;
-  List<ClinicalImpressionInvestigation> get investigation;
+  List<dynamic> get investigation;
   List<FhirUri> get protocol;
   String get summary;
-  List<ClinicalImpressionFinding> get finding;
+  List<dynamic> get finding;
   List<dynamic> get prognosisCodeableConcept;
   List<dynamic> get prognosisReference;
   List<dynamic> get supportingInfo;
@@ -2901,10 +2899,10 @@ class _$ClinicalImpressionInvestigation
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -2939,7 +2937,7 @@ class _$ClinicalImpressionInvestigation
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -2954,7 +2952,7 @@ class _$ClinicalImpressionInvestigation
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -2994,7 +2992,7 @@ class _$ClinicalImpressionInvestigation
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -3004,7 +3002,7 @@ class _$ClinicalImpressionInvestigation
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -3050,7 +3048,7 @@ class _$ClinicalImpressionInvestigation
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -3084,10 +3082,10 @@ class _$ClinicalImpressionInvestigation
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -3136,8 +3134,8 @@ class _$ClinicalImpressionInvestigation
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -3183,7 +3181,7 @@ class _$ClinicalImpressionInvestigation
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -3194,7 +3192,7 @@ class _$ClinicalImpressionInvestigation
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -3262,10 +3260,10 @@ class _$ClinicalImpressionInvestigation
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -3297,7 +3295,7 @@ class _$ClinicalImpressionInvestigation
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -3312,7 +3310,7 @@ class _$ClinicalImpressionInvestigation
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -3350,7 +3348,7 @@ class _$ClinicalImpressionInvestigation
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -3359,7 +3357,7 @@ class _$ClinicalImpressionInvestigation
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -3403,7 +3401,7 @@ class _$ClinicalImpressionInvestigation
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -3435,10 +3433,10 @@ class _$ClinicalImpressionInvestigation
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -3484,8 +3482,8 @@ class _$ClinicalImpressionInvestigation
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -3528,7 +3526,7 @@ class _$ClinicalImpressionInvestigation
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -3539,7 +3537,7 @@ class _$ClinicalImpressionInvestigation
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(
@@ -3824,10 +3822,10 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -3862,7 +3860,7 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -3877,7 +3875,7 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -3917,7 +3915,7 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -3927,7 +3925,7 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -3973,7 +3971,7 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -4007,10 +4005,10 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -4059,8 +4057,8 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -4106,7 +4104,7 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -4117,7 +4115,7 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -4185,10 +4183,10 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -4220,7 +4218,7 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -4235,7 +4233,7 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -4273,7 +4271,7 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -4282,7 +4280,7 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -4326,7 +4324,7 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -4358,10 +4356,10 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -4407,8 +4405,8 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -4451,7 +4449,7 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -4462,7 +4460,7 @@ class _$ClinicalImpressionFinding implements ClinicalImpressionFinding {
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(
@@ -4620,7 +4618,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res>
       CodeableConcept clinicalStatus,
       CodeableConcept verificationStatus,
       AllergyIntoleranceType type,
-      List<AllergyIntoleranceCategory> category,
+      List<dynamic> category,
       AllergyIntoleranceCriticality criticality,
       CodeableConcept code,
       Reference patient,
@@ -4635,7 +4633,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res>
       Reference asserter,
       FhirDateTime lastOccurrence,
       List<dynamic> note,
-      List<AllergyIntoleranceReaction> reaction});
+      List<dynamic> reaction});
 }
 
 class _$AllergyIntoleranceCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
@@ -4707,9 +4705,8 @@ class _$AllergyIntoleranceCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
           ? _value.verificationStatus
           : verificationStatus as CodeableConcept,
       type: type == freezed ? _value.type : type as AllergyIntoleranceType,
-      category: category == freezed
-          ? _value.category
-          : category as List<AllergyIntoleranceCategory>,
+      category:
+          category == freezed ? _value.category : category as List<dynamic>,
       criticality: criticality == freezed
           ? _value.criticality
           : criticality as AllergyIntoleranceCriticality,
@@ -4736,9 +4733,8 @@ class _$AllergyIntoleranceCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
           ? _value.lastOccurrence
           : lastOccurrence as FhirDateTime,
       note: note == freezed ? _value.note : note as List<dynamic>,
-      reaction: reaction == freezed
-          ? _value.reaction
-          : reaction as List<AllergyIntoleranceReaction>,
+      reaction:
+          reaction == freezed ? _value.reaction : reaction as List<dynamic>,
     ));
   }
 }
@@ -4806,7 +4802,7 @@ class _$AllergyIntolerance implements AllergyIntolerance {
   @override
   final AllergyIntoleranceType type;
   @override
-  final List<AllergyIntoleranceCategory> category;
+  final List<dynamic> category;
   @override
   final AllergyIntoleranceCriticality criticality;
   @override
@@ -4836,7 +4832,7 @@ class _$AllergyIntolerance implements AllergyIntolerance {
   @override
   final List<dynamic> note;
   @override
-  final List<AllergyIntoleranceReaction> reaction;
+  final List<dynamic> reaction;
 
   @override
   String toString() {
@@ -4985,10 +4981,10 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -5023,7 +5019,7 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -5038,7 +5034,7 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -5078,7 +5074,7 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -5088,7 +5084,7 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -5134,7 +5130,7 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -5168,10 +5164,10 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -5220,8 +5216,8 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -5267,7 +5263,7 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -5278,7 +5274,7 @@ class _$AllergyIntolerance implements AllergyIntolerance {
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -5374,10 +5370,10 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -5409,7 +5405,7 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -5424,7 +5420,7 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -5462,7 +5458,7 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -5471,7 +5467,7 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -5515,7 +5511,7 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -5547,10 +5543,10 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -5596,8 +5592,8 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -5640,7 +5636,7 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -5651,7 +5647,7 @@ class _$AllergyIntolerance implements AllergyIntolerance {
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(
@@ -5808,7 +5804,7 @@ abstract class AllergyIntolerance implements Summary {
       CodeableConcept clinicalStatus,
       CodeableConcept verificationStatus,
       AllergyIntoleranceType type,
-      List<AllergyIntoleranceCategory> category,
+      List<dynamic> category,
       AllergyIntoleranceCriticality criticality,
       CodeableConcept code,
       Reference patient,
@@ -5823,7 +5819,7 @@ abstract class AllergyIntolerance implements Summary {
       Reference asserter,
       FhirDateTime lastOccurrence,
       List<dynamic> note,
-      List<AllergyIntoleranceReaction> reaction}) = _$AllergyIntolerance;
+      List<dynamic> reaction}) = _$AllergyIntolerance;
 
   factory AllergyIntolerance.fromJson(Map<String, dynamic> json) =
       _$AllergyIntolerance.fromJson;
@@ -5843,7 +5839,7 @@ abstract class AllergyIntolerance implements Summary {
   CodeableConcept get clinicalStatus;
   CodeableConcept get verificationStatus;
   AllergyIntoleranceType get type;
-  List<AllergyIntoleranceCategory> get category;
+  List<dynamic> get category;
   AllergyIntoleranceCriticality get criticality;
   CodeableConcept get code;
   Reference get patient;
@@ -5858,7 +5854,7 @@ abstract class AllergyIntolerance implements Summary {
   Reference get asserter;
   FhirDateTime get lastOccurrence;
   List<dynamic> get note;
-  List<AllergyIntoleranceReaction> get reaction;
+  List<dynamic> get reaction;
   @override
   $AllergyIntoleranceCopyWith<AllergyIntolerance> get copyWith;
 }
@@ -6056,10 +6052,10 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -6094,7 +6090,7 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -6109,7 +6105,7 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -6149,7 +6145,7 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -6159,7 +6155,7 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -6205,7 +6201,7 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -6239,10 +6235,10 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -6291,8 +6287,8 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -6338,7 +6334,7 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -6349,7 +6345,7 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -6426,10 +6422,10 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -6461,7 +6457,7 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -6476,7 +6472,7 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -6514,7 +6510,7 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -6523,7 +6519,7 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -6567,7 +6563,7 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -6599,10 +6595,10 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -6648,8 +6644,8 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -6692,7 +6688,7 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -6703,7 +6699,7 @@ class _$AllergyIntoleranceReaction implements AllergyIntoleranceReaction {
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(
@@ -6889,7 +6885,7 @@ abstract class $AdverseEventCopyWith<$Res> implements $SummaryCopyWith<$Res> {
       CodeableConcept outcome,
       Reference recorder,
       List<dynamic> contributor,
-      List<AdverseEventSuspectEntity> suspectEntity,
+      List<dynamic> suspectEntity,
       List<dynamic> subjectMedicalHistory,
       List<dynamic> referenceDocument,
       List<dynamic> study});
@@ -6987,7 +6983,7 @@ class _$AdverseEventCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
           : contributor as List<dynamic>,
       suspectEntity: suspectEntity == freezed
           ? _value.suspectEntity
-          : suspectEntity as List<AdverseEventSuspectEntity>,
+          : suspectEntity as List<dynamic>,
       subjectMedicalHistory: subjectMedicalHistory == freezed
           ? _value.subjectMedicalHistory
           : subjectMedicalHistory as List<dynamic>,
@@ -7086,7 +7082,7 @@ class _$AdverseEvent implements AdverseEvent {
   @override
   final List<dynamic> contributor;
   @override
-  final List<AdverseEventSuspectEntity> suspectEntity;
+  final List<dynamic> suspectEntity;
   @override
   final List<dynamic> subjectMedicalHistory;
   @override
@@ -7241,10 +7237,10 @@ class _$AdverseEvent implements AdverseEvent {
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -7279,7 +7275,7 @@ class _$AdverseEvent implements AdverseEvent {
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -7294,7 +7290,7 @@ class _$AdverseEvent implements AdverseEvent {
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -7334,7 +7330,7 @@ class _$AdverseEvent implements AdverseEvent {
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -7344,7 +7340,7 @@ class _$AdverseEvent implements AdverseEvent {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -7390,7 +7386,7 @@ class _$AdverseEvent implements AdverseEvent {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -7424,10 +7420,10 @@ class _$AdverseEvent implements AdverseEvent {
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -7476,8 +7472,8 @@ class _$AdverseEvent implements AdverseEvent {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -7523,7 +7519,7 @@ class _$AdverseEvent implements AdverseEvent {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -7534,7 +7530,7 @@ class _$AdverseEvent implements AdverseEvent {
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -7630,10 +7626,10 @@ class _$AdverseEvent implements AdverseEvent {
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -7665,7 +7661,7 @@ class _$AdverseEvent implements AdverseEvent {
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -7680,7 +7676,7 @@ class _$AdverseEvent implements AdverseEvent {
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -7718,7 +7714,7 @@ class _$AdverseEvent implements AdverseEvent {
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -7727,7 +7723,7 @@ class _$AdverseEvent implements AdverseEvent {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -7771,7 +7767,7 @@ class _$AdverseEvent implements AdverseEvent {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -7803,10 +7799,10 @@ class _$AdverseEvent implements AdverseEvent {
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -7852,8 +7848,8 @@ class _$AdverseEvent implements AdverseEvent {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -7896,7 +7892,7 @@ class _$AdverseEvent implements AdverseEvent {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -7907,7 +7903,7 @@ class _$AdverseEvent implements AdverseEvent {
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(
@@ -8075,7 +8071,7 @@ abstract class AdverseEvent implements Summary {
       CodeableConcept outcome,
       Reference recorder,
       List<dynamic> contributor,
-      List<AdverseEventSuspectEntity> suspectEntity,
+      List<dynamic> suspectEntity,
       List<dynamic> subjectMedicalHistory,
       List<dynamic> referenceDocument,
       List<dynamic> study}) = _$AdverseEvent;
@@ -8110,7 +8106,7 @@ abstract class AdverseEvent implements Summary {
   CodeableConcept get outcome;
   Reference get recorder;
   List<dynamic> get contributor;
-  List<AdverseEventSuspectEntity> get suspectEntity;
+  List<dynamic> get suspectEntity;
   List<dynamic> get subjectMedicalHistory;
   List<dynamic> get referenceDocument;
   List<dynamic> get study;
@@ -8129,7 +8125,7 @@ abstract class $AdverseEventSuspectEntityCopyWith<$Res>
       List<dynamic> extension,
       List<dynamic> modifierExtension,
       Reference instance,
-      List<AdverseEventCausality> causality});
+      List<dynamic> causality});
 }
 
 class _$AdverseEventSuspectEntityCopyWithImpl<$Res>
@@ -8159,9 +8155,8 @@ class _$AdverseEventSuspectEntityCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
       instance: instance == freezed ? _value.instance : instance as Reference,
-      causality: causality == freezed
-          ? _value.causality
-          : causality as List<AdverseEventCausality>,
+      causality:
+          causality == freezed ? _value.causality : causality as List<dynamic>,
     ));
   }
 }
@@ -8187,7 +8182,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
   @override
   final Reference instance;
   @override
-  final List<AdverseEventCausality> causality;
+  final List<dynamic> causality;
 
   @override
   String toString() {
@@ -8255,10 +8250,10 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -8293,7 +8288,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -8308,7 +8303,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -8348,7 +8343,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -8358,7 +8353,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -8404,7 +8399,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -8438,10 +8433,10 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -8490,8 +8485,8 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -8537,7 +8532,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -8548,7 +8543,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -8616,10 +8611,10 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -8651,7 +8646,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -8666,7 +8661,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -8704,7 +8699,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -8713,7 +8708,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -8757,7 +8752,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -8789,10 +8784,10 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -8838,8 +8833,8 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -8882,7 +8877,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -8893,7 +8888,7 @@ class _$AdverseEventSuspectEntity implements AdverseEventSuspectEntity {
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(
@@ -9013,7 +9008,7 @@ abstract class AdverseEventSuspectEntity implements Summary {
       List<dynamic> extension,
       List<dynamic> modifierExtension,
       Reference instance,
-      List<AdverseEventCausality> causality}) = _$AdverseEventSuspectEntity;
+      List<dynamic> causality}) = _$AdverseEventSuspectEntity;
 
   factory AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =
       _$AdverseEventSuspectEntity.fromJson;
@@ -9024,7 +9019,7 @@ abstract class AdverseEventSuspectEntity implements Summary {
   @override
   List<dynamic> get modifierExtension;
   Reference get instance;
-  List<AdverseEventCausality> get causality;
+  List<dynamic> get causality;
   @override
   $AdverseEventSuspectEntityCopyWith<AdverseEventSuspectEntity> get copyWith;
 }
@@ -9185,10 +9180,10 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -9223,7 +9218,7 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -9238,7 +9233,7 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -9278,7 +9273,7 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -9288,7 +9283,7 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -9334,7 +9329,7 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -9368,10 +9363,10 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -9420,8 +9415,8 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -9467,7 +9462,7 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -9478,7 +9473,7 @@ class _$AdverseEventCausality implements AdverseEventCausality {
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -9546,10 +9541,10 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -9581,7 +9576,7 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -9596,7 +9591,7 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -9634,7 +9629,7 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -9643,7 +9638,7 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -9687,7 +9682,7 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -9719,10 +9714,10 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -9768,8 +9763,8 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -9812,7 +9807,7 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -9823,7 +9818,7 @@ class _$AdverseEventCausality implements AdverseEventCausality {
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(
@@ -10004,7 +9999,7 @@ abstract class $FamilyMemberHistoryCopyWith<$Res>
       List<dynamic> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> note,
-      List<FamilyMemberHistoryCondition> condition});
+      List<dynamic> condition});
 }
 
 class _$FamilyMemberHistoryCopyWithImpl<$Res>
@@ -10125,9 +10120,8 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
           ? _value.reasonReference
           : reasonReference as List<dynamic>,
       note: note == freezed ? _value.note : note as List<dynamic>,
-      condition: condition == freezed
-          ? _value.condition
-          : condition as List<FamilyMemberHistoryCondition>,
+      condition:
+          condition == freezed ? _value.condition : condition as List<dynamic>,
     ));
   }
 }
@@ -10243,7 +10237,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
   @override
   final List<dynamic> note;
   @override
-  final List<FamilyMemberHistoryCondition> condition;
+  final List<dynamic> condition;
 
   @override
   String toString() {
@@ -10404,10 +10398,10 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -10442,7 +10436,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -10457,7 +10451,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -10497,7 +10491,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -10507,7 +10501,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -10553,7 +10547,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -10587,10 +10581,10 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -10639,8 +10633,8 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -10686,7 +10680,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -10697,7 +10691,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -10799,10 +10793,10 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -10834,7 +10828,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -10849,7 +10843,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -10887,7 +10881,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -10896,7 +10890,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -10940,7 +10934,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -10972,10 +10966,10 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -11021,8 +11015,8 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -11065,7 +11059,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -11076,7 +11070,7 @@ class _$FamilyMemberHistory implements FamilyMemberHistory {
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(
@@ -11260,7 +11254,7 @@ abstract class FamilyMemberHistory implements Summary {
       List<dynamic> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> note,
-      List<FamilyMemberHistoryCondition> condition}) = _$FamilyMemberHistory;
+      List<dynamic> condition}) = _$FamilyMemberHistory;
 
   factory FamilyMemberHistory.fromJson(Map<String, dynamic> json) =
       _$FamilyMemberHistory.fromJson;
@@ -11301,7 +11295,7 @@ abstract class FamilyMemberHistory implements Summary {
   List<dynamic> get reasonCode;
   List<dynamic> get reasonReference;
   List<dynamic> get note;
-  List<FamilyMemberHistoryCondition> get condition;
+  List<dynamic> get condition;
   @override
   $FamilyMemberHistoryCopyWith<FamilyMemberHistory> get copyWith;
 }
@@ -11506,10 +11500,10 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -11544,7 +11538,7 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -11559,7 +11553,7 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -11599,7 +11593,7 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -11609,7 +11603,7 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -11655,7 +11649,7 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -11689,10 +11683,10 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -11741,8 +11735,8 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -11788,7 +11782,7 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -11799,7 +11793,7 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -11877,10 +11871,10 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -11912,7 +11906,7 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -11927,7 +11921,7 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -11965,7 +11959,7 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -11974,7 +11968,7 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -12018,7 +12012,7 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -12050,10 +12044,10 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -12099,8 +12093,8 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -12143,7 +12137,7 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -12154,7 +12148,7 @@ class _$FamilyMemberHistoryCondition implements FamilyMemberHistoryCondition {
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(
@@ -12337,10 +12331,10 @@ abstract class $DetectedIssueCopyWith<$Res> implements $SummaryCopyWith<$Res> {
       Period identifiedPeriod,
       Reference author,
       List<dynamic> implicated,
-      List<DetectedIssueEvidence> evidence,
+      List<dynamic> evidence,
       String detail,
       FhirUri reference,
-      List<DetectedIssueMitigation> mitigation});
+      List<dynamic> mitigation});
 }
 
 class _$DetectedIssueCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
@@ -12414,14 +12408,13 @@ class _$DetectedIssueCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
       implicated: implicated == freezed
           ? _value.implicated
           : implicated as List<dynamic>,
-      evidence: evidence == freezed
-          ? _value.evidence
-          : evidence as List<DetectedIssueEvidence>,
+      evidence:
+          evidence == freezed ? _value.evidence : evidence as List<dynamic>,
       detail: detail == freezed ? _value.detail : detail as String,
       reference: reference == freezed ? _value.reference : reference as FhirUri,
       mitigation: mitigation == freezed
           ? _value.mitigation
-          : mitigation as List<DetectedIssueMitigation>,
+          : mitigation as List<dynamic>,
     ));
   }
 }
@@ -12492,13 +12485,13 @@ class _$DetectedIssue implements DetectedIssue {
   @override
   final List<dynamic> implicated;
   @override
-  final List<DetectedIssueEvidence> evidence;
+  final List<dynamic> evidence;
   @override
   final String detail;
   @override
   final FhirUri reference;
   @override
-  final List<DetectedIssueMitigation> mitigation;
+  final List<dynamic> mitigation;
 
   @override
   String toString() {
@@ -12627,10 +12620,10 @@ class _$DetectedIssue implements DetectedIssue {
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -12665,7 +12658,7 @@ class _$DetectedIssue implements DetectedIssue {
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -12680,7 +12673,7 @@ class _$DetectedIssue implements DetectedIssue {
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -12720,7 +12713,7 @@ class _$DetectedIssue implements DetectedIssue {
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -12730,7 +12723,7 @@ class _$DetectedIssue implements DetectedIssue {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -12776,7 +12769,7 @@ class _$DetectedIssue implements DetectedIssue {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -12810,10 +12803,10 @@ class _$DetectedIssue implements DetectedIssue {
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -12862,8 +12855,8 @@ class _$DetectedIssue implements DetectedIssue {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -12909,7 +12902,7 @@ class _$DetectedIssue implements DetectedIssue {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -12920,7 +12913,7 @@ class _$DetectedIssue implements DetectedIssue {
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -13009,10 +13002,10 @@ class _$DetectedIssue implements DetectedIssue {
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -13044,7 +13037,7 @@ class _$DetectedIssue implements DetectedIssue {
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -13059,7 +13052,7 @@ class _$DetectedIssue implements DetectedIssue {
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -13097,7 +13090,7 @@ class _$DetectedIssue implements DetectedIssue {
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -13106,7 +13099,7 @@ class _$DetectedIssue implements DetectedIssue {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -13150,7 +13143,7 @@ class _$DetectedIssue implements DetectedIssue {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -13182,10 +13175,10 @@ class _$DetectedIssue implements DetectedIssue {
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -13231,8 +13224,8 @@ class _$DetectedIssue implements DetectedIssue {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -13275,7 +13268,7 @@ class _$DetectedIssue implements DetectedIssue {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -13286,7 +13279,7 @@ class _$DetectedIssue implements DetectedIssue {
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(
@@ -13440,10 +13433,10 @@ abstract class DetectedIssue implements Summary {
       Period identifiedPeriod,
       Reference author,
       List<dynamic> implicated,
-      List<DetectedIssueEvidence> evidence,
+      List<dynamic> evidence,
       String detail,
       FhirUri reference,
-      List<DetectedIssueMitigation> mitigation}) = _$DetectedIssue;
+      List<dynamic> mitigation}) = _$DetectedIssue;
 
   factory DetectedIssue.fromJson(Map<String, dynamic> json) =
       _$DetectedIssue.fromJson;
@@ -13468,10 +13461,10 @@ abstract class DetectedIssue implements Summary {
   Period get identifiedPeriod;
   Reference get author;
   List<dynamic> get implicated;
-  List<DetectedIssueEvidence> get evidence;
+  List<dynamic> get evidence;
   String get detail;
   FhirUri get reference;
-  List<DetectedIssueMitigation> get mitigation;
+  List<dynamic> get mitigation;
   @override
   $DetectedIssueCopyWith<DetectedIssue> get copyWith;
 }
@@ -13608,10 +13601,10 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -13646,7 +13639,7 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -13661,7 +13654,7 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -13701,7 +13694,7 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -13711,7 +13704,7 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -13757,7 +13750,7 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -13791,10 +13784,10 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -13843,8 +13836,8 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -13890,7 +13883,7 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -13901,7 +13894,7 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -13969,10 +13962,10 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -14004,7 +13997,7 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -14019,7 +14012,7 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -14057,7 +14050,7 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -14066,7 +14059,7 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -14110,7 +14103,7 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -14142,10 +14135,10 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -14191,8 +14184,8 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -14235,7 +14228,7 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -14246,7 +14239,7 @@ class _$DetectedIssueEvidence implements DetectedIssueEvidence {
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(
@@ -14523,10 +14516,10 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -14561,7 +14554,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -14576,7 +14569,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -14616,7 +14609,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -14626,7 +14619,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -14672,7 +14665,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -14706,10 +14699,10 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -14758,8 +14751,8 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -14805,7 +14798,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -14816,7 +14809,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -14884,10 +14877,10 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -14919,7 +14912,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -14934,7 +14927,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -14972,7 +14965,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -14981,7 +14974,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -15025,7 +15018,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -15057,10 +15050,10 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -15106,8 +15099,8 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -15150,7 +15143,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -15161,7 +15154,7 @@ class _$DetectedIssueMitigation implements DetectedIssueMitigation {
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(
@@ -15335,8 +15328,8 @@ abstract class $ConditionCopyWith<$Res> implements $SummaryCopyWith<$Res> {
       FhirDateTime recordedDate,
       Reference recorder,
       Reference asserter,
-      List<ConditionStage> stage,
-      List<ConditionEvidence> evidence,
+      List<dynamic> stage,
+      List<dynamic> evidence,
       List<dynamic> note});
 }
 
@@ -15451,10 +15444,9 @@ class _$ConditionCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
           : recordedDate as FhirDateTime,
       recorder: recorder == freezed ? _value.recorder : recorder as Reference,
       asserter: asserter == freezed ? _value.asserter : asserter as Reference,
-      stage: stage == freezed ? _value.stage : stage as List<ConditionStage>,
-      evidence: evidence == freezed
-          ? _value.evidence
-          : evidence as List<ConditionEvidence>,
+      stage: stage == freezed ? _value.stage : stage as List<dynamic>,
+      evidence:
+          evidence == freezed ? _value.evidence : evidence as List<dynamic>,
       note: note == freezed ? _value.note : note as List<dynamic>,
     ));
   }
@@ -15564,9 +15556,9 @@ class _$Condition implements Condition {
   @override
   final Reference asserter;
   @override
-  final List<ConditionStage> stage;
+  final List<dynamic> stage;
   @override
-  final List<ConditionEvidence> evidence;
+  final List<dynamic> evidence;
   @override
   final List<dynamic> note;
 
@@ -15727,10 +15719,10 @@ class _$Condition implements Condition {
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -15765,7 +15757,7 @@ class _$Condition implements Condition {
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -15780,7 +15772,7 @@ class _$Condition implements Condition {
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -15820,7 +15812,7 @@ class _$Condition implements Condition {
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -15830,7 +15822,7 @@ class _$Condition implements Condition {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -15876,7 +15868,7 @@ class _$Condition implements Condition {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -15910,10 +15902,10 @@ class _$Condition implements Condition {
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -15962,8 +15954,8 @@ class _$Condition implements Condition {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -16009,7 +16001,7 @@ class _$Condition implements Condition {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -16020,7 +16012,7 @@ class _$Condition implements Condition {
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -16121,10 +16113,10 @@ class _$Condition implements Condition {
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -16156,7 +16148,7 @@ class _$Condition implements Condition {
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -16171,7 +16163,7 @@ class _$Condition implements Condition {
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -16209,7 +16201,7 @@ class _$Condition implements Condition {
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -16218,7 +16210,7 @@ class _$Condition implements Condition {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -16262,7 +16254,7 @@ class _$Condition implements Condition {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -16294,10 +16286,10 @@ class _$Condition implements Condition {
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -16343,8 +16335,8 @@ class _$Condition implements Condition {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -16387,7 +16379,7 @@ class _$Condition implements Condition {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -16398,7 +16390,7 @@ class _$Condition implements Condition {
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(
@@ -16577,8 +16569,8 @@ abstract class Condition implements Summary {
       FhirDateTime recordedDate,
       Reference recorder,
       Reference asserter,
-      List<ConditionStage> stage,
-      List<ConditionEvidence> evidence,
+      List<dynamic> stage,
+      List<dynamic> evidence,
       List<dynamic> note}) = _$Condition;
 
   factory Condition.fromJson(Map<String, dynamic> json) = _$Condition.fromJson;
@@ -16616,8 +16608,8 @@ abstract class Condition implements Summary {
   FhirDateTime get recordedDate;
   Reference get recorder;
   Reference get asserter;
-  List<ConditionStage> get stage;
-  List<ConditionEvidence> get evidence;
+  List<dynamic> get stage;
+  List<dynamic> get evidence;
   List<dynamic> get note;
   @override
   $ConditionCopyWith<Condition> get copyWith;
@@ -16765,10 +16757,10 @@ class _$ConditionStage implements ConditionStage {
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -16803,7 +16795,7 @@ class _$ConditionStage implements ConditionStage {
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -16818,7 +16810,7 @@ class _$ConditionStage implements ConditionStage {
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -16858,7 +16850,7 @@ class _$ConditionStage implements ConditionStage {
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -16868,7 +16860,7 @@ class _$ConditionStage implements ConditionStage {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -16914,7 +16906,7 @@ class _$ConditionStage implements ConditionStage {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -16948,10 +16940,10 @@ class _$ConditionStage implements ConditionStage {
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -17000,8 +16992,8 @@ class _$ConditionStage implements ConditionStage {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -17047,7 +17039,7 @@ class _$ConditionStage implements ConditionStage {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -17058,7 +17050,7 @@ class _$ConditionStage implements ConditionStage {
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -17126,10 +17118,10 @@ class _$ConditionStage implements ConditionStage {
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -17161,7 +17153,7 @@ class _$ConditionStage implements ConditionStage {
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -17176,7 +17168,7 @@ class _$ConditionStage implements ConditionStage {
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -17214,7 +17206,7 @@ class _$ConditionStage implements ConditionStage {
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -17223,7 +17215,7 @@ class _$ConditionStage implements ConditionStage {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -17267,7 +17259,7 @@ class _$ConditionStage implements ConditionStage {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -17299,10 +17291,10 @@ class _$ConditionStage implements ConditionStage {
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -17348,8 +17340,8 @@ class _$ConditionStage implements ConditionStage {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -17392,7 +17384,7 @@ class _$ConditionStage implements ConditionStage {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -17403,7 +17395,7 @@ class _$ConditionStage implements ConditionStage {
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(
@@ -17670,10 +17662,10 @@ class _$ConditionEvidence implements ConditionEvidence {
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -17708,7 +17700,7 @@ class _$ConditionEvidence implements ConditionEvidence {
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -17723,7 +17715,7 @@ class _$ConditionEvidence implements ConditionEvidence {
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -17763,7 +17755,7 @@ class _$ConditionEvidence implements ConditionEvidence {
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -17773,7 +17765,7 @@ class _$ConditionEvidence implements ConditionEvidence {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -17819,7 +17811,7 @@ class _$ConditionEvidence implements ConditionEvidence {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -17853,10 +17845,10 @@ class _$ConditionEvidence implements ConditionEvidence {
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -17905,8 +17897,8 @@ class _$ConditionEvidence implements ConditionEvidence {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -17952,7 +17944,7 @@ class _$ConditionEvidence implements ConditionEvidence {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -17963,7 +17955,7 @@ class _$ConditionEvidence implements ConditionEvidence {
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -18030,10 +18022,10 @@ class _$ConditionEvidence implements ConditionEvidence {
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -18065,7 +18057,7 @@ class _$ConditionEvidence implements ConditionEvidence {
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -18080,7 +18072,7 @@ class _$ConditionEvidence implements ConditionEvidence {
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -18118,7 +18110,7 @@ class _$ConditionEvidence implements ConditionEvidence {
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -18127,7 +18119,7 @@ class _$ConditionEvidence implements ConditionEvidence {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -18171,7 +18163,7 @@ class _$ConditionEvidence implements ConditionEvidence {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -18203,10 +18195,10 @@ class _$ConditionEvidence implements ConditionEvidence {
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -18252,8 +18244,8 @@ class _$ConditionEvidence implements ConditionEvidence {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -18296,7 +18288,7 @@ class _$ConditionEvidence implements ConditionEvidence {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -18307,7 +18299,7 @@ class _$ConditionEvidence implements ConditionEvidence {
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(
@@ -18474,7 +18466,7 @@ abstract class $ProcedureCopyWith<$Res> implements $SummaryCopyWith<$Res> {
       Range performedRange,
       Reference recorder,
       Reference asserter,
-      List<ProcedurePerformer> performer,
+      List<dynamic> performer,
       Reference location,
       List<dynamic> reasonCode,
       List<dynamic> reasonReference,
@@ -18485,7 +18477,7 @@ abstract class $ProcedureCopyWith<$Res> implements $SummaryCopyWith<$Res> {
       List<dynamic> complicationDetail,
       List<dynamic> followUp,
       List<dynamic> note,
-      List<ProcedureFocalDevice> focalDevice,
+      List<dynamic> focalDevice,
       List<dynamic> usedReference,
       List<dynamic> usedCode});
 }
@@ -18597,9 +18589,8 @@ class _$ProcedureCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
           : performedRange as Range,
       recorder: recorder == freezed ? _value.recorder : recorder as Reference,
       asserter: asserter == freezed ? _value.asserter : asserter as Reference,
-      performer: performer == freezed
-          ? _value.performer
-          : performer as List<ProcedurePerformer>,
+      performer:
+          performer == freezed ? _value.performer : performer as List<dynamic>,
       location: location == freezed ? _value.location : location as Reference,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
@@ -18622,7 +18613,7 @@ class _$ProcedureCopyWithImpl<$Res> extends _$SummaryCopyWithImpl<$Res>
       note: note == freezed ? _value.note : note as List<dynamic>,
       focalDevice: focalDevice == freezed
           ? _value.focalDevice
-          : focalDevice as List<ProcedureFocalDevice>,
+          : focalDevice as List<dynamic>,
       usedReference: usedReference == freezed
           ? _value.usedReference
           : usedReference as List<dynamic>,
@@ -18735,7 +18726,7 @@ class _$Procedure implements Procedure {
   @override
   final Reference asserter;
   @override
-  final List<ProcedurePerformer> performer;
+  final List<dynamic> performer;
   @override
   final Reference location;
   @override
@@ -18757,7 +18748,7 @@ class _$Procedure implements Procedure {
   @override
   final List<dynamic> note;
   @override
-  final List<ProcedureFocalDevice> focalDevice;
+  final List<dynamic> focalDevice;
   @override
   final List<dynamic> usedReference;
   @override
@@ -18934,10 +18925,10 @@ class _$Procedure implements Procedure {
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -18972,7 +18963,7 @@ class _$Procedure implements Procedure {
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -18987,7 +18978,7 @@ class _$Procedure implements Procedure {
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -19027,7 +19018,7 @@ class _$Procedure implements Procedure {
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -19037,7 +19028,7 @@ class _$Procedure implements Procedure {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -19083,7 +19074,7 @@ class _$Procedure implements Procedure {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -19117,10 +19108,10 @@ class _$Procedure implements Procedure {
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -19169,8 +19160,8 @@ class _$Procedure implements Procedure {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -19216,7 +19207,7 @@ class _$Procedure implements Procedure {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -19227,7 +19218,7 @@ class _$Procedure implements Procedure {
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -19335,10 +19326,10 @@ class _$Procedure implements Procedure {
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -19370,7 +19361,7 @@ class _$Procedure implements Procedure {
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -19385,7 +19376,7 @@ class _$Procedure implements Procedure {
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -19423,7 +19414,7 @@ class _$Procedure implements Procedure {
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -19432,7 +19423,7 @@ class _$Procedure implements Procedure {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -19476,7 +19467,7 @@ class _$Procedure implements Procedure {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -19508,10 +19499,10 @@ class _$Procedure implements Procedure {
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -19557,8 +19548,8 @@ class _$Procedure implements Procedure {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -19601,7 +19592,7 @@ class _$Procedure implements Procedure {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -19612,7 +19603,7 @@ class _$Procedure implements Procedure {
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(
@@ -19794,7 +19785,7 @@ abstract class Procedure implements Summary {
       Range performedRange,
       Reference recorder,
       Reference asserter,
-      List<ProcedurePerformer> performer,
+      List<dynamic> performer,
       Reference location,
       List<dynamic> reasonCode,
       List<dynamic> reasonReference,
@@ -19805,7 +19796,7 @@ abstract class Procedure implements Summary {
       List<dynamic> complicationDetail,
       List<dynamic> followUp,
       List<dynamic> note,
-      List<ProcedureFocalDevice> focalDevice,
+      List<dynamic> focalDevice,
       List<dynamic> usedReference,
       List<dynamic> usedCode}) = _$Procedure;
 
@@ -19840,7 +19831,7 @@ abstract class Procedure implements Summary {
   Range get performedRange;
   Reference get recorder;
   Reference get asserter;
-  List<ProcedurePerformer> get performer;
+  List<dynamic> get performer;
   Reference get location;
   List<dynamic> get reasonCode;
   List<dynamic> get reasonReference;
@@ -19851,7 +19842,7 @@ abstract class Procedure implements Summary {
   List<dynamic> get complicationDetail;
   List<dynamic> get followUp;
   List<dynamic> get note;
-  List<ProcedureFocalDevice> get focalDevice;
+  List<dynamic> get focalDevice;
   List<dynamic> get usedReference;
   List<dynamic> get usedCode;
   @override
@@ -20001,10 +19992,10 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -20039,7 +20030,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -20054,7 +20045,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -20094,7 +20085,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -20104,7 +20095,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -20150,7 +20141,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -20184,10 +20175,10 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -20236,8 +20227,8 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -20283,7 +20274,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -20294,7 +20285,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -20362,10 +20353,10 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -20397,7 +20388,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -20412,7 +20403,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -20450,7 +20441,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -20459,7 +20450,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -20503,7 +20494,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -20535,10 +20526,10 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -20584,8 +20575,8 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -20628,7 +20619,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -20639,7 +20630,7 @@ class _$ProcedurePerformer implements ProcedurePerformer {
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(
@@ -20912,10 +20903,10 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             Reference assessor,
             Reference previous,
             List<dynamic> problem,
-            List<ClinicalImpressionInvestigation> investigation,
+            List<dynamic> investigation,
             List<FhirUri> protocol,
             String summary,
-            List<ClinicalImpressionFinding> finding,
+            List<dynamic> finding,
             List<dynamic> prognosisCodeableConcept,
             List<dynamic> prognosisReference,
             List<dynamic> supportingInfo,
@@ -20950,7 +20941,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             CodeableConcept clinicalStatus,
             CodeableConcept verificationStatus,
             AllergyIntoleranceType type,
-            List<AllergyIntoleranceCategory> category,
+            List<dynamic> category,
             AllergyIntoleranceCriticality criticality,
             CodeableConcept code,
             Reference patient,
@@ -20965,7 +20956,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             Reference asserter,
             FhirDateTime lastOccurrence,
             List<dynamic> note,
-            List<AllergyIntoleranceReaction> reaction),
+            List<dynamic> reaction),
     @required
         Result allergyIntoleranceReaction(
             String id,
@@ -21005,7 +20996,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             CodeableConcept outcome,
             Reference recorder,
             List<dynamic> contributor,
-            List<AdverseEventSuspectEntity> suspectEntity,
+            List<dynamic> suspectEntity,
             List<dynamic> subjectMedicalHistory,
             List<dynamic> referenceDocument,
             List<dynamic> study),
@@ -21015,7 +21006,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Reference instance,
-            List<AdverseEventCausality> causality),
+            List<dynamic> causality),
     @required
         Result adverseEventCausality(
             String id,
@@ -21061,7 +21052,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<FamilyMemberHistoryCondition> condition),
+            List<dynamic> condition),
     @required
         Result familyMemberHistoryCondition(
             String id,
@@ -21095,10 +21086,10 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             Period identifiedPeriod,
             Reference author,
             List<dynamic> implicated,
-            List<DetectedIssueEvidence> evidence,
+            List<dynamic> evidence,
             String detail,
             FhirUri reference,
-            List<DetectedIssueMitigation> mitigation),
+            List<dynamic> mitigation),
     @required
         Result detectedIssueEvidence(
             String id,
@@ -21147,8 +21138,8 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             FhirDateTime recordedDate,
             Reference recorder,
             Reference asserter,
-            List<ConditionStage> stage,
-            List<ConditionEvidence> evidence,
+            List<dynamic> stage,
+            List<dynamic> evidence,
             List<dynamic> note),
     @required
         Result conditionStage(
@@ -21194,7 +21185,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             Range performedRange,
             Reference recorder,
             Reference asserter,
-            List<ProcedurePerformer> performer,
+            List<dynamic> performer,
             Reference location,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
@@ -21205,7 +21196,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
             List<dynamic> complicationDetail,
             List<dynamic> followUp,
             List<dynamic> note,
-            List<ProcedureFocalDevice> focalDevice,
+            List<dynamic> focalDevice,
             List<dynamic> usedReference,
             List<dynamic> usedCode),
     @required
@@ -21273,10 +21264,10 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         Reference assessor,
         Reference previous,
         List<dynamic> problem,
-        List<ClinicalImpressionInvestigation> investigation,
+        List<dynamic> investigation,
         List<FhirUri> protocol,
         String summary,
-        List<ClinicalImpressionFinding> finding,
+        List<dynamic> finding,
         List<dynamic> prognosisCodeableConcept,
         List<dynamic> prognosisReference,
         List<dynamic> supportingInfo,
@@ -21308,7 +21299,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         CodeableConcept clinicalStatus,
         CodeableConcept verificationStatus,
         AllergyIntoleranceType type,
-        List<AllergyIntoleranceCategory> category,
+        List<dynamic> category,
         AllergyIntoleranceCriticality criticality,
         CodeableConcept code,
         Reference patient,
@@ -21323,7 +21314,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         Reference asserter,
         FhirDateTime lastOccurrence,
         List<dynamic> note,
-        List<AllergyIntoleranceReaction> reaction),
+        List<dynamic> reaction),
     Result allergyIntoleranceReaction(
         String id,
         List<dynamic> extension,
@@ -21361,7 +21352,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         CodeableConcept outcome,
         Reference recorder,
         List<dynamic> contributor,
-        List<AdverseEventSuspectEntity> suspectEntity,
+        List<dynamic> suspectEntity,
         List<dynamic> subjectMedicalHistory,
         List<dynamic> referenceDocument,
         List<dynamic> study),
@@ -21370,7 +21361,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Reference instance,
-        List<AdverseEventCausality> causality),
+        List<dynamic> causality),
     Result adverseEventCausality(
         String id,
         List<dynamic> extension,
@@ -21414,7 +21405,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<FamilyMemberHistoryCondition> condition),
+        List<dynamic> condition),
     Result familyMemberHistoryCondition(
         String id,
         List<dynamic> extension,
@@ -21446,10 +21437,10 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         Period identifiedPeriod,
         Reference author,
         List<dynamic> implicated,
-        List<DetectedIssueEvidence> evidence,
+        List<dynamic> evidence,
         String detail,
         FhirUri reference,
-        List<DetectedIssueMitigation> mitigation),
+        List<dynamic> mitigation),
     Result detectedIssueEvidence(
         String id,
         List<dynamic> extension,
@@ -21495,8 +21486,8 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         FhirDateTime recordedDate,
         Reference recorder,
         Reference asserter,
-        List<ConditionStage> stage,
-        List<ConditionEvidence> evidence,
+        List<dynamic> stage,
+        List<dynamic> evidence,
         List<dynamic> note),
     Result conditionStage(
         String id,
@@ -21539,7 +21530,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         Range performedRange,
         Reference recorder,
         Reference asserter,
-        List<ProcedurePerformer> performer,
+        List<dynamic> performer,
         Reference location,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
@@ -21550,7 +21541,7 @@ class _$ProcedureFocalDevice implements ProcedureFocalDevice {
         List<dynamic> complicationDetail,
         List<dynamic> followUp,
         List<dynamic> note,
-        List<ProcedureFocalDevice> focalDevice,
+        List<dynamic> focalDevice,
         List<dynamic> usedReference,
         List<dynamic> usedCode),
     Result procedurePerformer(

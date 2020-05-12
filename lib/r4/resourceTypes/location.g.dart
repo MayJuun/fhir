@@ -23,14 +23,8 @@ Location _$LocationFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     identifier: (json['identifier'] as List)
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
@@ -102,10 +96,8 @@ Map<String, dynamic> _$LocationToJson(Location instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('status', instance.status?.toJson());
@@ -132,14 +124,8 @@ Map<String, dynamic> _$LocationToJson(Location instance) {
 LocationPosition _$LocationPositionFromJson(Map<String, dynamic> json) {
   return LocationPosition(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     longitude: (json['longitude'] as num)?.toDouble(),
     latitude: (json['latitude'] as num)?.toDouble(),
     altitude: (json['altitude'] as num)?.toDouble(),
@@ -156,10 +142,8 @@ Map<String, dynamic> _$LocationPositionToJson(LocationPosition instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('longitude', instance.longitude);
   writeNotNull('latitude', instance.latitude);
   writeNotNull('altitude', instance.altitude);
@@ -170,14 +154,8 @@ LocationHoursOfOperation _$LocationHoursOfOperationFromJson(
     Map<String, dynamic> json) {
   return LocationHoursOfOperation(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     daysOfWeek: (json['daysOfWeek'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
         ?.toList(),
@@ -202,10 +180,8 @@ Map<String, dynamic> _$LocationHoursOfOperationToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull(
       'daysOfWeek', instance.daysOfWeek?.map((e) => e?.toJson())?.toList());
   writeNotNull('allDay', instance.allDay);

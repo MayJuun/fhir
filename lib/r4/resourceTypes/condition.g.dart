@@ -23,14 +23,8 @@ Condition _$ConditionFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     identifier: (json['identifier'] as List)
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
@@ -133,10 +127,8 @@ Map<String, dynamic> _$ConditionToJson(Condition instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('clinicalStatus', instance.clinicalStatus?.toJson());
@@ -172,14 +164,8 @@ Map<String, dynamic> _$ConditionToJson(Condition instance) {
 ConditionStage _$ConditionStageFromJson(Map<String, dynamic> json) {
   return ConditionStage(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     summary: json['summary'] == null
         ? null
         : CodeableConcept.fromJson(json['summary'] as Map<String, dynamic>),
@@ -203,10 +189,8 @@ Map<String, dynamic> _$ConditionStageToJson(ConditionStage instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('summary', instance.summary?.toJson());
   writeNotNull(
       'assessment', instance.assessment?.map((e) => e?.toJson())?.toList());
@@ -217,14 +201,8 @@ Map<String, dynamic> _$ConditionStageToJson(ConditionStage instance) {
 ConditionEvidence _$ConditionEvidenceFromJson(Map<String, dynamic> json) {
   return ConditionEvidence(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     code: (json['code'] as List)
         ?.map((e) => e == null
             ? null
@@ -247,10 +225,8 @@ Map<String, dynamic> _$ConditionEvidenceToJson(ConditionEvidence instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('code', instance.code?.map((e) => e?.toJson())?.toList());
   writeNotNull('detail', instance.detail?.map((e) => e?.toJson())?.toList());
   return val;

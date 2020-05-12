@@ -23,14 +23,8 @@ Specimen _$SpecimenFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     identifier: (json['identifier'] as List)
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
@@ -101,10 +95,8 @@ Map<String, dynamic> _$SpecimenToJson(Specimen instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('accessionIdentifier', instance.accessionIdentifier?.toJson());
@@ -128,14 +120,8 @@ Map<String, dynamic> _$SpecimenToJson(Specimen instance) {
 SpecimenCollection _$SpecimenCollectionFromJson(Map<String, dynamic> json) {
   return SpecimenCollection(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     collector: json['collector'] == null
         ? null
         : Reference.fromJson(json['collector'] as Map<String, dynamic>),
@@ -178,10 +164,8 @@ Map<String, dynamic> _$SpecimenCollectionToJson(SpecimenCollection instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('collector', instance.collector?.toJson());
   writeNotNull('collectedDateTime', instance.collectedDateTime?.toJson());
   writeNotNull('collectedPeriod', instance.collectedPeriod?.toJson());
@@ -199,14 +183,8 @@ Map<String, dynamic> _$SpecimenCollectionToJson(SpecimenCollection instance) {
 SpecimenProcessing _$SpecimenProcessingFromJson(Map<String, dynamic> json) {
   return SpecimenProcessing(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     description: json['description'] as String,
     procedure: json['procedure'] == null
         ? null
@@ -234,10 +212,8 @@ Map<String, dynamic> _$SpecimenProcessingToJson(SpecimenProcessing instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('description', instance.description);
   writeNotNull('procedure', instance.procedure?.toJson());
   writeNotNull(
@@ -250,14 +226,8 @@ Map<String, dynamic> _$SpecimenProcessingToJson(SpecimenProcessing instance) {
 SpecimenContainer _$SpecimenContainerFromJson(Map<String, dynamic> json) {
   return SpecimenContainer(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     identifier: (json['identifier'] as List)
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
@@ -292,10 +262,8 @@ Map<String, dynamic> _$SpecimenContainerToJson(SpecimenContainer instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description);

@@ -16,8 +16,8 @@ const factory General.chargeItemDefinition({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   List<Identifier> identifier,
   String version,
@@ -46,8 +46,8 @@ const factory General.chargeItemDefinition({
 
 const factory General.chargeItemDefinitionApplicability({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String description,
   String language,
   String expression,
@@ -56,8 +56,8 @@ const factory General.chargeItemDefinitionApplicability({
 
 const factory General.chargeItemDefinitionPropertyGroup({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<ChargeItemDefinitionApplicability> applicability,
   List<ChargeItemDefinitionPriceComponent> priceComponent,
 
@@ -65,8 +65,8 @@ const factory General.chargeItemDefinitionPropertyGroup({
 
 const factory General.chargeItemDefinitionPriceComponent({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Code type,
   CodeableConcept code,
   double factor,
@@ -82,8 +82,8 @@ const factory General.account({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   AccountStatus status,
   CodeableConcept type,
@@ -100,8 +100,8 @@ const factory General.account({
 
 const factory General.accountCoverage({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference coverage,
   int priority,
 
@@ -109,8 +109,8 @@ const factory General.accountCoverage({
 
 const factory General.accountGuarantor({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference party,
   bool onHold,
   Period period,
@@ -125,8 +125,8 @@ const factory General.chargeItem({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   List<FhirUri> definitionUri,
   List<Canonical> definitionCanonical,
@@ -161,8 +161,8 @@ const factory General.chargeItem({
 
 const factory General.chargeItemPerformer({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept function,
   Reference actor,
 
@@ -176,8 +176,8 @@ const factory General.insurancePlan({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   InsurancePlanStatus status,
   List<CodeableConcept> type,
@@ -197,8 +197,8 @@ const factory General.insurancePlan({
 
 const factory General.insurancePlanContact({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept purpose,
   HumanName name,
   List<ContactPoint> telecom,
@@ -208,8 +208,8 @@ const factory General.insurancePlanContact({
 
 const factory General.insurancePlanCoverage({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   List<Reference> network,
   List<InsurancePlanBenefit> benefit,
@@ -218,8 +218,8 @@ const factory General.insurancePlanCoverage({
 
 const factory General.insurancePlanBenefit({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   String requirement,
   List<InsurancePlanLimit> limit,
@@ -228,8 +228,8 @@ const factory General.insurancePlanBenefit({
 
 const factory General.insurancePlanLimit({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Quantity value,
   CodeableConcept code,
 
@@ -237,8 +237,8 @@ const factory General.insurancePlanLimit({
 
 const factory General.insurancePlanPlan({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   CodeableConcept type,
   List<Reference> coverageArea,
@@ -250,8 +250,8 @@ const factory General.insurancePlanPlan({
 
 const factory General.insurancePlanGeneralCost({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   int groupSize,
   Money cost,
@@ -261,8 +261,8 @@ const factory General.insurancePlanGeneralCost({
 
 const factory General.insurancePlanSpecificCost({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept category,
   List<InsurancePlanBenefit1> benefit,
 
@@ -270,8 +270,8 @@ const factory General.insurancePlanSpecificCost({
 
 const factory General.insurancePlanBenefit1({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   List<InsurancePlanCost> cost,
 
@@ -279,8 +279,8 @@ const factory General.insurancePlanBenefit1({
 
 const factory General.insurancePlanCost({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   CodeableConcept applicability,
   List<CodeableConcept> qualifiers,
@@ -296,8 +296,8 @@ const factory General.explanationOfBenefit({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   ExplanationOfBenefitStatus status,
   CodeableConcept type,
@@ -346,8 +346,8 @@ const factory General.explanationOfBenefit({
 
 const factory General.explanationOfBenefitRelated({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference claim,
   CodeableConcept relationship,
   Identifier reference,
@@ -356,8 +356,8 @@ const factory General.explanationOfBenefitRelated({
 
 const factory General.explanationOfBenefitPayee({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   Reference party,
 
@@ -365,8 +365,8 @@ const factory General.explanationOfBenefitPayee({
 
 const factory General.explanationOfBenefitCareTeam({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int sequence,
   Reference provider,
   bool responsible,
@@ -377,8 +377,8 @@ const factory General.explanationOfBenefitCareTeam({
 
 const factory General.explanationOfBenefitSupportingInfo({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int sequence,
   CodeableConcept category,
   CodeableConcept code,
@@ -395,8 +395,8 @@ const factory General.explanationOfBenefitSupportingInfo({
 
 const factory General.explanationOfBenefitDiagnosis({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int sequence,
   CodeableConcept diagnosisCodeableConcept,
   Reference diagnosisReference,
@@ -408,8 +408,8 @@ const factory General.explanationOfBenefitDiagnosis({
 
 const factory General.explanationOfBenefitProcedure({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int sequence,
   List<CodeableConcept> type,
   FhirDateTime date,
@@ -421,8 +421,8 @@ const factory General.explanationOfBenefitProcedure({
 
 const factory General.explanationOfBenefitInsurance({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   bool focal,
   Reference coverage,
   List<String> preAuthRef,
@@ -431,8 +431,8 @@ const factory General.explanationOfBenefitInsurance({
 
 const factory General.explanationOfBenefitAccident({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Date date,
   CodeableConcept type,
   Address locationAddress,
@@ -442,8 +442,8 @@ const factory General.explanationOfBenefitAccident({
 
 const factory General.explanationOfBenefitItem({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int sequence,
   List<int> careTeamSequence,
   List<int> diagnosisSequence,
@@ -475,8 +475,8 @@ const factory General.explanationOfBenefitItem({
 
 const factory General.explanationOfBenefitAdjudication({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept category,
   CodeableConcept reason,
   Money amount,
@@ -486,8 +486,8 @@ const factory General.explanationOfBenefitAdjudication({
 
 const factory General.explanationOfBenefitDetail({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int sequence,
   CodeableConcept revenue,
   CodeableConcept category,
@@ -507,8 +507,8 @@ const factory General.explanationOfBenefitDetail({
 
 const factory General.explanationOfBenefitSubDetail({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int sequence,
   CodeableConcept revenue,
   CodeableConcept category,
@@ -527,8 +527,8 @@ const factory General.explanationOfBenefitSubDetail({
 
 const factory General.explanationOfBenefitAddItem({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<int> itemSequence,
   List<int> detailSequence,
   List<int> subDetailSequence,
@@ -555,8 +555,8 @@ const factory General.explanationOfBenefitAddItem({
 
 const factory General.explanationOfBenefitDetail1({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept productOrService,
   List<CodeableConcept> modifier,
   Quantity quantity,
@@ -571,8 +571,8 @@ const factory General.explanationOfBenefitDetail1({
 
 const factory General.explanationOfBenefitSubDetail1({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept productOrService,
   List<CodeableConcept> modifier,
   Quantity quantity,
@@ -586,8 +586,8 @@ const factory General.explanationOfBenefitSubDetail1({
 
 const factory General.explanationOfBenefitTotal({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept category,
   Money amount,
 
@@ -595,8 +595,8 @@ const factory General.explanationOfBenefitTotal({
 
 const factory General.explanationOfBenefitPayment({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   Money adjustment,
   CodeableConcept adjustmentReason,
@@ -608,8 +608,8 @@ const factory General.explanationOfBenefitPayment({
 
 const factory General.explanationOfBenefitProcessNote({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int number,
   ExplanationOfBenefitProcessNote type,
   String text,
@@ -619,8 +619,8 @@ const factory General.explanationOfBenefitProcessNote({
 
 const factory General.explanationOfBenefitBenefitBalance({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept category,
   bool excluded,
   String name,
@@ -634,8 +634,8 @@ const factory General.explanationOfBenefitBenefitBalance({
 
 const factory General.explanationOfBenefitFinancial({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   int allowedUnsignedInt,
   String allowedString,
@@ -653,8 +653,8 @@ const factory General.contract({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   FhirUri url,
   String version,
@@ -695,8 +695,8 @@ const factory General.contract({
 
 const factory General.contractContentDefinition({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   CodeableConcept subType,
   Reference publisher,
@@ -708,8 +708,8 @@ const factory General.contractContentDefinition({
 
 const factory General.contractTerm({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Identifier identifier,
   FhirDateTime issued,
   Period applies,
@@ -728,8 +728,8 @@ const factory General.contractTerm({
 
 const factory General.contractSecurityLabel({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<int> number,
   Coding classification,
   List<Coding> category,
@@ -739,8 +739,8 @@ const factory General.contractSecurityLabel({
 
 const factory General.contractOffer({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   List<ContractParty> party,
   Reference topic,
@@ -756,8 +756,8 @@ const factory General.contractOffer({
 
 const factory General.contractParty({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Reference> reference,
   CodeableConcept role,
 
@@ -765,8 +765,8 @@ const factory General.contractParty({
 
 const factory General.contractAnswer({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   bool valueBoolean,
   double valueDecimal,
   int valueInteger,
@@ -784,8 +784,8 @@ const factory General.contractAnswer({
 
 const factory General.contractAsset({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept scope,
   List<CodeableConcept> type,
   List<Reference> typeReference,
@@ -806,8 +806,8 @@ const factory General.contractAsset({
 
 const factory General.contractContext({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference reference,
   List<CodeableConcept> code,
   String text,
@@ -816,8 +816,8 @@ const factory General.contractContext({
 
 const factory General.contractValuedItem({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept entityCodeableConcept,
   Reference entityReference,
   Identifier identifier,
@@ -838,8 +838,8 @@ const factory General.contractValuedItem({
 
 const factory General.contractAction({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   bool doNotPerform,
   CodeableConcept type,
   List<ContractSubject> subject,
@@ -868,8 +868,8 @@ const factory General.contractAction({
 
 const factory General.contractSubject({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Reference> reference,
   CodeableConcept role,
 
@@ -877,8 +877,8 @@ const factory General.contractSubject({
 
 const factory General.contractSigner({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Coding type,
   Reference party,
   List<Signature> signature,
@@ -887,8 +887,8 @@ const factory General.contractSigner({
 
 const factory General.contractFriendly({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Attachment contentAttachment,
   Reference contentReference,
 
@@ -896,8 +896,8 @@ const factory General.contractFriendly({
 
 const factory General.contractLegal({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Attachment contentAttachment,
   Reference contentReference,
 
@@ -905,8 +905,8 @@ const factory General.contractLegal({
 
 const factory General.contractRule({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Attachment contentAttachment,
   Reference contentReference,
 

@@ -23,14 +23,8 @@ ImplementationGuide _$ImplementationGuideFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
     version: json['version'] as String,
     name: json['name'] as String,
@@ -108,10 +102,8 @@ Map<String, dynamic> _$ImplementationGuideToJson(ImplementationGuide instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
@@ -142,14 +134,8 @@ ImplementationGuideDependsOn _$ImplementationGuideDependsOnFromJson(
     Map<String, dynamic> json) {
   return ImplementationGuideDependsOn(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     uri: json['uri'] == null ? null : Canonical.fromJson(json['uri'] as String),
     packageId: json['packageId'] == null
         ? null
@@ -169,10 +155,8 @@ Map<String, dynamic> _$ImplementationGuideDependsOnToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('uri', instance.uri?.toJson());
   writeNotNull('packageId', instance.packageId?.toJson());
   writeNotNull('version', instance.version);
@@ -183,14 +167,8 @@ ImplementationGuideGlobal _$ImplementationGuideGlobalFromJson(
     Map<String, dynamic> json) {
   return ImplementationGuideGlobal(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
     profile: json['profile'] == null
         ? null
@@ -209,10 +187,8 @@ Map<String, dynamic> _$ImplementationGuideGlobalToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('profile', instance.profile?.toJson());
   return val;
@@ -222,14 +198,8 @@ ImplementationGuideDefinition _$ImplementationGuideDefinitionFromJson(
     Map<String, dynamic> json) {
   return ImplementationGuideDefinition(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     grouping: (json['grouping'] as List)
         ?.map((e) => e == null
             ? null
@@ -268,10 +238,8 @@ Map<String, dynamic> _$ImplementationGuideDefinitionToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull(
       'grouping', instance.grouping?.map((e) => e?.toJson())?.toList());
   writeNotNull(
@@ -288,14 +256,8 @@ ImplementationGuideGrouping _$ImplementationGuideGroupingFromJson(
     Map<String, dynamic> json) {
   return ImplementationGuideGrouping(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     name: json['name'] as String,
     description: json['description'] as String,
   );
@@ -312,10 +274,8 @@ Map<String, dynamic> _$ImplementationGuideGroupingToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('name', instance.name);
   writeNotNull('description', instance.description);
   return val;
@@ -325,14 +285,8 @@ ImplementationGuideResource _$ImplementationGuideResourceFromJson(
     Map<String, dynamic> json) {
   return ImplementationGuideResource(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     reference: json['reference'] == null
         ? null
         : Reference.fromJson(json['reference'] as Map<String, dynamic>),
@@ -361,10 +315,8 @@ Map<String, dynamic> _$ImplementationGuideResourceToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('reference', instance.reference?.toJson());
   writeNotNull('fhirVersion', instance.fhirVersion);
   writeNotNull('name', instance.name);
@@ -379,14 +331,8 @@ ImplementationGuidePage _$ImplementationGuidePageFromJson(
     Map<String, dynamic> json) {
   return ImplementationGuidePage(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     nameUrl: json['nameUrl'] == null
         ? null
         : FhirUrl.fromJson(json['nameUrl'] as String),
@@ -417,10 +363,8 @@ Map<String, dynamic> _$ImplementationGuidePageToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('nameUrl', instance.nameUrl?.toJson());
   writeNotNull('nameReference', instance.nameReference?.toJson());
   writeNotNull('title', instance.title);
@@ -433,14 +377,8 @@ ImplementationGuideParameter _$ImplementationGuideParameterFromJson(
     Map<String, dynamic> json) {
   return ImplementationGuideParameter(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     code: json['code'] == null
         ? null
         : ImplementationGuideParameterCode.fromJson(json['code'] as String),
@@ -459,10 +397,8 @@ Map<String, dynamic> _$ImplementationGuideParameterToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('value', instance.value);
   return val;
@@ -472,14 +408,8 @@ ImplementationGuideTemplate _$ImplementationGuideTemplateFromJson(
     Map<String, dynamic> json) {
   return ImplementationGuideTemplate(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
     source: json['source'] as String,
     scope: json['scope'] as String,
@@ -497,10 +427,8 @@ Map<String, dynamic> _$ImplementationGuideTemplateToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('source', instance.source);
   writeNotNull('scope', instance.scope);
@@ -511,14 +439,8 @@ ImplementationGuideManifest _$ImplementationGuideManifestFromJson(
     Map<String, dynamic> json) {
   return ImplementationGuideManifest(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     rendering: json['rendering'] == null
         ? null
         : FhirUrl.fromJson(json['rendering'] as String),
@@ -548,10 +470,8 @@ Map<String, dynamic> _$ImplementationGuideManifestToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('rendering', instance.rendering?.toJson());
   writeNotNull(
       'resource', instance.resource?.map((e) => e?.toJson())?.toList());
@@ -565,14 +485,8 @@ ImplementationGuideResource1 _$ImplementationGuideResource1FromJson(
     Map<String, dynamic> json) {
   return ImplementationGuideResource1(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     reference: json['reference'] == null
         ? null
         : Reference.fromJson(json['reference'] as Map<String, dynamic>),
@@ -597,10 +511,8 @@ Map<String, dynamic> _$ImplementationGuideResource1ToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('reference', instance.reference?.toJson());
   writeNotNull('exampleBoolean', instance.exampleBoolean);
   writeNotNull('exampleCanonical', instance.exampleCanonical?.toJson());
@@ -612,14 +524,8 @@ ImplementationGuidePage1 _$ImplementationGuidePage1FromJson(
     Map<String, dynamic> json) {
   return ImplementationGuidePage1(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     name: json['name'] as String,
     title: json['title'] as String,
     anchor: (json['anchor'] as List)?.map((e) => e as String)?.toList(),
@@ -637,10 +543,8 @@ Map<String, dynamic> _$ImplementationGuidePage1ToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('name', instance.name);
   writeNotNull('title', instance.title);
   writeNotNull('anchor', instance.anchor);

@@ -23,26 +23,15 @@ _$ActivityDefinition _$_$ActivityDefinitionFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    identifier: json['identifier'] as List,
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
     subtitle: json['subtitle'] as String,
-    status: json['status'] == null
-        ? null
-        : ActivityDefinitionStatus.fromJson(json['status'] as String),
+    status: json['status'],
     experimental: json['experimental'] as bool,
     subjectCodeableConcept: json['subjectCodeableConcept'] == null
         ? null
@@ -55,23 +44,12 @@ _$ActivityDefinition _$_$ActivityDefinitionFromJson(Map<String, dynamic> json) {
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
-    contact: (json['contact'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contact: json['contact'] as List,
     description: json['description'] == null
         ? null
         : Markdown.fromJson(json['description'] as String),
-    useContext: (json['useContext'] as List)
-        ?.map((e) =>
-            e == null ? null : UsageContext.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    jurisdiction: (json['jurisdiction'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    useContext: json['useContext'] as List,
+    jurisdiction: json['jurisdiction'] as List,
     purpose: json['purpose'] == null
         ? null
         : Markdown.fromJson(json['purpose'] as String),
@@ -88,36 +66,12 @@ _$ActivityDefinition _$_$ActivityDefinitionFromJson(Map<String, dynamic> json) {
     effectivePeriod: json['effectivePeriod'] == null
         ? null
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    topic: (json['topic'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    author: (json['author'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    editor: (json['editor'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    reviewer: (json['reviewer'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    endorser: (json['endorser'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    relatedArtifact: (json['relatedArtifact'] as List)
-        ?.map((e) => e == null
-            ? null
-            : RelatedArtifact.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    topic: json['topic'] as List,
+    author: json['author'] as List,
+    editor: json['editor'] as List,
+    reviewer: json['reviewer'] as List,
+    endorser: json['endorser'] as List,
+    relatedArtifact: json['relatedArtifact'] as List,
     library: (json['library'] as List)
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
         ?.toList(),
@@ -155,11 +109,7 @@ _$ActivityDefinition _$_$ActivityDefinitionFromJson(Map<String, dynamic> json) {
     location: json['location'] == null
         ? null
         : Reference.fromJson(json['location'] as Map<String, dynamic>),
-    participant: (json['participant'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ActivityDefinitionParticipant.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    participant: json['participant'] as List,
     productReference: json['productReference'] == null
         ? null
         : Reference.fromJson(json['productReference'] as Map<String, dynamic>),
@@ -170,36 +120,15 @@ _$ActivityDefinition _$_$ActivityDefinitionFromJson(Map<String, dynamic> json) {
     quantity: json['quantity'] == null
         ? null
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
-    dosage: (json['dosage'] as List)
-        ?.map((e) =>
-            e == null ? null : Dosage.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    bodySite: (json['bodySite'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    specimenRequirement: (json['specimenRequirement'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    observationRequirement: (json['observationRequirement'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    observationResultRequirement: (json['observationResultRequirement'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    dosage: json['dosage'] as List,
+    bodySite: json['bodySite'] as List,
+    specimenRequirement: json['specimenRequirement'] as List,
+    observationRequirement: json['observationRequirement'] as List,
+    observationResultRequirement: json['observationResultRequirement'] as List,
     transform: json['transform'] == null
         ? null
         : Canonical.fromJson(json['transform'] as String),
-    dynamicValue: (json['dynamicValue'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ActivityDefinitionDynamicValue.fromJson(
-                e as Map<String, dynamic>))
-        ?.toList(),
+    dynamicValue: json['dynamicValue'] as List,
   );
 }
 
@@ -274,14 +203,8 @@ _$ActivityDefinitionParticipant _$_$ActivityDefinitionParticipantFromJson(
     Map<String, dynamic> json) {
   return _$ActivityDefinitionParticipant(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
     role: json['role'] == null
         ? null
@@ -303,14 +226,8 @@ _$ActivityDefinitionDynamicValue _$_$ActivityDefinitionDynamicValueFromJson(
     Map<String, dynamic> json) {
   return _$ActivityDefinitionDynamicValue(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     path: json['path'] as String,
     expression: json['expression'] == null
         ? null
@@ -345,100 +262,47 @@ _$DeviceDefinition _$_$DeviceDefinitionFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    udiDeviceIdentifier: (json['udiDeviceIdentifier'] as List)
-        ?.map((e) => e == null
-            ? null
-            : DeviceDefinitionUdiDeviceIdentifier.fromJson(
-                e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    identifier: json['identifier'] as List,
+    udiDeviceIdentifier: json['udiDeviceIdentifier'] as List,
     manufacturerString: json['manufacturerString'] as String,
     manufacturerReference: json['manufacturerReference'] == null
         ? null
         : Reference.fromJson(
             json['manufacturerReference'] as Map<String, dynamic>),
-    deviceName: (json['deviceName'] as List)
-        ?.map((e) => e == null
-            ? null
-            : DeviceDefinitionDeviceName.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    deviceName: json['deviceName'] as List,
     modelNumber: json['modelNumber'] as String,
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    specialization: (json['specialization'] as List)
-        ?.map((e) => e == null
-            ? null
-            : DeviceDefinitionSpecialization.fromJson(
-                e as Map<String, dynamic>))
-        ?.toList(),
+    specialization: json['specialization'] as List,
     version: (json['version'] as List)?.map((e) => e as String)?.toList(),
-    safety: (json['safety'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    shelfLifeStorage: (json['shelfLifeStorage'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ProductShelfLife.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    safety: json['safety'] as List,
+    shelfLifeStorage: json['shelfLifeStorage'] as List,
     physicalCharacteristics: json['physicalCharacteristics'] == null
         ? null
         : ProdCharacteristic.fromJson(
             json['physicalCharacteristics'] as Map<String, dynamic>),
-    languageCode: (json['languageCode'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    capability: (json['capability'] as List)
-        ?.map((e) => e == null
-            ? null
-            : DeviceDefinitionCapability.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    property: (json['property'] as List)
-        ?.map((e) => e == null
-            ? null
-            : DeviceDefinitionProperty.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    languageCode: json['languageCode'] as List,
+    capability: json['capability'] as List,
+    property: json['property'] as List,
     owner: json['owner'] == null
         ? null
         : Reference.fromJson(json['owner'] as Map<String, dynamic>),
-    contact: (json['contact'] as List)
-        ?.map((e) =>
-            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contact: json['contact'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
     onlineInformation: json['onlineInformation'] == null
         ? null
         : FhirUri.fromJson(json['onlineInformation'] as String),
-    note: (json['note'] as List)
-        ?.map((e) =>
-            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    note: json['note'] as List,
     quantity: json['quantity'] == null
         ? null
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
     parentDevice: json['parentDevice'] == null
         ? null
         : Reference.fromJson(json['parentDevice'] as Map<String, dynamic>),
-    material: (json['material'] as List)
-        ?.map((e) => e == null
-            ? null
-            : DeviceDefinitionMaterial.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    material: json['material'] as List,
   );
 }
 
@@ -482,14 +346,8 @@ _$DeviceDefinitionUdiDeviceIdentifier
     _$_$DeviceDefinitionUdiDeviceIdentifierFromJson(Map<String, dynamic> json) {
   return _$DeviceDefinitionUdiDeviceIdentifier(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     deviceIdentifier: json['deviceIdentifier'] as String,
     issuer: json['issuer'] == null
         ? null
@@ -515,18 +373,10 @@ _$DeviceDefinitionDeviceName _$_$DeviceDefinitionDeviceNameFromJson(
     Map<String, dynamic> json) {
   return _$DeviceDefinitionDeviceName(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     name: json['name'] as String,
-    type: json['type'] == null
-        ? null
-        : DeviceDefinitionDeviceNameType.fromJson(json['type'] as String),
+    type: json['type'],
   );
 }
 
@@ -544,14 +394,8 @@ _$DeviceDefinitionSpecialization _$_$DeviceDefinitionSpecializationFromJson(
     Map<String, dynamic> json) {
   return _$DeviceDefinitionSpecialization(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     systemType: json['systemType'] as String,
     version: json['version'] as String,
   );
@@ -571,22 +415,12 @@ _$DeviceDefinitionCapability _$_$DeviceDefinitionCapabilityFromJson(
     Map<String, dynamic> json) {
   return _$DeviceDefinitionCapability(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    description: (json['description'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    description: json['description'] as List,
   );
 }
 
@@ -604,26 +438,13 @@ _$DeviceDefinitionProperty _$_$DeviceDefinitionPropertyFromJson(
     Map<String, dynamic> json) {
   return _$DeviceDefinitionProperty(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    valueQuantity: (json['valueQuantity'] as List)
-        ?.map((e) =>
-            e == null ? null : Quantity.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    valueCode: (json['valueCode'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    valueQuantity: json['valueQuantity'] as List,
+    valueCode: json['valueCode'] as List,
   );
 }
 
@@ -642,14 +463,8 @@ _$DeviceDefinitionMaterial _$_$DeviceDefinitionMaterialFromJson(
     Map<String, dynamic> json) {
   return _$DeviceDefinitionMaterial(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     substance: json['substance'] == null
         ? null
         : CodeableConcept.fromJson(json['substance'] as Map<String, dynamic>),
@@ -686,26 +501,15 @@ _$EventDefinition _$_$EventDefinitionFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    identifier: json['identifier'] as List,
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
     subtitle: json['subtitle'] as String,
-    status: json['status'] == null
-        ? null
-        : EventDefinitionStatus.fromJson(json['status'] as String),
+    status: json['status'],
     experimental: json['experimental'] as bool,
     subjectCodeableConcept: json['subjectCodeableConcept'] == null
         ? null
@@ -718,23 +522,12 @@ _$EventDefinition _$_$EventDefinitionFromJson(Map<String, dynamic> json) {
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
-    contact: (json['contact'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contact: json['contact'] as List,
     description: json['description'] == null
         ? null
         : Markdown.fromJson(json['description'] as String),
-    useContext: (json['useContext'] as List)
-        ?.map((e) =>
-            e == null ? null : UsageContext.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    jurisdiction: (json['jurisdiction'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    useContext: json['useContext'] as List,
+    jurisdiction: json['jurisdiction'] as List,
     purpose: json['purpose'] == null
         ? null
         : Markdown.fromJson(json['purpose'] as String),
@@ -751,41 +544,13 @@ _$EventDefinition _$_$EventDefinitionFromJson(Map<String, dynamic> json) {
     effectivePeriod: json['effectivePeriod'] == null
         ? null
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    topic: (json['topic'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    author: (json['author'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    editor: (json['editor'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    reviewer: (json['reviewer'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    endorser: (json['endorser'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    relatedArtifact: (json['relatedArtifact'] as List)
-        ?.map((e) => e == null
-            ? null
-            : RelatedArtifact.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    trigger: (json['trigger'] as List)
-        ?.map((e) => e == null
-            ? null
-            : TriggerDefinition.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    topic: json['topic'] as List,
+    author: json['author'] as List,
+    editor: json['editor'] as List,
+    reviewer: json['reviewer'] as List,
+    endorser: json['endorser'] as List,
+    relatedArtifact: json['relatedArtifact'] as List,
+    trigger: json['trigger'] as List,
   );
 }
 
@@ -849,26 +614,13 @@ _$ObservationDefinition _$_$ObservationDefinitionFromJson(
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    category: (json['category'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    category: json['category'] as List,
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    identifier: json['identifier'] as List,
     permittedDataType:
         (json['permittedDataType'] as List)?.map((e) => e as String)?.toList(),
     multipleResultsAllowed: json['multipleResultsAllowed'] as bool,
@@ -880,12 +632,7 @@ _$ObservationDefinition _$_$ObservationDefinitionFromJson(
         ? null
         : ObservationDefinitionQuantitativeDetails.fromJson(
             json['quantitativeDetails'] as Map<String, dynamic>),
-    qualifiedInterval: (json['qualifiedInterval'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ObservationDefinitionQualifiedInterval.fromJson(
-                e as Map<String, dynamic>))
-        ?.toList(),
+    qualifiedInterval: json['qualifiedInterval'] as List,
     validCodedValueSet: json['validCodedValueSet'] == null
         ? null
         : Reference.fromJson(
@@ -937,14 +684,8 @@ _$ObservationDefinitionQuantitativeDetails
         Map<String, dynamic> json) {
   return _$ObservationDefinitionQuantitativeDetails(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     customaryUnit: json['customaryUnit'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -974,33 +715,17 @@ _$ObservationDefinitionQualifiedInterval
         Map<String, dynamic> json) {
   return _$ObservationDefinitionQualifiedInterval(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    category: json['category'] == null
-        ? null
-        : ObservationDefinitionQualifiedIntervalCategory.fromJson(
-            json['category'] as String),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    category: json['category'],
     range: json['range'] == null
         ? null
         : Range.fromJson(json['range'] as Map<String, dynamic>),
     context: json['context'] == null
         ? null
         : CodeableConcept.fromJson(json['context'] as Map<String, dynamic>),
-    appliesTo: (json['appliesTo'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    gender: json['gender'] == null
-        ? null
-        : ObservationDefinitionQualifiedIntervalGender.fromJson(
-            json['gender'] as String),
+    appliesTo: json['appliesTo'] as List,
+    gender: json['gender'],
     age: json['age'] == null
         ? null
         : Range.fromJson(json['age'] as Map<String, dynamic>),
@@ -1044,14 +769,8 @@ _$SpecimenDefinition _$_$SpecimenDefinitionFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -1059,22 +778,10 @@ _$SpecimenDefinition _$_$SpecimenDefinitionFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['typeCollected'] as Map<String, dynamic>),
-    patientPreparation: (json['patientPreparation'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    patientPreparation: json['patientPreparation'] as List,
     timeAspect: json['timeAspect'] as String,
-    collection: (json['collection'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    typeTested: (json['typeTested'] as List)
-        ?.map((e) => e == null
-            ? null
-            : SpecimenDefinitionTypeTested.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    collection: json['collection'] as List,
+    typeTested: json['typeTested'] as List,
   );
 }
 
@@ -1102,22 +809,13 @@ _$SpecimenDefinitionTypeTested _$_$SpecimenDefinitionTypeTestedFromJson(
     Map<String, dynamic> json) {
   return _$SpecimenDefinitionTypeTested(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     isDerived: json['isDerived'] as bool,
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    preference: json['preference'] == null
-        ? null
-        : SpecimenDefinitionTypeTestedPreference.fromJson(
-            json['preference'] as String),
+    preference: json['preference'],
     container: json['container'] == null
         ? null
         : SpecimenDefinitionContainer.fromJson(
@@ -1126,16 +824,8 @@ _$SpecimenDefinitionTypeTested _$_$SpecimenDefinitionTypeTestedFromJson(
     retentionTime: json['retentionTime'] == null
         ? null
         : Duration.fromJson(json['retentionTime'] as Map<String, dynamic>),
-    rejectionCriterion: (json['rejectionCriterion'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    handling: (json['handling'] as List)
-        ?.map((e) => e == null
-            ? null
-            : SpecimenDefinitionHandling.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    rejectionCriterion: json['rejectionCriterion'] as List,
+    handling: json['handling'] as List,
   );
 }
 
@@ -1159,14 +849,8 @@ _$SpecimenDefinitionContainer _$_$SpecimenDefinitionContainerFromJson(
     Map<String, dynamic> json) {
   return _$SpecimenDefinitionContainer(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     material: json['material'] == null
         ? null
         : CodeableConcept.fromJson(json['material'] as Map<String, dynamic>),
@@ -1185,11 +869,7 @@ _$SpecimenDefinitionContainer _$_$SpecimenDefinitionContainerFromJson(
         : Quantity.fromJson(
             json['minimumVolumeQuantity'] as Map<String, dynamic>),
     minimumVolumeString: json['minimumVolumeString'] as String,
-    additive: (json['additive'] as List)
-        ?.map((e) => e == null
-            ? null
-            : SpecimenDefinitionAdditive.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    additive: json['additive'] as List,
     preparation: json['preparation'] as String,
   );
 }
@@ -1215,14 +895,8 @@ _$SpecimenDefinitionAdditive _$_$SpecimenDefinitionAdditiveFromJson(
     Map<String, dynamic> json) {
   return _$SpecimenDefinitionAdditive(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     additiveCodeableConcept: json['additiveCodeableConcept'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -1247,14 +921,8 @@ _$SpecimenDefinitionHandling _$_$SpecimenDefinitionHandlingFromJson(
     Map<String, dynamic> json) {
   return _$SpecimenDefinitionHandling(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     temperatureQualifier: json['temperatureQualifier'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -1298,19 +966,10 @@ _$PlanDefinition _$_$PlanDefinitionFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    identifier: json['identifier'] as List,
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
@@ -1318,9 +977,7 @@ _$PlanDefinition _$_$PlanDefinitionFromJson(Map<String, dynamic> json) {
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    status: json['status'] == null
-        ? null
-        : PlanDefinitionStatus.fromJson(json['status'] as String),
+    status: json['status'],
     experimental: json['experimental'] as bool,
     subjectCodeableConcept: json['subjectCodeableConcept'] == null
         ? null
@@ -1333,23 +990,12 @@ _$PlanDefinition _$_$PlanDefinitionFromJson(Map<String, dynamic> json) {
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
-    contact: (json['contact'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contact: json['contact'] as List,
     description: json['description'] == null
         ? null
         : Markdown.fromJson(json['description'] as String),
-    useContext: (json['useContext'] as List)
-        ?.map((e) =>
-            e == null ? null : UsageContext.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    jurisdiction: (json['jurisdiction'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    useContext: json['useContext'] as List,
+    jurisdiction: json['jurisdiction'] as List,
     purpose: json['purpose'] == null
         ? null
         : Markdown.fromJson(json['purpose'] as String),
@@ -1366,49 +1012,17 @@ _$PlanDefinition _$_$PlanDefinitionFromJson(Map<String, dynamic> json) {
     effectivePeriod: json['effectivePeriod'] == null
         ? null
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    topic: (json['topic'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    author: (json['author'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    editor: (json['editor'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    reviewer: (json['reviewer'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    endorser: (json['endorser'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    relatedArtifact: (json['relatedArtifact'] as List)
-        ?.map((e) => e == null
-            ? null
-            : RelatedArtifact.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    topic: json['topic'] as List,
+    author: json['author'] as List,
+    editor: json['editor'] as List,
+    reviewer: json['reviewer'] as List,
+    endorser: json['endorser'] as List,
+    relatedArtifact: json['relatedArtifact'] as List,
     library: (json['library'] as List)
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
         ?.toList(),
-    goal: (json['goal'] as List)
-        ?.map((e) => e == null
-            ? null
-            : PlanDefinitionGoal.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    action: (json['action'] as List)
-        ?.map((e) => e == null
-            ? null
-            : PlanDefinitionAction.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    goal: json['goal'] as List,
+    action: json['action'] as List,
   );
 }
 
@@ -1460,14 +1074,8 @@ Map<String, dynamic> _$_$PlanDefinitionToJson(_$PlanDefinition instance) =>
 _$PlanDefinitionGoal _$_$PlanDefinitionGoalFromJson(Map<String, dynamic> json) {
   return _$PlanDefinitionGoal(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     category: json['category'] == null
         ? null
         : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
@@ -1480,21 +1088,9 @@ _$PlanDefinitionGoal _$_$PlanDefinitionGoalFromJson(Map<String, dynamic> json) {
     start: json['start'] == null
         ? null
         : CodeableConcept.fromJson(json['start'] as Map<String, dynamic>),
-    addresses: (json['addresses'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    documentation: (json['documentation'] as List)
-        ?.map((e) => e == null
-            ? null
-            : RelatedArtifact.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    target: (json['target'] as List)
-        ?.map((e) => e == null
-            ? null
-            : PlanDefinitionTarget.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    addresses: json['addresses'] as List,
+    documentation: json['documentation'] as List,
+    target: json['target'] as List,
   );
 }
 
@@ -1517,14 +1113,8 @@ _$PlanDefinitionTarget _$_$PlanDefinitionTargetFromJson(
     Map<String, dynamic> json) {
   return _$PlanDefinitionTarget(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     measure: json['measure'] == null
         ? null
         : CodeableConcept.fromJson(json['measure'] as Map<String, dynamic>),
@@ -1561,14 +1151,8 @@ _$PlanDefinitionAction _$_$PlanDefinitionActionFromJson(
     Map<String, dynamic> json) {
   return _$PlanDefinitionAction(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     prefix: json['prefix'] as String,
     title: json['title'] as String,
     description: json['description'] as String,
@@ -1576,21 +1160,9 @@ _$PlanDefinitionAction _$_$PlanDefinitionActionFromJson(
     priority: json['priority'] == null
         ? null
         : Code.fromJson(json['priority'] as String),
-    code: (json['code'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    reason: (json['reason'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    documentation: (json['documentation'] as List)
-        ?.map((e) => e == null
-            ? null
-            : RelatedArtifact.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    code: json['code'] as List,
+    reason: json['reason'] as List,
+    documentation: json['documentation'] as List,
     goalId: (json['goalId'] as List)
         ?.map((e) => e == null ? null : Id.fromJson(e as String))
         ?.toList(),
@@ -1601,31 +1173,11 @@ _$PlanDefinitionAction _$_$PlanDefinitionActionFromJson(
     subjectReference: json['subjectReference'] == null
         ? null
         : Reference.fromJson(json['subjectReference'] as Map<String, dynamic>),
-    trigger: (json['trigger'] as List)
-        ?.map((e) => e == null
-            ? null
-            : TriggerDefinition.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    condition: (json['condition'] as List)
-        ?.map((e) => e == null
-            ? null
-            : PlanDefinitionCondition.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    input: (json['input'] as List)
-        ?.map((e) => e == null
-            ? null
-            : DataRequirement.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    output: (json['output'] as List)
-        ?.map((e) => e == null
-            ? null
-            : DataRequirement.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    relatedAction: (json['relatedAction'] as List)
-        ?.map((e) => e == null
-            ? null
-            : PlanDefinitionRelatedAction.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    trigger: json['trigger'] as List,
+    condition: json['condition'] as List,
+    input: json['input'] as List,
+    output: json['output'] as List,
+    relatedAction: json['relatedAction'] as List,
     timingDateTime: json['timingDateTime'] == null
         ? null
         : FhirDateTime.fromJson(json['timingDateTime'] as String),
@@ -1644,34 +1196,15 @@ _$PlanDefinitionAction _$_$PlanDefinitionActionFromJson(
     timingTiming: json['timingTiming'] == null
         ? null
         : Timing.fromJson(json['timingTiming'] as Map<String, dynamic>),
-    participant: (json['participant'] as List)
-        ?.map((e) => e == null
-            ? null
-            : PlanDefinitionParticipant.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    participant: json['participant'] as List,
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    groupingBehavior: json['groupingBehavior'] == null
-        ? null
-        : PlanDefinitionActionGroupingBehavior.fromJson(
-            json['groupingBehavior'] as String),
-    selectionBehavior: json['selectionBehavior'] == null
-        ? null
-        : PlanDefinitionActionSelectionBehavior.fromJson(
-            json['selectionBehavior'] as String),
-    requiredBehavior: json['requiredBehavior'] == null
-        ? null
-        : PlanDefinitionActionRequiredBehavior.fromJson(
-            json['requiredBehavior'] as String),
-    precheckBehavior: json['precheckBehavior'] == null
-        ? null
-        : PlanDefinitionActionPrecheckBehavior.fromJson(
-            json['precheckBehavior'] as String),
-    cardinalityBehavior: json['cardinalityBehavior'] == null
-        ? null
-        : PlanDefinitionActionCardinalityBehavior.fromJson(
-            json['cardinalityBehavior'] as String),
+    groupingBehavior: json['groupingBehavior'],
+    selectionBehavior: json['selectionBehavior'],
+    requiredBehavior: json['requiredBehavior'],
+    precheckBehavior: json['precheckBehavior'],
+    cardinalityBehavior: json['cardinalityBehavior'],
     definitionCanonical: json['definitionCanonical'] == null
         ? null
         : Canonical.fromJson(json['definitionCanonical'] as String),
@@ -1681,16 +1214,8 @@ _$PlanDefinitionAction _$_$PlanDefinitionActionFromJson(
     transform: json['transform'] == null
         ? null
         : Canonical.fromJson(json['transform'] as String),
-    dynamicValue: (json['dynamicValue'] as List)
-        ?.map((e) => e == null
-            ? null
-            : PlanDefinitionDynamicValue.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    action: (json['action'] as List)
-        ?.map((e) => e == null
-            ? null
-            : PlanDefinitionAction.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    dynamicValue: json['dynamicValue'] as List,
+    action: json['action'] as List,
   );
 }
 
@@ -1740,17 +1265,9 @@ _$PlanDefinitionCondition _$_$PlanDefinitionConditionFromJson(
     Map<String, dynamic> json) {
   return _$PlanDefinitionCondition(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    kind: json['kind'] == null
-        ? null
-        : PlanDefinitionConditionKind.fromJson(json['kind'] as String),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    kind: json['kind'],
     expression: json['expression'] == null
         ? null
         : Expression.fromJson(json['expression'] as Map<String, dynamic>),
@@ -1771,21 +1288,12 @@ _$PlanDefinitionRelatedAction _$_$PlanDefinitionRelatedActionFromJson(
     Map<String, dynamic> json) {
   return _$PlanDefinitionRelatedAction(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     actionId: json['actionId'] == null
         ? null
         : Id.fromJson(json['actionId'] as String),
-    relationship: json['relationship'] == null
-        ? null
-        : PlanDefinitionRelatedActionRelationship.fromJson(
-            json['relationship'] as String),
+    relationship: json['relationship'],
     offsetDuration: json['offsetDuration'] == null
         ? null
         : Duration.fromJson(json['offsetDuration'] as Map<String, dynamic>),
@@ -1811,17 +1319,9 @@ _$PlanDefinitionParticipant _$_$PlanDefinitionParticipantFromJson(
     Map<String, dynamic> json) {
   return _$PlanDefinitionParticipant(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    type: json['type'] == null
-        ? null
-        : PlanDefinitionParticipantType.fromJson(json['type'] as String),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    type: json['type'],
     role: json['role'] == null
         ? null
         : CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
@@ -1842,14 +1342,8 @@ _$PlanDefinitionDynamicValue _$_$PlanDefinitionDynamicValueFromJson(
     Map<String, dynamic> json) {
   return _$PlanDefinitionDynamicValue(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     path: json['path'] as String,
     expression: json['expression'] == null
         ? null
@@ -1884,28 +1378,17 @@ _$Questionnaire _$_$QuestionnaireFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    identifier: json['identifier'] as List,
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
     derivedFrom: (json['derivedFrom'] as List)
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
         ?.toList(),
-    status: json['status'] == null
-        ? null
-        : QuestionnaireStatus.fromJson(json['status'] as String),
+    status: json['status'],
     experimental: json['experimental'] as bool,
     subjectType: (json['subjectType'] as List)
         ?.map((e) => e == null ? null : Code.fromJson(e as String))
@@ -1914,23 +1397,12 @@ _$Questionnaire _$_$QuestionnaireFromJson(Map<String, dynamic> json) {
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
     publisher: json['publisher'] as String,
-    contact: (json['contact'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contact: json['contact'] as List,
     description: json['description'] == null
         ? null
         : Markdown.fromJson(json['description'] as String),
-    useContext: (json['useContext'] as List)
-        ?.map((e) =>
-            e == null ? null : UsageContext.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    jurisdiction: (json['jurisdiction'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    useContext: json['useContext'] as List,
+    jurisdiction: json['jurisdiction'] as List,
     purpose: json['purpose'] == null
         ? null
         : Markdown.fromJson(json['purpose'] as String),
@@ -1946,15 +1418,8 @@ _$Questionnaire _$_$QuestionnaireFromJson(Map<String, dynamic> json) {
     effectivePeriod: json['effectivePeriod'] == null
         ? null
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    code: (json['code'] as List)
-        ?.map((e) =>
-            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    item: (json['item'] as List)
-        ?.map((e) => e == null
-            ? null
-            : QuestionnaireItem.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    code: json['code'] as List,
+    item: json['item'] as List,
   );
 }
 
@@ -1996,36 +1461,18 @@ Map<String, dynamic> _$_$QuestionnaireToJson(_$Questionnaire instance) =>
 _$QuestionnaireItem _$_$QuestionnaireItemFromJson(Map<String, dynamic> json) {
   return _$QuestionnaireItem(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     linkId: json['linkId'] as String,
     definition: json['definition'] == null
         ? null
         : FhirUri.fromJson(json['definition'] as String),
-    code: (json['code'] as List)
-        ?.map((e) =>
-            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    code: json['code'] as List,
     prefix: json['prefix'] as String,
     text: json['text'] as String,
-    type: json['type'] == null
-        ? null
-        : QuestionnaireItemType.fromJson(json['type'] as String),
-    enableWhen: (json['enableWhen'] as List)
-        ?.map((e) => e == null
-            ? null
-            : QuestionnaireEnableWhen.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    enableBehavior: json['enableBehavior'] == null
-        ? null
-        : QuestionnaireItemEnableBehavior.fromJson(
-            json['enableBehavior'] as String),
+    type: json['type'],
+    enableWhen: json['enableWhen'] as List,
+    enableBehavior: json['enableBehavior'],
     required: json['required'] as bool,
     repeats: json['repeats'] as bool,
     readOnly: json['readOnly'] as bool,
@@ -2033,21 +1480,9 @@ _$QuestionnaireItem _$_$QuestionnaireItemFromJson(Map<String, dynamic> json) {
     answerValueSet: json['answerValueSet'] == null
         ? null
         : Canonical.fromJson(json['answerValueSet'] as String),
-    answerOption: (json['answerOption'] as List)
-        ?.map((e) => e == null
-            ? null
-            : QuestionnaireAnswerOption.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    initial: (json['initial'] as List)
-        ?.map((e) => e == null
-            ? null
-            : QuestionnaireInitial.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    item: (json['item'] as List)
-        ?.map((e) => e == null
-            ? null
-            : QuestionnaireItem.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    answerOption: json['answerOption'] as List,
+    initial: json['initial'] as List,
+    item: json['item'] as List,
   );
 }
 
@@ -2079,18 +1514,10 @@ _$QuestionnaireEnableWhen _$_$QuestionnaireEnableWhenFromJson(
     Map<String, dynamic> json) {
   return _$QuestionnaireEnableWhen(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     question: json['question'] as String,
-    operator: json['operator'] == null
-        ? null
-        : QuestionnaireEnableWhenOperator.fromJson(json['operator'] as String),
+    operator: json['operator'],
     answerBoolean: json['answerBoolean'] as bool,
     answerDecimal: (json['answerDecimal'] as num)?.toDouble(),
     answerInteger: json['answerInteger'] as int,
@@ -2140,14 +1567,8 @@ _$QuestionnaireAnswerOption _$_$QuestionnaireAnswerOptionFromJson(
     Map<String, dynamic> json) {
   return _$QuestionnaireAnswerOption(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     valueInteger: json['valueInteger'] as int,
     valueDate: json['valueDate'] == null
         ? null
@@ -2185,14 +1606,8 @@ _$QuestionnaireInitial _$_$QuestionnaireInitialFromJson(
     Map<String, dynamic> json) {
   return _$QuestionnaireInitial(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     valueBoolean: json['valueBoolean'] as bool,
     valueDecimal: (json['valueDecimal'] as num)?.toDouble(),
     valueInteger: json['valueInteger'] as int,

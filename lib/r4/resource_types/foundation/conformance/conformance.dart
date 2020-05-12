@@ -16,8 +16,8 @@ const factory Conformance.messageDefinition({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   List<Identifier> identifier,
   String version,
@@ -48,8 +48,8 @@ const factory Conformance.messageDefinition({
 
 const factory Conformance.messageDefinitionFocus({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Code code,
   Canonical profile,
   int min,
@@ -59,8 +59,8 @@ const factory Conformance.messageDefinitionFocus({
 
 const factory Conformance.messageDefinitionAllowedResponse({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Canonical message,
   Markdown situation,
 
@@ -74,8 +74,8 @@ const factory Conformance.capabilityStatement({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   String version,
   String name,
@@ -107,8 +107,8 @@ const factory Conformance.capabilityStatement({
 
 const factory Conformance.capabilityStatementSoftware({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String name,
   String version,
   FhirDateTime releaseDate,
@@ -117,8 +117,8 @@ const factory Conformance.capabilityStatementSoftware({
 
 const factory Conformance.capabilityStatementImplementation({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String description,
   FhirUrl url,
   Reference custodian,
@@ -127,8 +127,8 @@ const factory Conformance.capabilityStatementImplementation({
 
 const factory Conformance.capabilityStatementRest({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CapabilityStatementRestMode mode,
   Markdown documentation,
   CapabilityStatementSecurity security,
@@ -142,8 +142,8 @@ const factory Conformance.capabilityStatementRest({
 
 const factory Conformance.capabilityStatementSecurity({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   bool cors,
   List<CodeableConcept> service,
   Markdown description,
@@ -152,8 +152,8 @@ const factory Conformance.capabilityStatementSecurity({
 
 const factory Conformance.capabilityStatementResource({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Code type,
   Canonical profile,
   List<Canonical> supportedProfile,
@@ -176,8 +176,8 @@ const factory Conformance.capabilityStatementResource({
 
 const factory Conformance.capabilityStatementInteraction({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CapabilityStatementInteractionCode code,
   Markdown documentation,
 
@@ -185,8 +185,8 @@ const factory Conformance.capabilityStatementInteraction({
 
 const factory Conformance.capabilityStatementSearchParam({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String name,
   Canonical definition,
   String type,
@@ -196,8 +196,8 @@ const factory Conformance.capabilityStatementSearchParam({
 
 const factory Conformance.capabilityStatementOperation({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String name,
   Canonical definition,
   Markdown documentation,
@@ -206,8 +206,8 @@ const factory Conformance.capabilityStatementOperation({
 
 const factory Conformance.capabilityStatementInteraction1({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String code,
   Markdown documentation,
 
@@ -215,8 +215,8 @@ const factory Conformance.capabilityStatementInteraction1({
 
 const factory Conformance.capabilityStatementMessaging({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<CapabilityStatementEndpoint> endpoint,
   int reliableCache,
   Markdown documentation,
@@ -226,8 +226,8 @@ const factory Conformance.capabilityStatementMessaging({
 
 const factory Conformance.capabilityStatementEndpoint({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Coding protocol,
   FhirUrl address,
 
@@ -235,8 +235,8 @@ const factory Conformance.capabilityStatementEndpoint({
 
 const factory Conformance.capabilityStatementSupportedMessage({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CapabilityStatementSupportedMessageMode mode,
   Canonical definition,
 
@@ -244,8 +244,8 @@ const factory Conformance.capabilityStatementSupportedMessage({
 
 const factory Conformance.capabilityStatementDocument({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CapabilityStatementDocumentMode mode,
   Markdown documentation,
   Canonical profile,
@@ -260,8 +260,8 @@ const factory Conformance.compartmentDefinition({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   String version,
   String name,
@@ -281,8 +281,8 @@ const factory Conformance.compartmentDefinition({
 
 const factory Conformance.compartmentDefinitionResource({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Code code,
   List<String> param,
   String documentation,
@@ -297,8 +297,8 @@ const factory Conformance.operationDefinition({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   String version,
   String name,
@@ -330,8 +330,8 @@ const factory Conformance.operationDefinition({
 
 const factory Conformance.operationDefinitionParameter({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Code name,
   OperationDefinitionParameterUse use,
   int min,
@@ -348,8 +348,8 @@ const factory Conformance.operationDefinitionParameter({
 
 const factory Conformance.operationDefinitionBinding({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   OperationDefinitionBindingStrength strength,
   Canonical valueSet,
 
@@ -357,8 +357,8 @@ const factory Conformance.operationDefinitionBinding({
 
 const factory Conformance.operationDefinitionReferencedFrom({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String source,
   String sourceId,
 
@@ -366,8 +366,8 @@ const factory Conformance.operationDefinitionReferencedFrom({
 
 const factory Conformance.operationDefinitionOverload({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<String> parameterName,
   String comment,
 
@@ -381,8 +381,8 @@ const factory Conformance.exampleScenario({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   List<Identifier> identifier,
   String version,
@@ -405,8 +405,8 @@ const factory Conformance.exampleScenario({
 
 const factory Conformance.exampleScenarioActor({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String actorId,
   ExampleScenarioActorType type,
   String name,
@@ -416,8 +416,8 @@ const factory Conformance.exampleScenarioActor({
 
 const factory Conformance.exampleScenarioInstance({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String resourceId,
   Code resourceType,
   String name,
@@ -429,8 +429,8 @@ const factory Conformance.exampleScenarioInstance({
 
 const factory Conformance.exampleScenarioVersion({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String versionId,
   Markdown description,
 
@@ -438,8 +438,8 @@ const factory Conformance.exampleScenarioVersion({
 
 const factory Conformance.exampleScenarioContainedInstance({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String resourceId,
   String versionId,
 
@@ -447,8 +447,8 @@ const factory Conformance.exampleScenarioContainedInstance({
 
 const factory Conformance.exampleScenarioProcess({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String title,
   Markdown description,
   Markdown preConditions,
@@ -459,8 +459,8 @@ const factory Conformance.exampleScenarioProcess({
 
 const factory Conformance.exampleScenarioStep({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<ExampleScenarioProcess> process,
   bool pause,
   ExampleScenarioOperation operation,
@@ -470,8 +470,8 @@ const factory Conformance.exampleScenarioStep({
 
 const factory Conformance.exampleScenarioOperation({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String number,
   String type,
   String name,
@@ -487,8 +487,8 @@ const factory Conformance.exampleScenarioOperation({
 
 const factory Conformance.exampleScenarioAlternative({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String title,
   Markdown description,
   List<ExampleScenarioStep> step,
@@ -503,8 +503,8 @@ const factory Conformance.structureMap({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   List<Identifier> identifier,
   String version,
@@ -528,8 +528,8 @@ const factory Conformance.structureMap({
 
 const factory Conformance.structureMapStructure({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Canonical url,
   StructureMapStructureMode mode,
   String alias,
@@ -539,8 +539,8 @@ const factory Conformance.structureMapStructure({
 
 const factory Conformance.structureMapGroup({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Id name,
   Id extend,
   StructureMapGroupTypeMode typeMode,
@@ -552,8 +552,8 @@ const factory Conformance.structureMapGroup({
 
 const factory Conformance.structureMapInput({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Id name,
   String type,
   StructureMapInputMode mode,
@@ -563,8 +563,8 @@ const factory Conformance.structureMapInput({
 
 const factory Conformance.structureMapRule({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Id name,
   List<StructureMapSource> source,
   List<StructureMapTarget> target,
@@ -576,8 +576,8 @@ const factory Conformance.structureMapRule({
 
 const factory Conformance.structureMapSource({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Id context,
   int min,
   String max,
@@ -643,8 +643,8 @@ const factory Conformance.structureMapSource({
 
 const factory Conformance.structureMapTarget({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Id context,
   StructureMapTargetContextType contextType,
   String element,
@@ -658,8 +658,8 @@ const factory Conformance.structureMapTarget({
 
 const factory Conformance.structureMapParameter({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Id valueId,
   String valueString,
   bool valueBoolean,
@@ -670,8 +670,8 @@ const factory Conformance.structureMapParameter({
 
 const factory Conformance.structureMapDependent({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Id name,
   List<String> variable,
 
@@ -685,8 +685,8 @@ const factory Conformance.implementationGuide({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   String version,
   String name,
@@ -712,8 +712,8 @@ const factory Conformance.implementationGuide({
 
 const factory Conformance.implementationGuideDependsOn({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Canonical uri,
   Id packageId,
   String version,
@@ -722,8 +722,8 @@ const factory Conformance.implementationGuideDependsOn({
 
 const factory Conformance.implementationGuideGlobal({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Code type,
   Canonical profile,
 
@@ -731,8 +731,8 @@ const factory Conformance.implementationGuideGlobal({
 
 const factory Conformance.implementationGuideDefinition({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<ImplementationGuideGrouping> grouping,
   List<ImplementationGuideResource> resource,
   ImplementationGuidePage page,
@@ -743,8 +743,8 @@ const factory Conformance.implementationGuideDefinition({
 
 const factory Conformance.implementationGuideGrouping({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String name,
   String description,
 
@@ -752,8 +752,8 @@ const factory Conformance.implementationGuideGrouping({
 
 const factory Conformance.implementationGuideResource({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference reference,
   List<String> fhirVersion,
   String name,
@@ -766,8 +766,8 @@ const factory Conformance.implementationGuideResource({
 
 const factory Conformance.implementationGuidePage({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUrl nameUrl,
   Reference nameReference,
   String title,
@@ -778,8 +778,8 @@ const factory Conformance.implementationGuidePage({
 
 const factory Conformance.implementationGuideParameter({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   ImplementationGuideParameterCode code,
   String value,
 
@@ -787,8 +787,8 @@ const factory Conformance.implementationGuideParameter({
 
 const factory Conformance.implementationGuideTemplate({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Code code,
   String source,
   String scope,
@@ -797,8 +797,8 @@ const factory Conformance.implementationGuideTemplate({
 
 const factory Conformance.implementationGuideManifest({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUrl rendering,
   List<ImplementationGuideResource1> resource,
   List<ImplementationGuidePage1> page,
@@ -809,8 +809,8 @@ const factory Conformance.implementationGuideManifest({
 
 const factory Conformance.implementationGuideResource1({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference reference,
   bool exampleBoolean,
   Canonical exampleCanonical,
@@ -820,8 +820,8 @@ const factory Conformance.implementationGuideResource1({
 
 const factory Conformance.implementationGuidePage1({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String name,
   String title,
   List<String> anchor,
@@ -836,8 +836,8 @@ const factory Conformance.searchParameter({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   String version,
   String name,
@@ -869,8 +869,8 @@ const factory Conformance.searchParameter({
 
 const factory Conformance.searchParameterComponent({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Canonical definition,
   String expression,
 
@@ -884,8 +884,8 @@ const factory Conformance.graphDefinition({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   String version,
   String name,
@@ -906,8 +906,8 @@ const factory Conformance.graphDefinition({
 
 const factory Conformance.graphDefinitionLink({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String path,
   String sliceName,
   int min,
@@ -919,8 +919,8 @@ const factory Conformance.graphDefinitionLink({
 
 const factory Conformance.graphDefinitionTarget({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Code type,
   String params,
   Canonical profile,
@@ -931,8 +931,8 @@ const factory Conformance.graphDefinitionTarget({
 
 const factory Conformance.graphDefinitionCompartment({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   GraphDefinitionCompartmentUse use,
   Code code,
   GraphDefinitionCompartmentRule rule,
@@ -949,8 +949,8 @@ const factory Conformance.structureDefinition({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   List<Identifier> identifier,
   String version,
@@ -983,8 +983,8 @@ const factory Conformance.structureDefinition({
 
 const factory Conformance.structureDefinitionMapping({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Id identity,
   FhirUri uri,
   String name,
@@ -994,8 +994,8 @@ const factory Conformance.structureDefinitionMapping({
 
 const factory Conformance.structureDefinitionContext({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   StructureDefinitionContextType type,
   String expression,
 
@@ -1003,16 +1003,16 @@ const factory Conformance.structureDefinitionContext({
 
 const factory Conformance.structureDefinitionSnapshot({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<ElementDefinition> element,
 
   }) = StructureDefinitionSnapshot;
 
 const factory Conformance.structureDefinitionDifferential({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<ElementDefinition> element,
 
   }) = StructureDefinitionDifferential;

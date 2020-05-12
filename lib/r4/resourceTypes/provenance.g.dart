@@ -23,14 +23,8 @@ Provenance _$ProvenanceFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     target: (json['target'] as List)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -91,10 +85,8 @@ Map<String, dynamic> _$ProvenanceToJson(Provenance instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('target', instance.target?.map((e) => e?.toJson())?.toList());
   writeNotNull('occurredPeriod', instance.occurredPeriod?.toJson());
   writeNotNull('occurredDateTime', instance.occurredDateTime?.toJson());
@@ -113,14 +105,8 @@ Map<String, dynamic> _$ProvenanceToJson(Provenance instance) {
 ProvenanceAgent _$ProvenanceAgentFromJson(Map<String, dynamic> json) {
   return ProvenanceAgent(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -148,10 +134,8 @@ Map<String, dynamic> _$ProvenanceAgentToJson(ProvenanceAgent instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('role', instance.role?.map((e) => e?.toJson())?.toList());
   writeNotNull('who', instance.who?.toJson());
@@ -162,14 +146,8 @@ Map<String, dynamic> _$ProvenanceAgentToJson(ProvenanceAgent instance) {
 ProvenanceEntity _$ProvenanceEntityFromJson(Map<String, dynamic> json) {
   return ProvenanceEntity(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     role: json['role'] == null
         ? null
         : ProvenanceEntityRole.fromJson(json['role'] as String),
@@ -194,10 +172,8 @@ Map<String, dynamic> _$ProvenanceEntityToJson(ProvenanceEntity instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('role', instance.role?.toJson());
   writeNotNull('what', instance.what?.toJson());
   writeNotNull('agent', instance.agent?.map((e) => e?.toJson())?.toList());

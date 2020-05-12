@@ -98,7 +98,7 @@ class _$EvidenceBasedMedicineTearOff {
       Reference outcome,
       RiskEvidenceSynthesisSampleSize sampleSize,
       RiskEvidenceSynthesisRiskEstimate riskEstimate,
-      List<RiskEvidenceSynthesisCertainty> certainty}) {
+      List<dynamic> certainty}) {
     return RiskEvidenceSynthesis(
       resourceType: resourceType,
       id: id,
@@ -170,7 +170,7 @@ class _$EvidenceBasedMedicineTearOff {
       CodeableConcept unitOfMeasure,
       int denominatorCount,
       int numeratorCount,
-      List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate}) {
+      List<dynamic> precisionEstimate}) {
     return RiskEvidenceSynthesisRiskEstimate(
       id: id,
       extension: extension,
@@ -210,7 +210,7 @@ class _$EvidenceBasedMedicineTearOff {
       List<dynamic> modifierExtension,
       List<dynamic> rating,
       List<dynamic> note,
-      List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent}) {
+      List<dynamic> certaintySubcomponent}) {
     return RiskEvidenceSynthesisCertainty(
       id: id,
       extension: extension,
@@ -275,7 +275,7 @@ class _$EvidenceBasedMedicineTearOff {
       List<dynamic> endorser,
       List<dynamic> relatedArtifact,
       EvidenceVariableType type,
-      List<EvidenceVariableCharacteristic> characteristic}) {
+      List<dynamic> characteristic}) {
     return EvidenceVariable(
       resourceType: resourceType,
       id: id,
@@ -479,7 +479,7 @@ class _$EvidenceBasedMedicineTearOff {
       List<Canonical> library,
       ResearchElementDefinitionType type,
       ResearchElementDefinitionVariableType variableType,
-      List<ResearchElementDefinitionCharacteristic> characteristic}) {
+      List<dynamic> characteristic}) {
     return ResearchElementDefinition(
       resourceType: resourceType,
       id: id,
@@ -716,9 +716,9 @@ class _$EvidenceBasedMedicineTearOff {
       Reference exposureAlternative,
       Reference outcome,
       EffectEvidenceSynthesisSampleSize sampleSize,
-      List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-      List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-      List<EffectEvidenceSynthesisCertainty> certainty}) {
+      List<dynamic> resultsByExposure,
+      List<dynamic> effectEstimate,
+      List<dynamic> certainty}) {
     return EffectEvidenceSynthesis(
       resourceType: resourceType,
       id: id,
@@ -811,7 +811,7 @@ class _$EvidenceBasedMedicineTearOff {
       CodeableConcept variantState,
       double value,
       CodeableConcept unitOfMeasure,
-      List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate}) {
+      List<dynamic> precisionEstimate}) {
     return EffectEvidenceSynthesisEffectEstimate(
       id: id,
       extension: extension,
@@ -851,8 +851,7 @@ class _$EvidenceBasedMedicineTearOff {
       List<dynamic> modifierExtension,
       List<dynamic> rating,
       List<dynamic> note,
-      List<EffectEvidenceSynthesisCertaintySubcomponent>
-          certaintySubcomponent}) {
+      List<dynamic> certaintySubcomponent}) {
     return EffectEvidenceSynthesisCertainty(
       id: id,
       extension: extension,
@@ -932,7 +931,7 @@ mixin _$EvidenceBasedMedicine {
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -952,7 +951,7 @@ mixin _$EvidenceBasedMedicine {
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -969,8 +968,7 @@ mixin _$EvidenceBasedMedicine {
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -1016,7 +1014,7 @@ mixin _$EvidenceBasedMedicine {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -1120,7 +1118,7 @@ mixin _$EvidenceBasedMedicine {
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -1236,9 +1234,9 @@ mixin _$EvidenceBasedMedicine {
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -1266,7 +1264,7 @@ mixin _$EvidenceBasedMedicine {
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -1283,8 +1281,7 @@ mixin _$EvidenceBasedMedicine {
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -1336,7 +1333,7 @@ mixin _$EvidenceBasedMedicine {
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -1354,7 +1351,7 @@ mixin _$EvidenceBasedMedicine {
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -1369,7 +1366,7 @@ mixin _$EvidenceBasedMedicine {
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -1413,7 +1410,7 @@ mixin _$EvidenceBasedMedicine {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -1514,7 +1511,7 @@ mixin _$EvidenceBasedMedicine {
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -1627,9 +1624,9 @@ mixin _$EvidenceBasedMedicine {
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -1654,7 +1651,7 @@ mixin _$EvidenceBasedMedicine {
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -1669,8 +1666,7 @@ mixin _$EvidenceBasedMedicine {
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -1842,7 +1838,7 @@ abstract class $RiskEvidenceSynthesisCopyWith<$Res>
       Reference outcome,
       RiskEvidenceSynthesisSampleSize sampleSize,
       RiskEvidenceSynthesisRiskEstimate riskEstimate,
-      List<RiskEvidenceSynthesisCertainty> certainty});
+      List<dynamic> certainty});
 }
 
 class _$RiskEvidenceSynthesisCopyWithImpl<$Res>
@@ -1974,9 +1970,8 @@ class _$RiskEvidenceSynthesisCopyWithImpl<$Res>
       riskEstimate: riskEstimate == freezed
           ? _value.riskEstimate
           : riskEstimate as RiskEvidenceSynthesisRiskEstimate,
-      certainty: certainty == freezed
-          ? _value.certainty
-          : certainty as List<RiskEvidenceSynthesisCertainty>,
+      certainty:
+          certainty == freezed ? _value.certainty : certainty as List<dynamic>,
     ));
   }
 }
@@ -2107,7 +2102,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
   @override
   final RiskEvidenceSynthesisRiskEstimate riskEstimate;
   @override
-  final List<RiskEvidenceSynthesisCertainty> certainty;
+  final List<dynamic> certainty;
 
   @override
   String toString() {
@@ -2296,7 +2291,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -2316,7 +2311,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -2333,8 +2328,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -2380,7 +2374,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -2484,7 +2478,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -2600,9 +2594,9 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -2630,7 +2624,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -2647,8 +2641,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -2763,7 +2756,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -2781,7 +2774,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -2796,7 +2789,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -2840,7 +2833,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -2941,7 +2934,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -3054,9 +3047,9 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -3081,7 +3074,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -3096,8 +3089,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -3276,47 +3268,46 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
 
 abstract class RiskEvidenceSynthesis implements EvidenceBasedMedicine {
   const factory RiskEvidenceSynthesis(
-          {String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          Code language,
-          Narrative text,
-          List<dynamic> contained,
-          List<dynamic> extension,
-          List<dynamic> modifierExtension,
-          FhirUri url,
-          List<dynamic> identifier,
-          String version,
-          String name,
-          String title,
-          RiskEvidenceSynthesisStatus status,
-          FhirDateTime date,
-          String publisher,
-          List<dynamic> contact,
-          Markdown description,
-          List<dynamic> note,
-          List<dynamic> useContext,
-          List<dynamic> jurisdiction,
-          Markdown copyright,
-          Date approvalDate,
-          Date lastReviewDate,
-          Period effectivePeriod,
-          List<dynamic> topic,
-          List<dynamic> author,
-          List<dynamic> editor,
-          List<dynamic> reviewer,
-          List<dynamic> endorser,
-          List<dynamic> relatedArtifact,
-          CodeableConcept synthesisType,
-          CodeableConcept studyType,
-          Reference population,
-          Reference exposure,
-          Reference outcome,
-          RiskEvidenceSynthesisSampleSize sampleSize,
-          RiskEvidenceSynthesisRiskEstimate riskEstimate,
-          List<RiskEvidenceSynthesisCertainty> certainty}) =
-      _$RiskEvidenceSynthesis;
+      {String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<dynamic> contained,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      FhirUri url,
+      List<dynamic> identifier,
+      String version,
+      String name,
+      String title,
+      RiskEvidenceSynthesisStatus status,
+      FhirDateTime date,
+      String publisher,
+      List<dynamic> contact,
+      Markdown description,
+      List<dynamic> note,
+      List<dynamic> useContext,
+      List<dynamic> jurisdiction,
+      Markdown copyright,
+      Date approvalDate,
+      Date lastReviewDate,
+      Period effectivePeriod,
+      List<dynamic> topic,
+      List<dynamic> author,
+      List<dynamic> editor,
+      List<dynamic> reviewer,
+      List<dynamic> endorser,
+      List<dynamic> relatedArtifact,
+      CodeableConcept synthesisType,
+      CodeableConcept studyType,
+      Reference population,
+      Reference exposure,
+      Reference outcome,
+      RiskEvidenceSynthesisSampleSize sampleSize,
+      RiskEvidenceSynthesisRiskEstimate riskEstimate,
+      List<dynamic> certainty}) = _$RiskEvidenceSynthesis;
 
   factory RiskEvidenceSynthesis.fromJson(Map<String, dynamic> json) =
       _$RiskEvidenceSynthesis.fromJson;
@@ -3362,7 +3353,7 @@ abstract class RiskEvidenceSynthesis implements EvidenceBasedMedicine {
   Reference get outcome;
   RiskEvidenceSynthesisSampleSize get sampleSize;
   RiskEvidenceSynthesisRiskEstimate get riskEstimate;
-  List<RiskEvidenceSynthesisCertainty> get certainty;
+  List<dynamic> get certainty;
   @override
   $RiskEvidenceSynthesisCopyWith<RiskEvidenceSynthesis> get copyWith;
 }
@@ -3538,7 +3529,7 @@ class _$RiskEvidenceSynthesisSampleSize
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -3558,7 +3549,7 @@ class _$RiskEvidenceSynthesisSampleSize
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -3575,8 +3566,7 @@ class _$RiskEvidenceSynthesisSampleSize
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -3622,7 +3612,7 @@ class _$RiskEvidenceSynthesisSampleSize
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -3726,7 +3716,7 @@ class _$RiskEvidenceSynthesisSampleSize
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -3842,9 +3832,9 @@ class _$RiskEvidenceSynthesisSampleSize
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -3872,7 +3862,7 @@ class _$RiskEvidenceSynthesisSampleSize
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -3889,8 +3879,7 @@ class _$RiskEvidenceSynthesisSampleSize
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -3966,7 +3955,7 @@ class _$RiskEvidenceSynthesisSampleSize
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -3984,7 +3973,7 @@ class _$RiskEvidenceSynthesisSampleSize
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -3999,7 +3988,7 @@ class _$RiskEvidenceSynthesisSampleSize
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -4043,7 +4032,7 @@ class _$RiskEvidenceSynthesisSampleSize
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -4144,7 +4133,7 @@ class _$RiskEvidenceSynthesisSampleSize
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -4257,9 +4246,9 @@ class _$RiskEvidenceSynthesisSampleSize
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -4284,7 +4273,7 @@ class _$RiskEvidenceSynthesisSampleSize
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -4299,8 +4288,7 @@ class _$RiskEvidenceSynthesisSampleSize
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -4481,7 +4469,7 @@ abstract class $RiskEvidenceSynthesisRiskEstimateCopyWith<$Res>
       CodeableConcept unitOfMeasure,
       int denominatorCount,
       int numeratorCount,
-      List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate});
+      List<dynamic> precisionEstimate});
 }
 
 class _$RiskEvidenceSynthesisRiskEstimateCopyWithImpl<$Res>
@@ -4531,7 +4519,7 @@ class _$RiskEvidenceSynthesisRiskEstimateCopyWithImpl<$Res>
           : numeratorCount as int,
       precisionEstimate: precisionEstimate == freezed
           ? _value.precisionEstimate
-          : precisionEstimate as List<RiskEvidenceSynthesisPrecisionEstimate>,
+          : precisionEstimate as List<dynamic>,
     ));
   }
 }
@@ -4574,7 +4562,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
   @override
   final int numeratorCount;
   @override
-  final List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate;
+  final List<dynamic> precisionEstimate;
 
   @override
   String toString() {
@@ -4677,7 +4665,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -4697,7 +4685,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -4714,8 +4702,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -4761,7 +4748,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -4865,7 +4852,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -4981,9 +4968,9 @@ class _$RiskEvidenceSynthesisRiskEstimate
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -5011,7 +4998,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -5028,8 +5015,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -5114,7 +5100,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -5132,7 +5118,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -5147,7 +5133,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -5191,7 +5177,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -5292,7 +5278,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -5405,9 +5391,9 @@ class _$RiskEvidenceSynthesisRiskEstimate
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -5432,7 +5418,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -5447,8 +5433,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -5598,17 +5583,16 @@ class _$RiskEvidenceSynthesisRiskEstimate
 abstract class RiskEvidenceSynthesisRiskEstimate
     implements EvidenceBasedMedicine {
   const factory RiskEvidenceSynthesisRiskEstimate(
-          {String id,
-          List<dynamic> extension,
-          List<dynamic> modifierExtension,
-          String description,
-          CodeableConcept type,
-          double value,
-          CodeableConcept unitOfMeasure,
-          int denominatorCount,
-          int numeratorCount,
-          List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate}) =
-      _$RiskEvidenceSynthesisRiskEstimate;
+      {String id,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      String description,
+      CodeableConcept type,
+      double value,
+      CodeableConcept unitOfMeasure,
+      int denominatorCount,
+      int numeratorCount,
+      List<dynamic> precisionEstimate}) = _$RiskEvidenceSynthesisRiskEstimate;
 
   factory RiskEvidenceSynthesisRiskEstimate.fromJson(
       Map<String, dynamic> json) = _$RiskEvidenceSynthesisRiskEstimate.fromJson;
@@ -5624,7 +5608,7 @@ abstract class RiskEvidenceSynthesisRiskEstimate
   CodeableConcept get unitOfMeasure;
   int get denominatorCount;
   int get numeratorCount;
-  List<RiskEvidenceSynthesisPrecisionEstimate> get precisionEstimate;
+  List<dynamic> get precisionEstimate;
   @override
   $RiskEvidenceSynthesisRiskEstimateCopyWith<RiskEvidenceSynthesisRiskEstimate>
       get copyWith;
@@ -5804,7 +5788,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -5824,7 +5808,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -5841,8 +5825,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -5888,7 +5871,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -5992,7 +5975,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -6108,9 +6091,9 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -6138,7 +6121,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -6155,8 +6138,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -6232,7 +6214,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -6250,7 +6232,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -6265,7 +6247,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -6309,7 +6291,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -6410,7 +6392,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -6523,9 +6505,9 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -6550,7 +6532,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -6565,8 +6547,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -6746,7 +6727,7 @@ abstract class $RiskEvidenceSynthesisCertaintyCopyWith<$Res>
       List<dynamic> modifierExtension,
       List<dynamic> rating,
       List<dynamic> note,
-      List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent});
+      List<dynamic> certaintySubcomponent});
 }
 
 class _$RiskEvidenceSynthesisCertaintyCopyWithImpl<$Res>
@@ -6781,8 +6762,7 @@ class _$RiskEvidenceSynthesisCertaintyCopyWithImpl<$Res>
       note: note == freezed ? _value.note : note as List<dynamic>,
       certaintySubcomponent: certaintySubcomponent == freezed
           ? _value.certaintySubcomponent
-          : certaintySubcomponent
-              as List<RiskEvidenceSynthesisCertaintySubcomponent>,
+          : certaintySubcomponent as List<dynamic>,
     ));
   }
 }
@@ -6813,7 +6793,7 @@ class _$RiskEvidenceSynthesisCertainty
   @override
   final List<dynamic> note;
   @override
-  final List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent;
+  final List<dynamic> certaintySubcomponent;
 
   @override
   String toString() {
@@ -6900,7 +6880,7 @@ class _$RiskEvidenceSynthesisCertainty
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -6920,7 +6900,7 @@ class _$RiskEvidenceSynthesisCertainty
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -6937,8 +6917,7 @@ class _$RiskEvidenceSynthesisCertainty
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -6984,7 +6963,7 @@ class _$RiskEvidenceSynthesisCertainty
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -7088,7 +7067,7 @@ class _$RiskEvidenceSynthesisCertainty
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -7204,9 +7183,9 @@ class _$RiskEvidenceSynthesisCertainty
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -7234,7 +7213,7 @@ class _$RiskEvidenceSynthesisCertainty
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -7251,8 +7230,7 @@ class _$RiskEvidenceSynthesisCertainty
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -7328,7 +7306,7 @@ class _$RiskEvidenceSynthesisCertainty
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -7346,7 +7324,7 @@ class _$RiskEvidenceSynthesisCertainty
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -7361,7 +7339,7 @@ class _$RiskEvidenceSynthesisCertainty
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -7405,7 +7383,7 @@ class _$RiskEvidenceSynthesisCertainty
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -7506,7 +7484,7 @@ class _$RiskEvidenceSynthesisCertainty
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -7619,9 +7597,9 @@ class _$RiskEvidenceSynthesisCertainty
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -7646,7 +7624,7 @@ class _$RiskEvidenceSynthesisCertainty
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -7661,8 +7639,7 @@ class _$RiskEvidenceSynthesisCertainty
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -7807,8 +7784,7 @@ abstract class RiskEvidenceSynthesisCertainty implements EvidenceBasedMedicine {
       List<dynamic> modifierExtension,
       List<dynamic> rating,
       List<dynamic> note,
-      List<RiskEvidenceSynthesisCertaintySubcomponent>
-          certaintySubcomponent}) = _$RiskEvidenceSynthesisCertainty;
+      List<dynamic> certaintySubcomponent}) = _$RiskEvidenceSynthesisCertainty;
 
   factory RiskEvidenceSynthesisCertainty.fromJson(Map<String, dynamic> json) =
       _$RiskEvidenceSynthesisCertainty.fromJson;
@@ -7820,7 +7796,7 @@ abstract class RiskEvidenceSynthesisCertainty implements EvidenceBasedMedicine {
   List<dynamic> get modifierExtension;
   List<dynamic> get rating;
   List<dynamic> get note;
-  List<RiskEvidenceSynthesisCertaintySubcomponent> get certaintySubcomponent;
+  List<dynamic> get certaintySubcomponent;
   @override
   $RiskEvidenceSynthesisCertaintyCopyWith<RiskEvidenceSynthesisCertainty>
       get copyWith;
@@ -7991,7 +7967,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -8011,7 +7987,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -8028,8 +8004,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -8075,7 +8050,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -8179,7 +8154,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -8295,9 +8270,9 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -8325,7 +8300,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -8342,8 +8317,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -8419,7 +8393,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -8437,7 +8411,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -8452,7 +8426,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -8496,7 +8470,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -8597,7 +8571,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -8710,9 +8684,9 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -8737,7 +8711,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -8752,8 +8726,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -8960,7 +8933,7 @@ abstract class $EvidenceVariableCopyWith<$Res>
       List<dynamic> endorser,
       List<dynamic> relatedArtifact,
       EvidenceVariableType type,
-      List<EvidenceVariableCharacteristic> characteristic});
+      List<dynamic> characteristic});
 }
 
 class _$EvidenceVariableCopyWithImpl<$Res>
@@ -9077,7 +9050,7 @@ class _$EvidenceVariableCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as EvidenceVariableType,
       characteristic: characteristic == freezed
           ? _value.characteristic
-          : characteristic as List<EvidenceVariableCharacteristic>,
+          : characteristic as List<dynamic>,
     ));
   }
 }
@@ -9196,7 +9169,7 @@ class _$EvidenceVariable implements EvidenceVariable {
   @override
   final EvidenceVariableType type;
   @override
-  final List<EvidenceVariableCharacteristic> characteristic;
+  final List<dynamic> characteristic;
 
   @override
   String toString() {
@@ -9376,7 +9349,7 @@ class _$EvidenceVariable implements EvidenceVariable {
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -9396,7 +9369,7 @@ class _$EvidenceVariable implements EvidenceVariable {
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -9413,8 +9386,7 @@ class _$EvidenceVariable implements EvidenceVariable {
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -9460,7 +9432,7 @@ class _$EvidenceVariable implements EvidenceVariable {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -9564,7 +9536,7 @@ class _$EvidenceVariable implements EvidenceVariable {
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -9680,9 +9652,9 @@ class _$EvidenceVariable implements EvidenceVariable {
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -9710,7 +9682,7 @@ class _$EvidenceVariable implements EvidenceVariable {
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -9727,8 +9699,7 @@ class _$EvidenceVariable implements EvidenceVariable {
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -9839,7 +9810,7 @@ class _$EvidenceVariable implements EvidenceVariable {
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -9857,7 +9828,7 @@ class _$EvidenceVariable implements EvidenceVariable {
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -9872,7 +9843,7 @@ class _$EvidenceVariable implements EvidenceVariable {
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -9916,7 +9887,7 @@ class _$EvidenceVariable implements EvidenceVariable {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -10017,7 +9988,7 @@ class _$EvidenceVariable implements EvidenceVariable {
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -10130,9 +10101,9 @@ class _$EvidenceVariable implements EvidenceVariable {
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -10157,7 +10128,7 @@ class _$EvidenceVariable implements EvidenceVariable {
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -10172,8 +10143,7 @@ class _$EvidenceVariable implements EvidenceVariable {
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -10348,43 +10318,42 @@ class _$EvidenceVariable implements EvidenceVariable {
 
 abstract class EvidenceVariable implements EvidenceBasedMedicine {
   const factory EvidenceVariable(
-          {String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          Code language,
-          Narrative text,
-          List<dynamic> contained,
-          List<dynamic> extension,
-          List<dynamic> modifierExtension,
-          FhirUri url,
-          List<dynamic> identifier,
-          String version,
-          String name,
-          String title,
-          String shortTitle,
-          String subtitle,
-          EvidenceVariableStatus status,
-          FhirDateTime date,
-          String publisher,
-          List<dynamic> contact,
-          Markdown description,
-          List<dynamic> note,
-          List<dynamic> useContext,
-          List<dynamic> jurisdiction,
-          Markdown copyright,
-          Date approvalDate,
-          Date lastReviewDate,
-          Period effectivePeriod,
-          List<dynamic> topic,
-          List<dynamic> author,
-          List<dynamic> editor,
-          List<dynamic> reviewer,
-          List<dynamic> endorser,
-          List<dynamic> relatedArtifact,
-          EvidenceVariableType type,
-          List<EvidenceVariableCharacteristic> characteristic}) =
-      _$EvidenceVariable;
+      {String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<dynamic> contained,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      FhirUri url,
+      List<dynamic> identifier,
+      String version,
+      String name,
+      String title,
+      String shortTitle,
+      String subtitle,
+      EvidenceVariableStatus status,
+      FhirDateTime date,
+      String publisher,
+      List<dynamic> contact,
+      Markdown description,
+      List<dynamic> note,
+      List<dynamic> useContext,
+      List<dynamic> jurisdiction,
+      Markdown copyright,
+      Date approvalDate,
+      Date lastReviewDate,
+      Period effectivePeriod,
+      List<dynamic> topic,
+      List<dynamic> author,
+      List<dynamic> editor,
+      List<dynamic> reviewer,
+      List<dynamic> endorser,
+      List<dynamic> relatedArtifact,
+      EvidenceVariableType type,
+      List<dynamic> characteristic}) = _$EvidenceVariable;
 
   factory EvidenceVariable.fromJson(Map<String, dynamic> json) =
       _$EvidenceVariable.fromJson;
@@ -10426,7 +10395,7 @@ abstract class EvidenceVariable implements EvidenceBasedMedicine {
   List<dynamic> get endorser;
   List<dynamic> get relatedArtifact;
   EvidenceVariableType get type;
-  List<EvidenceVariableCharacteristic> get characteristic;
+  List<dynamic> get characteristic;
   @override
   $EvidenceVariableCopyWith<EvidenceVariable> get copyWith;
 }
@@ -10741,7 +10710,7 @@ class _$EvidenceVariableCharacteristic
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -10761,7 +10730,7 @@ class _$EvidenceVariableCharacteristic
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -10778,8 +10747,7 @@ class _$EvidenceVariableCharacteristic
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -10825,7 +10793,7 @@ class _$EvidenceVariableCharacteristic
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -10929,7 +10897,7 @@ class _$EvidenceVariableCharacteristic
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -11045,9 +11013,9 @@ class _$EvidenceVariableCharacteristic
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -11075,7 +11043,7 @@ class _$EvidenceVariableCharacteristic
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -11092,8 +11060,7 @@ class _$EvidenceVariableCharacteristic
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -11186,7 +11153,7 @@ class _$EvidenceVariableCharacteristic
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -11204,7 +11171,7 @@ class _$EvidenceVariableCharacteristic
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -11219,7 +11186,7 @@ class _$EvidenceVariableCharacteristic
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -11263,7 +11230,7 @@ class _$EvidenceVariableCharacteristic
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -11364,7 +11331,7 @@ class _$EvidenceVariableCharacteristic
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -11477,9 +11444,9 @@ class _$EvidenceVariableCharacteristic
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -11504,7 +11471,7 @@ class _$EvidenceVariableCharacteristic
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -11519,8 +11486,7 @@ class _$EvidenceVariableCharacteristic
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -12190,7 +12156,7 @@ class _$Evidence implements Evidence {
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -12210,7 +12176,7 @@ class _$Evidence implements Evidence {
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -12227,8 +12193,7 @@ class _$Evidence implements Evidence {
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -12274,7 +12239,7 @@ class _$Evidence implements Evidence {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -12378,7 +12343,7 @@ class _$Evidence implements Evidence {
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -12494,9 +12459,9 @@ class _$Evidence implements Evidence {
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -12524,7 +12489,7 @@ class _$Evidence implements Evidence {
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -12541,8 +12506,7 @@ class _$Evidence implements Evidence {
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -12654,7 +12618,7 @@ class _$Evidence implements Evidence {
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -12672,7 +12636,7 @@ class _$Evidence implements Evidence {
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -12687,7 +12651,7 @@ class _$Evidence implements Evidence {
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -12731,7 +12695,7 @@ class _$Evidence implements Evidence {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -12832,7 +12796,7 @@ class _$Evidence implements Evidence {
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -12945,9 +12909,9 @@ class _$Evidence implements Evidence {
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -12972,7 +12936,7 @@ class _$Evidence implements Evidence {
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -12987,8 +12951,7 @@ class _$Evidence implements Evidence {
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -13295,7 +13258,7 @@ abstract class $ResearchElementDefinitionCopyWith<$Res>
       List<Canonical> library,
       ResearchElementDefinitionType type,
       ResearchElementDefinitionVariableType variableType,
-      List<ResearchElementDefinitionCharacteristic> characteristic});
+      List<dynamic> characteristic});
 }
 
 class _$ResearchElementDefinitionCopyWithImpl<$Res>
@@ -13436,7 +13399,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res>
           : variableType as ResearchElementDefinitionVariableType,
       characteristic: characteristic == freezed
           ? _value.characteristic
-          : characteristic as List<ResearchElementDefinitionCharacteristic>,
+          : characteristic as List<dynamic>,
     ));
   }
 }
@@ -13576,7 +13539,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
   @override
   final ResearchElementDefinitionVariableType variableType;
   @override
-  final List<ResearchElementDefinitionCharacteristic> characteristic;
+  final List<dynamic> characteristic;
 
   @override
   String toString() {
@@ -13770,7 +13733,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -13790,7 +13753,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -13807,8 +13770,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -13854,7 +13816,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -13958,7 +13920,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -14074,9 +14036,9 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -14104,7 +14066,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -14121,8 +14083,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -14240,7 +14201,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -14258,7 +14219,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -14273,7 +14234,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -14317,7 +14278,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -14418,7 +14379,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -14531,9 +14492,9 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -14558,7 +14519,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -14573,8 +14534,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -14756,50 +14716,49 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
 
 abstract class ResearchElementDefinition implements EvidenceBasedMedicine {
   const factory ResearchElementDefinition(
-          {String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          Code language,
-          Narrative text,
-          List<dynamic> contained,
-          List<dynamic> extension,
-          List<dynamic> modifierExtension,
-          FhirUri url,
-          List<dynamic> identifier,
-          String version,
-          String name,
-          String title,
-          String shortTitle,
-          String subtitle,
-          ResearchElementDefinitionStatus status,
-          bool experimental,
-          CodeableConcept subjectCodeableConcept,
-          Reference subjectReference,
-          FhirDateTime date,
-          String publisher,
-          List<dynamic> contact,
-          Markdown description,
-          List<String> comment,
-          List<dynamic> useContext,
-          List<dynamic> jurisdiction,
-          Markdown purpose,
-          String usage,
-          Markdown copyright,
-          Date approvalDate,
-          Date lastReviewDate,
-          Period effectivePeriod,
-          List<dynamic> topic,
-          List<dynamic> author,
-          List<dynamic> editor,
-          List<dynamic> reviewer,
-          List<dynamic> endorser,
-          List<dynamic> relatedArtifact,
-          List<Canonical> library,
-          ResearchElementDefinitionType type,
-          ResearchElementDefinitionVariableType variableType,
-          List<ResearchElementDefinitionCharacteristic> characteristic}) =
-      _$ResearchElementDefinition;
+      {String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<dynamic> contained,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      FhirUri url,
+      List<dynamic> identifier,
+      String version,
+      String name,
+      String title,
+      String shortTitle,
+      String subtitle,
+      ResearchElementDefinitionStatus status,
+      bool experimental,
+      CodeableConcept subjectCodeableConcept,
+      Reference subjectReference,
+      FhirDateTime date,
+      String publisher,
+      List<dynamic> contact,
+      Markdown description,
+      List<String> comment,
+      List<dynamic> useContext,
+      List<dynamic> jurisdiction,
+      Markdown purpose,
+      String usage,
+      Markdown copyright,
+      Date approvalDate,
+      Date lastReviewDate,
+      Period effectivePeriod,
+      List<dynamic> topic,
+      List<dynamic> author,
+      List<dynamic> editor,
+      List<dynamic> reviewer,
+      List<dynamic> endorser,
+      List<dynamic> relatedArtifact,
+      List<Canonical> library,
+      ResearchElementDefinitionType type,
+      ResearchElementDefinitionVariableType variableType,
+      List<dynamic> characteristic}) = _$ResearchElementDefinition;
 
   factory ResearchElementDefinition.fromJson(Map<String, dynamic> json) =
       _$ResearchElementDefinition.fromJson;
@@ -14848,7 +14807,7 @@ abstract class ResearchElementDefinition implements EvidenceBasedMedicine {
   List<Canonical> get library;
   ResearchElementDefinitionType get type;
   ResearchElementDefinitionVariableType get variableType;
-  List<ResearchElementDefinitionCharacteristic> get characteristic;
+  List<dynamic> get characteristic;
   @override
   $ResearchElementDefinitionCopyWith<ResearchElementDefinition> get copyWith;
 }
@@ -15233,7 +15192,7 @@ class _$ResearchElementDefinitionCharacteristic
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -15253,7 +15212,7 @@ class _$ResearchElementDefinitionCharacteristic
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -15270,8 +15229,7 @@ class _$ResearchElementDefinitionCharacteristic
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -15317,7 +15275,7 @@ class _$ResearchElementDefinitionCharacteristic
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -15421,7 +15379,7 @@ class _$ResearchElementDefinitionCharacteristic
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -15537,9 +15495,9 @@ class _$ResearchElementDefinitionCharacteristic
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -15567,7 +15525,7 @@ class _$ResearchElementDefinitionCharacteristic
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -15584,8 +15542,7 @@ class _$ResearchElementDefinitionCharacteristic
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -15684,7 +15641,7 @@ class _$ResearchElementDefinitionCharacteristic
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -15702,7 +15659,7 @@ class _$ResearchElementDefinitionCharacteristic
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -15717,7 +15674,7 @@ class _$ResearchElementDefinitionCharacteristic
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -15761,7 +15718,7 @@ class _$ResearchElementDefinitionCharacteristic
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -15862,7 +15819,7 @@ class _$ResearchElementDefinitionCharacteristic
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -15975,9 +15932,9 @@ class _$ResearchElementDefinitionCharacteristic
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -16002,7 +15959,7 @@ class _$ResearchElementDefinitionCharacteristic
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -16017,8 +15974,7 @@ class _$ResearchElementDefinitionCharacteristic
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -16775,7 +16731,7 @@ class _$ResearchDefinition implements ResearchDefinition {
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -16795,7 +16751,7 @@ class _$ResearchDefinition implements ResearchDefinition {
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -16812,8 +16768,7 @@ class _$ResearchDefinition implements ResearchDefinition {
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -16859,7 +16814,7 @@ class _$ResearchDefinition implements ResearchDefinition {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -16963,7 +16918,7 @@ class _$ResearchDefinition implements ResearchDefinition {
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -17079,9 +17034,9 @@ class _$ResearchDefinition implements ResearchDefinition {
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -17109,7 +17064,7 @@ class _$ResearchDefinition implements ResearchDefinition {
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -17126,8 +17081,7 @@ class _$ResearchDefinition implements ResearchDefinition {
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -17246,7 +17200,7 @@ class _$ResearchDefinition implements ResearchDefinition {
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -17264,7 +17218,7 @@ class _$ResearchDefinition implements ResearchDefinition {
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -17279,7 +17233,7 @@ class _$ResearchDefinition implements ResearchDefinition {
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -17323,7 +17277,7 @@ class _$ResearchDefinition implements ResearchDefinition {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -17424,7 +17378,7 @@ class _$ResearchDefinition implements ResearchDefinition {
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -17537,9 +17491,9 @@ class _$ResearchDefinition implements ResearchDefinition {
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -17564,7 +17518,7 @@ class _$ResearchDefinition implements ResearchDefinition {
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -17579,8 +17533,7 @@ class _$ResearchDefinition implements ResearchDefinition {
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -17907,9 +17860,9 @@ abstract class $EffectEvidenceSynthesisCopyWith<$Res>
       Reference exposureAlternative,
       Reference outcome,
       EffectEvidenceSynthesisSampleSize sampleSize,
-      List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-      List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-      List<EffectEvidenceSynthesisCertainty> certainty});
+      List<dynamic> resultsByExposure,
+      List<dynamic> effectEstimate,
+      List<dynamic> certainty});
 }
 
 class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
@@ -18045,13 +17998,12 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
           : sampleSize as EffectEvidenceSynthesisSampleSize,
       resultsByExposure: resultsByExposure == freezed
           ? _value.resultsByExposure
-          : resultsByExposure as List<EffectEvidenceSynthesisResultsByExposure>,
+          : resultsByExposure as List<dynamic>,
       effectEstimate: effectEstimate == freezed
           ? _value.effectEstimate
-          : effectEstimate as List<EffectEvidenceSynthesisEffectEstimate>,
-      certainty: certainty == freezed
-          ? _value.certainty
-          : certainty as List<EffectEvidenceSynthesisCertainty>,
+          : effectEstimate as List<dynamic>,
+      certainty:
+          certainty == freezed ? _value.certainty : certainty as List<dynamic>,
     ));
   }
 }
@@ -18184,11 +18136,11 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
   @override
   final EffectEvidenceSynthesisSampleSize sampleSize;
   @override
-  final List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure;
+  final List<dynamic> resultsByExposure;
   @override
-  final List<EffectEvidenceSynthesisEffectEstimate> effectEstimate;
+  final List<dynamic> effectEstimate;
   @override
-  final List<EffectEvidenceSynthesisCertainty> certainty;
+  final List<dynamic> certainty;
 
   @override
   String toString() {
@@ -18381,7 +18333,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -18401,7 +18353,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -18418,8 +18370,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -18465,7 +18416,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -18569,7 +18520,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -18685,9 +18636,9 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -18715,7 +18666,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -18732,8 +18683,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -18850,7 +18800,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -18868,7 +18818,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -18883,7 +18833,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -18927,7 +18877,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -19028,7 +18978,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -19141,9 +19091,9 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -19168,7 +19118,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -19183,8 +19133,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -19365,49 +19314,48 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
 
 abstract class EffectEvidenceSynthesis implements EvidenceBasedMedicine {
   const factory EffectEvidenceSynthesis(
-          {String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          Code language,
-          Narrative text,
-          List<dynamic> contained,
-          List<dynamic> extension,
-          List<dynamic> modifierExtension,
-          FhirUri url,
-          List<dynamic> identifier,
-          String version,
-          String name,
-          String title,
-          EffectEvidenceSynthesisStatus status,
-          FhirDateTime date,
-          String publisher,
-          List<dynamic> contact,
-          Markdown description,
-          List<dynamic> note,
-          List<dynamic> useContext,
-          List<dynamic> jurisdiction,
-          Markdown copyright,
-          Date approvalDate,
-          Date lastReviewDate,
-          Period effectivePeriod,
-          List<dynamic> topic,
-          List<dynamic> author,
-          List<dynamic> editor,
-          List<dynamic> reviewer,
-          List<dynamic> endorser,
-          List<dynamic> relatedArtifact,
-          CodeableConcept synthesisType,
-          CodeableConcept studyType,
-          Reference population,
-          Reference exposure,
-          Reference exposureAlternative,
-          Reference outcome,
-          EffectEvidenceSynthesisSampleSize sampleSize,
-          List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-          List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-          List<EffectEvidenceSynthesisCertainty> certainty}) =
-      _$EffectEvidenceSynthesis;
+      {String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<dynamic> contained,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      FhirUri url,
+      List<dynamic> identifier,
+      String version,
+      String name,
+      String title,
+      EffectEvidenceSynthesisStatus status,
+      FhirDateTime date,
+      String publisher,
+      List<dynamic> contact,
+      Markdown description,
+      List<dynamic> note,
+      List<dynamic> useContext,
+      List<dynamic> jurisdiction,
+      Markdown copyright,
+      Date approvalDate,
+      Date lastReviewDate,
+      Period effectivePeriod,
+      List<dynamic> topic,
+      List<dynamic> author,
+      List<dynamic> editor,
+      List<dynamic> reviewer,
+      List<dynamic> endorser,
+      List<dynamic> relatedArtifact,
+      CodeableConcept synthesisType,
+      CodeableConcept studyType,
+      Reference population,
+      Reference exposure,
+      Reference exposureAlternative,
+      Reference outcome,
+      EffectEvidenceSynthesisSampleSize sampleSize,
+      List<dynamic> resultsByExposure,
+      List<dynamic> effectEstimate,
+      List<dynamic> certainty}) = _$EffectEvidenceSynthesis;
 
   factory EffectEvidenceSynthesis.fromJson(Map<String, dynamic> json) =
       _$EffectEvidenceSynthesis.fromJson;
@@ -19453,9 +19401,9 @@ abstract class EffectEvidenceSynthesis implements EvidenceBasedMedicine {
   Reference get exposureAlternative;
   Reference get outcome;
   EffectEvidenceSynthesisSampleSize get sampleSize;
-  List<EffectEvidenceSynthesisResultsByExposure> get resultsByExposure;
-  List<EffectEvidenceSynthesisEffectEstimate> get effectEstimate;
-  List<EffectEvidenceSynthesisCertainty> get certainty;
+  List<dynamic> get resultsByExposure;
+  List<dynamic> get effectEstimate;
+  List<dynamic> get certainty;
   @override
   $EffectEvidenceSynthesisCopyWith<EffectEvidenceSynthesis> get copyWith;
 }
@@ -19631,7 +19579,7 @@ class _$EffectEvidenceSynthesisSampleSize
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -19651,7 +19599,7 @@ class _$EffectEvidenceSynthesisSampleSize
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -19668,8 +19616,7 @@ class _$EffectEvidenceSynthesisSampleSize
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -19715,7 +19662,7 @@ class _$EffectEvidenceSynthesisSampleSize
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -19819,7 +19766,7 @@ class _$EffectEvidenceSynthesisSampleSize
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -19935,9 +19882,9 @@ class _$EffectEvidenceSynthesisSampleSize
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -19965,7 +19912,7 @@ class _$EffectEvidenceSynthesisSampleSize
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -19982,8 +19929,7 @@ class _$EffectEvidenceSynthesisSampleSize
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -20059,7 +20005,7 @@ class _$EffectEvidenceSynthesisSampleSize
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -20077,7 +20023,7 @@ class _$EffectEvidenceSynthesisSampleSize
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -20092,7 +20038,7 @@ class _$EffectEvidenceSynthesisSampleSize
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -20136,7 +20082,7 @@ class _$EffectEvidenceSynthesisSampleSize
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -20237,7 +20183,7 @@ class _$EffectEvidenceSynthesisSampleSize
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -20350,9 +20296,9 @@ class _$EffectEvidenceSynthesisSampleSize
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -20377,7 +20323,7 @@ class _$EffectEvidenceSynthesisSampleSize
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -20392,8 +20338,7 @@ class _$EffectEvidenceSynthesisSampleSize
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -20742,7 +20687,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -20762,7 +20707,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -20779,8 +20724,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -20826,7 +20770,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -20930,7 +20874,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -21046,9 +20990,9 @@ class _$EffectEvidenceSynthesisResultsByExposure
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -21076,7 +21020,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -21093,8 +21037,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -21176,7 +21119,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -21194,7 +21137,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -21209,7 +21152,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -21253,7 +21196,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -21354,7 +21297,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -21467,9 +21410,9 @@ class _$EffectEvidenceSynthesisResultsByExposure
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -21494,7 +21437,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -21509,8 +21452,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -21700,7 +21642,7 @@ abstract class $EffectEvidenceSynthesisEffectEstimateCopyWith<$Res>
       CodeableConcept variantState,
       double value,
       CodeableConcept unitOfMeasure,
-      List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate});
+      List<dynamic> precisionEstimate});
 }
 
 class _$EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>
@@ -21746,7 +21688,7 @@ class _$EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>
           : unitOfMeasure as CodeableConcept,
       precisionEstimate: precisionEstimate == freezed
           ? _value.precisionEstimate
-          : precisionEstimate as List<EffectEvidenceSynthesisPrecisionEstimate>,
+          : precisionEstimate as List<dynamic>,
     ));
   }
 }
@@ -21786,7 +21728,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
   @override
   final CodeableConcept unitOfMeasure;
   @override
-  final List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate;
+  final List<dynamic> precisionEstimate;
 
   @override
   String toString() {
@@ -21886,7 +21828,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -21906,7 +21848,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -21923,8 +21865,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -21970,7 +21911,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -22074,7 +22015,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -22190,9 +22131,9 @@ class _$EffectEvidenceSynthesisEffectEstimate
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -22220,7 +22161,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -22237,8 +22178,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -22322,7 +22262,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -22340,7 +22280,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -22355,7 +22295,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -22399,7 +22339,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -22500,7 +22440,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -22613,9 +22553,9 @@ class _$EffectEvidenceSynthesisEffectEstimate
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -22640,7 +22580,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -22655,8 +22595,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -22813,7 +22752,7 @@ abstract class EffectEvidenceSynthesisEffectEstimate
           CodeableConcept variantState,
           double value,
           CodeableConcept unitOfMeasure,
-          List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate}) =
+          List<dynamic> precisionEstimate}) =
       _$EffectEvidenceSynthesisEffectEstimate;
 
   factory EffectEvidenceSynthesisEffectEstimate.fromJson(
@@ -22830,7 +22769,7 @@ abstract class EffectEvidenceSynthesisEffectEstimate
   CodeableConcept get variantState;
   double get value;
   CodeableConcept get unitOfMeasure;
-  List<EffectEvidenceSynthesisPrecisionEstimate> get precisionEstimate;
+  List<dynamic> get precisionEstimate;
   @override
   $EffectEvidenceSynthesisEffectEstimateCopyWith<
       EffectEvidenceSynthesisEffectEstimate> get copyWith;
@@ -23010,7 +22949,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -23030,7 +22969,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -23047,8 +22986,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -23094,7 +23032,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -23198,7 +23136,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -23314,9 +23252,9 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -23344,7 +23282,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -23361,8 +23299,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -23438,7 +23375,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -23456,7 +23393,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -23471,7 +23408,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -23515,7 +23452,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -23616,7 +23553,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -23729,9 +23666,9 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -23756,7 +23693,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -23771,8 +23708,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -23952,8 +23888,7 @@ abstract class $EffectEvidenceSynthesisCertaintyCopyWith<$Res>
       List<dynamic> modifierExtension,
       List<dynamic> rating,
       List<dynamic> note,
-      List<EffectEvidenceSynthesisCertaintySubcomponent>
-          certaintySubcomponent});
+      List<dynamic> certaintySubcomponent});
 }
 
 class _$EffectEvidenceSynthesisCertaintyCopyWithImpl<$Res>
@@ -23988,8 +23923,7 @@ class _$EffectEvidenceSynthesisCertaintyCopyWithImpl<$Res>
       note: note == freezed ? _value.note : note as List<dynamic>,
       certaintySubcomponent: certaintySubcomponent == freezed
           ? _value.certaintySubcomponent
-          : certaintySubcomponent
-              as List<EffectEvidenceSynthesisCertaintySubcomponent>,
+          : certaintySubcomponent as List<dynamic>,
     ));
   }
 }
@@ -24020,8 +23954,7 @@ class _$EffectEvidenceSynthesisCertainty
   @override
   final List<dynamic> note;
   @override
-  final List<EffectEvidenceSynthesisCertaintySubcomponent>
-      certaintySubcomponent;
+  final List<dynamic> certaintySubcomponent;
 
   @override
   String toString() {
@@ -24108,7 +24041,7 @@ class _$EffectEvidenceSynthesisCertainty
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -24128,7 +24061,7 @@ class _$EffectEvidenceSynthesisCertainty
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -24145,8 +24078,7 @@ class _$EffectEvidenceSynthesisCertainty
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -24192,7 +24124,7 @@ class _$EffectEvidenceSynthesisCertainty
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -24296,7 +24228,7 @@ class _$EffectEvidenceSynthesisCertainty
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -24412,9 +24344,9 @@ class _$EffectEvidenceSynthesisCertainty
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -24442,7 +24374,7 @@ class _$EffectEvidenceSynthesisCertainty
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -24459,8 +24391,7 @@ class _$EffectEvidenceSynthesisCertainty
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -24536,7 +24467,7 @@ class _$EffectEvidenceSynthesisCertainty
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -24554,7 +24485,7 @@ class _$EffectEvidenceSynthesisCertainty
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -24569,7 +24500,7 @@ class _$EffectEvidenceSynthesisCertainty
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -24613,7 +24544,7 @@ class _$EffectEvidenceSynthesisCertainty
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -24714,7 +24645,7 @@ class _$EffectEvidenceSynthesisCertainty
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -24827,9 +24758,9 @@ class _$EffectEvidenceSynthesisCertainty
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -24854,7 +24785,7 @@ class _$EffectEvidenceSynthesisCertainty
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -24869,8 +24800,7 @@ class _$EffectEvidenceSynthesisCertainty
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -25011,13 +24941,13 @@ class _$EffectEvidenceSynthesisCertainty
 abstract class EffectEvidenceSynthesisCertainty
     implements EvidenceBasedMedicine {
   const factory EffectEvidenceSynthesisCertainty(
-      {String id,
-      List<dynamic> extension,
-      List<dynamic> modifierExtension,
-      List<dynamic> rating,
-      List<dynamic> note,
-      List<EffectEvidenceSynthesisCertaintySubcomponent>
-          certaintySubcomponent}) = _$EffectEvidenceSynthesisCertainty;
+          {String id,
+          List<dynamic> extension,
+          List<dynamic> modifierExtension,
+          List<dynamic> rating,
+          List<dynamic> note,
+          List<dynamic> certaintySubcomponent}) =
+      _$EffectEvidenceSynthesisCertainty;
 
   factory EffectEvidenceSynthesisCertainty.fromJson(Map<String, dynamic> json) =
       _$EffectEvidenceSynthesisCertainty.fromJson;
@@ -25029,7 +24959,7 @@ abstract class EffectEvidenceSynthesisCertainty
   List<dynamic> get modifierExtension;
   List<dynamic> get rating;
   List<dynamic> get note;
-  List<EffectEvidenceSynthesisCertaintySubcomponent> get certaintySubcomponent;
+  List<dynamic> get certaintySubcomponent;
   @override
   $EffectEvidenceSynthesisCertaintyCopyWith<EffectEvidenceSynthesisCertainty>
       get copyWith;
@@ -25201,7 +25131,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             Reference outcome,
             RiskEvidenceSynthesisSampleSize sampleSize,
             RiskEvidenceSynthesisRiskEstimate riskEstimate,
-            List<RiskEvidenceSynthesisCertainty> certainty),
+            List<dynamic> certainty),
     @required
         Result riskEvidenceSynthesisSampleSize(
             String id,
@@ -25221,7 +25151,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             CodeableConcept unitOfMeasure,
             int denominatorCount,
             int numeratorCount,
-            List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result riskEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -25238,8 +25168,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<RiskEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -25285,7 +25214,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             EvidenceVariableType type,
-            List<EvidenceVariableCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result evidenceVariableCharacteristic(
             String id,
@@ -25389,7 +25318,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             List<Canonical> library,
             ResearchElementDefinitionType type,
             ResearchElementDefinitionVariableType variableType,
-            List<ResearchElementDefinitionCharacteristic> characteristic),
+            List<dynamic> characteristic),
     @required
         Result researchElementDefinitionCharacteristic(
             String id,
@@ -25505,9 +25434,9 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             Reference exposureAlternative,
             Reference outcome,
             EffectEvidenceSynthesisSampleSize sampleSize,
-            List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-            List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-            List<EffectEvidenceSynthesisCertainty> certainty),
+            List<dynamic> resultsByExposure,
+            List<dynamic> effectEstimate,
+            List<dynamic> certainty),
     @required
         Result effectEvidenceSynthesisSampleSize(
             String id,
@@ -25535,7 +25464,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             CodeableConcept variantState,
             double value,
             CodeableConcept unitOfMeasure,
-            List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+            List<dynamic> precisionEstimate),
     @required
         Result effectEvidenceSynthesisPrecisionEstimate(
             String id,
@@ -25552,8 +25481,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             List<dynamic> modifierExtension,
             List<dynamic> rating,
             List<dynamic> note,
-            List<EffectEvidenceSynthesisCertaintySubcomponent>
-                certaintySubcomponent),
+            List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
             String id,
@@ -25629,7 +25557,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         Reference outcome,
         RiskEvidenceSynthesisSampleSize sampleSize,
         RiskEvidenceSynthesisRiskEstimate riskEstimate,
-        List<RiskEvidenceSynthesisCertainty> certainty),
+        List<dynamic> certainty),
     Result riskEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -25647,7 +25575,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         CodeableConcept unitOfMeasure,
         int denominatorCount,
         int numeratorCount,
-        List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result riskEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -25662,7 +25590,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,
@@ -25706,7 +25634,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         EvidenceVariableType type,
-        List<EvidenceVariableCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result evidenceVariableCharacteristic(
         String id,
         List<dynamic> extension,
@@ -25807,7 +25735,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         List<Canonical> library,
         ResearchElementDefinitionType type,
         ResearchElementDefinitionVariableType variableType,
-        List<ResearchElementDefinitionCharacteristic> characteristic),
+        List<dynamic> characteristic),
     Result researchElementDefinitionCharacteristic(
         String id,
         List<dynamic> extension,
@@ -25920,9 +25848,9 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         Reference exposureAlternative,
         Reference outcome,
         EffectEvidenceSynthesisSampleSize sampleSize,
-        List<EffectEvidenceSynthesisResultsByExposure> resultsByExposure,
-        List<EffectEvidenceSynthesisEffectEstimate> effectEstimate,
-        List<EffectEvidenceSynthesisCertainty> certainty),
+        List<dynamic> resultsByExposure,
+        List<dynamic> effectEstimate,
+        List<dynamic> certainty),
     Result effectEvidenceSynthesisSampleSize(
         String id,
         List<dynamic> extension,
@@ -25947,7 +25875,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         CodeableConcept variantState,
         double value,
         CodeableConcept unitOfMeasure,
-        List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate),
+        List<dynamic> precisionEstimate),
     Result effectEvidenceSynthesisPrecisionEstimate(
         String id,
         List<dynamic> extension,
@@ -25962,8 +25890,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         List<dynamic> modifierExtension,
         List<dynamic> rating,
         List<dynamic> note,
-        List<EffectEvidenceSynthesisCertaintySubcomponent>
-            certaintySubcomponent),
+        List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         List<dynamic> extension,

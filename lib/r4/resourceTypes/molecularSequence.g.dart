@@ -23,14 +23,8 @@ MolecularSequence _$MolecularSequenceFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     identifier: (json['identifier'] as List)
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
@@ -104,10 +98,8 @@ Map<String, dynamic> _$MolecularSequenceToJson(MolecularSequence instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('type', instance.type?.toJson());
@@ -134,14 +126,8 @@ MolecularSequenceReferenceSeq _$MolecularSequenceReferenceSeqFromJson(
     Map<String, dynamic> json) {
   return MolecularSequenceReferenceSeq(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     chromosome: json['chromosome'] == null
         ? null
         : CodeableConcept.fromJson(json['chromosome'] as Map<String, dynamic>),
@@ -179,10 +165,8 @@ Map<String, dynamic> _$MolecularSequenceReferenceSeqToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('chromosome', instance.chromosome?.toJson());
   writeNotNull('genomeBuild', instance.genomeBuild);
   writeNotNull('orientation', instance.orientation?.toJson());
@@ -199,14 +183,8 @@ MolecularSequenceVariant _$MolecularSequenceVariantFromJson(
     Map<String, dynamic> json) {
   return MolecularSequenceVariant(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     start: json['start'] as int,
     end: json['end'] as int,
     observedAllele: json['observedAllele'] as String,
@@ -229,10 +207,8 @@ Map<String, dynamic> _$MolecularSequenceVariantToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('start', instance.start);
   writeNotNull('end', instance.end);
   writeNotNull('observedAllele', instance.observedAllele);
@@ -246,14 +222,8 @@ MolecularSequenceQuality _$MolecularSequenceQualityFromJson(
     Map<String, dynamic> json) {
   return MolecularSequenceQuality(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: json['type'] == null
         ? null
         : MolecularSequenceQualityType.fromJson(json['type'] as String),
@@ -294,10 +264,8 @@ Map<String, dynamic> _$MolecularSequenceQualityToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('standardSequence', instance.standardSequence?.toJson());
   writeNotNull('start', instance.start);
@@ -319,14 +287,8 @@ Map<String, dynamic> _$MolecularSequenceQualityToJson(
 MolecularSequenceRoc _$MolecularSequenceRocFromJson(Map<String, dynamic> json) {
   return MolecularSequenceRoc(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     score: (json['score'] as List)?.map((e) => e as int)?.toList(),
     numTP: (json['numTP'] as List)?.map((e) => e as int)?.toList(),
     numFP: (json['numFP'] as List)?.map((e) => e as int)?.toList(),
@@ -354,10 +316,8 @@ Map<String, dynamic> _$MolecularSequenceRocToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('score', instance.score);
   writeNotNull('numTP', instance.numTP);
   writeNotNull('numFP', instance.numFP);
@@ -372,14 +332,8 @@ MolecularSequenceRepository _$MolecularSequenceRepositoryFromJson(
     Map<String, dynamic> json) {
   return MolecularSequenceRepository(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: json['type'] == null
         ? null
         : MolecularSequenceRepositoryType.fromJson(json['type'] as String),
@@ -402,10 +356,8 @@ Map<String, dynamic> _$MolecularSequenceRepositoryToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('name', instance.name);
@@ -419,14 +371,8 @@ MolecularSequenceStructureVariant _$MolecularSequenceStructureVariantFromJson(
     Map<String, dynamic> json) {
   return MolecularSequenceStructureVariant(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     variantType: json['variantType'] == null
         ? null
         : CodeableConcept.fromJson(json['variantType'] as Map<String, dynamic>),
@@ -454,10 +400,8 @@ Map<String, dynamic> _$MolecularSequenceStructureVariantToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('variantType', instance.variantType?.toJson());
   writeNotNull('exact', instance.exact);
   writeNotNull('length', instance.length);
@@ -470,14 +414,8 @@ MolecularSequenceOuter _$MolecularSequenceOuterFromJson(
     Map<String, dynamic> json) {
   return MolecularSequenceOuter(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     start: json['start'] as int,
     end: json['end'] as int,
   );
@@ -494,10 +432,8 @@ Map<String, dynamic> _$MolecularSequenceOuterToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('start', instance.start);
   writeNotNull('end', instance.end);
   return val;
@@ -507,14 +443,8 @@ MolecularSequenceInner _$MolecularSequenceInnerFromJson(
     Map<String, dynamic> json) {
   return MolecularSequenceInner(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     start: json['start'] as int,
     end: json['end'] as int,
   );
@@ -531,10 +461,8 @@ Map<String, dynamic> _$MolecularSequenceInnerToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('start', instance.start);
   writeNotNull('end', instance.end);
   return val;

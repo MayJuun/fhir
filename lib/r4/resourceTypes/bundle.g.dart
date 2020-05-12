@@ -70,14 +70,8 @@ Map<String, dynamic> _$BundleToJson(Bundle instance) {
 BundleLink _$BundleLinkFromJson(Map<String, dynamic> json) {
   return BundleLink(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     relation: json['relation'] as String,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
   );
@@ -93,10 +87,8 @@ Map<String, dynamic> _$BundleLinkToJson(BundleLink instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('relation', instance.relation);
   writeNotNull('url', instance.url?.toJson());
   return val;
@@ -105,14 +97,8 @@ Map<String, dynamic> _$BundleLinkToJson(BundleLink instance) {
 BundleEntry _$BundleEntryFromJson(Map<String, dynamic> json) {
   return BundleEntry(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     link: (json['link'] as List)
         ?.map((e) =>
             e == null ? null : BundleLink.fromJson(e as Map<String, dynamic>))
@@ -143,10 +129,8 @@ Map<String, dynamic> _$BundleEntryToJson(BundleEntry instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('link', instance.link?.map((e) => e?.toJson())?.toList());
   writeNotNull('fullUrl', instance.fullUrl?.toJson());
   writeNotNull('resource', instance.resource);
@@ -159,14 +143,8 @@ Map<String, dynamic> _$BundleEntryToJson(BundleEntry instance) {
 BundleSearch _$BundleSearchFromJson(Map<String, dynamic> json) {
   return BundleSearch(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     mode: json['mode'] == null
         ? null
         : BundleSearchMode.fromJson(json['mode'] as String),
@@ -184,10 +162,8 @@ Map<String, dynamic> _$BundleSearchToJson(BundleSearch instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('mode', instance.mode?.toJson());
   writeNotNull('score', instance.score);
   return val;
@@ -196,14 +172,8 @@ Map<String, dynamic> _$BundleSearchToJson(BundleSearch instance) {
 BundleRequest _$BundleRequestFromJson(Map<String, dynamic> json) {
   return BundleRequest(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     method: json['method'] == null
         ? null
         : BundleRequestMethod.fromJson(json['method'] as String),
@@ -227,10 +197,8 @@ Map<String, dynamic> _$BundleRequestToJson(BundleRequest instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('method', instance.method?.toJson());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('ifNoneMatch', instance.ifNoneMatch);
@@ -243,14 +211,8 @@ Map<String, dynamic> _$BundleRequestToJson(BundleRequest instance) {
 BundleResponse _$BundleResponseFromJson(Map<String, dynamic> json) {
   return BundleResponse(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     status: json['status'] as String,
     location: json['location'] == null
         ? null
@@ -273,10 +235,8 @@ Map<String, dynamic> _$BundleResponseToJson(BundleResponse instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('status', instance.status);
   writeNotNull('location', instance.location?.toJson());
   writeNotNull('etag', instance.etag);

@@ -10,19 +10,9 @@ This is the first time I've ever created a package, feedback and pull requests a
 
 ## Things I'm working on
 
-One of my favorite FHIR backends is (Aidbox)[https://www.health-samurai.io/aidbox]. One of the things they do, however, is if there is an option as follows:
-// occurrence[x]: Vaccine administration date. One of these 2:
-  "occurrenceDateTime" : "<dateTime>",
-  "occurrenceString" : "<string>",
+Currently working on refactoring and abstracting some classes with the help of [Dr. John Manning](https://github.com/FireJuun).
 
-They opt instead for:
-```
-"occurrence": { 
-  "dateTime": "<dateTime>",
-  "string": "<string>"
-}
-```
-This requires some changes in my fromJson() code so there are times when it will not properly translate queries from Aidbox.
+Nevermind about the previous thing about (Aidbox)[https://www.health-samurai.io/aidbox], my favorite FHIR server. They have changed some of the endpoints for their server as they feel it works better, however, if you append fhir before the rest, then it returns the normal FHIR json (i.e. GET /fhir/Patient)
 
 ## Formatting Notes
 

@@ -16,16 +16,16 @@ const factory Other.operationOutcome({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<OperationOutcomeIssue> issue,
 
   }) = OperationOutcome;
 
 const factory Other.operationOutcomeIssue({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   OperationOutcomeIssueSeverity severity,
   OperationOutcomeIssueCode code,
   CodeableConcept details,
@@ -43,8 +43,8 @@ const factory Other.messageHeader({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Coding eventCoding,
   FhirUri eventUri,
   List<MessageHeaderDestination> destination,
@@ -62,8 +62,8 @@ const factory Other.messageHeader({
 
 const factory Other.messageHeaderDestination({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String name,
   Reference target,
   FhirUrl endpoint,
@@ -73,8 +73,8 @@ const factory Other.messageHeaderDestination({
 
 const factory Other.messageHeaderSource({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String name,
   String software,
   String version,
@@ -85,8 +85,8 @@ const factory Other.messageHeaderSource({
 
 const factory Other.messageHeaderResponse({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Id identifier,
   MessageHeaderResponseCode code,
   Reference details,
@@ -105,8 +105,8 @@ const factory Other.parameters({
 
 const factory Other.parametersParameter({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String name,
   Base64Binary valueBase64Binary,
   bool valueBoolean,
@@ -183,8 +183,8 @@ const factory Other.subscription({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   SubscriptionStatus status,
   List<ContactPoint> contact,
   Instant end,
@@ -197,8 +197,8 @@ const factory Other.subscription({
 
 const factory Other.subscriptionChannel({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   SubscriptionChannelType type,
   FhirUrl endpoint,
   Code payload,
@@ -214,8 +214,8 @@ const factory Other.linkage({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   bool active,
   Reference author,
   List<LinkageItem> item,
@@ -224,8 +224,8 @@ const factory Other.linkage({
 
 const factory Other.linkageItem({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   LinkageItemType type,
   Reference resource,
 
@@ -249,8 +249,8 @@ const factory Other.bundle({
 
 const factory Other.bundleLink({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String relation,
   FhirUri url,
 
@@ -258,8 +258,8 @@ const factory Other.bundleLink({
 
 const factory Other.bundleEntry({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<BundleLink> link,
   FhirUri fullUrl,
   dynamic resource,
@@ -271,8 +271,8 @@ const factory Other.bundleEntry({
 
 const factory Other.bundleSearch({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   BundleSearchMode mode,
   double score,
 
@@ -280,8 +280,8 @@ const factory Other.bundleSearch({
 
 const factory Other.bundleRequest({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   BundleRequestMethod method,
   FhirUri url,
   String ifNoneMatch,
@@ -293,8 +293,8 @@ const factory Other.bundleRequest({
 
 const factory Other.bundleResponse({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String status,
   FhirUri location,
   String etag,
@@ -311,8 +311,8 @@ const factory Other.basic({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   CodeableConcept code,
   Reference subject,

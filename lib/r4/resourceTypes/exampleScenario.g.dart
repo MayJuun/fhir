@@ -23,14 +23,8 @@ ExampleScenario _$ExampleScenarioFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
     identifier: (json['identifier'] as List)
         ?.map((e) =>
@@ -103,10 +97,8 @@ Map<String, dynamic> _$ExampleScenarioToJson(ExampleScenario instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('url', instance.url?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
@@ -135,14 +127,8 @@ Map<String, dynamic> _$ExampleScenarioToJson(ExampleScenario instance) {
 ExampleScenarioActor _$ExampleScenarioActorFromJson(Map<String, dynamic> json) {
   return ExampleScenarioActor(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     actorId: json['actorId'] as String,
     type: json['type'] == null
         ? null
@@ -165,10 +151,8 @@ Map<String, dynamic> _$ExampleScenarioActorToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('actorId', instance.actorId);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('name', instance.name);
@@ -180,14 +164,8 @@ ExampleScenarioInstance _$ExampleScenarioInstanceFromJson(
     Map<String, dynamic> json) {
   return ExampleScenarioInstance(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     resourceId: json['resourceId'] as String,
     resourceType: json['resourceType'] == null
         ? null
@@ -221,10 +199,8 @@ Map<String, dynamic> _$ExampleScenarioInstanceToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('resourceId', instance.resourceId);
   writeNotNull('resourceType', instance.resourceType?.toJson());
   writeNotNull('name', instance.name);
@@ -239,14 +215,8 @@ ExampleScenarioVersion _$ExampleScenarioVersionFromJson(
     Map<String, dynamic> json) {
   return ExampleScenarioVersion(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     versionId: json['versionId'] as String,
     description: json['description'] == null
         ? null
@@ -265,10 +235,8 @@ Map<String, dynamic> _$ExampleScenarioVersionToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('versionId', instance.versionId);
   writeNotNull('description', instance.description?.toJson());
   return val;
@@ -278,14 +246,8 @@ ExampleScenarioContainedInstance _$ExampleScenarioContainedInstanceFromJson(
     Map<String, dynamic> json) {
   return ExampleScenarioContainedInstance(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     resourceId: json['resourceId'] as String,
     versionId: json['versionId'] as String,
   );
@@ -302,10 +264,8 @@ Map<String, dynamic> _$ExampleScenarioContainedInstanceToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('resourceId', instance.resourceId);
   writeNotNull('versionId', instance.versionId);
   return val;
@@ -315,14 +275,8 @@ ExampleScenarioProcess _$ExampleScenarioProcessFromJson(
     Map<String, dynamic> json) {
   return ExampleScenarioProcess(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     title: json['title'] as String,
     description: json['description'] == null
         ? null
@@ -352,10 +306,8 @@ Map<String, dynamic> _$ExampleScenarioProcessToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('title', instance.title);
   writeNotNull('description', instance.description?.toJson());
   writeNotNull('preConditions', instance.preConditions?.toJson());
@@ -367,14 +319,8 @@ Map<String, dynamic> _$ExampleScenarioProcessToJson(
 ExampleScenarioStep _$ExampleScenarioStepFromJson(Map<String, dynamic> json) {
   return ExampleScenarioStep(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     process: (json['process'] as List)
         ?.map((e) => e == null
             ? null
@@ -403,10 +349,8 @@ Map<String, dynamic> _$ExampleScenarioStepToJson(ExampleScenarioStep instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('process', instance.process?.map((e) => e?.toJson())?.toList());
   writeNotNull('pause', instance.pause);
   writeNotNull('operation', instance.operation?.toJson());
@@ -419,14 +363,8 @@ ExampleScenarioOperation _$ExampleScenarioOperationFromJson(
     Map<String, dynamic> json) {
   return ExampleScenarioOperation(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     number: json['number'] as String,
     type: json['type'] as String,
     name: json['name'] as String,
@@ -459,10 +397,8 @@ Map<String, dynamic> _$ExampleScenarioOperationToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('number', instance.number);
   writeNotNull('type', instance.type);
   writeNotNull('name', instance.name);
@@ -480,14 +416,8 @@ ExampleScenarioAlternative _$ExampleScenarioAlternativeFromJson(
     Map<String, dynamic> json) {
   return ExampleScenarioAlternative(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     title: json['title'] as String,
     description: json['description'] == null
         ? null
@@ -511,10 +441,8 @@ Map<String, dynamic> _$ExampleScenarioAlternativeToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('title', instance.title);
   writeNotNull('description', instance.description?.toJson());
   writeNotNull('step', instance.step?.map((e) => e?.toJson())?.toList());

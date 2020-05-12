@@ -23,14 +23,8 @@ CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
     version: json['version'] as String,
     name: json['name'] as String,
@@ -130,10 +124,8 @@ Map<String, dynamic> _$CapabilityStatementToJson(CapabilityStatement instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('version', instance.version);
   writeNotNull('name', instance.name);
@@ -174,14 +166,8 @@ CapabilityStatementSoftware _$CapabilityStatementSoftwareFromJson(
     Map<String, dynamic> json) {
   return CapabilityStatementSoftware(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     name: json['name'] as String,
     version: json['version'] as String,
     releaseDate: json['releaseDate'] == null
@@ -201,10 +187,8 @@ Map<String, dynamic> _$CapabilityStatementSoftwareToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('name', instance.name);
   writeNotNull('version', instance.version);
   writeNotNull('releaseDate', instance.releaseDate?.toJson());
@@ -215,14 +199,8 @@ CapabilityStatementImplementation _$CapabilityStatementImplementationFromJson(
     Map<String, dynamic> json) {
   return CapabilityStatementImplementation(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     description: json['description'] as String,
     url: json['url'] == null ? null : FhirUrl.fromJson(json['url'] as String),
     custodian: json['custodian'] == null
@@ -242,10 +220,8 @@ Map<String, dynamic> _$CapabilityStatementImplementationToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('description', instance.description);
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('custodian', instance.custodian?.toJson());
@@ -256,14 +232,8 @@ CapabilityStatementRest _$CapabilityStatementRestFromJson(
     Map<String, dynamic> json) {
   return CapabilityStatementRest(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     mode: json['mode'] == null
         ? null
         : CapabilityStatementRestMode.fromJson(json['mode'] as String),
@@ -313,10 +283,8 @@ Map<String, dynamic> _$CapabilityStatementRestToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('mode', instance.mode?.toJson());
   writeNotNull('documentation', instance.documentation?.toJson());
   writeNotNull('security', instance.security?.toJson());
@@ -337,14 +305,8 @@ CapabilityStatementSecurity _$CapabilityStatementSecurityFromJson(
     Map<String, dynamic> json) {
   return CapabilityStatementSecurity(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     cors: json['cors'] as bool,
     service: (json['service'] as List)
         ?.map((e) => e == null
@@ -368,10 +330,8 @@ Map<String, dynamic> _$CapabilityStatementSecurityToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('cors', instance.cors);
   writeNotNull('service', instance.service?.map((e) => e?.toJson())?.toList());
   writeNotNull('description', instance.description?.toJson());
@@ -382,14 +342,8 @@ CapabilityStatementResource _$CapabilityStatementResourceFromJson(
     Map<String, dynamic> json) {
   return CapabilityStatementResource(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
     profile: json['profile'] == null
         ? null
@@ -453,10 +407,8 @@ Map<String, dynamic> _$CapabilityStatementResourceToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('profile', instance.profile?.toJson());
   writeNotNull('supportedProfile',
@@ -485,14 +437,8 @@ CapabilityStatementInteraction _$CapabilityStatementInteractionFromJson(
     Map<String, dynamic> json) {
   return CapabilityStatementInteraction(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     code: json['code'] == null
         ? null
         : CapabilityStatementInteractionCode.fromJson(json['code'] as String),
@@ -513,10 +459,8 @@ Map<String, dynamic> _$CapabilityStatementInteractionToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('documentation', instance.documentation?.toJson());
   return val;
@@ -526,14 +470,8 @@ CapabilityStatementSearchParam _$CapabilityStatementSearchParamFromJson(
     Map<String, dynamic> json) {
   return CapabilityStatementSearchParam(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     name: json['name'] as String,
     definition: json['definition'] == null
         ? null
@@ -556,10 +494,8 @@ Map<String, dynamic> _$CapabilityStatementSearchParamToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('name', instance.name);
   writeNotNull('definition', instance.definition?.toJson());
   writeNotNull('type', instance.type);
@@ -571,14 +507,8 @@ CapabilityStatementOperation _$CapabilityStatementOperationFromJson(
     Map<String, dynamic> json) {
   return CapabilityStatementOperation(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     name: json['name'] as String,
     definition: json['definition'] == null
         ? null
@@ -600,10 +530,8 @@ Map<String, dynamic> _$CapabilityStatementOperationToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('name', instance.name);
   writeNotNull('definition', instance.definition?.toJson());
   writeNotNull('documentation', instance.documentation?.toJson());
@@ -614,14 +542,8 @@ CapabilityStatementInteraction1 _$CapabilityStatementInteraction1FromJson(
     Map<String, dynamic> json) {
   return CapabilityStatementInteraction1(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     code: json['code'] as String,
     documentation: json['documentation'] == null
         ? null
@@ -640,10 +562,8 @@ Map<String, dynamic> _$CapabilityStatementInteraction1ToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('code', instance.code);
   writeNotNull('documentation', instance.documentation?.toJson());
   return val;
@@ -653,14 +573,8 @@ CapabilityStatementMessaging _$CapabilityStatementMessagingFromJson(
     Map<String, dynamic> json) {
   return CapabilityStatementMessaging(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     endpoint: (json['endpoint'] as List)
         ?.map((e) => e == null
             ? null
@@ -690,10 +604,8 @@ Map<String, dynamic> _$CapabilityStatementMessagingToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull(
       'endpoint', instance.endpoint?.map((e) => e?.toJson())?.toList());
   writeNotNull('reliableCache', instance.reliableCache);
@@ -707,14 +619,8 @@ CapabilityStatementEndpoint _$CapabilityStatementEndpointFromJson(
     Map<String, dynamic> json) {
   return CapabilityStatementEndpoint(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     protocol: json['protocol'] == null
         ? null
         : Coding.fromJson(json['protocol'] as Map<String, dynamic>),
@@ -735,10 +641,8 @@ Map<String, dynamic> _$CapabilityStatementEndpointToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('protocol', instance.protocol?.toJson());
   writeNotNull('address', instance.address?.toJson());
   return val;
@@ -748,14 +652,8 @@ CapabilityStatementSupportedMessage
     _$CapabilityStatementSupportedMessageFromJson(Map<String, dynamic> json) {
   return CapabilityStatementSupportedMessage(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     mode: json['mode'] == null
         ? null
         : CapabilityStatementSupportedMessageMode.fromJson(
@@ -777,10 +675,8 @@ Map<String, dynamic> _$CapabilityStatementSupportedMessageToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('mode', instance.mode?.toJson());
   writeNotNull('definition', instance.definition?.toJson());
   return val;
@@ -790,14 +686,8 @@ CapabilityStatementDocument _$CapabilityStatementDocumentFromJson(
     Map<String, dynamic> json) {
   return CapabilityStatementDocument(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     mode: json['mode'] == null
         ? null
         : CapabilityStatementDocumentMode.fromJson(json['mode'] as String),
@@ -821,10 +711,8 @@ Map<String, dynamic> _$CapabilityStatementDocumentToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('mode', instance.mode?.toJson());
   writeNotNull('documentation', instance.documentation?.toJson());
   writeNotNull('profile', instance.profile?.toJson());

@@ -23,14 +23,8 @@ ConceptMap _$ConceptMapFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
     identifier: json['identifier'] == null
         ? null
@@ -105,10 +99,8 @@ Map<String, dynamic> _$ConceptMapToJson(ConceptMap instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('version', instance.version);
@@ -137,14 +129,8 @@ Map<String, dynamic> _$ConceptMapToJson(ConceptMap instance) {
 ConceptMapGroup _$ConceptMapGroupFromJson(Map<String, dynamic> json) {
   return ConceptMapGroup(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     source: json['source'] == null
         ? null
         : FhirUri.fromJson(json['source'] as String),
@@ -174,10 +160,8 @@ Map<String, dynamic> _$ConceptMapGroupToJson(ConceptMapGroup instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('source', instance.source?.toJson());
   writeNotNull('sourceVersion', instance.sourceVersion);
   writeNotNull('target', instance.target?.toJson());
@@ -190,14 +174,8 @@ Map<String, dynamic> _$ConceptMapGroupToJson(ConceptMapGroup instance) {
 ConceptMapElement _$ConceptMapElementFromJson(Map<String, dynamic> json) {
   return ConceptMapElement(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
     display: json['display'] as String,
     target: (json['target'] as List)
@@ -218,10 +196,8 @@ Map<String, dynamic> _$ConceptMapElementToJson(ConceptMapElement instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('display', instance.display);
   writeNotNull('target', instance.target?.map((e) => e?.toJson())?.toList());
@@ -231,14 +207,8 @@ Map<String, dynamic> _$ConceptMapElementToJson(ConceptMapElement instance) {
 ConceptMapTarget _$ConceptMapTargetFromJson(Map<String, dynamic> json) {
   return ConceptMapTarget(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
     display: json['display'] as String,
     equivalence: json['equivalence'] == null
@@ -268,10 +238,8 @@ Map<String, dynamic> _$ConceptMapTargetToJson(ConceptMapTarget instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('display', instance.display);
   writeNotNull('equivalence', instance.equivalence?.toJson());
@@ -285,14 +253,8 @@ Map<String, dynamic> _$ConceptMapTargetToJson(ConceptMapTarget instance) {
 ConceptMapDependsOn _$ConceptMapDependsOnFromJson(Map<String, dynamic> json) {
   return ConceptMapDependsOn(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     property: json['property'] == null
         ? null
         : FhirUri.fromJson(json['property'] as String),
@@ -314,10 +276,8 @@ Map<String, dynamic> _$ConceptMapDependsOnToJson(ConceptMapDependsOn instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('property', instance.property?.toJson());
   writeNotNull('system', instance.system?.toJson());
   writeNotNull('value', instance.value);
@@ -328,14 +288,8 @@ Map<String, dynamic> _$ConceptMapDependsOnToJson(ConceptMapDependsOn instance) {
 ConceptMapUnmapped _$ConceptMapUnmappedFromJson(Map<String, dynamic> json) {
   return ConceptMapUnmapped(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     mode: json['mode'] == null
         ? null
         : ConceptMapUnmappedMode.fromJson(json['mode'] as String),
@@ -355,10 +309,8 @@ Map<String, dynamic> _$ConceptMapUnmappedToJson(ConceptMapUnmapped instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('mode', instance.mode?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('display', instance.display);

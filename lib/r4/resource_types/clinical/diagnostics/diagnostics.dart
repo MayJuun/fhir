@@ -16,8 +16,8 @@ const factory Diagnostics.imagingStudy({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   ImagingStudyStatus status,
   List<Coding> modality,
@@ -43,8 +43,8 @@ const factory Diagnostics.imagingStudy({
 
 const factory Diagnostics.imagingStudySeries({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Id uid,
   int number,
   Coding modality,
@@ -62,8 +62,8 @@ const factory Diagnostics.imagingStudySeries({
 
 const factory Diagnostics.imagingStudyPerformer({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept function,
   Reference actor,
 
@@ -71,8 +71,8 @@ const factory Diagnostics.imagingStudyPerformer({
 
 const factory Diagnostics.imagingStudyInstance({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Id uid,
   Coding sopClass,
   int number,
@@ -88,8 +88,8 @@ const factory Diagnostics.specimen({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Identifier accessionIdentifier,
   SpecimenStatus status,
@@ -108,8 +108,8 @@ const factory Diagnostics.specimen({
 
 const factory Diagnostics.specimenCollection({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference collector,
   FhirDateTime collectedDateTime,
   Period collectedPeriod,
@@ -124,8 +124,8 @@ const factory Diagnostics.specimenCollection({
 
 const factory Diagnostics.specimenProcessing({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String description,
   CodeableConcept procedure,
   List<Reference> additive,
@@ -136,8 +136,8 @@ const factory Diagnostics.specimenProcessing({
 
 const factory Diagnostics.specimenContainer({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   String description,
   CodeableConcept type,
@@ -156,8 +156,8 @@ const factory Diagnostics.molecularSequence({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   MolecularSequenceType type,
   int coordinateSystem,
@@ -179,8 +179,8 @@ const factory Diagnostics.molecularSequence({
 
 const factory Diagnostics.molecularSequenceReferenceSeq({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept chromosome,
   String genomeBuild,
   MolecularSequenceReferenceSeqOrientation orientation,
@@ -195,8 +195,8 @@ const factory Diagnostics.molecularSequenceReferenceSeq({
 
 const factory Diagnostics.molecularSequenceVariant({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int start,
   int end,
   String observedAllele,
@@ -208,8 +208,8 @@ const factory Diagnostics.molecularSequenceVariant({
 
 const factory Diagnostics.molecularSequenceQuality({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   MolecularSequenceQualityType type,
   CodeableConcept standardSequence,
   int start,
@@ -230,8 +230,8 @@ const factory Diagnostics.molecularSequenceQuality({
 
 const factory Diagnostics.molecularSequenceRoc({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<int> score,
   List<int> numTP,
   List<int> numFP,
@@ -244,8 +244,8 @@ const factory Diagnostics.molecularSequenceRoc({
 
 const factory Diagnostics.molecularSequenceRepository({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   MolecularSequenceRepositoryType type,
   FhirUri url,
   String name,
@@ -257,8 +257,8 @@ const factory Diagnostics.molecularSequenceRepository({
 
 const factory Diagnostics.molecularSequenceStructureVariant({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept variantType,
   bool exact,
   int length,
@@ -269,8 +269,8 @@ const factory Diagnostics.molecularSequenceStructureVariant({
 
 const factory Diagnostics.molecularSequenceOuter({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int start,
   int end,
 
@@ -278,8 +278,8 @@ const factory Diagnostics.molecularSequenceOuter({
 
 const factory Diagnostics.molecularSequenceInner({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int start,
   int end,
 
@@ -293,8 +293,8 @@ const factory Diagnostics.observation({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   List<Reference> basedOn,
   List<Reference> partOf,
@@ -337,8 +337,8 @@ const factory Diagnostics.observation({
 
 const factory Diagnostics.observationReferenceRange({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Quantity low,
   Quantity high,
   CodeableConcept type,
@@ -350,8 +350,8 @@ const factory Diagnostics.observationReferenceRange({
 
 const factory Diagnostics.observationComponent({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   Quantity valueQuantity,
   CodeableConcept valueCodeableConcept,
@@ -378,8 +378,8 @@ const factory Diagnostics.bodyStructure({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   bool active,
   CodeableConcept morphology,
@@ -399,8 +399,8 @@ const factory Diagnostics.questionnaireResponse({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Identifier identifier,
   List<Reference> basedOn,
   List<Reference> partOf,
@@ -417,8 +417,8 @@ const factory Diagnostics.questionnaireResponse({
 
 const factory Diagnostics.questionnaireResponseItem({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String linkId,
   FhirUri definition,
   String text,
@@ -429,8 +429,8 @@ const factory Diagnostics.questionnaireResponseItem({
 
 const factory Diagnostics.questionnaireResponseAnswer({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   bool valueBoolean,
   double valueDecimal,
   int valueInteger,
@@ -455,8 +455,8 @@ const factory Diagnostics.diagnosticReport({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   List<Reference> basedOn,
   DiagnosticReportStatus status,
@@ -481,8 +481,8 @@ const factory Diagnostics.diagnosticReport({
 
 const factory Diagnostics.diagnosticReportMedia({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String comment,
   Reference link,
 
@@ -496,8 +496,8 @@ const factory Diagnostics.media({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   List<Reference> basedOn,
   List<Reference> partOf,

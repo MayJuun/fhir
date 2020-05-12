@@ -23,14 +23,8 @@ AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: json['type'] == null
         ? null
         : Coding.fromJson(json['type'] as Map<String, dynamic>),
@@ -88,10 +82,8 @@ Map<String, dynamic> _$AuditEventToJson(AuditEvent instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('subtype', instance.subtype?.map((e) => e?.toJson())?.toList());
   writeNotNull('action', instance.action?.toJson());
@@ -110,14 +102,8 @@ Map<String, dynamic> _$AuditEventToJson(AuditEvent instance) {
 AuditEventAgent _$AuditEventAgentFromJson(Map<String, dynamic> json) {
   return AuditEventAgent(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -162,10 +148,8 @@ Map<String, dynamic> _$AuditEventAgentToJson(AuditEventAgent instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('role', instance.role?.map((e) => e?.toJson())?.toList());
   writeNotNull('who', instance.who?.toJson());
@@ -184,14 +168,8 @@ Map<String, dynamic> _$AuditEventAgentToJson(AuditEventAgent instance) {
 AuditEventNetwork _$AuditEventNetworkFromJson(Map<String, dynamic> json) {
   return AuditEventNetwork(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     address: json['address'] as String,
     type: json['type'] == null
         ? null
@@ -209,10 +187,8 @@ Map<String, dynamic> _$AuditEventNetworkToJson(AuditEventNetwork instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('address', instance.address);
   writeNotNull('type', instance.type?.toJson());
   return val;
@@ -221,14 +197,8 @@ Map<String, dynamic> _$AuditEventNetworkToJson(AuditEventNetwork instance) {
 AuditEventSource _$AuditEventSourceFromJson(Map<String, dynamic> json) {
   return AuditEventSource(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     site: json['site'] as String,
     observer: json['observer'] == null
         ? null
@@ -250,10 +220,8 @@ Map<String, dynamic> _$AuditEventSourceToJson(AuditEventSource instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('site', instance.site);
   writeNotNull('observer', instance.observer?.toJson());
   writeNotNull('type', instance.type?.map((e) => e?.toJson())?.toList());
@@ -263,14 +231,8 @@ Map<String, dynamic> _$AuditEventSourceToJson(AuditEventSource instance) {
 AuditEventEntity _$AuditEventEntityFromJson(Map<String, dynamic> json) {
   return AuditEventEntity(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     what: json['what'] == null
         ? null
         : Reference.fromJson(json['what'] as Map<String, dynamic>),
@@ -310,10 +272,8 @@ Map<String, dynamic> _$AuditEventEntityToJson(AuditEventEntity instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('what', instance.what?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('role', instance.role?.toJson());
@@ -330,14 +290,8 @@ Map<String, dynamic> _$AuditEventEntityToJson(AuditEventEntity instance) {
 AuditEventDetail _$AuditEventDetailFromJson(Map<String, dynamic> json) {
   return AuditEventDetail(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: json['type'] as String,
     valueString: json['valueString'] == null
         ? null
@@ -358,10 +312,8 @@ Map<String, dynamic> _$AuditEventDetailToJson(AuditEventDetail instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('type', instance.type);
   writeNotNull('valueString', instance.valueString?.toJson());
   writeNotNull('valueBase64Binary', instance.valueBase64Binary?.toJson());

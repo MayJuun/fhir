@@ -24,14 +24,8 @@ SubstanceSourceMaterial _$SubstanceSourceMaterialFromJson(
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     sourceMaterialClass: json['sourceMaterialClass'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -103,10 +97,8 @@ Map<String, dynamic> _$SubstanceSourceMaterialToJson(
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('sourceMaterialClass', instance.sourceMaterialClass?.toJson());
   writeNotNull('sourceMaterialType', instance.sourceMaterialType?.toJson());
   writeNotNull('sourceMaterialState', instance.sourceMaterialState?.toJson());
@@ -132,14 +124,8 @@ SubstanceSourceMaterialFractionDescription
         Map<String, dynamic> json) {
   return SubstanceSourceMaterialFractionDescription(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     fraction: json['fraction'] as String,
     materialType: json['materialType'] == null
         ? null
@@ -159,10 +145,8 @@ Map<String, dynamic> _$SubstanceSourceMaterialFractionDescriptionToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('fraction', instance.fraction);
   writeNotNull('materialType', instance.materialType?.toJson());
   return val;
@@ -172,14 +156,8 @@ SubstanceSourceMaterialOrganism _$SubstanceSourceMaterialOrganismFromJson(
     Map<String, dynamic> json) {
   return SubstanceSourceMaterialOrganism(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     family: json['family'] == null
         ? null
         : CodeableConcept.fromJson(json['family'] as Map<String, dynamic>),
@@ -221,10 +199,8 @@ Map<String, dynamic> _$SubstanceSourceMaterialOrganismToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('family', instance.family?.toJson());
   writeNotNull('genus', instance.genus?.toJson());
   writeNotNull('species', instance.species?.toJson());
@@ -240,14 +216,8 @@ SubstanceSourceMaterialAuthor _$SubstanceSourceMaterialAuthorFromJson(
     Map<String, dynamic> json) {
   return SubstanceSourceMaterialAuthor(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     authorType: json['authorType'] == null
         ? null
         : CodeableConcept.fromJson(json['authorType'] as Map<String, dynamic>),
@@ -266,10 +236,8 @@ Map<String, dynamic> _$SubstanceSourceMaterialAuthorToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('authorType', instance.authorType?.toJson());
   writeNotNull('authorDescription', instance.authorDescription);
   return val;
@@ -279,14 +247,8 @@ SubstanceSourceMaterialHybrid _$SubstanceSourceMaterialHybridFromJson(
     Map<String, dynamic> json) {
   return SubstanceSourceMaterialHybrid(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     maternalOrganismId: json['maternalOrganismId'] as String,
     maternalOrganismName: json['maternalOrganismName'] as String,
     paternalOrganismId: json['paternalOrganismId'] as String,
@@ -308,10 +270,8 @@ Map<String, dynamic> _$SubstanceSourceMaterialHybridToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('maternalOrganismId', instance.maternalOrganismId);
   writeNotNull('maternalOrganismName', instance.maternalOrganismName);
   writeNotNull('paternalOrganismId', instance.paternalOrganismId);
@@ -325,14 +285,8 @@ SubstanceSourceMaterialOrganismGeneral
         Map<String, dynamic> json) {
   return SubstanceSourceMaterialOrganismGeneral(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     kingdom: json['kingdom'] == null
         ? null
         : CodeableConcept.fromJson(json['kingdom'] as Map<String, dynamic>),
@@ -359,10 +313,8 @@ Map<String, dynamic> _$SubstanceSourceMaterialOrganismGeneralToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('kingdom', instance.kingdom?.toJson());
   writeNotNull('phylum', instance.phylum?.toJson());
   writeNotNull('clas', instance.clas?.toJson());
@@ -375,14 +327,8 @@ SubstanceSourceMaterialPartDescription
         Map<String, dynamic> json) {
   return SubstanceSourceMaterialPartDescription(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     part: json['part'] == null
         ? null
         : CodeableConcept.fromJson(json['part'] as Map<String, dynamic>),
@@ -404,10 +350,8 @@ Map<String, dynamic> _$SubstanceSourceMaterialPartDescriptionToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('part', instance.part?.toJson());
   writeNotNull('partLocation', instance.partLocation?.toJson());
   return val;

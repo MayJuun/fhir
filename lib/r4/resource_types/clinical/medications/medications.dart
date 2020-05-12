@@ -16,8 +16,8 @@ const factory Medications.immunizationEvaluation({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Code status,
   Reference patient,
@@ -44,8 +44,8 @@ const factory Medications.medicationDispense({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   List<Reference> partOf,
   Code status,
@@ -77,8 +77,8 @@ const factory Medications.medicationDispense({
 
 const factory Medications.medicationDispensePerformer({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept function,
   Reference actor,
 
@@ -86,8 +86,8 @@ const factory Medications.medicationDispensePerformer({
 
 const factory Medications.medicationDispenseSubstitution({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   bool wasSubstituted,
   CodeableConcept type,
   List<CodeableConcept> reason,
@@ -103,8 +103,8 @@ const factory Medications.medication({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   CodeableConcept code,
   Code status,
@@ -118,8 +118,8 @@ const factory Medications.medication({
 
 const factory Medications.medicationIngredient({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept itemCodeableConcept,
   Reference itemReference,
   bool isActive,
@@ -129,8 +129,8 @@ const factory Medications.medicationIngredient({
 
 const factory Medications.medicationBatch({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String lotNumber,
   FhirDateTime expirationDate,
 
@@ -144,8 +144,8 @@ const factory Medications.medicationStatement({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   List<Reference> basedOn,
   List<Reference> partOf,
@@ -176,8 +176,8 @@ const factory Medications.medicationRequest({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Code status,
   CodeableConcept statusReason,
@@ -217,8 +217,8 @@ const factory Medications.medicationRequest({
 
 const factory Medications.medicationRequestDispenseRequest({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   MedicationRequestInitialFill initialFill,
   Duration dispenseInterval,
   Period validityPeriod,
@@ -231,8 +231,8 @@ const factory Medications.medicationRequestDispenseRequest({
 
 const factory Medications.medicationRequestInitialFill({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Quantity quantity,
   Duration duration,
 
@@ -240,8 +240,8 @@ const factory Medications.medicationRequestInitialFill({
 
 const factory Medications.medicationRequestSubstitution({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   bool allowedBoolean,
   CodeableConcept allowedCodeableConcept,
   CodeableConcept reason,
@@ -256,8 +256,8 @@ const factory Medications.immunization({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Code status,
   CodeableConcept statusReason,
@@ -292,8 +292,8 @@ const factory Medications.immunization({
 
 const factory Medications.immunizationPerformer({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept function,
   Reference actor,
 
@@ -301,8 +301,8 @@ const factory Medications.immunizationPerformer({
 
 const factory Medications.immunizationEducation({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String documentType,
   FhirUri reference,
   FhirDateTime publicationDate,
@@ -312,8 +312,8 @@ const factory Medications.immunizationEducation({
 
 const factory Medications.immunizationReaction({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirDateTime date,
   Reference detail,
   bool reported,
@@ -322,8 +322,8 @@ const factory Medications.immunizationReaction({
 
 const factory Medications.immunizationProtocolApplied({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String series,
   Reference authority,
   List<CodeableConcept> targetDisease,
@@ -342,8 +342,8 @@ const factory Medications.medicationAdministration({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   List<FhirUri> instantiates,
   List<Reference> partOf,
@@ -370,8 +370,8 @@ const factory Medications.medicationAdministration({
 
 const factory Medications.medicationAdministrationPerformer({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept function,
   Reference actor,
 
@@ -379,8 +379,8 @@ const factory Medications.medicationAdministrationPerformer({
 
 const factory Medications.medicationAdministrationDosage({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String text,
   CodeableConcept site,
   CodeableConcept route,
@@ -399,8 +399,8 @@ const factory Medications.immunizationRecommendation({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Reference patient,
   FhirDateTime date,
@@ -411,8 +411,8 @@ const factory Medications.immunizationRecommendation({
 
 const factory Medications.immunizationRecommendationRecommendation({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<CodeableConcept> vaccineCode,
   CodeableConcept targetDisease,
   List<CodeableConcept> contraindicatedVaccineCode,
@@ -432,8 +432,8 @@ const factory Medications.immunizationRecommendationRecommendation({
 
 const factory Medications.immunizationRecommendationDateCriterion({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   FhirDateTime value,
 
@@ -447,8 +447,8 @@ const factory Medications.medicationKnowledge({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   Code status,
   Reference manufacturer,
@@ -515,8 +515,8 @@ const factory Medications.medicationKnowledge({
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class MedicationKnowledgeRelatedMedicationKnowledge {
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   List<Reference> reference,
 
@@ -524,8 +524,8 @@ class MedicationKnowledgeRelatedMedicationKnowledge {
 
 const factory Medications.medicationKnowledgeRelatedMedicationKnowledge({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   List<Reference> reference,
 
@@ -533,8 +533,8 @@ const factory Medications.medicationKnowledgeRelatedMedicationKnowledge({
 
 const factory Medications.medicationKnowledgeMonograph({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   Reference source,
 
@@ -542,8 +542,8 @@ const factory Medications.medicationKnowledgeMonograph({
 
 const factory Medications.medicationKnowledgeIngredient({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept itemCodeableConcept,
   Reference itemReference,
   bool isActive,
@@ -553,8 +553,8 @@ const factory Medications.medicationKnowledgeIngredient({
 
 const factory Medications.medicationKnowledgeCost({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   String source,
   Money cost,
@@ -563,8 +563,8 @@ const factory Medications.medicationKnowledgeCost({
 
 const factory Medications.medicationKnowledgeMonitoringProgram({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   String name,
 
@@ -572,8 +572,8 @@ const factory Medications.medicationKnowledgeMonitoringProgram({
 
 const factory Medications.medicationKnowledgeAdministrationGuidelines({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<MedicationKnowledgeDosage> dosage,
   CodeableConcept indicationCodeableConcept,
   Reference indicationReference,
@@ -583,8 +583,8 @@ const factory Medications.medicationKnowledgeAdministrationGuidelines({
 
 const factory Medications.medicationKnowledgeDosage({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   List<Dosage> dosage,
 
@@ -592,8 +592,8 @@ const factory Medications.medicationKnowledgeDosage({
 
 const factory Medications.medicationKnowledgePatientCharacteristics({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept characteristicCodeableConcept,
   Quantity characteristicQuantity,
   List<String> value,
@@ -602,8 +602,8 @@ const factory Medications.medicationKnowledgePatientCharacteristics({
 
 const factory Medications.medicationKnowledgeMedicineClassification({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   List<CodeableConcept> classification,
 
@@ -611,8 +611,8 @@ const factory Medications.medicationKnowledgeMedicineClassification({
 
 const factory Medications.medicationKnowledgePackaging({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   Quantity quantity,
 
@@ -620,8 +620,8 @@ const factory Medications.medicationKnowledgePackaging({
 
 const factory Medications.medicationKnowledgeDrugCharacteristic({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   CodeableConcept valueCodeableConcept,
   String valueString,
@@ -632,8 +632,8 @@ const factory Medications.medicationKnowledgeDrugCharacteristic({
 
 const factory Medications.medicationKnowledgeRegulatory({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference regulatoryAuthority,
   List<MedicationKnowledgeSubstitution> substitution,
   List<MedicationKnowledgeSchedule> schedule,
@@ -643,8 +643,8 @@ const factory Medications.medicationKnowledgeRegulatory({
 
 const factory Medications.medicationKnowledgeSubstitution({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   bool allowed,
 
@@ -652,16 +652,16 @@ const factory Medications.medicationKnowledgeSubstitution({
 
 const factory Medications.medicationKnowledgeSchedule({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept schedule,
 
   }) = MedicationKnowledgeSchedule;
 
 const factory Medications.medicationKnowledgeMaxDispense({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Quantity quantity,
   Duration period,
 
@@ -669,8 +669,8 @@ const factory Medications.medicationKnowledgeMaxDispense({
 
 const factory Medications.medicationKnowledgeKinetics({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Quantity> areaUnderCurve,
   List<Quantity> lethalDose50,
   Duration halfLifePeriod,

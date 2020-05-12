@@ -16,8 +16,8 @@ const factory MedicationDefinition.medicinalProductInteraction({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Reference> subject,
   String description,
   List<MedicinalProductInteractionInteractant> interactant,
@@ -30,8 +30,8 @@ const factory MedicationDefinition.medicinalProductInteraction({
 
 const factory MedicationDefinition.medicinalProductInteractionInteractant({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference itemReference,
   CodeableConcept itemCodeableConcept,
 
@@ -45,8 +45,8 @@ const factory MedicationDefinition.substanceReferenceInformation({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String comment,
   List<SubstanceReferenceInformationGene> gene,
   List<SubstanceReferenceInformationGeneElement> geneElement,
@@ -57,8 +57,8 @@ const factory MedicationDefinition.substanceReferenceInformation({
 
 const factory MedicationDefinition.substanceReferenceInformationGene({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept geneSequenceOrigin,
   CodeableConcept gene,
   List<Reference> source,
@@ -67,8 +67,8 @@ const factory MedicationDefinition.substanceReferenceInformationGene({
 
 const factory MedicationDefinition.substanceReferenceInformationGeneElement({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   Identifier element,
   List<Reference> source,
@@ -77,8 +77,8 @@ const factory MedicationDefinition.substanceReferenceInformationGeneElement({
 
 const factory MedicationDefinition.substanceReferenceInformationClassification({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept domain,
   CodeableConcept classification,
   List<CodeableConcept> subtype,
@@ -88,8 +88,8 @@ const factory MedicationDefinition.substanceReferenceInformationClassification({
 
 const factory MedicationDefinition.substanceReferenceInformationTarget({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Identifier target,
   CodeableConcept type,
   CodeableConcept interaction,
@@ -111,8 +111,8 @@ const factory MedicationDefinition.substanceSpecification({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Identifier identifier,
   CodeableConcept type,
   CodeableConcept status,
@@ -137,8 +137,8 @@ const factory MedicationDefinition.substanceSpecification({
 
 const factory MedicationDefinition.substanceSpecificationMoiety({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept role,
   Identifier identifier,
   String name,
@@ -152,8 +152,8 @@ const factory MedicationDefinition.substanceSpecificationMoiety({
 
 const factory MedicationDefinition.substanceSpecificationProperty({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept category,
   CodeableConcept code,
   String parameters,
@@ -166,8 +166,8 @@ const factory MedicationDefinition.substanceSpecificationProperty({
 
 const factory MedicationDefinition.substanceSpecificationStructure({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept stereochemistry,
   CodeableConcept opticalActivity,
   String molecularFormula,
@@ -181,8 +181,8 @@ const factory MedicationDefinition.substanceSpecificationStructure({
 
 const factory MedicationDefinition.substanceSpecificationIsotope({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Identifier identifier,
   CodeableConcept name,
   CodeableConcept substitution,
@@ -193,8 +193,8 @@ const factory MedicationDefinition.substanceSpecificationIsotope({
 
 const factory MedicationDefinition.substanceSpecificationMolecularWeight({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept method,
   CodeableConcept type,
   Quantity amount,
@@ -203,8 +203,8 @@ const factory MedicationDefinition.substanceSpecificationMolecularWeight({
 
 const factory MedicationDefinition.substanceSpecificationRepresentation({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   String representation,
   Attachment attachment,
@@ -213,8 +213,8 @@ const factory MedicationDefinition.substanceSpecificationRepresentation({
 
 const factory MedicationDefinition.substanceSpecificationCode({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   CodeableConcept status,
   FhirDateTime statusDate,
@@ -225,8 +225,8 @@ const factory MedicationDefinition.substanceSpecificationCode({
 
 const factory MedicationDefinition.substanceSpecificationName({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String name,
   CodeableConcept type,
   CodeableConcept status,
@@ -243,8 +243,8 @@ const factory MedicationDefinition.substanceSpecificationName({
 
 const factory MedicationDefinition.substanceSpecificationOfficial({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept authority,
   CodeableConcept status,
   FhirDateTime date,
@@ -253,8 +253,8 @@ const factory MedicationDefinition.substanceSpecificationOfficial({
 
 const factory MedicationDefinition.substanceSpecificationRelationship({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference substanceReference,
   CodeableConcept substanceCodeableConcept,
   CodeableConcept relationship,
@@ -277,8 +277,8 @@ const factory MedicationDefinition.medicinalProductManufactured({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept manufacturedDoseForm,
   CodeableConcept unitOfPresentation,
   Quantity quantity,
@@ -297,8 +297,8 @@ const factory MedicationDefinition.medicinalProductContraindication({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Reference> subject,
   CodeableConcept disease,
   CodeableConcept diseaseStatus,
@@ -311,8 +311,8 @@ const factory MedicationDefinition.medicinalProductContraindication({
 
 const factory MedicationDefinition.medicinalProductContraindicationOtherTherapy({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept therapyRelationshipType,
   CodeableConcept medicationCodeableConcept,
   Reference medicationReference,
@@ -327,8 +327,8 @@ const factory MedicationDefinition.medicinalProductIngredient({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Identifier identifier,
   CodeableConcept role,
   bool allergenicIndicator,
@@ -340,8 +340,8 @@ const factory MedicationDefinition.medicinalProductIngredient({
 
 const factory MedicationDefinition.medicinalProductIngredientSpecifiedSubstance({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   CodeableConcept group,
   CodeableConcept confidentiality,
@@ -351,8 +351,8 @@ const factory MedicationDefinition.medicinalProductIngredientSpecifiedSubstance(
 
 const factory MedicationDefinition.medicinalProductIngredientStrength({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Ratio presentation,
   Ratio presentationLowLimit,
   Ratio concentration,
@@ -365,8 +365,8 @@ const factory MedicationDefinition.medicinalProductIngredientStrength({
 
 const factory MedicationDefinition.medicinalProductIngredientReferenceStrength({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept substance,
   Ratio strength,
   Ratio strengthLowLimit,
@@ -377,8 +377,8 @@ const factory MedicationDefinition.medicinalProductIngredientReferenceStrength({
 
 const factory MedicationDefinition.medicinalProductIngredientSubstance({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   List<MedicinalProductIngredientStrength> strength,
 
@@ -392,8 +392,8 @@ const factory MedicationDefinition.substanceSourceMaterial({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept sourceMaterialClass,
   CodeableConcept sourceMaterialType,
   CodeableConcept sourceMaterialState,
@@ -412,8 +412,8 @@ const factory MedicationDefinition.substanceSourceMaterial({
 
 const factory MedicationDefinition.substanceSourceMaterialFractionDescription({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String fraction,
   CodeableConcept materialType,
 
@@ -421,8 +421,8 @@ const factory MedicationDefinition.substanceSourceMaterialFractionDescription({
 
 const factory MedicationDefinition.substanceSourceMaterialOrganism({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept family,
   CodeableConcept genus,
   CodeableConcept species,
@@ -436,8 +436,8 @@ const factory MedicationDefinition.substanceSourceMaterialOrganism({
 
 const factory MedicationDefinition.substanceSourceMaterialAuthor({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept authorType,
   String authorDescription,
 
@@ -445,8 +445,8 @@ const factory MedicationDefinition.substanceSourceMaterialAuthor({
 
 const factory MedicationDefinition.substanceSourceMaterialHybrid({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String maternalOrganismId,
   String maternalOrganismName,
   String paternalOrganismId,
@@ -457,8 +457,8 @@ const factory MedicationDefinition.substanceSourceMaterialHybrid({
 
 const factory MedicationDefinition.substanceSourceMaterialOrganismGeneral({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept kingdom,
   CodeableConcept phylum,
   CodeableConcept clas,
@@ -468,8 +468,8 @@ const factory MedicationDefinition.substanceSourceMaterialOrganismGeneral({
 
 const factory MedicationDefinition.substanceSourceMaterialPartDescription({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept part,
   CodeableConcept partLocation,
 
@@ -483,8 +483,8 @@ const factory MedicationDefinition.medicinalProductUndesirableEffect({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Reference> subject,
   CodeableConcept symptomConditionEffect,
   CodeableConcept classification,
@@ -501,8 +501,8 @@ const factory MedicationDefinition.medicinalProduct({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   CodeableConcept type,
   Coding domain,
@@ -529,8 +529,8 @@ const factory MedicationDefinition.medicinalProduct({
 
 const factory MedicationDefinition.medicinalProductName({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String productName,
   List<MedicinalProductNamePart> namePart,
   List<MedicinalProductCountryLanguage> countryLanguage,
@@ -539,8 +539,8 @@ const factory MedicationDefinition.medicinalProductName({
 
 const factory MedicationDefinition.medicinalProductNamePart({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String part,
   Coding type,
 
@@ -548,8 +548,8 @@ const factory MedicationDefinition.medicinalProductNamePart({
 
 const factory MedicationDefinition.medicinalProductCountryLanguage({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept country,
   CodeableConcept jurisdiction,
   CodeableConcept language,
@@ -558,8 +558,8 @@ const factory MedicationDefinition.medicinalProductCountryLanguage({
 
 const factory MedicationDefinition.medicinalProductManufacturingBusinessOperation({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept operationType,
   Identifier authorisationReferenceNumber,
   FhirDateTime effectiveDate,
@@ -571,8 +571,8 @@ const factory MedicationDefinition.medicinalProductManufacturingBusinessOperatio
 
 const factory MedicationDefinition.medicinalProductSpecialDesignation({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   CodeableConcept type,
   CodeableConcept intendedUse,
@@ -592,8 +592,8 @@ const factory MedicationDefinition.medicinalProductPackaged({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   List<Reference> subject,
   String description,
@@ -608,8 +608,8 @@ const factory MedicationDefinition.medicinalProductPackaged({
 
 const factory MedicationDefinition.medicinalProductPackagedBatchIdentifier({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Identifier outerPackaging,
   Identifier immediatePackaging,
 
@@ -617,8 +617,8 @@ const factory MedicationDefinition.medicinalProductPackagedBatchIdentifier({
 
 const factory MedicationDefinition.medicinalProductPackagedPackageItem({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   CodeableConcept type,
   Quantity quantity,
@@ -642,8 +642,8 @@ const factory MedicationDefinition.substanceNucleicAcid({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept sequenceType,
   int numberOfSubunits,
   String areaOfHybridisation,
@@ -654,8 +654,8 @@ const factory MedicationDefinition.substanceNucleicAcid({
 
 const factory MedicationDefinition.substanceNucleicAcidSubunit({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int subunit,
   String sequence,
   int length,
@@ -669,8 +669,8 @@ const factory MedicationDefinition.substanceNucleicAcidSubunit({
 
 const factory MedicationDefinition.substanceNucleicAcidLinkage({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String connectivity,
   Identifier identifier,
   String name,
@@ -680,8 +680,8 @@ const factory MedicationDefinition.substanceNucleicAcidLinkage({
 
 const factory MedicationDefinition.substanceNucleicAcidSugar({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Identifier identifier,
   String name,
   String residueSite,
@@ -696,8 +696,8 @@ const factory MedicationDefinition.medicinalProductPharmaceutical({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   CodeableConcept administrableDoseForm,
   CodeableConcept unitOfPresentation,
@@ -711,8 +711,8 @@ const factory MedicationDefinition.medicinalProductPharmaceutical({
 
 const factory MedicationDefinition.medicinalProductPharmaceuticalCharacteristics({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   CodeableConcept status,
 
@@ -720,8 +720,8 @@ const factory MedicationDefinition.medicinalProductPharmaceuticalCharacteristics
 
 const factory MedicationDefinition.medicinalProductPharmaceuticalRouteOfAdministration({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   Quantity firstDose,
   Quantity maxSingleDose,
@@ -734,8 +734,8 @@ const factory MedicationDefinition.medicinalProductPharmaceuticalRouteOfAdminist
 
 const factory MedicationDefinition.medicinalProductPharmaceuticalTargetSpecies({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   List<MedicinalProductPharmaceuticalWithdrawalPeriod> withdrawalPeriod,
 
@@ -743,8 +743,8 @@ const factory MedicationDefinition.medicinalProductPharmaceuticalTargetSpecies({
 
 const factory MedicationDefinition.medicinalProductPharmaceuticalWithdrawalPeriod({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept tissue,
   Quantity value,
   String supportingInformation,
@@ -759,8 +759,8 @@ const factory MedicationDefinition.substancePolymer({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept clas,
   CodeableConcept geometry,
   List<CodeableConcept> copolymerConnectivity,
@@ -772,8 +772,8 @@ const factory MedicationDefinition.substancePolymer({
 
 const factory MedicationDefinition.substancePolymerMonomerSet({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept ratioType,
   List<SubstancePolymerStartingMaterial> startingMaterial,
 
@@ -781,8 +781,8 @@ const factory MedicationDefinition.substancePolymerMonomerSet({
 
 const factory MedicationDefinition.substancePolymerStartingMaterial({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept material,
   CodeableConcept type,
   bool isDefining,
@@ -792,8 +792,8 @@ const factory MedicationDefinition.substancePolymerStartingMaterial({
 
 const factory MedicationDefinition.substancePolymerRepeat({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int numberOfUnits,
   String averageMolecularFormula,
   CodeableConcept repeatUnitAmountType,
@@ -803,8 +803,8 @@ const factory MedicationDefinition.substancePolymerRepeat({
 
 const factory MedicationDefinition.substancePolymerRepeatUnit({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept orientationOfPolymerisation,
   String repeatUnit,
   SubstanceAmount amount,
@@ -815,8 +815,8 @@ const factory MedicationDefinition.substancePolymerRepeatUnit({
 
 const factory MedicationDefinition.substancePolymerDegreeOfPolymerisation({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept degree,
   SubstanceAmount amount,
 
@@ -824,8 +824,8 @@ const factory MedicationDefinition.substancePolymerDegreeOfPolymerisation({
 
 const factory MedicationDefinition.substancePolymerStructuralRepresentation({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   String representation,
   Attachment attachment,
@@ -840,8 +840,8 @@ const factory MedicationDefinition.medicinalProductAuthorization({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Reference subject,
   List<CodeableConcept> country,
@@ -864,8 +864,8 @@ const factory MedicationDefinition.medicinalProductAuthorization({
 
 const factory MedicationDefinition.medicinalProductAuthorizationJurisdictionalAuthorization({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   CodeableConcept country,
   List<CodeableConcept> jurisdiction,
@@ -876,8 +876,8 @@ const factory MedicationDefinition.medicinalProductAuthorizationJurisdictionalAu
 
 const factory MedicationDefinition.medicinalProductAuthorizationProcedure({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Identifier identifier,
   CodeableConcept type,
   Period datePeriod,
@@ -894,8 +894,8 @@ const factory MedicationDefinition.substanceProtein({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept sequenceType,
   int numberOfSubunits,
   List<String> disulfideLinkage,
@@ -905,8 +905,8 @@ const factory MedicationDefinition.substanceProtein({
 
 const factory MedicationDefinition.substanceProteinSubunit({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int subunit,
   String sequence,
   int length,
@@ -926,8 +926,8 @@ const factory MedicationDefinition.medicinalProductIndication({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Reference> subject,
   CodeableConcept diseaseSymptomProcedure,
   CodeableConcept diseaseStatus,
@@ -942,8 +942,8 @@ const factory MedicationDefinition.medicinalProductIndication({
 
 const factory MedicationDefinition.medicinalProductIndicationOtherTherapy({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept therapyRelationshipType,
   CodeableConcept medicationCodeableConcept,
   Reference medicationReference,

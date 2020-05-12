@@ -16,8 +16,8 @@ const factory Management.library({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   List<Identifier> identifier,
   String version,
@@ -61,8 +61,8 @@ const factory Management.lists({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   ListStatus status,
   ListMode mode,
@@ -81,8 +81,8 @@ const factory Management.lists({
 
 const factory Management.listEntry({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept flag,
   bool deleted,
   FhirDateTime date,
@@ -98,8 +98,8 @@ const factory Management.episodeOfCare({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   EpisodeOfCareStatus status,
   List<EpisodeOfCareStatusHistory> statusHistory,
@@ -117,8 +117,8 @@ const factory Management.episodeOfCare({
 
 const factory Management.episodeOfCareStatusHistory({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   EpisodeOfCareStatusHistoryStatus status,
   Period period,
 
@@ -126,8 +126,8 @@ const factory Management.episodeOfCareStatusHistory({
 
 const factory Management.episodeOfCareDiagnosis({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference condition,
   CodeableConcept role,
   int rank,
@@ -142,8 +142,8 @@ const factory Management.encounter({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   EncounterStatus status,
   List<EncounterStatusHistory> statusHistory,
@@ -172,8 +172,8 @@ const factory Management.encounter({
 
 const factory Management.encounterStatusHistory({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   EncounterStatusHistoryStatus status,
   Period period,
 
@@ -181,8 +181,8 @@ const factory Management.encounterStatusHistory({
 
 const factory Management.encounterClassHistory({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Coding clas,
   Period period,
 
@@ -190,8 +190,8 @@ const factory Management.encounterClassHistory({
 
 const factory Management.encounterParticipant({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<CodeableConcept> type,
   Period period,
   Reference individual,
@@ -200,8 +200,8 @@ const factory Management.encounterParticipant({
 
 const factory Management.encounterDiagnosis({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference condition,
   CodeableConcept use,
   int rank,
@@ -210,8 +210,8 @@ const factory Management.encounterDiagnosis({
 
 const factory Management.encounterHospitalization({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Identifier preAdmissionIdentifier,
   Reference origin,
   CodeableConcept admitSource,
@@ -226,8 +226,8 @@ const factory Management.encounterHospitalization({
 
 const factory Management.encounterLocation({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference location,
   EncounterLocationStatus status,
   CodeableConcept physicalType,

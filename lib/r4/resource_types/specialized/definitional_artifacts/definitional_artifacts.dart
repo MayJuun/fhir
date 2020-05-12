@@ -16,8 +16,8 @@ const factory DefinitionalArtifacts.activityDefinition({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   List<Identifier> identifier,
   String version,
@@ -76,8 +76,8 @@ const factory DefinitionalArtifacts.activityDefinition({
 
 const factory DefinitionalArtifacts.activityDefinitionParticipant({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Code type,
   CodeableConcept role,
 
@@ -85,8 +85,8 @@ const factory DefinitionalArtifacts.activityDefinitionParticipant({
 
 const factory DefinitionalArtifacts.activityDefinitionDynamicValue({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String path,
   Expression expression,
 
@@ -100,8 +100,8 @@ const factory DefinitionalArtifacts.deviceDefinition({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
   String manufacturerString,
@@ -130,8 +130,8 @@ const factory DefinitionalArtifacts.deviceDefinition({
 
 const factory DefinitionalArtifacts.deviceDefinitionUdiDeviceIdentifier({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String deviceIdentifier,
   FhirUri issuer,
   FhirUri jurisdiction,
@@ -140,8 +140,8 @@ const factory DefinitionalArtifacts.deviceDefinitionUdiDeviceIdentifier({
 
 const factory DefinitionalArtifacts.deviceDefinitionDeviceName({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String name,
   DeviceDefinitionDeviceNameType type,
 
@@ -149,8 +149,8 @@ const factory DefinitionalArtifacts.deviceDefinitionDeviceName({
 
 const factory DefinitionalArtifacts.deviceDefinitionSpecialization({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String systemType,
   String version,
 
@@ -158,8 +158,8 @@ const factory DefinitionalArtifacts.deviceDefinitionSpecialization({
 
 const factory DefinitionalArtifacts.deviceDefinitionCapability({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   List<CodeableConcept> description,
 
@@ -167,8 +167,8 @@ const factory DefinitionalArtifacts.deviceDefinitionCapability({
 
 const factory DefinitionalArtifacts.deviceDefinitionProperty({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   List<Quantity> valueQuantity,
   List<CodeableConcept> valueCode,
@@ -177,8 +177,8 @@ const factory DefinitionalArtifacts.deviceDefinitionProperty({
 
 const factory DefinitionalArtifacts.deviceDefinitionMaterial({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept substance,
   bool alternate,
   bool allergenicIndicator,
@@ -193,8 +193,8 @@ const factory DefinitionalArtifacts.eventDefinition({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   List<Identifier> identifier,
   String version,
@@ -235,8 +235,8 @@ const factory DefinitionalArtifacts.observationDefinition({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<CodeableConcept> category,
   CodeableConcept code,
   List<Identifier> identifier,
@@ -255,8 +255,8 @@ const factory DefinitionalArtifacts.observationDefinition({
 
 const factory DefinitionalArtifacts.observationDefinitionQuantitativeDetails({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept customaryUnit,
   CodeableConcept unit,
   double conversionFactor,
@@ -266,8 +266,8 @@ const factory DefinitionalArtifacts.observationDefinitionQuantitativeDetails({
 
 const factory DefinitionalArtifacts.observationDefinitionQualifiedInterval({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   ObservationDefinitionQualifiedIntervalCategory category,
   Range range,
   CodeableConcept context,
@@ -287,8 +287,8 @@ const factory DefinitionalArtifacts.specimenDefinition({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Identifier identifier,
   CodeableConcept typeCollected,
   List<CodeableConcept> patientPreparation,
@@ -300,8 +300,8 @@ const factory DefinitionalArtifacts.specimenDefinition({
 
 const factory DefinitionalArtifacts.specimenDefinitionTypeTested({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   bool isDerived,
   CodeableConcept type,
   SpecimenDefinitionTypeTestedPreference preference,
@@ -315,8 +315,8 @@ const factory DefinitionalArtifacts.specimenDefinitionTypeTested({
 
 const factory DefinitionalArtifacts.specimenDefinitionContainer({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept material,
   CodeableConcept type,
   CodeableConcept cap,
@@ -331,8 +331,8 @@ const factory DefinitionalArtifacts.specimenDefinitionContainer({
 
 const factory DefinitionalArtifacts.specimenDefinitionAdditive({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept additiveCodeableConcept,
   Reference additiveReference,
 
@@ -340,8 +340,8 @@ const factory DefinitionalArtifacts.specimenDefinitionAdditive({
 
 const factory DefinitionalArtifacts.specimenDefinitionHandling({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept temperatureQualifier,
   Range temperatureRange,
   Duration maxDuration,
@@ -357,8 +357,8 @@ const factory DefinitionalArtifacts.planDefinition({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   List<Identifier> identifier,
   String version,
@@ -396,8 +396,8 @@ const factory DefinitionalArtifacts.planDefinition({
 
 const factory DefinitionalArtifacts.planDefinitionGoal({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept category,
   CodeableConcept description,
   CodeableConcept priority,
@@ -410,8 +410,8 @@ const factory DefinitionalArtifacts.planDefinitionGoal({
 
 const factory DefinitionalArtifacts.planDefinitionTarget({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept measure,
   Quantity detailQuantity,
   Range detailRange,
@@ -422,8 +422,8 @@ const factory DefinitionalArtifacts.planDefinitionTarget({
 
 const factory DefinitionalArtifacts.planDefinitionAction({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String prefix,
   String title,
   String description,
@@ -463,8 +463,8 @@ const factory DefinitionalArtifacts.planDefinitionAction({
 
 const factory DefinitionalArtifacts.planDefinitionCondition({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   PlanDefinitionConditionKind kind,
   Expression expression,
 
@@ -472,8 +472,8 @@ const factory DefinitionalArtifacts.planDefinitionCondition({
 
 const factory DefinitionalArtifacts.planDefinitionRelatedAction({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Id actionId,
   PlanDefinitionRelatedActionRelationship relationship,
   Duration offsetDuration,
@@ -483,8 +483,8 @@ const factory DefinitionalArtifacts.planDefinitionRelatedAction({
 
 const factory DefinitionalArtifacts.planDefinitionParticipant({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   PlanDefinitionParticipantType type,
   CodeableConcept role,
 
@@ -492,8 +492,8 @@ const factory DefinitionalArtifacts.planDefinitionParticipant({
 
 const factory DefinitionalArtifacts.planDefinitionDynamicValue({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String path,
   Expression expression,
 
@@ -507,8 +507,8 @@ const factory DefinitionalArtifacts.questionnaire({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   List<Identifier> identifier,
   String version,
@@ -536,8 +536,8 @@ const factory DefinitionalArtifacts.questionnaire({
 
 const factory DefinitionalArtifacts.questionnaireItem({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String linkId,
   FhirUri definition,
   List<Coding> code,
@@ -559,8 +559,8 @@ const factory DefinitionalArtifacts.questionnaireItem({
 
 const factory DefinitionalArtifacts.questionnaireEnableWhen({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String question,
   QuestionnaireEnableWhenOperator operator,
   bool answerBoolean,
@@ -578,8 +578,8 @@ const factory DefinitionalArtifacts.questionnaireEnableWhen({
 
 const factory DefinitionalArtifacts.questionnaireAnswerOption({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int valueInteger,
   Date valueDate,
   Time valueTime,
@@ -592,8 +592,8 @@ const factory DefinitionalArtifacts.questionnaireAnswerOption({
 
 const factory DefinitionalArtifacts.questionnaireInitial({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   bool valueBoolean,
   double valueDecimal,
   int valueInteger,

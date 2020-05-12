@@ -67,9 +67,9 @@ class _$SecurityTearOff {
       AuditEventOutcome outcome,
       String outcomeDesc,
       List<dynamic> purposeOfEvent,
-      List<AuditEventAgent> agent,
+      List<dynamic> agent,
       AuditEventSource source,
-      List<AuditEventEntity> entity}) {
+      List<dynamic> entity}) {
     return AuditEvent(
       resourceType: resourceType,
       id: id,
@@ -171,7 +171,7 @@ class _$SecurityTearOff {
       String name,
       String description,
       Base64Binary query,
-      List<AuditEventDetail> detail}) {
+      List<dynamic> detail}) {
     return AuditEventEntity(
       id: id,
       extension: extension,
@@ -225,9 +225,9 @@ class _$SecurityTearOff {
       List<dynamic> organization,
       Attachment sourceAttachment,
       Reference sourceReference,
-      List<ConsentPolicy> policy,
+      List<dynamic> policy,
       CodeableConcept policyRule,
-      List<ConsentVerification> verification,
+      List<dynamic> verification,
       ConsentProvision provision}) {
     return Consent(
       resourceType: resourceType,
@@ -294,15 +294,15 @@ class _$SecurityTearOff {
       List<dynamic> modifierExtension,
       ConsentProvisionType type,
       Period period,
-      List<ConsentActor> actor,
+      List<dynamic> actor,
       List<dynamic> action,
       List<dynamic> securityLabel,
       List<dynamic> purpose,
       List<dynamic> clas,
       List<dynamic> code,
       Period dataPeriod,
-      List<ConsentData> data,
-      List<ConsentProvision> provision}) {
+      List<dynamic> data,
+      List<dynamic> provision}) {
     return ConsentProvision(
       id: id,
       extension: extension,
@@ -369,8 +369,8 @@ class _$SecurityTearOff {
       Reference location,
       List<dynamic> reason,
       CodeableConcept activity,
-      List<ProvenanceAgent> agent,
-      List<ProvenanceEntity> entity,
+      List<dynamic> agent,
+      List<dynamic> entity,
       List<dynamic> signature}) {
     return Provenance(
       resourceType: resourceType,
@@ -421,7 +421,7 @@ class _$SecurityTearOff {
       List<dynamic> modifierExtension,
       ProvenanceEntityRole role,
       Reference what,
-      List<ProvenanceAgent> agent}) {
+      List<dynamic> agent}) {
     return ProvenanceEntity(
       id: id,
       extension: extension,
@@ -461,9 +461,9 @@ mixin _$Security {
             AuditEventOutcome outcome,
             String outcomeDesc,
             List<dynamic> purposeOfEvent,
-            List<AuditEventAgent> agent,
+            List<dynamic> agent,
             AuditEventSource source,
-            List<AuditEventEntity> entity),
+            List<dynamic> entity),
     @required
         Result auditEventAgent(
             String id,
@@ -508,7 +508,7 @@ mixin _$Security {
             String name,
             String description,
             Base64Binary query,
-            List<AuditEventDetail> detail),
+            List<dynamic> detail),
     @required
         Result auditEventDetail(
             String id,
@@ -538,9 +538,9 @@ mixin _$Security {
             List<dynamic> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<ConsentPolicy> policy,
+            List<dynamic> policy,
             CodeableConcept policyRule,
-            List<ConsentVerification> verification,
+            List<dynamic> verification,
             ConsentProvision provision),
     @required
         Result consentPolicy(String id, List<dynamic> extension,
@@ -560,15 +560,15 @@ mixin _$Security {
             List<dynamic> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<ConsentActor> actor,
+            List<dynamic> actor,
             List<dynamic> action,
             List<dynamic> securityLabel,
             List<dynamic> purpose,
             List<dynamic> clas,
             List<dynamic> code,
             Period dataPeriod,
-            List<ConsentData> data,
-            List<ConsentProvision> provision),
+            List<dynamic> data,
+            List<dynamic> provision),
     @required
         Result consentActor(
             String id,
@@ -602,8 +602,8 @@ mixin _$Security {
             Reference location,
             List<dynamic> reason,
             CodeableConcept activity,
-            List<ProvenanceAgent> agent,
-            List<ProvenanceEntity> entity,
+            List<dynamic> agent,
+            List<dynamic> entity,
             List<dynamic> signature),
     @required
         Result provenanceAgent(
@@ -621,7 +621,7 @@ mixin _$Security {
             List<dynamic> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<ProvenanceAgent> agent),
+            List<dynamic> agent),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
@@ -643,9 +643,9 @@ mixin _$Security {
         AuditEventOutcome outcome,
         String outcomeDesc,
         List<dynamic> purposeOfEvent,
-        List<AuditEventAgent> agent,
+        List<dynamic> agent,
         AuditEventSource source,
-        List<AuditEventEntity> entity),
+        List<dynamic> entity),
     Result auditEventAgent(
         String id,
         List<dynamic> extension,
@@ -686,7 +686,7 @@ mixin _$Security {
         String name,
         String description,
         Base64Binary query,
-        List<AuditEventDetail> detail),
+        List<dynamic> detail),
     Result auditEventDetail(
         String id,
         List<dynamic> extension,
@@ -714,9 +714,9 @@ mixin _$Security {
         List<dynamic> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<ConsentPolicy> policy,
+        List<dynamic> policy,
         CodeableConcept policyRule,
-        List<ConsentVerification> verification,
+        List<dynamic> verification,
         ConsentProvision provision),
     Result consentPolicy(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
@@ -733,15 +733,15 @@ mixin _$Security {
         List<dynamic> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<ConsentActor> actor,
+        List<dynamic> actor,
         List<dynamic> action,
         List<dynamic> securityLabel,
         List<dynamic> purpose,
         List<dynamic> clas,
         List<dynamic> code,
         Period dataPeriod,
-        List<ConsentData> data,
-        List<ConsentProvision> provision),
+        List<dynamic> data,
+        List<dynamic> provision),
     Result consentActor(
         String id,
         List<dynamic> extension,
@@ -772,8 +772,8 @@ mixin _$Security {
         Reference location,
         List<dynamic> reason,
         CodeableConcept activity,
-        List<ProvenanceAgent> agent,
-        List<ProvenanceEntity> entity,
+        List<dynamic> agent,
+        List<dynamic> entity,
         List<dynamic> signature),
     Result provenanceAgent(
         String id,
@@ -789,7 +789,7 @@ mixin _$Security {
         List<dynamic> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<ProvenanceAgent> agent),
+        List<dynamic> agent),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -884,9 +884,9 @@ abstract class $AuditEventCopyWith<$Res> implements $SecurityCopyWith<$Res> {
       AuditEventOutcome outcome,
       String outcomeDesc,
       List<dynamic> purposeOfEvent,
-      List<AuditEventAgent> agent,
+      List<dynamic> agent,
       AuditEventSource source,
-      List<AuditEventEntity> entity});
+      List<dynamic> entity});
 }
 
 class _$AuditEventCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -950,10 +950,9 @@ class _$AuditEventCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
       purposeOfEvent: purposeOfEvent == freezed
           ? _value.purposeOfEvent
           : purposeOfEvent as List<dynamic>,
-      agent: agent == freezed ? _value.agent : agent as List<AuditEventAgent>,
+      agent: agent == freezed ? _value.agent : agent as List<dynamic>,
       source: source == freezed ? _value.source : source as AuditEventSource,
-      entity:
-          entity == freezed ? _value.entity : entity as List<AuditEventEntity>,
+      entity: entity == freezed ? _value.entity : entity as List<dynamic>,
     ));
   }
 }
@@ -1020,11 +1019,11 @@ class _$AuditEvent implements AuditEvent {
   @override
   final List<dynamic> purposeOfEvent;
   @override
-  final List<AuditEventAgent> agent;
+  final List<dynamic> agent;
   @override
   final AuditEventSource source;
   @override
-  final List<AuditEventEntity> entity;
+  final List<dynamic> entity;
 
   @override
   String toString() {
@@ -1138,9 +1137,9 @@ class _$AuditEvent implements AuditEvent {
             AuditEventOutcome outcome,
             String outcomeDesc,
             List<dynamic> purposeOfEvent,
-            List<AuditEventAgent> agent,
+            List<dynamic> agent,
             AuditEventSource source,
-            List<AuditEventEntity> entity),
+            List<dynamic> entity),
     @required
         Result auditEventAgent(
             String id,
@@ -1185,7 +1184,7 @@ class _$AuditEvent implements AuditEvent {
             String name,
             String description,
             Base64Binary query,
-            List<AuditEventDetail> detail),
+            List<dynamic> detail),
     @required
         Result auditEventDetail(
             String id,
@@ -1215,9 +1214,9 @@ class _$AuditEvent implements AuditEvent {
             List<dynamic> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<ConsentPolicy> policy,
+            List<dynamic> policy,
             CodeableConcept policyRule,
-            List<ConsentVerification> verification,
+            List<dynamic> verification,
             ConsentProvision provision),
     @required
         Result consentPolicy(String id, List<dynamic> extension,
@@ -1237,15 +1236,15 @@ class _$AuditEvent implements AuditEvent {
             List<dynamic> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<ConsentActor> actor,
+            List<dynamic> actor,
             List<dynamic> action,
             List<dynamic> securityLabel,
             List<dynamic> purpose,
             List<dynamic> clas,
             List<dynamic> code,
             Period dataPeriod,
-            List<ConsentData> data,
-            List<ConsentProvision> provision),
+            List<dynamic> data,
+            List<dynamic> provision),
     @required
         Result consentActor(
             String id,
@@ -1279,8 +1278,8 @@ class _$AuditEvent implements AuditEvent {
             Reference location,
             List<dynamic> reason,
             CodeableConcept activity,
-            List<ProvenanceAgent> agent,
-            List<ProvenanceEntity> entity,
+            List<dynamic> agent,
+            List<dynamic> entity,
             List<dynamic> signature),
     @required
         Result provenanceAgent(
@@ -1298,7 +1297,7 @@ class _$AuditEvent implements AuditEvent {
             List<dynamic> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<ProvenanceAgent> agent),
+            List<dynamic> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -1359,9 +1358,9 @@ class _$AuditEvent implements AuditEvent {
         AuditEventOutcome outcome,
         String outcomeDesc,
         List<dynamic> purposeOfEvent,
-        List<AuditEventAgent> agent,
+        List<dynamic> agent,
         AuditEventSource source,
-        List<AuditEventEntity> entity),
+        List<dynamic> entity),
     Result auditEventAgent(
         String id,
         List<dynamic> extension,
@@ -1402,7 +1401,7 @@ class _$AuditEvent implements AuditEvent {
         String name,
         String description,
         Base64Binary query,
-        List<AuditEventDetail> detail),
+        List<dynamic> detail),
     Result auditEventDetail(
         String id,
         List<dynamic> extension,
@@ -1430,9 +1429,9 @@ class _$AuditEvent implements AuditEvent {
         List<dynamic> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<ConsentPolicy> policy,
+        List<dynamic> policy,
         CodeableConcept policyRule,
-        List<ConsentVerification> verification,
+        List<dynamic> verification,
         ConsentProvision provision),
     Result consentPolicy(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
@@ -1449,15 +1448,15 @@ class _$AuditEvent implements AuditEvent {
         List<dynamic> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<ConsentActor> actor,
+        List<dynamic> actor,
         List<dynamic> action,
         List<dynamic> securityLabel,
         List<dynamic> purpose,
         List<dynamic> clas,
         List<dynamic> code,
         Period dataPeriod,
-        List<ConsentData> data,
-        List<ConsentProvision> provision),
+        List<dynamic> data,
+        List<dynamic> provision),
     Result consentActor(
         String id,
         List<dynamic> extension,
@@ -1488,8 +1487,8 @@ class _$AuditEvent implements AuditEvent {
         Reference location,
         List<dynamic> reason,
         CodeableConcept activity,
-        List<ProvenanceAgent> agent,
-        List<ProvenanceEntity> entity,
+        List<dynamic> agent,
+        List<dynamic> entity,
         List<dynamic> signature),
     Result provenanceAgent(
         String id,
@@ -1505,7 +1504,7 @@ class _$AuditEvent implements AuditEvent {
         List<dynamic> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<ProvenanceAgent> agent),
+        List<dynamic> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1624,9 +1623,9 @@ abstract class AuditEvent implements Security {
       AuditEventOutcome outcome,
       String outcomeDesc,
       List<dynamic> purposeOfEvent,
-      List<AuditEventAgent> agent,
+      List<dynamic> agent,
       AuditEventSource source,
-      List<AuditEventEntity> entity}) = _$AuditEvent;
+      List<dynamic> entity}) = _$AuditEvent;
 
   factory AuditEvent.fromJson(Map<String, dynamic> json) =
       _$AuditEvent.fromJson;
@@ -1650,9 +1649,9 @@ abstract class AuditEvent implements Security {
   AuditEventOutcome get outcome;
   String get outcomeDesc;
   List<dynamic> get purposeOfEvent;
-  List<AuditEventAgent> get agent;
+  List<dynamic> get agent;
   AuditEventSource get source;
-  List<AuditEventEntity> get entity;
+  List<dynamic> get entity;
   @override
   $AuditEventCopyWith<AuditEvent> get copyWith;
 }
@@ -1870,9 +1869,9 @@ class _$AuditEventAgent implements AuditEventAgent {
             AuditEventOutcome outcome,
             String outcomeDesc,
             List<dynamic> purposeOfEvent,
-            List<AuditEventAgent> agent,
+            List<dynamic> agent,
             AuditEventSource source,
-            List<AuditEventEntity> entity),
+            List<dynamic> entity),
     @required
         Result auditEventAgent(
             String id,
@@ -1917,7 +1916,7 @@ class _$AuditEventAgent implements AuditEventAgent {
             String name,
             String description,
             Base64Binary query,
-            List<AuditEventDetail> detail),
+            List<dynamic> detail),
     @required
         Result auditEventDetail(
             String id,
@@ -1947,9 +1946,9 @@ class _$AuditEventAgent implements AuditEventAgent {
             List<dynamic> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<ConsentPolicy> policy,
+            List<dynamic> policy,
             CodeableConcept policyRule,
-            List<ConsentVerification> verification,
+            List<dynamic> verification,
             ConsentProvision provision),
     @required
         Result consentPolicy(String id, List<dynamic> extension,
@@ -1969,15 +1968,15 @@ class _$AuditEventAgent implements AuditEventAgent {
             List<dynamic> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<ConsentActor> actor,
+            List<dynamic> actor,
             List<dynamic> action,
             List<dynamic> securityLabel,
             List<dynamic> purpose,
             List<dynamic> clas,
             List<dynamic> code,
             Period dataPeriod,
-            List<ConsentData> data,
-            List<ConsentProvision> provision),
+            List<dynamic> data,
+            List<dynamic> provision),
     @required
         Result consentActor(
             String id,
@@ -2011,8 +2010,8 @@ class _$AuditEventAgent implements AuditEventAgent {
             Reference location,
             List<dynamic> reason,
             CodeableConcept activity,
-            List<ProvenanceAgent> agent,
-            List<ProvenanceEntity> entity,
+            List<dynamic> agent,
+            List<dynamic> entity,
             List<dynamic> signature),
     @required
         Result provenanceAgent(
@@ -2030,7 +2029,7 @@ class _$AuditEventAgent implements AuditEventAgent {
             List<dynamic> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<ProvenanceAgent> agent),
+            List<dynamic> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -2072,9 +2071,9 @@ class _$AuditEventAgent implements AuditEventAgent {
         AuditEventOutcome outcome,
         String outcomeDesc,
         List<dynamic> purposeOfEvent,
-        List<AuditEventAgent> agent,
+        List<dynamic> agent,
         AuditEventSource source,
-        List<AuditEventEntity> entity),
+        List<dynamic> entity),
     Result auditEventAgent(
         String id,
         List<dynamic> extension,
@@ -2115,7 +2114,7 @@ class _$AuditEventAgent implements AuditEventAgent {
         String name,
         String description,
         Base64Binary query,
-        List<AuditEventDetail> detail),
+        List<dynamic> detail),
     Result auditEventDetail(
         String id,
         List<dynamic> extension,
@@ -2143,9 +2142,9 @@ class _$AuditEventAgent implements AuditEventAgent {
         List<dynamic> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<ConsentPolicy> policy,
+        List<dynamic> policy,
         CodeableConcept policyRule,
-        List<ConsentVerification> verification,
+        List<dynamic> verification,
         ConsentProvision provision),
     Result consentPolicy(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
@@ -2162,15 +2161,15 @@ class _$AuditEventAgent implements AuditEventAgent {
         List<dynamic> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<ConsentActor> actor,
+        List<dynamic> actor,
         List<dynamic> action,
         List<dynamic> securityLabel,
         List<dynamic> purpose,
         List<dynamic> clas,
         List<dynamic> code,
         Period dataPeriod,
-        List<ConsentData> data,
-        List<ConsentProvision> provision),
+        List<dynamic> data,
+        List<dynamic> provision),
     Result consentActor(
         String id,
         List<dynamic> extension,
@@ -2201,8 +2200,8 @@ class _$AuditEventAgent implements AuditEventAgent {
         Reference location,
         List<dynamic> reason,
         CodeableConcept activity,
-        List<ProvenanceAgent> agent,
-        List<ProvenanceEntity> entity,
+        List<dynamic> agent,
+        List<dynamic> entity,
         List<dynamic> signature),
     Result provenanceAgent(
         String id,
@@ -2218,7 +2217,7 @@ class _$AuditEventAgent implements AuditEventAgent {
         List<dynamic> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<ProvenanceAgent> agent),
+        List<dynamic> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2478,9 +2477,9 @@ class _$AuditEventNetwork implements AuditEventNetwork {
             AuditEventOutcome outcome,
             String outcomeDesc,
             List<dynamic> purposeOfEvent,
-            List<AuditEventAgent> agent,
+            List<dynamic> agent,
             AuditEventSource source,
-            List<AuditEventEntity> entity),
+            List<dynamic> entity),
     @required
         Result auditEventAgent(
             String id,
@@ -2525,7 +2524,7 @@ class _$AuditEventNetwork implements AuditEventNetwork {
             String name,
             String description,
             Base64Binary query,
-            List<AuditEventDetail> detail),
+            List<dynamic> detail),
     @required
         Result auditEventDetail(
             String id,
@@ -2555,9 +2554,9 @@ class _$AuditEventNetwork implements AuditEventNetwork {
             List<dynamic> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<ConsentPolicy> policy,
+            List<dynamic> policy,
             CodeableConcept policyRule,
-            List<ConsentVerification> verification,
+            List<dynamic> verification,
             ConsentProvision provision),
     @required
         Result consentPolicy(String id, List<dynamic> extension,
@@ -2577,15 +2576,15 @@ class _$AuditEventNetwork implements AuditEventNetwork {
             List<dynamic> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<ConsentActor> actor,
+            List<dynamic> actor,
             List<dynamic> action,
             List<dynamic> securityLabel,
             List<dynamic> purpose,
             List<dynamic> clas,
             List<dynamic> code,
             Period dataPeriod,
-            List<ConsentData> data,
-            List<ConsentProvision> provision),
+            List<dynamic> data,
+            List<dynamic> provision),
     @required
         Result consentActor(
             String id,
@@ -2619,8 +2618,8 @@ class _$AuditEventNetwork implements AuditEventNetwork {
             Reference location,
             List<dynamic> reason,
             CodeableConcept activity,
-            List<ProvenanceAgent> agent,
-            List<ProvenanceEntity> entity,
+            List<dynamic> agent,
+            List<dynamic> entity,
             List<dynamic> signature),
     @required
         Result provenanceAgent(
@@ -2638,7 +2637,7 @@ class _$AuditEventNetwork implements AuditEventNetwork {
             List<dynamic> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<ProvenanceAgent> agent),
+            List<dynamic> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -2679,9 +2678,9 @@ class _$AuditEventNetwork implements AuditEventNetwork {
         AuditEventOutcome outcome,
         String outcomeDesc,
         List<dynamic> purposeOfEvent,
-        List<AuditEventAgent> agent,
+        List<dynamic> agent,
         AuditEventSource source,
-        List<AuditEventEntity> entity),
+        List<dynamic> entity),
     Result auditEventAgent(
         String id,
         List<dynamic> extension,
@@ -2722,7 +2721,7 @@ class _$AuditEventNetwork implements AuditEventNetwork {
         String name,
         String description,
         Base64Binary query,
-        List<AuditEventDetail> detail),
+        List<dynamic> detail),
     Result auditEventDetail(
         String id,
         List<dynamic> extension,
@@ -2750,9 +2749,9 @@ class _$AuditEventNetwork implements AuditEventNetwork {
         List<dynamic> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<ConsentPolicy> policy,
+        List<dynamic> policy,
         CodeableConcept policyRule,
-        List<ConsentVerification> verification,
+        List<dynamic> verification,
         ConsentProvision provision),
     Result consentPolicy(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
@@ -2769,15 +2768,15 @@ class _$AuditEventNetwork implements AuditEventNetwork {
         List<dynamic> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<ConsentActor> actor,
+        List<dynamic> actor,
         List<dynamic> action,
         List<dynamic> securityLabel,
         List<dynamic> purpose,
         List<dynamic> clas,
         List<dynamic> code,
         Period dataPeriod,
-        List<ConsentData> data,
-        List<ConsentProvision> provision),
+        List<dynamic> data,
+        List<dynamic> provision),
     Result consentActor(
         String id,
         List<dynamic> extension,
@@ -2808,8 +2807,8 @@ class _$AuditEventNetwork implements AuditEventNetwork {
         Reference location,
         List<dynamic> reason,
         CodeableConcept activity,
-        List<ProvenanceAgent> agent,
-        List<ProvenanceEntity> entity,
+        List<dynamic> agent,
+        List<dynamic> entity,
         List<dynamic> signature),
     Result provenanceAgent(
         String id,
@@ -2825,7 +2824,7 @@ class _$AuditEventNetwork implements AuditEventNetwork {
         List<dynamic> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<ProvenanceAgent> agent),
+        List<dynamic> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3063,9 +3062,9 @@ class _$AuditEventSource implements AuditEventSource {
             AuditEventOutcome outcome,
             String outcomeDesc,
             List<dynamic> purposeOfEvent,
-            List<AuditEventAgent> agent,
+            List<dynamic> agent,
             AuditEventSource source,
-            List<AuditEventEntity> entity),
+            List<dynamic> entity),
     @required
         Result auditEventAgent(
             String id,
@@ -3110,7 +3109,7 @@ class _$AuditEventSource implements AuditEventSource {
             String name,
             String description,
             Base64Binary query,
-            List<AuditEventDetail> detail),
+            List<dynamic> detail),
     @required
         Result auditEventDetail(
             String id,
@@ -3140,9 +3139,9 @@ class _$AuditEventSource implements AuditEventSource {
             List<dynamic> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<ConsentPolicy> policy,
+            List<dynamic> policy,
             CodeableConcept policyRule,
-            List<ConsentVerification> verification,
+            List<dynamic> verification,
             ConsentProvision provision),
     @required
         Result consentPolicy(String id, List<dynamic> extension,
@@ -3162,15 +3161,15 @@ class _$AuditEventSource implements AuditEventSource {
             List<dynamic> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<ConsentActor> actor,
+            List<dynamic> actor,
             List<dynamic> action,
             List<dynamic> securityLabel,
             List<dynamic> purpose,
             List<dynamic> clas,
             List<dynamic> code,
             Period dataPeriod,
-            List<ConsentData> data,
-            List<ConsentProvision> provision),
+            List<dynamic> data,
+            List<dynamic> provision),
     @required
         Result consentActor(
             String id,
@@ -3204,8 +3203,8 @@ class _$AuditEventSource implements AuditEventSource {
             Reference location,
             List<dynamic> reason,
             CodeableConcept activity,
-            List<ProvenanceAgent> agent,
-            List<ProvenanceEntity> entity,
+            List<dynamic> agent,
+            List<dynamic> entity,
             List<dynamic> signature),
     @required
         Result provenanceAgent(
@@ -3223,7 +3222,7 @@ class _$AuditEventSource implements AuditEventSource {
             List<dynamic> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<ProvenanceAgent> agent),
+            List<dynamic> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -3265,9 +3264,9 @@ class _$AuditEventSource implements AuditEventSource {
         AuditEventOutcome outcome,
         String outcomeDesc,
         List<dynamic> purposeOfEvent,
-        List<AuditEventAgent> agent,
+        List<dynamic> agent,
         AuditEventSource source,
-        List<AuditEventEntity> entity),
+        List<dynamic> entity),
     Result auditEventAgent(
         String id,
         List<dynamic> extension,
@@ -3308,7 +3307,7 @@ class _$AuditEventSource implements AuditEventSource {
         String name,
         String description,
         Base64Binary query,
-        List<AuditEventDetail> detail),
+        List<dynamic> detail),
     Result auditEventDetail(
         String id,
         List<dynamic> extension,
@@ -3336,9 +3335,9 @@ class _$AuditEventSource implements AuditEventSource {
         List<dynamic> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<ConsentPolicy> policy,
+        List<dynamic> policy,
         CodeableConcept policyRule,
-        List<ConsentVerification> verification,
+        List<dynamic> verification,
         ConsentProvision provision),
     Result consentPolicy(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
@@ -3355,15 +3354,15 @@ class _$AuditEventSource implements AuditEventSource {
         List<dynamic> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<ConsentActor> actor,
+        List<dynamic> actor,
         List<dynamic> action,
         List<dynamic> securityLabel,
         List<dynamic> purpose,
         List<dynamic> clas,
         List<dynamic> code,
         Period dataPeriod,
-        List<ConsentData> data,
-        List<ConsentProvision> provision),
+        List<dynamic> data,
+        List<dynamic> provision),
     Result consentActor(
         String id,
         List<dynamic> extension,
@@ -3394,8 +3393,8 @@ class _$AuditEventSource implements AuditEventSource {
         Reference location,
         List<dynamic> reason,
         CodeableConcept activity,
-        List<ProvenanceAgent> agent,
-        List<ProvenanceEntity> entity,
+        List<dynamic> agent,
+        List<dynamic> entity,
         List<dynamic> signature),
     Result provenanceAgent(
         String id,
@@ -3411,7 +3410,7 @@ class _$AuditEventSource implements AuditEventSource {
         List<dynamic> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<ProvenanceAgent> agent),
+        List<dynamic> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3535,7 +3534,7 @@ abstract class $AuditEventEntityCopyWith<$Res>
       String name,
       String description,
       Base64Binary query,
-      List<AuditEventDetail> detail});
+      List<dynamic> detail});
 }
 
 class _$AuditEventEntityCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -3580,8 +3579,7 @@ class _$AuditEventEntityCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
       description:
           description == freezed ? _value.description : description as String,
       query: query == freezed ? _value.query : query as Base64Binary,
-      detail:
-          detail == freezed ? _value.detail : detail as List<AuditEventDetail>,
+      detail: detail == freezed ? _value.detail : detail as List<dynamic>,
     ));
   }
 }
@@ -3628,7 +3626,7 @@ class _$AuditEventEntity implements AuditEventEntity {
   @override
   final Base64Binary query;
   @override
-  final List<AuditEventDetail> detail;
+  final List<dynamic> detail;
 
   @override
   String toString() {
@@ -3712,9 +3710,9 @@ class _$AuditEventEntity implements AuditEventEntity {
             AuditEventOutcome outcome,
             String outcomeDesc,
             List<dynamic> purposeOfEvent,
-            List<AuditEventAgent> agent,
+            List<dynamic> agent,
             AuditEventSource source,
-            List<AuditEventEntity> entity),
+            List<dynamic> entity),
     @required
         Result auditEventAgent(
             String id,
@@ -3759,7 +3757,7 @@ class _$AuditEventEntity implements AuditEventEntity {
             String name,
             String description,
             Base64Binary query,
-            List<AuditEventDetail> detail),
+            List<dynamic> detail),
     @required
         Result auditEventDetail(
             String id,
@@ -3789,9 +3787,9 @@ class _$AuditEventEntity implements AuditEventEntity {
             List<dynamic> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<ConsentPolicy> policy,
+            List<dynamic> policy,
             CodeableConcept policyRule,
-            List<ConsentVerification> verification,
+            List<dynamic> verification,
             ConsentProvision provision),
     @required
         Result consentPolicy(String id, List<dynamic> extension,
@@ -3811,15 +3809,15 @@ class _$AuditEventEntity implements AuditEventEntity {
             List<dynamic> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<ConsentActor> actor,
+            List<dynamic> actor,
             List<dynamic> action,
             List<dynamic> securityLabel,
             List<dynamic> purpose,
             List<dynamic> clas,
             List<dynamic> code,
             Period dataPeriod,
-            List<ConsentData> data,
-            List<ConsentProvision> provision),
+            List<dynamic> data,
+            List<dynamic> provision),
     @required
         Result consentActor(
             String id,
@@ -3853,8 +3851,8 @@ class _$AuditEventEntity implements AuditEventEntity {
             Reference location,
             List<dynamic> reason,
             CodeableConcept activity,
-            List<ProvenanceAgent> agent,
-            List<ProvenanceEntity> entity,
+            List<dynamic> agent,
+            List<dynamic> entity,
             List<dynamic> signature),
     @required
         Result provenanceAgent(
@@ -3872,7 +3870,7 @@ class _$AuditEventEntity implements AuditEventEntity {
             List<dynamic> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<ProvenanceAgent> agent),
+            List<dynamic> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -3914,9 +3912,9 @@ class _$AuditEventEntity implements AuditEventEntity {
         AuditEventOutcome outcome,
         String outcomeDesc,
         List<dynamic> purposeOfEvent,
-        List<AuditEventAgent> agent,
+        List<dynamic> agent,
         AuditEventSource source,
-        List<AuditEventEntity> entity),
+        List<dynamic> entity),
     Result auditEventAgent(
         String id,
         List<dynamic> extension,
@@ -3957,7 +3955,7 @@ class _$AuditEventEntity implements AuditEventEntity {
         String name,
         String description,
         Base64Binary query,
-        List<AuditEventDetail> detail),
+        List<dynamic> detail),
     Result auditEventDetail(
         String id,
         List<dynamic> extension,
@@ -3985,9 +3983,9 @@ class _$AuditEventEntity implements AuditEventEntity {
         List<dynamic> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<ConsentPolicy> policy,
+        List<dynamic> policy,
         CodeableConcept policyRule,
-        List<ConsentVerification> verification,
+        List<dynamic> verification,
         ConsentProvision provision),
     Result consentPolicy(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
@@ -4004,15 +4002,15 @@ class _$AuditEventEntity implements AuditEventEntity {
         List<dynamic> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<ConsentActor> actor,
+        List<dynamic> actor,
         List<dynamic> action,
         List<dynamic> securityLabel,
         List<dynamic> purpose,
         List<dynamic> clas,
         List<dynamic> code,
         Period dataPeriod,
-        List<ConsentData> data,
-        List<ConsentProvision> provision),
+        List<dynamic> data,
+        List<dynamic> provision),
     Result consentActor(
         String id,
         List<dynamic> extension,
@@ -4043,8 +4041,8 @@ class _$AuditEventEntity implements AuditEventEntity {
         Reference location,
         List<dynamic> reason,
         CodeableConcept activity,
-        List<ProvenanceAgent> agent,
-        List<ProvenanceEntity> entity,
+        List<dynamic> agent,
+        List<dynamic> entity,
         List<dynamic> signature),
     Result provenanceAgent(
         String id,
@@ -4060,7 +4058,7 @@ class _$AuditEventEntity implements AuditEventEntity {
         List<dynamic> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<ProvenanceAgent> agent),
+        List<dynamic> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4155,7 +4153,7 @@ abstract class AuditEventEntity implements Security {
       String name,
       String description,
       Base64Binary query,
-      List<AuditEventDetail> detail}) = _$AuditEventEntity;
+      List<dynamic> detail}) = _$AuditEventEntity;
 
   factory AuditEventEntity.fromJson(Map<String, dynamic> json) =
       _$AuditEventEntity.fromJson;
@@ -4173,7 +4171,7 @@ abstract class AuditEventEntity implements Security {
   String get name;
   String get description;
   Base64Binary get query;
-  List<AuditEventDetail> get detail;
+  List<dynamic> get detail;
   @override
   $AuditEventEntityCopyWith<AuditEventEntity> get copyWith;
 }
@@ -4317,9 +4315,9 @@ class _$AuditEventDetail implements AuditEventDetail {
             AuditEventOutcome outcome,
             String outcomeDesc,
             List<dynamic> purposeOfEvent,
-            List<AuditEventAgent> agent,
+            List<dynamic> agent,
             AuditEventSource source,
-            List<AuditEventEntity> entity),
+            List<dynamic> entity),
     @required
         Result auditEventAgent(
             String id,
@@ -4364,7 +4362,7 @@ class _$AuditEventDetail implements AuditEventDetail {
             String name,
             String description,
             Base64Binary query,
-            List<AuditEventDetail> detail),
+            List<dynamic> detail),
     @required
         Result auditEventDetail(
             String id,
@@ -4394,9 +4392,9 @@ class _$AuditEventDetail implements AuditEventDetail {
             List<dynamic> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<ConsentPolicy> policy,
+            List<dynamic> policy,
             CodeableConcept policyRule,
-            List<ConsentVerification> verification,
+            List<dynamic> verification,
             ConsentProvision provision),
     @required
         Result consentPolicy(String id, List<dynamic> extension,
@@ -4416,15 +4414,15 @@ class _$AuditEventDetail implements AuditEventDetail {
             List<dynamic> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<ConsentActor> actor,
+            List<dynamic> actor,
             List<dynamic> action,
             List<dynamic> securityLabel,
             List<dynamic> purpose,
             List<dynamic> clas,
             List<dynamic> code,
             Period dataPeriod,
-            List<ConsentData> data,
-            List<ConsentProvision> provision),
+            List<dynamic> data,
+            List<dynamic> provision),
     @required
         Result consentActor(
             String id,
@@ -4458,8 +4456,8 @@ class _$AuditEventDetail implements AuditEventDetail {
             Reference location,
             List<dynamic> reason,
             CodeableConcept activity,
-            List<ProvenanceAgent> agent,
-            List<ProvenanceEntity> entity,
+            List<dynamic> agent,
+            List<dynamic> entity,
             List<dynamic> signature),
     @required
         Result provenanceAgent(
@@ -4477,7 +4475,7 @@ class _$AuditEventDetail implements AuditEventDetail {
             List<dynamic> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<ProvenanceAgent> agent),
+            List<dynamic> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -4519,9 +4517,9 @@ class _$AuditEventDetail implements AuditEventDetail {
         AuditEventOutcome outcome,
         String outcomeDesc,
         List<dynamic> purposeOfEvent,
-        List<AuditEventAgent> agent,
+        List<dynamic> agent,
         AuditEventSource source,
-        List<AuditEventEntity> entity),
+        List<dynamic> entity),
     Result auditEventAgent(
         String id,
         List<dynamic> extension,
@@ -4562,7 +4560,7 @@ class _$AuditEventDetail implements AuditEventDetail {
         String name,
         String description,
         Base64Binary query,
-        List<AuditEventDetail> detail),
+        List<dynamic> detail),
     Result auditEventDetail(
         String id,
         List<dynamic> extension,
@@ -4590,9 +4588,9 @@ class _$AuditEventDetail implements AuditEventDetail {
         List<dynamic> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<ConsentPolicy> policy,
+        List<dynamic> policy,
         CodeableConcept policyRule,
-        List<ConsentVerification> verification,
+        List<dynamic> verification,
         ConsentProvision provision),
     Result consentPolicy(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
@@ -4609,15 +4607,15 @@ class _$AuditEventDetail implements AuditEventDetail {
         List<dynamic> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<ConsentActor> actor,
+        List<dynamic> actor,
         List<dynamic> action,
         List<dynamic> securityLabel,
         List<dynamic> purpose,
         List<dynamic> clas,
         List<dynamic> code,
         Period dataPeriod,
-        List<ConsentData> data,
-        List<ConsentProvision> provision),
+        List<dynamic> data,
+        List<dynamic> provision),
     Result consentActor(
         String id,
         List<dynamic> extension,
@@ -4648,8 +4646,8 @@ class _$AuditEventDetail implements AuditEventDetail {
         Reference location,
         List<dynamic> reason,
         CodeableConcept activity,
-        List<ProvenanceAgent> agent,
-        List<ProvenanceEntity> entity,
+        List<dynamic> agent,
+        List<dynamic> entity,
         List<dynamic> signature),
     Result provenanceAgent(
         String id,
@@ -4665,7 +4663,7 @@ class _$AuditEventDetail implements AuditEventDetail {
         List<dynamic> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<ProvenanceAgent> agent),
+        List<dynamic> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4795,9 +4793,9 @@ abstract class $ConsentCopyWith<$Res> implements $SecurityCopyWith<$Res> {
       List<dynamic> organization,
       Attachment sourceAttachment,
       Reference sourceReference,
-      List<ConsentPolicy> policy,
+      List<dynamic> policy,
       CodeableConcept policyRule,
-      List<ConsentVerification> verification,
+      List<dynamic> verification,
       ConsentProvision provision});
 }
 
@@ -4874,13 +4872,13 @@ class _$ConsentCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
       sourceReference: sourceReference == freezed
           ? _value.sourceReference
           : sourceReference as Reference,
-      policy: policy == freezed ? _value.policy : policy as List<ConsentPolicy>,
+      policy: policy == freezed ? _value.policy : policy as List<dynamic>,
       policyRule: policyRule == freezed
           ? _value.policyRule
           : policyRule as CodeableConcept,
       verification: verification == freezed
           ? _value.verification
-          : verification as List<ConsentVerification>,
+          : verification as List<dynamic>,
       provision: provision == freezed
           ? _value.provision
           : provision as ConsentProvision,
@@ -4957,11 +4955,11 @@ class _$Consent implements Consent {
   @override
   final Reference sourceReference;
   @override
-  final List<ConsentPolicy> policy;
+  final List<dynamic> policy;
   @override
   final CodeableConcept policyRule;
   @override
-  final List<ConsentVerification> verification;
+  final List<dynamic> verification;
   @override
   final ConsentProvision provision;
 
@@ -5092,9 +5090,9 @@ class _$Consent implements Consent {
             AuditEventOutcome outcome,
             String outcomeDesc,
             List<dynamic> purposeOfEvent,
-            List<AuditEventAgent> agent,
+            List<dynamic> agent,
             AuditEventSource source,
-            List<AuditEventEntity> entity),
+            List<dynamic> entity),
     @required
         Result auditEventAgent(
             String id,
@@ -5139,7 +5137,7 @@ class _$Consent implements Consent {
             String name,
             String description,
             Base64Binary query,
-            List<AuditEventDetail> detail),
+            List<dynamic> detail),
     @required
         Result auditEventDetail(
             String id,
@@ -5169,9 +5167,9 @@ class _$Consent implements Consent {
             List<dynamic> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<ConsentPolicy> policy,
+            List<dynamic> policy,
             CodeableConcept policyRule,
-            List<ConsentVerification> verification,
+            List<dynamic> verification,
             ConsentProvision provision),
     @required
         Result consentPolicy(String id, List<dynamic> extension,
@@ -5191,15 +5189,15 @@ class _$Consent implements Consent {
             List<dynamic> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<ConsentActor> actor,
+            List<dynamic> actor,
             List<dynamic> action,
             List<dynamic> securityLabel,
             List<dynamic> purpose,
             List<dynamic> clas,
             List<dynamic> code,
             Period dataPeriod,
-            List<ConsentData> data,
-            List<ConsentProvision> provision),
+            List<dynamic> data,
+            List<dynamic> provision),
     @required
         Result consentActor(
             String id,
@@ -5233,8 +5231,8 @@ class _$Consent implements Consent {
             Reference location,
             List<dynamic> reason,
             CodeableConcept activity,
-            List<ProvenanceAgent> agent,
-            List<ProvenanceEntity> entity,
+            List<dynamic> agent,
+            List<dynamic> entity,
             List<dynamic> signature),
     @required
         Result provenanceAgent(
@@ -5252,7 +5250,7 @@ class _$Consent implements Consent {
             List<dynamic> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<ProvenanceAgent> agent),
+            List<dynamic> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -5316,9 +5314,9 @@ class _$Consent implements Consent {
         AuditEventOutcome outcome,
         String outcomeDesc,
         List<dynamic> purposeOfEvent,
-        List<AuditEventAgent> agent,
+        List<dynamic> agent,
         AuditEventSource source,
-        List<AuditEventEntity> entity),
+        List<dynamic> entity),
     Result auditEventAgent(
         String id,
         List<dynamic> extension,
@@ -5359,7 +5357,7 @@ class _$Consent implements Consent {
         String name,
         String description,
         Base64Binary query,
-        List<AuditEventDetail> detail),
+        List<dynamic> detail),
     Result auditEventDetail(
         String id,
         List<dynamic> extension,
@@ -5387,9 +5385,9 @@ class _$Consent implements Consent {
         List<dynamic> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<ConsentPolicy> policy,
+        List<dynamic> policy,
         CodeableConcept policyRule,
-        List<ConsentVerification> verification,
+        List<dynamic> verification,
         ConsentProvision provision),
     Result consentPolicy(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
@@ -5406,15 +5404,15 @@ class _$Consent implements Consent {
         List<dynamic> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<ConsentActor> actor,
+        List<dynamic> actor,
         List<dynamic> action,
         List<dynamic> securityLabel,
         List<dynamic> purpose,
         List<dynamic> clas,
         List<dynamic> code,
         Period dataPeriod,
-        List<ConsentData> data,
-        List<ConsentProvision> provision),
+        List<dynamic> data,
+        List<dynamic> provision),
     Result consentActor(
         String id,
         List<dynamic> extension,
@@ -5445,8 +5443,8 @@ class _$Consent implements Consent {
         Reference location,
         List<dynamic> reason,
         CodeableConcept activity,
-        List<ProvenanceAgent> agent,
-        List<ProvenanceEntity> entity,
+        List<dynamic> agent,
+        List<dynamic> entity,
         List<dynamic> signature),
     Result provenanceAgent(
         String id,
@@ -5462,7 +5460,7 @@ class _$Consent implements Consent {
         List<dynamic> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<ProvenanceAgent> agent),
+        List<dynamic> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5586,9 +5584,9 @@ abstract class Consent implements Security {
       List<dynamic> organization,
       Attachment sourceAttachment,
       Reference sourceReference,
-      List<ConsentPolicy> policy,
+      List<dynamic> policy,
       CodeableConcept policyRule,
-      List<ConsentVerification> verification,
+      List<dynamic> verification,
       ConsentProvision provision}) = _$Consent;
 
   factory Consent.fromJson(Map<String, dynamic> json) = _$Consent.fromJson;
@@ -5614,9 +5612,9 @@ abstract class Consent implements Security {
   List<dynamic> get organization;
   Attachment get sourceAttachment;
   Reference get sourceReference;
-  List<ConsentPolicy> get policy;
+  List<dynamic> get policy;
   CodeableConcept get policyRule;
-  List<ConsentVerification> get verification;
+  List<dynamic> get verification;
   ConsentProvision get provision;
   @override
   $ConsentCopyWith<Consent> get copyWith;
@@ -5747,9 +5745,9 @@ class _$ConsentPolicy implements ConsentPolicy {
             AuditEventOutcome outcome,
             String outcomeDesc,
             List<dynamic> purposeOfEvent,
-            List<AuditEventAgent> agent,
+            List<dynamic> agent,
             AuditEventSource source,
-            List<AuditEventEntity> entity),
+            List<dynamic> entity),
     @required
         Result auditEventAgent(
             String id,
@@ -5794,7 +5792,7 @@ class _$ConsentPolicy implements ConsentPolicy {
             String name,
             String description,
             Base64Binary query,
-            List<AuditEventDetail> detail),
+            List<dynamic> detail),
     @required
         Result auditEventDetail(
             String id,
@@ -5824,9 +5822,9 @@ class _$ConsentPolicy implements ConsentPolicy {
             List<dynamic> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<ConsentPolicy> policy,
+            List<dynamic> policy,
             CodeableConcept policyRule,
-            List<ConsentVerification> verification,
+            List<dynamic> verification,
             ConsentProvision provision),
     @required
         Result consentPolicy(String id, List<dynamic> extension,
@@ -5846,15 +5844,15 @@ class _$ConsentPolicy implements ConsentPolicy {
             List<dynamic> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<ConsentActor> actor,
+            List<dynamic> actor,
             List<dynamic> action,
             List<dynamic> securityLabel,
             List<dynamic> purpose,
             List<dynamic> clas,
             List<dynamic> code,
             Period dataPeriod,
-            List<ConsentData> data,
-            List<ConsentProvision> provision),
+            List<dynamic> data,
+            List<dynamic> provision),
     @required
         Result consentActor(
             String id,
@@ -5888,8 +5886,8 @@ class _$ConsentPolicy implements ConsentPolicy {
             Reference location,
             List<dynamic> reason,
             CodeableConcept activity,
-            List<ProvenanceAgent> agent,
-            List<ProvenanceEntity> entity,
+            List<dynamic> agent,
+            List<dynamic> entity,
             List<dynamic> signature),
     @required
         Result provenanceAgent(
@@ -5907,7 +5905,7 @@ class _$ConsentPolicy implements ConsentPolicy {
             List<dynamic> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<ProvenanceAgent> agent),
+            List<dynamic> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -5948,9 +5946,9 @@ class _$ConsentPolicy implements ConsentPolicy {
         AuditEventOutcome outcome,
         String outcomeDesc,
         List<dynamic> purposeOfEvent,
-        List<AuditEventAgent> agent,
+        List<dynamic> agent,
         AuditEventSource source,
-        List<AuditEventEntity> entity),
+        List<dynamic> entity),
     Result auditEventAgent(
         String id,
         List<dynamic> extension,
@@ -5991,7 +5989,7 @@ class _$ConsentPolicy implements ConsentPolicy {
         String name,
         String description,
         Base64Binary query,
-        List<AuditEventDetail> detail),
+        List<dynamic> detail),
     Result auditEventDetail(
         String id,
         List<dynamic> extension,
@@ -6019,9 +6017,9 @@ class _$ConsentPolicy implements ConsentPolicy {
         List<dynamic> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<ConsentPolicy> policy,
+        List<dynamic> policy,
         CodeableConcept policyRule,
-        List<ConsentVerification> verification,
+        List<dynamic> verification,
         ConsentProvision provision),
     Result consentPolicy(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
@@ -6038,15 +6036,15 @@ class _$ConsentPolicy implements ConsentPolicy {
         List<dynamic> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<ConsentActor> actor,
+        List<dynamic> actor,
         List<dynamic> action,
         List<dynamic> securityLabel,
         List<dynamic> purpose,
         List<dynamic> clas,
         List<dynamic> code,
         Period dataPeriod,
-        List<ConsentData> data,
-        List<ConsentProvision> provision),
+        List<dynamic> data,
+        List<dynamic> provision),
     Result consentActor(
         String id,
         List<dynamic> extension,
@@ -6077,8 +6075,8 @@ class _$ConsentPolicy implements ConsentPolicy {
         Reference location,
         List<dynamic> reason,
         CodeableConcept activity,
-        List<ProvenanceAgent> agent,
-        List<ProvenanceEntity> entity,
+        List<dynamic> agent,
+        List<dynamic> entity,
         List<dynamic> signature),
     Result provenanceAgent(
         String id,
@@ -6094,7 +6092,7 @@ class _$ConsentPolicy implements ConsentPolicy {
         List<dynamic> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<ProvenanceAgent> agent),
+        List<dynamic> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6338,9 +6336,9 @@ class _$ConsentVerification implements ConsentVerification {
             AuditEventOutcome outcome,
             String outcomeDesc,
             List<dynamic> purposeOfEvent,
-            List<AuditEventAgent> agent,
+            List<dynamic> agent,
             AuditEventSource source,
-            List<AuditEventEntity> entity),
+            List<dynamic> entity),
     @required
         Result auditEventAgent(
             String id,
@@ -6385,7 +6383,7 @@ class _$ConsentVerification implements ConsentVerification {
             String name,
             String description,
             Base64Binary query,
-            List<AuditEventDetail> detail),
+            List<dynamic> detail),
     @required
         Result auditEventDetail(
             String id,
@@ -6415,9 +6413,9 @@ class _$ConsentVerification implements ConsentVerification {
             List<dynamic> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<ConsentPolicy> policy,
+            List<dynamic> policy,
             CodeableConcept policyRule,
-            List<ConsentVerification> verification,
+            List<dynamic> verification,
             ConsentProvision provision),
     @required
         Result consentPolicy(String id, List<dynamic> extension,
@@ -6437,15 +6435,15 @@ class _$ConsentVerification implements ConsentVerification {
             List<dynamic> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<ConsentActor> actor,
+            List<dynamic> actor,
             List<dynamic> action,
             List<dynamic> securityLabel,
             List<dynamic> purpose,
             List<dynamic> clas,
             List<dynamic> code,
             Period dataPeriod,
-            List<ConsentData> data,
-            List<ConsentProvision> provision),
+            List<dynamic> data,
+            List<dynamic> provision),
     @required
         Result consentActor(
             String id,
@@ -6479,8 +6477,8 @@ class _$ConsentVerification implements ConsentVerification {
             Reference location,
             List<dynamic> reason,
             CodeableConcept activity,
-            List<ProvenanceAgent> agent,
-            List<ProvenanceEntity> entity,
+            List<dynamic> agent,
+            List<dynamic> entity,
             List<dynamic> signature),
     @required
         Result provenanceAgent(
@@ -6498,7 +6496,7 @@ class _$ConsentVerification implements ConsentVerification {
             List<dynamic> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<ProvenanceAgent> agent),
+            List<dynamic> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -6540,9 +6538,9 @@ class _$ConsentVerification implements ConsentVerification {
         AuditEventOutcome outcome,
         String outcomeDesc,
         List<dynamic> purposeOfEvent,
-        List<AuditEventAgent> agent,
+        List<dynamic> agent,
         AuditEventSource source,
-        List<AuditEventEntity> entity),
+        List<dynamic> entity),
     Result auditEventAgent(
         String id,
         List<dynamic> extension,
@@ -6583,7 +6581,7 @@ class _$ConsentVerification implements ConsentVerification {
         String name,
         String description,
         Base64Binary query,
-        List<AuditEventDetail> detail),
+        List<dynamic> detail),
     Result auditEventDetail(
         String id,
         List<dynamic> extension,
@@ -6611,9 +6609,9 @@ class _$ConsentVerification implements ConsentVerification {
         List<dynamic> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<ConsentPolicy> policy,
+        List<dynamic> policy,
         CodeableConcept policyRule,
-        List<ConsentVerification> verification,
+        List<dynamic> verification,
         ConsentProvision provision),
     Result consentPolicy(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
@@ -6630,15 +6628,15 @@ class _$ConsentVerification implements ConsentVerification {
         List<dynamic> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<ConsentActor> actor,
+        List<dynamic> actor,
         List<dynamic> action,
         List<dynamic> securityLabel,
         List<dynamic> purpose,
         List<dynamic> clas,
         List<dynamic> code,
         Period dataPeriod,
-        List<ConsentData> data,
-        List<ConsentProvision> provision),
+        List<dynamic> data,
+        List<dynamic> provision),
     Result consentActor(
         String id,
         List<dynamic> extension,
@@ -6669,8 +6667,8 @@ class _$ConsentVerification implements ConsentVerification {
         Reference location,
         List<dynamic> reason,
         CodeableConcept activity,
-        List<ProvenanceAgent> agent,
-        List<ProvenanceEntity> entity,
+        List<dynamic> agent,
+        List<dynamic> entity,
         List<dynamic> signature),
     Result provenanceAgent(
         String id,
@@ -6686,7 +6684,7 @@ class _$ConsentVerification implements ConsentVerification {
         List<dynamic> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<ProvenanceAgent> agent),
+        List<dynamic> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6804,15 +6802,15 @@ abstract class $ConsentProvisionCopyWith<$Res>
       List<dynamic> modifierExtension,
       ConsentProvisionType type,
       Period period,
-      List<ConsentActor> actor,
+      List<dynamic> actor,
       List<dynamic> action,
       List<dynamic> securityLabel,
       List<dynamic> purpose,
       List<dynamic> clas,
       List<dynamic> code,
       Period dataPeriod,
-      List<ConsentData> data,
-      List<ConsentProvision> provision});
+      List<dynamic> data,
+      List<dynamic> provision});
 }
 
 class _$ConsentProvisionCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -6850,7 +6848,7 @@ class _$ConsentProvisionCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       type: type == freezed ? _value.type : type as ConsentProvisionType,
       period: period == freezed ? _value.period : period as Period,
-      actor: actor == freezed ? _value.actor : actor as List<ConsentActor>,
+      actor: actor == freezed ? _value.actor : actor as List<dynamic>,
       action: action == freezed ? _value.action : action as List<dynamic>,
       securityLabel: securityLabel == freezed
           ? _value.securityLabel
@@ -6860,10 +6858,9 @@ class _$ConsentProvisionCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
       code: code == freezed ? _value.code : code as List<dynamic>,
       dataPeriod:
           dataPeriod == freezed ? _value.dataPeriod : dataPeriod as Period,
-      data: data == freezed ? _value.data : data as List<ConsentData>,
-      provision: provision == freezed
-          ? _value.provision
-          : provision as List<ConsentProvision>,
+      data: data == freezed ? _value.data : data as List<dynamic>,
+      provision:
+          provision == freezed ? _value.provision : provision as List<dynamic>,
     ));
   }
 }
@@ -6900,7 +6897,7 @@ class _$ConsentProvision implements ConsentProvision {
   @override
   final Period period;
   @override
-  final List<ConsentActor> actor;
+  final List<dynamic> actor;
   @override
   final List<dynamic> action;
   @override
@@ -6914,9 +6911,9 @@ class _$ConsentProvision implements ConsentProvision {
   @override
   final Period dataPeriod;
   @override
-  final List<ConsentData> data;
+  final List<dynamic> data;
   @override
-  final List<ConsentProvision> provision;
+  final List<dynamic> provision;
 
   @override
   String toString() {
@@ -7007,9 +7004,9 @@ class _$ConsentProvision implements ConsentProvision {
             AuditEventOutcome outcome,
             String outcomeDesc,
             List<dynamic> purposeOfEvent,
-            List<AuditEventAgent> agent,
+            List<dynamic> agent,
             AuditEventSource source,
-            List<AuditEventEntity> entity),
+            List<dynamic> entity),
     @required
         Result auditEventAgent(
             String id,
@@ -7054,7 +7051,7 @@ class _$ConsentProvision implements ConsentProvision {
             String name,
             String description,
             Base64Binary query,
-            List<AuditEventDetail> detail),
+            List<dynamic> detail),
     @required
         Result auditEventDetail(
             String id,
@@ -7084,9 +7081,9 @@ class _$ConsentProvision implements ConsentProvision {
             List<dynamic> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<ConsentPolicy> policy,
+            List<dynamic> policy,
             CodeableConcept policyRule,
-            List<ConsentVerification> verification,
+            List<dynamic> verification,
             ConsentProvision provision),
     @required
         Result consentPolicy(String id, List<dynamic> extension,
@@ -7106,15 +7103,15 @@ class _$ConsentProvision implements ConsentProvision {
             List<dynamic> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<ConsentActor> actor,
+            List<dynamic> actor,
             List<dynamic> action,
             List<dynamic> securityLabel,
             List<dynamic> purpose,
             List<dynamic> clas,
             List<dynamic> code,
             Period dataPeriod,
-            List<ConsentData> data,
-            List<ConsentProvision> provision),
+            List<dynamic> data,
+            List<dynamic> provision),
     @required
         Result consentActor(
             String id,
@@ -7148,8 +7145,8 @@ class _$ConsentProvision implements ConsentProvision {
             Reference location,
             List<dynamic> reason,
             CodeableConcept activity,
-            List<ProvenanceAgent> agent,
-            List<ProvenanceEntity> entity,
+            List<dynamic> agent,
+            List<dynamic> entity,
             List<dynamic> signature),
     @required
         Result provenanceAgent(
@@ -7167,7 +7164,7 @@ class _$ConsentProvision implements ConsentProvision {
             List<dynamic> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<ProvenanceAgent> agent),
+            List<dynamic> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -7222,9 +7219,9 @@ class _$ConsentProvision implements ConsentProvision {
         AuditEventOutcome outcome,
         String outcomeDesc,
         List<dynamic> purposeOfEvent,
-        List<AuditEventAgent> agent,
+        List<dynamic> agent,
         AuditEventSource source,
-        List<AuditEventEntity> entity),
+        List<dynamic> entity),
     Result auditEventAgent(
         String id,
         List<dynamic> extension,
@@ -7265,7 +7262,7 @@ class _$ConsentProvision implements ConsentProvision {
         String name,
         String description,
         Base64Binary query,
-        List<AuditEventDetail> detail),
+        List<dynamic> detail),
     Result auditEventDetail(
         String id,
         List<dynamic> extension,
@@ -7293,9 +7290,9 @@ class _$ConsentProvision implements ConsentProvision {
         List<dynamic> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<ConsentPolicy> policy,
+        List<dynamic> policy,
         CodeableConcept policyRule,
-        List<ConsentVerification> verification,
+        List<dynamic> verification,
         ConsentProvision provision),
     Result consentPolicy(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
@@ -7312,15 +7309,15 @@ class _$ConsentProvision implements ConsentProvision {
         List<dynamic> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<ConsentActor> actor,
+        List<dynamic> actor,
         List<dynamic> action,
         List<dynamic> securityLabel,
         List<dynamic> purpose,
         List<dynamic> clas,
         List<dynamic> code,
         Period dataPeriod,
-        List<ConsentData> data,
-        List<ConsentProvision> provision),
+        List<dynamic> data,
+        List<dynamic> provision),
     Result consentActor(
         String id,
         List<dynamic> extension,
@@ -7351,8 +7348,8 @@ class _$ConsentProvision implements ConsentProvision {
         Reference location,
         List<dynamic> reason,
         CodeableConcept activity,
-        List<ProvenanceAgent> agent,
-        List<ProvenanceEntity> entity,
+        List<dynamic> agent,
+        List<dynamic> entity,
         List<dynamic> signature),
     Result provenanceAgent(
         String id,
@@ -7368,7 +7365,7 @@ class _$ConsentProvision implements ConsentProvision {
         List<dynamic> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<ProvenanceAgent> agent),
+        List<dynamic> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7470,15 +7467,15 @@ abstract class ConsentProvision implements Security {
       List<dynamic> modifierExtension,
       ConsentProvisionType type,
       Period period,
-      List<ConsentActor> actor,
+      List<dynamic> actor,
       List<dynamic> action,
       List<dynamic> securityLabel,
       List<dynamic> purpose,
       List<dynamic> clas,
       List<dynamic> code,
       Period dataPeriod,
-      List<ConsentData> data,
-      List<ConsentProvision> provision}) = _$ConsentProvision;
+      List<dynamic> data,
+      List<dynamic> provision}) = _$ConsentProvision;
 
   factory ConsentProvision.fromJson(Map<String, dynamic> json) =
       _$ConsentProvision.fromJson;
@@ -7490,15 +7487,15 @@ abstract class ConsentProvision implements Security {
   List<dynamic> get modifierExtension;
   ConsentProvisionType get type;
   Period get period;
-  List<ConsentActor> get actor;
+  List<dynamic> get actor;
   List<dynamic> get action;
   List<dynamic> get securityLabel;
   List<dynamic> get purpose;
   List<dynamic> get clas;
   List<dynamic> get code;
   Period get dataPeriod;
-  List<ConsentData> get data;
-  List<ConsentProvision> get provision;
+  List<dynamic> get data;
+  List<dynamic> get provision;
   @override
   $ConsentProvisionCopyWith<ConsentProvision> get copyWith;
 }
@@ -7629,9 +7626,9 @@ class _$ConsentActor implements ConsentActor {
             AuditEventOutcome outcome,
             String outcomeDesc,
             List<dynamic> purposeOfEvent,
-            List<AuditEventAgent> agent,
+            List<dynamic> agent,
             AuditEventSource source,
-            List<AuditEventEntity> entity),
+            List<dynamic> entity),
     @required
         Result auditEventAgent(
             String id,
@@ -7676,7 +7673,7 @@ class _$ConsentActor implements ConsentActor {
             String name,
             String description,
             Base64Binary query,
-            List<AuditEventDetail> detail),
+            List<dynamic> detail),
     @required
         Result auditEventDetail(
             String id,
@@ -7706,9 +7703,9 @@ class _$ConsentActor implements ConsentActor {
             List<dynamic> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<ConsentPolicy> policy,
+            List<dynamic> policy,
             CodeableConcept policyRule,
-            List<ConsentVerification> verification,
+            List<dynamic> verification,
             ConsentProvision provision),
     @required
         Result consentPolicy(String id, List<dynamic> extension,
@@ -7728,15 +7725,15 @@ class _$ConsentActor implements ConsentActor {
             List<dynamic> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<ConsentActor> actor,
+            List<dynamic> actor,
             List<dynamic> action,
             List<dynamic> securityLabel,
             List<dynamic> purpose,
             List<dynamic> clas,
             List<dynamic> code,
             Period dataPeriod,
-            List<ConsentData> data,
-            List<ConsentProvision> provision),
+            List<dynamic> data,
+            List<dynamic> provision),
     @required
         Result consentActor(
             String id,
@@ -7770,8 +7767,8 @@ class _$ConsentActor implements ConsentActor {
             Reference location,
             List<dynamic> reason,
             CodeableConcept activity,
-            List<ProvenanceAgent> agent,
-            List<ProvenanceEntity> entity,
+            List<dynamic> agent,
+            List<dynamic> entity,
             List<dynamic> signature),
     @required
         Result provenanceAgent(
@@ -7789,7 +7786,7 @@ class _$ConsentActor implements ConsentActor {
             List<dynamic> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<ProvenanceAgent> agent),
+            List<dynamic> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -7830,9 +7827,9 @@ class _$ConsentActor implements ConsentActor {
         AuditEventOutcome outcome,
         String outcomeDesc,
         List<dynamic> purposeOfEvent,
-        List<AuditEventAgent> agent,
+        List<dynamic> agent,
         AuditEventSource source,
-        List<AuditEventEntity> entity),
+        List<dynamic> entity),
     Result auditEventAgent(
         String id,
         List<dynamic> extension,
@@ -7873,7 +7870,7 @@ class _$ConsentActor implements ConsentActor {
         String name,
         String description,
         Base64Binary query,
-        List<AuditEventDetail> detail),
+        List<dynamic> detail),
     Result auditEventDetail(
         String id,
         List<dynamic> extension,
@@ -7901,9 +7898,9 @@ class _$ConsentActor implements ConsentActor {
         List<dynamic> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<ConsentPolicy> policy,
+        List<dynamic> policy,
         CodeableConcept policyRule,
-        List<ConsentVerification> verification,
+        List<dynamic> verification,
         ConsentProvision provision),
     Result consentPolicy(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
@@ -7920,15 +7917,15 @@ class _$ConsentActor implements ConsentActor {
         List<dynamic> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<ConsentActor> actor,
+        List<dynamic> actor,
         List<dynamic> action,
         List<dynamic> securityLabel,
         List<dynamic> purpose,
         List<dynamic> clas,
         List<dynamic> code,
         Period dataPeriod,
-        List<ConsentData> data,
-        List<ConsentProvision> provision),
+        List<dynamic> data,
+        List<dynamic> provision),
     Result consentActor(
         String id,
         List<dynamic> extension,
@@ -7959,8 +7956,8 @@ class _$ConsentActor implements ConsentActor {
         Reference location,
         List<dynamic> reason,
         CodeableConcept activity,
-        List<ProvenanceAgent> agent,
-        List<ProvenanceEntity> entity,
+        List<dynamic> agent,
+        List<dynamic> entity,
         List<dynamic> signature),
     Result provenanceAgent(
         String id,
@@ -7976,7 +7973,7 @@ class _$ConsentActor implements ConsentActor {
         List<dynamic> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<ProvenanceAgent> agent),
+        List<dynamic> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8206,9 +8203,9 @@ class _$ConsentData implements ConsentData {
             AuditEventOutcome outcome,
             String outcomeDesc,
             List<dynamic> purposeOfEvent,
-            List<AuditEventAgent> agent,
+            List<dynamic> agent,
             AuditEventSource source,
-            List<AuditEventEntity> entity),
+            List<dynamic> entity),
     @required
         Result auditEventAgent(
             String id,
@@ -8253,7 +8250,7 @@ class _$ConsentData implements ConsentData {
             String name,
             String description,
             Base64Binary query,
-            List<AuditEventDetail> detail),
+            List<dynamic> detail),
     @required
         Result auditEventDetail(
             String id,
@@ -8283,9 +8280,9 @@ class _$ConsentData implements ConsentData {
             List<dynamic> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<ConsentPolicy> policy,
+            List<dynamic> policy,
             CodeableConcept policyRule,
-            List<ConsentVerification> verification,
+            List<dynamic> verification,
             ConsentProvision provision),
     @required
         Result consentPolicy(String id, List<dynamic> extension,
@@ -8305,15 +8302,15 @@ class _$ConsentData implements ConsentData {
             List<dynamic> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<ConsentActor> actor,
+            List<dynamic> actor,
             List<dynamic> action,
             List<dynamic> securityLabel,
             List<dynamic> purpose,
             List<dynamic> clas,
             List<dynamic> code,
             Period dataPeriod,
-            List<ConsentData> data,
-            List<ConsentProvision> provision),
+            List<dynamic> data,
+            List<dynamic> provision),
     @required
         Result consentActor(
             String id,
@@ -8347,8 +8344,8 @@ class _$ConsentData implements ConsentData {
             Reference location,
             List<dynamic> reason,
             CodeableConcept activity,
-            List<ProvenanceAgent> agent,
-            List<ProvenanceEntity> entity,
+            List<dynamic> agent,
+            List<dynamic> entity,
             List<dynamic> signature),
     @required
         Result provenanceAgent(
@@ -8366,7 +8363,7 @@ class _$ConsentData implements ConsentData {
             List<dynamic> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<ProvenanceAgent> agent),
+            List<dynamic> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -8407,9 +8404,9 @@ class _$ConsentData implements ConsentData {
         AuditEventOutcome outcome,
         String outcomeDesc,
         List<dynamic> purposeOfEvent,
-        List<AuditEventAgent> agent,
+        List<dynamic> agent,
         AuditEventSource source,
-        List<AuditEventEntity> entity),
+        List<dynamic> entity),
     Result auditEventAgent(
         String id,
         List<dynamic> extension,
@@ -8450,7 +8447,7 @@ class _$ConsentData implements ConsentData {
         String name,
         String description,
         Base64Binary query,
-        List<AuditEventDetail> detail),
+        List<dynamic> detail),
     Result auditEventDetail(
         String id,
         List<dynamic> extension,
@@ -8478,9 +8475,9 @@ class _$ConsentData implements ConsentData {
         List<dynamic> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<ConsentPolicy> policy,
+        List<dynamic> policy,
         CodeableConcept policyRule,
-        List<ConsentVerification> verification,
+        List<dynamic> verification,
         ConsentProvision provision),
     Result consentPolicy(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
@@ -8497,15 +8494,15 @@ class _$ConsentData implements ConsentData {
         List<dynamic> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<ConsentActor> actor,
+        List<dynamic> actor,
         List<dynamic> action,
         List<dynamic> securityLabel,
         List<dynamic> purpose,
         List<dynamic> clas,
         List<dynamic> code,
         Period dataPeriod,
-        List<ConsentData> data,
-        List<ConsentProvision> provision),
+        List<dynamic> data,
+        List<dynamic> provision),
     Result consentActor(
         String id,
         List<dynamic> extension,
@@ -8536,8 +8533,8 @@ class _$ConsentData implements ConsentData {
         Reference location,
         List<dynamic> reason,
         CodeableConcept activity,
-        List<ProvenanceAgent> agent,
-        List<ProvenanceEntity> entity,
+        List<dynamic> agent,
+        List<dynamic> entity,
         List<dynamic> signature),
     Result provenanceAgent(
         String id,
@@ -8553,7 +8550,7 @@ class _$ConsentData implements ConsentData {
         List<dynamic> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<ProvenanceAgent> agent),
+        List<dynamic> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8678,8 +8675,8 @@ abstract class $ProvenanceCopyWith<$Res> implements $SecurityCopyWith<$Res> {
       Reference location,
       List<dynamic> reason,
       CodeableConcept activity,
-      List<ProvenanceAgent> agent,
-      List<ProvenanceEntity> entity,
+      List<dynamic> agent,
+      List<dynamic> entity,
       List<dynamic> signature});
 }
 
@@ -8745,9 +8742,8 @@ class _$ProvenanceCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
       reason: reason == freezed ? _value.reason : reason as List<dynamic>,
       activity:
           activity == freezed ? _value.activity : activity as CodeableConcept,
-      agent: agent == freezed ? _value.agent : agent as List<ProvenanceAgent>,
-      entity:
-          entity == freezed ? _value.entity : entity as List<ProvenanceEntity>,
+      agent: agent == freezed ? _value.agent : agent as List<dynamic>,
+      entity: entity == freezed ? _value.entity : entity as List<dynamic>,
       signature:
           signature == freezed ? _value.signature : signature as List<dynamic>,
     ));
@@ -8816,9 +8812,9 @@ class _$Provenance implements Provenance {
   @override
   final CodeableConcept activity;
   @override
-  final List<ProvenanceAgent> agent;
+  final List<dynamic> agent;
   @override
-  final List<ProvenanceEntity> entity;
+  final List<dynamic> entity;
   @override
   final List<dynamic> signature;
 
@@ -8935,9 +8931,9 @@ class _$Provenance implements Provenance {
             AuditEventOutcome outcome,
             String outcomeDesc,
             List<dynamic> purposeOfEvent,
-            List<AuditEventAgent> agent,
+            List<dynamic> agent,
             AuditEventSource source,
-            List<AuditEventEntity> entity),
+            List<dynamic> entity),
     @required
         Result auditEventAgent(
             String id,
@@ -8982,7 +8978,7 @@ class _$Provenance implements Provenance {
             String name,
             String description,
             Base64Binary query,
-            List<AuditEventDetail> detail),
+            List<dynamic> detail),
     @required
         Result auditEventDetail(
             String id,
@@ -9012,9 +9008,9 @@ class _$Provenance implements Provenance {
             List<dynamic> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<ConsentPolicy> policy,
+            List<dynamic> policy,
             CodeableConcept policyRule,
-            List<ConsentVerification> verification,
+            List<dynamic> verification,
             ConsentProvision provision),
     @required
         Result consentPolicy(String id, List<dynamic> extension,
@@ -9034,15 +9030,15 @@ class _$Provenance implements Provenance {
             List<dynamic> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<ConsentActor> actor,
+            List<dynamic> actor,
             List<dynamic> action,
             List<dynamic> securityLabel,
             List<dynamic> purpose,
             List<dynamic> clas,
             List<dynamic> code,
             Period dataPeriod,
-            List<ConsentData> data,
-            List<ConsentProvision> provision),
+            List<dynamic> data,
+            List<dynamic> provision),
     @required
         Result consentActor(
             String id,
@@ -9076,8 +9072,8 @@ class _$Provenance implements Provenance {
             Reference location,
             List<dynamic> reason,
             CodeableConcept activity,
-            List<ProvenanceAgent> agent,
-            List<ProvenanceEntity> entity,
+            List<dynamic> agent,
+            List<dynamic> entity,
             List<dynamic> signature),
     @required
         Result provenanceAgent(
@@ -9095,7 +9091,7 @@ class _$Provenance implements Provenance {
             List<dynamic> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<ProvenanceAgent> agent),
+            List<dynamic> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -9156,9 +9152,9 @@ class _$Provenance implements Provenance {
         AuditEventOutcome outcome,
         String outcomeDesc,
         List<dynamic> purposeOfEvent,
-        List<AuditEventAgent> agent,
+        List<dynamic> agent,
         AuditEventSource source,
-        List<AuditEventEntity> entity),
+        List<dynamic> entity),
     Result auditEventAgent(
         String id,
         List<dynamic> extension,
@@ -9199,7 +9195,7 @@ class _$Provenance implements Provenance {
         String name,
         String description,
         Base64Binary query,
-        List<AuditEventDetail> detail),
+        List<dynamic> detail),
     Result auditEventDetail(
         String id,
         List<dynamic> extension,
@@ -9227,9 +9223,9 @@ class _$Provenance implements Provenance {
         List<dynamic> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<ConsentPolicy> policy,
+        List<dynamic> policy,
         CodeableConcept policyRule,
-        List<ConsentVerification> verification,
+        List<dynamic> verification,
         ConsentProvision provision),
     Result consentPolicy(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
@@ -9246,15 +9242,15 @@ class _$Provenance implements Provenance {
         List<dynamic> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<ConsentActor> actor,
+        List<dynamic> actor,
         List<dynamic> action,
         List<dynamic> securityLabel,
         List<dynamic> purpose,
         List<dynamic> clas,
         List<dynamic> code,
         Period dataPeriod,
-        List<ConsentData> data,
-        List<ConsentProvision> provision),
+        List<dynamic> data,
+        List<dynamic> provision),
     Result consentActor(
         String id,
         List<dynamic> extension,
@@ -9285,8 +9281,8 @@ class _$Provenance implements Provenance {
         Reference location,
         List<dynamic> reason,
         CodeableConcept activity,
-        List<ProvenanceAgent> agent,
-        List<ProvenanceEntity> entity,
+        List<dynamic> agent,
+        List<dynamic> entity,
         List<dynamic> signature),
     Result provenanceAgent(
         String id,
@@ -9302,7 +9298,7 @@ class _$Provenance implements Provenance {
         List<dynamic> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<ProvenanceAgent> agent),
+        List<dynamic> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -9421,8 +9417,8 @@ abstract class Provenance implements Security {
       Reference location,
       List<dynamic> reason,
       CodeableConcept activity,
-      List<ProvenanceAgent> agent,
-      List<ProvenanceEntity> entity,
+      List<dynamic> agent,
+      List<dynamic> entity,
       List<dynamic> signature}) = _$Provenance;
 
   factory Provenance.fromJson(Map<String, dynamic> json) =
@@ -9447,8 +9443,8 @@ abstract class Provenance implements Security {
   Reference get location;
   List<dynamic> get reason;
   CodeableConcept get activity;
-  List<ProvenanceAgent> get agent;
-  List<ProvenanceEntity> get entity;
+  List<dynamic> get agent;
+  List<dynamic> get entity;
   List<dynamic> get signature;
   @override
   $ProvenanceCopyWith<Provenance> get copyWith;
@@ -9599,9 +9595,9 @@ class _$ProvenanceAgent implements ProvenanceAgent {
             AuditEventOutcome outcome,
             String outcomeDesc,
             List<dynamic> purposeOfEvent,
-            List<AuditEventAgent> agent,
+            List<dynamic> agent,
             AuditEventSource source,
-            List<AuditEventEntity> entity),
+            List<dynamic> entity),
     @required
         Result auditEventAgent(
             String id,
@@ -9646,7 +9642,7 @@ class _$ProvenanceAgent implements ProvenanceAgent {
             String name,
             String description,
             Base64Binary query,
-            List<AuditEventDetail> detail),
+            List<dynamic> detail),
     @required
         Result auditEventDetail(
             String id,
@@ -9676,9 +9672,9 @@ class _$ProvenanceAgent implements ProvenanceAgent {
             List<dynamic> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<ConsentPolicy> policy,
+            List<dynamic> policy,
             CodeableConcept policyRule,
-            List<ConsentVerification> verification,
+            List<dynamic> verification,
             ConsentProvision provision),
     @required
         Result consentPolicy(String id, List<dynamic> extension,
@@ -9698,15 +9694,15 @@ class _$ProvenanceAgent implements ProvenanceAgent {
             List<dynamic> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<ConsentActor> actor,
+            List<dynamic> actor,
             List<dynamic> action,
             List<dynamic> securityLabel,
             List<dynamic> purpose,
             List<dynamic> clas,
             List<dynamic> code,
             Period dataPeriod,
-            List<ConsentData> data,
-            List<ConsentProvision> provision),
+            List<dynamic> data,
+            List<dynamic> provision),
     @required
         Result consentActor(
             String id,
@@ -9740,8 +9736,8 @@ class _$ProvenanceAgent implements ProvenanceAgent {
             Reference location,
             List<dynamic> reason,
             CodeableConcept activity,
-            List<ProvenanceAgent> agent,
-            List<ProvenanceEntity> entity,
+            List<dynamic> agent,
+            List<dynamic> entity,
             List<dynamic> signature),
     @required
         Result provenanceAgent(
@@ -9759,7 +9755,7 @@ class _$ProvenanceAgent implements ProvenanceAgent {
             List<dynamic> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<ProvenanceAgent> agent),
+            List<dynamic> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -9801,9 +9797,9 @@ class _$ProvenanceAgent implements ProvenanceAgent {
         AuditEventOutcome outcome,
         String outcomeDesc,
         List<dynamic> purposeOfEvent,
-        List<AuditEventAgent> agent,
+        List<dynamic> agent,
         AuditEventSource source,
-        List<AuditEventEntity> entity),
+        List<dynamic> entity),
     Result auditEventAgent(
         String id,
         List<dynamic> extension,
@@ -9844,7 +9840,7 @@ class _$ProvenanceAgent implements ProvenanceAgent {
         String name,
         String description,
         Base64Binary query,
-        List<AuditEventDetail> detail),
+        List<dynamic> detail),
     Result auditEventDetail(
         String id,
         List<dynamic> extension,
@@ -9872,9 +9868,9 @@ class _$ProvenanceAgent implements ProvenanceAgent {
         List<dynamic> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<ConsentPolicy> policy,
+        List<dynamic> policy,
         CodeableConcept policyRule,
-        List<ConsentVerification> verification,
+        List<dynamic> verification,
         ConsentProvision provision),
     Result consentPolicy(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
@@ -9891,15 +9887,15 @@ class _$ProvenanceAgent implements ProvenanceAgent {
         List<dynamic> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<ConsentActor> actor,
+        List<dynamic> actor,
         List<dynamic> action,
         List<dynamic> securityLabel,
         List<dynamic> purpose,
         List<dynamic> clas,
         List<dynamic> code,
         Period dataPeriod,
-        List<ConsentData> data,
-        List<ConsentProvision> provision),
+        List<dynamic> data,
+        List<dynamic> provision),
     Result consentActor(
         String id,
         List<dynamic> extension,
@@ -9930,8 +9926,8 @@ class _$ProvenanceAgent implements ProvenanceAgent {
         Reference location,
         List<dynamic> reason,
         CodeableConcept activity,
-        List<ProvenanceAgent> agent,
-        List<ProvenanceEntity> entity,
+        List<dynamic> agent,
+        List<dynamic> entity,
         List<dynamic> signature),
     Result provenanceAgent(
         String id,
@@ -9947,7 +9943,7 @@ class _$ProvenanceAgent implements ProvenanceAgent {
         List<dynamic> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<ProvenanceAgent> agent),
+        List<dynamic> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -10066,7 +10062,7 @@ abstract class $ProvenanceEntityCopyWith<$Res>
       List<dynamic> modifierExtension,
       ProvenanceEntityRole role,
       Reference what,
-      List<ProvenanceAgent> agent});
+      List<dynamic> agent});
 }
 
 class _$ProvenanceEntityCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -10096,7 +10092,7 @@ class _$ProvenanceEntityCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       role: role == freezed ? _value.role : role as ProvenanceEntityRole,
       what: what == freezed ? _value.what : what as Reference,
-      agent: agent == freezed ? _value.agent : agent as List<ProvenanceAgent>,
+      agent: agent == freezed ? _value.agent : agent as List<dynamic>,
     ));
   }
 }
@@ -10125,7 +10121,7 @@ class _$ProvenanceEntity implements ProvenanceEntity {
   @override
   final Reference what;
   @override
-  final List<ProvenanceAgent> agent;
+  final List<dynamic> agent;
 
   @override
   String toString() {
@@ -10188,9 +10184,9 @@ class _$ProvenanceEntity implements ProvenanceEntity {
             AuditEventOutcome outcome,
             String outcomeDesc,
             List<dynamic> purposeOfEvent,
-            List<AuditEventAgent> agent,
+            List<dynamic> agent,
             AuditEventSource source,
-            List<AuditEventEntity> entity),
+            List<dynamic> entity),
     @required
         Result auditEventAgent(
             String id,
@@ -10235,7 +10231,7 @@ class _$ProvenanceEntity implements ProvenanceEntity {
             String name,
             String description,
             Base64Binary query,
-            List<AuditEventDetail> detail),
+            List<dynamic> detail),
     @required
         Result auditEventDetail(
             String id,
@@ -10265,9 +10261,9 @@ class _$ProvenanceEntity implements ProvenanceEntity {
             List<dynamic> organization,
             Attachment sourceAttachment,
             Reference sourceReference,
-            List<ConsentPolicy> policy,
+            List<dynamic> policy,
             CodeableConcept policyRule,
-            List<ConsentVerification> verification,
+            List<dynamic> verification,
             ConsentProvision provision),
     @required
         Result consentPolicy(String id, List<dynamic> extension,
@@ -10287,15 +10283,15 @@ class _$ProvenanceEntity implements ProvenanceEntity {
             List<dynamic> modifierExtension,
             ConsentProvisionType type,
             Period period,
-            List<ConsentActor> actor,
+            List<dynamic> actor,
             List<dynamic> action,
             List<dynamic> securityLabel,
             List<dynamic> purpose,
             List<dynamic> clas,
             List<dynamic> code,
             Period dataPeriod,
-            List<ConsentData> data,
-            List<ConsentProvision> provision),
+            List<dynamic> data,
+            List<dynamic> provision),
     @required
         Result consentActor(
             String id,
@@ -10329,8 +10325,8 @@ class _$ProvenanceEntity implements ProvenanceEntity {
             Reference location,
             List<dynamic> reason,
             CodeableConcept activity,
-            List<ProvenanceAgent> agent,
-            List<ProvenanceEntity> entity,
+            List<dynamic> agent,
+            List<dynamic> entity,
             List<dynamic> signature),
     @required
         Result provenanceAgent(
@@ -10348,7 +10344,7 @@ class _$ProvenanceEntity implements ProvenanceEntity {
             List<dynamic> modifierExtension,
             ProvenanceEntityRole role,
             Reference what,
-            List<ProvenanceAgent> agent),
+            List<dynamic> agent),
   }) {
     assert(auditEvent != null);
     assert(auditEventAgent != null);
@@ -10390,9 +10386,9 @@ class _$ProvenanceEntity implements ProvenanceEntity {
         AuditEventOutcome outcome,
         String outcomeDesc,
         List<dynamic> purposeOfEvent,
-        List<AuditEventAgent> agent,
+        List<dynamic> agent,
         AuditEventSource source,
-        List<AuditEventEntity> entity),
+        List<dynamic> entity),
     Result auditEventAgent(
         String id,
         List<dynamic> extension,
@@ -10433,7 +10429,7 @@ class _$ProvenanceEntity implements ProvenanceEntity {
         String name,
         String description,
         Base64Binary query,
-        List<AuditEventDetail> detail),
+        List<dynamic> detail),
     Result auditEventDetail(
         String id,
         List<dynamic> extension,
@@ -10461,9 +10457,9 @@ class _$ProvenanceEntity implements ProvenanceEntity {
         List<dynamic> organization,
         Attachment sourceAttachment,
         Reference sourceReference,
-        List<ConsentPolicy> policy,
+        List<dynamic> policy,
         CodeableConcept policyRule,
-        List<ConsentVerification> verification,
+        List<dynamic> verification,
         ConsentProvision provision),
     Result consentPolicy(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, FhirUri authority, FhirUri uri),
@@ -10480,15 +10476,15 @@ class _$ProvenanceEntity implements ProvenanceEntity {
         List<dynamic> modifierExtension,
         ConsentProvisionType type,
         Period period,
-        List<ConsentActor> actor,
+        List<dynamic> actor,
         List<dynamic> action,
         List<dynamic> securityLabel,
         List<dynamic> purpose,
         List<dynamic> clas,
         List<dynamic> code,
         Period dataPeriod,
-        List<ConsentData> data,
-        List<ConsentProvision> provision),
+        List<dynamic> data,
+        List<dynamic> provision),
     Result consentActor(
         String id,
         List<dynamic> extension,
@@ -10519,8 +10515,8 @@ class _$ProvenanceEntity implements ProvenanceEntity {
         Reference location,
         List<dynamic> reason,
         CodeableConcept activity,
-        List<ProvenanceAgent> agent,
-        List<ProvenanceEntity> entity,
+        List<dynamic> agent,
+        List<dynamic> entity,
         List<dynamic> signature),
     Result provenanceAgent(
         String id,
@@ -10536,7 +10532,7 @@ class _$ProvenanceEntity implements ProvenanceEntity {
         List<dynamic> modifierExtension,
         ProvenanceEntityRole role,
         Reference what,
-        List<ProvenanceAgent> agent),
+        List<dynamic> agent),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -10625,7 +10621,7 @@ abstract class ProvenanceEntity implements Security {
       List<dynamic> modifierExtension,
       ProvenanceEntityRole role,
       Reference what,
-      List<ProvenanceAgent> agent}) = _$ProvenanceEntity;
+      List<dynamic> agent}) = _$ProvenanceEntity;
 
   factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =
       _$ProvenanceEntity.fromJson;
@@ -10637,7 +10633,7 @@ abstract class ProvenanceEntity implements Security {
   List<dynamic> get modifierExtension;
   ProvenanceEntityRole get role;
   Reference get what;
-  List<ProvenanceAgent> get agent;
+  List<dynamic> get agent;
   @override
   $ProvenanceEntityCopyWith<ProvenanceEntity> get copyWith;
 }

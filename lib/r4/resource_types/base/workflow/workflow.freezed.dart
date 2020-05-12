@@ -168,8 +168,8 @@ class _$WorkflowTearOff {
       List<dynamic> note,
       List<dynamic> relevantHistory,
       TaskRestriction restriction,
-      List<TaskInput> input,
-      List<TaskOutput> output}) {
+      List<dynamic> input,
+      List<dynamic> output}) {
     return Task(
       resourceType: resourceType,
       id: id,
@@ -487,7 +487,7 @@ class _$WorkflowTearOff {
       String comment,
       String patientInstruction,
       List<dynamic> basedOn,
-      List<AppointmentParticipant> participant,
+      List<dynamic> participant,
       List<dynamic> requestedPeriod}) {
     return Appointment(
       resourceType: resourceType,
@@ -605,9 +605,9 @@ class _$WorkflowTearOff {
       FhirDateTime lastPerformed,
       Date nextScheduled,
       CodeableConcept failureAction,
-      List<VerificationResultPrimarySource> primarySource,
+      List<dynamic> primarySource,
       VerificationResultAttestation attestation,
-      List<VerificationResultValidator> validator}) {
+      List<dynamic> validator}) {
     return VerificationResult(
       resourceType: resourceType,
       id: id,
@@ -795,8 +795,8 @@ mixin _$Workflow {
             List<dynamic> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
-            List<TaskInput> input,
-            List<TaskOutput> output),
+            List<dynamic> input,
+            List<dynamic> output),
     @required
         Result taskRestriction(
             String id,
@@ -948,7 +948,7 @@ mixin _$Workflow {
             String comment,
             String patientInstruction,
             List<dynamic> basedOn,
-            List<AppointmentParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> requestedPeriod),
     @required
         Result appointmentParticipant(
@@ -1001,9 +1001,9 @@ mixin _$Workflow {
             FhirDateTime lastPerformed,
             Date nextScheduled,
             CodeableConcept failureAction,
-            List<VerificationResultPrimarySource> primarySource,
+            List<dynamic> primarySource,
             VerificationResultAttestation attestation,
-            List<VerificationResultValidator> validator),
+            List<dynamic> validator),
     @required
         Result verificationResultPrimarySource(
             String id,
@@ -1118,8 +1118,8 @@ mixin _$Workflow {
         List<dynamic> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
-        List<TaskInput> input,
-        List<TaskOutput> output),
+        List<dynamic> input,
+        List<dynamic> output),
     Result taskRestriction(
         String id,
         List<dynamic> extension,
@@ -1267,7 +1267,7 @@ mixin _$Workflow {
         String comment,
         String patientInstruction,
         List<dynamic> basedOn,
-        List<AppointmentParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> requestedPeriod),
     Result appointmentParticipant(
         String id,
@@ -1317,9 +1317,9 @@ mixin _$Workflow {
         FhirDateTime lastPerformed,
         Date nextScheduled,
         CodeableConcept failureAction,
-        List<VerificationResultPrimarySource> primarySource,
+        List<dynamic> primarySource,
         VerificationResultAttestation attestation,
-        List<VerificationResultValidator> validator),
+        List<dynamic> validator),
     Result verificationResultPrimarySource(
         String id,
         List<dynamic> extension,
@@ -1738,8 +1738,8 @@ class _$Schedule implements Schedule {
             List<dynamic> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
-            List<TaskInput> input,
-            List<TaskOutput> output),
+            List<dynamic> input,
+            List<dynamic> output),
     @required
         Result taskRestriction(
             String id,
@@ -1891,7 +1891,7 @@ class _$Schedule implements Schedule {
             String comment,
             String patientInstruction,
             List<dynamic> basedOn,
-            List<AppointmentParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> requestedPeriod),
     @required
         Result appointmentParticipant(
@@ -1944,9 +1944,9 @@ class _$Schedule implements Schedule {
             FhirDateTime lastPerformed,
             Date nextScheduled,
             CodeableConcept failureAction,
-            List<VerificationResultPrimarySource> primarySource,
+            List<dynamic> primarySource,
             VerificationResultAttestation attestation,
-            List<VerificationResultValidator> validator),
+            List<dynamic> validator),
     @required
         Result verificationResultPrimarySource(
             String id,
@@ -2095,8 +2095,8 @@ class _$Schedule implements Schedule {
         List<dynamic> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
-        List<TaskInput> input,
-        List<TaskOutput> output),
+        List<dynamic> input,
+        List<dynamic> output),
     Result taskRestriction(
         String id,
         List<dynamic> extension,
@@ -2244,7 +2244,7 @@ class _$Schedule implements Schedule {
         String comment,
         String patientInstruction,
         List<dynamic> basedOn,
-        List<AppointmentParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> requestedPeriod),
     Result appointmentParticipant(
         String id,
@@ -2294,9 +2294,9 @@ class _$Schedule implements Schedule {
         FhirDateTime lastPerformed,
         Date nextScheduled,
         CodeableConcept failureAction,
-        List<VerificationResultPrimarySource> primarySource,
+        List<dynamic> primarySource,
         VerificationResultAttestation attestation,
-        List<VerificationResultValidator> validator),
+        List<dynamic> validator),
     Result verificationResultPrimarySource(
         String id,
         List<dynamic> extension,
@@ -2812,8 +2812,8 @@ class _$Slot implements Slot {
             List<dynamic> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
-            List<TaskInput> input,
-            List<TaskOutput> output),
+            List<dynamic> input,
+            List<dynamic> output),
     @required
         Result taskRestriction(
             String id,
@@ -2965,7 +2965,7 @@ class _$Slot implements Slot {
             String comment,
             String patientInstruction,
             List<dynamic> basedOn,
-            List<AppointmentParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> requestedPeriod),
     @required
         Result appointmentParticipant(
@@ -3018,9 +3018,9 @@ class _$Slot implements Slot {
             FhirDateTime lastPerformed,
             Date nextScheduled,
             CodeableConcept failureAction,
-            List<VerificationResultPrimarySource> primarySource,
+            List<dynamic> primarySource,
             VerificationResultAttestation attestation,
-            List<VerificationResultValidator> validator),
+            List<dynamic> validator),
     @required
         Result verificationResultPrimarySource(
             String id,
@@ -3172,8 +3172,8 @@ class _$Slot implements Slot {
         List<dynamic> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
-        List<TaskInput> input,
-        List<TaskOutput> output),
+        List<dynamic> input,
+        List<dynamic> output),
     Result taskRestriction(
         String id,
         List<dynamic> extension,
@@ -3321,7 +3321,7 @@ class _$Slot implements Slot {
         String comment,
         String patientInstruction,
         List<dynamic> basedOn,
-        List<AppointmentParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> requestedPeriod),
     Result appointmentParticipant(
         String id,
@@ -3371,9 +3371,9 @@ class _$Slot implements Slot {
         FhirDateTime lastPerformed,
         Date nextScheduled,
         CodeableConcept failureAction,
-        List<VerificationResultPrimarySource> primarySource,
+        List<dynamic> primarySource,
         VerificationResultAttestation attestation,
-        List<VerificationResultValidator> validator),
+        List<dynamic> validator),
     Result verificationResultPrimarySource(
         String id,
         List<dynamic> extension,
@@ -3597,8 +3597,8 @@ abstract class $TaskCopyWith<$Res> implements $WorkflowCopyWith<$Res> {
       List<dynamic> note,
       List<dynamic> relevantHistory,
       TaskRestriction restriction,
-      List<TaskInput> input,
-      List<TaskOutput> output});
+      List<dynamic> input,
+      List<dynamic> output});
 }
 
 class _$TaskCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
@@ -3731,8 +3731,8 @@ class _$TaskCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
       restriction: restriction == freezed
           ? _value.restriction
           : restriction as TaskRestriction,
-      input: input == freezed ? _value.input : input as List<TaskInput>,
-      output: output == freezed ? _value.output : output as List<TaskOutput>,
+      input: input == freezed ? _value.input : input as List<dynamic>,
+      output: output == freezed ? _value.output : output as List<dynamic>,
     ));
   }
 }
@@ -3860,9 +3860,9 @@ class _$Task implements Task {
   @override
   final TaskRestriction restriction;
   @override
-  final List<TaskInput> input;
+  final List<dynamic> input;
   @override
-  final List<TaskOutput> output;
+  final List<dynamic> output;
 
   @override
   String toString() {
@@ -4090,8 +4090,8 @@ class _$Task implements Task {
             List<dynamic> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
-            List<TaskInput> input,
-            List<TaskOutput> output),
+            List<dynamic> input,
+            List<dynamic> output),
     @required
         Result taskRestriction(
             String id,
@@ -4243,7 +4243,7 @@ class _$Task implements Task {
             String comment,
             String patientInstruction,
             List<dynamic> basedOn,
-            List<AppointmentParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> requestedPeriod),
     @required
         Result appointmentParticipant(
@@ -4296,9 +4296,9 @@ class _$Task implements Task {
             FhirDateTime lastPerformed,
             Date nextScheduled,
             CodeableConcept failureAction,
-            List<VerificationResultPrimarySource> primarySource,
+            List<dynamic> primarySource,
             VerificationResultAttestation attestation,
-            List<VerificationResultValidator> validator),
+            List<dynamic> validator),
     @required
         Result verificationResultPrimarySource(
             String id,
@@ -4470,8 +4470,8 @@ class _$Task implements Task {
         List<dynamic> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
-        List<TaskInput> input,
-        List<TaskOutput> output),
+        List<dynamic> input,
+        List<dynamic> output),
     Result taskRestriction(
         String id,
         List<dynamic> extension,
@@ -4619,7 +4619,7 @@ class _$Task implements Task {
         String comment,
         String patientInstruction,
         List<dynamic> basedOn,
-        List<AppointmentParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> requestedPeriod),
     Result appointmentParticipant(
         String id,
@@ -4669,9 +4669,9 @@ class _$Task implements Task {
         FhirDateTime lastPerformed,
         Date nextScheduled,
         CodeableConcept failureAction,
-        List<VerificationResultPrimarySource> primarySource,
+        List<dynamic> primarySource,
         VerificationResultAttestation attestation,
-        List<VerificationResultValidator> validator),
+        List<dynamic> validator),
     Result verificationResultPrimarySource(
         String id,
         List<dynamic> extension,
@@ -4861,8 +4861,8 @@ abstract class Task implements Workflow {
       List<dynamic> note,
       List<dynamic> relevantHistory,
       TaskRestriction restriction,
-      List<TaskInput> input,
-      List<TaskOutput> output}) = _$Task;
+      List<dynamic> input,
+      List<dynamic> output}) = _$Task;
 
   factory Task.fromJson(Map<String, dynamic> json) = _$Task.fromJson;
 
@@ -4906,8 +4906,8 @@ abstract class Task implements Workflow {
   List<dynamic> get note;
   List<dynamic> get relevantHistory;
   TaskRestriction get restriction;
-  List<TaskInput> get input;
-  List<TaskOutput> get output;
+  List<dynamic> get input;
+  List<dynamic> get output;
   @override
   $TaskCopyWith<Task> get copyWith;
 }
@@ -5112,8 +5112,8 @@ class _$TaskRestriction implements TaskRestriction {
             List<dynamic> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
-            List<TaskInput> input,
-            List<TaskOutput> output),
+            List<dynamic> input,
+            List<dynamic> output),
     @required
         Result taskRestriction(
             String id,
@@ -5265,7 +5265,7 @@ class _$TaskRestriction implements TaskRestriction {
             String comment,
             String patientInstruction,
             List<dynamic> basedOn,
-            List<AppointmentParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> requestedPeriod),
     @required
         Result appointmentParticipant(
@@ -5318,9 +5318,9 @@ class _$TaskRestriction implements TaskRestriction {
             FhirDateTime lastPerformed,
             Date nextScheduled,
             CodeableConcept failureAction,
-            List<VerificationResultPrimarySource> primarySource,
+            List<dynamic> primarySource,
             VerificationResultAttestation attestation,
-            List<VerificationResultValidator> validator),
+            List<dynamic> validator),
     @required
         Result verificationResultPrimarySource(
             String id,
@@ -5453,8 +5453,8 @@ class _$TaskRestriction implements TaskRestriction {
         List<dynamic> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
-        List<TaskInput> input,
-        List<TaskOutput> output),
+        List<dynamic> input,
+        List<dynamic> output),
     Result taskRestriction(
         String id,
         List<dynamic> extension,
@@ -5602,7 +5602,7 @@ class _$TaskRestriction implements TaskRestriction {
         String comment,
         String patientInstruction,
         List<dynamic> basedOn,
-        List<AppointmentParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> requestedPeriod),
     Result appointmentParticipant(
         String id,
@@ -5652,9 +5652,9 @@ class _$TaskRestriction implements TaskRestriction {
         FhirDateTime lastPerformed,
         Date nextScheduled,
         CodeableConcept failureAction,
-        List<VerificationResultPrimarySource> primarySource,
+        List<dynamic> primarySource,
         VerificationResultAttestation attestation,
-        List<VerificationResultValidator> validator),
+        List<dynamic> validator),
     Result verificationResultPrimarySource(
         String id,
         List<dynamic> extension,
@@ -6470,8 +6470,8 @@ class _$TaskInput implements TaskInput {
             List<dynamic> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
-            List<TaskInput> input,
-            List<TaskOutput> output),
+            List<dynamic> input,
+            List<dynamic> output),
     @required
         Result taskRestriction(
             String id,
@@ -6623,7 +6623,7 @@ class _$TaskInput implements TaskInput {
             String comment,
             String patientInstruction,
             List<dynamic> basedOn,
-            List<AppointmentParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> requestedPeriod),
     @required
         Result appointmentParticipant(
@@ -6676,9 +6676,9 @@ class _$TaskInput implements TaskInput {
             FhirDateTime lastPerformed,
             Date nextScheduled,
             CodeableConcept failureAction,
-            List<VerificationResultPrimarySource> primarySource,
+            List<dynamic> primarySource,
             VerificationResultAttestation attestation,
-            List<VerificationResultValidator> validator),
+            List<dynamic> validator),
     @required
         Result verificationResultPrimarySource(
             String id,
@@ -6864,8 +6864,8 @@ class _$TaskInput implements TaskInput {
         List<dynamic> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
-        List<TaskInput> input,
-        List<TaskOutput> output),
+        List<dynamic> input,
+        List<dynamic> output),
     Result taskRestriction(
         String id,
         List<dynamic> extension,
@@ -7013,7 +7013,7 @@ class _$TaskInput implements TaskInput {
         String comment,
         String patientInstruction,
         List<dynamic> basedOn,
-        List<AppointmentParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> requestedPeriod),
     Result appointmentParticipant(
         String id,
@@ -7063,9 +7063,9 @@ class _$TaskInput implements TaskInput {
         FhirDateTime lastPerformed,
         Date nextScheduled,
         CodeableConcept failureAction,
-        List<VerificationResultPrimarySource> primarySource,
+        List<dynamic> primarySource,
         VerificationResultAttestation attestation,
-        List<VerificationResultValidator> validator),
+        List<dynamic> validator),
     Result verificationResultPrimarySource(
         String id,
         List<dynamic> extension,
@@ -8030,8 +8030,8 @@ class _$TaskOutput implements TaskOutput {
             List<dynamic> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
-            List<TaskInput> input,
-            List<TaskOutput> output),
+            List<dynamic> input,
+            List<dynamic> output),
     @required
         Result taskRestriction(
             String id,
@@ -8183,7 +8183,7 @@ class _$TaskOutput implements TaskOutput {
             String comment,
             String patientInstruction,
             List<dynamic> basedOn,
-            List<AppointmentParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> requestedPeriod),
     @required
         Result appointmentParticipant(
@@ -8236,9 +8236,9 @@ class _$TaskOutput implements TaskOutput {
             FhirDateTime lastPerformed,
             Date nextScheduled,
             CodeableConcept failureAction,
-            List<VerificationResultPrimarySource> primarySource,
+            List<dynamic> primarySource,
             VerificationResultAttestation attestation,
-            List<VerificationResultValidator> validator),
+            List<dynamic> validator),
     @required
         Result verificationResultPrimarySource(
             String id,
@@ -8424,8 +8424,8 @@ class _$TaskOutput implements TaskOutput {
         List<dynamic> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
-        List<TaskInput> input,
-        List<TaskOutput> output),
+        List<dynamic> input,
+        List<dynamic> output),
     Result taskRestriction(
         String id,
         List<dynamic> extension,
@@ -8573,7 +8573,7 @@ class _$TaskOutput implements TaskOutput {
         String comment,
         String patientInstruction,
         List<dynamic> basedOn,
-        List<AppointmentParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> requestedPeriod),
     Result appointmentParticipant(
         String id,
@@ -8623,9 +8623,9 @@ class _$TaskOutput implements TaskOutput {
         FhirDateTime lastPerformed,
         Date nextScheduled,
         CodeableConcept failureAction,
-        List<VerificationResultPrimarySource> primarySource,
+        List<dynamic> primarySource,
         VerificationResultAttestation attestation,
-        List<VerificationResultValidator> validator),
+        List<dynamic> validator),
     Result verificationResultPrimarySource(
         String id,
         List<dynamic> extension,
@@ -8944,7 +8944,7 @@ abstract class $AppointmentCopyWith<$Res> implements $WorkflowCopyWith<$Res> {
       String comment,
       String patientInstruction,
       List<dynamic> basedOn,
-      List<AppointmentParticipant> participant,
+      List<dynamic> participant,
       List<dynamic> requestedPeriod});
 }
 
@@ -9053,7 +9053,7 @@ class _$AppointmentCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<dynamic>,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<AppointmentParticipant>,
+          : participant as List<dynamic>,
       requestedPeriod: requestedPeriod == freezed
           ? _value.requestedPeriod
           : requestedPeriod as List<dynamic>,
@@ -9158,7 +9158,7 @@ class _$Appointment implements Appointment {
   @override
   final List<dynamic> basedOn;
   @override
-  final List<AppointmentParticipant> participant;
+  final List<dynamic> participant;
   @override
   final List<dynamic> requestedPeriod;
 
@@ -9369,8 +9369,8 @@ class _$Appointment implements Appointment {
             List<dynamic> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
-            List<TaskInput> input,
-            List<TaskOutput> output),
+            List<dynamic> input,
+            List<dynamic> output),
     @required
         Result taskRestriction(
             String id,
@@ -9522,7 +9522,7 @@ class _$Appointment implements Appointment {
             String comment,
             String patientInstruction,
             List<dynamic> basedOn,
-            List<AppointmentParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> requestedPeriod),
     @required
         Result appointmentParticipant(
@@ -9575,9 +9575,9 @@ class _$Appointment implements Appointment {
             FhirDateTime lastPerformed,
             Date nextScheduled,
             CodeableConcept failureAction,
-            List<VerificationResultPrimarySource> primarySource,
+            List<dynamic> primarySource,
             VerificationResultAttestation attestation,
-            List<VerificationResultValidator> validator),
+            List<dynamic> validator),
     @required
         Result verificationResultPrimarySource(
             String id,
@@ -9740,8 +9740,8 @@ class _$Appointment implements Appointment {
         List<dynamic> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
-        List<TaskInput> input,
-        List<TaskOutput> output),
+        List<dynamic> input,
+        List<dynamic> output),
     Result taskRestriction(
         String id,
         List<dynamic> extension,
@@ -9889,7 +9889,7 @@ class _$Appointment implements Appointment {
         String comment,
         String patientInstruction,
         List<dynamic> basedOn,
-        List<AppointmentParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> requestedPeriod),
     Result appointmentParticipant(
         String id,
@@ -9939,9 +9939,9 @@ class _$Appointment implements Appointment {
         FhirDateTime lastPerformed,
         Date nextScheduled,
         CodeableConcept failureAction,
-        List<VerificationResultPrimarySource> primarySource,
+        List<dynamic> primarySource,
         VerificationResultAttestation attestation,
-        List<VerificationResultValidator> validator),
+        List<dynamic> validator),
     Result verificationResultPrimarySource(
         String id,
         List<dynamic> extension,
@@ -10113,7 +10113,7 @@ abstract class Appointment implements Workflow {
       String comment,
       String patientInstruction,
       List<dynamic> basedOn,
-      List<AppointmentParticipant> participant,
+      List<dynamic> participant,
       List<dynamic> requestedPeriod}) = _$Appointment;
 
   factory Appointment.fromJson(Map<String, dynamic> json) =
@@ -10150,7 +10150,7 @@ abstract class Appointment implements Workflow {
   String get comment;
   String get patientInstruction;
   List<dynamic> get basedOn;
-  List<AppointmentParticipant> get participant;
+  List<dynamic> get participant;
   List<dynamic> get requestedPeriod;
   @override
   $AppointmentCopyWith<Appointment> get copyWith;
@@ -10377,8 +10377,8 @@ class _$AppointmentParticipant implements AppointmentParticipant {
             List<dynamic> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
-            List<TaskInput> input,
-            List<TaskOutput> output),
+            List<dynamic> input,
+            List<dynamic> output),
     @required
         Result taskRestriction(
             String id,
@@ -10530,7 +10530,7 @@ class _$AppointmentParticipant implements AppointmentParticipant {
             String comment,
             String patientInstruction,
             List<dynamic> basedOn,
-            List<AppointmentParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> requestedPeriod),
     @required
         Result appointmentParticipant(
@@ -10583,9 +10583,9 @@ class _$AppointmentParticipant implements AppointmentParticipant {
             FhirDateTime lastPerformed,
             Date nextScheduled,
             CodeableConcept failureAction,
-            List<VerificationResultPrimarySource> primarySource,
+            List<dynamic> primarySource,
             VerificationResultAttestation attestation,
-            List<VerificationResultValidator> validator),
+            List<dynamic> validator),
     @required
         Result verificationResultPrimarySource(
             String id,
@@ -10718,8 +10718,8 @@ class _$AppointmentParticipant implements AppointmentParticipant {
         List<dynamic> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
-        List<TaskInput> input,
-        List<TaskOutput> output),
+        List<dynamic> input,
+        List<dynamic> output),
     Result taskRestriction(
         String id,
         List<dynamic> extension,
@@ -10867,7 +10867,7 @@ class _$AppointmentParticipant implements AppointmentParticipant {
         String comment,
         String patientInstruction,
         List<dynamic> basedOn,
-        List<AppointmentParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> requestedPeriod),
     Result appointmentParticipant(
         String id,
@@ -10917,9 +10917,9 @@ class _$AppointmentParticipant implements AppointmentParticipant {
         FhirDateTime lastPerformed,
         Date nextScheduled,
         CodeableConcept failureAction,
-        List<VerificationResultPrimarySource> primarySource,
+        List<dynamic> primarySource,
         VerificationResultAttestation attestation,
-        List<VerificationResultValidator> validator),
+        List<dynamic> validator),
     Result verificationResultPrimarySource(
         String id,
         List<dynamic> extension,
@@ -11376,8 +11376,8 @@ class _$AppointmentResponse implements AppointmentResponse {
             List<dynamic> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
-            List<TaskInput> input,
-            List<TaskOutput> output),
+            List<dynamic> input,
+            List<dynamic> output),
     @required
         Result taskRestriction(
             String id,
@@ -11529,7 +11529,7 @@ class _$AppointmentResponse implements AppointmentResponse {
             String comment,
             String patientInstruction,
             List<dynamic> basedOn,
-            List<AppointmentParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> requestedPeriod),
     @required
         Result appointmentParticipant(
@@ -11582,9 +11582,9 @@ class _$AppointmentResponse implements AppointmentResponse {
             FhirDateTime lastPerformed,
             Date nextScheduled,
             CodeableConcept failureAction,
-            List<VerificationResultPrimarySource> primarySource,
+            List<dynamic> primarySource,
             VerificationResultAttestation attestation,
-            List<VerificationResultValidator> validator),
+            List<dynamic> validator),
     @required
         Result verificationResultPrimarySource(
             String id,
@@ -11733,8 +11733,8 @@ class _$AppointmentResponse implements AppointmentResponse {
         List<dynamic> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
-        List<TaskInput> input,
-        List<TaskOutput> output),
+        List<dynamic> input,
+        List<dynamic> output),
     Result taskRestriction(
         String id,
         List<dynamic> extension,
@@ -11882,7 +11882,7 @@ class _$AppointmentResponse implements AppointmentResponse {
         String comment,
         String patientInstruction,
         List<dynamic> basedOn,
-        List<AppointmentParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> requestedPeriod),
     Result appointmentParticipant(
         String id,
@@ -11932,9 +11932,9 @@ class _$AppointmentResponse implements AppointmentResponse {
         FhirDateTime lastPerformed,
         Date nextScheduled,
         CodeableConcept failureAction,
-        List<VerificationResultPrimarySource> primarySource,
+        List<dynamic> primarySource,
         VerificationResultAttestation attestation,
-        List<VerificationResultValidator> validator),
+        List<dynamic> validator),
     Result verificationResultPrimarySource(
         String id,
         List<dynamic> extension,
@@ -12135,9 +12135,9 @@ abstract class $VerificationResultCopyWith<$Res>
       FhirDateTime lastPerformed,
       Date nextScheduled,
       CodeableConcept failureAction,
-      List<VerificationResultPrimarySource> primarySource,
+      List<dynamic> primarySource,
       VerificationResultAttestation attestation,
-      List<VerificationResultValidator> validator});
+      List<dynamic> validator});
 }
 
 class _$VerificationResultCopyWithImpl<$Res>
@@ -12221,13 +12221,12 @@ class _$VerificationResultCopyWithImpl<$Res>
           : failureAction as CodeableConcept,
       primarySource: primarySource == freezed
           ? _value.primarySource
-          : primarySource as List<VerificationResultPrimarySource>,
+          : primarySource as List<dynamic>,
       attestation: attestation == freezed
           ? _value.attestation
           : attestation as VerificationResultAttestation,
-      validator: validator == freezed
-          ? _value.validator
-          : validator as List<VerificationResultValidator>,
+      validator:
+          validator == freezed ? _value.validator : validator as List<dynamic>,
     ));
   }
 }
@@ -12303,11 +12302,11 @@ class _$VerificationResult implements VerificationResult {
   @override
   final CodeableConcept failureAction;
   @override
-  final List<VerificationResultPrimarySource> primarySource;
+  final List<dynamic> primarySource;
   @override
   final VerificationResultAttestation attestation;
   @override
-  final List<VerificationResultValidator> validator;
+  final List<dynamic> validator;
 
   @override
   String toString() {
@@ -12498,8 +12497,8 @@ class _$VerificationResult implements VerificationResult {
             List<dynamic> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
-            List<TaskInput> input,
-            List<TaskOutput> output),
+            List<dynamic> input,
+            List<dynamic> output),
     @required
         Result taskRestriction(
             String id,
@@ -12651,7 +12650,7 @@ class _$VerificationResult implements VerificationResult {
             String comment,
             String patientInstruction,
             List<dynamic> basedOn,
-            List<AppointmentParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> requestedPeriod),
     @required
         Result appointmentParticipant(
@@ -12704,9 +12703,9 @@ class _$VerificationResult implements VerificationResult {
             FhirDateTime lastPerformed,
             Date nextScheduled,
             CodeableConcept failureAction,
-            List<VerificationResultPrimarySource> primarySource,
+            List<dynamic> primarySource,
             VerificationResultAttestation attestation,
-            List<VerificationResultValidator> validator),
+            List<dynamic> validator),
     @required
         Result verificationResultPrimarySource(
             String id,
@@ -12861,8 +12860,8 @@ class _$VerificationResult implements VerificationResult {
         List<dynamic> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
-        List<TaskInput> input,
-        List<TaskOutput> output),
+        List<dynamic> input,
+        List<dynamic> output),
     Result taskRestriction(
         String id,
         List<dynamic> extension,
@@ -13010,7 +13009,7 @@ class _$VerificationResult implements VerificationResult {
         String comment,
         String patientInstruction,
         List<dynamic> basedOn,
-        List<AppointmentParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> requestedPeriod),
     Result appointmentParticipant(
         String id,
@@ -13060,9 +13059,9 @@ class _$VerificationResult implements VerificationResult {
         FhirDateTime lastPerformed,
         Date nextScheduled,
         CodeableConcept failureAction,
-        List<VerificationResultPrimarySource> primarySource,
+        List<dynamic> primarySource,
         VerificationResultAttestation attestation,
-        List<VerificationResultValidator> validator),
+        List<dynamic> validator),
     Result verificationResultPrimarySource(
         String id,
         List<dynamic> extension,
@@ -13218,9 +13217,9 @@ abstract class VerificationResult implements Workflow {
       FhirDateTime lastPerformed,
       Date nextScheduled,
       CodeableConcept failureAction,
-      List<VerificationResultPrimarySource> primarySource,
+      List<dynamic> primarySource,
       VerificationResultAttestation attestation,
-      List<VerificationResultValidator> validator}) = _$VerificationResult;
+      List<dynamic> validator}) = _$VerificationResult;
 
   factory VerificationResult.fromJson(Map<String, dynamic> json) =
       _$VerificationResult.fromJson;
@@ -13247,9 +13246,9 @@ abstract class VerificationResult implements Workflow {
   FhirDateTime get lastPerformed;
   Date get nextScheduled;
   CodeableConcept get failureAction;
-  List<VerificationResultPrimarySource> get primarySource;
+  List<dynamic> get primarySource;
   VerificationResultAttestation get attestation;
-  List<VerificationResultValidator> get validator;
+  List<dynamic> get validator;
   @override
   $VerificationResultCopyWith<VerificationResult> get copyWith;
 }
@@ -13508,8 +13507,8 @@ class _$VerificationResultPrimarySource
             List<dynamic> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
-            List<TaskInput> input,
-            List<TaskOutput> output),
+            List<dynamic> input,
+            List<dynamic> output),
     @required
         Result taskRestriction(
             String id,
@@ -13661,7 +13660,7 @@ class _$VerificationResultPrimarySource
             String comment,
             String patientInstruction,
             List<dynamic> basedOn,
-            List<AppointmentParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> requestedPeriod),
     @required
         Result appointmentParticipant(
@@ -13714,9 +13713,9 @@ class _$VerificationResultPrimarySource
             FhirDateTime lastPerformed,
             Date nextScheduled,
             CodeableConcept failureAction,
-            List<VerificationResultPrimarySource> primarySource,
+            List<dynamic> primarySource,
             VerificationResultAttestation attestation,
-            List<VerificationResultValidator> validator),
+            List<dynamic> validator),
     @required
         Result verificationResultPrimarySource(
             String id,
@@ -13858,8 +13857,8 @@ class _$VerificationResultPrimarySource
         List<dynamic> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
-        List<TaskInput> input,
-        List<TaskOutput> output),
+        List<dynamic> input,
+        List<dynamic> output),
     Result taskRestriction(
         String id,
         List<dynamic> extension,
@@ -14007,7 +14006,7 @@ class _$VerificationResultPrimarySource
         String comment,
         String patientInstruction,
         List<dynamic> basedOn,
-        List<AppointmentParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> requestedPeriod),
     Result appointmentParticipant(
         String id,
@@ -14057,9 +14056,9 @@ class _$VerificationResultPrimarySource
         FhirDateTime lastPerformed,
         Date nextScheduled,
         CodeableConcept failureAction,
-        List<VerificationResultPrimarySource> primarySource,
+        List<dynamic> primarySource,
         VerificationResultAttestation attestation,
-        List<VerificationResultValidator> validator),
+        List<dynamic> validator),
     Result verificationResultPrimarySource(
         String id,
         List<dynamic> extension,
@@ -14480,8 +14479,8 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
             List<dynamic> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
-            List<TaskInput> input,
-            List<TaskOutput> output),
+            List<dynamic> input,
+            List<dynamic> output),
     @required
         Result taskRestriction(
             String id,
@@ -14633,7 +14632,7 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
             String comment,
             String patientInstruction,
             List<dynamic> basedOn,
-            List<AppointmentParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> requestedPeriod),
     @required
         Result appointmentParticipant(
@@ -14686,9 +14685,9 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
             FhirDateTime lastPerformed,
             Date nextScheduled,
             CodeableConcept failureAction,
-            List<VerificationResultPrimarySource> primarySource,
+            List<dynamic> primarySource,
             VerificationResultAttestation attestation,
-            List<VerificationResultValidator> validator),
+            List<dynamic> validator),
     @required
         Result verificationResultPrimarySource(
             String id,
@@ -14831,8 +14830,8 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
         List<dynamic> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
-        List<TaskInput> input,
-        List<TaskOutput> output),
+        List<dynamic> input,
+        List<dynamic> output),
     Result taskRestriction(
         String id,
         List<dynamic> extension,
@@ -14980,7 +14979,7 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
         String comment,
         String patientInstruction,
         List<dynamic> basedOn,
-        List<AppointmentParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> requestedPeriod),
     Result appointmentParticipant(
         String id,
@@ -15030,9 +15029,9 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
         FhirDateTime lastPerformed,
         Date nextScheduled,
         CodeableConcept failureAction,
-        List<VerificationResultPrimarySource> primarySource,
+        List<dynamic> primarySource,
         VerificationResultAttestation attestation,
-        List<VerificationResultValidator> validator),
+        List<dynamic> validator),
     Result verificationResultPrimarySource(
         String id,
         List<dynamic> extension,
@@ -15398,8 +15397,8 @@ class _$VerificationResultValidator implements VerificationResultValidator {
             List<dynamic> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
-            List<TaskInput> input,
-            List<TaskOutput> output),
+            List<dynamic> input,
+            List<dynamic> output),
     @required
         Result taskRestriction(
             String id,
@@ -15551,7 +15550,7 @@ class _$VerificationResultValidator implements VerificationResultValidator {
             String comment,
             String patientInstruction,
             List<dynamic> basedOn,
-            List<AppointmentParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> requestedPeriod),
     @required
         Result appointmentParticipant(
@@ -15604,9 +15603,9 @@ class _$VerificationResultValidator implements VerificationResultValidator {
             FhirDateTime lastPerformed,
             Date nextScheduled,
             CodeableConcept failureAction,
-            List<VerificationResultPrimarySource> primarySource,
+            List<dynamic> primarySource,
             VerificationResultAttestation attestation,
-            List<VerificationResultValidator> validator),
+            List<dynamic> validator),
     @required
         Result verificationResultPrimarySource(
             String id,
@@ -15739,8 +15738,8 @@ class _$VerificationResultValidator implements VerificationResultValidator {
         List<dynamic> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
-        List<TaskInput> input,
-        List<TaskOutput> output),
+        List<dynamic> input,
+        List<dynamic> output),
     Result taskRestriction(
         String id,
         List<dynamic> extension,
@@ -15888,7 +15887,7 @@ class _$VerificationResultValidator implements VerificationResultValidator {
         String comment,
         String patientInstruction,
         List<dynamic> basedOn,
-        List<AppointmentParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> requestedPeriod),
     Result appointmentParticipant(
         String id,
@@ -15938,9 +15937,9 @@ class _$VerificationResultValidator implements VerificationResultValidator {
         FhirDateTime lastPerformed,
         Date nextScheduled,
         CodeableConcept failureAction,
-        List<VerificationResultPrimarySource> primarySource,
+        List<dynamic> primarySource,
         VerificationResultAttestation attestation,
-        List<VerificationResultValidator> validator),
+        List<dynamic> validator),
     Result verificationResultPrimarySource(
         String id,
         List<dynamic> extension,

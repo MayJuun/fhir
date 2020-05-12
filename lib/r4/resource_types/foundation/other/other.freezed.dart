@@ -69,7 +69,7 @@ class _$OtherTearOff {
       List<dynamic> contained,
       List<dynamic> extension,
       List<dynamic> modifierExtension,
-      List<OperationOutcomeIssue> issue}) {
+      List<dynamic> issue}) {
     return OperationOutcome(
       resourceType: resourceType,
       id: id,
@@ -119,7 +119,7 @@ class _$OtherTearOff {
       List<dynamic> modifierExtension,
       Coding eventCoding,
       FhirUri eventUri,
-      List<MessageHeaderDestination> destination,
+      List<dynamic> destination,
       Reference sender,
       Reference enterer,
       Reference author,
@@ -217,7 +217,7 @@ class _$OtherTearOff {
       Meta meta,
       FhirUri implicitRules,
       Code language,
-      List<ParametersParameter> parameter}) {
+      List<dynamic> parameter}) {
     return Parameters(
       resourceType: resourceType,
       id: id,
@@ -284,7 +284,7 @@ class _$OtherTearOff {
       Dosage valueDosage,
       Meta valueMeta,
       dynamic resource,
-      List<ParametersParameter> part}) {
+      List<dynamic> part}) {
     return ParametersParameter(
       id: id,
       extension: extension,
@@ -434,7 +434,7 @@ class _$OtherTearOff {
       List<dynamic> modifierExtension,
       bool active,
       Reference author,
-      List<LinkageItem> item}) {
+      List<dynamic> item}) {
     return Linkage(
       resourceType: resourceType,
       id: id,
@@ -476,8 +476,8 @@ class _$OtherTearOff {
       BundleType type,
       Instant timestamp,
       int total,
-      List<BundleLink> link,
-      List<BundleEntry> entry,
+      List<dynamic> link,
+      List<dynamic> entry,
       Signature signature}) {
     return Bundle(
       resourceType: resourceType,
@@ -514,7 +514,7 @@ class _$OtherTearOff {
       {String id,
       List<dynamic> extension,
       List<dynamic> modifierExtension,
-      List<BundleLink> link,
+      List<dynamic> link,
       FhirUri fullUrl,
       dynamic resource,
       BundleSearch search,
@@ -643,7 +643,7 @@ mixin _$Other {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -668,7 +668,7 @@ mixin _$Other {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -706,13 +706,8 @@ mixin _$Other {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -770,7 +765,7 @@ mixin _$Other {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -821,7 +816,7 @@ mixin _$Other {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -840,8 +835,8 @@ mixin _$Other {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -851,7 +846,7 @@ mixin _$Other {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -914,7 +909,7 @@ mixin _$Other {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -937,7 +932,7 @@ mixin _$Other {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -971,13 +966,8 @@ mixin _$Other {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -1034,7 +1024,7 @@ mixin _$Other {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -1081,7 +1071,7 @@ mixin _$Other {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -1098,8 +1088,8 @@ mixin _$Other {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -1107,7 +1097,7 @@ mixin _$Other {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -1228,7 +1218,7 @@ abstract class $OperationOutcomeCopyWith<$Res> {
       List<dynamic> contained,
       List<dynamic> extension,
       List<dynamic> modifierExtension,
-      List<OperationOutcomeIssue> issue});
+      List<dynamic> issue});
 }
 
 class _$OperationOutcomeCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
@@ -1271,9 +1261,7 @@ class _$OperationOutcomeCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
-      issue: issue == freezed
-          ? _value.issue
-          : issue as List<OperationOutcomeIssue>,
+      issue: issue == freezed ? _value.issue : issue as List<dynamic>,
     ));
   }
 }
@@ -1314,7 +1302,7 @@ class _$OperationOutcome implements OperationOutcome {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<OperationOutcomeIssue> issue;
+  final List<dynamic> issue;
 
   @override
   String toString() {
@@ -1385,7 +1373,7 @@ class _$OperationOutcome implements OperationOutcome {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -1410,7 +1398,7 @@ class _$OperationOutcome implements OperationOutcome {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -1448,13 +1436,8 @@ class _$OperationOutcome implements OperationOutcome {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -1512,7 +1495,7 @@ class _$OperationOutcome implements OperationOutcome {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -1563,7 +1546,7 @@ class _$OperationOutcome implements OperationOutcome {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -1582,8 +1565,8 @@ class _$OperationOutcome implements OperationOutcome {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -1593,7 +1576,7 @@ class _$OperationOutcome implements OperationOutcome {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -1681,7 +1664,7 @@ class _$OperationOutcome implements OperationOutcome {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -1704,7 +1687,7 @@ class _$OperationOutcome implements OperationOutcome {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -1738,13 +1721,8 @@ class _$OperationOutcome implements OperationOutcome {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -1801,7 +1779,7 @@ class _$OperationOutcome implements OperationOutcome {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -1848,7 +1826,7 @@ class _$OperationOutcome implements OperationOutcome {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -1865,8 +1843,8 @@ class _$OperationOutcome implements OperationOutcome {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -1874,7 +1852,7 @@ class _$OperationOutcome implements OperationOutcome {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -2023,7 +2001,7 @@ abstract class OperationOutcome implements Other {
       List<dynamic> contained,
       List<dynamic> extension,
       List<dynamic> modifierExtension,
-      List<OperationOutcomeIssue> issue}) = _$OperationOutcome;
+      List<dynamic> issue}) = _$OperationOutcome;
 
   factory OperationOutcome.fromJson(Map<String, dynamic> json) =
       _$OperationOutcome.fromJson;
@@ -2037,7 +2015,7 @@ abstract class OperationOutcome implements Other {
   List<dynamic> get contained;
   List<dynamic> get extension;
   List<dynamic> get modifierExtension;
-  List<OperationOutcomeIssue> get issue;
+  List<dynamic> get issue;
   $OperationOutcomeCopyWith<OperationOutcome> get copyWith;
 }
 
@@ -2205,7 +2183,7 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -2230,7 +2208,7 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -2268,13 +2246,8 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -2332,7 +2305,7 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -2383,7 +2356,7 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -2402,8 +2375,8 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -2413,7 +2386,7 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -2501,7 +2474,7 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -2524,7 +2497,7 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -2558,13 +2531,8 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -2621,7 +2589,7 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -2668,7 +2636,7 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -2685,8 +2653,8 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -2694,7 +2662,7 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -2875,7 +2843,7 @@ abstract class $MessageHeaderCopyWith<$Res> {
       List<dynamic> modifierExtension,
       Coding eventCoding,
       FhirUri eventUri,
-      List<MessageHeaderDestination> destination,
+      List<dynamic> destination,
       Reference sender,
       Reference enterer,
       Reference author,
@@ -2943,7 +2911,7 @@ class _$MessageHeaderCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
       eventUri: eventUri == freezed ? _value.eventUri : eventUri as FhirUri,
       destination: destination == freezed
           ? _value.destination
-          : destination as List<MessageHeaderDestination>,
+          : destination as List<dynamic>,
       sender: sender == freezed ? _value.sender : sender as Reference,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference,
       author: author == freezed ? _value.author : author as Reference,
@@ -3013,7 +2981,7 @@ class _$MessageHeader implements MessageHeader {
   @override
   final FhirUri eventUri;
   @override
-  final List<MessageHeaderDestination> destination;
+  final List<dynamic> destination;
   @override
   final Reference sender;
   @override
@@ -3142,7 +3110,7 @@ class _$MessageHeader implements MessageHeader {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -3167,7 +3135,7 @@ class _$MessageHeader implements MessageHeader {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -3205,13 +3173,8 @@ class _$MessageHeader implements MessageHeader {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -3269,7 +3232,7 @@ class _$MessageHeader implements MessageHeader {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -3320,7 +3283,7 @@ class _$MessageHeader implements MessageHeader {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -3339,8 +3302,8 @@ class _$MessageHeader implements MessageHeader {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -3350,7 +3313,7 @@ class _$MessageHeader implements MessageHeader {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -3458,7 +3421,7 @@ class _$MessageHeader implements MessageHeader {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -3481,7 +3444,7 @@ class _$MessageHeader implements MessageHeader {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -3515,13 +3478,8 @@ class _$MessageHeader implements MessageHeader {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -3578,7 +3536,7 @@ class _$MessageHeader implements MessageHeader {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -3625,7 +3583,7 @@ class _$MessageHeader implements MessageHeader {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -3642,8 +3600,8 @@ class _$MessageHeader implements MessageHeader {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -3651,7 +3609,7 @@ class _$MessageHeader implements MessageHeader {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -3821,7 +3779,7 @@ abstract class MessageHeader implements Other {
       List<dynamic> modifierExtension,
       Coding eventCoding,
       FhirUri eventUri,
-      List<MessageHeaderDestination> destination,
+      List<dynamic> destination,
       Reference sender,
       Reference enterer,
       Reference author,
@@ -3846,7 +3804,7 @@ abstract class MessageHeader implements Other {
   List<dynamic> get modifierExtension;
   Coding get eventCoding;
   FhirUri get eventUri;
-  List<MessageHeaderDestination> get destination;
+  List<dynamic> get destination;
   Reference get sender;
   Reference get enterer;
   Reference get author;
@@ -3997,7 +3955,7 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -4022,7 +3980,7 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -4060,13 +4018,8 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -4124,7 +4077,7 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -4175,7 +4128,7 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -4194,8 +4147,8 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -4205,7 +4158,7 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -4293,7 +4246,7 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -4316,7 +4269,7 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -4350,13 +4303,8 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -4413,7 +4361,7 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -4460,7 +4408,7 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -4477,8 +4425,8 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -4486,7 +4434,7 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -4793,7 +4741,7 @@ class _$MessageHeaderSource implements MessageHeaderSource {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -4818,7 +4766,7 @@ class _$MessageHeaderSource implements MessageHeaderSource {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -4856,13 +4804,8 @@ class _$MessageHeaderSource implements MessageHeaderSource {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -4920,7 +4863,7 @@ class _$MessageHeaderSource implements MessageHeaderSource {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -4971,7 +4914,7 @@ class _$MessageHeaderSource implements MessageHeaderSource {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -4990,8 +4933,8 @@ class _$MessageHeaderSource implements MessageHeaderSource {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -5001,7 +4944,7 @@ class _$MessageHeaderSource implements MessageHeaderSource {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -5089,7 +5032,7 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -5112,7 +5055,7 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -5146,13 +5089,8 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -5209,7 +5147,7 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -5256,7 +5194,7 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -5273,8 +5211,8 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -5282,7 +5220,7 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -5572,7 +5510,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -5597,7 +5535,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -5635,13 +5573,8 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -5699,7 +5632,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -5750,7 +5683,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -5769,8 +5702,8 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -5780,7 +5713,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -5868,7 +5801,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -5891,7 +5824,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -5925,13 +5858,8 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -5988,7 +5916,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -6035,7 +5963,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -6052,8 +5980,8 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -6061,7 +5989,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -6230,7 +6158,7 @@ abstract class $ParametersCopyWith<$Res> {
       Meta meta,
       FhirUri implicitRules,
       Code language,
-      List<ParametersParameter> parameter});
+      List<dynamic> parameter});
 }
 
 class _$ParametersCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
@@ -6260,9 +6188,8 @@ class _$ParametersCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
           ? _value.implicitRules
           : implicitRules as FhirUri,
       language: language == freezed ? _value.language : language as Code,
-      parameter: parameter == freezed
-          ? _value.parameter
-          : parameter as List<ParametersParameter>,
+      parameter:
+          parameter == freezed ? _value.parameter : parameter as List<dynamic>,
     ));
   }
 }
@@ -6291,7 +6218,7 @@ class _$Parameters implements Parameters {
   @override
   final Code language;
   @override
-  final List<ParametersParameter> parameter;
+  final List<dynamic> parameter;
 
   @override
   String toString() {
@@ -6348,7 +6275,7 @@ class _$Parameters implements Parameters {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -6373,7 +6300,7 @@ class _$Parameters implements Parameters {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -6411,13 +6338,8 @@ class _$Parameters implements Parameters {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -6475,7 +6397,7 @@ class _$Parameters implements Parameters {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -6526,7 +6448,7 @@ class _$Parameters implements Parameters {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -6545,8 +6467,8 @@ class _$Parameters implements Parameters {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -6556,7 +6478,7 @@ class _$Parameters implements Parameters {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -6644,7 +6566,7 @@ class _$Parameters implements Parameters {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -6667,7 +6589,7 @@ class _$Parameters implements Parameters {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -6701,13 +6623,8 @@ class _$Parameters implements Parameters {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -6764,7 +6681,7 @@ class _$Parameters implements Parameters {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -6811,7 +6728,7 @@ class _$Parameters implements Parameters {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -6828,8 +6745,8 @@ class _$Parameters implements Parameters {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -6837,7 +6754,7 @@ class _$Parameters implements Parameters {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -6981,7 +6898,7 @@ abstract class Parameters implements Other {
       Meta meta,
       FhirUri implicitRules,
       Code language,
-      List<ParametersParameter> parameter}) = _$Parameters;
+      List<dynamic> parameter}) = _$Parameters;
 
   factory Parameters.fromJson(Map<String, dynamic> json) =
       _$Parameters.fromJson;
@@ -6991,7 +6908,7 @@ abstract class Parameters implements Other {
   Meta get meta;
   FhirUri get implicitRules;
   Code get language;
-  List<ParametersParameter> get parameter;
+  List<dynamic> get parameter;
   $ParametersCopyWith<Parameters> get copyWith;
 }
 
@@ -7055,7 +6972,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
       Dosage valueDosage,
       Meta valueMeta,
       dynamic resource,
-      List<ParametersParameter> part});
+      List<dynamic> part});
 }
 
 class _$ParametersParameterCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
@@ -7254,7 +7171,7 @@ class _$ParametersParameterCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
           valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage,
       valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta,
       resource: resource == freezed ? _value.resource : resource as dynamic,
-      part: part == freezed ? _value.part : part as List<ParametersParameter>,
+      part: part == freezed ? _value.part : part as List<dynamic>,
     ));
   }
 }
@@ -7433,7 +7350,7 @@ class _$ParametersParameter implements ParametersParameter {
   @override
   final dynamic resource;
   @override
-  final List<ParametersParameter> part;
+  final List<dynamic> part;
 
   @override
   String toString() {
@@ -7623,7 +7540,7 @@ class _$ParametersParameter implements ParametersParameter {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -7648,7 +7565,7 @@ class _$ParametersParameter implements ParametersParameter {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -7686,13 +7603,8 @@ class _$ParametersParameter implements ParametersParameter {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -7750,7 +7662,7 @@ class _$ParametersParameter implements ParametersParameter {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -7801,7 +7713,7 @@ class _$ParametersParameter implements ParametersParameter {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -7820,8 +7732,8 @@ class _$ParametersParameter implements ParametersParameter {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -7831,7 +7743,7 @@ class _$ParametersParameter implements ParametersParameter {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -7974,7 +7886,7 @@ class _$ParametersParameter implements ParametersParameter {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -7997,7 +7909,7 @@ class _$ParametersParameter implements ParametersParameter {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -8031,13 +7943,8 @@ class _$ParametersParameter implements ParametersParameter {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -8094,7 +8001,7 @@ class _$ParametersParameter implements ParametersParameter {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -8141,7 +8048,7 @@ class _$ParametersParameter implements ParametersParameter {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -8158,8 +8065,8 @@ class _$ParametersParameter implements ParametersParameter {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -8167,7 +8074,7 @@ class _$ParametersParameter implements ParametersParameter {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -8417,7 +8324,7 @@ abstract class ParametersParameter implements Other {
       Dosage valueDosage,
       Meta valueMeta,
       dynamic resource,
-      List<ParametersParameter> part}) = _$ParametersParameter;
+      List<dynamic> part}) = _$ParametersParameter;
 
   factory ParametersParameter.fromJson(Map<String, dynamic> json) =
       _$ParametersParameter.fromJson;
@@ -8477,7 +8384,7 @@ abstract class ParametersParameter implements Other {
   Dosage get valueDosage;
   Meta get valueMeta;
   dynamic get resource;
-  List<ParametersParameter> get part;
+  List<dynamic> get part;
   $ParametersParameterCopyWith<ParametersParameter> get copyWith;
 }
 
@@ -8628,7 +8535,7 @@ class _$Binary implements Binary {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -8653,7 +8560,7 @@ class _$Binary implements Binary {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -8691,13 +8598,8 @@ class _$Binary implements Binary {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -8755,7 +8657,7 @@ class _$Binary implements Binary {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -8806,7 +8708,7 @@ class _$Binary implements Binary {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -8825,8 +8727,8 @@ class _$Binary implements Binary {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -8836,7 +8738,7 @@ class _$Binary implements Binary {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -8924,7 +8826,7 @@ class _$Binary implements Binary {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -8947,7 +8849,7 @@ class _$Binary implements Binary {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -8981,13 +8883,8 @@ class _$Binary implements Binary {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -9044,7 +8941,7 @@ class _$Binary implements Binary {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -9091,7 +8988,7 @@ class _$Binary implements Binary {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -9108,8 +9005,8 @@ class _$Binary implements Binary {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -9117,7 +9014,7 @@ class _$Binary implements Binary {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -9504,7 +9401,7 @@ class _$Subscription implements Subscription {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -9529,7 +9426,7 @@ class _$Subscription implements Subscription {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -9567,13 +9464,8 @@ class _$Subscription implements Subscription {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -9631,7 +9523,7 @@ class _$Subscription implements Subscription {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -9682,7 +9574,7 @@ class _$Subscription implements Subscription {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -9701,8 +9593,8 @@ class _$Subscription implements Subscription {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -9712,7 +9604,7 @@ class _$Subscription implements Subscription {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -9815,7 +9707,7 @@ class _$Subscription implements Subscription {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -9838,7 +9730,7 @@ class _$Subscription implements Subscription {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -9872,13 +9764,8 @@ class _$Subscription implements Subscription {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -9935,7 +9822,7 @@ class _$Subscription implements Subscription {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -9982,7 +9869,7 @@ class _$Subscription implements Subscription {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -9999,8 +9886,8 @@ class _$Subscription implements Subscription {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -10008,7 +9895,7 @@ class _$Subscription implements Subscription {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -10336,7 +10223,7 @@ class _$SubscriptionChannel implements SubscriptionChannel {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -10361,7 +10248,7 @@ class _$SubscriptionChannel implements SubscriptionChannel {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -10399,13 +10286,8 @@ class _$SubscriptionChannel implements SubscriptionChannel {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -10463,7 +10345,7 @@ class _$SubscriptionChannel implements SubscriptionChannel {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -10514,7 +10396,7 @@ class _$SubscriptionChannel implements SubscriptionChannel {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -10533,8 +10415,8 @@ class _$SubscriptionChannel implements SubscriptionChannel {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -10544,7 +10426,7 @@ class _$SubscriptionChannel implements SubscriptionChannel {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -10632,7 +10514,7 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -10655,7 +10537,7 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -10689,13 +10571,8 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -10752,7 +10629,7 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -10799,7 +10676,7 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -10816,8 +10693,8 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -10825,7 +10702,7 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -11001,7 +10878,7 @@ abstract class $LinkageCopyWith<$Res> {
       List<dynamic> modifierExtension,
       bool active,
       Reference author,
-      List<LinkageItem> item});
+      List<dynamic> item});
 }
 
 class _$LinkageCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
@@ -11047,7 +10924,7 @@ class _$LinkageCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       active: active == freezed ? _value.active : active as bool,
       author: author == freezed ? _value.author : author as Reference,
-      item: item == freezed ? _value.item : item as List<LinkageItem>,
+      item: item == freezed ? _value.item : item as List<dynamic>,
     ));
   }
 }
@@ -11094,7 +10971,7 @@ class _$Linkage implements Linkage {
   @override
   final Reference author;
   @override
-  final List<LinkageItem> item;
+  final List<dynamic> item;
 
   @override
   String toString() {
@@ -11171,7 +11048,7 @@ class _$Linkage implements Linkage {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -11196,7 +11073,7 @@ class _$Linkage implements Linkage {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -11234,13 +11111,8 @@ class _$Linkage implements Linkage {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -11298,7 +11170,7 @@ class _$Linkage implements Linkage {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -11349,7 +11221,7 @@ class _$Linkage implements Linkage {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -11368,8 +11240,8 @@ class _$Linkage implements Linkage {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -11379,7 +11251,7 @@ class _$Linkage implements Linkage {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -11467,7 +11339,7 @@ class _$Linkage implements Linkage {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -11490,7 +11362,7 @@ class _$Linkage implements Linkage {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -11524,13 +11396,8 @@ class _$Linkage implements Linkage {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -11587,7 +11454,7 @@ class _$Linkage implements Linkage {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -11634,7 +11501,7 @@ class _$Linkage implements Linkage {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -11651,8 +11518,8 @@ class _$Linkage implements Linkage {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -11660,7 +11527,7 @@ class _$Linkage implements Linkage {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -11810,7 +11677,7 @@ abstract class Linkage implements Other {
       List<dynamic> modifierExtension,
       bool active,
       Reference author,
-      List<LinkageItem> item}) = _$Linkage;
+      List<dynamic> item}) = _$Linkage;
 
   factory Linkage.fromJson(Map<String, dynamic> json) = _$Linkage.fromJson;
 
@@ -11825,7 +11692,7 @@ abstract class Linkage implements Other {
   List<dynamic> get modifierExtension;
   bool get active;
   Reference get author;
-  List<LinkageItem> get item;
+  List<dynamic> get item;
   $LinkageCopyWith<Linkage> get copyWith;
 }
 
@@ -11945,7 +11812,7 @@ class _$LinkageItem implements LinkageItem {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -11970,7 +11837,7 @@ class _$LinkageItem implements LinkageItem {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -12008,13 +11875,8 @@ class _$LinkageItem implements LinkageItem {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -12072,7 +11934,7 @@ class _$LinkageItem implements LinkageItem {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -12123,7 +11985,7 @@ class _$LinkageItem implements LinkageItem {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -12142,8 +12004,8 @@ class _$LinkageItem implements LinkageItem {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -12153,7 +12015,7 @@ class _$LinkageItem implements LinkageItem {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -12240,7 +12102,7 @@ class _$LinkageItem implements LinkageItem {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -12263,7 +12125,7 @@ class _$LinkageItem implements LinkageItem {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -12297,13 +12159,8 @@ class _$LinkageItem implements LinkageItem {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -12360,7 +12217,7 @@ class _$LinkageItem implements LinkageItem {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -12407,7 +12264,7 @@ class _$LinkageItem implements LinkageItem {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -12424,8 +12281,8 @@ class _$LinkageItem implements LinkageItem {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -12433,7 +12290,7 @@ class _$LinkageItem implements LinkageItem {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -12601,8 +12458,8 @@ abstract class $BundleCopyWith<$Res> {
       BundleType type,
       Instant timestamp,
       int total,
-      List<BundleLink> link,
-      List<BundleEntry> entry,
+      List<dynamic> link,
+      List<dynamic> entry,
       Signature signature});
 }
 
@@ -12644,8 +12501,8 @@ class _$BundleCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as BundleType,
       timestamp: timestamp == freezed ? _value.timestamp : timestamp as Instant,
       total: total == freezed ? _value.total : total as int,
-      link: link == freezed ? _value.link : link as List<BundleLink>,
-      entry: entry == freezed ? _value.entry : entry as List<BundleEntry>,
+      link: link == freezed ? _value.link : link as List<dynamic>,
+      entry: entry == freezed ? _value.entry : entry as List<dynamic>,
       signature:
           signature == freezed ? _value.signature : signature as Signature,
     ));
@@ -12690,9 +12547,9 @@ class _$Bundle implements Bundle {
   @override
   final int total;
   @override
-  final List<BundleLink> link;
+  final List<dynamic> link;
   @override
-  final List<BundleEntry> entry;
+  final List<dynamic> entry;
   @override
   final Signature signature;
 
@@ -12771,7 +12628,7 @@ class _$Bundle implements Bundle {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -12796,7 +12653,7 @@ class _$Bundle implements Bundle {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -12834,13 +12691,8 @@ class _$Bundle implements Bundle {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -12898,7 +12750,7 @@ class _$Bundle implements Bundle {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -12949,7 +12801,7 @@ class _$Bundle implements Bundle {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -12968,8 +12820,8 @@ class _$Bundle implements Bundle {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -12979,7 +12831,7 @@ class _$Bundle implements Bundle {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -13067,7 +12919,7 @@ class _$Bundle implements Bundle {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -13090,7 +12942,7 @@ class _$Bundle implements Bundle {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -13124,13 +12976,8 @@ class _$Bundle implements Bundle {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -13187,7 +13034,7 @@ class _$Bundle implements Bundle {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -13234,7 +13081,7 @@ class _$Bundle implements Bundle {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -13251,8 +13098,8 @@ class _$Bundle implements Bundle {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -13260,7 +13107,7 @@ class _$Bundle implements Bundle {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -13408,8 +13255,8 @@ abstract class Bundle implements Other {
       BundleType type,
       Instant timestamp,
       int total,
-      List<BundleLink> link,
-      List<BundleEntry> entry,
+      List<dynamic> link,
+      List<dynamic> entry,
       Signature signature}) = _$Bundle;
 
   factory Bundle.fromJson(Map<String, dynamic> json) = _$Bundle.fromJson;
@@ -13423,8 +13270,8 @@ abstract class Bundle implements Other {
   BundleType get type;
   Instant get timestamp;
   int get total;
-  List<BundleLink> get link;
-  List<BundleEntry> get entry;
+  List<dynamic> get link;
+  List<dynamic> get entry;
   Signature get signature;
   $BundleCopyWith<Bundle> get copyWith;
 }
@@ -13544,7 +13391,7 @@ class _$BundleLink implements BundleLink {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -13569,7 +13416,7 @@ class _$BundleLink implements BundleLink {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -13607,13 +13454,8 @@ class _$BundleLink implements BundleLink {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -13671,7 +13513,7 @@ class _$BundleLink implements BundleLink {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -13722,7 +13564,7 @@ class _$BundleLink implements BundleLink {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -13741,8 +13583,8 @@ class _$BundleLink implements BundleLink {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -13752,7 +13594,7 @@ class _$BundleLink implements BundleLink {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -13839,7 +13681,7 @@ class _$BundleLink implements BundleLink {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -13862,7 +13704,7 @@ class _$BundleLink implements BundleLink {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -13896,13 +13738,8 @@ class _$BundleLink implements BundleLink {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -13959,7 +13796,7 @@ class _$BundleLink implements BundleLink {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -14006,7 +13843,7 @@ class _$BundleLink implements BundleLink {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -14023,8 +13860,8 @@ class _$BundleLink implements BundleLink {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -14032,7 +13869,7 @@ class _$BundleLink implements BundleLink {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -14195,7 +14032,7 @@ abstract class $BundleEntryCopyWith<$Res> {
       {String id,
       List<dynamic> extension,
       List<dynamic> modifierExtension,
-      List<BundleLink> link,
+      List<dynamic> link,
       FhirUri fullUrl,
       dynamic resource,
       BundleSearch search,
@@ -14231,7 +14068,7 @@ class _$BundleEntryCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
-      link: link == freezed ? _value.link : link as List<BundleLink>,
+      link: link == freezed ? _value.link : link as List<dynamic>,
       fullUrl: fullUrl == freezed ? _value.fullUrl : fullUrl as FhirUri,
       resource: resource == freezed ? _value.resource : resource as dynamic,
       search: search == freezed ? _value.search : search as BundleSearch,
@@ -14265,7 +14102,7 @@ class _$BundleEntry implements BundleEntry {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<BundleLink> link;
+  final List<dynamic> link;
   @override
   final FhirUri fullUrl;
   @override
@@ -14343,7 +14180,7 @@ class _$BundleEntry implements BundleEntry {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -14368,7 +14205,7 @@ class _$BundleEntry implements BundleEntry {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -14406,13 +14243,8 @@ class _$BundleEntry implements BundleEntry {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -14470,7 +14302,7 @@ class _$BundleEntry implements BundleEntry {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -14521,7 +14353,7 @@ class _$BundleEntry implements BundleEntry {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -14540,8 +14372,8 @@ class _$BundleEntry implements BundleEntry {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -14551,7 +14383,7 @@ class _$BundleEntry implements BundleEntry {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -14639,7 +14471,7 @@ class _$BundleEntry implements BundleEntry {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -14662,7 +14494,7 @@ class _$BundleEntry implements BundleEntry {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -14696,13 +14528,8 @@ class _$BundleEntry implements BundleEntry {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -14759,7 +14586,7 @@ class _$BundleEntry implements BundleEntry {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -14806,7 +14633,7 @@ class _$BundleEntry implements BundleEntry {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -14823,8 +14650,8 @@ class _$BundleEntry implements BundleEntry {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -14832,7 +14659,7 @@ class _$BundleEntry implements BundleEntry {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -14974,7 +14801,7 @@ abstract class BundleEntry implements Other {
       {String id,
       List<dynamic> extension,
       List<dynamic> modifierExtension,
-      List<BundleLink> link,
+      List<dynamic> link,
       FhirUri fullUrl,
       dynamic resource,
       BundleSearch search,
@@ -14987,7 +14814,7 @@ abstract class BundleEntry implements Other {
   String get id;
   List<dynamic> get extension;
   List<dynamic> get modifierExtension;
-  List<BundleLink> get link;
+  List<dynamic> get link;
   FhirUri get fullUrl;
   dynamic get resource;
   BundleSearch get search;
@@ -15107,7 +14934,7 @@ class _$BundleSearch implements BundleSearch {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -15132,7 +14959,7 @@ class _$BundleSearch implements BundleSearch {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -15170,13 +14997,8 @@ class _$BundleSearch implements BundleSearch {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -15234,7 +15056,7 @@ class _$BundleSearch implements BundleSearch {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -15285,7 +15107,7 @@ class _$BundleSearch implements BundleSearch {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -15304,8 +15126,8 @@ class _$BundleSearch implements BundleSearch {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -15315,7 +15137,7 @@ class _$BundleSearch implements BundleSearch {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -15402,7 +15224,7 @@ class _$BundleSearch implements BundleSearch {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -15425,7 +15247,7 @@ class _$BundleSearch implements BundleSearch {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -15459,13 +15281,8 @@ class _$BundleSearch implements BundleSearch {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -15522,7 +15339,7 @@ class _$BundleSearch implements BundleSearch {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -15569,7 +15386,7 @@ class _$BundleSearch implements BundleSearch {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -15586,8 +15403,8 @@ class _$BundleSearch implements BundleSearch {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -15595,7 +15412,7 @@ class _$BundleSearch implements BundleSearch {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -15909,7 +15726,7 @@ class _$BundleRequest implements BundleRequest {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -15934,7 +15751,7 @@ class _$BundleRequest implements BundleRequest {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -15972,13 +15789,8 @@ class _$BundleRequest implements BundleRequest {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -16036,7 +15848,7 @@ class _$BundleRequest implements BundleRequest {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -16087,7 +15899,7 @@ class _$BundleRequest implements BundleRequest {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -16106,8 +15918,8 @@ class _$BundleRequest implements BundleRequest {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -16117,7 +15929,7 @@ class _$BundleRequest implements BundleRequest {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -16205,7 +16017,7 @@ class _$BundleRequest implements BundleRequest {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -16228,7 +16040,7 @@ class _$BundleRequest implements BundleRequest {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -16262,13 +16074,8 @@ class _$BundleRequest implements BundleRequest {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -16325,7 +16132,7 @@ class _$BundleRequest implements BundleRequest {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -16372,7 +16179,7 @@ class _$BundleRequest implements BundleRequest {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -16389,8 +16196,8 @@ class _$BundleRequest implements BundleRequest {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -16398,7 +16205,7 @@ class _$BundleRequest implements BundleRequest {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -16708,7 +16515,7 @@ class _$BundleResponse implements BundleResponse {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -16733,7 +16540,7 @@ class _$BundleResponse implements BundleResponse {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -16771,13 +16578,8 @@ class _$BundleResponse implements BundleResponse {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -16835,7 +16637,7 @@ class _$BundleResponse implements BundleResponse {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -16886,7 +16688,7 @@ class _$BundleResponse implements BundleResponse {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -16905,8 +16707,8 @@ class _$BundleResponse implements BundleResponse {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -16916,7 +16718,7 @@ class _$BundleResponse implements BundleResponse {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -17004,7 +16806,7 @@ class _$BundleResponse implements BundleResponse {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -17027,7 +16829,7 @@ class _$BundleResponse implements BundleResponse {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -17061,13 +16863,8 @@ class _$BundleResponse implements BundleResponse {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -17124,7 +16921,7 @@ class _$BundleResponse implements BundleResponse {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -17171,7 +16968,7 @@ class _$BundleResponse implements BundleResponse {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -17188,8 +16985,8 @@ class _$BundleResponse implements BundleResponse {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -17197,7 +16994,7 @@ class _$BundleResponse implements BundleResponse {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,
@@ -17567,7 +17364,7 @@ class _$Basic implements Basic {
             List<dynamic> contained,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<OperationOutcomeIssue> issue),
+            List<dynamic> issue),
     @required
         Result operationOutcomeIssue(
             String id,
@@ -17592,7 +17389,7 @@ class _$Basic implements Basic {
             List<dynamic> modifierExtension,
             Coding eventCoding,
             FhirUri eventUri,
-            List<MessageHeaderDestination> destination,
+            List<dynamic> destination,
             Reference sender,
             Reference enterer,
             Reference author,
@@ -17630,13 +17427,8 @@ class _$Basic implements Basic {
             MessageHeaderResponseCode code,
             Reference details),
     @required
-        Result parameters(
-            String resourceType,
-            Id id,
-            Meta meta,
-            FhirUri implicitRules,
-            Code language,
-            List<ParametersParameter> parameter),
+        Result parameters(String resourceType, Id id, Meta meta,
+            FhirUri implicitRules, Code language, List<dynamic> parameter),
     @required
         Result parametersParameter(
             String id,
@@ -17694,7 +17486,7 @@ class _$Basic implements Basic {
             Dosage valueDosage,
             Meta valueMeta,
             dynamic resource,
-            List<ParametersParameter> part),
+            List<dynamic> part),
     @required
         Result binary(
             String resourceType,
@@ -17745,7 +17537,7 @@ class _$Basic implements Basic {
             List<dynamic> modifierExtension,
             bool active,
             Reference author,
-            List<LinkageItem> item),
+            List<dynamic> item),
     @required
         Result linkageItem(
             String id,
@@ -17764,8 +17556,8 @@ class _$Basic implements Basic {
             BundleType type,
             Instant timestamp,
             int total,
-            List<BundleLink> link,
-            List<BundleEntry> entry,
+            List<dynamic> link,
+            List<dynamic> entry,
             Signature signature),
     @required
         Result bundleLink(String id, List<dynamic> extension,
@@ -17775,7 +17567,7 @@ class _$Basic implements Basic {
             String id,
             List<dynamic> extension,
             List<dynamic> modifierExtension,
-            List<BundleLink> link,
+            List<dynamic> link,
             FhirUri fullUrl,
             dynamic resource,
             BundleSearch search,
@@ -17876,7 +17668,7 @@ class _$Basic implements Basic {
         List<dynamic> contained,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<OperationOutcomeIssue> issue),
+        List<dynamic> issue),
     Result operationOutcomeIssue(
         String id,
         List<dynamic> extension,
@@ -17899,7 +17691,7 @@ class _$Basic implements Basic {
         List<dynamic> modifierExtension,
         Coding eventCoding,
         FhirUri eventUri,
-        List<MessageHeaderDestination> destination,
+        List<dynamic> destination,
         Reference sender,
         Reference enterer,
         Reference author,
@@ -17933,13 +17725,8 @@ class _$Basic implements Basic {
         Id identifier,
         MessageHeaderResponseCode code,
         Reference details),
-    Result parameters(
-        String resourceType,
-        Id id,
-        Meta meta,
-        FhirUri implicitRules,
-        Code language,
-        List<ParametersParameter> parameter),
+    Result parameters(String resourceType, Id id, Meta meta,
+        FhirUri implicitRules, Code language, List<dynamic> parameter),
     Result parametersParameter(
         String id,
         List<dynamic> extension,
@@ -17996,7 +17783,7 @@ class _$Basic implements Basic {
         Dosage valueDosage,
         Meta valueMeta,
         dynamic resource,
-        List<ParametersParameter> part),
+        List<dynamic> part),
     Result binary(
         String resourceType,
         Id id,
@@ -18043,7 +17830,7 @@ class _$Basic implements Basic {
         List<dynamic> modifierExtension,
         bool active,
         Reference author,
-        List<LinkageItem> item),
+        List<dynamic> item),
     Result linkageItem(
         String id,
         List<dynamic> extension,
@@ -18060,8 +17847,8 @@ class _$Basic implements Basic {
         BundleType type,
         Instant timestamp,
         int total,
-        List<BundleLink> link,
-        List<BundleEntry> entry,
+        List<dynamic> link,
+        List<dynamic> entry,
         Signature signature),
     Result bundleLink(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, String relation, FhirUri url),
@@ -18069,7 +17856,7 @@ class _$Basic implements Basic {
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
-        List<BundleLink> link,
+        List<dynamic> link,
         FhirUri fullUrl,
         dynamic resource,
         BundleSearch search,

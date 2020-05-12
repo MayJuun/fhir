@@ -22,14 +22,8 @@ SpecimenDefinition _$SpecimenDefinitionFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -71,10 +65,8 @@ Map<String, dynamic> _$SpecimenDefinitionToJson(SpecimenDefinition instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('typeCollected', instance.typeCollected?.toJson());
   writeNotNull('patientPreparation',
@@ -91,14 +83,8 @@ SpecimenDefinitionTypeTested _$SpecimenDefinitionTypeTestedFromJson(
     Map<String, dynamic> json) {
   return SpecimenDefinitionTypeTested(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     isDerived: json['isDerived'] as bool,
     type: json['type'] == null
         ? null
@@ -139,10 +125,8 @@ Map<String, dynamic> _$SpecimenDefinitionTypeTestedToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('isDerived', instance.isDerived);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('preference', instance.preference?.toJson());
@@ -160,14 +144,8 @@ SpecimenDefinitionContainer _$SpecimenDefinitionContainerFromJson(
     Map<String, dynamic> json) {
   return SpecimenDefinitionContainer(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     material: json['material'] == null
         ? null
         : CodeableConcept.fromJson(json['material'] as Map<String, dynamic>),
@@ -206,10 +184,8 @@ Map<String, dynamic> _$SpecimenDefinitionContainerToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('material', instance.material?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('cap', instance.cap?.toJson());
@@ -228,14 +204,8 @@ SpecimenDefinitionAdditive _$SpecimenDefinitionAdditiveFromJson(
     Map<String, dynamic> json) {
   return SpecimenDefinitionAdditive(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     additiveCodeableConcept: json['additiveCodeableConcept'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -257,10 +227,8 @@ Map<String, dynamic> _$SpecimenDefinitionAdditiveToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull(
       'additiveCodeableConcept', instance.additiveCodeableConcept?.toJson());
   writeNotNull('additiveReference', instance.additiveReference?.toJson());
@@ -271,14 +239,8 @@ SpecimenDefinitionHandling _$SpecimenDefinitionHandlingFromJson(
     Map<String, dynamic> json) {
   return SpecimenDefinitionHandling(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     temperatureQualifier: json['temperatureQualifier'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -304,10 +266,8 @@ Map<String, dynamic> _$SpecimenDefinitionHandlingToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('temperatureQualifier', instance.temperatureQualifier?.toJson());
   writeNotNull('temperatureRange', instance.temperatureRange?.toJson());
   writeNotNull('maxDuration', instance.maxDuration?.toJson());

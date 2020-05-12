@@ -69,8 +69,8 @@ class _$IndividualsTearOff {
       String name,
       int quantity,
       Reference managingEntity,
-      List<GroupCharacteristic> characteristic,
-      List<GroupMember> member}) {
+      List<dynamic> characteristic,
+      List<dynamic> member}) {
     return Group(
       resourceType: resourceType,
       id: id,
@@ -161,11 +161,11 @@ class _$IndividualsTearOff {
       bool multipleBirthBoolean,
       int multipleBirthInteger,
       List<dynamic> photo,
-      List<PatientContact> contact,
-      List<PatientCommunication> communication,
+      List<dynamic> contact,
+      List<dynamic> communication,
       List<dynamic> generalPractitioner,
       Reference managingOrganization,
-      List<PatientLink> link}) {
+      List<dynamic> link}) {
     return Patient(
       resourceType: resourceType,
       id: id,
@@ -272,8 +272,8 @@ class _$IndividualsTearOff {
       List<dynamic> location,
       List<dynamic> healthcareService,
       List<dynamic> telecom,
-      List<PractitionerRoleAvailableTime> availableTime,
-      List<PractitionerRoleNotAvailable> notAvailable,
+      List<dynamic> availableTime,
+      List<dynamic> notAvailable,
       String availabilityExceptions,
       List<dynamic> endpoint}) {
     return PractitionerRole(
@@ -356,7 +356,7 @@ class _$IndividualsTearOff {
       Attachment photo,
       Reference managingOrganization,
       bool active,
-      List<PersonLink> link}) {
+      List<dynamic> link}) {
     return Person(
       resourceType: resourceType,
       id: id,
@@ -413,7 +413,7 @@ class _$IndividualsTearOff {
       PractitionerGender gender,
       Date birthDate,
       List<dynamic> photo,
-      List<PractitionerQualification> qualification,
+      List<dynamic> qualification,
       List<dynamic> communication}) {
     return Practitioner(
       resourceType: resourceType,
@@ -478,7 +478,7 @@ class _$IndividualsTearOff {
       List<dynamic> address,
       List<dynamic> photo,
       Period period,
-      List<RelatedPersonCommunication> communication}) {
+      List<dynamic> communication}) {
     return RelatedPerson(
       resourceType: resourceType,
       id: id,
@@ -548,8 +548,8 @@ mixin _$Individuals {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
@@ -595,11 +595,11 @@ mixin _$Individuals {
             bool multipleBirthBoolean,
             int multipleBirthInteger,
             List<dynamic> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
+            List<dynamic> contact,
+            List<dynamic> communication,
             List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
@@ -647,8 +647,8 @@ mixin _$Individuals {
             List<dynamic> location,
             List<dynamic> healthcareService,
             List<dynamic> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
             List<dynamic> endpoint),
     @required
@@ -683,7 +683,7 @@ mixin _$Individuals {
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
@@ -710,7 +710,7 @@ mixin _$Individuals {
             PractitionerGender gender,
             Date birthDate,
             List<dynamic> photo,
-            List<PractitionerQualification> qualification,
+            List<dynamic> qualification,
             List<dynamic> communication),
     @required
         Result practitionerQualification(
@@ -743,7 +743,7 @@ mixin _$Individuals {
             List<dynamic> address,
             List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
@@ -772,8 +772,8 @@ mixin _$Individuals {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
         List<dynamic> extension,
@@ -816,11 +816,11 @@ mixin _$Individuals {
         bool multipleBirthBoolean,
         int multipleBirthInteger,
         List<dynamic> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
+        List<dynamic> contact,
+        List<dynamic> communication,
         List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
         List<dynamic> extension,
@@ -860,8 +860,8 @@ mixin _$Individuals {
         List<dynamic> location,
         List<dynamic> healthcareService,
         List<dynamic> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
         List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
@@ -893,7 +893,7 @@ mixin _$Individuals {
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
         List<dynamic> extension,
@@ -918,7 +918,7 @@ mixin _$Individuals {
         PractitionerGender gender,
         Date birthDate,
         List<dynamic> photo,
-        List<PractitionerQualification> qualification,
+        List<dynamic> qualification,
         List<dynamic> communication),
     Result practitionerQualification(
         String id,
@@ -949,7 +949,7 @@ mixin _$Individuals {
         List<dynamic> address,
         List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
         List<dynamic> extension,
@@ -1056,8 +1056,8 @@ abstract class $GroupCopyWith<$Res> implements $IndividualsCopyWith<$Res> {
       String name,
       int quantity,
       Reference managingEntity,
-      List<GroupCharacteristic> characteristic,
-      List<GroupMember> member});
+      List<dynamic> characteristic,
+      List<dynamic> member});
 }
 
 class _$GroupCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
@@ -1122,8 +1122,8 @@ class _$GroupCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
           : managingEntity as Reference,
       characteristic: characteristic == freezed
           ? _value.characteristic
-          : characteristic as List<GroupCharacteristic>,
-      member: member == freezed ? _value.member : member as List<GroupMember>,
+          : characteristic as List<dynamic>,
+      member: member == freezed ? _value.member : member as List<dynamic>,
     ));
   }
 }
@@ -1189,9 +1189,9 @@ class _$Group implements Group {
   @override
   final Reference managingEntity;
   @override
-  final List<GroupCharacteristic> characteristic;
+  final List<dynamic> characteristic;
   @override
-  final List<GroupMember> member;
+  final List<dynamic> member;
 
   @override
   String toString() {
@@ -1301,8 +1301,8 @@ class _$Group implements Group {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
@@ -1348,11 +1348,11 @@ class _$Group implements Group {
             bool multipleBirthBoolean,
             int multipleBirthInteger,
             List<dynamic> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
+            List<dynamic> contact,
+            List<dynamic> communication,
             List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
@@ -1400,8 +1400,8 @@ class _$Group implements Group {
             List<dynamic> location,
             List<dynamic> healthcareService,
             List<dynamic> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
             List<dynamic> endpoint),
     @required
@@ -1436,7 +1436,7 @@ class _$Group implements Group {
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
@@ -1463,7 +1463,7 @@ class _$Group implements Group {
             PractitionerGender gender,
             Date birthDate,
             List<dynamic> photo,
-            List<PractitionerQualification> qualification,
+            List<dynamic> qualification,
             List<dynamic> communication),
     @required
         Result practitionerQualification(
@@ -1496,7 +1496,7 @@ class _$Group implements Group {
             List<dynamic> address,
             List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
@@ -1564,8 +1564,8 @@ class _$Group implements Group {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
         List<dynamic> extension,
@@ -1608,11 +1608,11 @@ class _$Group implements Group {
         bool multipleBirthBoolean,
         int multipleBirthInteger,
         List<dynamic> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
+        List<dynamic> contact,
+        List<dynamic> communication,
         List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
         List<dynamic> extension,
@@ -1652,8 +1652,8 @@ class _$Group implements Group {
         List<dynamic> location,
         List<dynamic> healthcareService,
         List<dynamic> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
         List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
@@ -1685,7 +1685,7 @@ class _$Group implements Group {
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
         List<dynamic> extension,
@@ -1710,7 +1710,7 @@ class _$Group implements Group {
         PractitionerGender gender,
         Date birthDate,
         List<dynamic> photo,
-        List<PractitionerQualification> qualification,
+        List<dynamic> qualification,
         List<dynamic> communication),
     Result practitionerQualification(
         String id,
@@ -1741,7 +1741,7 @@ class _$Group implements Group {
         List<dynamic> address,
         List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
         List<dynamic> extension,
@@ -1872,8 +1872,8 @@ abstract class Group implements Individuals {
       String name,
       int quantity,
       Reference managingEntity,
-      List<GroupCharacteristic> characteristic,
-      List<GroupMember> member}) = _$Group;
+      List<dynamic> characteristic,
+      List<dynamic> member}) = _$Group;
 
   factory Group.fromJson(Map<String, dynamic> json) = _$Group.fromJson;
 
@@ -1896,8 +1896,8 @@ abstract class Group implements Individuals {
   String get name;
   int get quantity;
   Reference get managingEntity;
-  List<GroupCharacteristic> get characteristic;
-  List<GroupMember> get member;
+  List<dynamic> get characteristic;
+  List<dynamic> get member;
   @override
   $GroupCopyWith<Group> get copyWith;
 }
@@ -2096,8 +2096,8 @@ class _$GroupCharacteristic implements GroupCharacteristic {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
@@ -2143,11 +2143,11 @@ class _$GroupCharacteristic implements GroupCharacteristic {
             bool multipleBirthBoolean,
             int multipleBirthInteger,
             List<dynamic> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
+            List<dynamic> contact,
+            List<dynamic> communication,
             List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
@@ -2195,8 +2195,8 @@ class _$GroupCharacteristic implements GroupCharacteristic {
             List<dynamic> location,
             List<dynamic> healthcareService,
             List<dynamic> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
             List<dynamic> endpoint),
     @required
@@ -2231,7 +2231,7 @@ class _$GroupCharacteristic implements GroupCharacteristic {
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
@@ -2258,7 +2258,7 @@ class _$GroupCharacteristic implements GroupCharacteristic {
             PractitionerGender gender,
             Date birthDate,
             List<dynamic> photo,
-            List<PractitionerQualification> qualification,
+            List<dynamic> qualification,
             List<dynamic> communication),
     @required
         Result practitionerQualification(
@@ -2291,7 +2291,7 @@ class _$GroupCharacteristic implements GroupCharacteristic {
             List<dynamic> address,
             List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
@@ -2351,8 +2351,8 @@ class _$GroupCharacteristic implements GroupCharacteristic {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
         List<dynamic> extension,
@@ -2395,11 +2395,11 @@ class _$GroupCharacteristic implements GroupCharacteristic {
         bool multipleBirthBoolean,
         int multipleBirthInteger,
         List<dynamic> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
+        List<dynamic> contact,
+        List<dynamic> communication,
         List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
         List<dynamic> extension,
@@ -2439,8 +2439,8 @@ class _$GroupCharacteristic implements GroupCharacteristic {
         List<dynamic> location,
         List<dynamic> healthcareService,
         List<dynamic> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
         List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
@@ -2472,7 +2472,7 @@ class _$GroupCharacteristic implements GroupCharacteristic {
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
         List<dynamic> extension,
@@ -2497,7 +2497,7 @@ class _$GroupCharacteristic implements GroupCharacteristic {
         PractitionerGender gender,
         Date birthDate,
         List<dynamic> photo,
-        List<PractitionerQualification> qualification,
+        List<dynamic> qualification,
         List<dynamic> communication),
     Result practitionerQualification(
         String id,
@@ -2528,7 +2528,7 @@ class _$GroupCharacteristic implements GroupCharacteristic {
         List<dynamic> address,
         List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
         List<dynamic> extension,
@@ -2802,8 +2802,8 @@ class _$GroupMember implements GroupMember {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
@@ -2849,11 +2849,11 @@ class _$GroupMember implements GroupMember {
             bool multipleBirthBoolean,
             int multipleBirthInteger,
             List<dynamic> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
+            List<dynamic> contact,
+            List<dynamic> communication,
             List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
@@ -2901,8 +2901,8 @@ class _$GroupMember implements GroupMember {
             List<dynamic> location,
             List<dynamic> healthcareService,
             List<dynamic> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
             List<dynamic> endpoint),
     @required
@@ -2937,7 +2937,7 @@ class _$GroupMember implements GroupMember {
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
@@ -2964,7 +2964,7 @@ class _$GroupMember implements GroupMember {
             PractitionerGender gender,
             Date birthDate,
             List<dynamic> photo,
-            List<PractitionerQualification> qualification,
+            List<dynamic> qualification,
             List<dynamic> communication),
     @required
         Result practitionerQualification(
@@ -2997,7 +2997,7 @@ class _$GroupMember implements GroupMember {
             List<dynamic> address,
             List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
@@ -3047,8 +3047,8 @@ class _$GroupMember implements GroupMember {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
         List<dynamic> extension,
@@ -3091,11 +3091,11 @@ class _$GroupMember implements GroupMember {
         bool multipleBirthBoolean,
         int multipleBirthInteger,
         List<dynamic> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
+        List<dynamic> contact,
+        List<dynamic> communication,
         List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
         List<dynamic> extension,
@@ -3135,8 +3135,8 @@ class _$GroupMember implements GroupMember {
         List<dynamic> location,
         List<dynamic> healthcareService,
         List<dynamic> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
         List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
@@ -3168,7 +3168,7 @@ class _$GroupMember implements GroupMember {
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
         List<dynamic> extension,
@@ -3193,7 +3193,7 @@ class _$GroupMember implements GroupMember {
         PractitionerGender gender,
         Date birthDate,
         List<dynamic> photo,
-        List<PractitionerQualification> qualification,
+        List<dynamic> qualification,
         List<dynamic> communication),
     Result practitionerQualification(
         String id,
@@ -3224,7 +3224,7 @@ class _$GroupMember implements GroupMember {
         List<dynamic> address,
         List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
         List<dynamic> extension,
@@ -3369,11 +3369,11 @@ abstract class $PatientCopyWith<$Res> implements $IndividualsCopyWith<$Res> {
       bool multipleBirthBoolean,
       int multipleBirthInteger,
       List<dynamic> photo,
-      List<PatientContact> contact,
-      List<PatientCommunication> communication,
+      List<dynamic> contact,
+      List<dynamic> communication,
       List<dynamic> generalPractitioner,
       Reference managingOrganization,
-      List<PatientLink> link});
+      List<dynamic> link});
 }
 
 class _$PatientCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
@@ -3457,18 +3457,17 @@ class _$PatientCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
           ? _value.multipleBirthInteger
           : multipleBirthInteger as int,
       photo: photo == freezed ? _value.photo : photo as List<dynamic>,
-      contact:
-          contact == freezed ? _value.contact : contact as List<PatientContact>,
+      contact: contact == freezed ? _value.contact : contact as List<dynamic>,
       communication: communication == freezed
           ? _value.communication
-          : communication as List<PatientCommunication>,
+          : communication as List<dynamic>,
       generalPractitioner: generalPractitioner == freezed
           ? _value.generalPractitioner
           : generalPractitioner as List<dynamic>,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
           : managingOrganization as Reference,
-      link: link == freezed ? _value.link : link as List<PatientLink>,
+      link: link == freezed ? _value.link : link as List<dynamic>,
     ));
   }
 }
@@ -3552,15 +3551,15 @@ class _$Patient implements Patient {
   @override
   final List<dynamic> photo;
   @override
-  final List<PatientContact> contact;
+  final List<dynamic> contact;
   @override
-  final List<PatientCommunication> communication;
+  final List<dynamic> communication;
   @override
   final List<dynamic> generalPractitioner;
   @override
   final Reference managingOrganization;
   @override
-  final List<PatientLink> link;
+  final List<dynamic> link;
 
   @override
   String toString() {
@@ -3699,8 +3698,8 @@ class _$Patient implements Patient {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
@@ -3746,11 +3745,11 @@ class _$Patient implements Patient {
             bool multipleBirthBoolean,
             int multipleBirthInteger,
             List<dynamic> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
+            List<dynamic> contact,
+            List<dynamic> communication,
             List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
@@ -3798,8 +3797,8 @@ class _$Patient implements Patient {
             List<dynamic> location,
             List<dynamic> healthcareService,
             List<dynamic> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
             List<dynamic> endpoint),
     @required
@@ -3834,7 +3833,7 @@ class _$Patient implements Patient {
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
@@ -3861,7 +3860,7 @@ class _$Patient implements Patient {
             PractitionerGender gender,
             Date birthDate,
             List<dynamic> photo,
-            List<PractitionerQualification> qualification,
+            List<dynamic> qualification,
             List<dynamic> communication),
     @required
         Result practitionerQualification(
@@ -3894,7 +3893,7 @@ class _$Patient implements Patient {
             List<dynamic> address,
             List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
@@ -3970,8 +3969,8 @@ class _$Patient implements Patient {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
         List<dynamic> extension,
@@ -4014,11 +4013,11 @@ class _$Patient implements Patient {
         bool multipleBirthBoolean,
         int multipleBirthInteger,
         List<dynamic> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
+        List<dynamic> contact,
+        List<dynamic> communication,
         List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
         List<dynamic> extension,
@@ -4058,8 +4057,8 @@ class _$Patient implements Patient {
         List<dynamic> location,
         List<dynamic> healthcareService,
         List<dynamic> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
         List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
@@ -4091,7 +4090,7 @@ class _$Patient implements Patient {
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
         List<dynamic> extension,
@@ -4116,7 +4115,7 @@ class _$Patient implements Patient {
         PractitionerGender gender,
         Date birthDate,
         List<dynamic> photo,
-        List<PractitionerQualification> qualification,
+        List<dynamic> qualification,
         List<dynamic> communication),
     Result practitionerQualification(
         String id,
@@ -4147,7 +4146,7 @@ class _$Patient implements Patient {
         List<dynamic> address,
         List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
         List<dynamic> extension,
@@ -4291,11 +4290,11 @@ abstract class Patient implements Individuals {
       bool multipleBirthBoolean,
       int multipleBirthInteger,
       List<dynamic> photo,
-      List<PatientContact> contact,
-      List<PatientCommunication> communication,
+      List<dynamic> contact,
+      List<dynamic> communication,
       List<dynamic> generalPractitioner,
       Reference managingOrganization,
-      List<PatientLink> link}) = _$Patient;
+      List<dynamic> link}) = _$Patient;
 
   factory Patient.fromJson(Map<String, dynamic> json) = _$Patient.fromJson;
 
@@ -4323,11 +4322,11 @@ abstract class Patient implements Individuals {
   bool get multipleBirthBoolean;
   int get multipleBirthInteger;
   List<dynamic> get photo;
-  List<PatientContact> get contact;
-  List<PatientCommunication> get communication;
+  List<dynamic> get contact;
+  List<dynamic> get communication;
   List<dynamic> get generalPractitioner;
   Reference get managingOrganization;
-  List<PatientLink> get link;
+  List<dynamic> get link;
   @override
   $PatientCopyWith<Patient> get copyWith;
 }
@@ -4511,8 +4510,8 @@ class _$PatientContact implements PatientContact {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
@@ -4558,11 +4557,11 @@ class _$PatientContact implements PatientContact {
             bool multipleBirthBoolean,
             int multipleBirthInteger,
             List<dynamic> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
+            List<dynamic> contact,
+            List<dynamic> communication,
             List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
@@ -4610,8 +4609,8 @@ class _$PatientContact implements PatientContact {
             List<dynamic> location,
             List<dynamic> healthcareService,
             List<dynamic> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
             List<dynamic> endpoint),
     @required
@@ -4646,7 +4645,7 @@ class _$PatientContact implements PatientContact {
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
@@ -4673,7 +4672,7 @@ class _$PatientContact implements PatientContact {
             PractitionerGender gender,
             Date birthDate,
             List<dynamic> photo,
-            List<PractitionerQualification> qualification,
+            List<dynamic> qualification,
             List<dynamic> communication),
     @required
         Result practitionerQualification(
@@ -4706,7 +4705,7 @@ class _$PatientContact implements PatientContact {
             List<dynamic> address,
             List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
@@ -4756,8 +4755,8 @@ class _$PatientContact implements PatientContact {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
         List<dynamic> extension,
@@ -4800,11 +4799,11 @@ class _$PatientContact implements PatientContact {
         bool multipleBirthBoolean,
         int multipleBirthInteger,
         List<dynamic> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
+        List<dynamic> contact,
+        List<dynamic> communication,
         List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
         List<dynamic> extension,
@@ -4844,8 +4843,8 @@ class _$PatientContact implements PatientContact {
         List<dynamic> location,
         List<dynamic> healthcareService,
         List<dynamic> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
         List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
@@ -4877,7 +4876,7 @@ class _$PatientContact implements PatientContact {
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
         List<dynamic> extension,
@@ -4902,7 +4901,7 @@ class _$PatientContact implements PatientContact {
         PractitionerGender gender,
         Date birthDate,
         List<dynamic> photo,
-        List<PractitionerQualification> qualification,
+        List<dynamic> qualification,
         List<dynamic> communication),
     Result practitionerQualification(
         String id,
@@ -4933,7 +4932,7 @@ class _$PatientContact implements PatientContact {
         List<dynamic> address,
         List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
         List<dynamic> extension,
@@ -5189,8 +5188,8 @@ class _$PatientCommunication implements PatientCommunication {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
@@ -5236,11 +5235,11 @@ class _$PatientCommunication implements PatientCommunication {
             bool multipleBirthBoolean,
             int multipleBirthInteger,
             List<dynamic> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
+            List<dynamic> contact,
+            List<dynamic> communication,
             List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
@@ -5288,8 +5287,8 @@ class _$PatientCommunication implements PatientCommunication {
             List<dynamic> location,
             List<dynamic> healthcareService,
             List<dynamic> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
             List<dynamic> endpoint),
     @required
@@ -5324,7 +5323,7 @@ class _$PatientCommunication implements PatientCommunication {
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
@@ -5351,7 +5350,7 @@ class _$PatientCommunication implements PatientCommunication {
             PractitionerGender gender,
             Date birthDate,
             List<dynamic> photo,
-            List<PractitionerQualification> qualification,
+            List<dynamic> qualification,
             List<dynamic> communication),
     @required
         Result practitionerQualification(
@@ -5384,7 +5383,7 @@ class _$PatientCommunication implements PatientCommunication {
             List<dynamic> address,
             List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
@@ -5434,8 +5433,8 @@ class _$PatientCommunication implements PatientCommunication {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
         List<dynamic> extension,
@@ -5478,11 +5477,11 @@ class _$PatientCommunication implements PatientCommunication {
         bool multipleBirthBoolean,
         int multipleBirthInteger,
         List<dynamic> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
+        List<dynamic> contact,
+        List<dynamic> communication,
         List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
         List<dynamic> extension,
@@ -5522,8 +5521,8 @@ class _$PatientCommunication implements PatientCommunication {
         List<dynamic> location,
         List<dynamic> healthcareService,
         List<dynamic> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
         List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
@@ -5555,7 +5554,7 @@ class _$PatientCommunication implements PatientCommunication {
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
         List<dynamic> extension,
@@ -5580,7 +5579,7 @@ class _$PatientCommunication implements PatientCommunication {
         PractitionerGender gender,
         Date birthDate,
         List<dynamic> photo,
-        List<PractitionerQualification> qualification,
+        List<dynamic> qualification,
         List<dynamic> communication),
     Result practitionerQualification(
         String id,
@@ -5611,7 +5610,7 @@ class _$PatientCommunication implements PatientCommunication {
         List<dynamic> address,
         List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
         List<dynamic> extension,
@@ -5850,8 +5849,8 @@ class _$PatientLink implements PatientLink {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
@@ -5897,11 +5896,11 @@ class _$PatientLink implements PatientLink {
             bool multipleBirthBoolean,
             int multipleBirthInteger,
             List<dynamic> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
+            List<dynamic> contact,
+            List<dynamic> communication,
             List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
@@ -5949,8 +5948,8 @@ class _$PatientLink implements PatientLink {
             List<dynamic> location,
             List<dynamic> healthcareService,
             List<dynamic> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
             List<dynamic> endpoint),
     @required
@@ -5985,7 +5984,7 @@ class _$PatientLink implements PatientLink {
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
@@ -6012,7 +6011,7 @@ class _$PatientLink implements PatientLink {
             PractitionerGender gender,
             Date birthDate,
             List<dynamic> photo,
-            List<PractitionerQualification> qualification,
+            List<dynamic> qualification,
             List<dynamic> communication),
     @required
         Result practitionerQualification(
@@ -6045,7 +6044,7 @@ class _$PatientLink implements PatientLink {
             List<dynamic> address,
             List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
@@ -6094,8 +6093,8 @@ class _$PatientLink implements PatientLink {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
         List<dynamic> extension,
@@ -6138,11 +6137,11 @@ class _$PatientLink implements PatientLink {
         bool multipleBirthBoolean,
         int multipleBirthInteger,
         List<dynamic> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
+        List<dynamic> contact,
+        List<dynamic> communication,
         List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
         List<dynamic> extension,
@@ -6182,8 +6181,8 @@ class _$PatientLink implements PatientLink {
         List<dynamic> location,
         List<dynamic> healthcareService,
         List<dynamic> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
         List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
@@ -6215,7 +6214,7 @@ class _$PatientLink implements PatientLink {
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
         List<dynamic> extension,
@@ -6240,7 +6239,7 @@ class _$PatientLink implements PatientLink {
         PractitionerGender gender,
         Date birthDate,
         List<dynamic> photo,
-        List<PractitionerQualification> qualification,
+        List<dynamic> qualification,
         List<dynamic> communication),
     Result practitionerQualification(
         String id,
@@ -6271,7 +6270,7 @@ class _$PatientLink implements PatientLink {
         List<dynamic> address,
         List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
         List<dynamic> extension,
@@ -6412,8 +6411,8 @@ abstract class $PractitionerRoleCopyWith<$Res>
       List<dynamic> location,
       List<dynamic> healthcareService,
       List<dynamic> telecom,
-      List<PractitionerRoleAvailableTime> availableTime,
-      List<PractitionerRoleNotAvailable> notAvailable,
+      List<dynamic> availableTime,
+      List<dynamic> notAvailable,
       String availabilityExceptions,
       List<dynamic> endpoint});
 }
@@ -6494,10 +6493,10 @@ class _$PractitionerRoleCopyWithImpl<$Res>
       telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
       availableTime: availableTime == freezed
           ? _value.availableTime
-          : availableTime as List<PractitionerRoleAvailableTime>,
+          : availableTime as List<dynamic>,
       notAvailable: notAvailable == freezed
           ? _value.notAvailable
-          : notAvailable as List<PractitionerRoleNotAvailable>,
+          : notAvailable as List<dynamic>,
       availabilityExceptions: availabilityExceptions == freezed
           ? _value.availabilityExceptions
           : availabilityExceptions as String,
@@ -6576,9 +6575,9 @@ class _$PractitionerRole implements PractitionerRole {
   @override
   final List<dynamic> telecom;
   @override
-  final List<PractitionerRoleAvailableTime> availableTime;
+  final List<dynamic> availableTime;
   @override
-  final List<PractitionerRoleNotAvailable> notAvailable;
+  final List<dynamic> notAvailable;
   @override
   final String availabilityExceptions;
   @override
@@ -6711,8 +6710,8 @@ class _$PractitionerRole implements PractitionerRole {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
@@ -6758,11 +6757,11 @@ class _$PractitionerRole implements PractitionerRole {
             bool multipleBirthBoolean,
             int multipleBirthInteger,
             List<dynamic> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
+            List<dynamic> contact,
+            List<dynamic> communication,
             List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
@@ -6810,8 +6809,8 @@ class _$PractitionerRole implements PractitionerRole {
             List<dynamic> location,
             List<dynamic> healthcareService,
             List<dynamic> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
             List<dynamic> endpoint),
     @required
@@ -6846,7 +6845,7 @@ class _$PractitionerRole implements PractitionerRole {
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
@@ -6873,7 +6872,7 @@ class _$PractitionerRole implements PractitionerRole {
             PractitionerGender gender,
             Date birthDate,
             List<dynamic> photo,
-            List<PractitionerQualification> qualification,
+            List<dynamic> qualification,
             List<dynamic> communication),
     @required
         Result practitionerQualification(
@@ -6906,7 +6905,7 @@ class _$PractitionerRole implements PractitionerRole {
             List<dynamic> address,
             List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
@@ -6978,8 +6977,8 @@ class _$PractitionerRole implements PractitionerRole {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
         List<dynamic> extension,
@@ -7022,11 +7021,11 @@ class _$PractitionerRole implements PractitionerRole {
         bool multipleBirthBoolean,
         int multipleBirthInteger,
         List<dynamic> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
+        List<dynamic> contact,
+        List<dynamic> communication,
         List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
         List<dynamic> extension,
@@ -7066,8 +7065,8 @@ class _$PractitionerRole implements PractitionerRole {
         List<dynamic> location,
         List<dynamic> healthcareService,
         List<dynamic> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
         List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
@@ -7099,7 +7098,7 @@ class _$PractitionerRole implements PractitionerRole {
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
         List<dynamic> extension,
@@ -7124,7 +7123,7 @@ class _$PractitionerRole implements PractitionerRole {
         PractitionerGender gender,
         Date birthDate,
         List<dynamic> photo,
-        List<PractitionerQualification> qualification,
+        List<dynamic> qualification,
         List<dynamic> communication),
     Result practitionerQualification(
         String id,
@@ -7155,7 +7154,7 @@ class _$PractitionerRole implements PractitionerRole {
         List<dynamic> address,
         List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
         List<dynamic> extension,
@@ -7293,8 +7292,8 @@ abstract class PractitionerRole implements Individuals {
       List<dynamic> location,
       List<dynamic> healthcareService,
       List<dynamic> telecom,
-      List<PractitionerRoleAvailableTime> availableTime,
-      List<PractitionerRoleNotAvailable> notAvailable,
+      List<dynamic> availableTime,
+      List<dynamic> notAvailable,
       String availabilityExceptions,
       List<dynamic> endpoint}) = _$PractitionerRole;
 
@@ -7322,8 +7321,8 @@ abstract class PractitionerRole implements Individuals {
   List<dynamic> get location;
   List<dynamic> get healthcareService;
   List<dynamic> get telecom;
-  List<PractitionerRoleAvailableTime> get availableTime;
-  List<PractitionerRoleNotAvailable> get notAvailable;
+  List<dynamic> get availableTime;
+  List<dynamic> get notAvailable;
   String get availabilityExceptions;
   List<dynamic> get endpoint;
   @override
@@ -7486,8 +7485,8 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
@@ -7533,11 +7532,11 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
             bool multipleBirthBoolean,
             int multipleBirthInteger,
             List<dynamic> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
+            List<dynamic> contact,
+            List<dynamic> communication,
             List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
@@ -7585,8 +7584,8 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
             List<dynamic> location,
             List<dynamic> healthcareService,
             List<dynamic> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
             List<dynamic> endpoint),
     @required
@@ -7621,7 +7620,7 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
@@ -7648,7 +7647,7 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
             PractitionerGender gender,
             Date birthDate,
             List<dynamic> photo,
-            List<PractitionerQualification> qualification,
+            List<dynamic> qualification,
             List<dynamic> communication),
     @required
         Result practitionerQualification(
@@ -7681,7 +7680,7 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
             List<dynamic> address,
             List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
@@ -7731,8 +7730,8 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
         List<dynamic> extension,
@@ -7775,11 +7774,11 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
         bool multipleBirthBoolean,
         int multipleBirthInteger,
         List<dynamic> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
+        List<dynamic> contact,
+        List<dynamic> communication,
         List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
         List<dynamic> extension,
@@ -7819,8 +7818,8 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
         List<dynamic> location,
         List<dynamic> healthcareService,
         List<dynamic> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
         List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
@@ -7852,7 +7851,7 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
         List<dynamic> extension,
@@ -7877,7 +7876,7 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
         PractitionerGender gender,
         Date birthDate,
         List<dynamic> photo,
-        List<PractitionerQualification> qualification,
+        List<dynamic> qualification,
         List<dynamic> communication),
     Result practitionerQualification(
         String id,
@@ -7908,7 +7907,7 @@ class _$PractitionerRoleAvailableTime implements PractitionerRoleAvailableTime {
         List<dynamic> address,
         List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
         List<dynamic> extension,
@@ -8162,8 +8161,8 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
@@ -8209,11 +8208,11 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
             bool multipleBirthBoolean,
             int multipleBirthInteger,
             List<dynamic> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
+            List<dynamic> contact,
+            List<dynamic> communication,
             List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
@@ -8261,8 +8260,8 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
             List<dynamic> location,
             List<dynamic> healthcareService,
             List<dynamic> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
             List<dynamic> endpoint),
     @required
@@ -8297,7 +8296,7 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
@@ -8324,7 +8323,7 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
             PractitionerGender gender,
             Date birthDate,
             List<dynamic> photo,
-            List<PractitionerQualification> qualification,
+            List<dynamic> qualification,
             List<dynamic> communication),
     @required
         Result practitionerQualification(
@@ -8357,7 +8356,7 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
             List<dynamic> address,
             List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
@@ -8407,8 +8406,8 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
         List<dynamic> extension,
@@ -8451,11 +8450,11 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
         bool multipleBirthBoolean,
         int multipleBirthInteger,
         List<dynamic> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
+        List<dynamic> contact,
+        List<dynamic> communication,
         List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
         List<dynamic> extension,
@@ -8495,8 +8494,8 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
         List<dynamic> location,
         List<dynamic> healthcareService,
         List<dynamic> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
         List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
@@ -8528,7 +8527,7 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
         List<dynamic> extension,
@@ -8553,7 +8552,7 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
         PractitionerGender gender,
         Date birthDate,
         List<dynamic> photo,
-        List<PractitionerQualification> qualification,
+        List<dynamic> qualification,
         List<dynamic> communication),
     Result practitionerQualification(
         String id,
@@ -8584,7 +8583,7 @@ class _$PractitionerRoleNotAvailable implements PractitionerRoleNotAvailable {
         List<dynamic> address,
         List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
         List<dynamic> extension,
@@ -8725,7 +8724,7 @@ abstract class $PersonCopyWith<$Res> implements $IndividualsCopyWith<$Res> {
       Attachment photo,
       Reference managingOrganization,
       bool active,
-      List<PersonLink> link});
+      List<dynamic> link});
 }
 
 class _$PersonCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
@@ -8789,7 +8788,7 @@ class _$PersonCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
           ? _value.managingOrganization
           : managingOrganization as Reference,
       active: active == freezed ? _value.active : active as bool,
-      link: link == freezed ? _value.link : link as List<PersonLink>,
+      link: link == freezed ? _value.link : link as List<dynamic>,
     ));
   }
 }
@@ -8857,7 +8856,7 @@ class _$Person implements Person {
   @override
   final bool active;
   @override
-  final List<PersonLink> link;
+  final List<dynamic> link;
 
   @override
   String toString() {
@@ -8968,8 +8967,8 @@ class _$Person implements Person {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
@@ -9015,11 +9014,11 @@ class _$Person implements Person {
             bool multipleBirthBoolean,
             int multipleBirthInteger,
             List<dynamic> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
+            List<dynamic> contact,
+            List<dynamic> communication,
             List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
@@ -9067,8 +9066,8 @@ class _$Person implements Person {
             List<dynamic> location,
             List<dynamic> healthcareService,
             List<dynamic> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
             List<dynamic> endpoint),
     @required
@@ -9103,7 +9102,7 @@ class _$Person implements Person {
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
@@ -9130,7 +9129,7 @@ class _$Person implements Person {
             PractitionerGender gender,
             Date birthDate,
             List<dynamic> photo,
-            List<PractitionerQualification> qualification,
+            List<dynamic> qualification,
             List<dynamic> communication),
     @required
         Result practitionerQualification(
@@ -9163,7 +9162,7 @@ class _$Person implements Person {
             List<dynamic> address,
             List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
@@ -9231,8 +9230,8 @@ class _$Person implements Person {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
         List<dynamic> extension,
@@ -9275,11 +9274,11 @@ class _$Person implements Person {
         bool multipleBirthBoolean,
         int multipleBirthInteger,
         List<dynamic> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
+        List<dynamic> contact,
+        List<dynamic> communication,
         List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
         List<dynamic> extension,
@@ -9319,8 +9318,8 @@ class _$Person implements Person {
         List<dynamic> location,
         List<dynamic> healthcareService,
         List<dynamic> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
         List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
@@ -9352,7 +9351,7 @@ class _$Person implements Person {
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
         List<dynamic> extension,
@@ -9377,7 +9376,7 @@ class _$Person implements Person {
         PractitionerGender gender,
         Date birthDate,
         List<dynamic> photo,
-        List<PractitionerQualification> qualification,
+        List<dynamic> qualification,
         List<dynamic> communication),
     Result practitionerQualification(
         String id,
@@ -9408,7 +9407,7 @@ class _$Person implements Person {
         List<dynamic> address,
         List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
         List<dynamic> extension,
@@ -9540,7 +9539,7 @@ abstract class Person implements Individuals {
       Attachment photo,
       Reference managingOrganization,
       bool active,
-      List<PersonLink> link}) = _$Person;
+      List<dynamic> link}) = _$Person;
 
   factory Person.fromJson(Map<String, dynamic> json) = _$Person.fromJson;
 
@@ -9564,7 +9563,7 @@ abstract class Person implements Individuals {
   Attachment get photo;
   Reference get managingOrganization;
   bool get active;
-  List<PersonLink> get link;
+  List<dynamic> get link;
   @override
   $PersonCopyWith<Person> get copyWith;
 }
@@ -9695,8 +9694,8 @@ class _$PersonLink implements PersonLink {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
@@ -9742,11 +9741,11 @@ class _$PersonLink implements PersonLink {
             bool multipleBirthBoolean,
             int multipleBirthInteger,
             List<dynamic> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
+            List<dynamic> contact,
+            List<dynamic> communication,
             List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
@@ -9794,8 +9793,8 @@ class _$PersonLink implements PersonLink {
             List<dynamic> location,
             List<dynamic> healthcareService,
             List<dynamic> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
             List<dynamic> endpoint),
     @required
@@ -9830,7 +9829,7 @@ class _$PersonLink implements PersonLink {
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
@@ -9857,7 +9856,7 @@ class _$PersonLink implements PersonLink {
             PractitionerGender gender,
             Date birthDate,
             List<dynamic> photo,
-            List<PractitionerQualification> qualification,
+            List<dynamic> qualification,
             List<dynamic> communication),
     @required
         Result practitionerQualification(
@@ -9890,7 +9889,7 @@ class _$PersonLink implements PersonLink {
             List<dynamic> address,
             List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
@@ -9939,8 +9938,8 @@ class _$PersonLink implements PersonLink {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
         List<dynamic> extension,
@@ -9983,11 +9982,11 @@ class _$PersonLink implements PersonLink {
         bool multipleBirthBoolean,
         int multipleBirthInteger,
         List<dynamic> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
+        List<dynamic> contact,
+        List<dynamic> communication,
         List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
         List<dynamic> extension,
@@ -10027,8 +10026,8 @@ class _$PersonLink implements PersonLink {
         List<dynamic> location,
         List<dynamic> healthcareService,
         List<dynamic> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
         List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
@@ -10060,7 +10059,7 @@ class _$PersonLink implements PersonLink {
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
         List<dynamic> extension,
@@ -10085,7 +10084,7 @@ class _$PersonLink implements PersonLink {
         PractitionerGender gender,
         Date birthDate,
         List<dynamic> photo,
-        List<PractitionerQualification> qualification,
+        List<dynamic> qualification,
         List<dynamic> communication),
     Result practitionerQualification(
         String id,
@@ -10116,7 +10115,7 @@ class _$PersonLink implements PersonLink {
         List<dynamic> address,
         List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
         List<dynamic> extension,
@@ -10255,7 +10254,7 @@ abstract class $PractitionerCopyWith<$Res>
       PractitionerGender gender,
       Date birthDate,
       List<dynamic> photo,
-      List<PractitionerQualification> qualification,
+      List<dynamic> qualification,
       List<dynamic> communication});
 }
 
@@ -10320,7 +10319,7 @@ class _$PractitionerCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
       photo: photo == freezed ? _value.photo : photo as List<dynamic>,
       qualification: qualification == freezed
           ? _value.qualification
-          : qualification as List<PractitionerQualification>,
+          : qualification as List<dynamic>,
       communication: communication == freezed
           ? _value.communication
           : communication as List<dynamic>,
@@ -10389,7 +10388,7 @@ class _$Practitioner implements Practitioner {
   @override
   final List<dynamic> photo;
   @override
-  final List<PractitionerQualification> qualification;
+  final List<dynamic> qualification;
   @override
   final List<dynamic> communication;
 
@@ -10503,8 +10502,8 @@ class _$Practitioner implements Practitioner {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
@@ -10550,11 +10549,11 @@ class _$Practitioner implements Practitioner {
             bool multipleBirthBoolean,
             int multipleBirthInteger,
             List<dynamic> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
+            List<dynamic> contact,
+            List<dynamic> communication,
             List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
@@ -10602,8 +10601,8 @@ class _$Practitioner implements Practitioner {
             List<dynamic> location,
             List<dynamic> healthcareService,
             List<dynamic> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
             List<dynamic> endpoint),
     @required
@@ -10638,7 +10637,7 @@ class _$Practitioner implements Practitioner {
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
@@ -10665,7 +10664,7 @@ class _$Practitioner implements Practitioner {
             PractitionerGender gender,
             Date birthDate,
             List<dynamic> photo,
-            List<PractitionerQualification> qualification,
+            List<dynamic> qualification,
             List<dynamic> communication),
     @required
         Result practitionerQualification(
@@ -10698,7 +10697,7 @@ class _$Practitioner implements Practitioner {
             List<dynamic> address,
             List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
@@ -10766,8 +10765,8 @@ class _$Practitioner implements Practitioner {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
         List<dynamic> extension,
@@ -10810,11 +10809,11 @@ class _$Practitioner implements Practitioner {
         bool multipleBirthBoolean,
         int multipleBirthInteger,
         List<dynamic> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
+        List<dynamic> contact,
+        List<dynamic> communication,
         List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
         List<dynamic> extension,
@@ -10854,8 +10853,8 @@ class _$Practitioner implements Practitioner {
         List<dynamic> location,
         List<dynamic> healthcareService,
         List<dynamic> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
         List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
@@ -10887,7 +10886,7 @@ class _$Practitioner implements Practitioner {
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
         List<dynamic> extension,
@@ -10912,7 +10911,7 @@ class _$Practitioner implements Practitioner {
         PractitionerGender gender,
         Date birthDate,
         List<dynamic> photo,
-        List<PractitionerQualification> qualification,
+        List<dynamic> qualification,
         List<dynamic> communication),
     Result practitionerQualification(
         String id,
@@ -10943,7 +10942,7 @@ class _$Practitioner implements Practitioner {
         List<dynamic> address,
         List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
         List<dynamic> extension,
@@ -11074,7 +11073,7 @@ abstract class Practitioner implements Individuals {
       PractitionerGender gender,
       Date birthDate,
       List<dynamic> photo,
-      List<PractitionerQualification> qualification,
+      List<dynamic> qualification,
       List<dynamic> communication}) = _$Practitioner;
 
   factory Practitioner.fromJson(Map<String, dynamic> json) =
@@ -11099,7 +11098,7 @@ abstract class Practitioner implements Individuals {
   PractitionerGender get gender;
   Date get birthDate;
   List<dynamic> get photo;
-  List<PractitionerQualification> get qualification;
+  List<dynamic> get qualification;
   List<dynamic> get communication;
   @override
   $PractitionerCopyWith<Practitioner> get copyWith;
@@ -11254,8 +11253,8 @@ class _$PractitionerQualification implements PractitionerQualification {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
@@ -11301,11 +11300,11 @@ class _$PractitionerQualification implements PractitionerQualification {
             bool multipleBirthBoolean,
             int multipleBirthInteger,
             List<dynamic> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
+            List<dynamic> contact,
+            List<dynamic> communication,
             List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
@@ -11353,8 +11352,8 @@ class _$PractitionerQualification implements PractitionerQualification {
             List<dynamic> location,
             List<dynamic> healthcareService,
             List<dynamic> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
             List<dynamic> endpoint),
     @required
@@ -11389,7 +11388,7 @@ class _$PractitionerQualification implements PractitionerQualification {
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
@@ -11416,7 +11415,7 @@ class _$PractitionerQualification implements PractitionerQualification {
             PractitionerGender gender,
             Date birthDate,
             List<dynamic> photo,
-            List<PractitionerQualification> qualification,
+            List<dynamic> qualification,
             List<dynamic> communication),
     @required
         Result practitionerQualification(
@@ -11449,7 +11448,7 @@ class _$PractitionerQualification implements PractitionerQualification {
             List<dynamic> address,
             List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
@@ -11499,8 +11498,8 @@ class _$PractitionerQualification implements PractitionerQualification {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
         List<dynamic> extension,
@@ -11543,11 +11542,11 @@ class _$PractitionerQualification implements PractitionerQualification {
         bool multipleBirthBoolean,
         int multipleBirthInteger,
         List<dynamic> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
+        List<dynamic> contact,
+        List<dynamic> communication,
         List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
         List<dynamic> extension,
@@ -11587,8 +11586,8 @@ class _$PractitionerQualification implements PractitionerQualification {
         List<dynamic> location,
         List<dynamic> healthcareService,
         List<dynamic> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
         List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
@@ -11620,7 +11619,7 @@ class _$PractitionerQualification implements PractitionerQualification {
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
         List<dynamic> extension,
@@ -11645,7 +11644,7 @@ class _$PractitionerQualification implements PractitionerQualification {
         PractitionerGender gender,
         Date birthDate,
         List<dynamic> photo,
-        List<PractitionerQualification> qualification,
+        List<dynamic> qualification,
         List<dynamic> communication),
     Result practitionerQualification(
         String id,
@@ -11676,7 +11675,7 @@ class _$PractitionerQualification implements PractitionerQualification {
         List<dynamic> address,
         List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
         List<dynamic> extension,
@@ -11824,7 +11823,7 @@ abstract class $RelatedPersonCopyWith<$Res>
       List<dynamic> address,
       List<dynamic> photo,
       Period period,
-      List<RelatedPersonCommunication> communication});
+      List<dynamic> communication});
 }
 
 class _$RelatedPersonCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
@@ -11895,7 +11894,7 @@ class _$RelatedPersonCopyWithImpl<$Res> extends _$IndividualsCopyWithImpl<$Res>
       period: period == freezed ? _value.period : period as Period,
       communication: communication == freezed
           ? _value.communication
-          : communication as List<RelatedPersonCommunication>,
+          : communication as List<dynamic>,
     ));
   }
 }
@@ -11969,7 +11968,7 @@ class _$RelatedPerson implements RelatedPerson {
   @override
   final Period period;
   @override
-  final List<RelatedPersonCommunication> communication;
+  final List<dynamic> communication;
 
   @override
   String toString() {
@@ -12088,8 +12087,8 @@ class _$RelatedPerson implements RelatedPerson {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
@@ -12135,11 +12134,11 @@ class _$RelatedPerson implements RelatedPerson {
             bool multipleBirthBoolean,
             int multipleBirthInteger,
             List<dynamic> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
+            List<dynamic> contact,
+            List<dynamic> communication,
             List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
@@ -12187,8 +12186,8 @@ class _$RelatedPerson implements RelatedPerson {
             List<dynamic> location,
             List<dynamic> healthcareService,
             List<dynamic> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
             List<dynamic> endpoint),
     @required
@@ -12223,7 +12222,7 @@ class _$RelatedPerson implements RelatedPerson {
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
@@ -12250,7 +12249,7 @@ class _$RelatedPerson implements RelatedPerson {
             PractitionerGender gender,
             Date birthDate,
             List<dynamic> photo,
-            List<PractitionerQualification> qualification,
+            List<dynamic> qualification,
             List<dynamic> communication),
     @required
         Result practitionerQualification(
@@ -12283,7 +12282,7 @@ class _$RelatedPerson implements RelatedPerson {
             List<dynamic> address,
             List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
@@ -12353,8 +12352,8 @@ class _$RelatedPerson implements RelatedPerson {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
         List<dynamic> extension,
@@ -12397,11 +12396,11 @@ class _$RelatedPerson implements RelatedPerson {
         bool multipleBirthBoolean,
         int multipleBirthInteger,
         List<dynamic> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
+        List<dynamic> contact,
+        List<dynamic> communication,
         List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
         List<dynamic> extension,
@@ -12441,8 +12440,8 @@ class _$RelatedPerson implements RelatedPerson {
         List<dynamic> location,
         List<dynamic> healthcareService,
         List<dynamic> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
         List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
@@ -12474,7 +12473,7 @@ class _$RelatedPerson implements RelatedPerson {
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
         List<dynamic> extension,
@@ -12499,7 +12498,7 @@ class _$RelatedPerson implements RelatedPerson {
         PractitionerGender gender,
         Date birthDate,
         List<dynamic> photo,
-        List<PractitionerQualification> qualification,
+        List<dynamic> qualification,
         List<dynamic> communication),
     Result practitionerQualification(
         String id,
@@ -12530,7 +12529,7 @@ class _$RelatedPerson implements RelatedPerson {
         List<dynamic> address,
         List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
         List<dynamic> extension,
@@ -12666,7 +12665,7 @@ abstract class RelatedPerson implements Individuals {
       List<dynamic> address,
       List<dynamic> photo,
       Period period,
-      List<RelatedPersonCommunication> communication}) = _$RelatedPerson;
+      List<dynamic> communication}) = _$RelatedPerson;
 
   factory RelatedPerson.fromJson(Map<String, dynamic> json) =
       _$RelatedPerson.fromJson;
@@ -12693,7 +12692,7 @@ abstract class RelatedPerson implements Individuals {
   List<dynamic> get address;
   List<dynamic> get photo;
   Period get period;
-  List<RelatedPersonCommunication> get communication;
+  List<dynamic> get communication;
   @override
   $RelatedPersonCopyWith<RelatedPerson> get copyWith;
 }
@@ -12830,8 +12829,8 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
             String name,
             int quantity,
             Reference managingEntity,
-            List<GroupCharacteristic> characteristic,
-            List<GroupMember> member),
+            List<dynamic> characteristic,
+            List<dynamic> member),
     @required
         Result groupCharacteristic(
             String id,
@@ -12877,11 +12876,11 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
             bool multipleBirthBoolean,
             int multipleBirthInteger,
             List<dynamic> photo,
-            List<PatientContact> contact,
-            List<PatientCommunication> communication,
+            List<dynamic> contact,
+            List<dynamic> communication,
             List<dynamic> generalPractitioner,
             Reference managingOrganization,
-            List<PatientLink> link),
+            List<dynamic> link),
     @required
         Result patientContact(
             String id,
@@ -12929,8 +12928,8 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
             List<dynamic> location,
             List<dynamic> healthcareService,
             List<dynamic> telecom,
-            List<PractitionerRoleAvailableTime> availableTime,
-            List<PractitionerRoleNotAvailable> notAvailable,
+            List<dynamic> availableTime,
+            List<dynamic> notAvailable,
             String availabilityExceptions,
             List<dynamic> endpoint),
     @required
@@ -12965,7 +12964,7 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
             Attachment photo,
             Reference managingOrganization,
             bool active,
-            List<PersonLink> link),
+            List<dynamic> link),
     @required
         Result personLink(
             String id,
@@ -12992,7 +12991,7 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
             PractitionerGender gender,
             Date birthDate,
             List<dynamic> photo,
-            List<PractitionerQualification> qualification,
+            List<dynamic> qualification,
             List<dynamic> communication),
     @required
         Result practitionerQualification(
@@ -13025,7 +13024,7 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
             List<dynamic> address,
             List<dynamic> photo,
             Period period,
-            List<RelatedPersonCommunication> communication),
+            List<dynamic> communication),
     @required
         Result relatedPersonCommunication(
             String id,
@@ -13075,8 +13074,8 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
         String name,
         int quantity,
         Reference managingEntity,
-        List<GroupCharacteristic> characteristic,
-        List<GroupMember> member),
+        List<dynamic> characteristic,
+        List<dynamic> member),
     Result groupCharacteristic(
         String id,
         List<dynamic> extension,
@@ -13119,11 +13118,11 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
         bool multipleBirthBoolean,
         int multipleBirthInteger,
         List<dynamic> photo,
-        List<PatientContact> contact,
-        List<PatientCommunication> communication,
+        List<dynamic> contact,
+        List<dynamic> communication,
         List<dynamic> generalPractitioner,
         Reference managingOrganization,
-        List<PatientLink> link),
+        List<dynamic> link),
     Result patientContact(
         String id,
         List<dynamic> extension,
@@ -13163,8 +13162,8 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
         List<dynamic> location,
         List<dynamic> healthcareService,
         List<dynamic> telecom,
-        List<PractitionerRoleAvailableTime> availableTime,
-        List<PractitionerRoleNotAvailable> notAvailable,
+        List<dynamic> availableTime,
+        List<dynamic> notAvailable,
         String availabilityExceptions,
         List<dynamic> endpoint),
     Result practitionerRoleAvailableTime(
@@ -13196,7 +13195,7 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
         Attachment photo,
         Reference managingOrganization,
         bool active,
-        List<PersonLink> link),
+        List<dynamic> link),
     Result personLink(
         String id,
         List<dynamic> extension,
@@ -13221,7 +13220,7 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
         PractitionerGender gender,
         Date birthDate,
         List<dynamic> photo,
-        List<PractitionerQualification> qualification,
+        List<dynamic> qualification,
         List<dynamic> communication),
     Result practitionerQualification(
         String id,
@@ -13252,7 +13251,7 @@ class _$RelatedPersonCommunication implements RelatedPersonCommunication {
         List<dynamic> address,
         List<dynamic> photo,
         Period period,
-        List<RelatedPersonCommunication> communication),
+        List<dynamic> communication),
     Result relatedPersonCommunication(
         String id,
         List<dynamic> extension,

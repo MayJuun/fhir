@@ -23,14 +23,8 @@ Consent _$ConsentFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     identifier: (json['identifier'] as List)
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
@@ -101,10 +95,8 @@ Map<String, dynamic> _$ConsentToJson(Consent instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('status', instance.status?.toJson());
@@ -130,14 +122,8 @@ Map<String, dynamic> _$ConsentToJson(Consent instance) {
 ConsentPolicy _$ConsentPolicyFromJson(Map<String, dynamic> json) {
   return ConsentPolicy(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     authority: json['authority'] == null
         ? null
         : FhirUri.fromJson(json['authority'] as String),
@@ -155,10 +141,8 @@ Map<String, dynamic> _$ConsentPolicyToJson(ConsentPolicy instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('authority', instance.authority?.toJson());
   writeNotNull('uri', instance.uri?.toJson());
   return val;
@@ -167,14 +151,8 @@ Map<String, dynamic> _$ConsentPolicyToJson(ConsentPolicy instance) {
 ConsentVerification _$ConsentVerificationFromJson(Map<String, dynamic> json) {
   return ConsentVerification(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     verified: json['verified'] as bool,
     verifiedWith: json['verifiedWith'] == null
         ? null
@@ -195,10 +173,8 @@ Map<String, dynamic> _$ConsentVerificationToJson(ConsentVerification instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('verified', instance.verified);
   writeNotNull('verifiedWith', instance.verifiedWith?.toJson());
   writeNotNull('verificationDate', instance.verificationDate?.toJson());
@@ -208,14 +184,8 @@ Map<String, dynamic> _$ConsentVerificationToJson(ConsentVerification instance) {
 ConsentProvision _$ConsentProvisionFromJson(Map<String, dynamic> json) {
   return ConsentProvision(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: json['type'] == null
         ? null
         : ConsentProvisionType.fromJson(json['type'] as String),
@@ -273,10 +243,8 @@ Map<String, dynamic> _$ConsentProvisionToJson(ConsentProvision instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('actor', instance.actor?.map((e) => e?.toJson())?.toList());
@@ -296,14 +264,8 @@ Map<String, dynamic> _$ConsentProvisionToJson(ConsentProvision instance) {
 ConsentActor _$ConsentActorFromJson(Map<String, dynamic> json) {
   return ConsentActor(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     role: json['role'] == null
         ? null
         : CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
@@ -323,10 +285,8 @@ Map<String, dynamic> _$ConsentActorToJson(ConsentActor instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('role', instance.role?.toJson());
   writeNotNull('reference', instance.reference?.toJson());
   return val;
@@ -335,14 +295,8 @@ Map<String, dynamic> _$ConsentActorToJson(ConsentActor instance) {
 ConsentData _$ConsentDataFromJson(Map<String, dynamic> json) {
   return ConsentData(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     meaning: json['meaning'] == null
         ? null
         : ConsentDataMeaning.fromJson(json['meaning'] as String),
@@ -362,10 +316,8 @@ Map<String, dynamic> _$ConsentDataToJson(ConsentData instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('meaning', instance.meaning?.toJson());
   writeNotNull('reference', instance.reference?.toJson());
   return val;

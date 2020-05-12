@@ -23,14 +23,8 @@ SubstancePolymer _$SubstancePolymerFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     clas: json['clas'] == null
         ? null
         : CodeableConcept.fromJson(json['clas'] as Map<String, dynamic>),
@@ -73,10 +67,8 @@ Map<String, dynamic> _$SubstancePolymerToJson(SubstancePolymer instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('clas', instance.clas?.toJson());
   writeNotNull('geometry', instance.geometry?.toJson());
   writeNotNull('copolymerConnectivity',
@@ -92,14 +84,8 @@ SubstancePolymerMonomerSet _$SubstancePolymerMonomerSetFromJson(
     Map<String, dynamic> json) {
   return SubstancePolymerMonomerSet(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     ratioType: json['ratioType'] == null
         ? null
         : CodeableConcept.fromJson(json['ratioType'] as Map<String, dynamic>),
@@ -123,10 +109,8 @@ Map<String, dynamic> _$SubstancePolymerMonomerSetToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('ratioType', instance.ratioType?.toJson());
   writeNotNull('startingMaterial',
       instance.startingMaterial?.map((e) => e?.toJson())?.toList());
@@ -137,14 +121,8 @@ SubstancePolymerStartingMaterial _$SubstancePolymerStartingMaterialFromJson(
     Map<String, dynamic> json) {
   return SubstancePolymerStartingMaterial(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     material: json['material'] == null
         ? null
         : CodeableConcept.fromJson(json['material'] as Map<String, dynamic>),
@@ -169,10 +147,8 @@ Map<String, dynamic> _$SubstancePolymerStartingMaterialToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('material', instance.material?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('isDefining', instance.isDefining);
@@ -184,14 +160,8 @@ SubstancePolymerRepeat _$SubstancePolymerRepeatFromJson(
     Map<String, dynamic> json) {
   return SubstancePolymerRepeat(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     numberOfUnits: json['numberOfUnits'] as int,
     averageMolecularFormula: json['averageMolecularFormula'] as String,
     repeatUnitAmountType: json['repeatUnitAmountType'] == null
@@ -217,10 +187,8 @@ Map<String, dynamic> _$SubstancePolymerRepeatToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('numberOfUnits', instance.numberOfUnits);
   writeNotNull('averageMolecularFormula', instance.averageMolecularFormula);
   writeNotNull('repeatUnitAmountType', instance.repeatUnitAmountType?.toJson());
@@ -233,14 +201,8 @@ SubstancePolymerRepeatUnit _$SubstancePolymerRepeatUnitFromJson(
     Map<String, dynamic> json) {
   return SubstancePolymerRepeatUnit(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     orientationOfPolymerisation: json['orientationOfPolymerisation'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -275,10 +237,8 @@ Map<String, dynamic> _$SubstancePolymerRepeatUnitToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('orientationOfPolymerisation',
       instance.orientationOfPolymerisation?.toJson());
   writeNotNull('repeatUnit', instance.repeatUnit);
@@ -295,14 +255,8 @@ SubstancePolymerDegreeOfPolymerisation
         Map<String, dynamic> json) {
   return SubstancePolymerDegreeOfPolymerisation(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     degree: json['degree'] == null
         ? null
         : CodeableConcept.fromJson(json['degree'] as Map<String, dynamic>),
@@ -323,10 +277,8 @@ Map<String, dynamic> _$SubstancePolymerDegreeOfPolymerisationToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('degree', instance.degree?.toJson());
   writeNotNull('amount', instance.amount?.toJson());
   return val;
@@ -337,14 +289,8 @@ SubstancePolymerStructuralRepresentation
         Map<String, dynamic> json) {
   return SubstancePolymerStructuralRepresentation(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -366,10 +312,8 @@ Map<String, dynamic> _$SubstancePolymerStructuralRepresentationToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('representation', instance.representation);
   writeNotNull('attachment', instance.attachment?.toJson());

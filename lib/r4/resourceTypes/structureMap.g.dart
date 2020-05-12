@@ -23,14 +23,8 @@ StructureMap _$StructureMapFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
     identifier: (json['identifier'] as List)
         ?.map((e) =>
@@ -102,10 +96,8 @@ Map<String, dynamic> _$StructureMapToJson(StructureMap instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('url', instance.url?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
@@ -135,14 +127,8 @@ StructureMapStructure _$StructureMapStructureFromJson(
     Map<String, dynamic> json) {
   return StructureMapStructure(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : Canonical.fromJson(json['url'] as String),
     mode: json['mode'] == null
         ? null
@@ -163,10 +149,8 @@ Map<String, dynamic> _$StructureMapStructureToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('mode', instance.mode?.toJson());
   writeNotNull('alias', instance.alias);
@@ -177,14 +161,8 @@ Map<String, dynamic> _$StructureMapStructureToJson(
 StructureMapGroup _$StructureMapGroupFromJson(Map<String, dynamic> json) {
   return StructureMapGroup(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     name: json['name'] == null ? null : Id.fromJson(json['name'] as String),
     extend:
         json['extend'] == null ? null : Id.fromJson(json['extend'] as String),
@@ -215,10 +193,8 @@ Map<String, dynamic> _$StructureMapGroupToJson(StructureMapGroup instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('name', instance.name?.toJson());
   writeNotNull('extend', instance.extend?.toJson());
   writeNotNull('typeMode', instance.typeMode?.toJson());
@@ -231,14 +207,8 @@ Map<String, dynamic> _$StructureMapGroupToJson(StructureMapGroup instance) {
 StructureMapInput _$StructureMapInputFromJson(Map<String, dynamic> json) {
   return StructureMapInput(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     name: json['name'] == null ? null : Id.fromJson(json['name'] as String),
     type: json['type'] as String,
     mode: json['mode'] == null
@@ -258,10 +228,8 @@ Map<String, dynamic> _$StructureMapInputToJson(StructureMapInput instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('name', instance.name?.toJson());
   writeNotNull('type', instance.type);
   writeNotNull('mode', instance.mode?.toJson());
@@ -272,14 +240,8 @@ Map<String, dynamic> _$StructureMapInputToJson(StructureMapInput instance) {
 StructureMapRule _$StructureMapRuleFromJson(Map<String, dynamic> json) {
   return StructureMapRule(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     name: json['name'] == null ? null : Id.fromJson(json['name'] as String),
     source: (json['source'] as List)
         ?.map((e) => e == null
@@ -315,10 +277,8 @@ Map<String, dynamic> _$StructureMapRuleToJson(StructureMapRule instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('name', instance.name?.toJson());
   writeNotNull('source', instance.source?.map((e) => e?.toJson())?.toList());
   writeNotNull('target', instance.target?.map((e) => e?.toJson())?.toList());
@@ -332,14 +292,8 @@ Map<String, dynamic> _$StructureMapRuleToJson(StructureMapRule instance) {
 StructureMapSource _$StructureMapSourceFromJson(Map<String, dynamic> json) {
   return StructureMapSource(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     context:
         json['context'] == null ? null : Id.fromJson(json['context'] as String),
     min: json['min'] as int,
@@ -527,10 +481,8 @@ Map<String, dynamic> _$StructureMapSourceToJson(StructureMapSource instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('context', instance.context?.toJson());
   writeNotNull('min', instance.min);
   writeNotNull('max', instance.max);
@@ -616,14 +568,8 @@ Map<String, dynamic> _$StructureMapSourceToJson(StructureMapSource instance) {
 StructureMapTarget _$StructureMapTargetFromJson(Map<String, dynamic> json) {
   return StructureMapTarget(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     context:
         json['context'] == null ? null : Id.fromJson(json['context'] as String),
     contextType: json['contextType'] == null
@@ -658,10 +604,8 @@ Map<String, dynamic> _$StructureMapTargetToJson(StructureMapTarget instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('context', instance.context?.toJson());
   writeNotNull('contextType', instance.contextType?.toJson());
   writeNotNull('element', instance.element);
@@ -678,14 +622,8 @@ StructureMapParameter _$StructureMapParameterFromJson(
     Map<String, dynamic> json) {
   return StructureMapParameter(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     valueId:
         json['valueId'] == null ? null : Id.fromJson(json['valueId'] as String),
     valueString: json['valueString'] as String,
@@ -706,10 +644,8 @@ Map<String, dynamic> _$StructureMapParameterToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('valueId', instance.valueId?.toJson());
   writeNotNull('valueString', instance.valueString);
   writeNotNull('valueBoolean', instance.valueBoolean);
@@ -722,14 +658,8 @@ StructureMapDependent _$StructureMapDependentFromJson(
     Map<String, dynamic> json) {
   return StructureMapDependent(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     name: json['name'] == null ? null : Id.fromJson(json['name'] as String),
     variable: (json['variable'] as List)?.map((e) => e as String)?.toList(),
   );
@@ -746,10 +676,8 @@ Map<String, dynamic> _$StructureMapDependentToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('name', instance.name?.toJson());
   writeNotNull('variable', instance.variable);
   return val;

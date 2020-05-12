@@ -16,8 +16,8 @@ const factory Support.enrollmentRequest({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Code status,
   FhirDateTime created,
@@ -36,8 +36,8 @@ const factory Support.enrollmentResponse({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Code status,
   Reference request,
@@ -57,8 +57,8 @@ const factory Support.coverageEligibilityResponse({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Code status,
   List<String> purpose,
@@ -80,8 +80,8 @@ const factory Support.coverageEligibilityResponse({
 
 const factory Support.coverageEligibilityResponseInsurance({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference coverage,
   bool inforce,
   Period benefitPeriod,
@@ -91,8 +91,8 @@ const factory Support.coverageEligibilityResponseInsurance({
 
 const factory Support.coverageEligibilityResponseItem({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept category,
   CodeableConcept productOrService,
   List<CodeableConcept> modifier,
@@ -112,8 +112,8 @@ const factory Support.coverageEligibilityResponseItem({
 
 const factory Support.coverageEligibilityResponseBenefit({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   int allowedUnsignedInt,
   String allowedString,
@@ -126,8 +126,8 @@ const factory Support.coverageEligibilityResponseBenefit({
 
 const factory Support.coverageEligibilityResponseError({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
 
   }) = CoverageEligibilityResponseError;
@@ -140,8 +140,8 @@ const factory Support.coverageEligibilityRequest({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Code status,
   CodeableConcept priority,
@@ -162,8 +162,8 @@ const factory Support.coverageEligibilityRequest({
 
 const factory Support.coverageEligibilityRequestSupportingInfo({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int sequence,
   Reference information,
   bool appliesToAll,
@@ -172,8 +172,8 @@ const factory Support.coverageEligibilityRequestSupportingInfo({
 
 const factory Support.coverageEligibilityRequestInsurance({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   bool focal,
   Reference coverage,
   String businessArrangement,
@@ -182,8 +182,8 @@ const factory Support.coverageEligibilityRequestInsurance({
 
 const factory Support.coverageEligibilityRequestItem({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<int> supportingInfoSequence,
   CodeableConcept category,
   CodeableConcept productOrService,
@@ -199,8 +199,8 @@ const factory Support.coverageEligibilityRequestItem({
 
 const factory Support.coverageEligibilityRequestDiagnosis({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept diagnosisCodeableConcept,
   Reference diagnosisReference,
 
@@ -214,8 +214,8 @@ const factory Support.coverage({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Code status,
   CodeableConcept type,
@@ -238,8 +238,8 @@ const factory Support.coverage({
 
 const factory Support.coverageClass({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   String value,
   String name,
@@ -248,8 +248,8 @@ const factory Support.coverageClass({
 
 const factory Support.coverageCostToBeneficiary({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   Quantity valueQuantity,
   Money valueMoney,
@@ -259,8 +259,8 @@ const factory Support.coverageCostToBeneficiary({
 
 const factory Support.coverageException({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   Period period,
 

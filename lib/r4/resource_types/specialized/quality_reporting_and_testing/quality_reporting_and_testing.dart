@@ -16,8 +16,8 @@ const factory QualityReportingAndTesting.measureReport({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   MeasureReportStatus status,
   MeasureReportType type,
@@ -34,8 +34,8 @@ const factory QualityReportingAndTesting.measureReport({
 
 const factory QualityReportingAndTesting.measureReportGroup({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   List<MeasureReportPopulation> population,
   Quantity measureScore,
@@ -45,8 +45,8 @@ const factory QualityReportingAndTesting.measureReportGroup({
 
 const factory QualityReportingAndTesting.measureReportPopulation({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   int count,
   Reference subjectResults,
@@ -55,8 +55,8 @@ const factory QualityReportingAndTesting.measureReportPopulation({
 
 const factory QualityReportingAndTesting.measureReportStratifier({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<CodeableConcept> code,
   List<MeasureReportStratum> stratum,
 
@@ -64,8 +64,8 @@ const factory QualityReportingAndTesting.measureReportStratifier({
 
 const factory QualityReportingAndTesting.measureReportStratum({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept value,
   List<MeasureReportComponent> component,
   List<MeasureReportPopulation1> population,
@@ -75,8 +75,8 @@ const factory QualityReportingAndTesting.measureReportStratum({
 
 const factory QualityReportingAndTesting.measureReportComponent({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   CodeableConcept value,
 
@@ -84,8 +84,8 @@ const factory QualityReportingAndTesting.measureReportComponent({
 
 const factory QualityReportingAndTesting.measureReportPopulation1({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   int count,
   Reference subjectResults,
@@ -100,8 +100,8 @@ const factory QualityReportingAndTesting.measure({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   List<Identifier> identifier,
   String version,
@@ -149,8 +149,8 @@ const factory QualityReportingAndTesting.measure({
 
 const factory QualityReportingAndTesting.measureGroup({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   String description,
   List<MeasurePopulation> population,
@@ -160,8 +160,8 @@ const factory QualityReportingAndTesting.measureGroup({
 
 const factory QualityReportingAndTesting.measurePopulation({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   String description,
   Expression criteria,
@@ -170,8 +170,8 @@ const factory QualityReportingAndTesting.measurePopulation({
 
 const factory QualityReportingAndTesting.measureStratifier({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   String description,
   Expression criteria,
@@ -181,8 +181,8 @@ const factory QualityReportingAndTesting.measureStratifier({
 
 const factory QualityReportingAndTesting.measureComponent({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   String description,
   Expression criteria,
@@ -191,8 +191,8 @@ const factory QualityReportingAndTesting.measureComponent({
 
 const factory QualityReportingAndTesting.measureSupplementalData({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   List<CodeableConcept> usage,
   String description,
@@ -208,8 +208,8 @@ const factory QualityReportingAndTesting.testScript({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   Identifier identifier,
   String version,
@@ -239,8 +239,8 @@ const factory QualityReportingAndTesting.testScript({
 
 const factory QualityReportingAndTesting.testScriptOrigin({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int index,
   Coding profile,
 
@@ -248,8 +248,8 @@ const factory QualityReportingAndTesting.testScriptOrigin({
 
 const factory QualityReportingAndTesting.testScriptDestination({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int index,
   Coding profile,
 
@@ -257,8 +257,8 @@ const factory QualityReportingAndTesting.testScriptDestination({
 
 const factory QualityReportingAndTesting.testScriptMetadata({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<TestScriptLink> link,
   List<TestScriptCapability> capability,
 
@@ -266,8 +266,8 @@ const factory QualityReportingAndTesting.testScriptMetadata({
 
 const factory QualityReportingAndTesting.testScriptLink({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   String description,
 
@@ -275,8 +275,8 @@ const factory QualityReportingAndTesting.testScriptLink({
 
 const factory QualityReportingAndTesting.testScriptCapability({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   bool require,
   bool validated,
   String description,
@@ -289,8 +289,8 @@ const factory QualityReportingAndTesting.testScriptCapability({
 
 const factory QualityReportingAndTesting.testScriptFixture({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   bool autocreate,
   bool autodelete,
   Reference resource,
@@ -299,8 +299,8 @@ const factory QualityReportingAndTesting.testScriptFixture({
 
 const factory QualityReportingAndTesting.testScriptVariable({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String name,
   String defaultValue,
   String description,
@@ -314,16 +314,16 @@ const factory QualityReportingAndTesting.testScriptVariable({
 
 const factory QualityReportingAndTesting.testScriptSetup({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<TestScriptAction> action,
 
   }) = TestScriptSetup;
 
 const factory QualityReportingAndTesting.testScriptAction({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   TestScriptOperation operation,
   TestScriptAssert asserts,
 
@@ -331,8 +331,8 @@ const factory QualityReportingAndTesting.testScriptAction({
 
 const factory QualityReportingAndTesting.testScriptOperation({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Coding type,
   Code resource,
   String label,
@@ -355,8 +355,8 @@ const factory QualityReportingAndTesting.testScriptOperation({
 
 const factory QualityReportingAndTesting.testScriptRequestHeader({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String field,
   String value,
 
@@ -364,8 +364,8 @@ const factory QualityReportingAndTesting.testScriptRequestHeader({
 
 const factory QualityReportingAndTesting.testScriptAssert({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String label,
   String description,
   TestScriptAssertDirection direction,
@@ -393,8 +393,8 @@ const factory QualityReportingAndTesting.testScriptAssert({
 
 const factory QualityReportingAndTesting.testScriptTest({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String name,
   String description,
   List<TestScriptAction1> action,
@@ -403,8 +403,8 @@ const factory QualityReportingAndTesting.testScriptTest({
 
 const factory QualityReportingAndTesting.testScriptAction1({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   TestScriptOperation operation,
   TestScriptAssert asserts,
 
@@ -412,16 +412,16 @@ const factory QualityReportingAndTesting.testScriptAction1({
 
 const factory QualityReportingAndTesting.testScriptTeardown({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<TestScriptAction2> action,
 
   }) = TestScriptTeardown;
 
 const factory QualityReportingAndTesting.testScriptAction2({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   TestScriptOperation operation,
 
   }) = TestScriptAction2;
@@ -434,8 +434,8 @@ const factory QualityReportingAndTesting.testReport({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Identifier identifier,
   String name,
   TestReportStatus status,
@@ -453,8 +453,8 @@ const factory QualityReportingAndTesting.testReport({
 
 const factory QualityReportingAndTesting.testReportParticipant({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   TestReportParticipantType type,
   FhirUri uri,
   String display,
@@ -463,16 +463,16 @@ const factory QualityReportingAndTesting.testReportParticipant({
 
 const factory QualityReportingAndTesting.testReportSetup({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<TestReportAction> action,
 
   }) = TestReportSetup;
 
 const factory QualityReportingAndTesting.testReportAction({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   TestReportOperation operation,
   TestReportAssert asserts,
 
@@ -480,8 +480,8 @@ const factory QualityReportingAndTesting.testReportAction({
 
 const factory QualityReportingAndTesting.testReportOperation({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   TestReportOperationResult result,
   Markdown message,
   FhirUri detail,
@@ -490,8 +490,8 @@ const factory QualityReportingAndTesting.testReportOperation({
 
 const factory QualityReportingAndTesting.testReportAssert({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   TestReportAssertResult result,
   Markdown message,
   String detail,
@@ -500,8 +500,8 @@ const factory QualityReportingAndTesting.testReportAssert({
 
 const factory QualityReportingAndTesting.testReportTest({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String name,
   String description,
   List<TestReportAction1> action,
@@ -510,8 +510,8 @@ const factory QualityReportingAndTesting.testReportTest({
 
 const factory QualityReportingAndTesting.testReportAction1({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   TestReportOperation operation,
   TestReportAssert asserts,
 
@@ -519,16 +519,16 @@ const factory QualityReportingAndTesting.testReportAction1({
 
 const factory QualityReportingAndTesting.testReportTeardown({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<TestReportAction2> action,
 
   }) = TestReportTeardown;
 
 const factory QualityReportingAndTesting.testReportAction2({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   TestReportOperation operation,
 
   }) = TestReportAction2;

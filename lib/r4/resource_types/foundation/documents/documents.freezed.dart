@@ -67,7 +67,7 @@ class _$DocumentsTearOff {
       FhirDateTime lastUpdated,
       List<dynamic> additionalCharacteristic,
       List<dynamic> additionalClassification,
-      List<CatalogEntryRelatedEntry> relatedEntry}) {
+      List<dynamic> relatedEntry}) {
     return CatalogEntry(
       resourceType: resourceType,
       id: id,
@@ -129,11 +129,11 @@ class _$DocumentsTearOff {
       List<dynamic> author,
       String title,
       Code confidentiality,
-      List<CompositionAttester> attester,
+      List<dynamic> attester,
       Reference custodian,
-      List<CompositionRelatesTo> relatesTo,
-      List<CompositionEvent> event,
-      List<CompositionSection> section}) {
+      List<dynamic> relatesTo,
+      List<dynamic> event,
+      List<dynamic> section}) {
     return Composition(
       resourceType: resourceType,
       id: id,
@@ -226,7 +226,7 @@ class _$DocumentsTearOff {
       CodeableConcept orderedBy,
       List<dynamic> entry,
       CodeableConcept emptyReason,
-      List<CompositionSection> section}) {
+      List<dynamic> section}) {
     return CompositionSection(
       id: id,
       extension: extension,
@@ -265,7 +265,7 @@ class _$DocumentsTearOff {
       FhirUri source,
       String description,
       List<dynamic> content,
-      List<DocumentManifestRelated> related}) {
+      List<dynamic> related}) {
     return DocumentManifest(
       resourceType: resourceType,
       id: id,
@@ -327,10 +327,10 @@ class _$DocumentsTearOff {
       List<dynamic> author,
       Reference authenticator,
       Reference custodian,
-      List<DocumentReferenceRelatesTo> relatesTo,
+      List<dynamic> relatesTo,
       String description,
       List<dynamic> securityLabel,
-      List<DocumentReferenceContent> content,
+      List<dynamic> content,
       DocumentReferenceContext context}) {
     return DocumentReference(
       resourceType: resourceType,
@@ -449,7 +449,7 @@ mixin _$Documents {
             FhirDateTime lastUpdated,
             List<dynamic> additionalCharacteristic,
             List<dynamic> additionalClassification,
-            List<CatalogEntryRelatedEntry> relatedEntry),
+            List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
             String id,
@@ -478,11 +478,11 @@ mixin _$Documents {
             List<dynamic> author,
             String title,
             Code confidentiality,
-            List<CompositionAttester> attester,
+            List<dynamic> attester,
             Reference custodian,
-            List<CompositionRelatesTo> relatesTo,
-            List<CompositionEvent> event,
-            List<CompositionSection> section),
+            List<dynamic> relatesTo,
+            List<dynamic> event,
+            List<dynamic> section),
     @required
         Result compositionAttester(
             String id,
@@ -521,7 +521,7 @@ mixin _$Documents {
             CodeableConcept orderedBy,
             List<dynamic> entry,
             CodeableConcept emptyReason,
-            List<CompositionSection> section),
+            List<dynamic> section),
     @required
         Result documentManifest(
             String resourceType,
@@ -544,7 +544,7 @@ mixin _$Documents {
             FhirUri source,
             String description,
             List<dynamic> content,
-            List<DocumentManifestRelated> related),
+            List<dynamic> related),
     @required
         Result documentManifestRelated(
             String id,
@@ -574,10 +574,10 @@ mixin _$Documents {
             List<dynamic> author,
             Reference authenticator,
             Reference custodian,
-            List<DocumentReferenceRelatesTo> relatesTo,
+            List<dynamic> relatesTo,
             String description,
             List<dynamic> securityLabel,
-            List<DocumentReferenceContent> content,
+            List<dynamic> content,
             DocumentReferenceContext context),
     @required
         Result documentReferenceRelatesTo(
@@ -630,7 +630,7 @@ mixin _$Documents {
         FhirDateTime lastUpdated,
         List<dynamic> additionalCharacteristic,
         List<dynamic> additionalClassification,
-        List<CatalogEntryRelatedEntry> relatedEntry),
+        List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
         List<dynamic> extension,
@@ -657,11 +657,11 @@ mixin _$Documents {
         List<dynamic> author,
         String title,
         Code confidentiality,
-        List<CompositionAttester> attester,
+        List<dynamic> attester,
         Reference custodian,
-        List<CompositionRelatesTo> relatesTo,
-        List<CompositionEvent> event,
-        List<CompositionSection> section),
+        List<dynamic> relatesTo,
+        List<dynamic> event,
+        List<dynamic> section),
     Result compositionAttester(
         String id,
         List<dynamic> extension,
@@ -696,7 +696,7 @@ mixin _$Documents {
         CodeableConcept orderedBy,
         List<dynamic> entry,
         CodeableConcept emptyReason,
-        List<CompositionSection> section),
+        List<dynamic> section),
     Result documentManifest(
         String resourceType,
         Id id,
@@ -718,7 +718,7 @@ mixin _$Documents {
         FhirUri source,
         String description,
         List<dynamic> content,
-        List<DocumentManifestRelated> related),
+        List<dynamic> related),
     Result documentManifestRelated(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Identifier identifier, Reference ref),
     Result documentReference(
@@ -742,10 +742,10 @@ mixin _$Documents {
         List<dynamic> author,
         Reference authenticator,
         Reference custodian,
-        List<DocumentReferenceRelatesTo> relatesTo,
+        List<dynamic> relatesTo,
         String description,
         List<dynamic> securityLabel,
-        List<DocumentReferenceContent> content,
+        List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
         String id,
@@ -861,7 +861,7 @@ abstract class $CatalogEntryCopyWith<$Res> implements $DocumentsCopyWith<$Res> {
       FhirDateTime lastUpdated,
       List<dynamic> additionalCharacteristic,
       List<dynamic> additionalClassification,
-      List<CatalogEntryRelatedEntry> relatedEntry});
+      List<dynamic> relatedEntry});
 }
 
 class _$CatalogEntryCopyWithImpl<$Res> extends _$DocumentsCopyWithImpl<$Res>
@@ -946,7 +946,7 @@ class _$CatalogEntryCopyWithImpl<$Res> extends _$DocumentsCopyWithImpl<$Res>
           : additionalClassification as List<dynamic>,
       relatedEntry: relatedEntry == freezed
           ? _value.relatedEntry
-          : relatedEntry as List<CatalogEntryRelatedEntry>,
+          : relatedEntry as List<dynamic>,
     ));
   }
 }
@@ -1023,7 +1023,7 @@ class _$CatalogEntry implements CatalogEntry {
   @override
   final List<dynamic> additionalClassification;
   @override
-  final List<CatalogEntryRelatedEntry> relatedEntry;
+  final List<dynamic> relatedEntry;
 
   @override
   String toString() {
@@ -1155,7 +1155,7 @@ class _$CatalogEntry implements CatalogEntry {
             FhirDateTime lastUpdated,
             List<dynamic> additionalCharacteristic,
             List<dynamic> additionalClassification,
-            List<CatalogEntryRelatedEntry> relatedEntry),
+            List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
             String id,
@@ -1184,11 +1184,11 @@ class _$CatalogEntry implements CatalogEntry {
             List<dynamic> author,
             String title,
             Code confidentiality,
-            List<CompositionAttester> attester,
+            List<dynamic> attester,
             Reference custodian,
-            List<CompositionRelatesTo> relatesTo,
-            List<CompositionEvent> event,
-            List<CompositionSection> section),
+            List<dynamic> relatesTo,
+            List<dynamic> event,
+            List<dynamic> section),
     @required
         Result compositionAttester(
             String id,
@@ -1227,7 +1227,7 @@ class _$CatalogEntry implements CatalogEntry {
             CodeableConcept orderedBy,
             List<dynamic> entry,
             CodeableConcept emptyReason,
-            List<CompositionSection> section),
+            List<dynamic> section),
     @required
         Result documentManifest(
             String resourceType,
@@ -1250,7 +1250,7 @@ class _$CatalogEntry implements CatalogEntry {
             FhirUri source,
             String description,
             List<dynamic> content,
-            List<DocumentManifestRelated> related),
+            List<dynamic> related),
     @required
         Result documentManifestRelated(
             String id,
@@ -1280,10 +1280,10 @@ class _$CatalogEntry implements CatalogEntry {
             List<dynamic> author,
             Reference authenticator,
             Reference custodian,
-            List<DocumentReferenceRelatesTo> relatesTo,
+            List<dynamic> relatesTo,
             String description,
             List<dynamic> securityLabel,
-            List<DocumentReferenceContent> content,
+            List<dynamic> content,
             DocumentReferenceContext context),
     @required
         Result documentReferenceRelatesTo(
@@ -1375,7 +1375,7 @@ class _$CatalogEntry implements CatalogEntry {
         FhirDateTime lastUpdated,
         List<dynamic> additionalCharacteristic,
         List<dynamic> additionalClassification,
-        List<CatalogEntryRelatedEntry> relatedEntry),
+        List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
         List<dynamic> extension,
@@ -1402,11 +1402,11 @@ class _$CatalogEntry implements CatalogEntry {
         List<dynamic> author,
         String title,
         Code confidentiality,
-        List<CompositionAttester> attester,
+        List<dynamic> attester,
         Reference custodian,
-        List<CompositionRelatesTo> relatesTo,
-        List<CompositionEvent> event,
-        List<CompositionSection> section),
+        List<dynamic> relatesTo,
+        List<dynamic> event,
+        List<dynamic> section),
     Result compositionAttester(
         String id,
         List<dynamic> extension,
@@ -1441,7 +1441,7 @@ class _$CatalogEntry implements CatalogEntry {
         CodeableConcept orderedBy,
         List<dynamic> entry,
         CodeableConcept emptyReason,
-        List<CompositionSection> section),
+        List<dynamic> section),
     Result documentManifest(
         String resourceType,
         Id id,
@@ -1463,7 +1463,7 @@ class _$CatalogEntry implements CatalogEntry {
         FhirUri source,
         String description,
         List<dynamic> content,
-        List<DocumentManifestRelated> related),
+        List<dynamic> related),
     Result documentManifestRelated(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Identifier identifier, Reference ref),
     Result documentReference(
@@ -1487,10 +1487,10 @@ class _$CatalogEntry implements CatalogEntry {
         List<dynamic> author,
         Reference authenticator,
         Reference custodian,
-        List<DocumentReferenceRelatesTo> relatesTo,
+        List<dynamic> relatesTo,
         String description,
         List<dynamic> securityLabel,
-        List<DocumentReferenceContent> content,
+        List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
         String id,
@@ -1630,7 +1630,7 @@ abstract class CatalogEntry implements Documents {
       FhirDateTime lastUpdated,
       List<dynamic> additionalCharacteristic,
       List<dynamic> additionalClassification,
-      List<CatalogEntryRelatedEntry> relatedEntry}) = _$CatalogEntry;
+      List<dynamic> relatedEntry}) = _$CatalogEntry;
 
   factory CatalogEntry.fromJson(Map<String, dynamic> json) =
       _$CatalogEntry.fromJson;
@@ -1658,7 +1658,7 @@ abstract class CatalogEntry implements Documents {
   FhirDateTime get lastUpdated;
   List<dynamic> get additionalCharacteristic;
   List<dynamic> get additionalClassification;
-  List<CatalogEntryRelatedEntry> get relatedEntry;
+  List<dynamic> get relatedEntry;
   @override
   $CatalogEntryCopyWith<CatalogEntry> get copyWith;
 }
@@ -1798,7 +1798,7 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
             FhirDateTime lastUpdated,
             List<dynamic> additionalCharacteristic,
             List<dynamic> additionalClassification,
-            List<CatalogEntryRelatedEntry> relatedEntry),
+            List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
             String id,
@@ -1827,11 +1827,11 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
             List<dynamic> author,
             String title,
             Code confidentiality,
-            List<CompositionAttester> attester,
+            List<dynamic> attester,
             Reference custodian,
-            List<CompositionRelatesTo> relatesTo,
-            List<CompositionEvent> event,
-            List<CompositionSection> section),
+            List<dynamic> relatesTo,
+            List<dynamic> event,
+            List<dynamic> section),
     @required
         Result compositionAttester(
             String id,
@@ -1870,7 +1870,7 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
             CodeableConcept orderedBy,
             List<dynamic> entry,
             CodeableConcept emptyReason,
-            List<CompositionSection> section),
+            List<dynamic> section),
     @required
         Result documentManifest(
             String resourceType,
@@ -1893,7 +1893,7 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
             FhirUri source,
             String description,
             List<dynamic> content,
-            List<DocumentManifestRelated> related),
+            List<dynamic> related),
     @required
         Result documentManifestRelated(
             String id,
@@ -1923,10 +1923,10 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
             List<dynamic> author,
             Reference authenticator,
             Reference custodian,
-            List<DocumentReferenceRelatesTo> relatesTo,
+            List<dynamic> relatesTo,
             String description,
             List<dynamic> securityLabel,
-            List<DocumentReferenceContent> content,
+            List<dynamic> content,
             DocumentReferenceContext context),
     @required
         Result documentReferenceRelatesTo(
@@ -1997,7 +1997,7 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
         FhirDateTime lastUpdated,
         List<dynamic> additionalCharacteristic,
         List<dynamic> additionalClassification,
-        List<CatalogEntryRelatedEntry> relatedEntry),
+        List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
         List<dynamic> extension,
@@ -2024,11 +2024,11 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
         List<dynamic> author,
         String title,
         Code confidentiality,
-        List<CompositionAttester> attester,
+        List<dynamic> attester,
         Reference custodian,
-        List<CompositionRelatesTo> relatesTo,
-        List<CompositionEvent> event,
-        List<CompositionSection> section),
+        List<dynamic> relatesTo,
+        List<dynamic> event,
+        List<dynamic> section),
     Result compositionAttester(
         String id,
         List<dynamic> extension,
@@ -2063,7 +2063,7 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
         CodeableConcept orderedBy,
         List<dynamic> entry,
         CodeableConcept emptyReason,
-        List<CompositionSection> section),
+        List<dynamic> section),
     Result documentManifest(
         String resourceType,
         Id id,
@@ -2085,7 +2085,7 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
         FhirUri source,
         String description,
         List<dynamic> content,
-        List<DocumentManifestRelated> related),
+        List<dynamic> related),
     Result documentManifestRelated(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Identifier identifier, Reference ref),
     Result documentReference(
@@ -2109,10 +2109,10 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
         List<dynamic> author,
         Reference authenticator,
         Reference custodian,
-        List<DocumentReferenceRelatesTo> relatesTo,
+        List<dynamic> relatesTo,
         String description,
         List<dynamic> securityLabel,
-        List<DocumentReferenceContent> content,
+        List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
         String id,
@@ -2256,11 +2256,11 @@ abstract class $CompositionCopyWith<$Res> implements $DocumentsCopyWith<$Res> {
       List<dynamic> author,
       String title,
       Code confidentiality,
-      List<CompositionAttester> attester,
+      List<dynamic> attester,
       Reference custodian,
-      List<CompositionRelatesTo> relatesTo,
-      List<CompositionEvent> event,
-      List<CompositionSection> section});
+      List<dynamic> relatesTo,
+      List<dynamic> event,
+      List<dynamic> section});
 }
 
 class _$CompositionCopyWithImpl<$Res> extends _$DocumentsCopyWithImpl<$Res>
@@ -2332,18 +2332,14 @@ class _$CompositionCopyWithImpl<$Res> extends _$DocumentsCopyWithImpl<$Res>
       confidentiality: confidentiality == freezed
           ? _value.confidentiality
           : confidentiality as Code,
-      attester: attester == freezed
-          ? _value.attester
-          : attester as List<CompositionAttester>,
+      attester:
+          attester == freezed ? _value.attester : attester as List<dynamic>,
       custodian:
           custodian == freezed ? _value.custodian : custodian as Reference,
-      relatesTo: relatesTo == freezed
-          ? _value.relatesTo
-          : relatesTo as List<CompositionRelatesTo>,
-      event: event == freezed ? _value.event : event as List<CompositionEvent>,
-      section: section == freezed
-          ? _value.section
-          : section as List<CompositionSection>,
+      relatesTo:
+          relatesTo == freezed ? _value.relatesTo : relatesTo as List<dynamic>,
+      event: event == freezed ? _value.event : event as List<dynamic>,
+      section: section == freezed ? _value.section : section as List<dynamic>,
     ));
   }
 }
@@ -2418,15 +2414,15 @@ class _$Composition implements Composition {
   @override
   final Code confidentiality;
   @override
-  final List<CompositionAttester> attester;
+  final List<dynamic> attester;
   @override
   final Reference custodian;
   @override
-  final List<CompositionRelatesTo> relatesTo;
+  final List<dynamic> relatesTo;
   @override
-  final List<CompositionEvent> event;
+  final List<dynamic> event;
   @override
-  final List<CompositionSection> section;
+  final List<dynamic> section;
 
   @override
   String toString() {
@@ -2559,7 +2555,7 @@ class _$Composition implements Composition {
             FhirDateTime lastUpdated,
             List<dynamic> additionalCharacteristic,
             List<dynamic> additionalClassification,
-            List<CatalogEntryRelatedEntry> relatedEntry),
+            List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
             String id,
@@ -2588,11 +2584,11 @@ class _$Composition implements Composition {
             List<dynamic> author,
             String title,
             Code confidentiality,
-            List<CompositionAttester> attester,
+            List<dynamic> attester,
             Reference custodian,
-            List<CompositionRelatesTo> relatesTo,
-            List<CompositionEvent> event,
-            List<CompositionSection> section),
+            List<dynamic> relatesTo,
+            List<dynamic> event,
+            List<dynamic> section),
     @required
         Result compositionAttester(
             String id,
@@ -2631,7 +2627,7 @@ class _$Composition implements Composition {
             CodeableConcept orderedBy,
             List<dynamic> entry,
             CodeableConcept emptyReason,
-            List<CompositionSection> section),
+            List<dynamic> section),
     @required
         Result documentManifest(
             String resourceType,
@@ -2654,7 +2650,7 @@ class _$Composition implements Composition {
             FhirUri source,
             String description,
             List<dynamic> content,
-            List<DocumentManifestRelated> related),
+            List<dynamic> related),
     @required
         Result documentManifestRelated(
             String id,
@@ -2684,10 +2680,10 @@ class _$Composition implements Composition {
             List<dynamic> author,
             Reference authenticator,
             Reference custodian,
-            List<DocumentReferenceRelatesTo> relatesTo,
+            List<dynamic> relatesTo,
             String description,
             List<dynamic> securityLabel,
-            List<DocumentReferenceContent> content,
+            List<dynamic> content,
             DocumentReferenceContext context),
     @required
         Result documentReferenceRelatesTo(
@@ -2781,7 +2777,7 @@ class _$Composition implements Composition {
         FhirDateTime lastUpdated,
         List<dynamic> additionalCharacteristic,
         List<dynamic> additionalClassification,
-        List<CatalogEntryRelatedEntry> relatedEntry),
+        List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
         List<dynamic> extension,
@@ -2808,11 +2804,11 @@ class _$Composition implements Composition {
         List<dynamic> author,
         String title,
         Code confidentiality,
-        List<CompositionAttester> attester,
+        List<dynamic> attester,
         Reference custodian,
-        List<CompositionRelatesTo> relatesTo,
-        List<CompositionEvent> event,
-        List<CompositionSection> section),
+        List<dynamic> relatesTo,
+        List<dynamic> event,
+        List<dynamic> section),
     Result compositionAttester(
         String id,
         List<dynamic> extension,
@@ -2847,7 +2843,7 @@ class _$Composition implements Composition {
         CodeableConcept orderedBy,
         List<dynamic> entry,
         CodeableConcept emptyReason,
-        List<CompositionSection> section),
+        List<dynamic> section),
     Result documentManifest(
         String resourceType,
         Id id,
@@ -2869,7 +2865,7 @@ class _$Composition implements Composition {
         FhirUri source,
         String description,
         List<dynamic> content,
-        List<DocumentManifestRelated> related),
+        List<dynamic> related),
     Result documentManifestRelated(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Identifier identifier, Reference ref),
     Result documentReference(
@@ -2893,10 +2889,10 @@ class _$Composition implements Composition {
         List<dynamic> author,
         Reference authenticator,
         Reference custodian,
-        List<DocumentReferenceRelatesTo> relatesTo,
+        List<dynamic> relatesTo,
         String description,
         List<dynamic> securityLabel,
-        List<DocumentReferenceContent> content,
+        List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
         String id,
@@ -3036,11 +3032,11 @@ abstract class Composition implements Documents {
       List<dynamic> author,
       String title,
       Code confidentiality,
-      List<CompositionAttester> attester,
+      List<dynamic> attester,
       Reference custodian,
-      List<CompositionRelatesTo> relatesTo,
-      List<CompositionEvent> event,
-      List<CompositionSection> section}) = _$Composition;
+      List<dynamic> relatesTo,
+      List<dynamic> event,
+      List<dynamic> section}) = _$Composition;
 
   factory Composition.fromJson(Map<String, dynamic> json) =
       _$Composition.fromJson;
@@ -3066,11 +3062,11 @@ abstract class Composition implements Documents {
   List<dynamic> get author;
   String get title;
   Code get confidentiality;
-  List<CompositionAttester> get attester;
+  List<dynamic> get attester;
   Reference get custodian;
-  List<CompositionRelatesTo> get relatesTo;
-  List<CompositionEvent> get event;
-  List<CompositionSection> get section;
+  List<dynamic> get relatesTo;
+  List<dynamic> get event;
+  List<dynamic> get section;
   @override
   $CompositionCopyWith<Composition> get copyWith;
 }
@@ -3214,7 +3210,7 @@ class _$CompositionAttester implements CompositionAttester {
             FhirDateTime lastUpdated,
             List<dynamic> additionalCharacteristic,
             List<dynamic> additionalClassification,
-            List<CatalogEntryRelatedEntry> relatedEntry),
+            List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
             String id,
@@ -3243,11 +3239,11 @@ class _$CompositionAttester implements CompositionAttester {
             List<dynamic> author,
             String title,
             Code confidentiality,
-            List<CompositionAttester> attester,
+            List<dynamic> attester,
             Reference custodian,
-            List<CompositionRelatesTo> relatesTo,
-            List<CompositionEvent> event,
-            List<CompositionSection> section),
+            List<dynamic> relatesTo,
+            List<dynamic> event,
+            List<dynamic> section),
     @required
         Result compositionAttester(
             String id,
@@ -3286,7 +3282,7 @@ class _$CompositionAttester implements CompositionAttester {
             CodeableConcept orderedBy,
             List<dynamic> entry,
             CodeableConcept emptyReason,
-            List<CompositionSection> section),
+            List<dynamic> section),
     @required
         Result documentManifest(
             String resourceType,
@@ -3309,7 +3305,7 @@ class _$CompositionAttester implements CompositionAttester {
             FhirUri source,
             String description,
             List<dynamic> content,
-            List<DocumentManifestRelated> related),
+            List<dynamic> related),
     @required
         Result documentManifestRelated(
             String id,
@@ -3339,10 +3335,10 @@ class _$CompositionAttester implements CompositionAttester {
             List<dynamic> author,
             Reference authenticator,
             Reference custodian,
-            List<DocumentReferenceRelatesTo> relatesTo,
+            List<dynamic> relatesTo,
             String description,
             List<dynamic> securityLabel,
-            List<DocumentReferenceContent> content,
+            List<dynamic> content,
             DocumentReferenceContext context),
     @required
         Result documentReferenceRelatesTo(
@@ -3413,7 +3409,7 @@ class _$CompositionAttester implements CompositionAttester {
         FhirDateTime lastUpdated,
         List<dynamic> additionalCharacteristic,
         List<dynamic> additionalClassification,
-        List<CatalogEntryRelatedEntry> relatedEntry),
+        List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
         List<dynamic> extension,
@@ -3440,11 +3436,11 @@ class _$CompositionAttester implements CompositionAttester {
         List<dynamic> author,
         String title,
         Code confidentiality,
-        List<CompositionAttester> attester,
+        List<dynamic> attester,
         Reference custodian,
-        List<CompositionRelatesTo> relatesTo,
-        List<CompositionEvent> event,
-        List<CompositionSection> section),
+        List<dynamic> relatesTo,
+        List<dynamic> event,
+        List<dynamic> section),
     Result compositionAttester(
         String id,
         List<dynamic> extension,
@@ -3479,7 +3475,7 @@ class _$CompositionAttester implements CompositionAttester {
         CodeableConcept orderedBy,
         List<dynamic> entry,
         CodeableConcept emptyReason,
-        List<CompositionSection> section),
+        List<dynamic> section),
     Result documentManifest(
         String resourceType,
         Id id,
@@ -3501,7 +3497,7 @@ class _$CompositionAttester implements CompositionAttester {
         FhirUri source,
         String description,
         List<dynamic> content,
-        List<DocumentManifestRelated> related),
+        List<dynamic> related),
     Result documentManifestRelated(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Identifier identifier, Reference ref),
     Result documentReference(
@@ -3525,10 +3521,10 @@ class _$CompositionAttester implements CompositionAttester {
         List<dynamic> author,
         Reference authenticator,
         Reference custodian,
-        List<DocumentReferenceRelatesTo> relatesTo,
+        List<dynamic> relatesTo,
         String description,
         List<dynamic> securityLabel,
-        List<DocumentReferenceContent> content,
+        List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
         String id,
@@ -3795,7 +3791,7 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
             FhirDateTime lastUpdated,
             List<dynamic> additionalCharacteristic,
             List<dynamic> additionalClassification,
-            List<CatalogEntryRelatedEntry> relatedEntry),
+            List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
             String id,
@@ -3824,11 +3820,11 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
             List<dynamic> author,
             String title,
             Code confidentiality,
-            List<CompositionAttester> attester,
+            List<dynamic> attester,
             Reference custodian,
-            List<CompositionRelatesTo> relatesTo,
-            List<CompositionEvent> event,
-            List<CompositionSection> section),
+            List<dynamic> relatesTo,
+            List<dynamic> event,
+            List<dynamic> section),
     @required
         Result compositionAttester(
             String id,
@@ -3867,7 +3863,7 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
             CodeableConcept orderedBy,
             List<dynamic> entry,
             CodeableConcept emptyReason,
-            List<CompositionSection> section),
+            List<dynamic> section),
     @required
         Result documentManifest(
             String resourceType,
@@ -3890,7 +3886,7 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
             FhirUri source,
             String description,
             List<dynamic> content,
-            List<DocumentManifestRelated> related),
+            List<dynamic> related),
     @required
         Result documentManifestRelated(
             String id,
@@ -3920,10 +3916,10 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
             List<dynamic> author,
             Reference authenticator,
             Reference custodian,
-            List<DocumentReferenceRelatesTo> relatesTo,
+            List<dynamic> relatesTo,
             String description,
             List<dynamic> securityLabel,
-            List<DocumentReferenceContent> content,
+            List<dynamic> content,
             DocumentReferenceContext context),
     @required
         Result documentReferenceRelatesTo(
@@ -3994,7 +3990,7 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
         FhirDateTime lastUpdated,
         List<dynamic> additionalCharacteristic,
         List<dynamic> additionalClassification,
-        List<CatalogEntryRelatedEntry> relatedEntry),
+        List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
         List<dynamic> extension,
@@ -4021,11 +4017,11 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
         List<dynamic> author,
         String title,
         Code confidentiality,
-        List<CompositionAttester> attester,
+        List<dynamic> attester,
         Reference custodian,
-        List<CompositionRelatesTo> relatesTo,
-        List<CompositionEvent> event,
-        List<CompositionSection> section),
+        List<dynamic> relatesTo,
+        List<dynamic> event,
+        List<dynamic> section),
     Result compositionAttester(
         String id,
         List<dynamic> extension,
@@ -4060,7 +4056,7 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
         CodeableConcept orderedBy,
         List<dynamic> entry,
         CodeableConcept emptyReason,
-        List<CompositionSection> section),
+        List<dynamic> section),
     Result documentManifest(
         String resourceType,
         Id id,
@@ -4082,7 +4078,7 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
         FhirUri source,
         String description,
         List<dynamic> content,
-        List<DocumentManifestRelated> related),
+        List<dynamic> related),
     Result documentManifestRelated(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Identifier identifier, Reference ref),
     Result documentReference(
@@ -4106,10 +4102,10 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
         List<dynamic> author,
         Reference authenticator,
         Reference custodian,
-        List<DocumentReferenceRelatesTo> relatesTo,
+        List<dynamic> relatesTo,
         String description,
         List<dynamic> securityLabel,
-        List<DocumentReferenceContent> content,
+        List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
         String id,
@@ -4368,7 +4364,7 @@ class _$CompositionEvent implements CompositionEvent {
             FhirDateTime lastUpdated,
             List<dynamic> additionalCharacteristic,
             List<dynamic> additionalClassification,
-            List<CatalogEntryRelatedEntry> relatedEntry),
+            List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
             String id,
@@ -4397,11 +4393,11 @@ class _$CompositionEvent implements CompositionEvent {
             List<dynamic> author,
             String title,
             Code confidentiality,
-            List<CompositionAttester> attester,
+            List<dynamic> attester,
             Reference custodian,
-            List<CompositionRelatesTo> relatesTo,
-            List<CompositionEvent> event,
-            List<CompositionSection> section),
+            List<dynamic> relatesTo,
+            List<dynamic> event,
+            List<dynamic> section),
     @required
         Result compositionAttester(
             String id,
@@ -4440,7 +4436,7 @@ class _$CompositionEvent implements CompositionEvent {
             CodeableConcept orderedBy,
             List<dynamic> entry,
             CodeableConcept emptyReason,
-            List<CompositionSection> section),
+            List<dynamic> section),
     @required
         Result documentManifest(
             String resourceType,
@@ -4463,7 +4459,7 @@ class _$CompositionEvent implements CompositionEvent {
             FhirUri source,
             String description,
             List<dynamic> content,
-            List<DocumentManifestRelated> related),
+            List<dynamic> related),
     @required
         Result documentManifestRelated(
             String id,
@@ -4493,10 +4489,10 @@ class _$CompositionEvent implements CompositionEvent {
             List<dynamic> author,
             Reference authenticator,
             Reference custodian,
-            List<DocumentReferenceRelatesTo> relatesTo,
+            List<dynamic> relatesTo,
             String description,
             List<dynamic> securityLabel,
-            List<DocumentReferenceContent> content,
+            List<dynamic> content,
             DocumentReferenceContext context),
     @required
         Result documentReferenceRelatesTo(
@@ -4567,7 +4563,7 @@ class _$CompositionEvent implements CompositionEvent {
         FhirDateTime lastUpdated,
         List<dynamic> additionalCharacteristic,
         List<dynamic> additionalClassification,
-        List<CatalogEntryRelatedEntry> relatedEntry),
+        List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
         List<dynamic> extension,
@@ -4594,11 +4590,11 @@ class _$CompositionEvent implements CompositionEvent {
         List<dynamic> author,
         String title,
         Code confidentiality,
-        List<CompositionAttester> attester,
+        List<dynamic> attester,
         Reference custodian,
-        List<CompositionRelatesTo> relatesTo,
-        List<CompositionEvent> event,
-        List<CompositionSection> section),
+        List<dynamic> relatesTo,
+        List<dynamic> event,
+        List<dynamic> section),
     Result compositionAttester(
         String id,
         List<dynamic> extension,
@@ -4633,7 +4629,7 @@ class _$CompositionEvent implements CompositionEvent {
         CodeableConcept orderedBy,
         List<dynamic> entry,
         CodeableConcept emptyReason,
-        List<CompositionSection> section),
+        List<dynamic> section),
     Result documentManifest(
         String resourceType,
         Id id,
@@ -4655,7 +4651,7 @@ class _$CompositionEvent implements CompositionEvent {
         FhirUri source,
         String description,
         List<dynamic> content,
-        List<DocumentManifestRelated> related),
+        List<dynamic> related),
     Result documentManifestRelated(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Identifier identifier, Reference ref),
     Result documentReference(
@@ -4679,10 +4675,10 @@ class _$CompositionEvent implements CompositionEvent {
         List<dynamic> author,
         Reference authenticator,
         Reference custodian,
-        List<DocumentReferenceRelatesTo> relatesTo,
+        List<dynamic> relatesTo,
         String description,
         List<dynamic> securityLabel,
-        List<DocumentReferenceContent> content,
+        List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
         String id,
@@ -4822,7 +4818,7 @@ abstract class $CompositionSectionCopyWith<$Res>
       CodeableConcept orderedBy,
       List<dynamic> entry,
       CodeableConcept emptyReason,
-      List<CompositionSection> section});
+      List<dynamic> section});
 }
 
 class _$CompositionSectionCopyWithImpl<$Res>
@@ -4871,9 +4867,7 @@ class _$CompositionSectionCopyWithImpl<$Res>
       emptyReason: emptyReason == freezed
           ? _value.emptyReason
           : emptyReason as CodeableConcept,
-      section: section == freezed
-          ? _value.section
-          : section as List<CompositionSection>,
+      section: section == freezed ? _value.section : section as List<dynamic>,
     ));
   }
 }
@@ -4923,7 +4917,7 @@ class _$CompositionSection implements CompositionSection {
   @override
   final CodeableConcept emptyReason;
   @override
-  final List<CompositionSection> section;
+  final List<dynamic> section;
 
   @override
   String toString() {
@@ -5013,7 +5007,7 @@ class _$CompositionSection implements CompositionSection {
             FhirDateTime lastUpdated,
             List<dynamic> additionalCharacteristic,
             List<dynamic> additionalClassification,
-            List<CatalogEntryRelatedEntry> relatedEntry),
+            List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
             String id,
@@ -5042,11 +5036,11 @@ class _$CompositionSection implements CompositionSection {
             List<dynamic> author,
             String title,
             Code confidentiality,
-            List<CompositionAttester> attester,
+            List<dynamic> attester,
             Reference custodian,
-            List<CompositionRelatesTo> relatesTo,
-            List<CompositionEvent> event,
-            List<CompositionSection> section),
+            List<dynamic> relatesTo,
+            List<dynamic> event,
+            List<dynamic> section),
     @required
         Result compositionAttester(
             String id,
@@ -5085,7 +5079,7 @@ class _$CompositionSection implements CompositionSection {
             CodeableConcept orderedBy,
             List<dynamic> entry,
             CodeableConcept emptyReason,
-            List<CompositionSection> section),
+            List<dynamic> section),
     @required
         Result documentManifest(
             String resourceType,
@@ -5108,7 +5102,7 @@ class _$CompositionSection implements CompositionSection {
             FhirUri source,
             String description,
             List<dynamic> content,
-            List<DocumentManifestRelated> related),
+            List<dynamic> related),
     @required
         Result documentManifestRelated(
             String id,
@@ -5138,10 +5132,10 @@ class _$CompositionSection implements CompositionSection {
             List<dynamic> author,
             Reference authenticator,
             Reference custodian,
-            List<DocumentReferenceRelatesTo> relatesTo,
+            List<dynamic> relatesTo,
             String description,
             List<dynamic> securityLabel,
-            List<DocumentReferenceContent> content,
+            List<dynamic> content,
             DocumentReferenceContext context),
     @required
         Result documentReferenceRelatesTo(
@@ -5212,7 +5206,7 @@ class _$CompositionSection implements CompositionSection {
         FhirDateTime lastUpdated,
         List<dynamic> additionalCharacteristic,
         List<dynamic> additionalClassification,
-        List<CatalogEntryRelatedEntry> relatedEntry),
+        List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
         List<dynamic> extension,
@@ -5239,11 +5233,11 @@ class _$CompositionSection implements CompositionSection {
         List<dynamic> author,
         String title,
         Code confidentiality,
-        List<CompositionAttester> attester,
+        List<dynamic> attester,
         Reference custodian,
-        List<CompositionRelatesTo> relatesTo,
-        List<CompositionEvent> event,
-        List<CompositionSection> section),
+        List<dynamic> relatesTo,
+        List<dynamic> event,
+        List<dynamic> section),
     Result compositionAttester(
         String id,
         List<dynamic> extension,
@@ -5278,7 +5272,7 @@ class _$CompositionSection implements CompositionSection {
         CodeableConcept orderedBy,
         List<dynamic> entry,
         CodeableConcept emptyReason,
-        List<CompositionSection> section),
+        List<dynamic> section),
     Result documentManifest(
         String resourceType,
         Id id,
@@ -5300,7 +5294,7 @@ class _$CompositionSection implements CompositionSection {
         FhirUri source,
         String description,
         List<dynamic> content,
-        List<DocumentManifestRelated> related),
+        List<dynamic> related),
     Result documentManifestRelated(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Identifier identifier, Reference ref),
     Result documentReference(
@@ -5324,10 +5318,10 @@ class _$CompositionSection implements CompositionSection {
         List<dynamic> author,
         Reference authenticator,
         Reference custodian,
-        List<DocumentReferenceRelatesTo> relatesTo,
+        List<dynamic> relatesTo,
         String description,
         List<dynamic> securityLabel,
-        List<DocumentReferenceContent> content,
+        List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
         String id,
@@ -5438,7 +5432,7 @@ abstract class CompositionSection implements Documents {
       CodeableConcept orderedBy,
       List<dynamic> entry,
       CodeableConcept emptyReason,
-      List<CompositionSection> section}) = _$CompositionSection;
+      List<dynamic> section}) = _$CompositionSection;
 
   factory CompositionSection.fromJson(Map<String, dynamic> json) =
       _$CompositionSection.fromJson;
@@ -5457,7 +5451,7 @@ abstract class CompositionSection implements Documents {
   CodeableConcept get orderedBy;
   List<dynamic> get entry;
   CodeableConcept get emptyReason;
-  List<CompositionSection> get section;
+  List<dynamic> get section;
   @override
   $CompositionSectionCopyWith<CompositionSection> get copyWith;
 }
@@ -5489,7 +5483,7 @@ abstract class $DocumentManifestCopyWith<$Res>
       FhirUri source,
       String description,
       List<dynamic> content,
-      List<DocumentManifestRelated> related});
+      List<dynamic> related});
 }
 
 class _$DocumentManifestCopyWithImpl<$Res> extends _$DocumentsCopyWithImpl<$Res>
@@ -5561,9 +5555,7 @@ class _$DocumentManifestCopyWithImpl<$Res> extends _$DocumentsCopyWithImpl<$Res>
       description:
           description == freezed ? _value.description : description as String,
       content: content == freezed ? _value.content : content as List<dynamic>,
-      related: related == freezed
-          ? _value.related
-          : related as List<DocumentManifestRelated>,
+      related: related == freezed ? _value.related : related as List<dynamic>,
     ));
   }
 }
@@ -5637,7 +5629,7 @@ class _$DocumentManifest implements DocumentManifest {
   @override
   final List<dynamic> content;
   @override
-  final List<DocumentManifestRelated> related;
+  final List<dynamic> related;
 
   @override
   String toString() {
@@ -5760,7 +5752,7 @@ class _$DocumentManifest implements DocumentManifest {
             FhirDateTime lastUpdated,
             List<dynamic> additionalCharacteristic,
             List<dynamic> additionalClassification,
-            List<CatalogEntryRelatedEntry> relatedEntry),
+            List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
             String id,
@@ -5789,11 +5781,11 @@ class _$DocumentManifest implements DocumentManifest {
             List<dynamic> author,
             String title,
             Code confidentiality,
-            List<CompositionAttester> attester,
+            List<dynamic> attester,
             Reference custodian,
-            List<CompositionRelatesTo> relatesTo,
-            List<CompositionEvent> event,
-            List<CompositionSection> section),
+            List<dynamic> relatesTo,
+            List<dynamic> event,
+            List<dynamic> section),
     @required
         Result compositionAttester(
             String id,
@@ -5832,7 +5824,7 @@ class _$DocumentManifest implements DocumentManifest {
             CodeableConcept orderedBy,
             List<dynamic> entry,
             CodeableConcept emptyReason,
-            List<CompositionSection> section),
+            List<dynamic> section),
     @required
         Result documentManifest(
             String resourceType,
@@ -5855,7 +5847,7 @@ class _$DocumentManifest implements DocumentManifest {
             FhirUri source,
             String description,
             List<dynamic> content,
-            List<DocumentManifestRelated> related),
+            List<dynamic> related),
     @required
         Result documentManifestRelated(
             String id,
@@ -5885,10 +5877,10 @@ class _$DocumentManifest implements DocumentManifest {
             List<dynamic> author,
             Reference authenticator,
             Reference custodian,
-            List<DocumentReferenceRelatesTo> relatesTo,
+            List<dynamic> relatesTo,
             String description,
             List<dynamic> securityLabel,
-            List<DocumentReferenceContent> content,
+            List<dynamic> content,
             DocumentReferenceContext context),
     @required
         Result documentReferenceRelatesTo(
@@ -5979,7 +5971,7 @@ class _$DocumentManifest implements DocumentManifest {
         FhirDateTime lastUpdated,
         List<dynamic> additionalCharacteristic,
         List<dynamic> additionalClassification,
-        List<CatalogEntryRelatedEntry> relatedEntry),
+        List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
         List<dynamic> extension,
@@ -6006,11 +5998,11 @@ class _$DocumentManifest implements DocumentManifest {
         List<dynamic> author,
         String title,
         Code confidentiality,
-        List<CompositionAttester> attester,
+        List<dynamic> attester,
         Reference custodian,
-        List<CompositionRelatesTo> relatesTo,
-        List<CompositionEvent> event,
-        List<CompositionSection> section),
+        List<dynamic> relatesTo,
+        List<dynamic> event,
+        List<dynamic> section),
     Result compositionAttester(
         String id,
         List<dynamic> extension,
@@ -6045,7 +6037,7 @@ class _$DocumentManifest implements DocumentManifest {
         CodeableConcept orderedBy,
         List<dynamic> entry,
         CodeableConcept emptyReason,
-        List<CompositionSection> section),
+        List<dynamic> section),
     Result documentManifest(
         String resourceType,
         Id id,
@@ -6067,7 +6059,7 @@ class _$DocumentManifest implements DocumentManifest {
         FhirUri source,
         String description,
         List<dynamic> content,
-        List<DocumentManifestRelated> related),
+        List<dynamic> related),
     Result documentManifestRelated(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Identifier identifier, Reference ref),
     Result documentReference(
@@ -6091,10 +6083,10 @@ class _$DocumentManifest implements DocumentManifest {
         List<dynamic> author,
         Reference authenticator,
         Reference custodian,
-        List<DocumentReferenceRelatesTo> relatesTo,
+        List<dynamic> relatesTo,
         String description,
         List<dynamic> securityLabel,
-        List<DocumentReferenceContent> content,
+        List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
         String id,
@@ -6233,7 +6225,7 @@ abstract class DocumentManifest implements Documents {
       FhirUri source,
       String description,
       List<dynamic> content,
-      List<DocumentManifestRelated> related}) = _$DocumentManifest;
+      List<dynamic> related}) = _$DocumentManifest;
 
   factory DocumentManifest.fromJson(Map<String, dynamic> json) =
       _$DocumentManifest.fromJson;
@@ -6260,7 +6252,7 @@ abstract class DocumentManifest implements Documents {
   FhirUri get source;
   String get description;
   List<dynamic> get content;
-  List<DocumentManifestRelated> get related;
+  List<dynamic> get related;
   @override
   $DocumentManifestCopyWith<DocumentManifest> get copyWith;
 }
@@ -6398,7 +6390,7 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
             FhirDateTime lastUpdated,
             List<dynamic> additionalCharacteristic,
             List<dynamic> additionalClassification,
-            List<CatalogEntryRelatedEntry> relatedEntry),
+            List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
             String id,
@@ -6427,11 +6419,11 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
             List<dynamic> author,
             String title,
             Code confidentiality,
-            List<CompositionAttester> attester,
+            List<dynamic> attester,
             Reference custodian,
-            List<CompositionRelatesTo> relatesTo,
-            List<CompositionEvent> event,
-            List<CompositionSection> section),
+            List<dynamic> relatesTo,
+            List<dynamic> event,
+            List<dynamic> section),
     @required
         Result compositionAttester(
             String id,
@@ -6470,7 +6462,7 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
             CodeableConcept orderedBy,
             List<dynamic> entry,
             CodeableConcept emptyReason,
-            List<CompositionSection> section),
+            List<dynamic> section),
     @required
         Result documentManifest(
             String resourceType,
@@ -6493,7 +6485,7 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
             FhirUri source,
             String description,
             List<dynamic> content,
-            List<DocumentManifestRelated> related),
+            List<dynamic> related),
     @required
         Result documentManifestRelated(
             String id,
@@ -6523,10 +6515,10 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
             List<dynamic> author,
             Reference authenticator,
             Reference custodian,
-            List<DocumentReferenceRelatesTo> relatesTo,
+            List<dynamic> relatesTo,
             String description,
             List<dynamic> securityLabel,
-            List<DocumentReferenceContent> content,
+            List<dynamic> content,
             DocumentReferenceContext context),
     @required
         Result documentReferenceRelatesTo(
@@ -6597,7 +6589,7 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
         FhirDateTime lastUpdated,
         List<dynamic> additionalCharacteristic,
         List<dynamic> additionalClassification,
-        List<CatalogEntryRelatedEntry> relatedEntry),
+        List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
         List<dynamic> extension,
@@ -6624,11 +6616,11 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
         List<dynamic> author,
         String title,
         Code confidentiality,
-        List<CompositionAttester> attester,
+        List<dynamic> attester,
         Reference custodian,
-        List<CompositionRelatesTo> relatesTo,
-        List<CompositionEvent> event,
-        List<CompositionSection> section),
+        List<dynamic> relatesTo,
+        List<dynamic> event,
+        List<dynamic> section),
     Result compositionAttester(
         String id,
         List<dynamic> extension,
@@ -6663,7 +6655,7 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
         CodeableConcept orderedBy,
         List<dynamic> entry,
         CodeableConcept emptyReason,
-        List<CompositionSection> section),
+        List<dynamic> section),
     Result documentManifest(
         String resourceType,
         Id id,
@@ -6685,7 +6677,7 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
         FhirUri source,
         String description,
         List<dynamic> content,
-        List<DocumentManifestRelated> related),
+        List<dynamic> related),
     Result documentManifestRelated(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Identifier identifier, Reference ref),
     Result documentReference(
@@ -6709,10 +6701,10 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
         List<dynamic> author,
         Reference authenticator,
         Reference custodian,
-        List<DocumentReferenceRelatesTo> relatesTo,
+        List<dynamic> relatesTo,
         String description,
         List<dynamic> securityLabel,
-        List<DocumentReferenceContent> content,
+        List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
         String id,
@@ -6858,10 +6850,10 @@ abstract class $DocumentReferenceCopyWith<$Res>
       List<dynamic> author,
       Reference authenticator,
       Reference custodian,
-      List<DocumentReferenceRelatesTo> relatesTo,
+      List<dynamic> relatesTo,
       String description,
       List<dynamic> securityLabel,
-      List<DocumentReferenceContent> content,
+      List<dynamic> content,
       DocumentReferenceContext context});
 }
 
@@ -6941,17 +6933,14 @@ class _$DocumentReferenceCopyWithImpl<$Res>
           : authenticator as Reference,
       custodian:
           custodian == freezed ? _value.custodian : custodian as Reference,
-      relatesTo: relatesTo == freezed
-          ? _value.relatesTo
-          : relatesTo as List<DocumentReferenceRelatesTo>,
+      relatesTo:
+          relatesTo == freezed ? _value.relatesTo : relatesTo as List<dynamic>,
       description:
           description == freezed ? _value.description : description as String,
       securityLabel: securityLabel == freezed
           ? _value.securityLabel
           : securityLabel as List<dynamic>,
-      content: content == freezed
-          ? _value.content
-          : content as List<DocumentReferenceContent>,
+      content: content == freezed ? _value.content : content as List<dynamic>,
       context: context == freezed
           ? _value.context
           : context as DocumentReferenceContext,
@@ -7032,13 +7021,13 @@ class _$DocumentReference implements DocumentReference {
   @override
   final Reference custodian;
   @override
-  final List<DocumentReferenceRelatesTo> relatesTo;
+  final List<dynamic> relatesTo;
   @override
   final String description;
   @override
   final List<dynamic> securityLabel;
   @override
-  final List<DocumentReferenceContent> content;
+  final List<dynamic> content;
   @override
   final DocumentReferenceContext context;
 
@@ -7179,7 +7168,7 @@ class _$DocumentReference implements DocumentReference {
             FhirDateTime lastUpdated,
             List<dynamic> additionalCharacteristic,
             List<dynamic> additionalClassification,
-            List<CatalogEntryRelatedEntry> relatedEntry),
+            List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
             String id,
@@ -7208,11 +7197,11 @@ class _$DocumentReference implements DocumentReference {
             List<dynamic> author,
             String title,
             Code confidentiality,
-            List<CompositionAttester> attester,
+            List<dynamic> attester,
             Reference custodian,
-            List<CompositionRelatesTo> relatesTo,
-            List<CompositionEvent> event,
-            List<CompositionSection> section),
+            List<dynamic> relatesTo,
+            List<dynamic> event,
+            List<dynamic> section),
     @required
         Result compositionAttester(
             String id,
@@ -7251,7 +7240,7 @@ class _$DocumentReference implements DocumentReference {
             CodeableConcept orderedBy,
             List<dynamic> entry,
             CodeableConcept emptyReason,
-            List<CompositionSection> section),
+            List<dynamic> section),
     @required
         Result documentManifest(
             String resourceType,
@@ -7274,7 +7263,7 @@ class _$DocumentReference implements DocumentReference {
             FhirUri source,
             String description,
             List<dynamic> content,
-            List<DocumentManifestRelated> related),
+            List<dynamic> related),
     @required
         Result documentManifestRelated(
             String id,
@@ -7304,10 +7293,10 @@ class _$DocumentReference implements DocumentReference {
             List<dynamic> author,
             Reference authenticator,
             Reference custodian,
-            List<DocumentReferenceRelatesTo> relatesTo,
+            List<dynamic> relatesTo,
             String description,
             List<dynamic> securityLabel,
-            List<DocumentReferenceContent> content,
+            List<dynamic> content,
             DocumentReferenceContext context),
     @required
         Result documentReferenceRelatesTo(
@@ -7402,7 +7391,7 @@ class _$DocumentReference implements DocumentReference {
         FhirDateTime lastUpdated,
         List<dynamic> additionalCharacteristic,
         List<dynamic> additionalClassification,
-        List<CatalogEntryRelatedEntry> relatedEntry),
+        List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
         List<dynamic> extension,
@@ -7429,11 +7418,11 @@ class _$DocumentReference implements DocumentReference {
         List<dynamic> author,
         String title,
         Code confidentiality,
-        List<CompositionAttester> attester,
+        List<dynamic> attester,
         Reference custodian,
-        List<CompositionRelatesTo> relatesTo,
-        List<CompositionEvent> event,
-        List<CompositionSection> section),
+        List<dynamic> relatesTo,
+        List<dynamic> event,
+        List<dynamic> section),
     Result compositionAttester(
         String id,
         List<dynamic> extension,
@@ -7468,7 +7457,7 @@ class _$DocumentReference implements DocumentReference {
         CodeableConcept orderedBy,
         List<dynamic> entry,
         CodeableConcept emptyReason,
-        List<CompositionSection> section),
+        List<dynamic> section),
     Result documentManifest(
         String resourceType,
         Id id,
@@ -7490,7 +7479,7 @@ class _$DocumentReference implements DocumentReference {
         FhirUri source,
         String description,
         List<dynamic> content,
-        List<DocumentManifestRelated> related),
+        List<dynamic> related),
     Result documentManifestRelated(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Identifier identifier, Reference ref),
     Result documentReference(
@@ -7514,10 +7503,10 @@ class _$DocumentReference implements DocumentReference {
         List<dynamic> author,
         Reference authenticator,
         Reference custodian,
-        List<DocumentReferenceRelatesTo> relatesTo,
+        List<dynamic> relatesTo,
         String description,
         List<dynamic> securityLabel,
-        List<DocumentReferenceContent> content,
+        List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
         String id,
@@ -7660,10 +7649,10 @@ abstract class DocumentReference implements Documents {
       List<dynamic> author,
       Reference authenticator,
       Reference custodian,
-      List<DocumentReferenceRelatesTo> relatesTo,
+      List<dynamic> relatesTo,
       String description,
       List<dynamic> securityLabel,
-      List<DocumentReferenceContent> content,
+      List<dynamic> content,
       DocumentReferenceContext context}) = _$DocumentReference;
 
   factory DocumentReference.fromJson(Map<String, dynamic> json) =
@@ -7691,10 +7680,10 @@ abstract class DocumentReference implements Documents {
   List<dynamic> get author;
   Reference get authenticator;
   Reference get custodian;
-  List<DocumentReferenceRelatesTo> get relatesTo;
+  List<dynamic> get relatesTo;
   String get description;
   List<dynamic> get securityLabel;
-  List<DocumentReferenceContent> get content;
+  List<dynamic> get content;
   DocumentReferenceContext get context;
   @override
   $DocumentReferenceCopyWith<DocumentReference> get copyWith;
@@ -7835,7 +7824,7 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
             FhirDateTime lastUpdated,
             List<dynamic> additionalCharacteristic,
             List<dynamic> additionalClassification,
-            List<CatalogEntryRelatedEntry> relatedEntry),
+            List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
             String id,
@@ -7864,11 +7853,11 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
             List<dynamic> author,
             String title,
             Code confidentiality,
-            List<CompositionAttester> attester,
+            List<dynamic> attester,
             Reference custodian,
-            List<CompositionRelatesTo> relatesTo,
-            List<CompositionEvent> event,
-            List<CompositionSection> section),
+            List<dynamic> relatesTo,
+            List<dynamic> event,
+            List<dynamic> section),
     @required
         Result compositionAttester(
             String id,
@@ -7907,7 +7896,7 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
             CodeableConcept orderedBy,
             List<dynamic> entry,
             CodeableConcept emptyReason,
-            List<CompositionSection> section),
+            List<dynamic> section),
     @required
         Result documentManifest(
             String resourceType,
@@ -7930,7 +7919,7 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
             FhirUri source,
             String description,
             List<dynamic> content,
-            List<DocumentManifestRelated> related),
+            List<dynamic> related),
     @required
         Result documentManifestRelated(
             String id,
@@ -7960,10 +7949,10 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
             List<dynamic> author,
             Reference authenticator,
             Reference custodian,
-            List<DocumentReferenceRelatesTo> relatesTo,
+            List<dynamic> relatesTo,
             String description,
             List<dynamic> securityLabel,
-            List<DocumentReferenceContent> content,
+            List<dynamic> content,
             DocumentReferenceContext context),
     @required
         Result documentReferenceRelatesTo(
@@ -8034,7 +8023,7 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
         FhirDateTime lastUpdated,
         List<dynamic> additionalCharacteristic,
         List<dynamic> additionalClassification,
-        List<CatalogEntryRelatedEntry> relatedEntry),
+        List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
         List<dynamic> extension,
@@ -8061,11 +8050,11 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
         List<dynamic> author,
         String title,
         Code confidentiality,
-        List<CompositionAttester> attester,
+        List<dynamic> attester,
         Reference custodian,
-        List<CompositionRelatesTo> relatesTo,
-        List<CompositionEvent> event,
-        List<CompositionSection> section),
+        List<dynamic> relatesTo,
+        List<dynamic> event,
+        List<dynamic> section),
     Result compositionAttester(
         String id,
         List<dynamic> extension,
@@ -8100,7 +8089,7 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
         CodeableConcept orderedBy,
         List<dynamic> entry,
         CodeableConcept emptyReason,
-        List<CompositionSection> section),
+        List<dynamic> section),
     Result documentManifest(
         String resourceType,
         Id id,
@@ -8122,7 +8111,7 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
         FhirUri source,
         String description,
         List<dynamic> content,
-        List<DocumentManifestRelated> related),
+        List<dynamic> related),
     Result documentManifestRelated(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Identifier identifier, Reference ref),
     Result documentReference(
@@ -8146,10 +8135,10 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
         List<dynamic> author,
         Reference authenticator,
         Reference custodian,
-        List<DocumentReferenceRelatesTo> relatesTo,
+        List<dynamic> relatesTo,
         String description,
         List<dynamic> securityLabel,
-        List<DocumentReferenceContent> content,
+        List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
         String id,
@@ -8402,7 +8391,7 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
             FhirDateTime lastUpdated,
             List<dynamic> additionalCharacteristic,
             List<dynamic> additionalClassification,
-            List<CatalogEntryRelatedEntry> relatedEntry),
+            List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
             String id,
@@ -8431,11 +8420,11 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
             List<dynamic> author,
             String title,
             Code confidentiality,
-            List<CompositionAttester> attester,
+            List<dynamic> attester,
             Reference custodian,
-            List<CompositionRelatesTo> relatesTo,
-            List<CompositionEvent> event,
-            List<CompositionSection> section),
+            List<dynamic> relatesTo,
+            List<dynamic> event,
+            List<dynamic> section),
     @required
         Result compositionAttester(
             String id,
@@ -8474,7 +8463,7 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
             CodeableConcept orderedBy,
             List<dynamic> entry,
             CodeableConcept emptyReason,
-            List<CompositionSection> section),
+            List<dynamic> section),
     @required
         Result documentManifest(
             String resourceType,
@@ -8497,7 +8486,7 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
             FhirUri source,
             String description,
             List<dynamic> content,
-            List<DocumentManifestRelated> related),
+            List<dynamic> related),
     @required
         Result documentManifestRelated(
             String id,
@@ -8527,10 +8516,10 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
             List<dynamic> author,
             Reference authenticator,
             Reference custodian,
-            List<DocumentReferenceRelatesTo> relatesTo,
+            List<dynamic> relatesTo,
             String description,
             List<dynamic> securityLabel,
-            List<DocumentReferenceContent> content,
+            List<dynamic> content,
             DocumentReferenceContext context),
     @required
         Result documentReferenceRelatesTo(
@@ -8601,7 +8590,7 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
         FhirDateTime lastUpdated,
         List<dynamic> additionalCharacteristic,
         List<dynamic> additionalClassification,
-        List<CatalogEntryRelatedEntry> relatedEntry),
+        List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
         List<dynamic> extension,
@@ -8628,11 +8617,11 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
         List<dynamic> author,
         String title,
         Code confidentiality,
-        List<CompositionAttester> attester,
+        List<dynamic> attester,
         Reference custodian,
-        List<CompositionRelatesTo> relatesTo,
-        List<CompositionEvent> event,
-        List<CompositionSection> section),
+        List<dynamic> relatesTo,
+        List<dynamic> event,
+        List<dynamic> section),
     Result compositionAttester(
         String id,
         List<dynamic> extension,
@@ -8667,7 +8656,7 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
         CodeableConcept orderedBy,
         List<dynamic> entry,
         CodeableConcept emptyReason,
-        List<CompositionSection> section),
+        List<dynamic> section),
     Result documentManifest(
         String resourceType,
         Id id,
@@ -8689,7 +8678,7 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
         FhirUri source,
         String description,
         List<dynamic> content,
-        List<DocumentManifestRelated> related),
+        List<dynamic> related),
     Result documentManifestRelated(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Identifier identifier, Reference ref),
     Result documentReference(
@@ -8713,10 +8702,10 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
         List<dynamic> author,
         Reference authenticator,
         Reference custodian,
-        List<DocumentReferenceRelatesTo> relatesTo,
+        List<dynamic> relatesTo,
         String description,
         List<dynamic> securityLabel,
-        List<DocumentReferenceContent> content,
+        List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
         String id,
@@ -9023,7 +9012,7 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
             FhirDateTime lastUpdated,
             List<dynamic> additionalCharacteristic,
             List<dynamic> additionalClassification,
-            List<CatalogEntryRelatedEntry> relatedEntry),
+            List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
             String id,
@@ -9052,11 +9041,11 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
             List<dynamic> author,
             String title,
             Code confidentiality,
-            List<CompositionAttester> attester,
+            List<dynamic> attester,
             Reference custodian,
-            List<CompositionRelatesTo> relatesTo,
-            List<CompositionEvent> event,
-            List<CompositionSection> section),
+            List<dynamic> relatesTo,
+            List<dynamic> event,
+            List<dynamic> section),
     @required
         Result compositionAttester(
             String id,
@@ -9095,7 +9084,7 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
             CodeableConcept orderedBy,
             List<dynamic> entry,
             CodeableConcept emptyReason,
-            List<CompositionSection> section),
+            List<dynamic> section),
     @required
         Result documentManifest(
             String resourceType,
@@ -9118,7 +9107,7 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
             FhirUri source,
             String description,
             List<dynamic> content,
-            List<DocumentManifestRelated> related),
+            List<dynamic> related),
     @required
         Result documentManifestRelated(
             String id,
@@ -9148,10 +9137,10 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
             List<dynamic> author,
             Reference authenticator,
             Reference custodian,
-            List<DocumentReferenceRelatesTo> relatesTo,
+            List<dynamic> relatesTo,
             String description,
             List<dynamic> securityLabel,
-            List<DocumentReferenceContent> content,
+            List<dynamic> content,
             DocumentReferenceContext context),
     @required
         Result documentReferenceRelatesTo(
@@ -9231,7 +9220,7 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
         FhirDateTime lastUpdated,
         List<dynamic> additionalCharacteristic,
         List<dynamic> additionalClassification,
-        List<CatalogEntryRelatedEntry> relatedEntry),
+        List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
         List<dynamic> extension,
@@ -9258,11 +9247,11 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
         List<dynamic> author,
         String title,
         Code confidentiality,
-        List<CompositionAttester> attester,
+        List<dynamic> attester,
         Reference custodian,
-        List<CompositionRelatesTo> relatesTo,
-        List<CompositionEvent> event,
-        List<CompositionSection> section),
+        List<dynamic> relatesTo,
+        List<dynamic> event,
+        List<dynamic> section),
     Result compositionAttester(
         String id,
         List<dynamic> extension,
@@ -9297,7 +9286,7 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
         CodeableConcept orderedBy,
         List<dynamic> entry,
         CodeableConcept emptyReason,
-        List<CompositionSection> section),
+        List<dynamic> section),
     Result documentManifest(
         String resourceType,
         Id id,
@@ -9319,7 +9308,7 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
         FhirUri source,
         String description,
         List<dynamic> content,
-        List<DocumentManifestRelated> related),
+        List<dynamic> related),
     Result documentManifestRelated(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Identifier identifier, Reference ref),
     Result documentReference(
@@ -9343,10 +9332,10 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
         List<dynamic> author,
         Reference authenticator,
         Reference custodian,
-        List<DocumentReferenceRelatesTo> relatesTo,
+        List<dynamic> relatesTo,
         String description,
         List<dynamic> securityLabel,
-        List<DocumentReferenceContent> content,
+        List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
         String id,

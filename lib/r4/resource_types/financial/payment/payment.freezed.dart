@@ -96,9 +96,9 @@ class _$PaymentTearOff {
       Date paymentDate,
       Money paymentAmount,
       Identifier paymentIdentifier,
-      List<PaymentReconciliationDetail> detail,
+      List<dynamic> detail,
       CodeableConcept formCode,
-      List<PaymentReconciliationProcessNote> processNote}) {
+      List<dynamic> processNote}) {
     return PaymentReconciliation(
       resourceType: resourceType,
       id: id,
@@ -229,9 +229,9 @@ mixin _$Payment {
             Date paymentDate,
             Money paymentAmount,
             Identifier paymentIdentifier,
-            List<PaymentReconciliationDetail> detail,
+            List<dynamic> detail,
             CodeableConcept formCode,
-            List<PaymentReconciliationProcessNote> processNote),
+            List<dynamic> processNote),
     @required
         Result paymentReconciliationDetail(
             String id,
@@ -301,9 +301,9 @@ mixin _$Payment {
         Date paymentDate,
         Money paymentAmount,
         Identifier paymentIdentifier,
-        List<PaymentReconciliationDetail> detail,
+        List<dynamic> detail,
         CodeableConcept formCode,
-        List<PaymentReconciliationProcessNote> processNote),
+        List<dynamic> processNote),
     Result paymentReconciliationDetail(
         String id,
         List<dynamic> extension,
@@ -696,9 +696,9 @@ class _$PaymentNotice implements PaymentNotice {
             Date paymentDate,
             Money paymentAmount,
             Identifier paymentIdentifier,
-            List<PaymentReconciliationDetail> detail,
+            List<dynamic> detail,
             CodeableConcept formCode,
-            List<PaymentReconciliationProcessNote> processNote),
+            List<dynamic> processNote),
     @required
         Result paymentReconciliationDetail(
             String id,
@@ -797,9 +797,9 @@ class _$PaymentNotice implements PaymentNotice {
         Date paymentDate,
         Money paymentAmount,
         Identifier paymentIdentifier,
-        List<PaymentReconciliationDetail> detail,
+        List<dynamic> detail,
         CodeableConcept formCode,
-        List<PaymentReconciliationProcessNote> processNote),
+        List<dynamic> processNote),
     Result paymentReconciliationDetail(
         String id,
         List<dynamic> extension,
@@ -973,9 +973,9 @@ abstract class $PaymentReconciliationCopyWith<$Res>
       Date paymentDate,
       Money paymentAmount,
       Identifier paymentIdentifier,
-      List<PaymentReconciliationDetail> detail,
+      List<dynamic> detail,
       CodeableConcept formCode,
-      List<PaymentReconciliationProcessNote> processNote});
+      List<dynamic> processNote});
 }
 
 class _$PaymentReconciliationCopyWithImpl<$Res>
@@ -1058,14 +1058,12 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
       paymentIdentifier: paymentIdentifier == freezed
           ? _value.paymentIdentifier
           : paymentIdentifier as Identifier,
-      detail: detail == freezed
-          ? _value.detail
-          : detail as List<PaymentReconciliationDetail>,
+      detail: detail == freezed ? _value.detail : detail as List<dynamic>,
       formCode:
           formCode == freezed ? _value.formCode : formCode as CodeableConcept,
       processNote: processNote == freezed
           ? _value.processNote
-          : processNote as List<PaymentReconciliationProcessNote>,
+          : processNote as List<dynamic>,
     ));
   }
 }
@@ -1144,11 +1142,11 @@ class _$PaymentReconciliation implements PaymentReconciliation {
   @override
   final Identifier paymentIdentifier;
   @override
-  final List<PaymentReconciliationDetail> detail;
+  final List<dynamic> detail;
   @override
   final CodeableConcept formCode;
   @override
-  final List<PaymentReconciliationProcessNote> processNote;
+  final List<dynamic> processNote;
 
   @override
   String toString() {
@@ -1309,9 +1307,9 @@ class _$PaymentReconciliation implements PaymentReconciliation {
             Date paymentDate,
             Money paymentAmount,
             Identifier paymentIdentifier,
-            List<PaymentReconciliationDetail> detail,
+            List<dynamic> detail,
             CodeableConcept formCode,
-            List<PaymentReconciliationProcessNote> processNote),
+            List<dynamic> processNote),
     @required
         Result paymentReconciliationDetail(
             String id,
@@ -1413,9 +1411,9 @@ class _$PaymentReconciliation implements PaymentReconciliation {
         Date paymentDate,
         Money paymentAmount,
         Identifier paymentIdentifier,
-        List<PaymentReconciliationDetail> detail,
+        List<dynamic> detail,
         CodeableConcept formCode,
-        List<PaymentReconciliationProcessNote> processNote),
+        List<dynamic> processNote),
     Result paymentReconciliationDetail(
         String id,
         List<dynamic> extension,
@@ -1513,31 +1511,30 @@ class _$PaymentReconciliation implements PaymentReconciliation {
 
 abstract class PaymentReconciliation implements Payment {
   const factory PaymentReconciliation(
-          {String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          Code language,
-          Narrative text,
-          List<dynamic> contained,
-          List<dynamic> extension,
-          List<dynamic> modifierExtension,
-          List<dynamic> identifier,
-          Code status,
-          Period period,
-          FhirDateTime created,
-          Reference paymentIssuer,
-          Reference request,
-          Reference requestor,
-          PaymentReconciliationOutcome outcome,
-          String disposition,
-          Date paymentDate,
-          Money paymentAmount,
-          Identifier paymentIdentifier,
-          List<PaymentReconciliationDetail> detail,
-          CodeableConcept formCode,
-          List<PaymentReconciliationProcessNote> processNote}) =
-      _$PaymentReconciliation;
+      {String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<dynamic> contained,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
+      Code status,
+      Period period,
+      FhirDateTime created,
+      Reference paymentIssuer,
+      Reference request,
+      Reference requestor,
+      PaymentReconciliationOutcome outcome,
+      String disposition,
+      Date paymentDate,
+      Money paymentAmount,
+      Identifier paymentIdentifier,
+      List<dynamic> detail,
+      CodeableConcept formCode,
+      List<dynamic> processNote}) = _$PaymentReconciliation;
 
   factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =
       _$PaymentReconciliation.fromJson;
@@ -1565,9 +1562,9 @@ abstract class PaymentReconciliation implements Payment {
   Date get paymentDate;
   Money get paymentAmount;
   Identifier get paymentIdentifier;
-  List<PaymentReconciliationDetail> get detail;
+  List<dynamic> get detail;
   CodeableConcept get formCode;
-  List<PaymentReconciliationProcessNote> get processNote;
+  List<dynamic> get processNote;
   @override
   $PaymentReconciliationCopyWith<PaymentReconciliation> get copyWith;
 }
@@ -1812,9 +1809,9 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
             Date paymentDate,
             Money paymentAmount,
             Identifier paymentIdentifier,
-            List<PaymentReconciliationDetail> detail,
+            List<dynamic> detail,
             CodeableConcept formCode,
-            List<PaymentReconciliationProcessNote> processNote),
+            List<dynamic> processNote),
     @required
         Result paymentReconciliationDetail(
             String id,
@@ -1905,9 +1902,9 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
         Date paymentDate,
         Money paymentAmount,
         Identifier paymentIdentifier,
-        List<PaymentReconciliationDetail> detail,
+        List<dynamic> detail,
         CodeableConcept formCode,
-        List<PaymentReconciliationProcessNote> processNote),
+        List<dynamic> processNote),
     Result paymentReconciliationDetail(
         String id,
         List<dynamic> extension,
@@ -2188,9 +2185,9 @@ class _$PaymentReconciliationProcessNote
             Date paymentDate,
             Money paymentAmount,
             Identifier paymentIdentifier,
-            List<PaymentReconciliationDetail> detail,
+            List<dynamic> detail,
             CodeableConcept formCode,
-            List<PaymentReconciliationProcessNote> processNote),
+            List<dynamic> processNote),
     @required
         Result paymentReconciliationDetail(
             String id,
@@ -2269,9 +2266,9 @@ class _$PaymentReconciliationProcessNote
         Date paymentDate,
         Money paymentAmount,
         Identifier paymentIdentifier,
-        List<PaymentReconciliationDetail> detail,
+        List<dynamic> detail,
         CodeableConcept formCode,
-        List<PaymentReconciliationProcessNote> processNote),
+        List<dynamic> processNote),
     Result paymentReconciliationDetail(
         String id,
         List<dynamic> extension,

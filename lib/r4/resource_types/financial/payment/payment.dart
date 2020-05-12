@@ -16,8 +16,8 @@ const factory Payment.paymentNotice({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Code status,
   Reference request,
@@ -41,8 +41,8 @@ const factory Payment.paymentReconciliation({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Code status,
   Period period,
@@ -63,8 +63,8 @@ const factory Payment.paymentReconciliation({
 
 const factory Payment.paymentReconciliationDetail({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Identifier identifier,
   Identifier predecessor,
   CodeableConcept type,
@@ -80,8 +80,8 @@ const factory Payment.paymentReconciliationDetail({
 
 const factory Payment.paymentReconciliationProcessNote({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   PaymentReconciliationProcessNoteType type,
   String text,
 

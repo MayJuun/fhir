@@ -16,8 +16,8 @@ const factory Billing.claim({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Code status,
   CodeableConcept type,
@@ -50,8 +50,8 @@ const factory Billing.claim({
 
 const factory Billing.claimRelated({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference claim,
   CodeableConcept relationship,
   Identifier reference,
@@ -60,8 +60,8 @@ const factory Billing.claimRelated({
 
 const factory Billing.claimPayee({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   Reference party,
 
@@ -69,8 +69,8 @@ const factory Billing.claimPayee({
 
 const factory Billing.claimCareTeam({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int sequence,
   Reference provider,
   bool responsible,
@@ -81,8 +81,8 @@ const factory Billing.claimCareTeam({
 
 const factory Billing.claimSupportingInfo({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int sequence,
   CodeableConcept category,
   CodeableConcept code,
@@ -99,8 +99,8 @@ const factory Billing.claimSupportingInfo({
 
 const factory Billing.claimDiagnosis({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int sequence,
   CodeableConcept diagnosisCodeableConcept,
   Reference diagnosisReference,
@@ -112,8 +112,8 @@ const factory Billing.claimDiagnosis({
 
 const factory Billing.claimProcedure({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int sequence,
   List<CodeableConcept> type,
   FhirDateTime date,
@@ -125,8 +125,8 @@ const factory Billing.claimProcedure({
 
 const factory Billing.claimInsurance({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int sequence,
   bool focal,
   Identifier identifier,
@@ -139,8 +139,8 @@ const factory Billing.claimInsurance({
 
 const factory Billing.claimAccident({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Date date,
   CodeableConcept type,
   Address locationAddress,
@@ -150,8 +150,8 @@ const factory Billing.claimAccident({
 
 const factory Billing.claimItem({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int sequence,
   List<int> careTeamSequence,
   List<int> diagnosisSequence,
@@ -181,8 +181,8 @@ const factory Billing.claimItem({
 
 const factory Billing.claimDetail({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int sequence,
   CodeableConcept revenue,
   CodeableConcept category,
@@ -200,8 +200,8 @@ const factory Billing.claimDetail({
 
 const factory Billing.claimSubDetail({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int sequence,
   CodeableConcept revenue,
   CodeableConcept category,
@@ -224,8 +224,8 @@ const factory Billing.invoice({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   InvoiceStatus status,
   String cancelledReason,
@@ -247,8 +247,8 @@ const factory Billing.invoice({
 
 const factory Billing.invoiceParticipant({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept role,
   Reference actor,
 
@@ -256,8 +256,8 @@ const factory Billing.invoiceParticipant({
 
 const factory Billing.invoiceLineItem({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int sequence,
   Reference chargeItemReference,
   CodeableConcept chargeItemCodeableConcept,
@@ -267,8 +267,8 @@ const factory Billing.invoiceLineItem({
 
 const factory Billing.invoicePriceComponent({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   InvoicePriceComponentType type,
   CodeableConcept code,
   double factor,
@@ -284,8 +284,8 @@ const factory Billing.claimResponse({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Code status,
   CodeableConcept type,
@@ -318,8 +318,8 @@ const factory Billing.claimResponse({
 
 const factory Billing.claimResponseItem({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int itemSequence,
   List<int> noteNumber,
   List<ClaimResponseAdjudication> adjudication,
@@ -329,8 +329,8 @@ const factory Billing.claimResponseItem({
 
 const factory Billing.claimResponseAdjudication({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept category,
   CodeableConcept reason,
   Money amount,
@@ -340,8 +340,8 @@ const factory Billing.claimResponseAdjudication({
 
 const factory Billing.claimResponseDetail({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int detailSequence,
   List<int> noteNumber,
   List<ClaimResponseAdjudication> adjudication,
@@ -351,8 +351,8 @@ const factory Billing.claimResponseDetail({
 
 const factory Billing.claimResponseSubDetail({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int subDetailSequence,
   List<int> noteNumber,
   List<ClaimResponseAdjudication> adjudication,
@@ -361,8 +361,8 @@ const factory Billing.claimResponseSubDetail({
 
 const factory Billing.claimResponseAddItem({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<int> itemSequence,
   List<int> detailSequence,
   List<int> subdetailSequence,
@@ -389,8 +389,8 @@ const factory Billing.claimResponseAddItem({
 
 const factory Billing.claimResponseDetail1({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept productOrService,
   List<CodeableConcept> modifier,
   Quantity quantity,
@@ -405,8 +405,8 @@ const factory Billing.claimResponseDetail1({
 
 const factory Billing.claimResponseSubDetail1({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept productOrService,
   List<CodeableConcept> modifier,
   Quantity quantity,
@@ -420,8 +420,8 @@ const factory Billing.claimResponseSubDetail1({
 
 const factory Billing.claimResponseTotal({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept category,
   Money amount,
 
@@ -429,8 +429,8 @@ const factory Billing.claimResponseTotal({
 
 const factory Billing.claimResponsePayment({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   Money adjustment,
   CodeableConcept adjustmentReason,
@@ -442,8 +442,8 @@ const factory Billing.claimResponsePayment({
 
 const factory Billing.claimResponseProcessNote({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int number,
   ClaimResponseProcessNoteType type,
   String text,
@@ -453,8 +453,8 @@ const factory Billing.claimResponseProcessNote({
 
 const factory Billing.claimResponseInsurance({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int sequence,
   bool focal,
   Reference coverage,
@@ -465,8 +465,8 @@ const factory Billing.claimResponseInsurance({
 
 const factory Billing.claimResponseError({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   int itemSequence,
   int detailSequence,
   int subDetailSequence,

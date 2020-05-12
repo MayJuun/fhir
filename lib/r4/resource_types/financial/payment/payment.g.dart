@@ -23,18 +23,9 @@ _$PaymentNotice _$_$PaymentNoticeFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    identifier: json['identifier'] as List,
     status:
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     request: json['request'] == null
@@ -114,18 +105,9 @@ _$PaymentReconciliation _$_$PaymentReconciliationFromJson(
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    identifier: json['identifier'] as List,
     status:
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     period: json['period'] == null
@@ -143,9 +125,7 @@ _$PaymentReconciliation _$_$PaymentReconciliationFromJson(
     requestor: json['requestor'] == null
         ? null
         : Reference.fromJson(json['requestor'] as Map<String, dynamic>),
-    outcome: json['outcome'] == null
-        ? null
-        : PaymentReconciliationOutcome.fromJson(json['outcome'] as String),
+    outcome: json['outcome'],
     disposition: json['disposition'] as String,
     paymentDate: json['paymentDate'] == null
         ? null
@@ -157,20 +137,11 @@ _$PaymentReconciliation _$_$PaymentReconciliationFromJson(
         ? null
         : Identifier.fromJson(
             json['paymentIdentifier'] as Map<String, dynamic>),
-    detail: (json['detail'] as List)
-        ?.map((e) => e == null
-            ? null
-            : PaymentReconciliationDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    detail: json['detail'] as List,
     formCode: json['formCode'] == null
         ? null
         : CodeableConcept.fromJson(json['formCode'] as Map<String, dynamic>),
-    processNote: (json['processNote'] as List)
-        ?.map((e) => e == null
-            ? null
-            : PaymentReconciliationProcessNote.fromJson(
-                e as Map<String, dynamic>))
-        ?.toList(),
+    processNote: json['processNote'] as List,
   );
 }
 
@@ -207,14 +178,8 @@ _$PaymentReconciliationDetail _$_$PaymentReconciliationDetailFromJson(
     Map<String, dynamic> json) {
   return _$PaymentReconciliationDetail(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -268,17 +233,9 @@ _$PaymentReconciliationProcessNote _$_$PaymentReconciliationProcessNoteFromJson(
     Map<String, dynamic> json) {
   return _$PaymentReconciliationProcessNote(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    type: json['type'] == null
-        ? null
-        : PaymentReconciliationProcessNoteType.fromJson(json['type'] as String),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    type: json['type'],
     text: json['text'] as String,
   );
 }

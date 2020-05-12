@@ -23,14 +23,8 @@ ValueSet _$ValueSetFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
     identifier: (json['identifier'] as List)
         ?.map((e) =>
@@ -96,10 +90,8 @@ Map<String, dynamic> _$ValueSetToJson(ValueSet instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('url', instance.url?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
@@ -127,14 +119,8 @@ Map<String, dynamic> _$ValueSetToJson(ValueSet instance) {
 ValueSetCompose _$ValueSetComposeFromJson(Map<String, dynamic> json) {
   return ValueSetCompose(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     lockedDate: json['lockedDate'] == null
         ? null
         : Date.fromJson(json['lockedDate'] as String),
@@ -162,10 +148,8 @@ Map<String, dynamic> _$ValueSetComposeToJson(ValueSetCompose instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('lockedDate', instance.lockedDate?.toJson());
   writeNotNull('inactive', instance.inactive);
   writeNotNull('include', instance.include?.map((e) => e?.toJson())?.toList());
@@ -176,14 +160,8 @@ Map<String, dynamic> _$ValueSetComposeToJson(ValueSetCompose instance) {
 ValueSetInclude _$ValueSetIncludeFromJson(Map<String, dynamic> json) {
   return ValueSetInclude(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     system: json['system'] == null
         ? null
         : FhirUri.fromJson(json['system'] as String),
@@ -214,10 +192,8 @@ Map<String, dynamic> _$ValueSetIncludeToJson(ValueSetInclude instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('system', instance.system?.toJson());
   writeNotNull('version', instance.version);
   writeNotNull('concept', instance.concept?.map((e) => e?.toJson())?.toList());
@@ -230,14 +206,8 @@ Map<String, dynamic> _$ValueSetIncludeToJson(ValueSetInclude instance) {
 ValueSetConcept _$ValueSetConceptFromJson(Map<String, dynamic> json) {
   return ValueSetConcept(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
     display: json['display'] as String,
     designation: (json['designation'] as List)
@@ -258,10 +228,8 @@ Map<String, dynamic> _$ValueSetConceptToJson(ValueSetConcept instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('display', instance.display);
   writeNotNull(
@@ -272,14 +240,8 @@ Map<String, dynamic> _$ValueSetConceptToJson(ValueSetConcept instance) {
 ValueSetDesignation _$ValueSetDesignationFromJson(Map<String, dynamic> json) {
   return ValueSetDesignation(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     language: json['language'] == null
         ? null
         : Code.fromJson(json['language'] as String),
@@ -300,10 +262,8 @@ Map<String, dynamic> _$ValueSetDesignationToJson(ValueSetDesignation instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('use', instance.use?.toJson());
   writeNotNull('value', instance.value);
@@ -313,14 +273,8 @@ Map<String, dynamic> _$ValueSetDesignationToJson(ValueSetDesignation instance) {
 ValueSetFilter _$ValueSetFilterFromJson(Map<String, dynamic> json) {
   return ValueSetFilter(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     property: json['property'] == null
         ? null
         : Code.fromJson(json['property'] as String),
@@ -341,10 +295,8 @@ Map<String, dynamic> _$ValueSetFilterToJson(ValueSetFilter instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('property', instance.property?.toJson());
   writeNotNull('op', instance.op?.toJson());
   writeNotNull('value', instance.value);
@@ -354,14 +306,8 @@ Map<String, dynamic> _$ValueSetFilterToJson(ValueSetFilter instance) {
 ValueSetExpansion _$ValueSetExpansionFromJson(Map<String, dynamic> json) {
   return ValueSetExpansion(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     identifier: json['identifier'] == null
         ? null
         : FhirUri.fromJson(json['identifier'] as String),
@@ -393,10 +339,8 @@ Map<String, dynamic> _$ValueSetExpansionToJson(ValueSetExpansion instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('timestamp', instance.timestamp?.toJson());
   writeNotNull('total', instance.total);
@@ -411,14 +355,8 @@ Map<String, dynamic> _$ValueSetExpansionToJson(ValueSetExpansion instance) {
 ValueSetParameter _$ValueSetParameterFromJson(Map<String, dynamic> json) {
   return ValueSetParameter(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     name: json['name'] as String,
     valueString: json['valueString'] as String,
     valueBoolean: json['valueBoolean'] as bool,
@@ -446,10 +384,8 @@ Map<String, dynamic> _$ValueSetParameterToJson(ValueSetParameter instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('name', instance.name);
   writeNotNull('valueString', instance.valueString);
   writeNotNull('valueBoolean', instance.valueBoolean);
@@ -464,14 +400,8 @@ Map<String, dynamic> _$ValueSetParameterToJson(ValueSetParameter instance) {
 ValueSetContains _$ValueSetContainsFromJson(Map<String, dynamic> json) {
   return ValueSetContains(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     system: json['system'] == null
         ? null
         : FhirUri.fromJson(json['system'] as String),
@@ -503,10 +433,8 @@ Map<String, dynamic> _$ValueSetContainsToJson(ValueSetContains instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('system', instance.system?.toJson());
   writeNotNull('abstract', instance.abstract);
   writeNotNull('inactive', instance.inactive);

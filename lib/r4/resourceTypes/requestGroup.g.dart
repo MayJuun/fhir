@@ -23,14 +23,8 @@ RequestGroup _$RequestGroupFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     identifier: (json['identifier'] as List)
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
@@ -111,10 +105,8 @@ Map<String, dynamic> _$RequestGroupToJson(RequestGroup instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson())?.toList());
   writeNotNull('instantiatesCanonical',
@@ -145,14 +137,8 @@ Map<String, dynamic> _$RequestGroupToJson(RequestGroup instance) {
 RequestGroupAction _$RequestGroupActionFromJson(Map<String, dynamic> json) {
   return RequestGroupAction(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     prefix: json['prefix'] as String,
     title: json['title'] as String,
     description: json['description'] as String,
@@ -241,10 +227,8 @@ Map<String, dynamic> _$RequestGroupActionToJson(RequestGroupAction instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('prefix', instance.prefix);
   writeNotNull('title', instance.title);
   writeNotNull('description', instance.description);
@@ -280,14 +264,8 @@ RequestGroupCondition _$RequestGroupConditionFromJson(
     Map<String, dynamic> json) {
   return RequestGroupCondition(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     kind: json['kind'] == null ? null : Code.fromJson(json['kind'] as String),
     expression: json['expression'] == null
         ? null
@@ -306,10 +284,8 @@ Map<String, dynamic> _$RequestGroupConditionToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('kind', instance.kind?.toJson());
   writeNotNull('expression', instance.expression?.toJson());
   return val;
@@ -319,14 +295,8 @@ RequestGroupRelatedAction _$RequestGroupRelatedActionFromJson(
     Map<String, dynamic> json) {
   return RequestGroupRelatedAction(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     actionId: json['actionId'] == null
         ? null
         : Id.fromJson(json['actionId'] as String),
@@ -353,10 +323,8 @@ Map<String, dynamic> _$RequestGroupRelatedActionToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('actionId', instance.actionId?.toJson());
   writeNotNull('relationship', instance.relationship?.toJson());
   writeNotNull('offsetDuration', instance.offsetDuration?.toJson());

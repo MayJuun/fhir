@@ -136,7 +136,7 @@ class _$DefinitionalArtifactsTearOff {
       Range timingRange,
       Duration timingDuration,
       Reference location,
-      List<ActivityDefinitionParticipant> participant,
+      List<dynamic> participant,
       Reference productReference,
       CodeableConcept productCodeableConcept,
       Quantity quantity,
@@ -146,7 +146,7 @@ class _$DefinitionalArtifactsTearOff {
       List<dynamic> observationRequirement,
       List<dynamic> observationResultRequirement,
       Canonical transform,
-      List<ActivityDefinitionDynamicValue> dynamicValue}) {
+      List<dynamic> dynamicValue}) {
     return ActivityDefinition(
       resourceType: resourceType,
       id: id,
@@ -254,20 +254,20 @@ class _$DefinitionalArtifactsTearOff {
       List<dynamic> extension,
       List<dynamic> modifierExtension,
       List<dynamic> identifier,
-      List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+      List<dynamic> udiDeviceIdentifier,
       String manufacturerString,
       Reference manufacturerReference,
-      List<DeviceDefinitionDeviceName> deviceName,
+      List<dynamic> deviceName,
       String modelNumber,
       CodeableConcept type,
-      List<DeviceDefinitionSpecialization> specialization,
+      List<dynamic> specialization,
       List<String> version,
       List<dynamic> safety,
       List<dynamic> shelfLifeStorage,
       ProdCharacteristic physicalCharacteristics,
       List<dynamic> languageCode,
-      List<DeviceDefinitionCapability> capability,
-      List<DeviceDefinitionProperty> property,
+      List<dynamic> capability,
+      List<dynamic> property,
       Reference owner,
       List<dynamic> contact,
       FhirUri url,
@@ -275,7 +275,7 @@ class _$DefinitionalArtifactsTearOff {
       List<dynamic> note,
       Quantity quantity,
       Reference parentDevice,
-      List<DeviceDefinitionMaterial> material}) {
+      List<dynamic> material}) {
     return DeviceDefinition(
       resourceType: resourceType,
       id: id,
@@ -507,7 +507,7 @@ class _$DefinitionalArtifactsTearOff {
       CodeableConcept method,
       String preferredReportName,
       ObservationDefinitionQuantitativeDetails quantitativeDetails,
-      List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+      List<dynamic> qualifiedInterval,
       Reference validCodedValueSet,
       Reference normalCodedValueSet,
       Reference abnormalCodedValueSet,
@@ -600,7 +600,7 @@ class _$DefinitionalArtifactsTearOff {
       List<dynamic> patientPreparation,
       String timeAspect,
       List<dynamic> collection,
-      List<SpecimenDefinitionTypeTested> typeTested}) {
+      List<dynamic> typeTested}) {
     return SpecimenDefinition(
       resourceType: resourceType,
       id: id,
@@ -631,7 +631,7 @@ class _$DefinitionalArtifactsTearOff {
       String requirement,
       Duration retentionTime,
       List<dynamic> rejectionCriterion,
-      List<SpecimenDefinitionHandling> handling}) {
+      List<dynamic> handling}) {
     return SpecimenDefinitionTypeTested(
       id: id,
       extension: extension,
@@ -658,7 +658,7 @@ class _$DefinitionalArtifactsTearOff {
       Quantity capacity,
       Quantity minimumVolumeQuantity,
       String minimumVolumeString,
-      List<SpecimenDefinitionAdditive> additive,
+      List<dynamic> additive,
       String preparation}) {
     return SpecimenDefinitionContainer(
       id: id,
@@ -750,8 +750,8 @@ class _$DefinitionalArtifactsTearOff {
       List<dynamic> endorser,
       List<dynamic> relatedArtifact,
       List<Canonical> library,
-      List<PlanDefinitionGoal> goal,
-      List<PlanDefinitionAction> action}) {
+      List<dynamic> goal,
+      List<dynamic> action}) {
     return PlanDefinition(
       resourceType: resourceType,
       id: id,
@@ -807,7 +807,7 @@ class _$DefinitionalArtifactsTearOff {
       CodeableConcept start,
       List<dynamic> addresses,
       List<dynamic> documentation,
-      List<PlanDefinitionTarget> target}) {
+      List<dynamic> target}) {
     return PlanDefinitionGoal(
       id: id,
       extension: extension,
@@ -859,17 +859,17 @@ class _$DefinitionalArtifactsTearOff {
       CodeableConcept subjectCodeableConcept,
       Reference subjectReference,
       List<dynamic> trigger,
-      List<PlanDefinitionCondition> condition,
+      List<dynamic> condition,
       List<dynamic> input,
       List<dynamic> output,
-      List<PlanDefinitionRelatedAction> relatedAction,
+      List<dynamic> relatedAction,
       FhirDateTime timingDateTime,
       Age timingAge,
       Period timingPeriod,
       Duration timingDuration,
       Range timingRange,
       Timing timingTiming,
-      List<PlanDefinitionParticipant> participant,
+      List<dynamic> participant,
       CodeableConcept type,
       PlanDefinitionActionGroupingBehavior groupingBehavior,
       PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -879,8 +879,8 @@ class _$DefinitionalArtifactsTearOff {
       Canonical definitionCanonical,
       FhirUri definitionUri,
       Canonical transform,
-      List<PlanDefinitionDynamicValue> dynamicValue,
-      List<PlanDefinitionAction> action}) {
+      List<dynamic> dynamicValue,
+      List<dynamic> action}) {
     return PlanDefinitionAction(
       id: id,
       extension: extension,
@@ -1017,7 +1017,7 @@ class _$DefinitionalArtifactsTearOff {
       Date lastReviewDate,
       Period effectivePeriod,
       List<dynamic> code,
-      List<QuestionnaireItem> item}) {
+      List<dynamic> item}) {
     return Questionnaire(
       resourceType: resourceType,
       id: id,
@@ -1063,16 +1063,16 @@ class _$DefinitionalArtifactsTearOff {
       String prefix,
       String text,
       QuestionnaireItemType type,
-      List<QuestionnaireEnableWhen> enableWhen,
+      List<dynamic> enableWhen,
       QuestionnaireItemEnableBehavior enableBehavior,
       bool required,
       bool repeats,
       bool readOnly,
       int maxLength,
       Canonical answerValueSet,
-      List<QuestionnaireAnswerOption> answerOption,
-      List<QuestionnaireInitial> initial,
-      List<QuestionnaireItem> item}) {
+      List<dynamic> answerOption,
+      List<dynamic> initial,
+      List<dynamic> item}) {
     return QuestionnaireItem(
       id: id,
       extension: extension,
@@ -1254,7 +1254,7 @@ mixin _$DefinitionalArtifacts {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -1264,7 +1264,7 @@ mixin _$DefinitionalArtifacts {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -1287,20 +1287,20 @@ mixin _$DefinitionalArtifacts {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -1308,7 +1308,7 @@ mixin _$DefinitionalArtifacts {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -1413,7 +1413,7 @@ mixin _$DefinitionalArtifacts {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -1456,7 +1456,7 @@ mixin _$DefinitionalArtifacts {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -1469,7 +1469,7 @@ mixin _$DefinitionalArtifacts {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -1482,7 +1482,7 @@ mixin _$DefinitionalArtifacts {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -1541,8 +1541,8 @@ mixin _$DefinitionalArtifacts {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -1554,7 +1554,7 @@ mixin _$DefinitionalArtifacts {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -1582,17 +1582,17 @@ mixin _$DefinitionalArtifacts {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -1602,8 +1602,8 @@ mixin _$DefinitionalArtifacts {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -1666,7 +1666,7 @@ mixin _$DefinitionalArtifacts {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -1678,16 +1678,16 @@ mixin _$DefinitionalArtifacts {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -1789,7 +1789,7 @@ mixin _$DefinitionalArtifacts {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -1799,7 +1799,7 @@ mixin _$DefinitionalArtifacts {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -1815,20 +1815,20 @@ mixin _$DefinitionalArtifacts {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -1836,7 +1836,7 @@ mixin _$DefinitionalArtifacts {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -1929,7 +1929,7 @@ mixin _$DefinitionalArtifacts {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -1969,7 +1969,7 @@ mixin _$DefinitionalArtifacts {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -1981,7 +1981,7 @@ mixin _$DefinitionalArtifacts {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -1993,7 +1993,7 @@ mixin _$DefinitionalArtifacts {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -2049,8 +2049,8 @@ mixin _$DefinitionalArtifacts {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -2061,7 +2061,7 @@ mixin _$DefinitionalArtifacts {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -2087,17 +2087,17 @@ mixin _$DefinitionalArtifacts {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -2107,8 +2107,8 @@ mixin _$DefinitionalArtifacts {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -2162,7 +2162,7 @@ mixin _$DefinitionalArtifacts {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -2173,16 +2173,16 @@ mixin _$DefinitionalArtifacts {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -2414,7 +2414,7 @@ abstract class $ActivityDefinitionCopyWith<$Res>
       Range timingRange,
       Duration timingDuration,
       Reference location,
-      List<ActivityDefinitionParticipant> participant,
+      List<dynamic> participant,
       Reference productReference,
       CodeableConcept productCodeableConcept,
       Quantity quantity,
@@ -2424,7 +2424,7 @@ abstract class $ActivityDefinitionCopyWith<$Res>
       List<dynamic> observationRequirement,
       List<dynamic> observationResultRequirement,
       Canonical transform,
-      List<ActivityDefinitionDynamicValue> dynamicValue});
+      List<dynamic> dynamicValue});
 }
 
 class _$ActivityDefinitionCopyWithImpl<$Res>
@@ -2598,7 +2598,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
       location: location == freezed ? _value.location : location as Reference,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<ActivityDefinitionParticipant>,
+          : participant as List<dynamic>,
       productReference: productReference == freezed
           ? _value.productReference
           : productReference as Reference,
@@ -2622,7 +2622,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
           transform == freezed ? _value.transform : transform as Canonical,
       dynamicValue: dynamicValue == freezed
           ? _value.dynamicValue
-          : dynamicValue as List<ActivityDefinitionDynamicValue>,
+          : dynamicValue as List<dynamic>,
     ));
   }
 }
@@ -2799,7 +2799,7 @@ class _$ActivityDefinition implements ActivityDefinition {
   @override
   final Reference location;
   @override
-  final List<ActivityDefinitionParticipant> participant;
+  final List<dynamic> participant;
   @override
   final Reference productReference;
   @override
@@ -2819,7 +2819,7 @@ class _$ActivityDefinition implements ActivityDefinition {
   @override
   final Canonical transform;
   @override
-  final List<ActivityDefinitionDynamicValue> dynamicValue;
+  final List<dynamic> dynamicValue;
 
   @override
   String toString() {
@@ -3062,7 +3062,7 @@ class _$ActivityDefinition implements ActivityDefinition {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -3072,7 +3072,7 @@ class _$ActivityDefinition implements ActivityDefinition {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -3095,20 +3095,20 @@ class _$ActivityDefinition implements ActivityDefinition {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -3116,7 +3116,7 @@ class _$ActivityDefinition implements ActivityDefinition {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -3221,7 +3221,7 @@ class _$ActivityDefinition implements ActivityDefinition {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -3264,7 +3264,7 @@ class _$ActivityDefinition implements ActivityDefinition {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -3277,7 +3277,7 @@ class _$ActivityDefinition implements ActivityDefinition {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -3290,7 +3290,7 @@ class _$ActivityDefinition implements ActivityDefinition {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -3349,8 +3349,8 @@ class _$ActivityDefinition implements ActivityDefinition {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -3362,7 +3362,7 @@ class _$ActivityDefinition implements ActivityDefinition {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -3390,17 +3390,17 @@ class _$ActivityDefinition implements ActivityDefinition {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -3410,8 +3410,8 @@ class _$ActivityDefinition implements ActivityDefinition {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -3474,7 +3474,7 @@ class _$ActivityDefinition implements ActivityDefinition {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -3486,16 +3486,16 @@ class _$ActivityDefinition implements ActivityDefinition {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -3695,7 +3695,7 @@ class _$ActivityDefinition implements ActivityDefinition {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -3705,7 +3705,7 @@ class _$ActivityDefinition implements ActivityDefinition {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -3721,20 +3721,20 @@ class _$ActivityDefinition implements ActivityDefinition {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -3742,7 +3742,7 @@ class _$ActivityDefinition implements ActivityDefinition {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -3835,7 +3835,7 @@ class _$ActivityDefinition implements ActivityDefinition {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -3875,7 +3875,7 @@ class _$ActivityDefinition implements ActivityDefinition {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -3887,7 +3887,7 @@ class _$ActivityDefinition implements ActivityDefinition {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -3899,7 +3899,7 @@ class _$ActivityDefinition implements ActivityDefinition {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -3955,8 +3955,8 @@ class _$ActivityDefinition implements ActivityDefinition {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -3967,7 +3967,7 @@ class _$ActivityDefinition implements ActivityDefinition {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -3993,17 +3993,17 @@ class _$ActivityDefinition implements ActivityDefinition {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -4013,8 +4013,8 @@ class _$ActivityDefinition implements ActivityDefinition {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -4068,7 +4068,7 @@ class _$ActivityDefinition implements ActivityDefinition {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -4079,16 +4079,16 @@ class _$ActivityDefinition implements ActivityDefinition {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -4350,69 +4350,68 @@ class _$ActivityDefinition implements ActivityDefinition {
 
 abstract class ActivityDefinition implements DefinitionalArtifacts {
   const factory ActivityDefinition(
-          {String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          Code language,
-          Narrative text,
-          List<dynamic> contained,
-          List<dynamic> extension,
-          List<dynamic> modifierExtension,
-          FhirUri url,
-          List<dynamic> identifier,
-          String version,
-          String name,
-          String title,
-          String subtitle,
-          ActivityDefinitionStatus status,
-          bool experimental,
-          CodeableConcept subjectCodeableConcept,
-          Reference subjectReference,
-          FhirDateTime date,
-          String publisher,
-          List<dynamic> contact,
-          Markdown description,
-          List<dynamic> useContext,
-          List<dynamic> jurisdiction,
-          Markdown purpose,
-          String usage,
-          Markdown copyright,
-          Date approvalDate,
-          Date lastReviewDate,
-          Period effectivePeriod,
-          List<dynamic> topic,
-          List<dynamic> author,
-          List<dynamic> editor,
-          List<dynamic> reviewer,
-          List<dynamic> endorser,
-          List<dynamic> relatedArtifact,
-          List<Canonical> library,
-          Code kind,
-          Canonical profile,
-          CodeableConcept code,
-          Code intent,
-          Code priority,
-          bool doNotPerform,
-          Timing timingTiming,
-          FhirDateTime timingDateTime,
-          Age timingAge,
-          Period timingPeriod,
-          Range timingRange,
-          Duration timingDuration,
-          Reference location,
-          List<ActivityDefinitionParticipant> participant,
-          Reference productReference,
-          CodeableConcept productCodeableConcept,
-          Quantity quantity,
-          List<dynamic> dosage,
-          List<dynamic> bodySite,
-          List<dynamic> specimenRequirement,
-          List<dynamic> observationRequirement,
-          List<dynamic> observationResultRequirement,
-          Canonical transform,
-          List<ActivityDefinitionDynamicValue> dynamicValue}) =
-      _$ActivityDefinition;
+      {String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<dynamic> contained,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      FhirUri url,
+      List<dynamic> identifier,
+      String version,
+      String name,
+      String title,
+      String subtitle,
+      ActivityDefinitionStatus status,
+      bool experimental,
+      CodeableConcept subjectCodeableConcept,
+      Reference subjectReference,
+      FhirDateTime date,
+      String publisher,
+      List<dynamic> contact,
+      Markdown description,
+      List<dynamic> useContext,
+      List<dynamic> jurisdiction,
+      Markdown purpose,
+      String usage,
+      Markdown copyright,
+      Date approvalDate,
+      Date lastReviewDate,
+      Period effectivePeriod,
+      List<dynamic> topic,
+      List<dynamic> author,
+      List<dynamic> editor,
+      List<dynamic> reviewer,
+      List<dynamic> endorser,
+      List<dynamic> relatedArtifact,
+      List<Canonical> library,
+      Code kind,
+      Canonical profile,
+      CodeableConcept code,
+      Code intent,
+      Code priority,
+      bool doNotPerform,
+      Timing timingTiming,
+      FhirDateTime timingDateTime,
+      Age timingAge,
+      Period timingPeriod,
+      Range timingRange,
+      Duration timingDuration,
+      Reference location,
+      List<dynamic> participant,
+      Reference productReference,
+      CodeableConcept productCodeableConcept,
+      Quantity quantity,
+      List<dynamic> dosage,
+      List<dynamic> bodySite,
+      List<dynamic> specimenRequirement,
+      List<dynamic> observationRequirement,
+      List<dynamic> observationResultRequirement,
+      Canonical transform,
+      List<dynamic> dynamicValue}) = _$ActivityDefinition;
 
   factory ActivityDefinition.fromJson(Map<String, dynamic> json) =
       _$ActivityDefinition.fromJson;
@@ -4470,7 +4469,7 @@ abstract class ActivityDefinition implements DefinitionalArtifacts {
   Range get timingRange;
   Duration get timingDuration;
   Reference get location;
-  List<ActivityDefinitionParticipant> get participant;
+  List<dynamic> get participant;
   Reference get productReference;
   CodeableConcept get productCodeableConcept;
   Quantity get quantity;
@@ -4480,7 +4479,7 @@ abstract class ActivityDefinition implements DefinitionalArtifacts {
   List<dynamic> get observationRequirement;
   List<dynamic> get observationResultRequirement;
   Canonical get transform;
-  List<ActivityDefinitionDynamicValue> get dynamicValue;
+  List<dynamic> get dynamicValue;
   @override
   $ActivityDefinitionCopyWith<ActivityDefinition> get copyWith;
 }
@@ -4645,7 +4644,7 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -4655,7 +4654,7 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -4678,20 +4677,20 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -4699,7 +4698,7 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -4804,7 +4803,7 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -4847,7 +4846,7 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -4860,7 +4859,7 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -4873,7 +4872,7 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -4932,8 +4931,8 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -4945,7 +4944,7 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -4973,17 +4972,17 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -4993,8 +4992,8 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -5057,7 +5056,7 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -5069,16 +5068,16 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -5217,7 +5216,7 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -5227,7 +5226,7 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -5243,20 +5242,20 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -5264,7 +5263,7 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -5357,7 +5356,7 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -5397,7 +5396,7 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -5409,7 +5408,7 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -5421,7 +5420,7 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -5477,8 +5476,8 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -5489,7 +5488,7 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -5515,17 +5514,17 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -5535,8 +5534,8 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -5590,7 +5589,7 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -5601,16 +5600,16 @@ class _$ActivityDefinitionParticipant implements ActivityDefinitionParticipant {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -6000,7 +5999,7 @@ class _$ActivityDefinitionDynamicValue
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -6010,7 +6009,7 @@ class _$ActivityDefinitionDynamicValue
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -6033,20 +6032,20 @@ class _$ActivityDefinitionDynamicValue
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -6054,7 +6053,7 @@ class _$ActivityDefinitionDynamicValue
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -6159,7 +6158,7 @@ class _$ActivityDefinitionDynamicValue
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -6202,7 +6201,7 @@ class _$ActivityDefinitionDynamicValue
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -6215,7 +6214,7 @@ class _$ActivityDefinitionDynamicValue
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -6228,7 +6227,7 @@ class _$ActivityDefinitionDynamicValue
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -6287,8 +6286,8 @@ class _$ActivityDefinitionDynamicValue
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -6300,7 +6299,7 @@ class _$ActivityDefinitionDynamicValue
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -6328,17 +6327,17 @@ class _$ActivityDefinitionDynamicValue
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -6348,8 +6347,8 @@ class _$ActivityDefinitionDynamicValue
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -6412,7 +6411,7 @@ class _$ActivityDefinitionDynamicValue
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -6424,16 +6423,16 @@ class _$ActivityDefinitionDynamicValue
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -6572,7 +6571,7 @@ class _$ActivityDefinitionDynamicValue
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -6582,7 +6581,7 @@ class _$ActivityDefinitionDynamicValue
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -6598,20 +6597,20 @@ class _$ActivityDefinitionDynamicValue
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -6619,7 +6618,7 @@ class _$ActivityDefinitionDynamicValue
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -6712,7 +6711,7 @@ class _$ActivityDefinitionDynamicValue
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -6752,7 +6751,7 @@ class _$ActivityDefinitionDynamicValue
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -6764,7 +6763,7 @@ class _$ActivityDefinitionDynamicValue
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -6776,7 +6775,7 @@ class _$ActivityDefinitionDynamicValue
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -6832,8 +6831,8 @@ class _$ActivityDefinitionDynamicValue
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -6844,7 +6843,7 @@ class _$ActivityDefinitionDynamicValue
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -6870,17 +6869,17 @@ class _$ActivityDefinitionDynamicValue
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -6890,8 +6889,8 @@ class _$ActivityDefinitionDynamicValue
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -6945,7 +6944,7 @@ class _$ActivityDefinitionDynamicValue
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -6956,16 +6955,16 @@ class _$ActivityDefinitionDynamicValue
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -7204,20 +7203,20 @@ abstract class $DeviceDefinitionCopyWith<$Res>
       List<dynamic> extension,
       List<dynamic> modifierExtension,
       List<dynamic> identifier,
-      List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+      List<dynamic> udiDeviceIdentifier,
       String manufacturerString,
       Reference manufacturerReference,
-      List<DeviceDefinitionDeviceName> deviceName,
+      List<dynamic> deviceName,
       String modelNumber,
       CodeableConcept type,
-      List<DeviceDefinitionSpecialization> specialization,
+      List<dynamic> specialization,
       List<String> version,
       List<dynamic> safety,
       List<dynamic> shelfLifeStorage,
       ProdCharacteristic physicalCharacteristics,
       List<dynamic> languageCode,
-      List<DeviceDefinitionCapability> capability,
-      List<DeviceDefinitionProperty> property,
+      List<dynamic> capability,
+      List<dynamic> property,
       Reference owner,
       List<dynamic> contact,
       FhirUri url,
@@ -7225,7 +7224,7 @@ abstract class $DeviceDefinitionCopyWith<$Res>
       List<dynamic> note,
       Quantity quantity,
       Reference parentDevice,
-      List<DeviceDefinitionMaterial> material});
+      List<dynamic> material});
 }
 
 class _$DeviceDefinitionCopyWithImpl<$Res>
@@ -7296,7 +7295,7 @@ class _$DeviceDefinitionCopyWithImpl<$Res>
           : identifier as List<dynamic>,
       udiDeviceIdentifier: udiDeviceIdentifier == freezed
           ? _value.udiDeviceIdentifier
-          : udiDeviceIdentifier as List<DeviceDefinitionUdiDeviceIdentifier>,
+          : udiDeviceIdentifier as List<dynamic>,
       manufacturerString: manufacturerString == freezed
           ? _value.manufacturerString
           : manufacturerString as String,
@@ -7305,13 +7304,13 @@ class _$DeviceDefinitionCopyWithImpl<$Res>
           : manufacturerReference as Reference,
       deviceName: deviceName == freezed
           ? _value.deviceName
-          : deviceName as List<DeviceDefinitionDeviceName>,
+          : deviceName as List<dynamic>,
       modelNumber:
           modelNumber == freezed ? _value.modelNumber : modelNumber as String,
       type: type == freezed ? _value.type : type as CodeableConcept,
       specialization: specialization == freezed
           ? _value.specialization
-          : specialization as List<DeviceDefinitionSpecialization>,
+          : specialization as List<dynamic>,
       version: version == freezed ? _value.version : version as List<String>,
       safety: safety == freezed ? _value.safety : safety as List<dynamic>,
       shelfLifeStorage: shelfLifeStorage == freezed
@@ -7325,10 +7324,9 @@ class _$DeviceDefinitionCopyWithImpl<$Res>
           : languageCode as List<dynamic>,
       capability: capability == freezed
           ? _value.capability
-          : capability as List<DeviceDefinitionCapability>,
-      property: property == freezed
-          ? _value.property
-          : property as List<DeviceDefinitionProperty>,
+          : capability as List<dynamic>,
+      property:
+          property == freezed ? _value.property : property as List<dynamic>,
       owner: owner == freezed ? _value.owner : owner as Reference,
       contact: contact == freezed ? _value.contact : contact as List<dynamic>,
       url: url == freezed ? _value.url : url as FhirUri,
@@ -7340,9 +7338,8 @@ class _$DeviceDefinitionCopyWithImpl<$Res>
       parentDevice: parentDevice == freezed
           ? _value.parentDevice
           : parentDevice as Reference,
-      material: material == freezed
-          ? _value.material
-          : material as List<DeviceDefinitionMaterial>,
+      material:
+          material == freezed ? _value.material : material as List<dynamic>,
     ));
   }
 }
@@ -7407,19 +7404,19 @@ class _$DeviceDefinition implements DeviceDefinition {
   @override
   final List<dynamic> identifier;
   @override
-  final List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier;
+  final List<dynamic> udiDeviceIdentifier;
   @override
   final String manufacturerString;
   @override
   final Reference manufacturerReference;
   @override
-  final List<DeviceDefinitionDeviceName> deviceName;
+  final List<dynamic> deviceName;
   @override
   final String modelNumber;
   @override
   final CodeableConcept type;
   @override
-  final List<DeviceDefinitionSpecialization> specialization;
+  final List<dynamic> specialization;
   @override
   final List<String> version;
   @override
@@ -7431,9 +7428,9 @@ class _$DeviceDefinition implements DeviceDefinition {
   @override
   final List<dynamic> languageCode;
   @override
-  final List<DeviceDefinitionCapability> capability;
+  final List<dynamic> capability;
   @override
-  final List<DeviceDefinitionProperty> property;
+  final List<dynamic> property;
   @override
   final Reference owner;
   @override
@@ -7449,7 +7446,7 @@ class _$DeviceDefinition implements DeviceDefinition {
   @override
   final Reference parentDevice;
   @override
-  final List<DeviceDefinitionMaterial> material;
+  final List<dynamic> material;
 
   @override
   String toString() {
@@ -7632,7 +7629,7 @@ class _$DeviceDefinition implements DeviceDefinition {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -7642,7 +7639,7 @@ class _$DeviceDefinition implements DeviceDefinition {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -7665,20 +7662,20 @@ class _$DeviceDefinition implements DeviceDefinition {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -7686,7 +7683,7 @@ class _$DeviceDefinition implements DeviceDefinition {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -7791,7 +7788,7 @@ class _$DeviceDefinition implements DeviceDefinition {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -7834,7 +7831,7 @@ class _$DeviceDefinition implements DeviceDefinition {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -7847,7 +7844,7 @@ class _$DeviceDefinition implements DeviceDefinition {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -7860,7 +7857,7 @@ class _$DeviceDefinition implements DeviceDefinition {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -7919,8 +7916,8 @@ class _$DeviceDefinition implements DeviceDefinition {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -7932,7 +7929,7 @@ class _$DeviceDefinition implements DeviceDefinition {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -7960,17 +7957,17 @@ class _$DeviceDefinition implements DeviceDefinition {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -7980,8 +7977,8 @@ class _$DeviceDefinition implements DeviceDefinition {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -8044,7 +8041,7 @@ class _$DeviceDefinition implements DeviceDefinition {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -8056,16 +8053,16 @@ class _$DeviceDefinition implements DeviceDefinition {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -8235,7 +8232,7 @@ class _$DeviceDefinition implements DeviceDefinition {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -8245,7 +8242,7 @@ class _$DeviceDefinition implements DeviceDefinition {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -8261,20 +8258,20 @@ class _$DeviceDefinition implements DeviceDefinition {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -8282,7 +8279,7 @@ class _$DeviceDefinition implements DeviceDefinition {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -8375,7 +8372,7 @@ class _$DeviceDefinition implements DeviceDefinition {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -8415,7 +8412,7 @@ class _$DeviceDefinition implements DeviceDefinition {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -8427,7 +8424,7 @@ class _$DeviceDefinition implements DeviceDefinition {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -8439,7 +8436,7 @@ class _$DeviceDefinition implements DeviceDefinition {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -8495,8 +8492,8 @@ class _$DeviceDefinition implements DeviceDefinition {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -8507,7 +8504,7 @@ class _$DeviceDefinition implements DeviceDefinition {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -8533,17 +8530,17 @@ class _$DeviceDefinition implements DeviceDefinition {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -8553,8 +8550,8 @@ class _$DeviceDefinition implements DeviceDefinition {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -8608,7 +8605,7 @@ class _$DeviceDefinition implements DeviceDefinition {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -8619,16 +8616,16 @@ class _$DeviceDefinition implements DeviceDefinition {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -8870,20 +8867,20 @@ abstract class DeviceDefinition implements DefinitionalArtifacts {
       List<dynamic> extension,
       List<dynamic> modifierExtension,
       List<dynamic> identifier,
-      List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+      List<dynamic> udiDeviceIdentifier,
       String manufacturerString,
       Reference manufacturerReference,
-      List<DeviceDefinitionDeviceName> deviceName,
+      List<dynamic> deviceName,
       String modelNumber,
       CodeableConcept type,
-      List<DeviceDefinitionSpecialization> specialization,
+      List<dynamic> specialization,
       List<String> version,
       List<dynamic> safety,
       List<dynamic> shelfLifeStorage,
       ProdCharacteristic physicalCharacteristics,
       List<dynamic> languageCode,
-      List<DeviceDefinitionCapability> capability,
-      List<DeviceDefinitionProperty> property,
+      List<dynamic> capability,
+      List<dynamic> property,
       Reference owner,
       List<dynamic> contact,
       FhirUri url,
@@ -8891,7 +8888,7 @@ abstract class DeviceDefinition implements DefinitionalArtifacts {
       List<dynamic> note,
       Quantity quantity,
       Reference parentDevice,
-      List<DeviceDefinitionMaterial> material}) = _$DeviceDefinition;
+      List<dynamic> material}) = _$DeviceDefinition;
 
   factory DeviceDefinition.fromJson(Map<String, dynamic> json) =
       _$DeviceDefinition.fromJson;
@@ -8908,20 +8905,20 @@ abstract class DeviceDefinition implements DefinitionalArtifacts {
   @override
   List<dynamic> get modifierExtension;
   List<dynamic> get identifier;
-  List<DeviceDefinitionUdiDeviceIdentifier> get udiDeviceIdentifier;
+  List<dynamic> get udiDeviceIdentifier;
   String get manufacturerString;
   Reference get manufacturerReference;
-  List<DeviceDefinitionDeviceName> get deviceName;
+  List<dynamic> get deviceName;
   String get modelNumber;
   CodeableConcept get type;
-  List<DeviceDefinitionSpecialization> get specialization;
+  List<dynamic> get specialization;
   List<String> get version;
   List<dynamic> get safety;
   List<dynamic> get shelfLifeStorage;
   ProdCharacteristic get physicalCharacteristics;
   List<dynamic> get languageCode;
-  List<DeviceDefinitionCapability> get capability;
-  List<DeviceDefinitionProperty> get property;
+  List<dynamic> get capability;
+  List<dynamic> get property;
   Reference get owner;
   List<dynamic> get contact;
   FhirUri get url;
@@ -8929,7 +8926,7 @@ abstract class DeviceDefinition implements DefinitionalArtifacts {
   List<dynamic> get note;
   Quantity get quantity;
   Reference get parentDevice;
-  List<DeviceDefinitionMaterial> get material;
+  List<dynamic> get material;
   @override
   $DeviceDefinitionCopyWith<DeviceDefinition> get copyWith;
 }
@@ -9116,7 +9113,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -9126,7 +9123,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -9149,20 +9146,20 @@ class _$DeviceDefinitionUdiDeviceIdentifier
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -9170,7 +9167,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -9275,7 +9272,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -9318,7 +9315,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -9331,7 +9328,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -9344,7 +9341,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -9403,8 +9400,8 @@ class _$DeviceDefinitionUdiDeviceIdentifier
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -9416,7 +9413,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -9444,17 +9441,17 @@ class _$DeviceDefinitionUdiDeviceIdentifier
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -9464,8 +9461,8 @@ class _$DeviceDefinitionUdiDeviceIdentifier
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -9528,7 +9525,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -9540,16 +9537,16 @@ class _$DeviceDefinitionUdiDeviceIdentifier
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -9688,7 +9685,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -9698,7 +9695,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -9714,20 +9711,20 @@ class _$DeviceDefinitionUdiDeviceIdentifier
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -9735,7 +9732,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -9828,7 +9825,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -9868,7 +9865,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -9880,7 +9877,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -9892,7 +9889,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -9948,8 +9945,8 @@ class _$DeviceDefinitionUdiDeviceIdentifier
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -9960,7 +9957,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -9986,17 +9983,17 @@ class _$DeviceDefinitionUdiDeviceIdentifier
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -10006,8 +10003,8 @@ class _$DeviceDefinitionUdiDeviceIdentifier
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -10061,7 +10058,7 @@ class _$DeviceDefinitionUdiDeviceIdentifier
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -10072,16 +10069,16 @@ class _$DeviceDefinitionUdiDeviceIdentifier
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -10468,7 +10465,7 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -10478,7 +10475,7 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -10501,20 +10498,20 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -10522,7 +10519,7 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -10627,7 +10624,7 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -10670,7 +10667,7 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -10683,7 +10680,7 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -10696,7 +10693,7 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -10755,8 +10752,8 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -10768,7 +10765,7 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -10796,17 +10793,17 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -10816,8 +10813,8 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -10880,7 +10877,7 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -10892,16 +10889,16 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -11040,7 +11037,7 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -11050,7 +11047,7 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -11066,20 +11063,20 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -11087,7 +11084,7 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -11180,7 +11177,7 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -11220,7 +11217,7 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -11232,7 +11229,7 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -11244,7 +11241,7 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -11300,8 +11297,8 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -11312,7 +11309,7 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -11338,17 +11335,17 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -11358,8 +11355,8 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -11413,7 +11410,7 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -11424,16 +11421,16 @@ class _$DeviceDefinitionDeviceName implements DeviceDefinitionDeviceName {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -11822,7 +11819,7 @@ class _$DeviceDefinitionSpecialization
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -11832,7 +11829,7 @@ class _$DeviceDefinitionSpecialization
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -11855,20 +11852,20 @@ class _$DeviceDefinitionSpecialization
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -11876,7 +11873,7 @@ class _$DeviceDefinitionSpecialization
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -11981,7 +11978,7 @@ class _$DeviceDefinitionSpecialization
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -12024,7 +12021,7 @@ class _$DeviceDefinitionSpecialization
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -12037,7 +12034,7 @@ class _$DeviceDefinitionSpecialization
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -12050,7 +12047,7 @@ class _$DeviceDefinitionSpecialization
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -12109,8 +12106,8 @@ class _$DeviceDefinitionSpecialization
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -12122,7 +12119,7 @@ class _$DeviceDefinitionSpecialization
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -12150,17 +12147,17 @@ class _$DeviceDefinitionSpecialization
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -12170,8 +12167,8 @@ class _$DeviceDefinitionSpecialization
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -12234,7 +12231,7 @@ class _$DeviceDefinitionSpecialization
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -12246,16 +12243,16 @@ class _$DeviceDefinitionSpecialization
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -12394,7 +12391,7 @@ class _$DeviceDefinitionSpecialization
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -12404,7 +12401,7 @@ class _$DeviceDefinitionSpecialization
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -12420,20 +12417,20 @@ class _$DeviceDefinitionSpecialization
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -12441,7 +12438,7 @@ class _$DeviceDefinitionSpecialization
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -12534,7 +12531,7 @@ class _$DeviceDefinitionSpecialization
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -12574,7 +12571,7 @@ class _$DeviceDefinitionSpecialization
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -12586,7 +12583,7 @@ class _$DeviceDefinitionSpecialization
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -12598,7 +12595,7 @@ class _$DeviceDefinitionSpecialization
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -12654,8 +12651,8 @@ class _$DeviceDefinitionSpecialization
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -12666,7 +12663,7 @@ class _$DeviceDefinitionSpecialization
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -12692,17 +12689,17 @@ class _$DeviceDefinitionSpecialization
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -12712,8 +12709,8 @@ class _$DeviceDefinitionSpecialization
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -12767,7 +12764,7 @@ class _$DeviceDefinitionSpecialization
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -12778,16 +12775,16 @@ class _$DeviceDefinitionSpecialization
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -13175,7 +13172,7 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -13185,7 +13182,7 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -13208,20 +13205,20 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -13229,7 +13226,7 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -13334,7 +13331,7 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -13377,7 +13374,7 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -13390,7 +13387,7 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -13403,7 +13400,7 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -13462,8 +13459,8 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -13475,7 +13472,7 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -13503,17 +13500,17 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -13523,8 +13520,8 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -13587,7 +13584,7 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -13599,16 +13596,16 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -13747,7 +13744,7 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -13757,7 +13754,7 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -13773,20 +13770,20 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -13794,7 +13791,7 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -13887,7 +13884,7 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -13927,7 +13924,7 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -13939,7 +13936,7 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -13951,7 +13948,7 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -14007,8 +14004,8 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -14019,7 +14016,7 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -14045,17 +14042,17 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -14065,8 +14062,8 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -14120,7 +14117,7 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -14131,16 +14128,16 @@ class _$DeviceDefinitionCapability implements DeviceDefinitionCapability {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -14537,7 +14534,7 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -14547,7 +14544,7 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -14570,20 +14567,20 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -14591,7 +14588,7 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -14696,7 +14693,7 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -14739,7 +14736,7 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -14752,7 +14749,7 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -14765,7 +14762,7 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -14824,8 +14821,8 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -14837,7 +14834,7 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -14865,17 +14862,17 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -14885,8 +14882,8 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -14949,7 +14946,7 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -14961,16 +14958,16 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -15109,7 +15106,7 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -15119,7 +15116,7 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -15135,20 +15132,20 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -15156,7 +15153,7 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -15249,7 +15246,7 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -15289,7 +15286,7 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -15301,7 +15298,7 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -15313,7 +15310,7 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -15369,8 +15366,8 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -15381,7 +15378,7 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -15407,17 +15404,17 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -15427,8 +15424,8 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -15482,7 +15479,7 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -15493,16 +15490,16 @@ class _$DeviceDefinitionProperty implements DeviceDefinitionProperty {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -15903,7 +15900,7 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -15913,7 +15910,7 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -15936,20 +15933,20 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -15957,7 +15954,7 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -16062,7 +16059,7 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -16105,7 +16102,7 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -16118,7 +16115,7 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -16131,7 +16128,7 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -16190,8 +16187,8 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -16203,7 +16200,7 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -16231,17 +16228,17 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -16251,8 +16248,8 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -16315,7 +16312,7 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -16327,16 +16324,16 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -16475,7 +16472,7 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -16485,7 +16482,7 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -16501,20 +16498,20 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -16522,7 +16519,7 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -16615,7 +16612,7 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -16655,7 +16652,7 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -16667,7 +16664,7 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -16679,7 +16676,7 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -16735,8 +16732,8 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -16747,7 +16744,7 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -16773,17 +16770,17 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -16793,8 +16790,8 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -16848,7 +16845,7 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -16859,16 +16856,16 @@ class _$DeviceDefinitionMaterial implements DeviceDefinitionMaterial {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -17578,7 +17575,7 @@ class _$EventDefinition implements EventDefinition {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -17588,7 +17585,7 @@ class _$EventDefinition implements EventDefinition {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -17611,20 +17608,20 @@ class _$EventDefinition implements EventDefinition {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -17632,7 +17629,7 @@ class _$EventDefinition implements EventDefinition {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -17737,7 +17734,7 @@ class _$EventDefinition implements EventDefinition {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -17780,7 +17777,7 @@ class _$EventDefinition implements EventDefinition {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -17793,7 +17790,7 @@ class _$EventDefinition implements EventDefinition {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -17806,7 +17803,7 @@ class _$EventDefinition implements EventDefinition {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -17865,8 +17862,8 @@ class _$EventDefinition implements EventDefinition {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -17878,7 +17875,7 @@ class _$EventDefinition implements EventDefinition {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -17906,17 +17903,17 @@ class _$EventDefinition implements EventDefinition {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -17926,8 +17923,8 @@ class _$EventDefinition implements EventDefinition {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -17990,7 +17987,7 @@ class _$EventDefinition implements EventDefinition {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -18002,16 +17999,16 @@ class _$EventDefinition implements EventDefinition {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -18187,7 +18184,7 @@ class _$EventDefinition implements EventDefinition {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -18197,7 +18194,7 @@ class _$EventDefinition implements EventDefinition {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -18213,20 +18210,20 @@ class _$EventDefinition implements EventDefinition {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -18234,7 +18231,7 @@ class _$EventDefinition implements EventDefinition {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -18327,7 +18324,7 @@ class _$EventDefinition implements EventDefinition {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -18367,7 +18364,7 @@ class _$EventDefinition implements EventDefinition {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -18379,7 +18376,7 @@ class _$EventDefinition implements EventDefinition {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -18391,7 +18388,7 @@ class _$EventDefinition implements EventDefinition {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -18447,8 +18444,8 @@ class _$EventDefinition implements EventDefinition {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -18459,7 +18456,7 @@ class _$EventDefinition implements EventDefinition {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -18485,17 +18482,17 @@ class _$EventDefinition implements EventDefinition {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -18505,8 +18502,8 @@ class _$EventDefinition implements EventDefinition {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -18560,7 +18557,7 @@ class _$EventDefinition implements EventDefinition {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -18571,16 +18568,16 @@ class _$EventDefinition implements EventDefinition {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -18927,7 +18924,7 @@ abstract class $ObservationDefinitionCopyWith<$Res>
       CodeableConcept method,
       String preferredReportName,
       ObservationDefinitionQuantitativeDetails quantitativeDetails,
-      List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+      List<dynamic> qualifiedInterval,
       Reference validCodedValueSet,
       Reference normalCodedValueSet,
       Reference abnormalCodedValueSet,
@@ -19008,7 +19005,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res>
           : quantitativeDetails as ObservationDefinitionQuantitativeDetails,
       qualifiedInterval: qualifiedInterval == freezed
           ? _value.qualifiedInterval
-          : qualifiedInterval as List<ObservationDefinitionQualifiedInterval>,
+          : qualifiedInterval as List<dynamic>,
       validCodedValueSet: validCodedValueSet == freezed
           ? _value.validCodedValueSet
           : validCodedValueSet as Reference,
@@ -19089,7 +19086,7 @@ class _$ObservationDefinition implements ObservationDefinition {
   @override
   final ObservationDefinitionQuantitativeDetails quantitativeDetails;
   @override
-  final List<ObservationDefinitionQualifiedInterval> qualifiedInterval;
+  final List<dynamic> qualifiedInterval;
   @override
   final Reference validCodedValueSet;
   @override
@@ -19258,7 +19255,7 @@ class _$ObservationDefinition implements ObservationDefinition {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -19268,7 +19265,7 @@ class _$ObservationDefinition implements ObservationDefinition {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -19291,20 +19288,20 @@ class _$ObservationDefinition implements ObservationDefinition {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -19312,7 +19309,7 @@ class _$ObservationDefinition implements ObservationDefinition {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -19417,7 +19414,7 @@ class _$ObservationDefinition implements ObservationDefinition {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -19460,7 +19457,7 @@ class _$ObservationDefinition implements ObservationDefinition {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -19473,7 +19470,7 @@ class _$ObservationDefinition implements ObservationDefinition {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -19486,7 +19483,7 @@ class _$ObservationDefinition implements ObservationDefinition {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -19545,8 +19542,8 @@ class _$ObservationDefinition implements ObservationDefinition {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -19558,7 +19555,7 @@ class _$ObservationDefinition implements ObservationDefinition {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -19586,17 +19583,17 @@ class _$ObservationDefinition implements ObservationDefinition {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -19606,8 +19603,8 @@ class _$ObservationDefinition implements ObservationDefinition {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -19670,7 +19667,7 @@ class _$ObservationDefinition implements ObservationDefinition {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -19682,16 +19679,16 @@ class _$ObservationDefinition implements ObservationDefinition {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -19851,7 +19848,7 @@ class _$ObservationDefinition implements ObservationDefinition {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -19861,7 +19858,7 @@ class _$ObservationDefinition implements ObservationDefinition {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -19877,20 +19874,20 @@ class _$ObservationDefinition implements ObservationDefinition {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -19898,7 +19895,7 @@ class _$ObservationDefinition implements ObservationDefinition {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -19991,7 +19988,7 @@ class _$ObservationDefinition implements ObservationDefinition {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -20031,7 +20028,7 @@ class _$ObservationDefinition implements ObservationDefinition {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -20043,7 +20040,7 @@ class _$ObservationDefinition implements ObservationDefinition {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -20055,7 +20052,7 @@ class _$ObservationDefinition implements ObservationDefinition {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -20111,8 +20108,8 @@ class _$ObservationDefinition implements ObservationDefinition {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -20123,7 +20120,7 @@ class _$ObservationDefinition implements ObservationDefinition {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -20149,17 +20146,17 @@ class _$ObservationDefinition implements ObservationDefinition {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -20169,8 +20166,8 @@ class _$ObservationDefinition implements ObservationDefinition {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -20224,7 +20221,7 @@ class _$ObservationDefinition implements ObservationDefinition {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -20235,16 +20232,16 @@ class _$ObservationDefinition implements ObservationDefinition {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -20483,7 +20480,7 @@ abstract class ObservationDefinition implements DefinitionalArtifacts {
       CodeableConcept method,
       String preferredReportName,
       ObservationDefinitionQuantitativeDetails quantitativeDetails,
-      List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+      List<dynamic> qualifiedInterval,
       Reference validCodedValueSet,
       Reference normalCodedValueSet,
       Reference abnormalCodedValueSet,
@@ -20511,7 +20508,7 @@ abstract class ObservationDefinition implements DefinitionalArtifacts {
   CodeableConcept get method;
   String get preferredReportName;
   ObservationDefinitionQuantitativeDetails get quantitativeDetails;
-  List<ObservationDefinitionQualifiedInterval> get qualifiedInterval;
+  List<dynamic> get qualifiedInterval;
   Reference get validCodedValueSet;
   Reference get normalCodedValueSet;
   Reference get abnormalCodedValueSet;
@@ -20715,7 +20712,7 @@ class _$ObservationDefinitionQuantitativeDetails
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -20725,7 +20722,7 @@ class _$ObservationDefinitionQuantitativeDetails
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -20748,20 +20745,20 @@ class _$ObservationDefinitionQuantitativeDetails
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -20769,7 +20766,7 @@ class _$ObservationDefinitionQuantitativeDetails
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -20874,7 +20871,7 @@ class _$ObservationDefinitionQuantitativeDetails
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -20917,7 +20914,7 @@ class _$ObservationDefinitionQuantitativeDetails
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -20930,7 +20927,7 @@ class _$ObservationDefinitionQuantitativeDetails
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -20943,7 +20940,7 @@ class _$ObservationDefinitionQuantitativeDetails
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -21002,8 +20999,8 @@ class _$ObservationDefinitionQuantitativeDetails
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -21015,7 +21012,7 @@ class _$ObservationDefinitionQuantitativeDetails
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -21043,17 +21040,17 @@ class _$ObservationDefinitionQuantitativeDetails
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -21063,8 +21060,8 @@ class _$ObservationDefinitionQuantitativeDetails
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -21127,7 +21124,7 @@ class _$ObservationDefinitionQuantitativeDetails
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -21139,16 +21136,16 @@ class _$ObservationDefinitionQuantitativeDetails
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -21293,7 +21290,7 @@ class _$ObservationDefinitionQuantitativeDetails
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -21303,7 +21300,7 @@ class _$ObservationDefinitionQuantitativeDetails
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -21319,20 +21316,20 @@ class _$ObservationDefinitionQuantitativeDetails
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -21340,7 +21337,7 @@ class _$ObservationDefinitionQuantitativeDetails
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -21433,7 +21430,7 @@ class _$ObservationDefinitionQuantitativeDetails
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -21473,7 +21470,7 @@ class _$ObservationDefinitionQuantitativeDetails
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -21485,7 +21482,7 @@ class _$ObservationDefinitionQuantitativeDetails
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -21497,7 +21494,7 @@ class _$ObservationDefinitionQuantitativeDetails
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -21553,8 +21550,8 @@ class _$ObservationDefinitionQuantitativeDetails
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -21565,7 +21562,7 @@ class _$ObservationDefinitionQuantitativeDetails
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -21591,17 +21588,17 @@ class _$ObservationDefinitionQuantitativeDetails
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -21611,8 +21608,8 @@ class _$ObservationDefinitionQuantitativeDetails
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -21666,7 +21663,7 @@ class _$ObservationDefinitionQuantitativeDetails
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -21677,16 +21674,16 @@ class _$ObservationDefinitionQuantitativeDetails
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -22154,7 +22151,7 @@ class _$ObservationDefinitionQualifiedInterval
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -22164,7 +22161,7 @@ class _$ObservationDefinitionQualifiedInterval
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -22187,20 +22184,20 @@ class _$ObservationDefinitionQualifiedInterval
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -22208,7 +22205,7 @@ class _$ObservationDefinitionQualifiedInterval
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -22313,7 +22310,7 @@ class _$ObservationDefinitionQualifiedInterval
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -22356,7 +22353,7 @@ class _$ObservationDefinitionQualifiedInterval
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -22369,7 +22366,7 @@ class _$ObservationDefinitionQualifiedInterval
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -22382,7 +22379,7 @@ class _$ObservationDefinitionQualifiedInterval
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -22441,8 +22438,8 @@ class _$ObservationDefinitionQualifiedInterval
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -22454,7 +22451,7 @@ class _$ObservationDefinitionQualifiedInterval
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -22482,17 +22479,17 @@ class _$ObservationDefinitionQualifiedInterval
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -22502,8 +22499,8 @@ class _$ObservationDefinitionQualifiedInterval
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -22566,7 +22563,7 @@ class _$ObservationDefinitionQualifiedInterval
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -22578,16 +22575,16 @@ class _$ObservationDefinitionQualifiedInterval
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -22736,7 +22733,7 @@ class _$ObservationDefinitionQualifiedInterval
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -22746,7 +22743,7 @@ class _$ObservationDefinitionQualifiedInterval
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -22762,20 +22759,20 @@ class _$ObservationDefinitionQualifiedInterval
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -22783,7 +22780,7 @@ class _$ObservationDefinitionQualifiedInterval
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -22876,7 +22873,7 @@ class _$ObservationDefinitionQualifiedInterval
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -22916,7 +22913,7 @@ class _$ObservationDefinitionQualifiedInterval
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -22928,7 +22925,7 @@ class _$ObservationDefinitionQualifiedInterval
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -22940,7 +22937,7 @@ class _$ObservationDefinitionQualifiedInterval
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -22996,8 +22993,8 @@ class _$ObservationDefinitionQualifiedInterval
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -23008,7 +23005,7 @@ class _$ObservationDefinitionQualifiedInterval
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -23034,17 +23031,17 @@ class _$ObservationDefinitionQualifiedInterval
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -23054,8 +23051,8 @@ class _$ObservationDefinitionQualifiedInterval
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -23109,7 +23106,7 @@ class _$ObservationDefinitionQualifiedInterval
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -23120,16 +23117,16 @@ class _$ObservationDefinitionQualifiedInterval
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -23396,7 +23393,7 @@ abstract class $SpecimenDefinitionCopyWith<$Res>
       List<dynamic> patientPreparation,
       String timeAspect,
       List<dynamic> collection,
-      List<SpecimenDefinitionTypeTested> typeTested});
+      List<dynamic> typeTested});
 }
 
 class _$SpecimenDefinitionCopyWithImpl<$Res>
@@ -23460,7 +23457,7 @@ class _$SpecimenDefinitionCopyWithImpl<$Res>
           : collection as List<dynamic>,
       typeTested: typeTested == freezed
           ? _value.typeTested
-          : typeTested as List<SpecimenDefinitionTypeTested>,
+          : typeTested as List<dynamic>,
     ));
   }
 }
@@ -23516,7 +23513,7 @@ class _$SpecimenDefinition implements SpecimenDefinition {
   @override
   final List<dynamic> collection;
   @override
-  final List<SpecimenDefinitionTypeTested> typeTested;
+  final List<dynamic> typeTested;
 
   @override
   String toString() {
@@ -23650,7 +23647,7 @@ class _$SpecimenDefinition implements SpecimenDefinition {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -23660,7 +23657,7 @@ class _$SpecimenDefinition implements SpecimenDefinition {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -23683,20 +23680,20 @@ class _$SpecimenDefinition implements SpecimenDefinition {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -23704,7 +23701,7 @@ class _$SpecimenDefinition implements SpecimenDefinition {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -23809,7 +23806,7 @@ class _$SpecimenDefinition implements SpecimenDefinition {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -23852,7 +23849,7 @@ class _$SpecimenDefinition implements SpecimenDefinition {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -23865,7 +23862,7 @@ class _$SpecimenDefinition implements SpecimenDefinition {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -23878,7 +23875,7 @@ class _$SpecimenDefinition implements SpecimenDefinition {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -23937,8 +23934,8 @@ class _$SpecimenDefinition implements SpecimenDefinition {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -23950,7 +23947,7 @@ class _$SpecimenDefinition implements SpecimenDefinition {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -23978,17 +23975,17 @@ class _$SpecimenDefinition implements SpecimenDefinition {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -23998,8 +23995,8 @@ class _$SpecimenDefinition implements SpecimenDefinition {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -24062,7 +24059,7 @@ class _$SpecimenDefinition implements SpecimenDefinition {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -24074,16 +24071,16 @@ class _$SpecimenDefinition implements SpecimenDefinition {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -24236,7 +24233,7 @@ class _$SpecimenDefinition implements SpecimenDefinition {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -24246,7 +24243,7 @@ class _$SpecimenDefinition implements SpecimenDefinition {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -24262,20 +24259,20 @@ class _$SpecimenDefinition implements SpecimenDefinition {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -24283,7 +24280,7 @@ class _$SpecimenDefinition implements SpecimenDefinition {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -24376,7 +24373,7 @@ class _$SpecimenDefinition implements SpecimenDefinition {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -24416,7 +24413,7 @@ class _$SpecimenDefinition implements SpecimenDefinition {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -24428,7 +24425,7 @@ class _$SpecimenDefinition implements SpecimenDefinition {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -24440,7 +24437,7 @@ class _$SpecimenDefinition implements SpecimenDefinition {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -24496,8 +24493,8 @@ class _$SpecimenDefinition implements SpecimenDefinition {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -24508,7 +24505,7 @@ class _$SpecimenDefinition implements SpecimenDefinition {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -24534,17 +24531,17 @@ class _$SpecimenDefinition implements SpecimenDefinition {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -24554,8 +24551,8 @@ class _$SpecimenDefinition implements SpecimenDefinition {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -24609,7 +24606,7 @@ class _$SpecimenDefinition implements SpecimenDefinition {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -24620,16 +24617,16 @@ class _$SpecimenDefinition implements SpecimenDefinition {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -24858,7 +24855,7 @@ abstract class SpecimenDefinition implements DefinitionalArtifacts {
       List<dynamic> patientPreparation,
       String timeAspect,
       List<dynamic> collection,
-      List<SpecimenDefinitionTypeTested> typeTested}) = _$SpecimenDefinition;
+      List<dynamic> typeTested}) = _$SpecimenDefinition;
 
   factory SpecimenDefinition.fromJson(Map<String, dynamic> json) =
       _$SpecimenDefinition.fromJson;
@@ -24879,7 +24876,7 @@ abstract class SpecimenDefinition implements DefinitionalArtifacts {
   List<dynamic> get patientPreparation;
   String get timeAspect;
   List<dynamic> get collection;
-  List<SpecimenDefinitionTypeTested> get typeTested;
+  List<dynamic> get typeTested;
   @override
   $SpecimenDefinitionCopyWith<SpecimenDefinition> get copyWith;
 }
@@ -24902,7 +24899,7 @@ abstract class $SpecimenDefinitionTypeTestedCopyWith<$Res>
       String requirement,
       Duration retentionTime,
       List<dynamic> rejectionCriterion,
-      List<SpecimenDefinitionHandling> handling});
+      List<dynamic> handling});
 }
 
 class _$SpecimenDefinitionTypeTestedCopyWithImpl<$Res>
@@ -24954,9 +24951,8 @@ class _$SpecimenDefinitionTypeTestedCopyWithImpl<$Res>
       rejectionCriterion: rejectionCriterion == freezed
           ? _value.rejectionCriterion
           : rejectionCriterion as List<dynamic>,
-      handling: handling == freezed
-          ? _value.handling
-          : handling as List<SpecimenDefinitionHandling>,
+      handling:
+          handling == freezed ? _value.handling : handling as List<dynamic>,
     ));
   }
 }
@@ -25000,7 +24996,7 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
   @override
   final List<dynamic> rejectionCriterion;
   @override
-  final List<SpecimenDefinitionHandling> handling;
+  final List<dynamic> handling;
 
   @override
   String toString() {
@@ -25120,7 +25116,7 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -25130,7 +25126,7 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -25153,20 +25149,20 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -25174,7 +25170,7 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -25279,7 +25275,7 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -25322,7 +25318,7 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -25335,7 +25331,7 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -25348,7 +25344,7 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -25407,8 +25403,8 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -25420,7 +25416,7 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -25448,17 +25444,17 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -25468,8 +25464,8 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -25532,7 +25528,7 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -25544,16 +25540,16 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -25702,7 +25698,7 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -25712,7 +25708,7 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -25728,20 +25724,20 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -25749,7 +25745,7 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -25842,7 +25838,7 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -25882,7 +25878,7 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -25894,7 +25890,7 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -25906,7 +25902,7 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -25962,8 +25958,8 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -25974,7 +25970,7 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -26000,17 +25996,17 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -26020,8 +26016,8 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -26075,7 +26071,7 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -26086,16 +26082,16 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -26306,18 +26302,17 @@ class _$SpecimenDefinitionTypeTested implements SpecimenDefinitionTypeTested {
 
 abstract class SpecimenDefinitionTypeTested implements DefinitionalArtifacts {
   const factory SpecimenDefinitionTypeTested(
-          {String id,
-          List<dynamic> extension,
-          List<dynamic> modifierExtension,
-          bool isDerived,
-          CodeableConcept type,
-          SpecimenDefinitionTypeTestedPreference preference,
-          SpecimenDefinitionContainer container,
-          String requirement,
-          Duration retentionTime,
-          List<dynamic> rejectionCriterion,
-          List<SpecimenDefinitionHandling> handling}) =
-      _$SpecimenDefinitionTypeTested;
+      {String id,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      bool isDerived,
+      CodeableConcept type,
+      SpecimenDefinitionTypeTestedPreference preference,
+      SpecimenDefinitionContainer container,
+      String requirement,
+      Duration retentionTime,
+      List<dynamic> rejectionCriterion,
+      List<dynamic> handling}) = _$SpecimenDefinitionTypeTested;
 
   factory SpecimenDefinitionTypeTested.fromJson(Map<String, dynamic> json) =
       _$SpecimenDefinitionTypeTested.fromJson;
@@ -26334,7 +26329,7 @@ abstract class SpecimenDefinitionTypeTested implements DefinitionalArtifacts {
   String get requirement;
   Duration get retentionTime;
   List<dynamic> get rejectionCriterion;
-  List<SpecimenDefinitionHandling> get handling;
+  List<dynamic> get handling;
   @override
   $SpecimenDefinitionTypeTestedCopyWith<SpecimenDefinitionTypeTested>
       get copyWith;
@@ -26358,7 +26353,7 @@ abstract class $SpecimenDefinitionContainerCopyWith<$Res>
       Quantity capacity,
       Quantity minimumVolumeQuantity,
       String minimumVolumeString,
-      List<SpecimenDefinitionAdditive> additive,
+      List<dynamic> additive,
       String preparation});
 }
 
@@ -26408,9 +26403,8 @@ class _$SpecimenDefinitionContainerCopyWithImpl<$Res>
       minimumVolumeString: minimumVolumeString == freezed
           ? _value.minimumVolumeString
           : minimumVolumeString as String,
-      additive: additive == freezed
-          ? _value.additive
-          : additive as List<SpecimenDefinitionAdditive>,
+      additive:
+          additive == freezed ? _value.additive : additive as List<dynamic>,
       preparation:
           preparation == freezed ? _value.preparation : preparation as String,
     ));
@@ -26457,7 +26451,7 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
   @override
   final String minimumVolumeString;
   @override
-  final List<SpecimenDefinitionAdditive> additive;
+  final List<dynamic> additive;
   @override
   final String preparation;
 
@@ -26582,7 +26576,7 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -26592,7 +26586,7 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -26615,20 +26609,20 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -26636,7 +26630,7 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -26741,7 +26735,7 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -26784,7 +26778,7 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -26797,7 +26791,7 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -26810,7 +26804,7 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -26869,8 +26863,8 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -26882,7 +26876,7 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -26910,17 +26904,17 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -26930,8 +26924,8 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -26994,7 +26988,7 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -27006,16 +27000,16 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -27165,7 +27159,7 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -27175,7 +27169,7 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -27191,20 +27185,20 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -27212,7 +27206,7 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -27305,7 +27299,7 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -27345,7 +27339,7 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -27357,7 +27351,7 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -27369,7 +27363,7 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -27425,8 +27419,8 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -27437,7 +27431,7 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -27463,17 +27457,17 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -27483,8 +27477,8 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -27538,7 +27532,7 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -27549,16 +27543,16 @@ class _$SpecimenDefinitionContainer implements SpecimenDefinitionContainer {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -27780,7 +27774,7 @@ abstract class SpecimenDefinitionContainer implements DefinitionalArtifacts {
       Quantity capacity,
       Quantity minimumVolumeQuantity,
       String minimumVolumeString,
-      List<SpecimenDefinitionAdditive> additive,
+      List<dynamic> additive,
       String preparation}) = _$SpecimenDefinitionContainer;
 
   factory SpecimenDefinitionContainer.fromJson(Map<String, dynamic> json) =
@@ -27798,7 +27792,7 @@ abstract class SpecimenDefinitionContainer implements DefinitionalArtifacts {
   Quantity get capacity;
   Quantity get minimumVolumeQuantity;
   String get minimumVolumeString;
-  List<SpecimenDefinitionAdditive> get additive;
+  List<dynamic> get additive;
   String get preparation;
   @override
   $SpecimenDefinitionContainerCopyWith<SpecimenDefinitionContainer>
@@ -27975,7 +27969,7 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -27985,7 +27979,7 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -28008,20 +28002,20 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -28029,7 +28023,7 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -28134,7 +28128,7 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -28177,7 +28171,7 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -28190,7 +28184,7 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -28203,7 +28197,7 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -28262,8 +28256,8 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -28275,7 +28269,7 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -28303,17 +28297,17 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -28323,8 +28317,8 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -28387,7 +28381,7 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -28399,16 +28393,16 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -28547,7 +28541,7 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -28557,7 +28551,7 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -28573,20 +28567,20 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -28594,7 +28588,7 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -28687,7 +28681,7 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -28727,7 +28721,7 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -28739,7 +28733,7 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -28751,7 +28745,7 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -28807,8 +28801,8 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -28819,7 +28813,7 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -28845,17 +28839,17 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -28865,8 +28859,8 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -28920,7 +28914,7 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -28931,16 +28925,16 @@ class _$SpecimenDefinitionAdditive implements SpecimenDefinitionAdditive {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -29352,7 +29346,7 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -29362,7 +29356,7 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -29385,20 +29379,20 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -29406,7 +29400,7 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -29511,7 +29505,7 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -29554,7 +29548,7 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -29567,7 +29561,7 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -29580,7 +29574,7 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -29639,8 +29633,8 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -29652,7 +29646,7 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -29680,17 +29674,17 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -29700,8 +29694,8 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -29764,7 +29758,7 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -29776,16 +29770,16 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -29924,7 +29918,7 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -29934,7 +29928,7 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -29950,20 +29944,20 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -29971,7 +29965,7 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -30064,7 +30058,7 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -30104,7 +30098,7 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -30116,7 +30110,7 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -30128,7 +30122,7 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -30184,8 +30178,8 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -30196,7 +30190,7 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -30222,17 +30216,17 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -30242,8 +30236,8 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -30297,7 +30291,7 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -30308,16 +30302,16 @@ class _$SpecimenDefinitionHandling implements SpecimenDefinitionHandling {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -30588,8 +30582,8 @@ abstract class $PlanDefinitionCopyWith<$Res>
       List<dynamic> endorser,
       List<dynamic> relatedArtifact,
       List<Canonical> library,
-      List<PlanDefinitionGoal> goal,
-      List<PlanDefinitionAction> action});
+      List<dynamic> goal,
+      List<dynamic> action});
 }
 
 class _$PlanDefinitionCopyWithImpl<$Res>
@@ -30717,10 +30711,8 @@ class _$PlanDefinitionCopyWithImpl<$Res>
           ? _value.relatedArtifact
           : relatedArtifact as List<dynamic>,
       library: library == freezed ? _value.library : library as List<Canonical>,
-      goal: goal == freezed ? _value.goal : goal as List<PlanDefinitionGoal>,
-      action: action == freezed
-          ? _value.action
-          : action as List<PlanDefinitionAction>,
+      goal: goal == freezed ? _value.goal : goal as List<dynamic>,
+      action: action == freezed ? _value.action : action as List<dynamic>,
     ));
   }
 }
@@ -30852,9 +30844,9 @@ class _$PlanDefinition implements PlanDefinition {
   @override
   final List<Canonical> library;
   @override
-  final List<PlanDefinitionGoal> goal;
+  final List<dynamic> goal;
   @override
-  final List<PlanDefinitionAction> action;
+  final List<dynamic> action;
 
   @override
   String toString() {
@@ -31055,7 +31047,7 @@ class _$PlanDefinition implements PlanDefinition {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -31065,7 +31057,7 @@ class _$PlanDefinition implements PlanDefinition {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -31088,20 +31080,20 @@ class _$PlanDefinition implements PlanDefinition {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -31109,7 +31101,7 @@ class _$PlanDefinition implements PlanDefinition {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -31214,7 +31206,7 @@ class _$PlanDefinition implements PlanDefinition {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -31257,7 +31249,7 @@ class _$PlanDefinition implements PlanDefinition {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -31270,7 +31262,7 @@ class _$PlanDefinition implements PlanDefinition {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -31283,7 +31275,7 @@ class _$PlanDefinition implements PlanDefinition {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -31342,8 +31334,8 @@ class _$PlanDefinition implements PlanDefinition {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -31355,7 +31347,7 @@ class _$PlanDefinition implements PlanDefinition {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -31383,17 +31375,17 @@ class _$PlanDefinition implements PlanDefinition {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -31403,8 +31395,8 @@ class _$PlanDefinition implements PlanDefinition {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -31467,7 +31459,7 @@ class _$PlanDefinition implements PlanDefinition {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -31479,16 +31471,16 @@ class _$PlanDefinition implements PlanDefinition {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -31667,7 +31659,7 @@ class _$PlanDefinition implements PlanDefinition {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -31677,7 +31669,7 @@ class _$PlanDefinition implements PlanDefinition {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -31693,20 +31685,20 @@ class _$PlanDefinition implements PlanDefinition {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -31714,7 +31706,7 @@ class _$PlanDefinition implements PlanDefinition {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -31807,7 +31799,7 @@ class _$PlanDefinition implements PlanDefinition {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -31847,7 +31839,7 @@ class _$PlanDefinition implements PlanDefinition {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -31859,7 +31851,7 @@ class _$PlanDefinition implements PlanDefinition {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -31871,7 +31863,7 @@ class _$PlanDefinition implements PlanDefinition {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -31927,8 +31919,8 @@ class _$PlanDefinition implements PlanDefinition {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -31939,7 +31931,7 @@ class _$PlanDefinition implements PlanDefinition {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -31965,17 +31957,17 @@ class _$PlanDefinition implements PlanDefinition {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -31985,8 +31977,8 @@ class _$PlanDefinition implements PlanDefinition {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -32040,7 +32032,7 @@ class _$PlanDefinition implements PlanDefinition {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -32051,16 +32043,16 @@ class _$PlanDefinition implements PlanDefinition {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -32339,8 +32331,8 @@ abstract class PlanDefinition implements DefinitionalArtifacts {
       List<dynamic> endorser,
       List<dynamic> relatedArtifact,
       List<Canonical> library,
-      List<PlanDefinitionGoal> goal,
-      List<PlanDefinitionAction> action}) = _$PlanDefinition;
+      List<dynamic> goal,
+      List<dynamic> action}) = _$PlanDefinition;
 
   factory PlanDefinition.fromJson(Map<String, dynamic> json) =
       _$PlanDefinition.fromJson;
@@ -32386,8 +32378,8 @@ abstract class PlanDefinition implements DefinitionalArtifacts {
   List<dynamic> get endorser;
   List<dynamic> get relatedArtifact;
   List<Canonical> get library;
-  List<PlanDefinitionGoal> get goal;
-  List<PlanDefinitionAction> get action;
+  List<dynamic> get goal;
+  List<dynamic> get action;
   @override
   $PlanDefinitionCopyWith<PlanDefinition> get copyWith;
 }
@@ -32408,7 +32400,7 @@ abstract class $PlanDefinitionGoalCopyWith<$Res>
       CodeableConcept start,
       List<dynamic> addresses,
       List<dynamic> documentation,
-      List<PlanDefinitionTarget> target});
+      List<dynamic> target});
 }
 
 class _$PlanDefinitionGoalCopyWithImpl<$Res>
@@ -32454,9 +32446,7 @@ class _$PlanDefinitionGoalCopyWithImpl<$Res>
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as List<dynamic>,
-      target: target == freezed
-          ? _value.target
-          : target as List<PlanDefinitionTarget>,
+      target: target == freezed ? _value.target : target as List<dynamic>,
     ));
   }
 }
@@ -32497,7 +32487,7 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
   @override
   final List<dynamic> documentation;
   @override
-  final List<PlanDefinitionTarget> target;
+  final List<dynamic> target;
 
   @override
   String toString() {
@@ -32611,7 +32601,7 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -32621,7 +32611,7 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -32644,20 +32634,20 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -32665,7 +32655,7 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -32770,7 +32760,7 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -32813,7 +32803,7 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -32826,7 +32816,7 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -32839,7 +32829,7 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -32898,8 +32888,8 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -32911,7 +32901,7 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -32939,17 +32929,17 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -32959,8 +32949,8 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -33023,7 +33013,7 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -33035,16 +33025,16 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -33183,7 +33173,7 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -33193,7 +33183,7 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -33209,20 +33199,20 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -33230,7 +33220,7 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -33323,7 +33313,7 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -33363,7 +33353,7 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -33375,7 +33365,7 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -33387,7 +33377,7 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -33443,8 +33433,8 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -33455,7 +33445,7 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -33481,17 +33471,17 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -33501,8 +33491,8 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -33556,7 +33546,7 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -33567,16 +33557,16 @@ class _$PlanDefinitionGoal implements PlanDefinitionGoal {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -33786,7 +33776,7 @@ abstract class PlanDefinitionGoal implements DefinitionalArtifacts {
       CodeableConcept start,
       List<dynamic> addresses,
       List<dynamic> documentation,
-      List<PlanDefinitionTarget> target}) = _$PlanDefinitionGoal;
+      List<dynamic> target}) = _$PlanDefinitionGoal;
 
   factory PlanDefinitionGoal.fromJson(Map<String, dynamic> json) =
       _$PlanDefinitionGoal.fromJson;
@@ -33802,7 +33792,7 @@ abstract class PlanDefinitionGoal implements DefinitionalArtifacts {
   CodeableConcept get start;
   List<dynamic> get addresses;
   List<dynamic> get documentation;
-  List<PlanDefinitionTarget> get target;
+  List<dynamic> get target;
   @override
   $PlanDefinitionGoalCopyWith<PlanDefinitionGoal> get copyWith;
 }
@@ -34004,7 +33994,7 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -34014,7 +34004,7 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -34037,20 +34027,20 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -34058,7 +34048,7 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -34163,7 +34153,7 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -34206,7 +34196,7 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -34219,7 +34209,7 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -34232,7 +34222,7 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -34291,8 +34281,8 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -34304,7 +34294,7 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -34332,17 +34322,17 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -34352,8 +34342,8 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -34416,7 +34406,7 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -34428,16 +34418,16 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -34576,7 +34566,7 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -34586,7 +34576,7 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -34602,20 +34592,20 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -34623,7 +34613,7 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -34716,7 +34706,7 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -34756,7 +34746,7 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -34768,7 +34758,7 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -34780,7 +34770,7 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -34836,8 +34826,8 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -34848,7 +34838,7 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -34874,17 +34864,17 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -34894,8 +34884,8 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -34949,7 +34939,7 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -34960,16 +34950,16 @@ class _$PlanDefinitionTarget implements PlanDefinitionTarget {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -35218,17 +35208,17 @@ abstract class $PlanDefinitionActionCopyWith<$Res>
       CodeableConcept subjectCodeableConcept,
       Reference subjectReference,
       List<dynamic> trigger,
-      List<PlanDefinitionCondition> condition,
+      List<dynamic> condition,
       List<dynamic> input,
       List<dynamic> output,
-      List<PlanDefinitionRelatedAction> relatedAction,
+      List<dynamic> relatedAction,
       FhirDateTime timingDateTime,
       Age timingAge,
       Period timingPeriod,
       Duration timingDuration,
       Range timingRange,
       Timing timingTiming,
-      List<PlanDefinitionParticipant> participant,
+      List<dynamic> participant,
       CodeableConcept type,
       PlanDefinitionActionGroupingBehavior groupingBehavior,
       PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -35238,8 +35228,8 @@ abstract class $PlanDefinitionActionCopyWith<$Res>
       Canonical definitionCanonical,
       FhirUri definitionUri,
       Canonical transform,
-      List<PlanDefinitionDynamicValue> dynamicValue,
-      List<PlanDefinitionAction> action});
+      List<dynamic> dynamicValue,
+      List<dynamic> action});
 }
 
 class _$PlanDefinitionActionCopyWithImpl<$Res>
@@ -35320,14 +35310,13 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
           ? _value.subjectReference
           : subjectReference as Reference,
       trigger: trigger == freezed ? _value.trigger : trigger as List<dynamic>,
-      condition: condition == freezed
-          ? _value.condition
-          : condition as List<PlanDefinitionCondition>,
+      condition:
+          condition == freezed ? _value.condition : condition as List<dynamic>,
       input: input == freezed ? _value.input : input as List<dynamic>,
       output: output == freezed ? _value.output : output as List<dynamic>,
       relatedAction: relatedAction == freezed
           ? _value.relatedAction
-          : relatedAction as List<PlanDefinitionRelatedAction>,
+          : relatedAction as List<dynamic>,
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
           : timingDateTime as FhirDateTime,
@@ -35345,7 +35334,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
           : timingTiming as Timing,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<PlanDefinitionParticipant>,
+          : participant as List<dynamic>,
       type: type == freezed ? _value.type : type as CodeableConcept,
       groupingBehavior: groupingBehavior == freezed
           ? _value.groupingBehavior
@@ -35372,10 +35361,8 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
           transform == freezed ? _value.transform : transform as Canonical,
       dynamicValue: dynamicValue == freezed
           ? _value.dynamicValue
-          : dynamicValue as List<PlanDefinitionDynamicValue>,
-      action: action == freezed
-          ? _value.action
-          : action as List<PlanDefinitionAction>,
+          : dynamicValue as List<dynamic>,
+      action: action == freezed ? _value.action : action as List<dynamic>,
     ));
   }
 }
@@ -35455,13 +35442,13 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
   @override
   final List<dynamic> trigger;
   @override
-  final List<PlanDefinitionCondition> condition;
+  final List<dynamic> condition;
   @override
   final List<dynamic> input;
   @override
   final List<dynamic> output;
   @override
-  final List<PlanDefinitionRelatedAction> relatedAction;
+  final List<dynamic> relatedAction;
   @override
   final FhirDateTime timingDateTime;
   @override
@@ -35475,7 +35462,7 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
   @override
   final Timing timingTiming;
   @override
-  final List<PlanDefinitionParticipant> participant;
+  final List<dynamic> participant;
   @override
   final CodeableConcept type;
   @override
@@ -35495,9 +35482,9 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
   @override
   final Canonical transform;
   @override
-  final List<PlanDefinitionDynamicValue> dynamicValue;
+  final List<dynamic> dynamicValue;
   @override
-  final List<PlanDefinitionAction> action;
+  final List<dynamic> action;
 
   @override
   String toString() {
@@ -35691,7 +35678,7 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -35701,7 +35688,7 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -35724,20 +35711,20 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -35745,7 +35732,7 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -35850,7 +35837,7 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -35893,7 +35880,7 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -35906,7 +35893,7 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -35919,7 +35906,7 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -35978,8 +35965,8 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -35991,7 +35978,7 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -36019,17 +36006,17 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -36039,8 +36026,8 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -36103,7 +36090,7 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -36115,16 +36102,16 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -36299,7 +36286,7 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -36309,7 +36296,7 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -36325,20 +36312,20 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -36346,7 +36333,7 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -36439,7 +36426,7 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -36479,7 +36466,7 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -36491,7 +36478,7 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -36503,7 +36490,7 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -36559,8 +36546,8 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -36571,7 +36558,7 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -36597,17 +36584,17 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -36617,8 +36604,8 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -36672,7 +36659,7 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -36683,16 +36670,16 @@ class _$PlanDefinitionAction implements PlanDefinitionAction {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -36944,17 +36931,17 @@ abstract class PlanDefinitionAction implements DefinitionalArtifacts {
       CodeableConcept subjectCodeableConcept,
       Reference subjectReference,
       List<dynamic> trigger,
-      List<PlanDefinitionCondition> condition,
+      List<dynamic> condition,
       List<dynamic> input,
       List<dynamic> output,
-      List<PlanDefinitionRelatedAction> relatedAction,
+      List<dynamic> relatedAction,
       FhirDateTime timingDateTime,
       Age timingAge,
       Period timingPeriod,
       Duration timingDuration,
       Range timingRange,
       Timing timingTiming,
-      List<PlanDefinitionParticipant> participant,
+      List<dynamic> participant,
       CodeableConcept type,
       PlanDefinitionActionGroupingBehavior groupingBehavior,
       PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -36964,8 +36951,8 @@ abstract class PlanDefinitionAction implements DefinitionalArtifacts {
       Canonical definitionCanonical,
       FhirUri definitionUri,
       Canonical transform,
-      List<PlanDefinitionDynamicValue> dynamicValue,
-      List<PlanDefinitionAction> action}) = _$PlanDefinitionAction;
+      List<dynamic> dynamicValue,
+      List<dynamic> action}) = _$PlanDefinitionAction;
 
   factory PlanDefinitionAction.fromJson(Map<String, dynamic> json) =
       _$PlanDefinitionAction.fromJson;
@@ -36987,17 +36974,17 @@ abstract class PlanDefinitionAction implements DefinitionalArtifacts {
   CodeableConcept get subjectCodeableConcept;
   Reference get subjectReference;
   List<dynamic> get trigger;
-  List<PlanDefinitionCondition> get condition;
+  List<dynamic> get condition;
   List<dynamic> get input;
   List<dynamic> get output;
-  List<PlanDefinitionRelatedAction> get relatedAction;
+  List<dynamic> get relatedAction;
   FhirDateTime get timingDateTime;
   Age get timingAge;
   Period get timingPeriod;
   Duration get timingDuration;
   Range get timingRange;
   Timing get timingTiming;
-  List<PlanDefinitionParticipant> get participant;
+  List<dynamic> get participant;
   CodeableConcept get type;
   PlanDefinitionActionGroupingBehavior get groupingBehavior;
   PlanDefinitionActionSelectionBehavior get selectionBehavior;
@@ -37007,8 +36994,8 @@ abstract class PlanDefinitionAction implements DefinitionalArtifacts {
   Canonical get definitionCanonical;
   FhirUri get definitionUri;
   Canonical get transform;
-  List<PlanDefinitionDynamicValue> get dynamicValue;
-  List<PlanDefinitionAction> get action;
+  List<dynamic> get dynamicValue;
+  List<dynamic> get action;
   @override
   $PlanDefinitionActionCopyWith<PlanDefinitionAction> get copyWith;
 }
@@ -37176,7 +37163,7 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -37186,7 +37173,7 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -37209,20 +37196,20 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -37230,7 +37217,7 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -37335,7 +37322,7 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -37378,7 +37365,7 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -37391,7 +37378,7 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -37404,7 +37391,7 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -37463,8 +37450,8 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -37476,7 +37463,7 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -37504,17 +37491,17 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -37524,8 +37511,8 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -37588,7 +37575,7 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -37600,16 +37587,16 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -37748,7 +37735,7 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -37758,7 +37745,7 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -37774,20 +37761,20 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -37795,7 +37782,7 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -37888,7 +37875,7 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -37928,7 +37915,7 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -37940,7 +37927,7 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -37952,7 +37939,7 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -38008,8 +37995,8 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -38020,7 +38007,7 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -38046,17 +38033,17 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -38066,8 +38053,8 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -38121,7 +38108,7 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -38132,16 +38119,16 @@ class _$PlanDefinitionCondition implements PlanDefinitionCondition {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -38552,7 +38539,7 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -38562,7 +38549,7 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -38585,20 +38572,20 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -38606,7 +38593,7 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -38711,7 +38698,7 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -38754,7 +38741,7 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -38767,7 +38754,7 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -38780,7 +38767,7 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -38839,8 +38826,8 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -38852,7 +38839,7 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -38880,17 +38867,17 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -38900,8 +38887,8 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -38964,7 +38951,7 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -38976,16 +38963,16 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -39124,7 +39111,7 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -39134,7 +39121,7 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -39150,20 +39137,20 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -39171,7 +39158,7 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -39264,7 +39251,7 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -39304,7 +39291,7 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -39316,7 +39303,7 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -39328,7 +39315,7 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -39384,8 +39371,8 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -39396,7 +39383,7 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -39422,17 +39409,17 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -39442,8 +39429,8 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -39497,7 +39484,7 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -39508,16 +39495,16 @@ class _$PlanDefinitionRelatedAction implements PlanDefinitionRelatedAction {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -39902,7 +39889,7 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -39912,7 +39899,7 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -39935,20 +39922,20 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -39956,7 +39943,7 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -40061,7 +40048,7 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -40104,7 +40091,7 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -40117,7 +40104,7 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -40130,7 +40117,7 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -40189,8 +40176,8 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -40202,7 +40189,7 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -40230,17 +40217,17 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -40250,8 +40237,8 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -40314,7 +40301,7 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -40326,16 +40313,16 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -40474,7 +40461,7 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -40484,7 +40471,7 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -40500,20 +40487,20 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -40521,7 +40508,7 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -40614,7 +40601,7 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -40654,7 +40641,7 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -40666,7 +40653,7 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -40678,7 +40665,7 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -40734,8 +40721,8 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -40746,7 +40733,7 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -40772,17 +40759,17 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -40792,8 +40779,8 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -40847,7 +40834,7 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -40858,16 +40845,16 @@ class _$PlanDefinitionParticipant implements PlanDefinitionParticipant {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -41253,7 +41240,7 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -41263,7 +41250,7 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -41286,20 +41273,20 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -41307,7 +41294,7 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -41412,7 +41399,7 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -41455,7 +41442,7 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -41468,7 +41455,7 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -41481,7 +41468,7 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -41540,8 +41527,8 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -41553,7 +41540,7 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -41581,17 +41568,17 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -41601,8 +41588,8 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -41665,7 +41652,7 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -41677,16 +41664,16 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -41825,7 +41812,7 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -41835,7 +41822,7 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -41851,20 +41838,20 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -41872,7 +41859,7 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -41965,7 +41952,7 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -42005,7 +41992,7 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -42017,7 +42004,7 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -42029,7 +42016,7 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -42085,8 +42072,8 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -42097,7 +42084,7 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -42123,17 +42110,17 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -42143,8 +42130,8 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -42198,7 +42185,7 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -42209,16 +42196,16 @@ class _$PlanDefinitionDynamicValue implements PlanDefinitionDynamicValue {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -42476,7 +42463,7 @@ abstract class $QuestionnaireCopyWith<$Res>
       Date lastReviewDate,
       Period effectivePeriod,
       List<dynamic> code,
-      List<QuestionnaireItem> item});
+      List<dynamic> item});
 }
 
 class _$QuestionnaireCopyWithImpl<$Res>
@@ -42580,7 +42567,7 @@ class _$QuestionnaireCopyWithImpl<$Res>
           ? _value.effectivePeriod
           : effectivePeriod as Period,
       code: code == freezed ? _value.code : code as List<dynamic>,
-      item: item == freezed ? _value.item : item as List<QuestionnaireItem>,
+      item: item == freezed ? _value.item : item as List<dynamic>,
     ));
   }
 }
@@ -42684,7 +42671,7 @@ class _$Questionnaire implements Questionnaire {
   @override
   final List<dynamic> code;
   @override
-  final List<QuestionnaireItem> item;
+  final List<dynamic> item;
 
   @override
   String toString() {
@@ -42866,7 +42853,7 @@ class _$Questionnaire implements Questionnaire {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -42876,7 +42863,7 @@ class _$Questionnaire implements Questionnaire {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -42899,20 +42886,20 @@ class _$Questionnaire implements Questionnaire {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -42920,7 +42907,7 @@ class _$Questionnaire implements Questionnaire {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -43025,7 +43012,7 @@ class _$Questionnaire implements Questionnaire {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -43068,7 +43055,7 @@ class _$Questionnaire implements Questionnaire {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -43081,7 +43068,7 @@ class _$Questionnaire implements Questionnaire {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -43094,7 +43081,7 @@ class _$Questionnaire implements Questionnaire {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -43153,8 +43140,8 @@ class _$Questionnaire implements Questionnaire {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -43166,7 +43153,7 @@ class _$Questionnaire implements Questionnaire {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -43194,17 +43181,17 @@ class _$Questionnaire implements Questionnaire {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -43214,8 +43201,8 @@ class _$Questionnaire implements Questionnaire {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -43278,7 +43265,7 @@ class _$Questionnaire implements Questionnaire {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -43290,16 +43277,16 @@ class _$Questionnaire implements Questionnaire {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -43468,7 +43455,7 @@ class _$Questionnaire implements Questionnaire {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -43478,7 +43465,7 @@ class _$Questionnaire implements Questionnaire {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -43494,20 +43481,20 @@ class _$Questionnaire implements Questionnaire {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -43515,7 +43502,7 @@ class _$Questionnaire implements Questionnaire {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -43608,7 +43595,7 @@ class _$Questionnaire implements Questionnaire {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -43648,7 +43635,7 @@ class _$Questionnaire implements Questionnaire {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -43660,7 +43647,7 @@ class _$Questionnaire implements Questionnaire {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -43672,7 +43659,7 @@ class _$Questionnaire implements Questionnaire {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -43728,8 +43715,8 @@ class _$Questionnaire implements Questionnaire {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -43740,7 +43727,7 @@ class _$Questionnaire implements Questionnaire {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -43766,17 +43753,17 @@ class _$Questionnaire implements Questionnaire {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -43786,8 +43773,8 @@ class _$Questionnaire implements Questionnaire {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -43841,7 +43828,7 @@ class _$Questionnaire implements Questionnaire {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -43852,16 +43839,16 @@ class _$Questionnaire implements Questionnaire {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -44121,7 +44108,7 @@ abstract class Questionnaire implements DefinitionalArtifacts {
       Date lastReviewDate,
       Period effectivePeriod,
       List<dynamic> code,
-      List<QuestionnaireItem> item}) = _$Questionnaire;
+      List<dynamic> item}) = _$Questionnaire;
 
   factory Questionnaire.fromJson(Map<String, dynamic> json) =
       _$Questionnaire.fromJson;
@@ -44158,7 +44145,7 @@ abstract class Questionnaire implements DefinitionalArtifacts {
   Date get lastReviewDate;
   Period get effectivePeriod;
   List<dynamic> get code;
-  List<QuestionnaireItem> get item;
+  List<dynamic> get item;
   @override
   $QuestionnaireCopyWith<Questionnaire> get copyWith;
 }
@@ -44179,16 +44166,16 @@ abstract class $QuestionnaireItemCopyWith<$Res>
       String prefix,
       String text,
       QuestionnaireItemType type,
-      List<QuestionnaireEnableWhen> enableWhen,
+      List<dynamic> enableWhen,
       QuestionnaireItemEnableBehavior enableBehavior,
       bool required,
       bool repeats,
       bool readOnly,
       int maxLength,
       Canonical answerValueSet,
-      List<QuestionnaireAnswerOption> answerOption,
-      List<QuestionnaireInitial> initial,
-      List<QuestionnaireItem> item});
+      List<dynamic> answerOption,
+      List<dynamic> initial,
+      List<dynamic> item});
 }
 
 class _$QuestionnaireItemCopyWithImpl<$Res>
@@ -44239,7 +44226,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as QuestionnaireItemType,
       enableWhen: enableWhen == freezed
           ? _value.enableWhen
-          : enableWhen as List<QuestionnaireEnableWhen>,
+          : enableWhen as List<dynamic>,
       enableBehavior: enableBehavior == freezed
           ? _value.enableBehavior
           : enableBehavior as QuestionnaireItemEnableBehavior,
@@ -44252,11 +44239,9 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
           : answerValueSet as Canonical,
       answerOption: answerOption == freezed
           ? _value.answerOption
-          : answerOption as List<QuestionnaireAnswerOption>,
-      initial: initial == freezed
-          ? _value.initial
-          : initial as List<QuestionnaireInitial>,
-      item: item == freezed ? _value.item : item as List<QuestionnaireItem>,
+          : answerOption as List<dynamic>,
+      initial: initial == freezed ? _value.initial : initial as List<dynamic>,
+      item: item == freezed ? _value.item : item as List<dynamic>,
     ));
   }
 }
@@ -44306,7 +44291,7 @@ class _$QuestionnaireItem implements QuestionnaireItem {
   @override
   final QuestionnaireItemType type;
   @override
-  final List<QuestionnaireEnableWhen> enableWhen;
+  final List<dynamic> enableWhen;
   @override
   final QuestionnaireItemEnableBehavior enableBehavior;
   @override
@@ -44320,11 +44305,11 @@ class _$QuestionnaireItem implements QuestionnaireItem {
   @override
   final Canonical answerValueSet;
   @override
-  final List<QuestionnaireAnswerOption> answerOption;
+  final List<dynamic> answerOption;
   @override
-  final List<QuestionnaireInitial> initial;
+  final List<dynamic> initial;
   @override
-  final List<QuestionnaireItem> item;
+  final List<dynamic> item;
 
   @override
   String toString() {
@@ -44470,7 +44455,7 @@ class _$QuestionnaireItem implements QuestionnaireItem {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -44480,7 +44465,7 @@ class _$QuestionnaireItem implements QuestionnaireItem {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -44503,20 +44488,20 @@ class _$QuestionnaireItem implements QuestionnaireItem {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -44524,7 +44509,7 @@ class _$QuestionnaireItem implements QuestionnaireItem {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -44629,7 +44614,7 @@ class _$QuestionnaireItem implements QuestionnaireItem {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -44672,7 +44657,7 @@ class _$QuestionnaireItem implements QuestionnaireItem {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -44685,7 +44670,7 @@ class _$QuestionnaireItem implements QuestionnaireItem {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -44698,7 +44683,7 @@ class _$QuestionnaireItem implements QuestionnaireItem {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -44757,8 +44742,8 @@ class _$QuestionnaireItem implements QuestionnaireItem {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -44770,7 +44755,7 @@ class _$QuestionnaireItem implements QuestionnaireItem {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -44798,17 +44783,17 @@ class _$QuestionnaireItem implements QuestionnaireItem {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -44818,8 +44803,8 @@ class _$QuestionnaireItem implements QuestionnaireItem {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -44882,7 +44867,7 @@ class _$QuestionnaireItem implements QuestionnaireItem {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -44894,16 +44879,16 @@ class _$QuestionnaireItem implements QuestionnaireItem {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -45060,7 +45045,7 @@ class _$QuestionnaireItem implements QuestionnaireItem {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -45070,7 +45055,7 @@ class _$QuestionnaireItem implements QuestionnaireItem {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -45086,20 +45071,20 @@ class _$QuestionnaireItem implements QuestionnaireItem {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -45107,7 +45092,7 @@ class _$QuestionnaireItem implements QuestionnaireItem {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -45200,7 +45185,7 @@ class _$QuestionnaireItem implements QuestionnaireItem {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -45240,7 +45225,7 @@ class _$QuestionnaireItem implements QuestionnaireItem {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -45252,7 +45237,7 @@ class _$QuestionnaireItem implements QuestionnaireItem {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -45264,7 +45249,7 @@ class _$QuestionnaireItem implements QuestionnaireItem {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -45320,8 +45305,8 @@ class _$QuestionnaireItem implements QuestionnaireItem {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -45332,7 +45317,7 @@ class _$QuestionnaireItem implements QuestionnaireItem {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -45358,17 +45343,17 @@ class _$QuestionnaireItem implements QuestionnaireItem {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -45378,8 +45363,8 @@ class _$QuestionnaireItem implements QuestionnaireItem {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -45433,7 +45418,7 @@ class _$QuestionnaireItem implements QuestionnaireItem {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -45444,16 +45429,16 @@ class _$QuestionnaireItem implements QuestionnaireItem {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -45681,16 +45666,16 @@ abstract class QuestionnaireItem implements DefinitionalArtifacts {
       String prefix,
       String text,
       QuestionnaireItemType type,
-      List<QuestionnaireEnableWhen> enableWhen,
+      List<dynamic> enableWhen,
       QuestionnaireItemEnableBehavior enableBehavior,
       bool required,
       bool repeats,
       bool readOnly,
       int maxLength,
       Canonical answerValueSet,
-      List<QuestionnaireAnswerOption> answerOption,
-      List<QuestionnaireInitial> initial,
-      List<QuestionnaireItem> item}) = _$QuestionnaireItem;
+      List<dynamic> answerOption,
+      List<dynamic> initial,
+      List<dynamic> item}) = _$QuestionnaireItem;
 
   factory QuestionnaireItem.fromJson(Map<String, dynamic> json) =
       _$QuestionnaireItem.fromJson;
@@ -45706,16 +45691,16 @@ abstract class QuestionnaireItem implements DefinitionalArtifacts {
   String get prefix;
   String get text;
   QuestionnaireItemType get type;
-  List<QuestionnaireEnableWhen> get enableWhen;
+  List<dynamic> get enableWhen;
   QuestionnaireItemEnableBehavior get enableBehavior;
   bool get required;
   bool get repeats;
   bool get readOnly;
   int get maxLength;
   Canonical get answerValueSet;
-  List<QuestionnaireAnswerOption> get answerOption;
-  List<QuestionnaireInitial> get initial;
-  List<QuestionnaireItem> get item;
+  List<dynamic> get answerOption;
+  List<dynamic> get initial;
+  List<dynamic> get item;
   @override
   $QuestionnaireItemCopyWith<QuestionnaireItem> get copyWith;
 }
@@ -46003,7 +45988,7 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -46013,7 +45998,7 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -46036,20 +46021,20 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -46057,7 +46042,7 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -46162,7 +46147,7 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -46205,7 +46190,7 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -46218,7 +46203,7 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -46231,7 +46216,7 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -46290,8 +46275,8 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -46303,7 +46288,7 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -46331,17 +46316,17 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -46351,8 +46336,8 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -46415,7 +46400,7 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -46427,16 +46412,16 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -46589,7 +46574,7 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -46599,7 +46584,7 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -46615,20 +46600,20 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -46636,7 +46621,7 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -46729,7 +46714,7 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -46769,7 +46754,7 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -46781,7 +46766,7 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -46793,7 +46778,7 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -46849,8 +46834,8 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -46861,7 +46846,7 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -46887,17 +46872,17 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -46907,8 +46892,8 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -46962,7 +46947,7 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -46973,16 +46958,16 @@ class _$QuestionnaireEnableWhen implements QuestionnaireEnableWhen {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -47458,7 +47443,7 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -47468,7 +47453,7 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -47491,20 +47476,20 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -47512,7 +47497,7 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -47617,7 +47602,7 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -47660,7 +47645,7 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -47673,7 +47658,7 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -47686,7 +47671,7 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -47745,8 +47730,8 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -47758,7 +47743,7 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -47786,17 +47771,17 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -47806,8 +47791,8 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -47870,7 +47855,7 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -47882,16 +47867,16 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -48039,7 +48024,7 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -48049,7 +48034,7 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -48065,20 +48050,20 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -48086,7 +48071,7 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -48179,7 +48164,7 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -48219,7 +48204,7 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -48231,7 +48216,7 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -48243,7 +48228,7 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -48299,8 +48284,8 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -48311,7 +48296,7 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -48337,17 +48322,17 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -48357,8 +48342,8 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -48412,7 +48397,7 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -48423,16 +48408,16 @@ class _$QuestionnaireAnswerOption implements QuestionnaireAnswerOption {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,
@@ -48949,7 +48934,7 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
             Range timingRange,
             Duration timingDuration,
             Reference location,
-            List<ActivityDefinitionParticipant> participant,
+            List<dynamic> participant,
             Reference productReference,
             CodeableConcept productCodeableConcept,
             Quantity quantity,
@@ -48959,7 +48944,7 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
             List<dynamic> observationRequirement,
             List<dynamic> observationResultRequirement,
             Canonical transform,
-            List<ActivityDefinitionDynamicValue> dynamicValue),
+            List<dynamic> dynamicValue),
     @required
         Result activityDefinitionParticipant(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code type, CodeableConcept role),
@@ -48982,20 +48967,20 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             List<dynamic> identifier,
-            List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+            List<dynamic> udiDeviceIdentifier,
             String manufacturerString,
             Reference manufacturerReference,
-            List<DeviceDefinitionDeviceName> deviceName,
+            List<dynamic> deviceName,
             String modelNumber,
             CodeableConcept type,
-            List<DeviceDefinitionSpecialization> specialization,
+            List<dynamic> specialization,
             List<String> version,
             List<dynamic> safety,
             List<dynamic> shelfLifeStorage,
             ProdCharacteristic physicalCharacteristics,
             List<dynamic> languageCode,
-            List<DeviceDefinitionCapability> capability,
-            List<DeviceDefinitionProperty> property,
+            List<dynamic> capability,
+            List<dynamic> property,
             Reference owner,
             List<dynamic> contact,
             FhirUri url,
@@ -49003,7 +48988,7 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
             List<dynamic> note,
             Quantity quantity,
             Reference parentDevice,
-            List<DeviceDefinitionMaterial> material),
+            List<dynamic> material),
     @required
         Result deviceDefinitionUdiDeviceIdentifier(
             String id,
@@ -49108,7 +49093,7 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
             CodeableConcept method,
             String preferredReportName,
             ObservationDefinitionQuantitativeDetails quantitativeDetails,
-            List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+            List<dynamic> qualifiedInterval,
             Reference validCodedValueSet,
             Reference normalCodedValueSet,
             Reference abnormalCodedValueSet,
@@ -49151,7 +49136,7 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
             List<dynamic> patientPreparation,
             String timeAspect,
             List<dynamic> collection,
-            List<SpecimenDefinitionTypeTested> typeTested),
+            List<dynamic> typeTested),
     @required
         Result specimenDefinitionTypeTested(
             String id,
@@ -49164,7 +49149,7 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
             String requirement,
             Duration retentionTime,
             List<dynamic> rejectionCriterion,
-            List<SpecimenDefinitionHandling> handling),
+            List<dynamic> handling),
     @required
         Result specimenDefinitionContainer(
             String id,
@@ -49177,7 +49162,7 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
             Quantity capacity,
             Quantity minimumVolumeQuantity,
             String minimumVolumeString,
-            List<SpecimenDefinitionAdditive> additive,
+            List<dynamic> additive,
             String preparation),
     @required
         Result specimenDefinitionAdditive(
@@ -49236,8 +49221,8 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
             List<dynamic> endorser,
             List<dynamic> relatedArtifact,
             List<Canonical> library,
-            List<PlanDefinitionGoal> goal,
-            List<PlanDefinitionAction> action),
+            List<dynamic> goal,
+            List<dynamic> action),
     @required
         Result planDefinitionGoal(
             String id,
@@ -49249,7 +49234,7 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
             CodeableConcept start,
             List<dynamic> addresses,
             List<dynamic> documentation,
-            List<PlanDefinitionTarget> target),
+            List<dynamic> target),
     @required
         Result planDefinitionTarget(
             String id,
@@ -49277,17 +49262,17 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
             CodeableConcept subjectCodeableConcept,
             Reference subjectReference,
             List<dynamic> trigger,
-            List<PlanDefinitionCondition> condition,
+            List<dynamic> condition,
             List<dynamic> input,
             List<dynamic> output,
-            List<PlanDefinitionRelatedAction> relatedAction,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
             Duration timingDuration,
             Range timingRange,
             Timing timingTiming,
-            List<PlanDefinitionParticipant> participant,
+            List<dynamic> participant,
             CodeableConcept type,
             PlanDefinitionActionGroupingBehavior groupingBehavior,
             PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -49297,8 +49282,8 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
             Canonical definitionCanonical,
             FhirUri definitionUri,
             Canonical transform,
-            List<PlanDefinitionDynamicValue> dynamicValue,
-            List<PlanDefinitionAction> action),
+            List<dynamic> dynamicValue,
+            List<dynamic> action),
     @required
         Result planDefinitionCondition(
             String id,
@@ -49361,7 +49346,7 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
             Date lastReviewDate,
             Period effectivePeriod,
             List<dynamic> code,
-            List<QuestionnaireItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireItem(
             String id,
@@ -49373,16 +49358,16 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
             String prefix,
             String text,
             QuestionnaireItemType type,
-            List<QuestionnaireEnableWhen> enableWhen,
+            List<dynamic> enableWhen,
             QuestionnaireItemEnableBehavior enableBehavior,
             bool required,
             bool repeats,
             bool readOnly,
             int maxLength,
             Canonical answerValueSet,
-            List<QuestionnaireAnswerOption> answerOption,
-            List<QuestionnaireInitial> initial,
-            List<QuestionnaireItem> item),
+            List<dynamic> answerOption,
+            List<dynamic> initial,
+            List<dynamic> item),
     @required
         Result questionnaireEnableWhen(
             String id,
@@ -49535,7 +49520,7 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
         Range timingRange,
         Duration timingDuration,
         Reference location,
-        List<ActivityDefinitionParticipant> participant,
+        List<dynamic> participant,
         Reference productReference,
         CodeableConcept productCodeableConcept,
         Quantity quantity,
@@ -49545,7 +49530,7 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
         List<dynamic> observationRequirement,
         List<dynamic> observationResultRequirement,
         Canonical transform,
-        List<ActivityDefinitionDynamicValue> dynamicValue),
+        List<dynamic> dynamicValue),
     Result activityDefinitionParticipant(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code type, CodeableConcept role),
     Result activityDefinitionDynamicValue(String id, List<dynamic> extension,
@@ -49561,20 +49546,20 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         List<dynamic> identifier,
-        List<DeviceDefinitionUdiDeviceIdentifier> udiDeviceIdentifier,
+        List<dynamic> udiDeviceIdentifier,
         String manufacturerString,
         Reference manufacturerReference,
-        List<DeviceDefinitionDeviceName> deviceName,
+        List<dynamic> deviceName,
         String modelNumber,
         CodeableConcept type,
-        List<DeviceDefinitionSpecialization> specialization,
+        List<dynamic> specialization,
         List<String> version,
         List<dynamic> safety,
         List<dynamic> shelfLifeStorage,
         ProdCharacteristic physicalCharacteristics,
         List<dynamic> languageCode,
-        List<DeviceDefinitionCapability> capability,
-        List<DeviceDefinitionProperty> property,
+        List<dynamic> capability,
+        List<dynamic> property,
         Reference owner,
         List<dynamic> contact,
         FhirUri url,
@@ -49582,7 +49567,7 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
         List<dynamic> note,
         Quantity quantity,
         Reference parentDevice,
-        List<DeviceDefinitionMaterial> material),
+        List<dynamic> material),
     Result deviceDefinitionUdiDeviceIdentifier(
         String id,
         List<dynamic> extension,
@@ -49675,7 +49660,7 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
         CodeableConcept method,
         String preferredReportName,
         ObservationDefinitionQuantitativeDetails quantitativeDetails,
-        List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
+        List<dynamic> qualifiedInterval,
         Reference validCodedValueSet,
         Reference normalCodedValueSet,
         Reference abnormalCodedValueSet,
@@ -49715,7 +49700,7 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
         List<dynamic> patientPreparation,
         String timeAspect,
         List<dynamic> collection,
-        List<SpecimenDefinitionTypeTested> typeTested),
+        List<dynamic> typeTested),
     Result specimenDefinitionTypeTested(
         String id,
         List<dynamic> extension,
@@ -49727,7 +49712,7 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
         String requirement,
         Duration retentionTime,
         List<dynamic> rejectionCriterion,
-        List<SpecimenDefinitionHandling> handling),
+        List<dynamic> handling),
     Result specimenDefinitionContainer(
         String id,
         List<dynamic> extension,
@@ -49739,7 +49724,7 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
         Quantity capacity,
         Quantity minimumVolumeQuantity,
         String minimumVolumeString,
-        List<SpecimenDefinitionAdditive> additive,
+        List<dynamic> additive,
         String preparation),
     Result specimenDefinitionAdditive(
         String id,
@@ -49795,8 +49780,8 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
         List<dynamic> endorser,
         List<dynamic> relatedArtifact,
         List<Canonical> library,
-        List<PlanDefinitionGoal> goal,
-        List<PlanDefinitionAction> action),
+        List<dynamic> goal,
+        List<dynamic> action),
     Result planDefinitionGoal(
         String id,
         List<dynamic> extension,
@@ -49807,7 +49792,7 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
         CodeableConcept start,
         List<dynamic> addresses,
         List<dynamic> documentation,
-        List<PlanDefinitionTarget> target),
+        List<dynamic> target),
     Result planDefinitionTarget(
         String id,
         List<dynamic> extension,
@@ -49833,17 +49818,17 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
         CodeableConcept subjectCodeableConcept,
         Reference subjectReference,
         List<dynamic> trigger,
-        List<PlanDefinitionCondition> condition,
+        List<dynamic> condition,
         List<dynamic> input,
         List<dynamic> output,
-        List<PlanDefinitionRelatedAction> relatedAction,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
         Duration timingDuration,
         Range timingRange,
         Timing timingTiming,
-        List<PlanDefinitionParticipant> participant,
+        List<dynamic> participant,
         CodeableConcept type,
         PlanDefinitionActionGroupingBehavior groupingBehavior,
         PlanDefinitionActionSelectionBehavior selectionBehavior,
@@ -49853,8 +49838,8 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
         Canonical definitionCanonical,
         FhirUri definitionUri,
         Canonical transform,
-        List<PlanDefinitionDynamicValue> dynamicValue,
-        List<PlanDefinitionAction> action),
+        List<dynamic> dynamicValue,
+        List<dynamic> action),
     Result planDefinitionCondition(
         String id,
         List<dynamic> extension,
@@ -49908,7 +49893,7 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
         Date lastReviewDate,
         Period effectivePeriod,
         List<dynamic> code,
-        List<QuestionnaireItem> item),
+        List<dynamic> item),
     Result questionnaireItem(
         String id,
         List<dynamic> extension,
@@ -49919,16 +49904,16 @@ class _$QuestionnaireInitial implements QuestionnaireInitial {
         String prefix,
         String text,
         QuestionnaireItemType type,
-        List<QuestionnaireEnableWhen> enableWhen,
+        List<dynamic> enableWhen,
         QuestionnaireItemEnableBehavior enableBehavior,
         bool required,
         bool repeats,
         bool readOnly,
         int maxLength,
         Canonical answerValueSet,
-        List<QuestionnaireAnswerOption> answerOption,
-        List<QuestionnaireInitial> initial,
-        List<QuestionnaireItem> item),
+        List<dynamic> answerOption,
+        List<dynamic> initial,
+        List<dynamic> item),
     Result questionnaireEnableWhen(
         String id,
         List<dynamic> extension,

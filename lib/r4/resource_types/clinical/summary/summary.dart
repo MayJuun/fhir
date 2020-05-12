@@ -16,8 +16,8 @@ const factory Summary.clinicalImpression({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Code status,
   CodeableConcept statusReason,
@@ -44,8 +44,8 @@ const factory Summary.clinicalImpression({
 
 const factory Summary.clinicalImpressionInvestigation({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   List<Reference> item,
 
@@ -53,8 +53,8 @@ const factory Summary.clinicalImpressionInvestigation({
 
 const factory Summary.clinicalImpressionFinding({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept itemCodeableConcept,
   Reference itemReference,
   String basis,
@@ -69,8 +69,8 @@ const factory Summary.allergyIntolerance({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   CodeableConcept clinicalStatus,
   CodeableConcept verificationStatus,
@@ -96,8 +96,8 @@ const factory Summary.allergyIntolerance({
 
 const factory Summary.allergyIntoleranceReaction({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept substance,
   List<CodeableConcept> manifestation,
   String description,
@@ -116,8 +116,8 @@ const factory Summary.adverseEvent({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Identifier identifier,
   AdverseEventActuality actuality,
   List<CodeableConcept> category,
@@ -143,8 +143,8 @@ const factory Summary.adverseEvent({
 
 const factory Summary.adverseEventSuspectEntity({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference instance,
   List<AdverseEventCausality> causality,
 
@@ -152,8 +152,8 @@ const factory Summary.adverseEventSuspectEntity({
 
 const factory Summary.adverseEventCausality({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept assessment,
   String productRelatedness,
   Reference author,
@@ -169,8 +169,8 @@ const factory Summary.familyMemberHistory({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   List<Canonical> instantiatesCanonical,
   List<FhirUri> instantiatesUri,
@@ -202,8 +202,8 @@ const factory Summary.familyMemberHistory({
 
 const factory Summary.familyMemberHistoryCondition({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   CodeableConcept outcome,
   bool contributedToDeath,
@@ -223,8 +223,8 @@ const factory Summary.detectedIssue({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Code status,
   CodeableConcept code,
@@ -243,8 +243,8 @@ const factory Summary.detectedIssue({
 
 const factory Summary.detectedIssueEvidence({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<CodeableConcept> code,
   List<Reference> detail,
 
@@ -252,8 +252,8 @@ const factory Summary.detectedIssueEvidence({
 
 const factory Summary.detectedIssueMitigation({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept action,
   FhirDateTime date,
   Reference author,
@@ -268,8 +268,8 @@ const factory Summary.condition({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   CodeableConcept clinicalStatus,
   CodeableConcept verificationStatus,
@@ -300,8 +300,8 @@ const factory Summary.condition({
 
 const factory Summary.conditionStage({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept summary,
   List<Reference> assessment,
   CodeableConcept type,
@@ -310,8 +310,8 @@ const factory Summary.conditionStage({
 
 const factory Summary.conditionEvidence({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<CodeableConcept> code,
   List<Reference> detail,
 
@@ -325,8 +325,8 @@ const factory Summary.procedure({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   List<Canonical> instantiatesCanonical,
   List<FhirUri> instantiatesUri,
@@ -364,8 +364,8 @@ const factory Summary.procedure({
 
 const factory Summary.procedurePerformer({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept function,
   Reference actor,
   Reference onBehalfOf,
@@ -374,8 +374,8 @@ const factory Summary.procedurePerformer({
 
 const factory Summary.procedureFocalDevice({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept action,
   Reference manipulated,
 

@@ -16,8 +16,8 @@ const factory Security.auditEvent({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Coding type,
   List<Coding> subtype,
   AuditEventAction action,
@@ -34,8 +34,8 @@ const factory Security.auditEvent({
 
 const factory Security.auditEventAgent({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   List<CodeableConcept> role,
   Reference who,
@@ -52,8 +52,8 @@ const factory Security.auditEventAgent({
 
 const factory Security.auditEventNetwork({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String address,
   AuditEventNetworkType type,
 
@@ -61,8 +61,8 @@ const factory Security.auditEventNetwork({
 
 const factory Security.auditEventSource({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String site,
   Reference observer,
   List<Coding> type,
@@ -71,8 +71,8 @@ const factory Security.auditEventSource({
 
 const factory Security.auditEventEntity({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference what,
   Coding type,
   Coding role,
@@ -87,8 +87,8 @@ const factory Security.auditEventEntity({
 
 const factory Security.auditEventDetail({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String type,
   Markdown valueString,
   Base64Binary valueBase64Binary,
@@ -103,8 +103,8 @@ const factory Security.consent({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   ConsentStatus status,
   CodeableConcept scope,
@@ -124,8 +124,8 @@ const factory Security.consent({
 
 const factory Security.consentPolicy({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri authority,
   FhirUri uri,
 
@@ -133,8 +133,8 @@ const factory Security.consentPolicy({
 
 const factory Security.consentVerification({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   bool verified,
   Reference verifiedWith,
   FhirDateTime verificationDate,
@@ -143,8 +143,8 @@ const factory Security.consentVerification({
 
 const factory Security.consentProvision({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   ConsentProvisionType type,
   Period period,
   List<ConsentActor> actor,
@@ -161,8 +161,8 @@ const factory Security.consentProvision({
 
 const factory Security.consentActor({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept role,
   Reference reference,
 
@@ -170,8 +170,8 @@ const factory Security.consentActor({
 
 const factory Security.consentData({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   ConsentDataMeaning meaning,
   Reference reference,
 
@@ -185,8 +185,8 @@ const factory Security.provenance({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Reference> target,
   Period occurredPeriod,
   FhirDateTime occurredDateTime,
@@ -203,8 +203,8 @@ const factory Security.provenance({
 
 const factory Security.provenanceAgent({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   List<CodeableConcept> role,
   Reference who,
@@ -214,8 +214,8 @@ const factory Security.provenanceAgent({
 
 const factory Security.provenanceEntity({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   ProvenanceEntityRole role,
   Reference what,
   List<ProvenanceAgent> agent,

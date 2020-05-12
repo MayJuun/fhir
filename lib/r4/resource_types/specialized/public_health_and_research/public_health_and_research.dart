@@ -7,7 +7,7 @@ part 'public_health_and_research.g.dart';
 part 'public_health_and_research.freezed.dart';
 
 @freezed
-abstract class PublicHealthAndResearch with _$PublicHealthAndResearch {
+abstract class PublicHealthAndResearch with _$ rch {
 const factory PublicHealthAndResearch.researchStudy({
   String resourceType,
   Id id,
@@ -16,8 +16,8 @@ const factory PublicHealthAndResearch.researchStudy({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   String title,
   List<Reference> protocol,
@@ -47,8 +47,8 @@ const factory PublicHealthAndResearch.researchStudy({
 
 const factory PublicHealthAndResearch.researchStudyArm({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String name,
   CodeableConcept type,
   String description,
@@ -57,8 +57,8 @@ const factory PublicHealthAndResearch.researchStudyArm({
 
 const factory PublicHealthAndResearch.researchStudyObjective({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String name,
   CodeableConcept type,
 
@@ -72,8 +72,8 @@ const factory PublicHealthAndResearch.researchSubject({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   ResearchSubjectStatus status,
   Period period,

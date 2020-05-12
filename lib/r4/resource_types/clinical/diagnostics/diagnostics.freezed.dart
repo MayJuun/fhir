@@ -102,7 +102,7 @@ class _$DiagnosticsTearOff {
       List<dynamic> reasonReference,
       List<dynamic> note,
       String description,
-      List<ImagingStudySeries> series}) {
+      List<dynamic> series}) {
     return ImagingStudy(
       resourceType: resourceType,
       id: id,
@@ -150,8 +150,8 @@ class _$DiagnosticsTearOff {
       Coding laterality,
       List<dynamic> specimen,
       FhirDateTime started,
-      List<ImagingStudyPerformer> performer,
-      List<ImagingStudyInstance> instance}) {
+      List<dynamic> performer,
+      List<dynamic> instance}) {
     return ImagingStudySeries(
       id: id,
       extension: extension,
@@ -224,8 +224,8 @@ class _$DiagnosticsTearOff {
       List<dynamic> parent,
       List<dynamic> request,
       SpecimenCollection collection,
-      List<SpecimenProcessing> processing,
-      List<SpecimenContainer> container,
+      List<dynamic> processing,
+      List<dynamic> container,
       List<dynamic> condition,
       List<dynamic> note}) {
     return Specimen(
@@ -348,13 +348,13 @@ class _$DiagnosticsTearOff {
       Reference performer,
       Quantity quantity,
       MolecularSequenceReferenceSeq referenceSeq,
-      List<MolecularSequenceVariant> variant,
+      List<dynamic> variant,
       String observedSeq,
-      List<MolecularSequenceQuality> quality,
+      List<dynamic> quality,
       int readCoverage,
-      List<MolecularSequenceRepository> repository,
+      List<dynamic> repository,
       List<dynamic> pointer,
-      List<MolecularSequenceStructureVariant> structureVariant}) {
+      List<dynamic> structureVariant}) {
     return MolecularSequence(
       resourceType: resourceType,
       id: id,
@@ -619,10 +619,10 @@ class _$DiagnosticsTearOff {
       CodeableConcept method,
       Reference specimen,
       Reference device,
-      List<ObservationReferenceRange> referenceRange,
+      List<dynamic> referenceRange,
       List<dynamic> hasMember,
       List<dynamic> derivedFrom,
-      List<ObservationComponent> component}) {
+      List<dynamic> component}) {
     return Observation(
       resourceType: resourceType,
       id: id,
@@ -714,7 +714,7 @@ class _$DiagnosticsTearOff {
       Period valuePeriod,
       CodeableConcept dataAbsentReason,
       List<dynamic> interpretation,
-      List<ObservationReferenceRange> referenceRange}) {
+      List<dynamic> referenceRange}) {
     return ObservationComponent(
       id: id,
       extension: extension,
@@ -796,7 +796,7 @@ class _$DiagnosticsTearOff {
       FhirDateTime authored,
       Reference author,
       Reference source,
-      List<QuestionnaireResponseItem> item}) {
+      List<dynamic> item}) {
     return QuestionnaireResponse(
       resourceType: resourceType,
       id: id,
@@ -828,8 +828,8 @@ class _$DiagnosticsTearOff {
       String linkId,
       FhirUri definition,
       String text,
-      List<QuestionnaireResponseAnswer> answer,
-      List<QuestionnaireResponseItem> item}) {
+      List<dynamic> answer,
+      List<dynamic> item}) {
     return QuestionnaireResponseItem(
       id: id,
       extension: extension,
@@ -858,7 +858,7 @@ class _$DiagnosticsTearOff {
       Coding valueCoding,
       Quantity valueQuantity,
       Reference valueReference,
-      List<QuestionnaireResponseItem> item}) {
+      List<dynamic> item}) {
     return QuestionnaireResponseAnswer(
       id: id,
       extension: extension,
@@ -904,7 +904,7 @@ class _$DiagnosticsTearOff {
       List<dynamic> specimen,
       List<dynamic> result,
       List<dynamic> imagingStudy,
-      List<DiagnosticReportMedia> media,
+      List<dynamic> media,
       String conclusion,
       List<dynamic> conclusionCode,
       List<dynamic> presentedForm}) {
@@ -1064,7 +1064,7 @@ mixin _$Diagnostics {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -1080,8 +1080,8 @@ mixin _$Diagnostics {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -1118,8 +1118,8 @@ mixin _$Diagnostics {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -1178,13 +1178,13 @@ mixin _$Diagnostics {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -1313,10 +1313,10 @@ mixin _$Diagnostics {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -1347,7 +1347,7 @@ mixin _$Diagnostics {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -1388,7 +1388,7 @@ mixin _$Diagnostics {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -1397,8 +1397,8 @@ mixin _$Diagnostics {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -1416,7 +1416,7 @@ mixin _$Diagnostics {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -1443,7 +1443,7 @@ mixin _$Diagnostics {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -1516,7 +1516,7 @@ mixin _$Diagnostics {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -1531,8 +1531,8 @@ mixin _$Diagnostics {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -1566,8 +1566,8 @@ mixin _$Diagnostics {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -1622,13 +1622,13 @@ mixin _$Diagnostics {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -1748,10 +1748,10 @@ mixin _$Diagnostics {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -1780,7 +1780,7 @@ mixin _$Diagnostics {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -1819,7 +1819,7 @@ mixin _$Diagnostics {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -1827,8 +1827,8 @@ mixin _$Diagnostics {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -1845,7 +1845,7 @@ mixin _$Diagnostics {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -1871,7 +1871,7 @@ mixin _$Diagnostics {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -2048,7 +2048,7 @@ abstract class $ImagingStudyCopyWith<$Res>
       List<dynamic> reasonReference,
       List<dynamic> note,
       String description,
-      List<ImagingStudySeries> series});
+      List<dynamic> series});
 }
 
 class _$ImagingStudyCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
@@ -2149,9 +2149,7 @@ class _$ImagingStudyCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
       note: note == freezed ? _value.note : note as List<dynamic>,
       description:
           description == freezed ? _value.description : description as String,
-      series: series == freezed
-          ? _value.series
-          : series as List<ImagingStudySeries>,
+      series: series == freezed ? _value.series : series as List<dynamic>,
     ));
   }
 }
@@ -2249,7 +2247,7 @@ class _$ImagingStudy implements ImagingStudy {
   @override
   final String description;
   @override
-  final List<ImagingStudySeries> series;
+  final List<dynamic> series;
 
   @override
   String toString() {
@@ -2404,7 +2402,7 @@ class _$ImagingStudy implements ImagingStudy {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -2420,8 +2418,8 @@ class _$ImagingStudy implements ImagingStudy {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -2458,8 +2456,8 @@ class _$ImagingStudy implements ImagingStudy {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -2518,13 +2516,13 @@ class _$ImagingStudy implements ImagingStudy {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -2653,10 +2651,10 @@ class _$ImagingStudy implements ImagingStudy {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -2687,7 +2685,7 @@ class _$ImagingStudy implements ImagingStudy {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -2728,7 +2726,7 @@ class _$ImagingStudy implements ImagingStudy {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -2737,8 +2735,8 @@ class _$ImagingStudy implements ImagingStudy {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -2756,7 +2754,7 @@ class _$ImagingStudy implements ImagingStudy {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -2783,7 +2781,7 @@ class _$ImagingStudy implements ImagingStudy {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -2916,7 +2914,7 @@ class _$ImagingStudy implements ImagingStudy {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -2931,8 +2929,8 @@ class _$ImagingStudy implements ImagingStudy {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -2966,8 +2964,8 @@ class _$ImagingStudy implements ImagingStudy {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -3022,13 +3020,13 @@ class _$ImagingStudy implements ImagingStudy {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -3148,10 +3146,10 @@ class _$ImagingStudy implements ImagingStudy {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -3180,7 +3178,7 @@ class _$ImagingStudy implements ImagingStudy {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -3219,7 +3217,7 @@ class _$ImagingStudy implements ImagingStudy {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -3227,8 +3225,8 @@ class _$ImagingStudy implements ImagingStudy {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -3245,7 +3243,7 @@ class _$ImagingStudy implements ImagingStudy {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -3271,7 +3269,7 @@ class _$ImagingStudy implements ImagingStudy {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -3491,7 +3489,7 @@ abstract class ImagingStudy implements Diagnostics {
       List<dynamic> reasonReference,
       List<dynamic> note,
       String description,
-      List<ImagingStudySeries> series}) = _$ImagingStudy;
+      List<dynamic> series}) = _$ImagingStudy;
 
   factory ImagingStudy.fromJson(Map<String, dynamic> json) =
       _$ImagingStudy.fromJson;
@@ -3526,7 +3524,7 @@ abstract class ImagingStudy implements Diagnostics {
   List<dynamic> get reasonReference;
   List<dynamic> get note;
   String get description;
-  List<ImagingStudySeries> get series;
+  List<dynamic> get series;
   @override
   $ImagingStudyCopyWith<ImagingStudy> get copyWith;
 }
@@ -3551,8 +3549,8 @@ abstract class $ImagingStudySeriesCopyWith<$Res>
       Coding laterality,
       List<dynamic> specimen,
       FhirDateTime started,
-      List<ImagingStudyPerformer> performer,
-      List<ImagingStudyInstance> instance});
+      List<dynamic> performer,
+      List<dynamic> instance});
 }
 
 class _$ImagingStudySeriesCopyWithImpl<$Res>
@@ -3606,12 +3604,10 @@ class _$ImagingStudySeriesCopyWithImpl<$Res>
       specimen:
           specimen == freezed ? _value.specimen : specimen as List<dynamic>,
       started: started == freezed ? _value.started : started as FhirDateTime,
-      performer: performer == freezed
-          ? _value.performer
-          : performer as List<ImagingStudyPerformer>,
-      instance: instance == freezed
-          ? _value.instance
-          : instance as List<ImagingStudyInstance>,
+      performer:
+          performer == freezed ? _value.performer : performer as List<dynamic>,
+      instance:
+          instance == freezed ? _value.instance : instance as List<dynamic>,
     ));
   }
 }
@@ -3665,9 +3661,9 @@ class _$ImagingStudySeries implements ImagingStudySeries {
   @override
   final FhirDateTime started;
   @override
-  final List<ImagingStudyPerformer> performer;
+  final List<dynamic> performer;
   @override
-  final List<ImagingStudyInstance> instance;
+  final List<dynamic> instance;
 
   @override
   String toString() {
@@ -3778,7 +3774,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -3794,8 +3790,8 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -3832,8 +3828,8 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -3892,13 +3888,13 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -4027,10 +4023,10 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -4061,7 +4057,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -4102,7 +4098,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -4111,8 +4107,8 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -4130,7 +4126,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -4157,7 +4153,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -4276,7 +4272,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -4291,8 +4287,8 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -4326,8 +4322,8 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -4382,13 +4378,13 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -4508,10 +4504,10 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -4540,7 +4536,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -4579,7 +4575,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -4587,8 +4583,8 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -4605,7 +4601,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -4631,7 +4627,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -4823,8 +4819,8 @@ abstract class ImagingStudySeries implements Diagnostics {
       Coding laterality,
       List<dynamic> specimen,
       FhirDateTime started,
-      List<ImagingStudyPerformer> performer,
-      List<ImagingStudyInstance> instance}) = _$ImagingStudySeries;
+      List<dynamic> performer,
+      List<dynamic> instance}) = _$ImagingStudySeries;
 
   factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =
       _$ImagingStudySeries.fromJson;
@@ -4844,8 +4840,8 @@ abstract class ImagingStudySeries implements Diagnostics {
   Coding get laterality;
   List<dynamic> get specimen;
   FhirDateTime get started;
-  List<ImagingStudyPerformer> get performer;
-  List<ImagingStudyInstance> get instance;
+  List<dynamic> get performer;
+  List<dynamic> get instance;
   @override
   $ImagingStudySeriesCopyWith<ImagingStudySeries> get copyWith;
 }
@@ -4990,7 +4986,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -5006,8 +5002,8 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -5044,8 +5040,8 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -5104,13 +5100,13 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -5239,10 +5235,10 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -5273,7 +5269,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -5314,7 +5310,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -5323,8 +5319,8 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -5342,7 +5338,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -5369,7 +5365,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -5474,7 +5470,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -5489,8 +5485,8 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -5524,8 +5520,8 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -5580,13 +5576,13 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -5706,10 +5702,10 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -5738,7 +5734,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -5777,7 +5773,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -5785,8 +5781,8 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -5803,7 +5799,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -5829,7 +5825,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -6171,7 +6167,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -6187,8 +6183,8 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -6225,8 +6221,8 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -6285,13 +6281,13 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -6420,10 +6416,10 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -6454,7 +6450,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -6495,7 +6491,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -6504,8 +6500,8 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -6523,7 +6519,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -6550,7 +6546,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -6655,7 +6651,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -6670,8 +6666,8 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -6705,8 +6701,8 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -6761,13 +6757,13 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -6887,10 +6883,10 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -6919,7 +6915,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -6958,7 +6954,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -6966,8 +6962,8 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -6984,7 +6980,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -7010,7 +7006,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -7222,8 +7218,8 @@ abstract class $SpecimenCopyWith<$Res> implements $DiagnosticsCopyWith<$Res> {
       List<dynamic> parent,
       List<dynamic> request,
       SpecimenCollection collection,
-      List<SpecimenProcessing> processing,
-      List<SpecimenContainer> container,
+      List<dynamic> processing,
+      List<dynamic> container,
       List<dynamic> condition,
       List<dynamic> note});
 }
@@ -7298,10 +7294,9 @@ class _$SpecimenCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
           : collection as SpecimenCollection,
       processing: processing == freezed
           ? _value.processing
-          : processing as List<SpecimenProcessing>,
-      container: container == freezed
-          ? _value.container
-          : container as List<SpecimenContainer>,
+          : processing as List<dynamic>,
+      container:
+          container == freezed ? _value.container : container as List<dynamic>,
       condition:
           condition == freezed ? _value.condition : condition as List<dynamic>,
       note: note == freezed ? _value.note : note as List<dynamic>,
@@ -7375,9 +7370,9 @@ class _$Specimen implements Specimen {
   @override
   final SpecimenCollection collection;
   @override
-  final List<SpecimenProcessing> processing;
+  final List<dynamic> processing;
   @override
-  final List<SpecimenContainer> container;
+  final List<dynamic> container;
   @override
   final List<dynamic> condition;
   @override
@@ -7516,7 +7511,7 @@ class _$Specimen implements Specimen {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -7532,8 +7527,8 @@ class _$Specimen implements Specimen {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -7570,8 +7565,8 @@ class _$Specimen implements Specimen {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -7630,13 +7625,13 @@ class _$Specimen implements Specimen {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -7765,10 +7760,10 @@ class _$Specimen implements Specimen {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -7799,7 +7794,7 @@ class _$Specimen implements Specimen {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -7840,7 +7835,7 @@ class _$Specimen implements Specimen {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -7849,8 +7844,8 @@ class _$Specimen implements Specimen {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -7868,7 +7863,7 @@ class _$Specimen implements Specimen {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -7895,7 +7890,7 @@ class _$Specimen implements Specimen {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -8021,7 +8016,7 @@ class _$Specimen implements Specimen {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -8036,8 +8031,8 @@ class _$Specimen implements Specimen {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -8071,8 +8066,8 @@ class _$Specimen implements Specimen {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -8127,13 +8122,13 @@ class _$Specimen implements Specimen {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -8253,10 +8248,10 @@ class _$Specimen implements Specimen {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -8285,7 +8280,7 @@ class _$Specimen implements Specimen {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -8324,7 +8319,7 @@ class _$Specimen implements Specimen {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -8332,8 +8327,8 @@ class _$Specimen implements Specimen {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -8350,7 +8345,7 @@ class _$Specimen implements Specimen {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -8376,7 +8371,7 @@ class _$Specimen implements Specimen {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -8579,8 +8574,8 @@ abstract class Specimen implements Diagnostics {
       List<dynamic> parent,
       List<dynamic> request,
       SpecimenCollection collection,
-      List<SpecimenProcessing> processing,
-      List<SpecimenContainer> container,
+      List<dynamic> processing,
+      List<dynamic> container,
       List<dynamic> condition,
       List<dynamic> note}) = _$Specimen;
 
@@ -8606,8 +8601,8 @@ abstract class Specimen implements Diagnostics {
   List<dynamic> get parent;
   List<dynamic> get request;
   SpecimenCollection get collection;
-  List<SpecimenProcessing> get processing;
-  List<SpecimenContainer> get container;
+  List<dynamic> get processing;
+  List<dynamic> get container;
   List<dynamic> get condition;
   List<dynamic> get note;
   @override
@@ -8834,7 +8829,7 @@ class _$SpecimenCollection implements SpecimenCollection {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -8850,8 +8845,8 @@ class _$SpecimenCollection implements SpecimenCollection {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -8888,8 +8883,8 @@ class _$SpecimenCollection implements SpecimenCollection {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -8948,13 +8943,13 @@ class _$SpecimenCollection implements SpecimenCollection {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -9083,10 +9078,10 @@ class _$SpecimenCollection implements SpecimenCollection {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -9117,7 +9112,7 @@ class _$SpecimenCollection implements SpecimenCollection {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -9158,7 +9153,7 @@ class _$SpecimenCollection implements SpecimenCollection {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -9167,8 +9162,8 @@ class _$SpecimenCollection implements SpecimenCollection {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -9186,7 +9181,7 @@ class _$SpecimenCollection implements SpecimenCollection {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -9213,7 +9208,7 @@ class _$SpecimenCollection implements SpecimenCollection {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -9329,7 +9324,7 @@ class _$SpecimenCollection implements SpecimenCollection {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -9344,8 +9339,8 @@ class _$SpecimenCollection implements SpecimenCollection {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -9379,8 +9374,8 @@ class _$SpecimenCollection implements SpecimenCollection {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -9435,13 +9430,13 @@ class _$SpecimenCollection implements SpecimenCollection {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -9561,10 +9556,10 @@ class _$SpecimenCollection implements SpecimenCollection {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -9593,7 +9588,7 @@ class _$SpecimenCollection implements SpecimenCollection {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -9632,7 +9627,7 @@ class _$SpecimenCollection implements SpecimenCollection {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -9640,8 +9635,8 @@ class _$SpecimenCollection implements SpecimenCollection {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -9658,7 +9653,7 @@ class _$SpecimenCollection implements SpecimenCollection {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -9684,7 +9679,7 @@ class _$SpecimenCollection implements SpecimenCollection {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -10070,7 +10065,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -10086,8 +10081,8 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -10124,8 +10119,8 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -10184,13 +10179,13 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -10319,10 +10314,10 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -10353,7 +10348,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -10394,7 +10389,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -10403,8 +10398,8 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -10422,7 +10417,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -10449,7 +10444,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -10554,7 +10549,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -10569,8 +10564,8 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -10604,8 +10599,8 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -10660,13 +10655,13 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -10786,10 +10781,10 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -10818,7 +10813,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -10857,7 +10852,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -10865,8 +10860,8 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -10883,7 +10878,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -10909,7 +10904,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -11298,7 +11293,7 @@ class _$SpecimenContainer implements SpecimenContainer {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -11314,8 +11309,8 @@ class _$SpecimenContainer implements SpecimenContainer {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -11352,8 +11347,8 @@ class _$SpecimenContainer implements SpecimenContainer {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -11412,13 +11407,13 @@ class _$SpecimenContainer implements SpecimenContainer {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -11547,10 +11542,10 @@ class _$SpecimenContainer implements SpecimenContainer {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -11581,7 +11576,7 @@ class _$SpecimenContainer implements SpecimenContainer {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -11622,7 +11617,7 @@ class _$SpecimenContainer implements SpecimenContainer {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -11631,8 +11626,8 @@ class _$SpecimenContainer implements SpecimenContainer {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -11650,7 +11645,7 @@ class _$SpecimenContainer implements SpecimenContainer {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -11677,7 +11672,7 @@ class _$SpecimenContainer implements SpecimenContainer {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -11791,7 +11786,7 @@ class _$SpecimenContainer implements SpecimenContainer {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -11806,8 +11801,8 @@ class _$SpecimenContainer implements SpecimenContainer {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -11841,8 +11836,8 @@ class _$SpecimenContainer implements SpecimenContainer {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -11897,13 +11892,13 @@ class _$SpecimenContainer implements SpecimenContainer {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -12023,10 +12018,10 @@ class _$SpecimenContainer implements SpecimenContainer {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -12055,7 +12050,7 @@ class _$SpecimenContainer implements SpecimenContainer {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -12094,7 +12089,7 @@ class _$SpecimenContainer implements SpecimenContainer {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -12102,8 +12097,8 @@ class _$SpecimenContainer implements SpecimenContainer {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -12120,7 +12115,7 @@ class _$SpecimenContainer implements SpecimenContainer {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -12146,7 +12141,7 @@ class _$SpecimenContainer implements SpecimenContainer {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -12375,13 +12370,13 @@ abstract class $MolecularSequenceCopyWith<$Res>
       Reference performer,
       Quantity quantity,
       MolecularSequenceReferenceSeq referenceSeq,
-      List<MolecularSequenceVariant> variant,
+      List<dynamic> variant,
       String observedSeq,
-      List<MolecularSequenceQuality> quality,
+      List<dynamic> quality,
       int readCoverage,
-      List<MolecularSequenceRepository> repository,
+      List<dynamic> repository,
       List<dynamic> pointer,
-      List<MolecularSequenceStructureVariant> structureVariant});
+      List<dynamic> structureVariant});
 }
 
 class _$MolecularSequenceCopyWithImpl<$Res>
@@ -12456,23 +12451,19 @@ class _$MolecularSequenceCopyWithImpl<$Res>
       referenceSeq: referenceSeq == freezed
           ? _value.referenceSeq
           : referenceSeq as MolecularSequenceReferenceSeq,
-      variant: variant == freezed
-          ? _value.variant
-          : variant as List<MolecularSequenceVariant>,
+      variant: variant == freezed ? _value.variant : variant as List<dynamic>,
       observedSeq:
           observedSeq == freezed ? _value.observedSeq : observedSeq as String,
-      quality: quality == freezed
-          ? _value.quality
-          : quality as List<MolecularSequenceQuality>,
+      quality: quality == freezed ? _value.quality : quality as List<dynamic>,
       readCoverage:
           readCoverage == freezed ? _value.readCoverage : readCoverage as int,
       repository: repository == freezed
           ? _value.repository
-          : repository as List<MolecularSequenceRepository>,
+          : repository as List<dynamic>,
       pointer: pointer == freezed ? _value.pointer : pointer as List<dynamic>,
       structureVariant: structureVariant == freezed
           ? _value.structureVariant
-          : structureVariant as List<MolecularSequenceStructureVariant>,
+          : structureVariant as List<dynamic>,
     ));
   }
 }
@@ -12546,19 +12537,19 @@ class _$MolecularSequence implements MolecularSequence {
   @override
   final MolecularSequenceReferenceSeq referenceSeq;
   @override
-  final List<MolecularSequenceVariant> variant;
+  final List<dynamic> variant;
   @override
   final String observedSeq;
   @override
-  final List<MolecularSequenceQuality> quality;
+  final List<dynamic> quality;
   @override
   final int readCoverage;
   @override
-  final List<MolecularSequenceRepository> repository;
+  final List<dynamic> repository;
   @override
   final List<dynamic> pointer;
   @override
-  final List<MolecularSequenceStructureVariant> structureVariant;
+  final List<dynamic> structureVariant;
 
   @override
   String toString() {
@@ -12705,7 +12696,7 @@ class _$MolecularSequence implements MolecularSequence {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -12721,8 +12712,8 @@ class _$MolecularSequence implements MolecularSequence {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -12759,8 +12750,8 @@ class _$MolecularSequence implements MolecularSequence {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -12819,13 +12810,13 @@ class _$MolecularSequence implements MolecularSequence {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -12954,10 +12945,10 @@ class _$MolecularSequence implements MolecularSequence {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -12988,7 +12979,7 @@ class _$MolecularSequence implements MolecularSequence {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -13029,7 +13020,7 @@ class _$MolecularSequence implements MolecularSequence {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -13038,8 +13029,8 @@ class _$MolecularSequence implements MolecularSequence {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -13057,7 +13048,7 @@ class _$MolecularSequence implements MolecularSequence {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -13084,7 +13075,7 @@ class _$MolecularSequence implements MolecularSequence {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -13213,7 +13204,7 @@ class _$MolecularSequence implements MolecularSequence {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -13228,8 +13219,8 @@ class _$MolecularSequence implements MolecularSequence {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -13263,8 +13254,8 @@ class _$MolecularSequence implements MolecularSequence {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -13319,13 +13310,13 @@ class _$MolecularSequence implements MolecularSequence {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -13445,10 +13436,10 @@ class _$MolecularSequence implements MolecularSequence {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -13477,7 +13468,7 @@ class _$MolecularSequence implements MolecularSequence {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -13516,7 +13507,7 @@ class _$MolecularSequence implements MolecularSequence {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -13524,8 +13515,8 @@ class _$MolecularSequence implements MolecularSequence {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -13542,7 +13533,7 @@ class _$MolecularSequence implements MolecularSequence {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -13568,7 +13559,7 @@ class _$MolecularSequence implements MolecularSequence {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -13757,32 +13748,31 @@ class _$MolecularSequence implements MolecularSequence {
 
 abstract class MolecularSequence implements Diagnostics {
   const factory MolecularSequence(
-          {String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          Code language,
-          Narrative text,
-          List<dynamic> contained,
-          List<dynamic> extension,
-          List<dynamic> modifierExtension,
-          List<dynamic> identifier,
-          MolecularSequenceType type,
-          int coordinateSystem,
-          Reference patient,
-          Reference specimen,
-          Reference device,
-          Reference performer,
-          Quantity quantity,
-          MolecularSequenceReferenceSeq referenceSeq,
-          List<MolecularSequenceVariant> variant,
-          String observedSeq,
-          List<MolecularSequenceQuality> quality,
-          int readCoverage,
-          List<MolecularSequenceRepository> repository,
-          List<dynamic> pointer,
-          List<MolecularSequenceStructureVariant> structureVariant}) =
-      _$MolecularSequence;
+      {String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<dynamic> contained,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
+      MolecularSequenceType type,
+      int coordinateSystem,
+      Reference patient,
+      Reference specimen,
+      Reference device,
+      Reference performer,
+      Quantity quantity,
+      MolecularSequenceReferenceSeq referenceSeq,
+      List<dynamic> variant,
+      String observedSeq,
+      List<dynamic> quality,
+      int readCoverage,
+      List<dynamic> repository,
+      List<dynamic> pointer,
+      List<dynamic> structureVariant}) = _$MolecularSequence;
 
   factory MolecularSequence.fromJson(Map<String, dynamic> json) =
       _$MolecularSequence.fromJson;
@@ -13807,13 +13797,13 @@ abstract class MolecularSequence implements Diagnostics {
   Reference get performer;
   Quantity get quantity;
   MolecularSequenceReferenceSeq get referenceSeq;
-  List<MolecularSequenceVariant> get variant;
+  List<dynamic> get variant;
   String get observedSeq;
-  List<MolecularSequenceQuality> get quality;
+  List<dynamic> get quality;
   int get readCoverage;
-  List<MolecularSequenceRepository> get repository;
+  List<dynamic> get repository;
   List<dynamic> get pointer;
-  List<MolecularSequenceStructureVariant> get structureVariant;
+  List<dynamic> get structureVariant;
   @override
   $MolecularSequenceCopyWith<MolecularSequence> get copyWith;
 }
@@ -14044,7 +14034,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -14060,8 +14050,8 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -14098,8 +14088,8 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -14158,13 +14148,13 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -14293,10 +14283,10 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -14327,7 +14317,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -14368,7 +14358,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -14377,8 +14367,8 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -14396,7 +14386,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -14423,7 +14413,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -14539,7 +14529,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -14554,8 +14544,8 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -14589,8 +14579,8 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -14645,13 +14635,13 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -14771,10 +14761,10 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -14803,7 +14793,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -14842,7 +14832,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -14850,8 +14840,8 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -14868,7 +14858,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -14894,7 +14884,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -15289,7 +15279,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -15305,8 +15295,8 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -15343,8 +15333,8 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -15403,13 +15393,13 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -15538,10 +15528,10 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -15572,7 +15562,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -15613,7 +15603,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -15622,8 +15612,8 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -15641,7 +15631,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -15668,7 +15658,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -15773,7 +15763,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -15788,8 +15778,8 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -15823,8 +15813,8 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -15879,13 +15869,13 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -16005,10 +15995,10 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -16037,7 +16027,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -16076,7 +16066,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -16084,8 +16074,8 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -16102,7 +16092,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -16128,7 +16118,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -16586,7 +16576,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -16602,8 +16592,8 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -16640,8 +16630,8 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -16700,13 +16690,13 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -16835,10 +16825,10 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -16869,7 +16859,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -16910,7 +16900,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -16919,8 +16909,8 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -16938,7 +16928,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -16965,7 +16955,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -17087,7 +17077,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -17102,8 +17092,8 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -17137,8 +17127,8 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -17193,13 +17183,13 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -17319,10 +17309,10 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -17351,7 +17341,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -17390,7 +17380,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -17398,8 +17388,8 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -17416,7 +17406,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -17442,7 +17432,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -17860,7 +17850,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -17876,8 +17866,8 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -17914,8 +17904,8 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -17974,13 +17964,13 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -18109,10 +18099,10 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -18143,7 +18133,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -18184,7 +18174,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -18193,8 +18183,8 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -18212,7 +18202,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -18239,7 +18229,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -18344,7 +18334,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -18359,8 +18349,8 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -18394,8 +18384,8 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -18450,13 +18440,13 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -18576,10 +18566,10 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -18608,7 +18598,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -18647,7 +18637,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -18655,8 +18645,8 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -18673,7 +18663,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -18699,7 +18689,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -19077,7 +19067,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -19093,8 +19083,8 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -19131,8 +19121,8 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -19191,13 +19181,13 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -19326,10 +19316,10 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -19360,7 +19350,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -19401,7 +19391,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -19410,8 +19400,8 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -19429,7 +19419,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -19456,7 +19446,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -19561,7 +19551,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -19576,8 +19566,8 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -19611,8 +19601,8 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -19667,13 +19657,13 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -19793,10 +19783,10 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -19825,7 +19815,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -19864,7 +19854,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -19872,8 +19862,8 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -19890,7 +19880,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -19916,7 +19906,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -20283,7 +20273,7 @@ class _$MolecularSequenceStructureVariant
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -20299,8 +20289,8 @@ class _$MolecularSequenceStructureVariant
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -20337,8 +20327,8 @@ class _$MolecularSequenceStructureVariant
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -20397,13 +20387,13 @@ class _$MolecularSequenceStructureVariant
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -20532,10 +20522,10 @@ class _$MolecularSequenceStructureVariant
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -20566,7 +20556,7 @@ class _$MolecularSequenceStructureVariant
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -20607,7 +20597,7 @@ class _$MolecularSequenceStructureVariant
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -20616,8 +20606,8 @@ class _$MolecularSequenceStructureVariant
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -20635,7 +20625,7 @@ class _$MolecularSequenceStructureVariant
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -20662,7 +20652,7 @@ class _$MolecularSequenceStructureVariant
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -20767,7 +20757,7 @@ class _$MolecularSequenceStructureVariant
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -20782,8 +20772,8 @@ class _$MolecularSequenceStructureVariant
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -20817,8 +20807,8 @@ class _$MolecularSequenceStructureVariant
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -20873,13 +20863,13 @@ class _$MolecularSequenceStructureVariant
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -20999,10 +20989,10 @@ class _$MolecularSequenceStructureVariant
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -21031,7 +21021,7 @@ class _$MolecularSequenceStructureVariant
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -21070,7 +21060,7 @@ class _$MolecularSequenceStructureVariant
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -21078,8 +21068,8 @@ class _$MolecularSequenceStructureVariant
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -21096,7 +21086,7 @@ class _$MolecularSequenceStructureVariant
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -21122,7 +21112,7 @@ class _$MolecularSequenceStructureVariant
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -21448,7 +21438,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -21464,8 +21454,8 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -21502,8 +21492,8 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -21562,13 +21552,13 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -21697,10 +21687,10 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -21731,7 +21721,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -21772,7 +21762,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -21781,8 +21771,8 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -21800,7 +21790,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -21827,7 +21817,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -21931,7 +21921,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -21946,8 +21936,8 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -21981,8 +21971,8 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -22037,13 +22027,13 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -22163,10 +22153,10 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -22195,7 +22185,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -22234,7 +22224,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -22242,8 +22232,8 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -22260,7 +22250,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -22286,7 +22276,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -22605,7 +22595,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -22621,8 +22611,8 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -22659,8 +22649,8 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -22719,13 +22709,13 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -22854,10 +22844,10 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -22888,7 +22878,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -22929,7 +22919,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -22938,8 +22928,8 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -22957,7 +22947,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -22984,7 +22974,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -23088,7 +23078,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -23103,8 +23093,8 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -23138,8 +23128,8 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -23194,13 +23184,13 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -23320,10 +23310,10 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -23352,7 +23342,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -23391,7 +23381,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -23399,8 +23389,8 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -23417,7 +23407,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -23443,7 +23433,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -23677,10 +23667,10 @@ abstract class $ObservationCopyWith<$Res>
       CodeableConcept method,
       Reference specimen,
       Reference device,
-      List<ObservationReferenceRange> referenceRange,
+      List<dynamic> referenceRange,
       List<dynamic> hasMember,
       List<dynamic> derivedFrom,
-      List<ObservationComponent> component});
+      List<dynamic> component});
 }
 
 class _$ObservationCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
@@ -23826,15 +23816,14 @@ class _$ObservationCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
       device: device == freezed ? _value.device : device as Reference,
       referenceRange: referenceRange == freezed
           ? _value.referenceRange
-          : referenceRange as List<ObservationReferenceRange>,
+          : referenceRange as List<dynamic>,
       hasMember:
           hasMember == freezed ? _value.hasMember : hasMember as List<dynamic>,
       derivedFrom: derivedFrom == freezed
           ? _value.derivedFrom
           : derivedFrom as List<dynamic>,
-      component: component == freezed
-          ? _value.component
-          : component as List<ObservationComponent>,
+      component:
+          component == freezed ? _value.component : component as List<dynamic>,
     ));
   }
 }
@@ -23977,13 +23966,13 @@ class _$Observation implements Observation {
   @override
   final Reference device;
   @override
-  final List<ObservationReferenceRange> referenceRange;
+  final List<dynamic> referenceRange;
   @override
   final List<dynamic> hasMember;
   @override
   final List<dynamic> derivedFrom;
   @override
-  final List<ObservationComponent> component;
+  final List<dynamic> component;
 
   @override
   String toString() {
@@ -24172,7 +24161,7 @@ class _$Observation implements Observation {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -24188,8 +24177,8 @@ class _$Observation implements Observation {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -24226,8 +24215,8 @@ class _$Observation implements Observation {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -24286,13 +24275,13 @@ class _$Observation implements Observation {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -24421,10 +24410,10 @@ class _$Observation implements Observation {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -24455,7 +24444,7 @@ class _$Observation implements Observation {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -24496,7 +24485,7 @@ class _$Observation implements Observation {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -24505,8 +24494,8 @@ class _$Observation implements Observation {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -24524,7 +24513,7 @@ class _$Observation implements Observation {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -24551,7 +24540,7 @@ class _$Observation implements Observation {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -24701,7 +24690,7 @@ class _$Observation implements Observation {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -24716,8 +24705,8 @@ class _$Observation implements Observation {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -24751,8 +24740,8 @@ class _$Observation implements Observation {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -24807,13 +24796,13 @@ class _$Observation implements Observation {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -24933,10 +24922,10 @@ class _$Observation implements Observation {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -24965,7 +24954,7 @@ class _$Observation implements Observation {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -25004,7 +24993,7 @@ class _$Observation implements Observation {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -25012,8 +25001,8 @@ class _$Observation implements Observation {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -25030,7 +25019,7 @@ class _$Observation implements Observation {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -25056,7 +25045,7 @@ class _$Observation implements Observation {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -25307,10 +25296,10 @@ abstract class Observation implements Diagnostics {
       CodeableConcept method,
       Reference specimen,
       Reference device,
-      List<ObservationReferenceRange> referenceRange,
+      List<dynamic> referenceRange,
       List<dynamic> hasMember,
       List<dynamic> derivedFrom,
-      List<ObservationComponent> component}) = _$Observation;
+      List<dynamic> component}) = _$Observation;
 
   factory Observation.fromJson(Map<String, dynamic> json) =
       _$Observation.fromJson;
@@ -25359,10 +25348,10 @@ abstract class Observation implements Diagnostics {
   CodeableConcept get method;
   Reference get specimen;
   Reference get device;
-  List<ObservationReferenceRange> get referenceRange;
+  List<dynamic> get referenceRange;
   List<dynamic> get hasMember;
   List<dynamic> get derivedFrom;
-  List<ObservationComponent> get component;
+  List<dynamic> get component;
   @override
   $ObservationCopyWith<Observation> get copyWith;
 }
@@ -25544,7 +25533,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -25560,8 +25549,8 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -25598,8 +25587,8 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -25658,13 +25647,13 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -25793,10 +25782,10 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -25827,7 +25816,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -25868,7 +25857,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -25877,8 +25866,8 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -25896,7 +25885,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -25923,7 +25912,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -26028,7 +26017,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -26043,8 +26032,8 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -26078,8 +26067,8 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -26134,13 +26123,13 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -26260,10 +26249,10 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -26292,7 +26281,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -26331,7 +26320,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -26339,8 +26328,8 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -26357,7 +26346,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -26383,7 +26372,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -26600,7 +26589,7 @@ abstract class $ObservationComponentCopyWith<$Res>
       Period valuePeriod,
       CodeableConcept dataAbsentReason,
       List<dynamic> interpretation,
-      List<ObservationReferenceRange> referenceRange});
+      List<dynamic> referenceRange});
 }
 
 class _$ObservationComponentCopyWithImpl<$Res>
@@ -26675,7 +26664,7 @@ class _$ObservationComponentCopyWithImpl<$Res>
           : interpretation as List<dynamic>,
       referenceRange: referenceRange == freezed
           ? _value.referenceRange
-          : referenceRange as List<ObservationReferenceRange>,
+          : referenceRange as List<dynamic>,
     ));
   }
 }
@@ -26740,7 +26729,7 @@ class _$ObservationComponent implements ObservationComponent {
   @override
   final List<dynamic> interpretation;
   @override
-  final List<ObservationReferenceRange> referenceRange;
+  final List<dynamic> referenceRange;
 
   @override
   String toString() {
@@ -26865,7 +26854,7 @@ class _$ObservationComponent implements ObservationComponent {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -26881,8 +26870,8 @@ class _$ObservationComponent implements ObservationComponent {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -26919,8 +26908,8 @@ class _$ObservationComponent implements ObservationComponent {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -26979,13 +26968,13 @@ class _$ObservationComponent implements ObservationComponent {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -27114,10 +27103,10 @@ class _$ObservationComponent implements ObservationComponent {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -27148,7 +27137,7 @@ class _$ObservationComponent implements ObservationComponent {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -27189,7 +27178,7 @@ class _$ObservationComponent implements ObservationComponent {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -27198,8 +27187,8 @@ class _$ObservationComponent implements ObservationComponent {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -27217,7 +27206,7 @@ class _$ObservationComponent implements ObservationComponent {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -27244,7 +27233,7 @@ class _$ObservationComponent implements ObservationComponent {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -27366,7 +27355,7 @@ class _$ObservationComponent implements ObservationComponent {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -27381,8 +27370,8 @@ class _$ObservationComponent implements ObservationComponent {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -27416,8 +27405,8 @@ class _$ObservationComponent implements ObservationComponent {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -27472,13 +27461,13 @@ class _$ObservationComponent implements ObservationComponent {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -27598,10 +27587,10 @@ class _$ObservationComponent implements ObservationComponent {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -27630,7 +27619,7 @@ class _$ObservationComponent implements ObservationComponent {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -27669,7 +27658,7 @@ class _$ObservationComponent implements ObservationComponent {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -27677,8 +27666,8 @@ class _$ObservationComponent implements ObservationComponent {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -27695,7 +27684,7 @@ class _$ObservationComponent implements ObservationComponent {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -27721,7 +27710,7 @@ class _$ObservationComponent implements ObservationComponent {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -27920,7 +27909,7 @@ abstract class ObservationComponent implements Diagnostics {
       Period valuePeriod,
       CodeableConcept dataAbsentReason,
       List<dynamic> interpretation,
-      List<ObservationReferenceRange> referenceRange}) = _$ObservationComponent;
+      List<dynamic> referenceRange}) = _$ObservationComponent;
 
   factory ObservationComponent.fromJson(Map<String, dynamic> json) =
       _$ObservationComponent.fromJson;
@@ -27944,7 +27933,7 @@ abstract class ObservationComponent implements Diagnostics {
   Period get valuePeriod;
   CodeableConcept get dataAbsentReason;
   List<dynamic> get interpretation;
-  List<ObservationReferenceRange> get referenceRange;
+  List<dynamic> get referenceRange;
   @override
   $ObservationComponentCopyWith<ObservationComponent> get copyWith;
 }
@@ -28215,7 +28204,7 @@ class _$BodyStructure implements BodyStructure {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -28231,8 +28220,8 @@ class _$BodyStructure implements BodyStructure {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -28269,8 +28258,8 @@ class _$BodyStructure implements BodyStructure {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -28329,13 +28318,13 @@ class _$BodyStructure implements BodyStructure {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -28464,10 +28453,10 @@ class _$BodyStructure implements BodyStructure {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -28498,7 +28487,7 @@ class _$BodyStructure implements BodyStructure {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -28539,7 +28528,7 @@ class _$BodyStructure implements BodyStructure {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -28548,8 +28537,8 @@ class _$BodyStructure implements BodyStructure {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -28567,7 +28556,7 @@ class _$BodyStructure implements BodyStructure {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -28594,7 +28583,7 @@ class _$BodyStructure implements BodyStructure {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -28715,7 +28704,7 @@ class _$BodyStructure implements BodyStructure {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -28730,8 +28719,8 @@ class _$BodyStructure implements BodyStructure {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -28765,8 +28754,8 @@ class _$BodyStructure implements BodyStructure {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -28821,13 +28810,13 @@ class _$BodyStructure implements BodyStructure {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -28947,10 +28936,10 @@ class _$BodyStructure implements BodyStructure {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -28979,7 +28968,7 @@ class _$BodyStructure implements BodyStructure {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -29018,7 +29007,7 @@ class _$BodyStructure implements BodyStructure {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -29026,8 +29015,8 @@ class _$BodyStructure implements BodyStructure {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -29044,7 +29033,7 @@ class _$BodyStructure implements BodyStructure {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -29070,7 +29059,7 @@ class _$BodyStructure implements BodyStructure {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -29320,7 +29309,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res>
       FhirDateTime authored,
       Reference author,
       Reference source,
-      List<QuestionnaireResponseItem> item});
+      List<dynamic> item});
 }
 
 class _$QuestionnaireResponseCopyWithImpl<$Res>
@@ -29391,9 +29380,7 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
           authored == freezed ? _value.authored : authored as FhirDateTime,
       author: author == freezed ? _value.author : author as Reference,
       source: source == freezed ? _value.source : source as Reference,
-      item: item == freezed
-          ? _value.item
-          : item as List<QuestionnaireResponseItem>,
+      item: item == freezed ? _value.item : item as List<dynamic>,
     ));
   }
 }
@@ -29464,7 +29451,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
   @override
   final Reference source;
   @override
-  final List<QuestionnaireResponseItem> item;
+  final List<dynamic> item;
 
   @override
   String toString() {
@@ -29591,7 +29578,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -29607,8 +29594,8 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -29645,8 +29632,8 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -29705,13 +29692,13 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -29840,10 +29827,10 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -29874,7 +29861,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -29915,7 +29902,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -29924,8 +29911,8 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -29943,7 +29930,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -29970,7 +29957,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -30094,7 +30081,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -30109,8 +30096,8 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -30144,8 +30131,8 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -30200,13 +30187,13 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -30326,10 +30313,10 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -30358,7 +30345,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -30397,7 +30384,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -30405,8 +30392,8 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -30423,7 +30410,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -30449,7 +30436,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -30652,7 +30639,7 @@ abstract class QuestionnaireResponse implements Diagnostics {
       FhirDateTime authored,
       Reference author,
       Reference source,
-      List<QuestionnaireResponseItem> item}) = _$QuestionnaireResponse;
+      List<dynamic> item}) = _$QuestionnaireResponse;
 
   factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) =
       _$QuestionnaireResponse.fromJson;
@@ -30678,7 +30665,7 @@ abstract class QuestionnaireResponse implements Diagnostics {
   FhirDateTime get authored;
   Reference get author;
   Reference get source;
-  List<QuestionnaireResponseItem> get item;
+  List<dynamic> get item;
   @override
   $QuestionnaireResponseCopyWith<QuestionnaireResponse> get copyWith;
 }
@@ -30696,8 +30683,8 @@ abstract class $QuestionnaireResponseItemCopyWith<$Res>
       String linkId,
       FhirUri definition,
       String text,
-      List<QuestionnaireResponseAnswer> answer,
-      List<QuestionnaireResponseItem> item});
+      List<dynamic> answer,
+      List<dynamic> item});
 }
 
 class _$QuestionnaireResponseItemCopyWithImpl<$Res>
@@ -30733,12 +30720,8 @@ class _$QuestionnaireResponseItemCopyWithImpl<$Res>
       definition:
           definition == freezed ? _value.definition : definition as FhirUri,
       text: text == freezed ? _value.text : text as String,
-      answer: answer == freezed
-          ? _value.answer
-          : answer as List<QuestionnaireResponseAnswer>,
-      item: item == freezed
-          ? _value.item
-          : item as List<QuestionnaireResponseItem>,
+      answer: answer == freezed ? _value.answer : answer as List<dynamic>,
+      item: item == freezed ? _value.item : item as List<dynamic>,
     ));
   }
 }
@@ -30771,9 +30754,9 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
   @override
   final String text;
   @override
-  final List<QuestionnaireResponseAnswer> answer;
+  final List<dynamic> answer;
   @override
-  final List<QuestionnaireResponseItem> item;
+  final List<dynamic> item;
 
   @override
   String toString() {
@@ -30855,7 +30838,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -30871,8 +30854,8 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -30909,8 +30892,8 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -30969,13 +30952,13 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -31104,10 +31087,10 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -31138,7 +31121,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -31179,7 +31162,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -31188,8 +31171,8 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -31207,7 +31190,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -31234,7 +31217,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -31339,7 +31322,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -31354,8 +31337,8 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -31389,8 +31372,8 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -31445,13 +31428,13 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -31571,10 +31554,10 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -31603,7 +31586,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -31642,7 +31625,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -31650,8 +31633,8 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -31668,7 +31651,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -31694,7 +31677,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -31865,8 +31848,8 @@ abstract class QuestionnaireResponseItem implements Diagnostics {
       String linkId,
       FhirUri definition,
       String text,
-      List<QuestionnaireResponseAnswer> answer,
-      List<QuestionnaireResponseItem> item}) = _$QuestionnaireResponseItem;
+      List<dynamic> answer,
+      List<dynamic> item}) = _$QuestionnaireResponseItem;
 
   factory QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =
       _$QuestionnaireResponseItem.fromJson;
@@ -31879,8 +31862,8 @@ abstract class QuestionnaireResponseItem implements Diagnostics {
   String get linkId;
   FhirUri get definition;
   String get text;
-  List<QuestionnaireResponseAnswer> get answer;
-  List<QuestionnaireResponseItem> get item;
+  List<dynamic> get answer;
+  List<dynamic> get item;
   @override
   $QuestionnaireResponseItemCopyWith<QuestionnaireResponseItem> get copyWith;
 }
@@ -31908,7 +31891,7 @@ abstract class $QuestionnaireResponseAnswerCopyWith<$Res>
       Coding valueCoding,
       Quantity valueQuantity,
       Reference valueReference,
-      List<QuestionnaireResponseItem> item});
+      List<dynamic> item});
 }
 
 class _$QuestionnaireResponseAnswerCopyWithImpl<$Res>
@@ -31974,9 +31957,7 @@ class _$QuestionnaireResponseAnswerCopyWithImpl<$Res>
       valueReference: valueReference == freezed
           ? _value.valueReference
           : valueReference as Reference,
-      item: item == freezed
-          ? _value.item
-          : item as List<QuestionnaireResponseItem>,
+      item: item == freezed ? _value.item : item as List<dynamic>,
     ));
   }
 }
@@ -32035,7 +32016,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
   @override
   final Reference valueReference;
   @override
-  final List<QuestionnaireResponseItem> item;
+  final List<dynamic> item;
 
   @override
   String toString() {
@@ -32152,7 +32133,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -32168,8 +32149,8 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -32206,8 +32187,8 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -32266,13 +32247,13 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -32401,10 +32382,10 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -32435,7 +32416,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -32476,7 +32457,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -32485,8 +32466,8 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -32504,7 +32485,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -32531,7 +32512,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -32651,7 +32632,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -32666,8 +32647,8 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -32701,8 +32682,8 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -32757,13 +32738,13 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -32883,10 +32864,10 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -32915,7 +32896,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -32954,7 +32935,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -32962,8 +32943,8 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -32980,7 +32961,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -33006,7 +32987,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -33201,7 +33182,7 @@ abstract class QuestionnaireResponseAnswer implements Diagnostics {
       Coding valueCoding,
       Quantity valueQuantity,
       Reference valueReference,
-      List<QuestionnaireResponseItem> item}) = _$QuestionnaireResponseAnswer;
+      List<dynamic> item}) = _$QuestionnaireResponseAnswer;
 
   factory QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =
       _$QuestionnaireResponseAnswer.fromJson;
@@ -33223,7 +33204,7 @@ abstract class QuestionnaireResponseAnswer implements Diagnostics {
   Coding get valueCoding;
   Quantity get valueQuantity;
   Reference get valueReference;
-  List<QuestionnaireResponseItem> get item;
+  List<dynamic> get item;
   @override
   $QuestionnaireResponseAnswerCopyWith<QuestionnaireResponseAnswer>
       get copyWith;
@@ -33260,7 +33241,7 @@ abstract class $DiagnosticReportCopyWith<$Res>
       List<dynamic> specimen,
       List<dynamic> result,
       List<dynamic> imagingStudy,
-      List<DiagnosticReportMedia> media,
+      List<dynamic> media,
       String conclusion,
       List<dynamic> conclusionCode,
       List<dynamic> presentedForm});
@@ -33355,9 +33336,7 @@ class _$DiagnosticReportCopyWithImpl<$Res>
       imagingStudy: imagingStudy == freezed
           ? _value.imagingStudy
           : imagingStudy as List<dynamic>,
-      media: media == freezed
-          ? _value.media
-          : media as List<DiagnosticReportMedia>,
+      media: media == freezed ? _value.media : media as List<dynamic>,
       conclusion:
           conclusion == freezed ? _value.conclusion : conclusion as String,
       conclusionCode: conclusionCode == freezed
@@ -33454,7 +33433,7 @@ class _$DiagnosticReport implements DiagnosticReport {
   @override
   final List<dynamic> imagingStudy;
   @override
-  final List<DiagnosticReportMedia> media;
+  final List<dynamic> media;
   @override
   final String conclusion;
   @override
@@ -33613,7 +33592,7 @@ class _$DiagnosticReport implements DiagnosticReport {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -33629,8 +33608,8 @@ class _$DiagnosticReport implements DiagnosticReport {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -33667,8 +33646,8 @@ class _$DiagnosticReport implements DiagnosticReport {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -33727,13 +33706,13 @@ class _$DiagnosticReport implements DiagnosticReport {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -33862,10 +33841,10 @@ class _$DiagnosticReport implements DiagnosticReport {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -33896,7 +33875,7 @@ class _$DiagnosticReport implements DiagnosticReport {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -33937,7 +33916,7 @@ class _$DiagnosticReport implements DiagnosticReport {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -33946,8 +33925,8 @@ class _$DiagnosticReport implements DiagnosticReport {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -33965,7 +33944,7 @@ class _$DiagnosticReport implements DiagnosticReport {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -33992,7 +33971,7 @@ class _$DiagnosticReport implements DiagnosticReport {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -34124,7 +34103,7 @@ class _$DiagnosticReport implements DiagnosticReport {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -34139,8 +34118,8 @@ class _$DiagnosticReport implements DiagnosticReport {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -34174,8 +34153,8 @@ class _$DiagnosticReport implements DiagnosticReport {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -34230,13 +34209,13 @@ class _$DiagnosticReport implements DiagnosticReport {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -34356,10 +34335,10 @@ class _$DiagnosticReport implements DiagnosticReport {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -34388,7 +34367,7 @@ class _$DiagnosticReport implements DiagnosticReport {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -34427,7 +34406,7 @@ class _$DiagnosticReport implements DiagnosticReport {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -34435,8 +34414,8 @@ class _$DiagnosticReport implements DiagnosticReport {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -34453,7 +34432,7 @@ class _$DiagnosticReport implements DiagnosticReport {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -34479,7 +34458,7 @@ class _$DiagnosticReport implements DiagnosticReport {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -34695,7 +34674,7 @@ abstract class DiagnosticReport implements Diagnostics {
       List<dynamic> specimen,
       List<dynamic> result,
       List<dynamic> imagingStudy,
-      List<DiagnosticReportMedia> media,
+      List<dynamic> media,
       String conclusion,
       List<dynamic> conclusionCode,
       List<dynamic> presentedForm}) = _$DiagnosticReport;
@@ -34729,7 +34708,7 @@ abstract class DiagnosticReport implements Diagnostics {
   List<dynamic> get specimen;
   List<dynamic> get result;
   List<dynamic> get imagingStudy;
-  List<DiagnosticReportMedia> get media;
+  List<dynamic> get media;
   String get conclusion;
   List<dynamic> get conclusionCode;
   List<dynamic> get presentedForm;
@@ -34876,7 +34855,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -34892,8 +34871,8 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -34930,8 +34909,8 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -34990,13 +34969,13 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -35125,10 +35104,10 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -35159,7 +35138,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -35200,7 +35179,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -35209,8 +35188,8 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -35228,7 +35207,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -35255,7 +35234,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -35360,7 +35339,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -35375,8 +35354,8 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -35410,8 +35389,8 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -35466,13 +35445,13 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -35592,10 +35571,10 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -35624,7 +35603,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -35663,7 +35642,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -35671,8 +35650,8 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -35689,7 +35668,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -35715,7 +35694,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),
@@ -36302,7 +36281,7 @@ class _$Media implements Media {
             List<dynamic> reasonReference,
             List<dynamic> note,
             String description,
-            List<ImagingStudySeries> series),
+            List<dynamic> series),
     @required
         Result imagingStudySeries(
             String id,
@@ -36318,8 +36297,8 @@ class _$Media implements Media {
             Coding laterality,
             List<dynamic> specimen,
             FhirDateTime started,
-            List<ImagingStudyPerformer> performer,
-            List<ImagingStudyInstance> instance),
+            List<dynamic> performer,
+            List<dynamic> instance),
     @required
         Result imagingStudyPerformer(
             String id,
@@ -36356,8 +36335,8 @@ class _$Media implements Media {
             List<dynamic> parent,
             List<dynamic> request,
             SpecimenCollection collection,
-            List<SpecimenProcessing> processing,
-            List<SpecimenContainer> container,
+            List<dynamic> processing,
+            List<dynamic> container,
             List<dynamic> condition,
             List<dynamic> note),
     @required
@@ -36416,13 +36395,13 @@ class _$Media implements Media {
             Reference performer,
             Quantity quantity,
             MolecularSequenceReferenceSeq referenceSeq,
-            List<MolecularSequenceVariant> variant,
+            List<dynamic> variant,
             String observedSeq,
-            List<MolecularSequenceQuality> quality,
+            List<dynamic> quality,
             int readCoverage,
-            List<MolecularSequenceRepository> repository,
+            List<dynamic> repository,
             List<dynamic> pointer,
-            List<MolecularSequenceStructureVariant> structureVariant),
+            List<dynamic> structureVariant),
     @required
         Result molecularSequenceReferenceSeq(
             String id,
@@ -36551,10 +36530,10 @@ class _$Media implements Media {
             CodeableConcept method,
             Reference specimen,
             Reference device,
-            List<ObservationReferenceRange> referenceRange,
+            List<dynamic> referenceRange,
             List<dynamic> hasMember,
             List<dynamic> derivedFrom,
-            List<ObservationComponent> component),
+            List<dynamic> component),
     @required
         Result observationReferenceRange(
             String id,
@@ -36585,7 +36564,7 @@ class _$Media implements Media {
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
             List<dynamic> interpretation,
-            List<ObservationReferenceRange> referenceRange),
+            List<dynamic> referenceRange),
     @required
         Result bodyStructure(
             String resourceType,
@@ -36626,7 +36605,7 @@ class _$Media implements Media {
             FhirDateTime authored,
             Reference author,
             Reference source,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result questionnaireResponseItem(
             String id,
@@ -36635,8 +36614,8 @@ class _$Media implements Media {
             String linkId,
             FhirUri definition,
             String text,
-            List<QuestionnaireResponseAnswer> answer,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> answer,
+            List<dynamic> item),
     @required
         Result questionnaireResponseAnswer(
             String id,
@@ -36654,7 +36633,7 @@ class _$Media implements Media {
             Coding valueCoding,
             Quantity valueQuantity,
             Reference valueReference,
-            List<QuestionnaireResponseItem> item),
+            List<dynamic> item),
     @required
         Result diagnosticReport(
             String resourceType,
@@ -36681,7 +36660,7 @@ class _$Media implements Media {
             List<dynamic> specimen,
             List<dynamic> result,
             List<dynamic> imagingStudy,
-            List<DiagnosticReportMedia> media,
+            List<dynamic> media,
             String conclusion,
             List<dynamic> conclusionCode,
             List<dynamic> presentedForm),
@@ -36817,7 +36796,7 @@ class _$Media implements Media {
         List<dynamic> reasonReference,
         List<dynamic> note,
         String description,
-        List<ImagingStudySeries> series),
+        List<dynamic> series),
     Result imagingStudySeries(
         String id,
         List<dynamic> extension,
@@ -36832,8 +36811,8 @@ class _$Media implements Media {
         Coding laterality,
         List<dynamic> specimen,
         FhirDateTime started,
-        List<ImagingStudyPerformer> performer,
-        List<ImagingStudyInstance> instance),
+        List<dynamic> performer,
+        List<dynamic> instance),
     Result imagingStudyPerformer(
         String id,
         List<dynamic> extension,
@@ -36867,8 +36846,8 @@ class _$Media implements Media {
         List<dynamic> parent,
         List<dynamic> request,
         SpecimenCollection collection,
-        List<SpecimenProcessing> processing,
-        List<SpecimenContainer> container,
+        List<dynamic> processing,
+        List<dynamic> container,
         List<dynamic> condition,
         List<dynamic> note),
     Result specimenCollection(
@@ -36923,13 +36902,13 @@ class _$Media implements Media {
         Reference performer,
         Quantity quantity,
         MolecularSequenceReferenceSeq referenceSeq,
-        List<MolecularSequenceVariant> variant,
+        List<dynamic> variant,
         String observedSeq,
-        List<MolecularSequenceQuality> quality,
+        List<dynamic> quality,
         int readCoverage,
-        List<MolecularSequenceRepository> repository,
+        List<dynamic> repository,
         List<dynamic> pointer,
-        List<MolecularSequenceStructureVariant> structureVariant),
+        List<dynamic> structureVariant),
     Result molecularSequenceReferenceSeq(
         String id,
         List<dynamic> extension,
@@ -37049,10 +37028,10 @@ class _$Media implements Media {
         CodeableConcept method,
         Reference specimen,
         Reference device,
-        List<ObservationReferenceRange> referenceRange,
+        List<dynamic> referenceRange,
         List<dynamic> hasMember,
         List<dynamic> derivedFrom,
-        List<ObservationComponent> component),
+        List<dynamic> component),
     Result observationReferenceRange(
         String id,
         List<dynamic> extension,
@@ -37081,7 +37060,7 @@ class _$Media implements Media {
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
         List<dynamic> interpretation,
-        List<ObservationReferenceRange> referenceRange),
+        List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
         Id id,
@@ -37120,7 +37099,7 @@ class _$Media implements Media {
         FhirDateTime authored,
         Reference author,
         Reference source,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result questionnaireResponseItem(
         String id,
         List<dynamic> extension,
@@ -37128,8 +37107,8 @@ class _$Media implements Media {
         String linkId,
         FhirUri definition,
         String text,
-        List<QuestionnaireResponseAnswer> answer,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> answer,
+        List<dynamic> item),
     Result questionnaireResponseAnswer(
         String id,
         List<dynamic> extension,
@@ -37146,7 +37125,7 @@ class _$Media implements Media {
         Coding valueCoding,
         Quantity valueQuantity,
         Reference valueReference,
-        List<QuestionnaireResponseItem> item),
+        List<dynamic> item),
     Result diagnosticReport(
         String resourceType,
         Id id,
@@ -37172,7 +37151,7 @@ class _$Media implements Media {
         List<dynamic> specimen,
         List<dynamic> result,
         List<dynamic> imagingStudy,
-        List<DiagnosticReportMedia> media,
+        List<dynamic> media,
         String conclusion,
         List<dynamic> conclusionCode,
         List<dynamic> presentedForm),

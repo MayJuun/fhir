@@ -16,8 +16,8 @@ const factory Entities2.substance({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   SubstanceStatus status,
   List<CodeableConcept> category,
@@ -30,8 +30,8 @@ const factory Entities2.substance({
 
 const factory Entities2.substanceInstance({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Identifier identifier,
   FhirDateTime expiry,
   Quantity quantity,
@@ -40,8 +40,8 @@ const factory Entities2.substanceInstance({
 
 const factory Entities2.substanceIngredient({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Ratio quantity,
   CodeableConcept substanceCodeableConcept,
   Reference substanceReference,
@@ -56,8 +56,8 @@ const factory Entities2.biologicallyDerivedProduct({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   BiologicallyDerivedProductCategory productCategory,
   CodeableConcept productCode,
@@ -74,8 +74,8 @@ const factory Entities2.biologicallyDerivedProduct({
 
 const factory Entities2.biologicallyDerivedProductCollection({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference collector,
   Reference source,
   FhirDateTime collectedDateTime,
@@ -85,8 +85,8 @@ const factory Entities2.biologicallyDerivedProductCollection({
 
 const factory Entities2.biologicallyDerivedProductProcessing({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String description,
   CodeableConcept procedure,
   Reference additive,
@@ -97,8 +97,8 @@ const factory Entities2.biologicallyDerivedProductProcessing({
 
 const factory Entities2.biologicallyDerivedProductManipulation({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String description,
   FhirDateTime timeDateTime,
   Period timePeriod,
@@ -107,8 +107,8 @@ const factory Entities2.biologicallyDerivedProductManipulation({
 
 const factory Entities2.biologicallyDerivedProductStorage({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String description,
   double temperature,
   BiologicallyDerivedProductStorageScale scale,
@@ -124,8 +124,8 @@ const factory Entities2.device({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Reference definition,
   List<DeviceUdiCarrier> udiCarrier,
@@ -157,8 +157,8 @@ const factory Entities2.device({
 
 const factory Entities2.deviceUdiCarrier({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String deviceIdentifier,
   FhirUri issuer,
   FhirUri jurisdiction,
@@ -170,8 +170,8 @@ const factory Entities2.deviceUdiCarrier({
 
 const factory Entities2.deviceDeviceName({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String name,
   DeviceDeviceNameType type,
 
@@ -179,8 +179,8 @@ const factory Entities2.deviceDeviceName({
 
 const factory Entities2.deviceSpecialization({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept systemType,
   String version,
 
@@ -188,8 +188,8 @@ const factory Entities2.deviceSpecialization({
 
 const factory Entities2.deviceVersion({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   Identifier component,
   String value,
@@ -198,8 +198,8 @@ const factory Entities2.deviceVersion({
 
 const factory Entities2.deviceProperty({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   List<Quantity> valueQuantity,
   List<CodeableConcept> valueCode,
@@ -214,8 +214,8 @@ const factory Entities2.deviceMetric({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   CodeableConcept type,
   CodeableConcept unit,
@@ -231,8 +231,8 @@ const factory Entities2.deviceMetric({
 
 const factory Entities2.deviceMetricCalibration({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   DeviceMetricCalibrationType type,
   DeviceMetricCalibrationState state,
   Instant time,

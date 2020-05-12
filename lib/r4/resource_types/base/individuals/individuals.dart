@@ -16,8 +16,8 @@ const factory Individuals.group({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   bool active,
   GroupType type,
@@ -33,8 +33,8 @@ const factory Individuals.group({
 
 const factory Individuals.groupCharacteristic({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept code,
   CodeableConcept valueCodeableConcept,
   bool valueBoolean,
@@ -48,8 +48,8 @@ const factory Individuals.groupCharacteristic({
 
 const factory Individuals.groupMember({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference entity,
   Period period,
   bool inactive,
@@ -64,8 +64,8 @@ const factory Individuals.patient({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   bool active,
   List<HumanName> name,
@@ -89,8 +89,8 @@ const factory Individuals.patient({
 
 const factory Individuals.patientContact({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<CodeableConcept> relationship,
   HumanName name,
   List<ContactPoint> telecom,
@@ -103,8 +103,8 @@ const factory Individuals.patientContact({
 
 const factory Individuals.patientCommunication({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept language,
   bool preferred,
 
@@ -112,8 +112,8 @@ const factory Individuals.patientCommunication({
 
 const factory Individuals.patientLink({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference other,
   PatientLinkType type,
 
@@ -127,8 +127,8 @@ const factory Individuals.practitionerRole({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   bool active,
   Period period,
@@ -148,8 +148,8 @@ const factory Individuals.practitionerRole({
 
 const factory Individuals.practitionerRoleAvailableTime({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Code> daysOfWeek,
   bool allDay,
   Time availableStartTime,
@@ -159,8 +159,8 @@ const factory Individuals.practitionerRoleAvailableTime({
 
 const factory Individuals.practitionerRoleNotAvailable({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String description,
   Period during,
 
@@ -174,8 +174,8 @@ const factory Individuals.person({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   List<HumanName> name,
   List<ContactPoint> telecom,
@@ -191,8 +191,8 @@ const factory Individuals.person({
 
 const factory Individuals.personLink({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Reference target,
   PersonLinkAssurance assurance,
 
@@ -206,8 +206,8 @@ const factory Individuals.practitioner({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   bool active,
   List<HumanName> name,
@@ -223,8 +223,8 @@ const factory Individuals.practitioner({
 
 const factory Individuals.practitionerQualification({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   CodeableConcept code,
   Period period,
@@ -240,8 +240,8 @@ const factory Individuals.relatedPerson({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   bool active,
   Reference patient,
@@ -259,8 +259,8 @@ const factory Individuals.relatedPerson({
 
 const factory Individuals.relatedPersonCommunication({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept language,
   bool preferred,
 

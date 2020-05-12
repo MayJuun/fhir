@@ -100,19 +100,19 @@ class _$BillingTearOff {
       Reference provider,
       CodeableConcept priority,
       CodeableConcept fundsReserve,
-      List<ClaimRelated> related,
+      List<dynamic> related,
       Reference prescription,
       Reference originalPrescription,
       ClaimPayee payee,
       Reference referral,
       Reference facility,
-      List<ClaimCareTeam> careTeam,
-      List<ClaimSupportingInfo> supportingInfo,
-      List<ClaimDiagnosis> diagnosis,
-      List<ClaimProcedure> procedure,
-      List<ClaimInsurance> insurance,
+      List<dynamic> careTeam,
+      List<dynamic> supportingInfo,
+      List<dynamic> diagnosis,
+      List<dynamic> procedure,
+      List<dynamic> insurance,
       ClaimAccident accident,
-      List<ClaimItem> item,
+      List<dynamic> item,
       Money total}) {
     return Claim(
       resourceType: resourceType,
@@ -357,7 +357,7 @@ class _$BillingTearOff {
       CodeableConcept bodySite,
       List<dynamic> subSite,
       List<dynamic> encounter,
-      List<ClaimDetail> detail}) {
+      List<dynamic> detail}) {
     return ClaimItem(
       id: id,
       extension: extension,
@@ -404,7 +404,7 @@ class _$BillingTearOff {
       double factor,
       Money net,
       List<dynamic> udi,
-      List<ClaimSubDetail> subDetail}) {
+      List<dynamic> subDetail}) {
     return ClaimDetail(
       id: id,
       extension: extension,
@@ -474,11 +474,11 @@ class _$BillingTearOff {
       Reference subject,
       Reference recipient,
       FhirDateTime date,
-      List<InvoiceParticipant> participant,
+      List<dynamic> participant,
       Reference issuer,
       Reference account,
-      List<InvoiceLineItem> lineItem,
-      List<InvoicePriceComponent> totalPriceComponent,
+      List<dynamic> lineItem,
+      List<dynamic> totalPriceComponent,
       Money totalNet,
       Money totalGross,
       Markdown paymentTerms,
@@ -534,7 +534,7 @@ class _$BillingTearOff {
       int sequence,
       Reference chargeItemReference,
       CodeableConcept chargeItemCodeableConcept,
-      List<InvoicePriceComponent> priceComponent}) {
+      List<dynamic> priceComponent}) {
     return InvoiceLineItem(
       id: id,
       extension: extension,
@@ -590,18 +590,18 @@ class _$BillingTearOff {
       String preAuthRef,
       Period preAuthPeriod,
       CodeableConcept payeeType,
-      List<ClaimResponseItem> item,
-      List<ClaimResponseAddItem> addItem,
-      List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseTotal> total,
+      List<dynamic> item,
+      List<dynamic> addItem,
+      List<dynamic> adjudication,
+      List<dynamic> total,
       ClaimResponsePayment payment,
       CodeableConcept fundsReserve,
       CodeableConcept formCode,
       Attachment form,
-      List<ClaimResponseProcessNote> processNote,
+      List<dynamic> processNote,
       List<dynamic> communicationRequest,
-      List<ClaimResponseInsurance> insurance,
-      List<ClaimResponseError> error}) {
+      List<dynamic> insurance,
+      List<dynamic> error}) {
     return ClaimResponse(
       resourceType: resourceType,
       id: id,
@@ -648,8 +648,8 @@ class _$BillingTearOff {
       List<dynamic> modifierExtension,
       int itemSequence,
       List<int> noteNumber,
-      List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseDetail> detail}) {
+      List<dynamic> adjudication,
+      List<dynamic> detail}) {
     return ClaimResponseItem(
       id: id,
       extension: extension,
@@ -686,8 +686,8 @@ class _$BillingTearOff {
       List<dynamic> modifierExtension,
       int detailSequence,
       List<int> noteNumber,
-      List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseSubDetail> subDetail}) {
+      List<dynamic> adjudication,
+      List<dynamic> subDetail}) {
     return ClaimResponseDetail(
       id: id,
       extension: extension,
@@ -705,7 +705,7 @@ class _$BillingTearOff {
       List<dynamic> modifierExtension,
       int subDetailSequence,
       List<int> noteNumber,
-      List<ClaimResponseAdjudication> adjudication}) {
+      List<dynamic> adjudication}) {
     return ClaimResponseSubDetail(
       id: id,
       extension: extension,
@@ -739,8 +739,8 @@ class _$BillingTearOff {
       CodeableConcept bodySite,
       List<dynamic> subSite,
       List<int> noteNumber,
-      List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseDetail1> detail}) {
+      List<dynamic> adjudication,
+      List<dynamic> detail}) {
     return ClaimResponseAddItem(
       id: id,
       extension: extension,
@@ -780,8 +780,8 @@ class _$BillingTearOff {
       double factor,
       Money net,
       List<int> noteNumber,
-      List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseSubDetail1> subDetail}) {
+      List<dynamic> adjudication,
+      List<dynamic> subDetail}) {
     return ClaimResponseDetail1(
       id: id,
       extension: extension,
@@ -809,7 +809,7 @@ class _$BillingTearOff {
       double factor,
       Money net,
       List<int> noteNumber,
-      List<ClaimResponseAdjudication> adjudication}) {
+      List<dynamic> adjudication}) {
     return ClaimResponseSubDetail1(
       id: id,
       extension: extension,
@@ -956,19 +956,19 @@ mixin _$Billing {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -1082,7 +1082,7 @@ mixin _$Billing {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -1099,7 +1099,7 @@ mixin _$Billing {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -1134,11 +1134,11 @@ mixin _$Billing {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -1158,7 +1158,7 @@ mixin _$Billing {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -1194,18 +1194,18 @@ mixin _$Billing {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -1213,8 +1213,8 @@ mixin _$Billing {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -1231,8 +1231,8 @@ mixin _$Billing {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -1240,7 +1240,7 @@ mixin _$Billing {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -1265,8 +1265,8 @@ mixin _$Billing {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -1279,8 +1279,8 @@ mixin _$Billing {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -1293,7 +1293,7 @@ mixin _$Billing {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -1366,19 +1366,19 @@ mixin _$Billing {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -1479,7 +1479,7 @@ mixin _$Billing {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -1495,7 +1495,7 @@ mixin _$Billing {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -1528,11 +1528,11 @@ mixin _$Billing {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -1546,7 +1546,7 @@ mixin _$Billing {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -1580,26 +1580,26 @@ mixin _$Billing {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -1614,15 +1614,15 @@ mixin _$Billing {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -1646,8 +1646,8 @@ mixin _$Billing {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -1659,8 +1659,8 @@ mixin _$Billing {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -1672,7 +1672,7 @@ mixin _$Billing {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -1840,19 +1840,19 @@ abstract class $ClaimCopyWith<$Res> implements $BillingCopyWith<$Res> {
       Reference provider,
       CodeableConcept priority,
       CodeableConcept fundsReserve,
-      List<ClaimRelated> related,
+      List<dynamic> related,
       Reference prescription,
       Reference originalPrescription,
       ClaimPayee payee,
       Reference referral,
       Reference facility,
-      List<ClaimCareTeam> careTeam,
-      List<ClaimSupportingInfo> supportingInfo,
-      List<ClaimDiagnosis> diagnosis,
-      List<ClaimProcedure> procedure,
-      List<ClaimInsurance> insurance,
+      List<dynamic> careTeam,
+      List<dynamic> supportingInfo,
+      List<dynamic> diagnosis,
+      List<dynamic> procedure,
+      List<dynamic> insurance,
       ClaimAccident accident,
-      List<ClaimItem> item,
+      List<dynamic> item,
       Money total});
 }
 
@@ -1941,8 +1941,7 @@ class _$ClaimCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
       fundsReserve: fundsReserve == freezed
           ? _value.fundsReserve
           : fundsReserve as CodeableConcept,
-      related:
-          related == freezed ? _value.related : related as List<ClaimRelated>,
+      related: related == freezed ? _value.related : related as List<dynamic>,
       prescription: prescription == freezed
           ? _value.prescription
           : prescription as Reference,
@@ -1952,24 +1951,20 @@ class _$ClaimCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
       payee: payee == freezed ? _value.payee : payee as ClaimPayee,
       referral: referral == freezed ? _value.referral : referral as Reference,
       facility: facility == freezed ? _value.facility : facility as Reference,
-      careTeam: careTeam == freezed
-          ? _value.careTeam
-          : careTeam as List<ClaimCareTeam>,
+      careTeam:
+          careTeam == freezed ? _value.careTeam : careTeam as List<dynamic>,
       supportingInfo: supportingInfo == freezed
           ? _value.supportingInfo
-          : supportingInfo as List<ClaimSupportingInfo>,
-      diagnosis: diagnosis == freezed
-          ? _value.diagnosis
-          : diagnosis as List<ClaimDiagnosis>,
-      procedure: procedure == freezed
-          ? _value.procedure
-          : procedure as List<ClaimProcedure>,
-      insurance: insurance == freezed
-          ? _value.insurance
-          : insurance as List<ClaimInsurance>,
+          : supportingInfo as List<dynamic>,
+      diagnosis:
+          diagnosis == freezed ? _value.diagnosis : diagnosis as List<dynamic>,
+      procedure:
+          procedure == freezed ? _value.procedure : procedure as List<dynamic>,
+      insurance:
+          insurance == freezed ? _value.insurance : insurance as List<dynamic>,
       accident:
           accident == freezed ? _value.accident : accident as ClaimAccident,
-      item: item == freezed ? _value.item : item as List<ClaimItem>,
+      item: item == freezed ? _value.item : item as List<dynamic>,
       total: total == freezed ? _value.total : total as Money,
     ));
   }
@@ -2063,7 +2058,7 @@ class _$Claim implements Claim {
   @override
   final CodeableConcept fundsReserve;
   @override
-  final List<ClaimRelated> related;
+  final List<dynamic> related;
   @override
   final Reference prescription;
   @override
@@ -2075,19 +2070,19 @@ class _$Claim implements Claim {
   @override
   final Reference facility;
   @override
-  final List<ClaimCareTeam> careTeam;
+  final List<dynamic> careTeam;
   @override
-  final List<ClaimSupportingInfo> supportingInfo;
+  final List<dynamic> supportingInfo;
   @override
-  final List<ClaimDiagnosis> diagnosis;
+  final List<dynamic> diagnosis;
   @override
-  final List<ClaimProcedure> procedure;
+  final List<dynamic> procedure;
   @override
-  final List<ClaimInsurance> insurance;
+  final List<dynamic> insurance;
   @override
   final ClaimAccident accident;
   @override
-  final List<ClaimItem> item;
+  final List<dynamic> item;
   @override
   final Money total;
 
@@ -2252,19 +2247,19 @@ class _$Claim implements Claim {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -2378,7 +2373,7 @@ class _$Claim implements Claim {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -2395,7 +2390,7 @@ class _$Claim implements Claim {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -2430,11 +2425,11 @@ class _$Claim implements Claim {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -2454,7 +2449,7 @@ class _$Claim implements Claim {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -2490,18 +2485,18 @@ class _$Claim implements Claim {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -2509,8 +2504,8 @@ class _$Claim implements Claim {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -2527,8 +2522,8 @@ class _$Claim implements Claim {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -2536,7 +2531,7 @@ class _$Claim implements Claim {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -2561,8 +2556,8 @@ class _$Claim implements Claim {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -2575,8 +2570,8 @@ class _$Claim implements Claim {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -2589,7 +2584,7 @@ class _$Claim implements Claim {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -2731,19 +2726,19 @@ class _$Claim implements Claim {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -2844,7 +2839,7 @@ class _$Claim implements Claim {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -2860,7 +2855,7 @@ class _$Claim implements Claim {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -2893,11 +2888,11 @@ class _$Claim implements Claim {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -2911,7 +2906,7 @@ class _$Claim implements Claim {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -2945,26 +2940,26 @@ class _$Claim implements Claim {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -2979,15 +2974,15 @@ class _$Claim implements Claim {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -3011,8 +3006,8 @@ class _$Claim implements Claim {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -3024,8 +3019,8 @@ class _$Claim implements Claim {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -3037,7 +3032,7 @@ class _$Claim implements Claim {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -3260,19 +3255,19 @@ abstract class Claim implements Billing {
       Reference provider,
       CodeableConcept priority,
       CodeableConcept fundsReserve,
-      List<ClaimRelated> related,
+      List<dynamic> related,
       Reference prescription,
       Reference originalPrescription,
       ClaimPayee payee,
       Reference referral,
       Reference facility,
-      List<ClaimCareTeam> careTeam,
-      List<ClaimSupportingInfo> supportingInfo,
-      List<ClaimDiagnosis> diagnosis,
-      List<ClaimProcedure> procedure,
-      List<ClaimInsurance> insurance,
+      List<dynamic> careTeam,
+      List<dynamic> supportingInfo,
+      List<dynamic> diagnosis,
+      List<dynamic> procedure,
+      List<dynamic> insurance,
       ClaimAccident accident,
-      List<ClaimItem> item,
+      List<dynamic> item,
       Money total}) = _$Claim;
 
   factory Claim.fromJson(Map<String, dynamic> json) = _$Claim.fromJson;
@@ -3301,19 +3296,19 @@ abstract class Claim implements Billing {
   Reference get provider;
   CodeableConcept get priority;
   CodeableConcept get fundsReserve;
-  List<ClaimRelated> get related;
+  List<dynamic> get related;
   Reference get prescription;
   Reference get originalPrescription;
   ClaimPayee get payee;
   Reference get referral;
   Reference get facility;
-  List<ClaimCareTeam> get careTeam;
-  List<ClaimSupportingInfo> get supportingInfo;
-  List<ClaimDiagnosis> get diagnosis;
-  List<ClaimProcedure> get procedure;
-  List<ClaimInsurance> get insurance;
+  List<dynamic> get careTeam;
+  List<dynamic> get supportingInfo;
+  List<dynamic> get diagnosis;
+  List<dynamic> get procedure;
+  List<dynamic> get insurance;
   ClaimAccident get accident;
-  List<ClaimItem> get item;
+  List<dynamic> get item;
   Money get total;
   @override
   $ClaimCopyWith<Claim> get copyWith;
@@ -3462,19 +3457,19 @@ class _$ClaimRelated implements ClaimRelated {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -3588,7 +3583,7 @@ class _$ClaimRelated implements ClaimRelated {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -3605,7 +3600,7 @@ class _$ClaimRelated implements ClaimRelated {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -3640,11 +3635,11 @@ class _$ClaimRelated implements ClaimRelated {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -3664,7 +3659,7 @@ class _$ClaimRelated implements ClaimRelated {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -3700,18 +3695,18 @@ class _$ClaimRelated implements ClaimRelated {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -3719,8 +3714,8 @@ class _$ClaimRelated implements ClaimRelated {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -3737,8 +3732,8 @@ class _$ClaimRelated implements ClaimRelated {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -3746,7 +3741,7 @@ class _$ClaimRelated implements ClaimRelated {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -3771,8 +3766,8 @@ class _$ClaimRelated implements ClaimRelated {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -3785,8 +3780,8 @@ class _$ClaimRelated implements ClaimRelated {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -3799,7 +3794,7 @@ class _$ClaimRelated implements ClaimRelated {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -3906,19 +3901,19 @@ class _$ClaimRelated implements ClaimRelated {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -4019,7 +4014,7 @@ class _$ClaimRelated implements ClaimRelated {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -4035,7 +4030,7 @@ class _$ClaimRelated implements ClaimRelated {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -4068,11 +4063,11 @@ class _$ClaimRelated implements ClaimRelated {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -4086,7 +4081,7 @@ class _$ClaimRelated implements ClaimRelated {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -4120,26 +4115,26 @@ class _$ClaimRelated implements ClaimRelated {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -4154,15 +4149,15 @@ class _$ClaimRelated implements ClaimRelated {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -4186,8 +4181,8 @@ class _$ClaimRelated implements ClaimRelated {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -4199,8 +4194,8 @@ class _$ClaimRelated implements ClaimRelated {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -4212,7 +4207,7 @@ class _$ClaimRelated implements ClaimRelated {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -4524,19 +4519,19 @@ class _$ClaimPayee implements ClaimPayee {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -4650,7 +4645,7 @@ class _$ClaimPayee implements ClaimPayee {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -4667,7 +4662,7 @@ class _$ClaimPayee implements ClaimPayee {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -4702,11 +4697,11 @@ class _$ClaimPayee implements ClaimPayee {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -4726,7 +4721,7 @@ class _$ClaimPayee implements ClaimPayee {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -4762,18 +4757,18 @@ class _$ClaimPayee implements ClaimPayee {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -4781,8 +4776,8 @@ class _$ClaimPayee implements ClaimPayee {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -4799,8 +4794,8 @@ class _$ClaimPayee implements ClaimPayee {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -4808,7 +4803,7 @@ class _$ClaimPayee implements ClaimPayee {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -4833,8 +4828,8 @@ class _$ClaimPayee implements ClaimPayee {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -4847,8 +4842,8 @@ class _$ClaimPayee implements ClaimPayee {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -4861,7 +4856,7 @@ class _$ClaimPayee implements ClaimPayee {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -4967,19 +4962,19 @@ class _$ClaimPayee implements ClaimPayee {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -5080,7 +5075,7 @@ class _$ClaimPayee implements ClaimPayee {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -5096,7 +5091,7 @@ class _$ClaimPayee implements ClaimPayee {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -5129,11 +5124,11 @@ class _$ClaimPayee implements ClaimPayee {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -5147,7 +5142,7 @@ class _$ClaimPayee implements ClaimPayee {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -5181,26 +5176,26 @@ class _$ClaimPayee implements ClaimPayee {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -5215,15 +5210,15 @@ class _$ClaimPayee implements ClaimPayee {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -5247,8 +5242,8 @@ class _$ClaimPayee implements ClaimPayee {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -5260,8 +5255,8 @@ class _$ClaimPayee implements ClaimPayee {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -5273,7 +5268,7 @@ class _$ClaimPayee implements ClaimPayee {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -5621,19 +5616,19 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -5747,7 +5742,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -5764,7 +5759,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -5799,11 +5794,11 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -5823,7 +5818,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -5859,18 +5854,18 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -5878,8 +5873,8 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -5896,8 +5891,8 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -5905,7 +5900,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -5930,8 +5925,8 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -5944,8 +5939,8 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -5958,7 +5953,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -6065,19 +6060,19 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -6178,7 +6173,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -6194,7 +6189,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -6227,11 +6222,11 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -6245,7 +6240,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -6279,26 +6274,26 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -6313,15 +6308,15 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -6345,8 +6340,8 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -6358,8 +6353,8 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -6371,7 +6366,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -6796,19 +6791,19 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -6922,7 +6917,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -6939,7 +6934,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -6974,11 +6969,11 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -6998,7 +6993,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -7034,18 +7029,18 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -7053,8 +7048,8 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -7071,8 +7066,8 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -7080,7 +7075,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -7105,8 +7100,8 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -7119,8 +7114,8 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -7133,7 +7128,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -7253,19 +7248,19 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -7366,7 +7361,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -7382,7 +7377,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -7415,11 +7410,11 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -7433,7 +7428,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -7467,26 +7462,26 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -7501,15 +7496,15 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -7533,8 +7528,8 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -7546,8 +7541,8 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -7559,7 +7554,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -7957,19 +7952,19 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -8083,7 +8078,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -8100,7 +8095,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -8135,11 +8130,11 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -8159,7 +8154,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -8195,18 +8190,18 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -8214,8 +8209,8 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -8232,8 +8227,8 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -8241,7 +8236,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -8266,8 +8261,8 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -8280,8 +8275,8 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -8294,7 +8289,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -8409,19 +8404,19 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -8522,7 +8517,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -8538,7 +8533,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -8571,11 +8566,11 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -8589,7 +8584,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -8623,26 +8618,26 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -8657,15 +8652,15 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -8689,8 +8684,8 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -8702,8 +8697,8 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -8715,7 +8710,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -9091,19 +9086,19 @@ class _$ClaimProcedure implements ClaimProcedure {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -9217,7 +9212,7 @@ class _$ClaimProcedure implements ClaimProcedure {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -9234,7 +9229,7 @@ class _$ClaimProcedure implements ClaimProcedure {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -9269,11 +9264,11 @@ class _$ClaimProcedure implements ClaimProcedure {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -9293,7 +9288,7 @@ class _$ClaimProcedure implements ClaimProcedure {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -9329,18 +9324,18 @@ class _$ClaimProcedure implements ClaimProcedure {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -9348,8 +9343,8 @@ class _$ClaimProcedure implements ClaimProcedure {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -9366,8 +9361,8 @@ class _$ClaimProcedure implements ClaimProcedure {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -9375,7 +9370,7 @@ class _$ClaimProcedure implements ClaimProcedure {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -9400,8 +9395,8 @@ class _$ClaimProcedure implements ClaimProcedure {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -9414,8 +9409,8 @@ class _$ClaimProcedure implements ClaimProcedure {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -9428,7 +9423,7 @@ class _$ClaimProcedure implements ClaimProcedure {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -9535,19 +9530,19 @@ class _$ClaimProcedure implements ClaimProcedure {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -9648,7 +9643,7 @@ class _$ClaimProcedure implements ClaimProcedure {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -9664,7 +9659,7 @@ class _$ClaimProcedure implements ClaimProcedure {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -9697,11 +9692,11 @@ class _$ClaimProcedure implements ClaimProcedure {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -9715,7 +9710,7 @@ class _$ClaimProcedure implements ClaimProcedure {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -9749,26 +9744,26 @@ class _$ClaimProcedure implements ClaimProcedure {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -9783,15 +9778,15 @@ class _$ClaimProcedure implements ClaimProcedure {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -9815,8 +9810,8 @@ class _$ClaimProcedure implements ClaimProcedure {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -9828,8 +9823,8 @@ class _$ClaimProcedure implements ClaimProcedure {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -9841,7 +9836,7 @@ class _$ClaimProcedure implements ClaimProcedure {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -10222,19 +10217,19 @@ class _$ClaimInsurance implements ClaimInsurance {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -10348,7 +10343,7 @@ class _$ClaimInsurance implements ClaimInsurance {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -10365,7 +10360,7 @@ class _$ClaimInsurance implements ClaimInsurance {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -10400,11 +10395,11 @@ class _$ClaimInsurance implements ClaimInsurance {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -10424,7 +10419,7 @@ class _$ClaimInsurance implements ClaimInsurance {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -10460,18 +10455,18 @@ class _$ClaimInsurance implements ClaimInsurance {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -10479,8 +10474,8 @@ class _$ClaimInsurance implements ClaimInsurance {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -10497,8 +10492,8 @@ class _$ClaimInsurance implements ClaimInsurance {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -10506,7 +10501,7 @@ class _$ClaimInsurance implements ClaimInsurance {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -10531,8 +10526,8 @@ class _$ClaimInsurance implements ClaimInsurance {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -10545,8 +10540,8 @@ class _$ClaimInsurance implements ClaimInsurance {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -10559,7 +10554,7 @@ class _$ClaimInsurance implements ClaimInsurance {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -10675,19 +10670,19 @@ class _$ClaimInsurance implements ClaimInsurance {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -10788,7 +10783,7 @@ class _$ClaimInsurance implements ClaimInsurance {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -10804,7 +10799,7 @@ class _$ClaimInsurance implements ClaimInsurance {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -10837,11 +10832,11 @@ class _$ClaimInsurance implements ClaimInsurance {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -10855,7 +10850,7 @@ class _$ClaimInsurance implements ClaimInsurance {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -10889,26 +10884,26 @@ class _$ClaimInsurance implements ClaimInsurance {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -10923,15 +10918,15 @@ class _$ClaimInsurance implements ClaimInsurance {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -10955,8 +10950,8 @@ class _$ClaimInsurance implements ClaimInsurance {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -10968,8 +10963,8 @@ class _$ClaimInsurance implements ClaimInsurance {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -10981,7 +10976,7 @@ class _$ClaimInsurance implements ClaimInsurance {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -11339,19 +11334,19 @@ class _$ClaimAccident implements ClaimAccident {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -11465,7 +11460,7 @@ class _$ClaimAccident implements ClaimAccident {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -11482,7 +11477,7 @@ class _$ClaimAccident implements ClaimAccident {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -11517,11 +11512,11 @@ class _$ClaimAccident implements ClaimAccident {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -11541,7 +11536,7 @@ class _$ClaimAccident implements ClaimAccident {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -11577,18 +11572,18 @@ class _$ClaimAccident implements ClaimAccident {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -11596,8 +11591,8 @@ class _$ClaimAccident implements ClaimAccident {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -11614,8 +11609,8 @@ class _$ClaimAccident implements ClaimAccident {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -11623,7 +11618,7 @@ class _$ClaimAccident implements ClaimAccident {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -11648,8 +11643,8 @@ class _$ClaimAccident implements ClaimAccident {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -11662,8 +11657,8 @@ class _$ClaimAccident implements ClaimAccident {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -11676,7 +11671,7 @@ class _$ClaimAccident implements ClaimAccident {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -11783,19 +11778,19 @@ class _$ClaimAccident implements ClaimAccident {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -11896,7 +11891,7 @@ class _$ClaimAccident implements ClaimAccident {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -11912,7 +11907,7 @@ class _$ClaimAccident implements ClaimAccident {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -11945,11 +11940,11 @@ class _$ClaimAccident implements ClaimAccident {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -11963,7 +11958,7 @@ class _$ClaimAccident implements ClaimAccident {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -11997,26 +11992,26 @@ class _$ClaimAccident implements ClaimAccident {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -12031,15 +12026,15 @@ class _$ClaimAccident implements ClaimAccident {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -12063,8 +12058,8 @@ class _$ClaimAccident implements ClaimAccident {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -12076,8 +12071,8 @@ class _$ClaimAccident implements ClaimAccident {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -12089,7 +12084,7 @@ class _$ClaimAccident implements ClaimAccident {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -12310,7 +12305,7 @@ abstract class $ClaimItemCopyWith<$Res> implements $BillingCopyWith<$Res> {
       CodeableConcept bodySite,
       List<dynamic> subSite,
       List<dynamic> encounter,
-      List<ClaimDetail> detail});
+      List<dynamic> detail});
 }
 
 class _$ClaimItemCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -12406,7 +12401,7 @@ class _$ClaimItemCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
       subSite: subSite == freezed ? _value.subSite : subSite as List<dynamic>,
       encounter:
           encounter == freezed ? _value.encounter : encounter as List<dynamic>,
-      detail: detail == freezed ? _value.detail : detail as List<ClaimDetail>,
+      detail: detail == freezed ? _value.detail : detail as List<dynamic>,
     ));
   }
 }
@@ -12498,7 +12493,7 @@ class _$ClaimItem implements ClaimItem {
   @override
   final List<dynamic> encounter;
   @override
-  final List<ClaimDetail> detail;
+  final List<dynamic> detail;
 
   @override
   String toString() {
@@ -12641,19 +12636,19 @@ class _$ClaimItem implements ClaimItem {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -12767,7 +12762,7 @@ class _$ClaimItem implements ClaimItem {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -12784,7 +12779,7 @@ class _$ClaimItem implements ClaimItem {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -12819,11 +12814,11 @@ class _$ClaimItem implements ClaimItem {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -12843,7 +12838,7 @@ class _$ClaimItem implements ClaimItem {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -12879,18 +12874,18 @@ class _$ClaimItem implements ClaimItem {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -12898,8 +12893,8 @@ class _$ClaimItem implements ClaimItem {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -12916,8 +12911,8 @@ class _$ClaimItem implements ClaimItem {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -12925,7 +12920,7 @@ class _$ClaimItem implements ClaimItem {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -12950,8 +12945,8 @@ class _$ClaimItem implements ClaimItem {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -12964,8 +12959,8 @@ class _$ClaimItem implements ClaimItem {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -12978,7 +12973,7 @@ class _$ClaimItem implements ClaimItem {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -13111,19 +13106,19 @@ class _$ClaimItem implements ClaimItem {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -13224,7 +13219,7 @@ class _$ClaimItem implements ClaimItem {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -13240,7 +13235,7 @@ class _$ClaimItem implements ClaimItem {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -13273,11 +13268,11 @@ class _$ClaimItem implements ClaimItem {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -13291,7 +13286,7 @@ class _$ClaimItem implements ClaimItem {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -13325,26 +13320,26 @@ class _$ClaimItem implements ClaimItem {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -13359,15 +13354,15 @@ class _$ClaimItem implements ClaimItem {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -13391,8 +13386,8 @@ class _$ClaimItem implements ClaimItem {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -13404,8 +13399,8 @@ class _$ClaimItem implements ClaimItem {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -13417,7 +13412,7 @@ class _$ClaimItem implements ClaimItem {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -13635,7 +13630,7 @@ abstract class ClaimItem implements Billing {
       CodeableConcept bodySite,
       List<dynamic> subSite,
       List<dynamic> encounter,
-      List<ClaimDetail> detail}) = _$ClaimItem;
+      List<dynamic> detail}) = _$ClaimItem;
 
   factory ClaimItem.fromJson(Map<String, dynamic> json) = _$ClaimItem.fromJson;
 
@@ -13667,7 +13662,7 @@ abstract class ClaimItem implements Billing {
   CodeableConcept get bodySite;
   List<dynamic> get subSite;
   List<dynamic> get encounter;
-  List<ClaimDetail> get detail;
+  List<dynamic> get detail;
   @override
   $ClaimItemCopyWith<ClaimItem> get copyWith;
 }
@@ -13692,7 +13687,7 @@ abstract class $ClaimDetailCopyWith<$Res> implements $BillingCopyWith<$Res> {
       double factor,
       Money net,
       List<dynamic> udi,
-      List<ClaimSubDetail> subDetail});
+      List<dynamic> subDetail});
 }
 
 class _$ClaimDetailCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -13746,9 +13741,8 @@ class _$ClaimDetailCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
       factor: factor == freezed ? _value.factor : factor as double,
       net: net == freezed ? _value.net : net as Money,
       udi: udi == freezed ? _value.udi : udi as List<dynamic>,
-      subDetail: subDetail == freezed
-          ? _value.subDetail
-          : subDetail as List<ClaimSubDetail>,
+      subDetail:
+          subDetail == freezed ? _value.subDetail : subDetail as List<dynamic>,
     ));
   }
 }
@@ -13804,7 +13798,7 @@ class _$ClaimDetail implements ClaimDetail {
   @override
   final List<dynamic> udi;
   @override
-  final List<ClaimSubDetail> subDetail;
+  final List<dynamic> subDetail;
 
   @override
   String toString() {
@@ -13908,19 +13902,19 @@ class _$ClaimDetail implements ClaimDetail {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -14034,7 +14028,7 @@ class _$ClaimDetail implements ClaimDetail {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -14051,7 +14045,7 @@ class _$ClaimDetail implements ClaimDetail {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -14086,11 +14080,11 @@ class _$ClaimDetail implements ClaimDetail {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -14110,7 +14104,7 @@ class _$ClaimDetail implements ClaimDetail {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -14146,18 +14140,18 @@ class _$ClaimDetail implements ClaimDetail {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -14165,8 +14159,8 @@ class _$ClaimDetail implements ClaimDetail {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -14183,8 +14177,8 @@ class _$ClaimDetail implements ClaimDetail {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -14192,7 +14186,7 @@ class _$ClaimDetail implements ClaimDetail {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -14217,8 +14211,8 @@ class _$ClaimDetail implements ClaimDetail {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -14231,8 +14225,8 @@ class _$ClaimDetail implements ClaimDetail {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -14245,7 +14239,7 @@ class _$ClaimDetail implements ClaimDetail {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -14366,19 +14360,19 @@ class _$ClaimDetail implements ClaimDetail {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -14479,7 +14473,7 @@ class _$ClaimDetail implements ClaimDetail {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -14495,7 +14489,7 @@ class _$ClaimDetail implements ClaimDetail {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -14528,11 +14522,11 @@ class _$ClaimDetail implements ClaimDetail {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -14546,7 +14540,7 @@ class _$ClaimDetail implements ClaimDetail {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -14580,26 +14574,26 @@ class _$ClaimDetail implements ClaimDetail {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -14614,15 +14608,15 @@ class _$ClaimDetail implements ClaimDetail {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -14646,8 +14640,8 @@ class _$ClaimDetail implements ClaimDetail {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -14659,8 +14653,8 @@ class _$ClaimDetail implements ClaimDetail {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -14672,7 +14666,7 @@ class _$ClaimDetail implements ClaimDetail {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -14866,7 +14860,7 @@ abstract class ClaimDetail implements Billing {
       double factor,
       Money net,
       List<dynamic> udi,
-      List<ClaimSubDetail> subDetail}) = _$ClaimDetail;
+      List<dynamic> subDetail}) = _$ClaimDetail;
 
   factory ClaimDetail.fromJson(Map<String, dynamic> json) =
       _$ClaimDetail.fromJson;
@@ -14887,7 +14881,7 @@ abstract class ClaimDetail implements Billing {
   double get factor;
   Money get net;
   List<dynamic> get udi;
-  List<ClaimSubDetail> get subDetail;
+  List<dynamic> get subDetail;
   @override
   $ClaimDetailCopyWith<ClaimDetail> get copyWith;
 }
@@ -15116,19 +15110,19 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -15242,7 +15236,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -15259,7 +15253,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -15294,11 +15288,11 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -15318,7 +15312,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -15354,18 +15348,18 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -15373,8 +15367,8 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -15391,8 +15385,8 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -15400,7 +15394,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -15425,8 +15419,8 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -15439,8 +15433,8 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -15453,7 +15447,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -15573,19 +15567,19 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -15686,7 +15680,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -15702,7 +15696,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -15735,11 +15729,11 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -15753,7 +15747,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -15787,26 +15781,26 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -15821,15 +15815,15 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -15853,8 +15847,8 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -15866,8 +15860,8 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -15879,7 +15873,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -16117,11 +16111,11 @@ abstract class $InvoiceCopyWith<$Res> implements $BillingCopyWith<$Res> {
       Reference subject,
       Reference recipient,
       FhirDateTime date,
-      List<InvoiceParticipant> participant,
+      List<dynamic> participant,
       Reference issuer,
       Reference account,
-      List<InvoiceLineItem> lineItem,
-      List<InvoicePriceComponent> totalPriceComponent,
+      List<dynamic> lineItem,
+      List<dynamic> totalPriceComponent,
       Money totalNet,
       Money totalGross,
       Markdown paymentTerms,
@@ -16196,15 +16190,14 @@ class _$InvoiceCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
       date: date == freezed ? _value.date : date as FhirDateTime,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<InvoiceParticipant>,
+          : participant as List<dynamic>,
       issuer: issuer == freezed ? _value.issuer : issuer as Reference,
       account: account == freezed ? _value.account : account as Reference,
-      lineItem: lineItem == freezed
-          ? _value.lineItem
-          : lineItem as List<InvoiceLineItem>,
+      lineItem:
+          lineItem == freezed ? _value.lineItem : lineItem as List<dynamic>,
       totalPriceComponent: totalPriceComponent == freezed
           ? _value.totalPriceComponent
-          : totalPriceComponent as List<InvoicePriceComponent>,
+          : totalPriceComponent as List<dynamic>,
       totalNet: totalNet == freezed ? _value.totalNet : totalNet as Money,
       totalGross:
           totalGross == freezed ? _value.totalGross : totalGross as Money,
@@ -16281,15 +16274,15 @@ class _$Invoice implements Invoice {
   @override
   final FhirDateTime date;
   @override
-  final List<InvoiceParticipant> participant;
+  final List<dynamic> participant;
   @override
   final Reference issuer;
   @override
   final Reference account;
   @override
-  final List<InvoiceLineItem> lineItem;
+  final List<dynamic> lineItem;
   @override
-  final List<InvoicePriceComponent> totalPriceComponent;
+  final List<dynamic> totalPriceComponent;
   @override
   final Money totalNet;
   @override
@@ -16437,19 +16430,19 @@ class _$Invoice implements Invoice {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -16563,7 +16556,7 @@ class _$Invoice implements Invoice {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -16580,7 +16573,7 @@ class _$Invoice implements Invoice {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -16615,11 +16608,11 @@ class _$Invoice implements Invoice {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -16639,7 +16632,7 @@ class _$Invoice implements Invoice {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -16675,18 +16668,18 @@ class _$Invoice implements Invoice {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -16694,8 +16687,8 @@ class _$Invoice implements Invoice {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -16712,8 +16705,8 @@ class _$Invoice implements Invoice {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -16721,7 +16714,7 @@ class _$Invoice implements Invoice {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -16746,8 +16739,8 @@ class _$Invoice implements Invoice {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -16760,8 +16753,8 @@ class _$Invoice implements Invoice {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -16774,7 +16767,7 @@ class _$Invoice implements Invoice {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -16905,19 +16898,19 @@ class _$Invoice implements Invoice {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -17018,7 +17011,7 @@ class _$Invoice implements Invoice {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -17034,7 +17027,7 @@ class _$Invoice implements Invoice {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -17067,11 +17060,11 @@ class _$Invoice implements Invoice {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -17085,7 +17078,7 @@ class _$Invoice implements Invoice {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -17119,26 +17112,26 @@ class _$Invoice implements Invoice {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -17153,15 +17146,15 @@ class _$Invoice implements Invoice {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -17185,8 +17178,8 @@ class _$Invoice implements Invoice {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -17198,8 +17191,8 @@ class _$Invoice implements Invoice {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -17211,7 +17204,7 @@ class _$Invoice implements Invoice {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -17417,11 +17410,11 @@ abstract class Invoice implements Billing {
       Reference subject,
       Reference recipient,
       FhirDateTime date,
-      List<InvoiceParticipant> participant,
+      List<dynamic> participant,
       Reference issuer,
       Reference account,
-      List<InvoiceLineItem> lineItem,
-      List<InvoicePriceComponent> totalPriceComponent,
+      List<dynamic> lineItem,
+      List<dynamic> totalPriceComponent,
       Money totalNet,
       Money totalGross,
       Markdown paymentTerms,
@@ -17447,11 +17440,11 @@ abstract class Invoice implements Billing {
   Reference get subject;
   Reference get recipient;
   FhirDateTime get date;
-  List<InvoiceParticipant> get participant;
+  List<dynamic> get participant;
   Reference get issuer;
   Reference get account;
-  List<InvoiceLineItem> get lineItem;
-  List<InvoicePriceComponent> get totalPriceComponent;
+  List<dynamic> get lineItem;
+  List<dynamic> get totalPriceComponent;
   Money get totalNet;
   Money get totalGross;
   Markdown get paymentTerms;
@@ -17586,19 +17579,19 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -17712,7 +17705,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -17729,7 +17722,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -17764,11 +17757,11 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -17788,7 +17781,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -17824,18 +17817,18 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -17843,8 +17836,8 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -17861,8 +17854,8 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -17870,7 +17863,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -17895,8 +17888,8 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -17909,8 +17902,8 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -17923,7 +17916,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -18029,19 +18022,19 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -18142,7 +18135,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -18158,7 +18151,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -18191,11 +18184,11 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -18209,7 +18202,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -18243,26 +18236,26 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -18277,15 +18270,15 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -18309,8 +18302,8 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -18322,8 +18315,8 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -18335,7 +18328,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -18534,7 +18527,7 @@ abstract class $InvoiceLineItemCopyWith<$Res>
       int sequence,
       Reference chargeItemReference,
       CodeableConcept chargeItemCodeableConcept,
-      List<InvoicePriceComponent> priceComponent});
+      List<dynamic> priceComponent});
 }
 
 class _$InvoiceLineItemCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -18572,7 +18565,7 @@ class _$InvoiceLineItemCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
           : chargeItemCodeableConcept as CodeableConcept,
       priceComponent: priceComponent == freezed
           ? _value.priceComponent
-          : priceComponent as List<InvoicePriceComponent>,
+          : priceComponent as List<dynamic>,
     ));
   }
 }
@@ -18604,7 +18597,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
   @override
   final CodeableConcept chargeItemCodeableConcept;
   @override
-  final List<InvoicePriceComponent> priceComponent;
+  final List<dynamic> priceComponent;
 
   @override
   String toString() {
@@ -18681,19 +18674,19 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -18807,7 +18800,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -18824,7 +18817,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -18859,11 +18852,11 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -18883,7 +18876,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -18919,18 +18912,18 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -18938,8 +18931,8 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -18956,8 +18949,8 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -18965,7 +18958,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -18990,8 +18983,8 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -19004,8 +18997,8 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -19018,7 +19011,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -19125,19 +19118,19 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -19238,7 +19231,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -19254,7 +19247,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -19287,11 +19280,11 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -19305,7 +19298,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -19339,26 +19332,26 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -19373,15 +19366,15 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -19405,8 +19398,8 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -19418,8 +19411,8 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -19431,7 +19424,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -19603,7 +19596,7 @@ abstract class InvoiceLineItem implements Billing {
       int sequence,
       Reference chargeItemReference,
       CodeableConcept chargeItemCodeableConcept,
-      List<InvoicePriceComponent> priceComponent}) = _$InvoiceLineItem;
+      List<dynamic> priceComponent}) = _$InvoiceLineItem;
 
   factory InvoiceLineItem.fromJson(Map<String, dynamic> json) =
       _$InvoiceLineItem.fromJson;
@@ -19616,7 +19609,7 @@ abstract class InvoiceLineItem implements Billing {
   int get sequence;
   Reference get chargeItemReference;
   CodeableConcept get chargeItemCodeableConcept;
-  List<InvoicePriceComponent> get priceComponent;
+  List<dynamic> get priceComponent;
   @override
   $InvoiceLineItemCopyWith<InvoiceLineItem> get copyWith;
 }
@@ -19771,19 +19764,19 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -19897,7 +19890,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -19914,7 +19907,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -19949,11 +19942,11 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -19973,7 +19966,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -20009,18 +20002,18 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -20028,8 +20021,8 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -20046,8 +20039,8 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -20055,7 +20048,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -20080,8 +20073,8 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -20094,8 +20087,8 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -20108,7 +20101,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -20215,19 +20208,19 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -20328,7 +20321,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -20344,7 +20337,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -20377,11 +20370,11 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -20395,7 +20388,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -20429,26 +20422,26 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -20463,15 +20456,15 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -20495,8 +20488,8 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -20508,8 +20501,8 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -20521,7 +20514,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -20742,18 +20735,18 @@ abstract class $ClaimResponseCopyWith<$Res> implements $BillingCopyWith<$Res> {
       String preAuthRef,
       Period preAuthPeriod,
       CodeableConcept payeeType,
-      List<ClaimResponseItem> item,
-      List<ClaimResponseAddItem> addItem,
-      List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseTotal> total,
+      List<dynamic> item,
+      List<dynamic> addItem,
+      List<dynamic> adjudication,
+      List<dynamic> total,
       ClaimResponsePayment payment,
       CodeableConcept fundsReserve,
       CodeableConcept formCode,
       Attachment form,
-      List<ClaimResponseProcessNote> processNote,
+      List<dynamic> processNote,
       List<dynamic> communicationRequest,
-      List<ClaimResponseInsurance> insurance,
-      List<ClaimResponseError> error});
+      List<dynamic> insurance,
+      List<dynamic> error});
 }
 
 class _$ClaimResponseCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -20846,15 +20839,12 @@ class _$ClaimResponseCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
       payeeType: payeeType == freezed
           ? _value.payeeType
           : payeeType as CodeableConcept,
-      item: item == freezed ? _value.item : item as List<ClaimResponseItem>,
-      addItem: addItem == freezed
-          ? _value.addItem
-          : addItem as List<ClaimResponseAddItem>,
+      item: item == freezed ? _value.item : item as List<dynamic>,
+      addItem: addItem == freezed ? _value.addItem : addItem as List<dynamic>,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>,
-      total:
-          total == freezed ? _value.total : total as List<ClaimResponseTotal>,
+          : adjudication as List<dynamic>,
+      total: total == freezed ? _value.total : total as List<dynamic>,
       payment:
           payment == freezed ? _value.payment : payment as ClaimResponsePayment,
       fundsReserve: fundsReserve == freezed
@@ -20865,15 +20855,13 @@ class _$ClaimResponseCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
       form: form == freezed ? _value.form : form as Attachment,
       processNote: processNote == freezed
           ? _value.processNote
-          : processNote as List<ClaimResponseProcessNote>,
+          : processNote as List<dynamic>,
       communicationRequest: communicationRequest == freezed
           ? _value.communicationRequest
           : communicationRequest as List<dynamic>,
-      insurance: insurance == freezed
-          ? _value.insurance
-          : insurance as List<ClaimResponseInsurance>,
-      error:
-          error == freezed ? _value.error : error as List<ClaimResponseError>,
+      insurance:
+          insurance == freezed ? _value.insurance : insurance as List<dynamic>,
+      error: error == freezed ? _value.error : error as List<dynamic>,
     ));
   }
 }
@@ -20970,13 +20958,13 @@ class _$ClaimResponse implements ClaimResponse {
   @override
   final CodeableConcept payeeType;
   @override
-  final List<ClaimResponseItem> item;
+  final List<dynamic> item;
   @override
-  final List<ClaimResponseAddItem> addItem;
+  final List<dynamic> addItem;
   @override
-  final List<ClaimResponseAdjudication> adjudication;
+  final List<dynamic> adjudication;
   @override
-  final List<ClaimResponseTotal> total;
+  final List<dynamic> total;
   @override
   final ClaimResponsePayment payment;
   @override
@@ -20986,13 +20974,13 @@ class _$ClaimResponse implements ClaimResponse {
   @override
   final Attachment form;
   @override
-  final List<ClaimResponseProcessNote> processNote;
+  final List<dynamic> processNote;
   @override
   final List<dynamic> communicationRequest;
   @override
-  final List<ClaimResponseInsurance> insurance;
+  final List<dynamic> insurance;
   @override
-  final List<ClaimResponseError> error;
+  final List<dynamic> error;
 
   @override
   String toString() {
@@ -21155,19 +21143,19 @@ class _$ClaimResponse implements ClaimResponse {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -21281,7 +21269,7 @@ class _$ClaimResponse implements ClaimResponse {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -21298,7 +21286,7 @@ class _$ClaimResponse implements ClaimResponse {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -21333,11 +21321,11 @@ class _$ClaimResponse implements ClaimResponse {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -21357,7 +21345,7 @@ class _$ClaimResponse implements ClaimResponse {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -21393,18 +21381,18 @@ class _$ClaimResponse implements ClaimResponse {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -21412,8 +21400,8 @@ class _$ClaimResponse implements ClaimResponse {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -21430,8 +21418,8 @@ class _$ClaimResponse implements ClaimResponse {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -21439,7 +21427,7 @@ class _$ClaimResponse implements ClaimResponse {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -21464,8 +21452,8 @@ class _$ClaimResponse implements ClaimResponse {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -21478,8 +21466,8 @@ class _$ClaimResponse implements ClaimResponse {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -21492,7 +21480,7 @@ class _$ClaimResponse implements ClaimResponse {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -21634,19 +21622,19 @@ class _$ClaimResponse implements ClaimResponse {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -21747,7 +21735,7 @@ class _$ClaimResponse implements ClaimResponse {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -21763,7 +21751,7 @@ class _$ClaimResponse implements ClaimResponse {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -21796,11 +21784,11 @@ class _$ClaimResponse implements ClaimResponse {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -21814,7 +21802,7 @@ class _$ClaimResponse implements ClaimResponse {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -21848,26 +21836,26 @@ class _$ClaimResponse implements ClaimResponse {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -21882,15 +21870,15 @@ class _$ClaimResponse implements ClaimResponse {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -21914,8 +21902,8 @@ class _$ClaimResponse implements ClaimResponse {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -21927,8 +21915,8 @@ class _$ClaimResponse implements ClaimResponse {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -21940,7 +21928,7 @@ class _$ClaimResponse implements ClaimResponse {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -22165,18 +22153,18 @@ abstract class ClaimResponse implements Billing {
       String preAuthRef,
       Period preAuthPeriod,
       CodeableConcept payeeType,
-      List<ClaimResponseItem> item,
-      List<ClaimResponseAddItem> addItem,
-      List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseTotal> total,
+      List<dynamic> item,
+      List<dynamic> addItem,
+      List<dynamic> adjudication,
+      List<dynamic> total,
       ClaimResponsePayment payment,
       CodeableConcept fundsReserve,
       CodeableConcept formCode,
       Attachment form,
-      List<ClaimResponseProcessNote> processNote,
+      List<dynamic> processNote,
       List<dynamic> communicationRequest,
-      List<ClaimResponseInsurance> insurance,
-      List<ClaimResponseError> error}) = _$ClaimResponse;
+      List<dynamic> insurance,
+      List<dynamic> error}) = _$ClaimResponse;
 
   factory ClaimResponse.fromJson(Map<String, dynamic> json) =
       _$ClaimResponse.fromJson;
@@ -22207,18 +22195,18 @@ abstract class ClaimResponse implements Billing {
   String get preAuthRef;
   Period get preAuthPeriod;
   CodeableConcept get payeeType;
-  List<ClaimResponseItem> get item;
-  List<ClaimResponseAddItem> get addItem;
-  List<ClaimResponseAdjudication> get adjudication;
-  List<ClaimResponseTotal> get total;
+  List<dynamic> get item;
+  List<dynamic> get addItem;
+  List<dynamic> get adjudication;
+  List<dynamic> get total;
   ClaimResponsePayment get payment;
   CodeableConcept get fundsReserve;
   CodeableConcept get formCode;
   Attachment get form;
-  List<ClaimResponseProcessNote> get processNote;
+  List<dynamic> get processNote;
   List<dynamic> get communicationRequest;
-  List<ClaimResponseInsurance> get insurance;
-  List<ClaimResponseError> get error;
+  List<dynamic> get insurance;
+  List<dynamic> get error;
   @override
   $ClaimResponseCopyWith<ClaimResponse> get copyWith;
 }
@@ -22235,8 +22223,8 @@ abstract class $ClaimResponseItemCopyWith<$Res>
       List<dynamic> modifierExtension,
       int itemSequence,
       List<int> noteNumber,
-      List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseDetail> detail});
+      List<dynamic> adjudication,
+      List<dynamic> detail});
 }
 
 class _$ClaimResponseItemCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -22271,10 +22259,8 @@ class _$ClaimResponseItemCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
           noteNumber == freezed ? _value.noteNumber : noteNumber as List<int>,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>,
-      detail: detail == freezed
-          ? _value.detail
-          : detail as List<ClaimResponseDetail>,
+          : adjudication as List<dynamic>,
+      detail: detail == freezed ? _value.detail : detail as List<dynamic>,
     ));
   }
 }
@@ -22304,9 +22290,9 @@ class _$ClaimResponseItem implements ClaimResponseItem {
   @override
   final List<int> noteNumber;
   @override
-  final List<ClaimResponseAdjudication> adjudication;
+  final List<dynamic> adjudication;
   @override
-  final List<ClaimResponseDetail> detail;
+  final List<dynamic> detail;
 
   @override
   String toString() {
@@ -22380,19 +22366,19 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -22506,7 +22492,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -22523,7 +22509,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -22558,11 +22544,11 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -22582,7 +22568,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -22618,18 +22604,18 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -22637,8 +22623,8 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -22655,8 +22641,8 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -22664,7 +22650,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -22689,8 +22675,8 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -22703,8 +22689,8 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -22717,7 +22703,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -22824,19 +22810,19 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -22937,7 +22923,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -22953,7 +22939,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -22986,11 +22972,11 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -23004,7 +22990,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -23038,26 +23024,26 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -23072,15 +23058,15 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -23104,8 +23090,8 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -23117,8 +23103,8 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -23130,7 +23116,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -23302,8 +23288,8 @@ abstract class ClaimResponseItem implements Billing {
       List<dynamic> modifierExtension,
       int itemSequence,
       List<int> noteNumber,
-      List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseDetail> detail}) = _$ClaimResponseItem;
+      List<dynamic> adjudication,
+      List<dynamic> detail}) = _$ClaimResponseItem;
 
   factory ClaimResponseItem.fromJson(Map<String, dynamic> json) =
       _$ClaimResponseItem.fromJson;
@@ -23315,8 +23301,8 @@ abstract class ClaimResponseItem implements Billing {
   List<dynamic> get modifierExtension;
   int get itemSequence;
   List<int> get noteNumber;
-  List<ClaimResponseAdjudication> get adjudication;
-  List<ClaimResponseDetail> get detail;
+  List<dynamic> get adjudication;
+  List<dynamic> get detail;
   @override
   $ClaimResponseItemCopyWith<ClaimResponseItem> get copyWith;
 }
@@ -23474,19 +23460,19 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -23600,7 +23586,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -23617,7 +23603,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -23652,11 +23638,11 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -23676,7 +23662,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -23712,18 +23698,18 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -23731,8 +23717,8 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -23749,8 +23735,8 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -23758,7 +23744,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -23783,8 +23769,8 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -23797,8 +23783,8 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -23811,7 +23797,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -23918,19 +23904,19 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -24031,7 +24017,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -24047,7 +24033,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -24080,11 +24066,11 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -24098,7 +24084,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -24132,26 +24118,26 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -24166,15 +24152,15 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -24198,8 +24184,8 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -24211,8 +24197,8 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -24224,7 +24210,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -24427,8 +24413,8 @@ abstract class $ClaimResponseDetailCopyWith<$Res>
       List<dynamic> modifierExtension,
       int detailSequence,
       List<int> noteNumber,
-      List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseSubDetail> subDetail});
+      List<dynamic> adjudication,
+      List<dynamic> subDetail});
 }
 
 class _$ClaimResponseDetailCopyWithImpl<$Res>
@@ -24465,10 +24451,9 @@ class _$ClaimResponseDetailCopyWithImpl<$Res>
           noteNumber == freezed ? _value.noteNumber : noteNumber as List<int>,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>,
-      subDetail: subDetail == freezed
-          ? _value.subDetail
-          : subDetail as List<ClaimResponseSubDetail>,
+          : adjudication as List<dynamic>,
+      subDetail:
+          subDetail == freezed ? _value.subDetail : subDetail as List<dynamic>,
     ));
   }
 }
@@ -24498,9 +24483,9 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
   @override
   final List<int> noteNumber;
   @override
-  final List<ClaimResponseAdjudication> adjudication;
+  final List<dynamic> adjudication;
   @override
-  final List<ClaimResponseSubDetail> subDetail;
+  final List<dynamic> subDetail;
 
   @override
   String toString() {
@@ -24575,19 +24560,19 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -24701,7 +24686,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -24718,7 +24703,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -24753,11 +24738,11 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -24777,7 +24762,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -24813,18 +24798,18 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -24832,8 +24817,8 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -24850,8 +24835,8 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -24859,7 +24844,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -24884,8 +24869,8 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -24898,8 +24883,8 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -24912,7 +24897,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -25019,19 +25004,19 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -25132,7 +25117,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -25148,7 +25133,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -25181,11 +25166,11 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -25199,7 +25184,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -25233,26 +25218,26 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -25267,15 +25252,15 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -25299,8 +25284,8 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -25312,8 +25297,8 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -25325,7 +25310,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -25497,8 +25482,8 @@ abstract class ClaimResponseDetail implements Billing {
       List<dynamic> modifierExtension,
       int detailSequence,
       List<int> noteNumber,
-      List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseSubDetail> subDetail}) = _$ClaimResponseDetail;
+      List<dynamic> adjudication,
+      List<dynamic> subDetail}) = _$ClaimResponseDetail;
 
   factory ClaimResponseDetail.fromJson(Map<String, dynamic> json) =
       _$ClaimResponseDetail.fromJson;
@@ -25510,8 +25495,8 @@ abstract class ClaimResponseDetail implements Billing {
   List<dynamic> get modifierExtension;
   int get detailSequence;
   List<int> get noteNumber;
-  List<ClaimResponseAdjudication> get adjudication;
-  List<ClaimResponseSubDetail> get subDetail;
+  List<dynamic> get adjudication;
+  List<dynamic> get subDetail;
   @override
   $ClaimResponseDetailCopyWith<ClaimResponseDetail> get copyWith;
 }
@@ -25528,7 +25513,7 @@ abstract class $ClaimResponseSubDetailCopyWith<$Res>
       List<dynamic> modifierExtension,
       int subDetailSequence,
       List<int> noteNumber,
-      List<ClaimResponseAdjudication> adjudication});
+      List<dynamic> adjudication});
 }
 
 class _$ClaimResponseSubDetailCopyWithImpl<$Res>
@@ -25564,7 +25549,7 @@ class _$ClaimResponseSubDetailCopyWithImpl<$Res>
           noteNumber == freezed ? _value.noteNumber : noteNumber as List<int>,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>,
+          : adjudication as List<dynamic>,
     ));
   }
 }
@@ -25593,7 +25578,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
   @override
   final List<int> noteNumber;
   @override
-  final List<ClaimResponseAdjudication> adjudication;
+  final List<dynamic> adjudication;
 
   @override
   String toString() {
@@ -25665,19 +25650,19 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -25791,7 +25776,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -25808,7 +25793,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -25843,11 +25828,11 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -25867,7 +25852,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -25903,18 +25888,18 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -25922,8 +25907,8 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -25940,8 +25925,8 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -25949,7 +25934,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -25974,8 +25959,8 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -25988,8 +25973,8 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -26002,7 +25987,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -26109,19 +26094,19 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -26222,7 +26207,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -26238,7 +26223,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -26271,11 +26256,11 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -26289,7 +26274,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -26323,26 +26308,26 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -26357,15 +26342,15 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -26389,8 +26374,8 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -26402,8 +26387,8 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -26415,7 +26400,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -26587,7 +26572,7 @@ abstract class ClaimResponseSubDetail implements Billing {
       List<dynamic> modifierExtension,
       int subDetailSequence,
       List<int> noteNumber,
-      List<ClaimResponseAdjudication> adjudication}) = _$ClaimResponseSubDetail;
+      List<dynamic> adjudication}) = _$ClaimResponseSubDetail;
 
   factory ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =
       _$ClaimResponseSubDetail.fromJson;
@@ -26599,7 +26584,7 @@ abstract class ClaimResponseSubDetail implements Billing {
   List<dynamic> get modifierExtension;
   int get subDetailSequence;
   List<int> get noteNumber;
-  List<ClaimResponseAdjudication> get adjudication;
+  List<dynamic> get adjudication;
   @override
   $ClaimResponseSubDetailCopyWith<ClaimResponseSubDetail> get copyWith;
 }
@@ -26633,8 +26618,8 @@ abstract class $ClaimResponseAddItemCopyWith<$Res>
       CodeableConcept bodySite,
       List<dynamic> subSite,
       List<int> noteNumber,
-      List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseDetail1> detail});
+      List<dynamic> adjudication,
+      List<dynamic> detail});
 }
 
 class _$ClaimResponseAddItemCopyWithImpl<$Res>
@@ -26725,10 +26710,8 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res>
           noteNumber == freezed ? _value.noteNumber : noteNumber as List<int>,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>,
-      detail: detail == freezed
-          ? _value.detail
-          : detail as List<ClaimResponseDetail1>,
+          : adjudication as List<dynamic>,
+      detail: detail == freezed ? _value.detail : detail as List<dynamic>,
     ));
   }
 }
@@ -26809,9 +26792,9 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
   @override
   final List<int> noteNumber;
   @override
-  final List<ClaimResponseAdjudication> adjudication;
+  final List<dynamic> adjudication;
   @override
-  final List<ClaimResponseDetail1> detail;
+  final List<dynamic> detail;
 
   @override
   String toString() {
@@ -26948,19 +26931,19 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -27074,7 +27057,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -27091,7 +27074,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -27126,11 +27109,11 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -27150,7 +27133,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -27186,18 +27169,18 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -27205,8 +27188,8 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -27223,8 +27206,8 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -27232,7 +27215,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -27257,8 +27240,8 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -27271,8 +27254,8 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -27285,7 +27268,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -27415,19 +27398,19 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -27528,7 +27511,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -27544,7 +27527,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -27577,11 +27560,11 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -27595,7 +27578,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -27629,26 +27612,26 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -27663,15 +27646,15 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -27695,8 +27678,8 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -27708,8 +27691,8 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -27721,7 +27704,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -27933,8 +27916,8 @@ abstract class ClaimResponseAddItem implements Billing {
       CodeableConcept bodySite,
       List<dynamic> subSite,
       List<int> noteNumber,
-      List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseDetail1> detail}) = _$ClaimResponseAddItem;
+      List<dynamic> adjudication,
+      List<dynamic> detail}) = _$ClaimResponseAddItem;
 
   factory ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =
       _$ClaimResponseAddItem.fromJson;
@@ -27963,8 +27946,8 @@ abstract class ClaimResponseAddItem implements Billing {
   CodeableConcept get bodySite;
   List<dynamic> get subSite;
   List<int> get noteNumber;
-  List<ClaimResponseAdjudication> get adjudication;
-  List<ClaimResponseDetail1> get detail;
+  List<dynamic> get adjudication;
+  List<dynamic> get detail;
   @override
   $ClaimResponseAddItemCopyWith<ClaimResponseAddItem> get copyWith;
 }
@@ -27986,8 +27969,8 @@ abstract class $ClaimResponseDetail1CopyWith<$Res>
       double factor,
       Money net,
       List<int> noteNumber,
-      List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseSubDetail1> subDetail});
+      List<dynamic> adjudication,
+      List<dynamic> subDetail});
 }
 
 class _$ClaimResponseDetail1CopyWithImpl<$Res>
@@ -28035,10 +28018,9 @@ class _$ClaimResponseDetail1CopyWithImpl<$Res>
           noteNumber == freezed ? _value.noteNumber : noteNumber as List<int>,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>,
-      subDetail: subDetail == freezed
-          ? _value.subDetail
-          : subDetail as List<ClaimResponseSubDetail1>,
+          : adjudication as List<dynamic>,
+      subDetail:
+          subDetail == freezed ? _value.subDetail : subDetail as List<dynamic>,
     ));
   }
 }
@@ -28083,9 +28065,9 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
   @override
   final List<int> noteNumber;
   @override
-  final List<ClaimResponseAdjudication> adjudication;
+  final List<dynamic> adjudication;
   @override
-  final List<ClaimResponseSubDetail1> subDetail;
+  final List<dynamic> subDetail;
 
   @override
   String toString() {
@@ -28179,19 +28161,19 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -28305,7 +28287,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -28322,7 +28304,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -28357,11 +28339,11 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -28381,7 +28363,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -28417,18 +28399,18 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -28436,8 +28418,8 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -28454,8 +28436,8 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -28463,7 +28445,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -28488,8 +28470,8 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -28502,8 +28484,8 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -28516,7 +28498,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -28634,19 +28616,19 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -28747,7 +28729,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -28763,7 +28745,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -28796,11 +28778,11 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -28814,7 +28796,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -28848,26 +28830,26 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -28882,15 +28864,15 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -28914,8 +28896,8 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -28927,8 +28909,8 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -28940,7 +28922,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -29128,8 +29110,8 @@ abstract class ClaimResponseDetail1 implements Billing {
       double factor,
       Money net,
       List<int> noteNumber,
-      List<ClaimResponseAdjudication> adjudication,
-      List<ClaimResponseSubDetail1> subDetail}) = _$ClaimResponseDetail1;
+      List<dynamic> adjudication,
+      List<dynamic> subDetail}) = _$ClaimResponseDetail1;
 
   factory ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =
       _$ClaimResponseDetail1.fromJson;
@@ -29146,8 +29128,8 @@ abstract class ClaimResponseDetail1 implements Billing {
   double get factor;
   Money get net;
   List<int> get noteNumber;
-  List<ClaimResponseAdjudication> get adjudication;
-  List<ClaimResponseSubDetail1> get subDetail;
+  List<dynamic> get adjudication;
+  List<dynamic> get subDetail;
   @override
   $ClaimResponseDetail1CopyWith<ClaimResponseDetail1> get copyWith;
 }
@@ -29169,7 +29151,7 @@ abstract class $ClaimResponseSubDetail1CopyWith<$Res>
       double factor,
       Money net,
       List<int> noteNumber,
-      List<ClaimResponseAdjudication> adjudication});
+      List<dynamic> adjudication});
 }
 
 class _$ClaimResponseSubDetail1CopyWithImpl<$Res>
@@ -29216,7 +29198,7 @@ class _$ClaimResponseSubDetail1CopyWithImpl<$Res>
           noteNumber == freezed ? _value.noteNumber : noteNumber as List<int>,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>,
+          : adjudication as List<dynamic>,
     ));
   }
 }
@@ -29260,7 +29242,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
   @override
   final List<int> noteNumber;
   @override
-  final List<ClaimResponseAdjudication> adjudication;
+  final List<dynamic> adjudication;
 
   @override
   String toString() {
@@ -29350,19 +29332,19 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -29476,7 +29458,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -29493,7 +29475,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -29528,11 +29510,11 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -29552,7 +29534,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -29588,18 +29570,18 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -29607,8 +29589,8 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -29625,8 +29607,8 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -29634,7 +29616,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -29659,8 +29641,8 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -29673,8 +29655,8 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -29687,7 +29669,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -29804,19 +29786,19 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -29917,7 +29899,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -29933,7 +29915,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -29966,11 +29948,11 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -29984,7 +29966,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -30018,26 +30000,26 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -30052,15 +30034,15 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -30084,8 +30066,8 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -30097,8 +30079,8 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -30110,7 +30092,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -30287,18 +30269,17 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
 
 abstract class ClaimResponseSubDetail1 implements Billing {
   const factory ClaimResponseSubDetail1(
-          {String id,
-          List<dynamic> extension,
-          List<dynamic> modifierExtension,
-          CodeableConcept productOrService,
-          List<dynamic> modifier,
-          Quantity quantity,
-          Money unitPrice,
-          double factor,
-          Money net,
-          List<int> noteNumber,
-          List<ClaimResponseAdjudication> adjudication}) =
-      _$ClaimResponseSubDetail1;
+      {String id,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      CodeableConcept productOrService,
+      List<dynamic> modifier,
+      Quantity quantity,
+      Money unitPrice,
+      double factor,
+      Money net,
+      List<int> noteNumber,
+      List<dynamic> adjudication}) = _$ClaimResponseSubDetail1;
 
   factory ClaimResponseSubDetail1.fromJson(Map<String, dynamic> json) =
       _$ClaimResponseSubDetail1.fromJson;
@@ -30315,7 +30296,7 @@ abstract class ClaimResponseSubDetail1 implements Billing {
   double get factor;
   Money get net;
   List<int> get noteNumber;
-  List<ClaimResponseAdjudication> get adjudication;
+  List<dynamic> get adjudication;
   @override
   $ClaimResponseSubDetail1CopyWith<ClaimResponseSubDetail1> get copyWith;
 }
@@ -30452,19 +30433,19 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -30578,7 +30559,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -30595,7 +30576,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -30630,11 +30611,11 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -30654,7 +30635,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -30690,18 +30671,18 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -30709,8 +30690,8 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -30727,8 +30708,8 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -30736,7 +30717,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -30761,8 +30742,8 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -30775,8 +30756,8 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -30789,7 +30770,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -30896,19 +30877,19 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -31009,7 +30990,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -31025,7 +31006,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -31058,11 +31039,11 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -31076,7 +31057,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -31110,26 +31091,26 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -31144,15 +31125,15 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -31176,8 +31157,8 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -31189,8 +31170,8 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -31202,7 +31183,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -31564,19 +31545,19 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -31690,7 +31671,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -31707,7 +31688,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -31742,11 +31723,11 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -31766,7 +31747,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -31802,18 +31783,18 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -31821,8 +31802,8 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -31839,8 +31820,8 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -31848,7 +31829,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -31873,8 +31854,8 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -31887,8 +31868,8 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -31901,7 +31882,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -32008,19 +31989,19 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -32121,7 +32102,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -32137,7 +32118,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -32170,11 +32151,11 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -32188,7 +32169,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -32222,26 +32203,26 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -32256,15 +32237,15 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -32288,8 +32269,8 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -32301,8 +32282,8 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -32314,7 +32295,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -32663,19 +32644,19 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -32789,7 +32770,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -32806,7 +32787,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -32841,11 +32822,11 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -32865,7 +32846,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -32901,18 +32882,18 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -32920,8 +32901,8 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -32938,8 +32919,8 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -32947,7 +32928,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -32972,8 +32953,8 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -32986,8 +32967,8 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -33000,7 +32981,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -33107,19 +33088,19 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -33220,7 +33201,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -33236,7 +33217,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -33269,11 +33250,11 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -33287,7 +33268,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -33321,26 +33302,26 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -33355,15 +33336,15 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -33387,8 +33368,8 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -33400,8 +33381,8 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -33413,7 +33394,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -33771,19 +33752,19 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -33897,7 +33878,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -33914,7 +33895,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -33949,11 +33930,11 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -33973,7 +33954,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -34009,18 +33990,18 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -34028,8 +34009,8 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -34046,8 +34027,8 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -34055,7 +34036,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -34080,8 +34061,8 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -34094,8 +34075,8 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -34108,7 +34089,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -34215,19 +34196,19 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -34328,7 +34309,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -34344,7 +34325,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -34377,11 +34358,11 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -34395,7 +34376,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -34429,26 +34410,26 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -34463,15 +34444,15 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -34495,8 +34476,8 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -34508,8 +34489,8 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -34521,7 +34502,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,
@@ -34870,19 +34851,19 @@ class _$ClaimResponseError implements ClaimResponseError {
             Reference provider,
             CodeableConcept priority,
             CodeableConcept fundsReserve,
-            List<ClaimRelated> related,
+            List<dynamic> related,
             Reference prescription,
             Reference originalPrescription,
             ClaimPayee payee,
             Reference referral,
             Reference facility,
-            List<ClaimCareTeam> careTeam,
-            List<ClaimSupportingInfo> supportingInfo,
-            List<ClaimDiagnosis> diagnosis,
-            List<ClaimProcedure> procedure,
-            List<ClaimInsurance> insurance,
+            List<dynamic> careTeam,
+            List<dynamic> supportingInfo,
+            List<dynamic> diagnosis,
+            List<dynamic> procedure,
+            List<dynamic> insurance,
             ClaimAccident accident,
-            List<ClaimItem> item,
+            List<dynamic> item,
             Money total),
     @required
         Result claimRelated(
@@ -34996,7 +34977,7 @@ class _$ClaimResponseError implements ClaimResponseError {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<dynamic> encounter,
-            List<ClaimDetail> detail),
+            List<dynamic> detail),
     @required
         Result claimDetail(
             String id,
@@ -35013,7 +34994,7 @@ class _$ClaimResponseError implements ClaimResponseError {
             double factor,
             Money net,
             List<dynamic> udi,
-            List<ClaimSubDetail> subDetail),
+            List<dynamic> subDetail),
     @required
         Result claimSubDetail(
             String id,
@@ -35048,11 +35029,11 @@ class _$ClaimResponseError implements ClaimResponseError {
             Reference subject,
             Reference recipient,
             FhirDateTime date,
-            List<InvoiceParticipant> participant,
+            List<dynamic> participant,
             Reference issuer,
             Reference account,
-            List<InvoiceLineItem> lineItem,
-            List<InvoicePriceComponent> totalPriceComponent,
+            List<dynamic> lineItem,
+            List<dynamic> totalPriceComponent,
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
@@ -35072,7 +35053,7 @@ class _$ClaimResponseError implements ClaimResponseError {
             int sequence,
             Reference chargeItemReference,
             CodeableConcept chargeItemCodeableConcept,
-            List<InvoicePriceComponent> priceComponent),
+            List<dynamic> priceComponent),
     @required
         Result invoicePriceComponent(
             String id,
@@ -35108,18 +35089,18 @@ class _$ClaimResponseError implements ClaimResponseError {
             String preAuthRef,
             Period preAuthPeriod,
             CodeableConcept payeeType,
-            List<ClaimResponseItem> item,
-            List<ClaimResponseAddItem> addItem,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseTotal> total,
+            List<dynamic> item,
+            List<dynamic> addItem,
+            List<dynamic> adjudication,
+            List<dynamic> total,
             ClaimResponsePayment payment,
             CodeableConcept fundsReserve,
             CodeableConcept formCode,
             Attachment form,
-            List<ClaimResponseProcessNote> processNote,
+            List<dynamic> processNote,
             List<dynamic> communicationRequest,
-            List<ClaimResponseInsurance> insurance,
-            List<ClaimResponseError> error),
+            List<dynamic> insurance,
+            List<dynamic> error),
     @required
         Result claimResponseItem(
             String id,
@@ -35127,8 +35108,8 @@ class _$ClaimResponseError implements ClaimResponseError {
             List<dynamic> modifierExtension,
             int itemSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseAdjudication(
             String id,
@@ -35145,8 +35126,8 @@ class _$ClaimResponseError implements ClaimResponseError {
             List<dynamic> modifierExtension,
             int detailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail(
             String id,
@@ -35154,7 +35135,7 @@ class _$ClaimResponseError implements ClaimResponseError {
             List<dynamic> modifierExtension,
             int subDetailSequence,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseAddItem(
             String id,
@@ -35179,8 +35160,8 @@ class _$ClaimResponseError implements ClaimResponseError {
             CodeableConcept bodySite,
             List<dynamic> subSite,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseDetail1> detail),
+            List<dynamic> adjudication,
+            List<dynamic> detail),
     @required
         Result claimResponseDetail1(
             String id,
@@ -35193,8 +35174,8 @@ class _$ClaimResponseError implements ClaimResponseError {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication,
-            List<ClaimResponseSubDetail1> subDetail),
+            List<dynamic> adjudication,
+            List<dynamic> subDetail),
     @required
         Result claimResponseSubDetail1(
             String id,
@@ -35207,7 +35188,7 @@ class _$ClaimResponseError implements ClaimResponseError {
             double factor,
             Money net,
             List<int> noteNumber,
-            List<ClaimResponseAdjudication> adjudication),
+            List<dynamic> adjudication),
     @required
         Result claimResponseTotal(
             String id,
@@ -35314,19 +35295,19 @@ class _$ClaimResponseError implements ClaimResponseError {
         Reference provider,
         CodeableConcept priority,
         CodeableConcept fundsReserve,
-        List<ClaimRelated> related,
+        List<dynamic> related,
         Reference prescription,
         Reference originalPrescription,
         ClaimPayee payee,
         Reference referral,
         Reference facility,
-        List<ClaimCareTeam> careTeam,
-        List<ClaimSupportingInfo> supportingInfo,
-        List<ClaimDiagnosis> diagnosis,
-        List<ClaimProcedure> procedure,
-        List<ClaimInsurance> insurance,
+        List<dynamic> careTeam,
+        List<dynamic> supportingInfo,
+        List<dynamic> diagnosis,
+        List<dynamic> procedure,
+        List<dynamic> insurance,
         ClaimAccident accident,
-        List<ClaimItem> item,
+        List<dynamic> item,
         Money total),
     Result claimRelated(
         String id,
@@ -35427,7 +35408,7 @@ class _$ClaimResponseError implements ClaimResponseError {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<dynamic> encounter,
-        List<ClaimDetail> detail),
+        List<dynamic> detail),
     Result claimDetail(
         String id,
         List<dynamic> extension,
@@ -35443,7 +35424,7 @@ class _$ClaimResponseError implements ClaimResponseError {
         double factor,
         Money net,
         List<dynamic> udi,
-        List<ClaimSubDetail> subDetail),
+        List<dynamic> subDetail),
     Result claimSubDetail(
         String id,
         List<dynamic> extension,
@@ -35476,11 +35457,11 @@ class _$ClaimResponseError implements ClaimResponseError {
         Reference subject,
         Reference recipient,
         FhirDateTime date,
-        List<InvoiceParticipant> participant,
+        List<dynamic> participant,
         Reference issuer,
         Reference account,
-        List<InvoiceLineItem> lineItem,
-        List<InvoicePriceComponent> totalPriceComponent,
+        List<dynamic> lineItem,
+        List<dynamic> totalPriceComponent,
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
@@ -35494,7 +35475,7 @@ class _$ClaimResponseError implements ClaimResponseError {
         int sequence,
         Reference chargeItemReference,
         CodeableConcept chargeItemCodeableConcept,
-        List<InvoicePriceComponent> priceComponent),
+        List<dynamic> priceComponent),
     Result invoicePriceComponent(
         String id,
         List<dynamic> extension,
@@ -35528,26 +35509,26 @@ class _$ClaimResponseError implements ClaimResponseError {
         String preAuthRef,
         Period preAuthPeriod,
         CodeableConcept payeeType,
-        List<ClaimResponseItem> item,
-        List<ClaimResponseAddItem> addItem,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseTotal> total,
+        List<dynamic> item,
+        List<dynamic> addItem,
+        List<dynamic> adjudication,
+        List<dynamic> total,
         ClaimResponsePayment payment,
         CodeableConcept fundsReserve,
         CodeableConcept formCode,
         Attachment form,
-        List<ClaimResponseProcessNote> processNote,
+        List<dynamic> processNote,
         List<dynamic> communicationRequest,
-        List<ClaimResponseInsurance> insurance,
-        List<ClaimResponseError> error),
+        List<dynamic> insurance,
+        List<dynamic> error),
     Result claimResponseItem(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int itemSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseAdjudication(
         String id,
         List<dynamic> extension,
@@ -35562,15 +35543,15 @@ class _$ClaimResponseError implements ClaimResponseError {
         List<dynamic> modifierExtension,
         int detailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         int subDetailSequence,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseAddItem(
         String id,
         List<dynamic> extension,
@@ -35594,8 +35575,8 @@ class _$ClaimResponseError implements ClaimResponseError {
         CodeableConcept bodySite,
         List<dynamic> subSite,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseDetail1> detail),
+        List<dynamic> adjudication,
+        List<dynamic> detail),
     Result claimResponseDetail1(
         String id,
         List<dynamic> extension,
@@ -35607,8 +35588,8 @@ class _$ClaimResponseError implements ClaimResponseError {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication,
-        List<ClaimResponseSubDetail1> subDetail),
+        List<dynamic> adjudication,
+        List<dynamic> subDetail),
     Result claimResponseSubDetail1(
         String id,
         List<dynamic> extension,
@@ -35620,7 +35601,7 @@ class _$ClaimResponseError implements ClaimResponseError {
         double factor,
         Money net,
         List<int> noteNumber,
-        List<ClaimResponseAdjudication> adjudication),
+        List<dynamic> adjudication),
     Result claimResponseTotal(
         String id,
         List<dynamic> extension,

@@ -84,7 +84,7 @@ class _$CareProvisionTearOff {
       Reference encounter,
       FhirDateTime dateWritten,
       Reference prescriber,
-      List<VisionPrescriptionLensSpecification> lensSpecification}) {
+      List<dynamic> lensSpecification}) {
     return VisionPrescription(
       resourceType: resourceType,
       id: id,
@@ -115,7 +115,7 @@ class _$CareProvisionTearOff {
       double sphere,
       double cylinder,
       int axis,
-      List<VisionPrescriptionPrism> prism,
+      List<dynamic> prism,
       double add,
       double power,
       double backCurve,
@@ -185,7 +185,7 @@ class _$CareProvisionTearOff {
       List<dynamic> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> basis,
-      List<RiskAssessmentPrediction> prediction,
+      List<dynamic> prediction,
       String mitigation,
       List<dynamic> note}) {
     return RiskAssessment(
@@ -364,7 +364,7 @@ class _$CareProvisionTearOff {
       Reference subject,
       Date startDate,
       CodeableConcept startCodeableConcept,
-      List<GoalTarget> target,
+      List<dynamic> target,
       Date statusDate,
       String statusReason,
       Reference expressedBy,
@@ -457,7 +457,7 @@ class _$CareProvisionTearOff {
       List<dynamic> foodPreferenceModifier,
       List<dynamic> excludeFoodModifier,
       NutritionOrderOralDiet oralDiet,
-      List<NutritionOrderSupplement> supplement,
+      List<dynamic> supplement,
       NutritionOrderEnteralFormula enteralFormula,
       List<dynamic> note}) {
     return NutritionOrder(
@@ -496,8 +496,8 @@ class _$CareProvisionTearOff {
       List<dynamic> modifierExtension,
       List<dynamic> type,
       List<dynamic> schedule,
-      List<NutritionOrderNutrient> nutrient,
-      List<NutritionOrderTexture> texture,
+      List<dynamic> nutrient,
+      List<dynamic> texture,
       List<dynamic> fluidConsistencyType,
       String instruction}) {
     return NutritionOrderOralDiet(
@@ -574,7 +574,7 @@ class _$CareProvisionTearOff {
       String additiveProductName,
       Quantity caloricDensity,
       CodeableConcept routeofAdministration,
-      List<NutritionOrderAdministration> administration,
+      List<dynamic> administration,
       Quantity maxVolumeToDeliver,
       String administrationInstruction}) {
     return NutritionOrderEnteralFormula(
@@ -643,7 +643,7 @@ class _$CareProvisionTearOff {
       List<dynamic> addresses,
       List<dynamic> supportingInfo,
       List<dynamic> goal,
-      List<CarePlanActivity> activity,
+      List<dynamic> activity,
       List<dynamic> note}) {
     return CarePlan(
       resourceType: resourceType,
@@ -770,7 +770,7 @@ class _$CareProvisionTearOff {
       Reference subject,
       Reference encounter,
       Period period,
-      List<CareTeamParticipant> participant,
+      List<dynamic> participant,
       List<dynamic> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> managingOrganization,
@@ -848,7 +848,7 @@ class _$CareProvisionTearOff {
       List<dynamic> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> note,
-      List<RequestGroupAction> action}) {
+      List<dynamic> action}) {
     return RequestGroup(
       resourceType: resourceType,
       id: id,
@@ -891,8 +891,8 @@ class _$CareProvisionTearOff {
       Code priority,
       List<dynamic> code,
       List<dynamic> documentation,
-      List<RequestGroupCondition> condition,
-      List<RequestGroupRelatedAction> relatedAction,
+      List<dynamic> condition,
+      List<dynamic> relatedAction,
       FhirDateTime timingDateTime,
       Age timingAge,
       Period timingPeriod,
@@ -907,7 +907,7 @@ class _$CareProvisionTearOff {
       Code precheckBehavior,
       Code cardinalityBehavior,
       Reference resource,
-      List<RequestGroupAction> action}) {
+      List<dynamic> action}) {
     return RequestGroupAction(
       id: id,
       extension: extension,
@@ -1001,7 +1001,7 @@ mixin _$CareProvision {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -1012,7 +1012,7 @@ mixin _$CareProvision {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -1054,7 +1054,7 @@ mixin _$CareProvision {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -1139,7 +1139,7 @@ mixin _$CareProvision {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -1187,7 +1187,7 @@ mixin _$CareProvision {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -1197,8 +1197,8 @@ mixin _$CareProvision {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -1236,7 +1236,7 @@ mixin _$CareProvision {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -1280,7 +1280,7 @@ mixin _$CareProvision {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -1335,7 +1335,7 @@ mixin _$CareProvision {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -1378,7 +1378,7 @@ mixin _$CareProvision {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -1391,8 +1391,8 @@ mixin _$CareProvision {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -1407,7 +1407,7 @@ mixin _$CareProvision {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -1440,7 +1440,7 @@ mixin _$CareProvision {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -1450,7 +1450,7 @@ mixin _$CareProvision {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -1490,7 +1490,7 @@ mixin _$CareProvision {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -1572,7 +1572,7 @@ mixin _$CareProvision {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -1618,7 +1618,7 @@ mixin _$CareProvision {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -1627,8 +1627,8 @@ mixin _$CareProvision {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -1662,7 +1662,7 @@ mixin _$CareProvision {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -1704,7 +1704,7 @@ mixin _$CareProvision {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -1756,7 +1756,7 @@ mixin _$CareProvision {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -1797,7 +1797,7 @@ mixin _$CareProvision {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -1809,8 +1809,8 @@ mixin _$CareProvision {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -1825,7 +1825,7 @@ mixin _$CareProvision {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -1955,7 +1955,7 @@ abstract class $VisionPrescriptionCopyWith<$Res>
       Reference encounter,
       FhirDateTime dateWritten,
       Reference prescriber,
-      List<VisionPrescriptionLensSpecification> lensSpecification});
+      List<dynamic> lensSpecification});
 }
 
 class _$VisionPrescriptionCopyWithImpl<$Res>
@@ -2021,7 +2021,7 @@ class _$VisionPrescriptionCopyWithImpl<$Res>
           prescriber == freezed ? _value.prescriber : prescriber as Reference,
       lensSpecification: lensSpecification == freezed
           ? _value.lensSpecification
-          : lensSpecification as List<VisionPrescriptionLensSpecification>,
+          : lensSpecification as List<dynamic>,
     ));
   }
 }
@@ -2083,7 +2083,7 @@ class _$VisionPrescription implements VisionPrescription {
   @override
   final Reference prescriber;
   @override
-  final List<VisionPrescriptionLensSpecification> lensSpecification;
+  final List<dynamic> lensSpecification;
 
   @override
   String toString() {
@@ -2189,7 +2189,7 @@ class _$VisionPrescription implements VisionPrescription {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -2200,7 +2200,7 @@ class _$VisionPrescription implements VisionPrescription {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -2242,7 +2242,7 @@ class _$VisionPrescription implements VisionPrescription {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -2327,7 +2327,7 @@ class _$VisionPrescription implements VisionPrescription {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -2375,7 +2375,7 @@ class _$VisionPrescription implements VisionPrescription {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -2385,8 +2385,8 @@ class _$VisionPrescription implements VisionPrescription {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -2424,7 +2424,7 @@ class _$VisionPrescription implements VisionPrescription {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -2468,7 +2468,7 @@ class _$VisionPrescription implements VisionPrescription {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -2523,7 +2523,7 @@ class _$VisionPrescription implements VisionPrescription {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -2566,7 +2566,7 @@ class _$VisionPrescription implements VisionPrescription {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -2579,8 +2579,8 @@ class _$VisionPrescription implements VisionPrescription {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -2595,7 +2595,7 @@ class _$VisionPrescription implements VisionPrescription {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -2673,7 +2673,7 @@ class _$VisionPrescription implements VisionPrescription {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -2683,7 +2683,7 @@ class _$VisionPrescription implements VisionPrescription {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -2723,7 +2723,7 @@ class _$VisionPrescription implements VisionPrescription {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -2805,7 +2805,7 @@ class _$VisionPrescription implements VisionPrescription {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -2851,7 +2851,7 @@ class _$VisionPrescription implements VisionPrescription {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -2860,8 +2860,8 @@ class _$VisionPrescription implements VisionPrescription {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -2895,7 +2895,7 @@ class _$VisionPrescription implements VisionPrescription {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -2937,7 +2937,7 @@ class _$VisionPrescription implements VisionPrescription {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -2989,7 +2989,7 @@ class _$VisionPrescription implements VisionPrescription {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -3030,7 +3030,7 @@ class _$VisionPrescription implements VisionPrescription {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -3042,8 +3042,8 @@ class _$VisionPrescription implements VisionPrescription {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -3058,7 +3058,7 @@ class _$VisionPrescription implements VisionPrescription {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -3200,24 +3200,23 @@ class _$VisionPrescription implements VisionPrescription {
 
 abstract class VisionPrescription implements CareProvision {
   const factory VisionPrescription(
-          {String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          Code language,
-          Narrative text,
-          List<dynamic> contained,
-          List<dynamic> extension,
-          List<dynamic> modifierExtension,
-          List<dynamic> identifier,
-          Code status,
-          FhirDateTime created,
-          Reference patient,
-          Reference encounter,
-          FhirDateTime dateWritten,
-          Reference prescriber,
-          List<VisionPrescriptionLensSpecification> lensSpecification}) =
-      _$VisionPrescription;
+      {String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<dynamic> contained,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
+      Code status,
+      FhirDateTime created,
+      Reference patient,
+      Reference encounter,
+      FhirDateTime dateWritten,
+      Reference prescriber,
+      List<dynamic> lensSpecification}) = _$VisionPrescription;
 
   factory VisionPrescription.fromJson(Map<String, dynamic> json) =
       _$VisionPrescription.fromJson;
@@ -3240,7 +3239,7 @@ abstract class VisionPrescription implements CareProvision {
   Reference get encounter;
   FhirDateTime get dateWritten;
   Reference get prescriber;
-  List<VisionPrescriptionLensSpecification> get lensSpecification;
+  List<dynamic> get lensSpecification;
   @override
   $VisionPrescriptionCopyWith<VisionPrescription> get copyWith;
 }
@@ -3261,7 +3260,7 @@ abstract class $VisionPrescriptionLensSpecificationCopyWith<$Res>
       double sphere,
       double cylinder,
       int axis,
-      List<VisionPrescriptionPrism> prism,
+      List<dynamic> prism,
       double add,
       double power,
       double backCurve,
@@ -3318,9 +3317,7 @@ class _$VisionPrescriptionLensSpecificationCopyWithImpl<$Res>
       sphere: sphere == freezed ? _value.sphere : sphere as double,
       cylinder: cylinder == freezed ? _value.cylinder : cylinder as double,
       axis: axis == freezed ? _value.axis : axis as int,
-      prism: prism == freezed
-          ? _value.prism
-          : prism as List<VisionPrescriptionPrism>,
+      prism: prism == freezed ? _value.prism : prism as List<dynamic>,
       add: add == freezed ? _value.add : add as double,
       power: power == freezed ? _value.power : power as double,
       backCurve: backCurve == freezed ? _value.backCurve : backCurve as double,
@@ -3376,7 +3373,7 @@ class _$VisionPrescriptionLensSpecification
   @override
   final int axis;
   @override
-  final List<VisionPrescriptionPrism> prism;
+  final List<dynamic> prism;
   @override
   final double add;
   @override
@@ -3494,7 +3491,7 @@ class _$VisionPrescriptionLensSpecification
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -3505,7 +3502,7 @@ class _$VisionPrescriptionLensSpecification
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -3547,7 +3544,7 @@ class _$VisionPrescriptionLensSpecification
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -3632,7 +3629,7 @@ class _$VisionPrescriptionLensSpecification
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -3680,7 +3677,7 @@ class _$VisionPrescriptionLensSpecification
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -3690,8 +3687,8 @@ class _$VisionPrescriptionLensSpecification
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -3729,7 +3726,7 @@ class _$VisionPrescriptionLensSpecification
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -3773,7 +3770,7 @@ class _$VisionPrescriptionLensSpecification
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -3828,7 +3825,7 @@ class _$VisionPrescriptionLensSpecification
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -3871,7 +3868,7 @@ class _$VisionPrescriptionLensSpecification
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -3884,8 +3881,8 @@ class _$VisionPrescriptionLensSpecification
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -3900,7 +3897,7 @@ class _$VisionPrescriptionLensSpecification
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -3978,7 +3975,7 @@ class _$VisionPrescriptionLensSpecification
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -3988,7 +3985,7 @@ class _$VisionPrescriptionLensSpecification
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -4028,7 +4025,7 @@ class _$VisionPrescriptionLensSpecification
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -4110,7 +4107,7 @@ class _$VisionPrescriptionLensSpecification
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -4156,7 +4153,7 @@ class _$VisionPrescriptionLensSpecification
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -4165,8 +4162,8 @@ class _$VisionPrescriptionLensSpecification
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -4200,7 +4197,7 @@ class _$VisionPrescriptionLensSpecification
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -4242,7 +4239,7 @@ class _$VisionPrescriptionLensSpecification
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -4294,7 +4291,7 @@ class _$VisionPrescriptionLensSpecification
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -4335,7 +4332,7 @@ class _$VisionPrescriptionLensSpecification
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -4347,8 +4344,8 @@ class _$VisionPrescriptionLensSpecification
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -4363,7 +4360,7 @@ class _$VisionPrescriptionLensSpecification
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -4513,7 +4510,7 @@ abstract class VisionPrescriptionLensSpecification implements CareProvision {
       double sphere,
       double cylinder,
       int axis,
-      List<VisionPrescriptionPrism> prism,
+      List<dynamic> prism,
       double add,
       double power,
       double backCurve,
@@ -4537,7 +4534,7 @@ abstract class VisionPrescriptionLensSpecification implements CareProvision {
   double get sphere;
   double get cylinder;
   int get axis;
-  List<VisionPrescriptionPrism> get prism;
+  List<dynamic> get prism;
   double get add;
   double get power;
   double get backCurve;
@@ -4677,7 +4674,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -4688,7 +4685,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -4730,7 +4727,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -4815,7 +4812,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -4863,7 +4860,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -4873,8 +4870,8 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -4912,7 +4909,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -4956,7 +4953,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -5011,7 +5008,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -5054,7 +5051,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -5067,8 +5064,8 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -5083,7 +5080,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -5145,7 +5142,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -5155,7 +5152,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -5195,7 +5192,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -5277,7 +5274,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -5323,7 +5320,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -5332,8 +5329,8 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -5367,7 +5364,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -5409,7 +5406,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -5461,7 +5458,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -5502,7 +5499,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -5514,8 +5511,8 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -5530,7 +5527,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -5707,7 +5704,7 @@ abstract class $RiskAssessmentCopyWith<$Res>
       List<dynamic> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> basis,
-      List<RiskAssessmentPrediction> prediction,
+      List<dynamic> prediction,
       String mitigation,
       List<dynamic> note});
 }
@@ -5800,7 +5797,7 @@ class _$RiskAssessmentCopyWithImpl<$Res>
       basis: basis == freezed ? _value.basis : basis as List<dynamic>,
       prediction: prediction == freezed
           ? _value.prediction
-          : prediction as List<RiskAssessmentPrediction>,
+          : prediction as List<dynamic>,
       mitigation:
           mitigation == freezed ? _value.mitigation : mitigation as String,
       note: note == freezed ? _value.note : note as List<dynamic>,
@@ -5891,7 +5888,7 @@ class _$RiskAssessment implements RiskAssessment {
   @override
   final List<dynamic> basis;
   @override
-  final List<RiskAssessmentPrediction> prediction;
+  final List<dynamic> prediction;
   @override
   final String mitigation;
   @override
@@ -6034,7 +6031,7 @@ class _$RiskAssessment implements RiskAssessment {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -6045,7 +6042,7 @@ class _$RiskAssessment implements RiskAssessment {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -6087,7 +6084,7 @@ class _$RiskAssessment implements RiskAssessment {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -6172,7 +6169,7 @@ class _$RiskAssessment implements RiskAssessment {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -6220,7 +6217,7 @@ class _$RiskAssessment implements RiskAssessment {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -6230,8 +6227,8 @@ class _$RiskAssessment implements RiskAssessment {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -6269,7 +6266,7 @@ class _$RiskAssessment implements RiskAssessment {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -6313,7 +6310,7 @@ class _$RiskAssessment implements RiskAssessment {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -6368,7 +6365,7 @@ class _$RiskAssessment implements RiskAssessment {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -6411,7 +6408,7 @@ class _$RiskAssessment implements RiskAssessment {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -6424,8 +6421,8 @@ class _$RiskAssessment implements RiskAssessment {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -6440,7 +6437,7 @@ class _$RiskAssessment implements RiskAssessment {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -6528,7 +6525,7 @@ class _$RiskAssessment implements RiskAssessment {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -6538,7 +6535,7 @@ class _$RiskAssessment implements RiskAssessment {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -6578,7 +6575,7 @@ class _$RiskAssessment implements RiskAssessment {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -6660,7 +6657,7 @@ class _$RiskAssessment implements RiskAssessment {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -6706,7 +6703,7 @@ class _$RiskAssessment implements RiskAssessment {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -6715,8 +6712,8 @@ class _$RiskAssessment implements RiskAssessment {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -6750,7 +6747,7 @@ class _$RiskAssessment implements RiskAssessment {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -6792,7 +6789,7 @@ class _$RiskAssessment implements RiskAssessment {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -6844,7 +6841,7 @@ class _$RiskAssessment implements RiskAssessment {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -6885,7 +6882,7 @@ class _$RiskAssessment implements RiskAssessment {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -6897,8 +6894,8 @@ class _$RiskAssessment implements RiskAssessment {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -6913,7 +6910,7 @@ class _$RiskAssessment implements RiskAssessment {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -7088,7 +7085,7 @@ abstract class RiskAssessment implements CareProvision {
       List<dynamic> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> basis,
-      List<RiskAssessmentPrediction> prediction,
+      List<dynamic> prediction,
       String mitigation,
       List<dynamic> note}) = _$RiskAssessment;
 
@@ -7121,7 +7118,7 @@ abstract class RiskAssessment implements CareProvision {
   List<dynamic> get reasonCode;
   List<dynamic> get reasonReference;
   List<dynamic> get basis;
-  List<RiskAssessmentPrediction> get prediction;
+  List<dynamic> get prediction;
   String get mitigation;
   List<dynamic> get note;
   @override
@@ -7326,7 +7323,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -7337,7 +7334,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -7379,7 +7376,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -7464,7 +7461,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -7512,7 +7509,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -7522,8 +7519,8 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -7561,7 +7558,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -7605,7 +7602,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -7660,7 +7657,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -7703,7 +7700,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -7716,8 +7713,8 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -7732,7 +7729,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -7804,7 +7801,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -7814,7 +7811,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -7854,7 +7851,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -7936,7 +7933,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -7982,7 +7979,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -7991,8 +7988,8 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -8026,7 +8023,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -8068,7 +8065,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -8120,7 +8117,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -8161,7 +8158,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -8173,8 +8170,8 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -8189,7 +8186,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -8912,7 +8909,7 @@ class _$ServiceRequest implements ServiceRequest {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -8923,7 +8920,7 @@ class _$ServiceRequest implements ServiceRequest {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -8965,7 +8962,7 @@ class _$ServiceRequest implements ServiceRequest {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -9050,7 +9047,7 @@ class _$ServiceRequest implements ServiceRequest {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -9098,7 +9095,7 @@ class _$ServiceRequest implements ServiceRequest {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -9108,8 +9105,8 @@ class _$ServiceRequest implements ServiceRequest {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -9147,7 +9144,7 @@ class _$ServiceRequest implements ServiceRequest {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -9191,7 +9188,7 @@ class _$ServiceRequest implements ServiceRequest {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -9246,7 +9243,7 @@ class _$ServiceRequest implements ServiceRequest {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -9289,7 +9286,7 @@ class _$ServiceRequest implements ServiceRequest {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -9302,8 +9299,8 @@ class _$ServiceRequest implements ServiceRequest {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -9318,7 +9315,7 @@ class _$ServiceRequest implements ServiceRequest {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -9426,7 +9423,7 @@ class _$ServiceRequest implements ServiceRequest {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -9436,7 +9433,7 @@ class _$ServiceRequest implements ServiceRequest {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -9476,7 +9473,7 @@ class _$ServiceRequest implements ServiceRequest {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -9558,7 +9555,7 @@ class _$ServiceRequest implements ServiceRequest {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -9604,7 +9601,7 @@ class _$ServiceRequest implements ServiceRequest {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -9613,8 +9610,8 @@ class _$ServiceRequest implements ServiceRequest {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -9648,7 +9645,7 @@ class _$ServiceRequest implements ServiceRequest {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -9690,7 +9687,7 @@ class _$ServiceRequest implements ServiceRequest {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -9742,7 +9739,7 @@ class _$ServiceRequest implements ServiceRequest {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -9783,7 +9780,7 @@ class _$ServiceRequest implements ServiceRequest {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -9795,8 +9792,8 @@ class _$ServiceRequest implements ServiceRequest {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -9811,7 +9808,7 @@ class _$ServiceRequest implements ServiceRequest {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -10109,7 +10106,7 @@ abstract class $GoalCopyWith<$Res> implements $CareProvisionCopyWith<$Res> {
       Reference subject,
       Date startDate,
       CodeableConcept startCodeableConcept,
-      List<GoalTarget> target,
+      List<dynamic> target,
       Date statusDate,
       String statusReason,
       Reference expressedBy,
@@ -10195,7 +10192,7 @@ class _$GoalCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
       startCodeableConcept: startCodeableConcept == freezed
           ? _value.startCodeableConcept
           : startCodeableConcept as CodeableConcept,
-      target: target == freezed ? _value.target : target as List<GoalTarget>,
+      target: target == freezed ? _value.target : target as List<dynamic>,
       statusDate:
           statusDate == freezed ? _value.statusDate : statusDate as Date,
       statusReason: statusReason == freezed
@@ -10286,7 +10283,7 @@ class _$Goal implements Goal {
   @override
   final CodeableConcept startCodeableConcept;
   @override
-  final List<GoalTarget> target;
+  final List<dynamic> target;
   @override
   final Date statusDate;
   @override
@@ -10437,7 +10434,7 @@ class _$Goal implements Goal {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -10448,7 +10445,7 @@ class _$Goal implements Goal {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -10490,7 +10487,7 @@ class _$Goal implements Goal {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -10575,7 +10572,7 @@ class _$Goal implements Goal {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -10623,7 +10620,7 @@ class _$Goal implements Goal {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -10633,8 +10630,8 @@ class _$Goal implements Goal {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -10672,7 +10669,7 @@ class _$Goal implements Goal {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -10716,7 +10713,7 @@ class _$Goal implements Goal {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -10771,7 +10768,7 @@ class _$Goal implements Goal {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -10814,7 +10811,7 @@ class _$Goal implements Goal {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -10827,8 +10824,8 @@ class _$Goal implements Goal {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -10843,7 +10840,7 @@ class _$Goal implements Goal {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -10930,7 +10927,7 @@ class _$Goal implements Goal {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -10940,7 +10937,7 @@ class _$Goal implements Goal {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -10980,7 +10977,7 @@ class _$Goal implements Goal {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -11062,7 +11059,7 @@ class _$Goal implements Goal {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -11108,7 +11105,7 @@ class _$Goal implements Goal {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -11117,8 +11114,8 @@ class _$Goal implements Goal {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -11152,7 +11149,7 @@ class _$Goal implements Goal {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -11194,7 +11191,7 @@ class _$Goal implements Goal {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -11246,7 +11243,7 @@ class _$Goal implements Goal {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -11287,7 +11284,7 @@ class _$Goal implements Goal {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -11299,8 +11296,8 @@ class _$Goal implements Goal {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -11315,7 +11312,7 @@ class _$Goal implements Goal {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -11483,7 +11480,7 @@ abstract class Goal implements CareProvision {
       Reference subject,
       Date startDate,
       CodeableConcept startCodeableConcept,
-      List<GoalTarget> target,
+      List<dynamic> target,
       Date statusDate,
       String statusReason,
       Reference expressedBy,
@@ -11514,7 +11511,7 @@ abstract class Goal implements CareProvision {
   Reference get subject;
   Date get startDate;
   CodeableConcept get startCodeableConcept;
-  List<GoalTarget> get target;
+  List<dynamic> get target;
   Date get statusDate;
   String get statusReason;
   Reference get expressedBy;
@@ -11744,7 +11741,7 @@ class _$GoalTarget implements GoalTarget {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -11755,7 +11752,7 @@ class _$GoalTarget implements GoalTarget {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -11797,7 +11794,7 @@ class _$GoalTarget implements GoalTarget {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -11882,7 +11879,7 @@ class _$GoalTarget implements GoalTarget {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -11930,7 +11927,7 @@ class _$GoalTarget implements GoalTarget {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -11940,8 +11937,8 @@ class _$GoalTarget implements GoalTarget {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -11979,7 +11976,7 @@ class _$GoalTarget implements GoalTarget {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -12023,7 +12020,7 @@ class _$GoalTarget implements GoalTarget {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -12078,7 +12075,7 @@ class _$GoalTarget implements GoalTarget {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -12121,7 +12118,7 @@ class _$GoalTarget implements GoalTarget {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -12134,8 +12131,8 @@ class _$GoalTarget implements GoalTarget {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -12150,7 +12147,7 @@ class _$GoalTarget implements GoalTarget {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -12224,7 +12221,7 @@ class _$GoalTarget implements GoalTarget {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -12234,7 +12231,7 @@ class _$GoalTarget implements GoalTarget {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -12274,7 +12271,7 @@ class _$GoalTarget implements GoalTarget {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -12356,7 +12353,7 @@ class _$GoalTarget implements GoalTarget {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -12402,7 +12399,7 @@ class _$GoalTarget implements GoalTarget {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -12411,8 +12408,8 @@ class _$GoalTarget implements GoalTarget {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -12446,7 +12443,7 @@ class _$GoalTarget implements GoalTarget {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -12488,7 +12485,7 @@ class _$GoalTarget implements GoalTarget {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -12540,7 +12537,7 @@ class _$GoalTarget implements GoalTarget {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -12581,7 +12578,7 @@ class _$GoalTarget implements GoalTarget {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -12593,8 +12590,8 @@ class _$GoalTarget implements GoalTarget {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -12609,7 +12606,7 @@ class _$GoalTarget implements GoalTarget {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -12812,7 +12809,7 @@ abstract class $NutritionOrderCopyWith<$Res>
       List<dynamic> foodPreferenceModifier,
       List<dynamic> excludeFoodModifier,
       NutritionOrderOralDiet oralDiet,
-      List<NutritionOrderSupplement> supplement,
+      List<dynamic> supplement,
       NutritionOrderEnteralFormula enteralFormula,
       List<dynamic> note});
 }
@@ -12908,7 +12905,7 @@ class _$NutritionOrderCopyWithImpl<$Res>
           : oralDiet as NutritionOrderOralDiet,
       supplement: supplement == freezed
           ? _value.supplement
-          : supplement as List<NutritionOrderSupplement>,
+          : supplement as List<dynamic>,
       enteralFormula: enteralFormula == freezed
           ? _value.enteralFormula
           : enteralFormula as NutritionOrderEnteralFormula,
@@ -12997,7 +12994,7 @@ class _$NutritionOrder implements NutritionOrder {
   @override
   final NutritionOrderOralDiet oralDiet;
   @override
-  final List<NutritionOrderSupplement> supplement;
+  final List<dynamic> supplement;
   @override
   final NutritionOrderEnteralFormula enteralFormula;
   @override
@@ -13137,7 +13134,7 @@ class _$NutritionOrder implements NutritionOrder {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -13148,7 +13145,7 @@ class _$NutritionOrder implements NutritionOrder {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -13190,7 +13187,7 @@ class _$NutritionOrder implements NutritionOrder {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -13275,7 +13272,7 @@ class _$NutritionOrder implements NutritionOrder {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -13323,7 +13320,7 @@ class _$NutritionOrder implements NutritionOrder {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -13333,8 +13330,8 @@ class _$NutritionOrder implements NutritionOrder {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -13372,7 +13369,7 @@ class _$NutritionOrder implements NutritionOrder {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -13416,7 +13413,7 @@ class _$NutritionOrder implements NutritionOrder {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -13471,7 +13468,7 @@ class _$NutritionOrder implements NutritionOrder {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -13514,7 +13511,7 @@ class _$NutritionOrder implements NutritionOrder {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -13527,8 +13524,8 @@ class _$NutritionOrder implements NutritionOrder {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -13543,7 +13540,7 @@ class _$NutritionOrder implements NutritionOrder {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -13630,7 +13627,7 @@ class _$NutritionOrder implements NutritionOrder {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -13640,7 +13637,7 @@ class _$NutritionOrder implements NutritionOrder {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -13680,7 +13677,7 @@ class _$NutritionOrder implements NutritionOrder {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -13762,7 +13759,7 @@ class _$NutritionOrder implements NutritionOrder {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -13808,7 +13805,7 @@ class _$NutritionOrder implements NutritionOrder {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -13817,8 +13814,8 @@ class _$NutritionOrder implements NutritionOrder {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -13852,7 +13849,7 @@ class _$NutritionOrder implements NutritionOrder {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -13894,7 +13891,7 @@ class _$NutritionOrder implements NutritionOrder {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -13946,7 +13943,7 @@ class _$NutritionOrder implements NutritionOrder {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -13987,7 +13984,7 @@ class _$NutritionOrder implements NutritionOrder {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -13999,8 +13996,8 @@ class _$NutritionOrder implements NutritionOrder {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -14015,7 +14012,7 @@ class _$NutritionOrder implements NutritionOrder {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -14188,7 +14185,7 @@ abstract class NutritionOrder implements CareProvision {
       List<dynamic> foodPreferenceModifier,
       List<dynamic> excludeFoodModifier,
       NutritionOrderOralDiet oralDiet,
-      List<NutritionOrderSupplement> supplement,
+      List<dynamic> supplement,
       NutritionOrderEnteralFormula enteralFormula,
       List<dynamic> note}) = _$NutritionOrder;
 
@@ -14220,7 +14217,7 @@ abstract class NutritionOrder implements CareProvision {
   List<dynamic> get foodPreferenceModifier;
   List<dynamic> get excludeFoodModifier;
   NutritionOrderOralDiet get oralDiet;
-  List<NutritionOrderSupplement> get supplement;
+  List<dynamic> get supplement;
   NutritionOrderEnteralFormula get enteralFormula;
   List<dynamic> get note;
   @override
@@ -14239,8 +14236,8 @@ abstract class $NutritionOrderOralDietCopyWith<$Res>
       List<dynamic> modifierExtension,
       List<dynamic> type,
       List<dynamic> schedule,
-      List<NutritionOrderNutrient> nutrient,
-      List<NutritionOrderTexture> texture,
+      List<dynamic> nutrient,
+      List<dynamic> texture,
       List<dynamic> fluidConsistencyType,
       String instruction});
 }
@@ -14277,12 +14274,9 @@ class _$NutritionOrderOralDietCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as List<dynamic>,
       schedule:
           schedule == freezed ? _value.schedule : schedule as List<dynamic>,
-      nutrient: nutrient == freezed
-          ? _value.nutrient
-          : nutrient as List<NutritionOrderNutrient>,
-      texture: texture == freezed
-          ? _value.texture
-          : texture as List<NutritionOrderTexture>,
+      nutrient:
+          nutrient == freezed ? _value.nutrient : nutrient as List<dynamic>,
+      texture: texture == freezed ? _value.texture : texture as List<dynamic>,
       fluidConsistencyType: fluidConsistencyType == freezed
           ? _value.fluidConsistencyType
           : fluidConsistencyType as List<dynamic>,
@@ -14319,9 +14313,9 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
   @override
   final List<dynamic> schedule;
   @override
-  final List<NutritionOrderNutrient> nutrient;
+  final List<dynamic> nutrient;
   @override
-  final List<NutritionOrderTexture> texture;
+  final List<dynamic> texture;
   @override
   final List<dynamic> fluidConsistencyType;
   @override
@@ -14402,7 +14396,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -14413,7 +14407,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -14455,7 +14449,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -14540,7 +14534,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -14588,7 +14582,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -14598,8 +14592,8 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -14637,7 +14631,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -14681,7 +14675,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -14736,7 +14730,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -14779,7 +14773,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -14792,8 +14786,8 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -14808,7 +14802,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -14870,7 +14864,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -14880,7 +14874,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -14920,7 +14914,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -15002,7 +14996,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -15048,7 +15042,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -15057,8 +15051,8 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -15092,7 +15086,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -15134,7 +15128,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -15186,7 +15180,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -15227,7 +15221,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -15239,8 +15233,8 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -15255,7 +15249,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -15386,8 +15380,8 @@ abstract class NutritionOrderOralDiet implements CareProvision {
       List<dynamic> modifierExtension,
       List<dynamic> type,
       List<dynamic> schedule,
-      List<NutritionOrderNutrient> nutrient,
-      List<NutritionOrderTexture> texture,
+      List<dynamic> nutrient,
+      List<dynamic> texture,
       List<dynamic> fluidConsistencyType,
       String instruction}) = _$NutritionOrderOralDiet;
 
@@ -15401,8 +15395,8 @@ abstract class NutritionOrderOralDiet implements CareProvision {
   List<dynamic> get modifierExtension;
   List<dynamic> get type;
   List<dynamic> get schedule;
-  List<NutritionOrderNutrient> get nutrient;
-  List<NutritionOrderTexture> get texture;
+  List<dynamic> get nutrient;
+  List<dynamic> get texture;
   List<dynamic> get fluidConsistencyType;
   String get instruction;
   @override
@@ -15537,7 +15531,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -15548,7 +15542,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -15590,7 +15584,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -15675,7 +15669,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -15723,7 +15717,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -15733,8 +15727,8 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -15772,7 +15766,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -15816,7 +15810,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -15871,7 +15865,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -15914,7 +15908,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -15927,8 +15921,8 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -15943,7 +15937,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -16005,7 +15999,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -16015,7 +16009,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -16055,7 +16049,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -16137,7 +16131,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -16183,7 +16177,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -16192,8 +16186,8 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -16227,7 +16221,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -16269,7 +16263,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -16321,7 +16315,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -16362,7 +16356,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -16374,8 +16368,8 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -16390,7 +16384,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -16666,7 +16660,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -16677,7 +16671,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -16719,7 +16713,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -16804,7 +16798,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -16852,7 +16846,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -16862,8 +16856,8 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -16901,7 +16895,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -16945,7 +16939,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -17000,7 +16994,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -17043,7 +17037,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -17056,8 +17050,8 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -17072,7 +17066,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -17134,7 +17128,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -17144,7 +17138,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -17184,7 +17178,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -17266,7 +17260,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -17312,7 +17306,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -17321,8 +17315,8 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -17356,7 +17350,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -17398,7 +17392,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -17450,7 +17444,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -17491,7 +17485,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -17503,8 +17497,8 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -17519,7 +17513,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -17826,7 +17820,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -17837,7 +17831,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -17879,7 +17873,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -17964,7 +17958,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -18012,7 +18006,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -18022,8 +18016,8 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -18061,7 +18055,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -18105,7 +18099,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -18160,7 +18154,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -18203,7 +18197,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -18216,8 +18210,8 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -18232,7 +18226,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -18294,7 +18288,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -18304,7 +18298,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -18344,7 +18338,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -18426,7 +18420,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -18472,7 +18466,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -18481,8 +18475,8 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -18516,7 +18510,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -18558,7 +18552,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -18610,7 +18604,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -18651,7 +18645,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -18663,8 +18657,8 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -18679,7 +18673,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -18848,7 +18842,7 @@ abstract class $NutritionOrderEnteralFormulaCopyWith<$Res>
       String additiveProductName,
       Quantity caloricDensity,
       CodeableConcept routeofAdministration,
-      List<NutritionOrderAdministration> administration,
+      List<dynamic> administration,
       Quantity maxVolumeToDeliver,
       String administrationInstruction});
 }
@@ -18907,7 +18901,7 @@ class _$NutritionOrderEnteralFormulaCopyWithImpl<$Res>
           : routeofAdministration as CodeableConcept,
       administration: administration == freezed
           ? _value.administration
-          : administration as List<NutritionOrderAdministration>,
+          : administration as List<dynamic>,
       maxVolumeToDeliver: maxVolumeToDeliver == freezed
           ? _value.maxVolumeToDeliver
           : maxVolumeToDeliver as Quantity,
@@ -18956,7 +18950,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
   @override
   final CodeableConcept routeofAdministration;
   @override
-  final List<NutritionOrderAdministration> administration;
+  final List<dynamic> administration;
   @override
   final Quantity maxVolumeToDeliver;
   @override
@@ -19052,7 +19046,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -19063,7 +19057,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -19105,7 +19099,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -19190,7 +19184,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -19238,7 +19232,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -19248,8 +19242,8 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -19287,7 +19281,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -19331,7 +19325,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -19386,7 +19380,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -19429,7 +19423,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -19442,8 +19436,8 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -19458,7 +19452,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -19531,7 +19525,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -19541,7 +19535,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -19581,7 +19575,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -19663,7 +19657,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -19709,7 +19703,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -19718,8 +19712,8 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -19753,7 +19747,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -19795,7 +19789,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -19847,7 +19841,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -19888,7 +19882,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -19900,8 +19894,8 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -19916,7 +19910,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -20062,7 +20056,7 @@ abstract class NutritionOrderEnteralFormula implements CareProvision {
       String additiveProductName,
       Quantity caloricDensity,
       CodeableConcept routeofAdministration,
-      List<NutritionOrderAdministration> administration,
+      List<dynamic> administration,
       Quantity maxVolumeToDeliver,
       String administrationInstruction}) = _$NutritionOrderEnteralFormula;
 
@@ -20080,7 +20074,7 @@ abstract class NutritionOrderEnteralFormula implements CareProvision {
   String get additiveProductName;
   Quantity get caloricDensity;
   CodeableConcept get routeofAdministration;
-  List<NutritionOrderAdministration> get administration;
+  List<dynamic> get administration;
   Quantity get maxVolumeToDeliver;
   String get administrationInstruction;
   @override
@@ -20241,7 +20235,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -20252,7 +20246,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -20294,7 +20288,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -20379,7 +20373,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -20427,7 +20421,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -20437,8 +20431,8 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -20476,7 +20470,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -20520,7 +20514,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -20575,7 +20569,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -20618,7 +20612,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -20631,8 +20625,8 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -20647,7 +20641,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -20709,7 +20703,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -20719,7 +20713,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -20759,7 +20753,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -20841,7 +20835,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -20887,7 +20881,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -20896,8 +20890,8 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -20931,7 +20925,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -20973,7 +20967,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -21025,7 +21019,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -21066,7 +21060,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -21078,8 +21072,8 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -21094,7 +21088,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -21280,7 +21274,7 @@ abstract class $CarePlanCopyWith<$Res> implements $CareProvisionCopyWith<$Res> {
       List<dynamic> addresses,
       List<dynamic> supportingInfo,
       List<dynamic> goal,
-      List<CarePlanActivity> activity,
+      List<dynamic> activity,
       List<dynamic> note});
 }
 
@@ -21382,9 +21376,8 @@ class _$CarePlanCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
           ? _value.supportingInfo
           : supportingInfo as List<dynamic>,
       goal: goal == freezed ? _value.goal : goal as List<dynamic>,
-      activity: activity == freezed
-          ? _value.activity
-          : activity as List<CarePlanActivity>,
+      activity:
+          activity == freezed ? _value.activity : activity as List<dynamic>,
       note: note == freezed ? _value.note : note as List<dynamic>,
     ));
   }
@@ -21490,7 +21483,7 @@ class _$CarePlan implements CarePlan {
   @override
   final List<dynamic> goal;
   @override
-  final List<CarePlanActivity> activity;
+  final List<dynamic> activity;
   @override
   final List<dynamic> note;
 
@@ -21641,7 +21634,7 @@ class _$CarePlan implements CarePlan {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -21652,7 +21645,7 @@ class _$CarePlan implements CarePlan {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -21694,7 +21687,7 @@ class _$CarePlan implements CarePlan {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -21779,7 +21772,7 @@ class _$CarePlan implements CarePlan {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -21827,7 +21820,7 @@ class _$CarePlan implements CarePlan {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -21837,8 +21830,8 @@ class _$CarePlan implements CarePlan {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -21876,7 +21869,7 @@ class _$CarePlan implements CarePlan {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -21920,7 +21913,7 @@ class _$CarePlan implements CarePlan {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -21975,7 +21968,7 @@ class _$CarePlan implements CarePlan {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -22018,7 +22011,7 @@ class _$CarePlan implements CarePlan {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -22031,8 +22024,8 @@ class _$CarePlan implements CarePlan {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -22047,7 +22040,7 @@ class _$CarePlan implements CarePlan {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -22140,7 +22133,7 @@ class _$CarePlan implements CarePlan {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -22150,7 +22143,7 @@ class _$CarePlan implements CarePlan {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -22190,7 +22183,7 @@ class _$CarePlan implements CarePlan {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -22272,7 +22265,7 @@ class _$CarePlan implements CarePlan {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -22318,7 +22311,7 @@ class _$CarePlan implements CarePlan {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -22327,8 +22320,8 @@ class _$CarePlan implements CarePlan {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -22362,7 +22355,7 @@ class _$CarePlan implements CarePlan {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -22404,7 +22397,7 @@ class _$CarePlan implements CarePlan {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -22456,7 +22449,7 @@ class _$CarePlan implements CarePlan {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -22497,7 +22490,7 @@ class _$CarePlan implements CarePlan {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -22509,8 +22502,8 @@ class _$CarePlan implements CarePlan {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -22525,7 +22518,7 @@ class _$CarePlan implements CarePlan {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -22711,7 +22704,7 @@ abstract class CarePlan implements CareProvision {
       List<dynamic> addresses,
       List<dynamic> supportingInfo,
       List<dynamic> goal,
-      List<CarePlanActivity> activity,
+      List<dynamic> activity,
       List<dynamic> note}) = _$CarePlan;
 
   factory CarePlan.fromJson(Map<String, dynamic> json) = _$CarePlan.fromJson;
@@ -22748,7 +22741,7 @@ abstract class CarePlan implements CareProvision {
   List<dynamic> get addresses;
   List<dynamic> get supportingInfo;
   List<dynamic> get goal;
-  List<CarePlanActivity> get activity;
+  List<dynamic> get activity;
   List<dynamic> get note;
   @override
   $CarePlanCopyWith<CarePlan> get copyWith;
@@ -22916,7 +22909,7 @@ class _$CarePlanActivity implements CarePlanActivity {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -22927,7 +22920,7 @@ class _$CarePlanActivity implements CarePlanActivity {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -22969,7 +22962,7 @@ class _$CarePlanActivity implements CarePlanActivity {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -23054,7 +23047,7 @@ class _$CarePlanActivity implements CarePlanActivity {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -23102,7 +23095,7 @@ class _$CarePlanActivity implements CarePlanActivity {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -23112,8 +23105,8 @@ class _$CarePlanActivity implements CarePlanActivity {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -23151,7 +23144,7 @@ class _$CarePlanActivity implements CarePlanActivity {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -23195,7 +23188,7 @@ class _$CarePlanActivity implements CarePlanActivity {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -23250,7 +23243,7 @@ class _$CarePlanActivity implements CarePlanActivity {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -23293,7 +23286,7 @@ class _$CarePlanActivity implements CarePlanActivity {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -23306,8 +23299,8 @@ class _$CarePlanActivity implements CarePlanActivity {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -23322,7 +23315,7 @@ class _$CarePlanActivity implements CarePlanActivity {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -23384,7 +23377,7 @@ class _$CarePlanActivity implements CarePlanActivity {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -23394,7 +23387,7 @@ class _$CarePlanActivity implements CarePlanActivity {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -23434,7 +23427,7 @@ class _$CarePlanActivity implements CarePlanActivity {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -23516,7 +23509,7 @@ class _$CarePlanActivity implements CarePlanActivity {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -23562,7 +23555,7 @@ class _$CarePlanActivity implements CarePlanActivity {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -23571,8 +23564,8 @@ class _$CarePlanActivity implements CarePlanActivity {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -23606,7 +23599,7 @@ class _$CarePlanActivity implements CarePlanActivity {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -23648,7 +23641,7 @@ class _$CarePlanActivity implements CarePlanActivity {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -23700,7 +23693,7 @@ class _$CarePlanActivity implements CarePlanActivity {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -23741,7 +23734,7 @@ class _$CarePlanActivity implements CarePlanActivity {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -23753,8 +23746,8 @@ class _$CarePlanActivity implements CarePlanActivity {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -23769,7 +23762,7 @@ class _$CarePlanActivity implements CarePlanActivity {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -24256,7 +24249,7 @@ class _$CarePlanDetail implements CarePlanDetail {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -24267,7 +24260,7 @@ class _$CarePlanDetail implements CarePlanDetail {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -24309,7 +24302,7 @@ class _$CarePlanDetail implements CarePlanDetail {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -24394,7 +24387,7 @@ class _$CarePlanDetail implements CarePlanDetail {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -24442,7 +24435,7 @@ class _$CarePlanDetail implements CarePlanDetail {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -24452,8 +24445,8 @@ class _$CarePlanDetail implements CarePlanDetail {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -24491,7 +24484,7 @@ class _$CarePlanDetail implements CarePlanDetail {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -24535,7 +24528,7 @@ class _$CarePlanDetail implements CarePlanDetail {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -24590,7 +24583,7 @@ class _$CarePlanDetail implements CarePlanDetail {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -24633,7 +24626,7 @@ class _$CarePlanDetail implements CarePlanDetail {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -24646,8 +24639,8 @@ class _$CarePlanDetail implements CarePlanDetail {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -24662,7 +24655,7 @@ class _$CarePlanDetail implements CarePlanDetail {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -24746,7 +24739,7 @@ class _$CarePlanDetail implements CarePlanDetail {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -24756,7 +24749,7 @@ class _$CarePlanDetail implements CarePlanDetail {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -24796,7 +24789,7 @@ class _$CarePlanDetail implements CarePlanDetail {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -24878,7 +24871,7 @@ class _$CarePlanDetail implements CarePlanDetail {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -24924,7 +24917,7 @@ class _$CarePlanDetail implements CarePlanDetail {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -24933,8 +24926,8 @@ class _$CarePlanDetail implements CarePlanDetail {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -24968,7 +24961,7 @@ class _$CarePlanDetail implements CarePlanDetail {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -25010,7 +25003,7 @@ class _$CarePlanDetail implements CarePlanDetail {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -25062,7 +25055,7 @@ class _$CarePlanDetail implements CarePlanDetail {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -25103,7 +25096,7 @@ class _$CarePlanDetail implements CarePlanDetail {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -25115,8 +25108,8 @@ class _$CarePlanDetail implements CarePlanDetail {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -25131,7 +25124,7 @@ class _$CarePlanDetail implements CarePlanDetail {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -25355,7 +25348,7 @@ abstract class $CareTeamCopyWith<$Res> implements $CareProvisionCopyWith<$Res> {
       Reference subject,
       Reference encounter,
       Period period,
-      List<CareTeamParticipant> participant,
+      List<dynamic> participant,
       List<dynamic> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> managingOrganization,
@@ -25427,7 +25420,7 @@ class _$CareTeamCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
       period: period == freezed ? _value.period : period as Period,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<CareTeamParticipant>,
+          : participant as List<dynamic>,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
           : reasonCode as List<dynamic>,
@@ -25505,7 +25498,7 @@ class _$CareTeam implements CareTeam {
   @override
   final Period period;
   @override
-  final List<CareTeamParticipant> participant;
+  final List<dynamic> participant;
   @override
   final List<dynamic> reasonCode;
   @override
@@ -25638,7 +25631,7 @@ class _$CareTeam implements CareTeam {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -25649,7 +25642,7 @@ class _$CareTeam implements CareTeam {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -25691,7 +25684,7 @@ class _$CareTeam implements CareTeam {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -25776,7 +25769,7 @@ class _$CareTeam implements CareTeam {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -25824,7 +25817,7 @@ class _$CareTeam implements CareTeam {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -25834,8 +25827,8 @@ class _$CareTeam implements CareTeam {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -25873,7 +25866,7 @@ class _$CareTeam implements CareTeam {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -25917,7 +25910,7 @@ class _$CareTeam implements CareTeam {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -25972,7 +25965,7 @@ class _$CareTeam implements CareTeam {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -26015,7 +26008,7 @@ class _$CareTeam implements CareTeam {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -26028,8 +26021,8 @@ class _$CareTeam implements CareTeam {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -26044,7 +26037,7 @@ class _$CareTeam implements CareTeam {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -26127,7 +26120,7 @@ class _$CareTeam implements CareTeam {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -26137,7 +26130,7 @@ class _$CareTeam implements CareTeam {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -26177,7 +26170,7 @@ class _$CareTeam implements CareTeam {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -26259,7 +26252,7 @@ class _$CareTeam implements CareTeam {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -26305,7 +26298,7 @@ class _$CareTeam implements CareTeam {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -26314,8 +26307,8 @@ class _$CareTeam implements CareTeam {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -26349,7 +26342,7 @@ class _$CareTeam implements CareTeam {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -26391,7 +26384,7 @@ class _$CareTeam implements CareTeam {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -26443,7 +26436,7 @@ class _$CareTeam implements CareTeam {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -26484,7 +26477,7 @@ class _$CareTeam implements CareTeam {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -26496,8 +26489,8 @@ class _$CareTeam implements CareTeam {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -26512,7 +26505,7 @@ class _$CareTeam implements CareTeam {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -26674,7 +26667,7 @@ abstract class CareTeam implements CareProvision {
       Reference subject,
       Reference encounter,
       Period period,
-      List<CareTeamParticipant> participant,
+      List<dynamic> participant,
       List<dynamic> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> managingOrganization,
@@ -26701,7 +26694,7 @@ abstract class CareTeam implements CareProvision {
   Reference get subject;
   Reference get encounter;
   Period get period;
-  List<CareTeamParticipant> get participant;
+  List<dynamic> get participant;
   List<dynamic> get reasonCode;
   List<dynamic> get reasonReference;
   List<dynamic> get managingOrganization;
@@ -26856,7 +26849,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -26867,7 +26860,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -26909,7 +26902,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -26994,7 +26987,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -27042,7 +27035,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -27052,8 +27045,8 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -27091,7 +27084,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -27135,7 +27128,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -27190,7 +27183,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -27233,7 +27226,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -27246,8 +27239,8 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -27262,7 +27255,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -27324,7 +27317,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -27334,7 +27327,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -27374,7 +27367,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -27456,7 +27449,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -27502,7 +27495,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -27511,8 +27504,8 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -27546,7 +27539,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -27588,7 +27581,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -27640,7 +27633,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -27681,7 +27674,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -27693,8 +27686,8 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -27709,7 +27702,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -27892,7 +27885,7 @@ abstract class $RequestGroupCopyWith<$Res>
       List<dynamic> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> note,
-      List<RequestGroupAction> action});
+      List<dynamic> action});
 }
 
 class _$RequestGroupCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
@@ -27985,9 +27978,7 @@ class _$RequestGroupCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
           ? _value.reasonReference
           : reasonReference as List<dynamic>,
       note: note == freezed ? _value.note : note as List<dynamic>,
-      action: action == freezed
-          ? _value.action
-          : action as List<RequestGroupAction>,
+      action: action == freezed ? _value.action : action as List<dynamic>,
     ));
   }
 }
@@ -28079,7 +28070,7 @@ class _$RequestGroup implements RequestGroup {
   @override
   final List<dynamic> note;
   @override
-  final List<RequestGroupAction> action;
+  final List<dynamic> action;
 
   @override
   String toString() {
@@ -28218,7 +28209,7 @@ class _$RequestGroup implements RequestGroup {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -28229,7 +28220,7 @@ class _$RequestGroup implements RequestGroup {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -28271,7 +28262,7 @@ class _$RequestGroup implements RequestGroup {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -28356,7 +28347,7 @@ class _$RequestGroup implements RequestGroup {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -28404,7 +28395,7 @@ class _$RequestGroup implements RequestGroup {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -28414,8 +28405,8 @@ class _$RequestGroup implements RequestGroup {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -28453,7 +28444,7 @@ class _$RequestGroup implements RequestGroup {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -28497,7 +28488,7 @@ class _$RequestGroup implements RequestGroup {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -28552,7 +28543,7 @@ class _$RequestGroup implements RequestGroup {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -28595,7 +28586,7 @@ class _$RequestGroup implements RequestGroup {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -28608,8 +28599,8 @@ class _$RequestGroup implements RequestGroup {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -28624,7 +28615,7 @@ class _$RequestGroup implements RequestGroup {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -28712,7 +28703,7 @@ class _$RequestGroup implements RequestGroup {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -28722,7 +28713,7 @@ class _$RequestGroup implements RequestGroup {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -28762,7 +28753,7 @@ class _$RequestGroup implements RequestGroup {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -28844,7 +28835,7 @@ class _$RequestGroup implements RequestGroup {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -28890,7 +28881,7 @@ class _$RequestGroup implements RequestGroup {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -28899,8 +28890,8 @@ class _$RequestGroup implements RequestGroup {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -28934,7 +28925,7 @@ class _$RequestGroup implements RequestGroup {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -28976,7 +28967,7 @@ class _$RequestGroup implements RequestGroup {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -29028,7 +29019,7 @@ class _$RequestGroup implements RequestGroup {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -29069,7 +29060,7 @@ class _$RequestGroup implements RequestGroup {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -29081,8 +29072,8 @@ class _$RequestGroup implements RequestGroup {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -29097,7 +29088,7 @@ class _$RequestGroup implements RequestGroup {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -29274,7 +29265,7 @@ abstract class RequestGroup implements CareProvision {
       List<dynamic> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> note,
-      List<RequestGroupAction> action}) = _$RequestGroup;
+      List<dynamic> action}) = _$RequestGroup;
 
   factory RequestGroup.fromJson(Map<String, dynamic> json) =
       _$RequestGroup.fromJson;
@@ -29307,7 +29298,7 @@ abstract class RequestGroup implements CareProvision {
   List<dynamic> get reasonCode;
   List<dynamic> get reasonReference;
   List<dynamic> get note;
-  List<RequestGroupAction> get action;
+  List<dynamic> get action;
   @override
   $RequestGroupCopyWith<RequestGroup> get copyWith;
 }
@@ -29329,8 +29320,8 @@ abstract class $RequestGroupActionCopyWith<$Res>
       Code priority,
       List<dynamic> code,
       List<dynamic> documentation,
-      List<RequestGroupCondition> condition,
-      List<RequestGroupRelatedAction> relatedAction,
+      List<dynamic> condition,
+      List<dynamic> relatedAction,
       FhirDateTime timingDateTime,
       Age timingAge,
       Period timingPeriod,
@@ -29345,7 +29336,7 @@ abstract class $RequestGroupActionCopyWith<$Res>
       Code precheckBehavior,
       Code cardinalityBehavior,
       Reference resource,
-      List<RequestGroupAction> action});
+      List<dynamic> action});
 }
 
 class _$RequestGroupActionCopyWithImpl<$Res>
@@ -29407,12 +29398,11 @@ class _$RequestGroupActionCopyWithImpl<$Res>
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as List<dynamic>,
-      condition: condition == freezed
-          ? _value.condition
-          : condition as List<RequestGroupCondition>,
+      condition:
+          condition == freezed ? _value.condition : condition as List<dynamic>,
       relatedAction: relatedAction == freezed
           ? _value.relatedAction
-          : relatedAction as List<RequestGroupRelatedAction>,
+          : relatedAction as List<dynamic>,
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
           : timingDateTime as FhirDateTime,
@@ -29448,9 +29438,7 @@ class _$RequestGroupActionCopyWithImpl<$Res>
           ? _value.cardinalityBehavior
           : cardinalityBehavior as Code,
       resource: resource == freezed ? _value.resource : resource as Reference,
-      action: action == freezed
-          ? _value.action
-          : action as List<RequestGroupAction>,
+      action: action == freezed ? _value.action : action as List<dynamic>,
     ));
   }
 }
@@ -29510,9 +29498,9 @@ class _$RequestGroupAction implements RequestGroupAction {
   @override
   final List<dynamic> documentation;
   @override
-  final List<RequestGroupCondition> condition;
+  final List<dynamic> condition;
   @override
-  final List<RequestGroupRelatedAction> relatedAction;
+  final List<dynamic> relatedAction;
   @override
   final FhirDateTime timingDateTime;
   @override
@@ -29542,7 +29530,7 @@ class _$RequestGroupAction implements RequestGroupAction {
   @override
   final Reference resource;
   @override
-  final List<RequestGroupAction> action;
+  final List<dynamic> action;
 
   @override
   String toString() {
@@ -29681,7 +29669,7 @@ class _$RequestGroupAction implements RequestGroupAction {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -29692,7 +29680,7 @@ class _$RequestGroupAction implements RequestGroupAction {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -29734,7 +29722,7 @@ class _$RequestGroupAction implements RequestGroupAction {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -29819,7 +29807,7 @@ class _$RequestGroupAction implements RequestGroupAction {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -29867,7 +29855,7 @@ class _$RequestGroupAction implements RequestGroupAction {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -29877,8 +29865,8 @@ class _$RequestGroupAction implements RequestGroupAction {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -29916,7 +29904,7 @@ class _$RequestGroupAction implements RequestGroupAction {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -29960,7 +29948,7 @@ class _$RequestGroupAction implements RequestGroupAction {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -30015,7 +30003,7 @@ class _$RequestGroupAction implements RequestGroupAction {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -30058,7 +30046,7 @@ class _$RequestGroupAction implements RequestGroupAction {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -30071,8 +30059,8 @@ class _$RequestGroupAction implements RequestGroupAction {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -30087,7 +30075,7 @@ class _$RequestGroupAction implements RequestGroupAction {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -30175,7 +30163,7 @@ class _$RequestGroupAction implements RequestGroupAction {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -30185,7 +30173,7 @@ class _$RequestGroupAction implements RequestGroupAction {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -30225,7 +30213,7 @@ class _$RequestGroupAction implements RequestGroupAction {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -30307,7 +30295,7 @@ class _$RequestGroupAction implements RequestGroupAction {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -30353,7 +30341,7 @@ class _$RequestGroupAction implements RequestGroupAction {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -30362,8 +30350,8 @@ class _$RequestGroupAction implements RequestGroupAction {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -30397,7 +30385,7 @@ class _$RequestGroupAction implements RequestGroupAction {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -30439,7 +30427,7 @@ class _$RequestGroupAction implements RequestGroupAction {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -30491,7 +30479,7 @@ class _$RequestGroupAction implements RequestGroupAction {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -30532,7 +30520,7 @@ class _$RequestGroupAction implements RequestGroupAction {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -30544,8 +30532,8 @@ class _$RequestGroupAction implements RequestGroupAction {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -30560,7 +30548,7 @@ class _$RequestGroupAction implements RequestGroupAction {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -30722,8 +30710,8 @@ abstract class RequestGroupAction implements CareProvision {
       Code priority,
       List<dynamic> code,
       List<dynamic> documentation,
-      List<RequestGroupCondition> condition,
-      List<RequestGroupRelatedAction> relatedAction,
+      List<dynamic> condition,
+      List<dynamic> relatedAction,
       FhirDateTime timingDateTime,
       Age timingAge,
       Period timingPeriod,
@@ -30738,7 +30726,7 @@ abstract class RequestGroupAction implements CareProvision {
       Code precheckBehavior,
       Code cardinalityBehavior,
       Reference resource,
-      List<RequestGroupAction> action}) = _$RequestGroupAction;
+      List<dynamic> action}) = _$RequestGroupAction;
 
   factory RequestGroupAction.fromJson(Map<String, dynamic> json) =
       _$RequestGroupAction.fromJson;
@@ -30755,8 +30743,8 @@ abstract class RequestGroupAction implements CareProvision {
   Code get priority;
   List<dynamic> get code;
   List<dynamic> get documentation;
-  List<RequestGroupCondition> get condition;
-  List<RequestGroupRelatedAction> get relatedAction;
+  List<dynamic> get condition;
+  List<dynamic> get relatedAction;
   FhirDateTime get timingDateTime;
   Age get timingAge;
   Period get timingPeriod;
@@ -30771,7 +30759,7 @@ abstract class RequestGroupAction implements CareProvision {
   Code get precheckBehavior;
   Code get cardinalityBehavior;
   Reference get resource;
-  List<RequestGroupAction> get action;
+  List<dynamic> get action;
   @override
   $RequestGroupActionCopyWith<RequestGroupAction> get copyWith;
 }
@@ -30904,7 +30892,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -30915,7 +30903,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -30957,7 +30945,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -31042,7 +31030,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -31090,7 +31078,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -31100,8 +31088,8 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -31139,7 +31127,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -31183,7 +31171,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -31238,7 +31226,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -31281,7 +31269,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -31294,8 +31282,8 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -31310,7 +31298,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -31372,7 +31360,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -31382,7 +31370,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -31422,7 +31410,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -31504,7 +31492,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -31550,7 +31538,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -31559,8 +31547,8 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -31594,7 +31582,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -31636,7 +31624,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -31688,7 +31676,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -31729,7 +31717,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -31741,8 +31729,8 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -31757,7 +31745,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(
@@ -32056,7 +32044,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             Reference encounter,
             FhirDateTime dateWritten,
             Reference prescriber,
-            List<VisionPrescriptionLensSpecification> lensSpecification),
+            List<dynamic> lensSpecification),
     @required
         Result visionPrescriptionLensSpecification(
             String id,
@@ -32067,7 +32055,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             double sphere,
             double cylinder,
             int axis,
-            List<VisionPrescriptionPrism> prism,
+            List<dynamic> prism,
             double add,
             double power,
             double backCurve,
@@ -32109,7 +32097,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
-            List<RiskAssessmentPrediction> prediction,
+            List<dynamic> prediction,
             String mitigation,
             List<dynamic> note),
     @required
@@ -32194,7 +32182,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             Reference subject,
             Date startDate,
             CodeableConcept startCodeableConcept,
-            List<GoalTarget> target,
+            List<dynamic> target,
             Date statusDate,
             String statusReason,
             Reference expressedBy,
@@ -32242,7 +32230,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             List<dynamic> foodPreferenceModifier,
             List<dynamic> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
-            List<NutritionOrderSupplement> supplement,
+            List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
             List<dynamic> note),
     @required
@@ -32252,8 +32240,8 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             List<dynamic> modifierExtension,
             List<dynamic> type,
             List<dynamic> schedule,
-            List<NutritionOrderNutrient> nutrient,
-            List<NutritionOrderTexture> texture,
+            List<dynamic> nutrient,
+            List<dynamic> texture,
             List<dynamic> fluidConsistencyType,
             String instruction),
     @required
@@ -32291,7 +32279,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             String additiveProductName,
             Quantity caloricDensity,
             CodeableConcept routeofAdministration,
-            List<NutritionOrderAdministration> administration,
+            List<dynamic> administration,
             Quantity maxVolumeToDeliver,
             String administrationInstruction),
     @required
@@ -32335,7 +32323,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             List<dynamic> addresses,
             List<dynamic> supportingInfo,
             List<dynamic> goal,
-            List<CarePlanActivity> activity,
+            List<dynamic> activity,
             List<dynamic> note),
     @required
         Result carePlanActivity(
@@ -32390,7 +32378,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             Reference subject,
             Reference encounter,
             Period period,
-            List<CareTeamParticipant> participant,
+            List<dynamic> participant,
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
@@ -32433,7 +32421,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             List<dynamic> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> note,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupAction(
             String id,
@@ -32446,8 +32434,8 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             Code priority,
             List<dynamic> code,
             List<dynamic> documentation,
-            List<RequestGroupCondition> condition,
-            List<RequestGroupRelatedAction> relatedAction,
+            List<dynamic> condition,
+            List<dynamic> relatedAction,
             FhirDateTime timingDateTime,
             Age timingAge,
             Period timingPeriod,
@@ -32462,7 +32450,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             Code precheckBehavior,
             Code cardinalityBehavior,
             Reference resource,
-            List<RequestGroupAction> action),
+            List<dynamic> action),
     @required
         Result requestGroupCondition(String id, List<dynamic> extension,
             List<dynamic> modifierExtension, Code kind, Expression expression),
@@ -32524,7 +32512,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         Reference encounter,
         FhirDateTime dateWritten,
         Reference prescriber,
-        List<VisionPrescriptionLensSpecification> lensSpecification),
+        List<dynamic> lensSpecification),
     Result visionPrescriptionLensSpecification(
         String id,
         List<dynamic> extension,
@@ -32534,7 +32522,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         double sphere,
         double cylinder,
         int axis,
-        List<VisionPrescriptionPrism> prism,
+        List<dynamic> prism,
         double add,
         double power,
         double backCurve,
@@ -32574,7 +32562,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
-        List<RiskAssessmentPrediction> prediction,
+        List<dynamic> prediction,
         String mitigation,
         List<dynamic> note),
     Result riskAssessmentPrediction(
@@ -32656,7 +32644,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         Reference subject,
         Date startDate,
         CodeableConcept startCodeableConcept,
-        List<GoalTarget> target,
+        List<dynamic> target,
         Date statusDate,
         String statusReason,
         Reference expressedBy,
@@ -32702,7 +32690,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         List<dynamic> foodPreferenceModifier,
         List<dynamic> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
-        List<NutritionOrderSupplement> supplement,
+        List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
         List<dynamic> note),
     Result nutritionOrderOralDiet(
@@ -32711,8 +32699,8 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         List<dynamic> modifierExtension,
         List<dynamic> type,
         List<dynamic> schedule,
-        List<NutritionOrderNutrient> nutrient,
-        List<NutritionOrderTexture> texture,
+        List<dynamic> nutrient,
+        List<dynamic> texture,
         List<dynamic> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
@@ -32746,7 +32734,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         String additiveProductName,
         Quantity caloricDensity,
         CodeableConcept routeofAdministration,
-        List<NutritionOrderAdministration> administration,
+        List<dynamic> administration,
         Quantity maxVolumeToDeliver,
         String administrationInstruction),
     Result nutritionOrderAdministration(
@@ -32788,7 +32776,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         List<dynamic> addresses,
         List<dynamic> supportingInfo,
         List<dynamic> goal,
-        List<CarePlanActivity> activity,
+        List<dynamic> activity,
         List<dynamic> note),
     Result carePlanActivity(
         String id,
@@ -32840,7 +32828,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         Reference subject,
         Reference encounter,
         Period period,
-        List<CareTeamParticipant> participant,
+        List<dynamic> participant,
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
@@ -32881,7 +32869,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         List<dynamic> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> note,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupAction(
         String id,
         List<dynamic> extension,
@@ -32893,8 +32881,8 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         Code priority,
         List<dynamic> code,
         List<dynamic> documentation,
-        List<RequestGroupCondition> condition,
-        List<RequestGroupRelatedAction> relatedAction,
+        List<dynamic> condition,
+        List<dynamic> relatedAction,
         FhirDateTime timingDateTime,
         Age timingAge,
         Period timingPeriod,
@@ -32909,7 +32897,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         Code precheckBehavior,
         Code cardinalityBehavior,
         Reference resource,
-        List<RequestGroupAction> action),
+        List<dynamic> action),
     Result requestGroupCondition(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code kind, Expression expression),
     Result requestGroupRelatedAction(

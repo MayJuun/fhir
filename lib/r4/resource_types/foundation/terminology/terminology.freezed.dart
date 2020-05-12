@@ -120,9 +120,9 @@ class _$TerminologyTearOff {
       CodeSystemContent content,
       Canonical supplements,
       int count,
-      List<CodeSystemFilter> filter,
-      List<CodeSystemProperty> property,
-      List<CodeSystemConcept> concept}) {
+      List<dynamic> filter,
+      List<dynamic> property,
+      List<dynamic> concept}) {
     return CodeSystem(
       resourceType: resourceType,
       id: id,
@@ -207,9 +207,9 @@ class _$TerminologyTearOff {
       Code code,
       String display,
       String definition,
-      List<CodeSystemDesignation> designation,
-      List<CodeSystemProperty1> property,
-      List<CodeSystemConcept> concept}) {
+      List<dynamic> designation,
+      List<dynamic> property,
+      List<dynamic> concept}) {
     return CodeSystemConcept(
       id: id,
       extension: extension,
@@ -332,8 +332,8 @@ class _$TerminologyTearOff {
       List<dynamic> modifierExtension,
       Date lockedDate,
       bool inactive,
-      List<ValueSetInclude> include,
-      List<ValueSetInclude> exclude}) {
+      List<dynamic> include,
+      List<dynamic> exclude}) {
     return ValueSetCompose(
       id: id,
       extension: extension,
@@ -351,8 +351,8 @@ class _$TerminologyTearOff {
       List<dynamic> modifierExtension,
       FhirUri system,
       String version,
-      List<ValueSetConcept> concept,
-      List<ValueSetFilter> filter,
+      List<dynamic> concept,
+      List<dynamic> filter,
       List<Canonical> valueSet}) {
     return ValueSetInclude(
       id: id,
@@ -372,7 +372,7 @@ class _$TerminologyTearOff {
       List<dynamic> modifierExtension,
       Code code,
       String display,
-      List<ValueSetDesignation> designation}) {
+      List<dynamic> designation}) {
     return ValueSetConcept(
       id: id,
       extension: extension,
@@ -425,8 +425,8 @@ class _$TerminologyTearOff {
       FhirDateTime timestamp,
       int total,
       int offset,
-      List<ValueSetParameter> parameter,
-      List<ValueSetContains> contains}) {
+      List<dynamic> parameter,
+      List<dynamic> contains}) {
     return ValueSetExpansion(
       id: id,
       extension: extension,
@@ -477,8 +477,8 @@ class _$TerminologyTearOff {
       String version,
       Code code,
       String display,
-      List<ValueSetDesignation> designation,
-      List<ValueSetContains> contains}) {
+      List<dynamic> designation,
+      List<dynamic> contains}) {
     return ValueSetContains(
       id: id,
       extension: extension,
@@ -522,7 +522,7 @@ class _$TerminologyTearOff {
       TerminologyCapabilitiesSoftware software,
       TerminologyCapabilitiesImplementation implementation,
       bool lockedDate,
-      List<TerminologyCapabilitiesCodeSystem> codeSystem,
+      List<dynamic> codeSystem,
       TerminologyCapabilitiesExpansion expansion,
       TerminologyCapabilitiesCodeSearch codeSearch,
       TerminologyCapabilitiesValidateCode validateCode,
@@ -600,7 +600,7 @@ class _$TerminologyTearOff {
       List<dynamic> extension,
       List<dynamic> modifierExtension,
       Canonical uri,
-      List<TerminologyCapabilitiesVersion> version,
+      List<dynamic> version,
       bool subsumption}) {
     return TerminologyCapabilitiesCodeSystem(
       id: id,
@@ -620,7 +620,7 @@ class _$TerminologyTearOff {
       bool isDefault,
       bool compositional,
       List<Code> language,
-      List<TerminologyCapabilitiesFilter> filter,
+      List<dynamic> filter,
       List<Code> property}) {
     return TerminologyCapabilitiesVersion(
       id: id,
@@ -657,7 +657,7 @@ class _$TerminologyTearOff {
       bool hierarchical,
       bool paging,
       bool incomplete,
-      List<TerminologyCapabilitiesParameter> parameter,
+      List<dynamic> parameter,
       Markdown textFilter}) {
     return TerminologyCapabilitiesExpansion(
       id: id,
@@ -747,7 +747,7 @@ class _$TerminologyTearOff {
       List<dynamic> useContext,
       List<dynamic> jurisdiction,
       String usage,
-      List<NamingSystemUniqueId> uniqueId}) {
+      List<dynamic> uniqueId}) {
     return NamingSystem(
       resourceType: resourceType,
       id: id,
@@ -824,7 +824,7 @@ class _$TerminologyTearOff {
       Canonical sourceCanonical,
       FhirUri targetUri,
       Canonical targetCanonical,
-      List<ConceptMapGroup> group}) {
+      List<dynamic> group}) {
     return ConceptMap(
       resourceType: resourceType,
       id: id,
@@ -866,7 +866,7 @@ class _$TerminologyTearOff {
       String sourceVersion,
       FhirUri target,
       String targetVersion,
-      List<ConceptMapElement> element,
+      List<dynamic> element,
       ConceptMapUnmapped unmapped}) {
     return ConceptMapGroup(
       id: id,
@@ -887,7 +887,7 @@ class _$TerminologyTearOff {
       List<dynamic> modifierExtension,
       Code code,
       String display,
-      List<ConceptMapTarget> target}) {
+      List<dynamic> target}) {
     return ConceptMapElement(
       id: id,
       extension: extension,
@@ -906,8 +906,8 @@ class _$TerminologyTearOff {
       String display,
       ConceptMapTargetEquivalence equivalence,
       String comment,
-      List<ConceptMapDependsOn> dependsOn,
-      List<ConceptMapDependsOn> product}) {
+      List<dynamic> dependsOn,
+      List<dynamic> product}) {
     return ConceptMapTarget(
       id: id,
       extension: extension,
@@ -1003,9 +1003,9 @@ mixin _$Terminology {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -1032,9 +1032,9 @@ mixin _$Terminology {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -1092,8 +1092,8 @@ mixin _$Terminology {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -1101,8 +1101,8 @@ mixin _$Terminology {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -1111,7 +1111,7 @@ mixin _$Terminology {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -1137,8 +1137,8 @@ mixin _$Terminology {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -1163,8 +1163,8 @@ mixin _$Terminology {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -1194,7 +1194,7 @@ mixin _$Terminology {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -1220,7 +1220,7 @@ mixin _$Terminology {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -1231,7 +1231,7 @@ mixin _$Terminology {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -1244,7 +1244,7 @@ mixin _$Terminology {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -1294,7 +1294,7 @@ mixin _$Terminology {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -1335,7 +1335,7 @@ mixin _$Terminology {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -1345,7 +1345,7 @@ mixin _$Terminology {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -1354,7 +1354,7 @@ mixin _$Terminology {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -1364,8 +1364,8 @@ mixin _$Terminology {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -1420,9 +1420,9 @@ mixin _$Terminology {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -1446,9 +1446,9 @@ mixin _$Terminology {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -1502,16 +1502,16 @@ mixin _$Terminology {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -1519,7 +1519,7 @@ mixin _$Terminology {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -1542,8 +1542,8 @@ mixin _$Terminology {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -1566,8 +1566,8 @@ mixin _$Terminology {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -1596,7 +1596,7 @@ mixin _$Terminology {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -1615,7 +1615,7 @@ mixin _$Terminology {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -1625,7 +1625,7 @@ mixin _$Terminology {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -1636,7 +1636,7 @@ mixin _$Terminology {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -1674,7 +1674,7 @@ mixin _$Terminology {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -1713,7 +1713,7 @@ mixin _$Terminology {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -1722,7 +1722,7 @@ mixin _$Terminology {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -1730,7 +1730,7 @@ mixin _$Terminology {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -1739,8 +1739,8 @@ mixin _$Terminology {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -1932,9 +1932,9 @@ abstract class $CodeSystemCopyWith<$Res> implements $TerminologyCopyWith<$Res> {
       CodeSystemContent content,
       Canonical supplements,
       int count,
-      List<CodeSystemFilter> filter,
-      List<CodeSystemProperty> property,
-      List<CodeSystemConcept> concept});
+      List<dynamic> filter,
+      List<dynamic> property,
+      List<dynamic> concept});
 }
 
 class _$CodeSystemCopyWithImpl<$Res> extends _$TerminologyCopyWithImpl<$Res>
@@ -2044,14 +2044,10 @@ class _$CodeSystemCopyWithImpl<$Res> extends _$TerminologyCopyWithImpl<$Res>
           ? _value.supplements
           : supplements as Canonical,
       count: count == freezed ? _value.count : count as int,
-      filter:
-          filter == freezed ? _value.filter : filter as List<CodeSystemFilter>,
-      property: property == freezed
-          ? _value.property
-          : property as List<CodeSystemProperty>,
-      concept: concept == freezed
-          ? _value.concept
-          : concept as List<CodeSystemConcept>,
+      filter: filter == freezed ? _value.filter : filter as List<dynamic>,
+      property:
+          property == freezed ? _value.property : property as List<dynamic>,
+      concept: concept == freezed ? _value.concept : concept as List<dynamic>,
     ));
   }
 }
@@ -2163,11 +2159,11 @@ class _$CodeSystem implements CodeSystem {
   @override
   final int count;
   @override
-  final List<CodeSystemFilter> filter;
+  final List<dynamic> filter;
   @override
-  final List<CodeSystemProperty> property;
+  final List<dynamic> property;
   @override
-  final List<CodeSystemConcept> concept;
+  final List<dynamic> concept;
 
   @override
   String toString() {
@@ -2338,9 +2334,9 @@ class _$CodeSystem implements CodeSystem {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -2367,9 +2363,9 @@ class _$CodeSystem implements CodeSystem {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -2427,8 +2423,8 @@ class _$CodeSystem implements CodeSystem {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -2436,8 +2432,8 @@ class _$CodeSystem implements CodeSystem {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -2446,7 +2442,7 @@ class _$CodeSystem implements CodeSystem {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -2472,8 +2468,8 @@ class _$CodeSystem implements CodeSystem {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -2498,8 +2494,8 @@ class _$CodeSystem implements CodeSystem {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -2529,7 +2525,7 @@ class _$CodeSystem implements CodeSystem {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -2555,7 +2551,7 @@ class _$CodeSystem implements CodeSystem {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -2566,7 +2562,7 @@ class _$CodeSystem implements CodeSystem {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -2579,7 +2575,7 @@ class _$CodeSystem implements CodeSystem {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -2629,7 +2625,7 @@ class _$CodeSystem implements CodeSystem {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -2670,7 +2666,7 @@ class _$CodeSystem implements CodeSystem {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -2680,7 +2676,7 @@ class _$CodeSystem implements CodeSystem {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -2689,7 +2685,7 @@ class _$CodeSystem implements CodeSystem {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -2699,8 +2695,8 @@ class _$CodeSystem implements CodeSystem {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -2828,9 +2824,9 @@ class _$CodeSystem implements CodeSystem {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -2854,9 +2850,9 @@ class _$CodeSystem implements CodeSystem {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -2910,16 +2906,16 @@ class _$CodeSystem implements CodeSystem {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -2927,7 +2923,7 @@ class _$CodeSystem implements CodeSystem {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -2950,8 +2946,8 @@ class _$CodeSystem implements CodeSystem {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -2974,8 +2970,8 @@ class _$CodeSystem implements CodeSystem {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -3004,7 +3000,7 @@ class _$CodeSystem implements CodeSystem {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -3023,7 +3019,7 @@ class _$CodeSystem implements CodeSystem {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -3033,7 +3029,7 @@ class _$CodeSystem implements CodeSystem {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -3044,7 +3040,7 @@ class _$CodeSystem implements CodeSystem {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -3082,7 +3078,7 @@ class _$CodeSystem implements CodeSystem {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -3121,7 +3117,7 @@ class _$CodeSystem implements CodeSystem {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -3130,7 +3126,7 @@ class _$CodeSystem implements CodeSystem {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -3138,7 +3134,7 @@ class _$CodeSystem implements CodeSystem {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -3147,8 +3143,8 @@ class _$CodeSystem implements CodeSystem {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -3397,9 +3393,9 @@ abstract class CodeSystem implements Terminology {
       CodeSystemContent content,
       Canonical supplements,
       int count,
-      List<CodeSystemFilter> filter,
-      List<CodeSystemProperty> property,
-      List<CodeSystemConcept> concept}) = _$CodeSystem;
+      List<dynamic> filter,
+      List<dynamic> property,
+      List<dynamic> concept}) = _$CodeSystem;
 
   factory CodeSystem.fromJson(Map<String, dynamic> json) =
       _$CodeSystem.fromJson;
@@ -3438,9 +3434,9 @@ abstract class CodeSystem implements Terminology {
   CodeSystemContent get content;
   Canonical get supplements;
   int get count;
-  List<CodeSystemFilter> get filter;
-  List<CodeSystemProperty> get property;
-  List<CodeSystemConcept> get concept;
+  List<dynamic> get filter;
+  List<dynamic> get property;
+  List<dynamic> get concept;
   @override
   $CodeSystemCopyWith<CodeSystem> get copyWith;
 }
@@ -3607,9 +3603,9 @@ class _$CodeSystemFilter implements CodeSystemFilter {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -3636,9 +3632,9 @@ class _$CodeSystemFilter implements CodeSystemFilter {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -3696,8 +3692,8 @@ class _$CodeSystemFilter implements CodeSystemFilter {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -3705,8 +3701,8 @@ class _$CodeSystemFilter implements CodeSystemFilter {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -3715,7 +3711,7 @@ class _$CodeSystemFilter implements CodeSystemFilter {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -3741,8 +3737,8 @@ class _$CodeSystemFilter implements CodeSystemFilter {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -3767,8 +3763,8 @@ class _$CodeSystemFilter implements CodeSystemFilter {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -3798,7 +3794,7 @@ class _$CodeSystemFilter implements CodeSystemFilter {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -3824,7 +3820,7 @@ class _$CodeSystemFilter implements CodeSystemFilter {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -3835,7 +3831,7 @@ class _$CodeSystemFilter implements CodeSystemFilter {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -3848,7 +3844,7 @@ class _$CodeSystemFilter implements CodeSystemFilter {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -3898,7 +3894,7 @@ class _$CodeSystemFilter implements CodeSystemFilter {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -3939,7 +3935,7 @@ class _$CodeSystemFilter implements CodeSystemFilter {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -3949,7 +3945,7 @@ class _$CodeSystemFilter implements CodeSystemFilter {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -3958,7 +3954,7 @@ class _$CodeSystemFilter implements CodeSystemFilter {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -3968,8 +3964,8 @@ class _$CodeSystemFilter implements CodeSystemFilter {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -4063,9 +4059,9 @@ class _$CodeSystemFilter implements CodeSystemFilter {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -4089,9 +4085,9 @@ class _$CodeSystemFilter implements CodeSystemFilter {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -4145,16 +4141,16 @@ class _$CodeSystemFilter implements CodeSystemFilter {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -4162,7 +4158,7 @@ class _$CodeSystemFilter implements CodeSystemFilter {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -4185,8 +4181,8 @@ class _$CodeSystemFilter implements CodeSystemFilter {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -4209,8 +4205,8 @@ class _$CodeSystemFilter implements CodeSystemFilter {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -4239,7 +4235,7 @@ class _$CodeSystemFilter implements CodeSystemFilter {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -4258,7 +4254,7 @@ class _$CodeSystemFilter implements CodeSystemFilter {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -4268,7 +4264,7 @@ class _$CodeSystemFilter implements CodeSystemFilter {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -4279,7 +4275,7 @@ class _$CodeSystemFilter implements CodeSystemFilter {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -4317,7 +4313,7 @@ class _$CodeSystemFilter implements CodeSystemFilter {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -4356,7 +4352,7 @@ class _$CodeSystemFilter implements CodeSystemFilter {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -4365,7 +4361,7 @@ class _$CodeSystemFilter implements CodeSystemFilter {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -4373,7 +4369,7 @@ class _$CodeSystemFilter implements CodeSystemFilter {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -4382,8 +4378,8 @@ class _$CodeSystemFilter implements CodeSystemFilter {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -4752,9 +4748,9 @@ class _$CodeSystemProperty implements CodeSystemProperty {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -4781,9 +4777,9 @@ class _$CodeSystemProperty implements CodeSystemProperty {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -4841,8 +4837,8 @@ class _$CodeSystemProperty implements CodeSystemProperty {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -4850,8 +4846,8 @@ class _$CodeSystemProperty implements CodeSystemProperty {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -4860,7 +4856,7 @@ class _$CodeSystemProperty implements CodeSystemProperty {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -4886,8 +4882,8 @@ class _$CodeSystemProperty implements CodeSystemProperty {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -4912,8 +4908,8 @@ class _$CodeSystemProperty implements CodeSystemProperty {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -4943,7 +4939,7 @@ class _$CodeSystemProperty implements CodeSystemProperty {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -4969,7 +4965,7 @@ class _$CodeSystemProperty implements CodeSystemProperty {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -4980,7 +4976,7 @@ class _$CodeSystemProperty implements CodeSystemProperty {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -4993,7 +4989,7 @@ class _$CodeSystemProperty implements CodeSystemProperty {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -5043,7 +5039,7 @@ class _$CodeSystemProperty implements CodeSystemProperty {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -5084,7 +5080,7 @@ class _$CodeSystemProperty implements CodeSystemProperty {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -5094,7 +5090,7 @@ class _$CodeSystemProperty implements CodeSystemProperty {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -5103,7 +5099,7 @@ class _$CodeSystemProperty implements CodeSystemProperty {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -5113,8 +5109,8 @@ class _$CodeSystemProperty implements CodeSystemProperty {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -5208,9 +5204,9 @@ class _$CodeSystemProperty implements CodeSystemProperty {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -5234,9 +5230,9 @@ class _$CodeSystemProperty implements CodeSystemProperty {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -5290,16 +5286,16 @@ class _$CodeSystemProperty implements CodeSystemProperty {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -5307,7 +5303,7 @@ class _$CodeSystemProperty implements CodeSystemProperty {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -5330,8 +5326,8 @@ class _$CodeSystemProperty implements CodeSystemProperty {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -5354,8 +5350,8 @@ class _$CodeSystemProperty implements CodeSystemProperty {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -5384,7 +5380,7 @@ class _$CodeSystemProperty implements CodeSystemProperty {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -5403,7 +5399,7 @@ class _$CodeSystemProperty implements CodeSystemProperty {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -5413,7 +5409,7 @@ class _$CodeSystemProperty implements CodeSystemProperty {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -5424,7 +5420,7 @@ class _$CodeSystemProperty implements CodeSystemProperty {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -5462,7 +5458,7 @@ class _$CodeSystemProperty implements CodeSystemProperty {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -5501,7 +5497,7 @@ class _$CodeSystemProperty implements CodeSystemProperty {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -5510,7 +5506,7 @@ class _$CodeSystemProperty implements CodeSystemProperty {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -5518,7 +5514,7 @@ class _$CodeSystemProperty implements CodeSystemProperty {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -5527,8 +5523,8 @@ class _$CodeSystemProperty implements CodeSystemProperty {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -5749,9 +5745,9 @@ abstract class $CodeSystemConceptCopyWith<$Res>
       Code code,
       String display,
       String definition,
-      List<CodeSystemDesignation> designation,
-      List<CodeSystemProperty1> property,
-      List<CodeSystemConcept> concept});
+      List<dynamic> designation,
+      List<dynamic> property,
+      List<dynamic> concept});
 }
 
 class _$CodeSystemConceptCopyWithImpl<$Res>
@@ -5789,13 +5785,10 @@ class _$CodeSystemConceptCopyWithImpl<$Res>
           definition == freezed ? _value.definition : definition as String,
       designation: designation == freezed
           ? _value.designation
-          : designation as List<CodeSystemDesignation>,
-      property: property == freezed
-          ? _value.property
-          : property as List<CodeSystemProperty1>,
-      concept: concept == freezed
-          ? _value.concept
-          : concept as List<CodeSystemConcept>,
+          : designation as List<dynamic>,
+      property:
+          property == freezed ? _value.property : property as List<dynamic>,
+      concept: concept == freezed ? _value.concept : concept as List<dynamic>,
     ));
   }
 }
@@ -5829,11 +5822,11 @@ class _$CodeSystemConcept implements CodeSystemConcept {
   @override
   final String definition;
   @override
-  final List<CodeSystemDesignation> designation;
+  final List<dynamic> designation;
   @override
-  final List<CodeSystemProperty1> property;
+  final List<dynamic> property;
   @override
-  final List<CodeSystemConcept> concept;
+  final List<dynamic> concept;
 
   @override
   String toString() {
@@ -5924,9 +5917,9 @@ class _$CodeSystemConcept implements CodeSystemConcept {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -5953,9 +5946,9 @@ class _$CodeSystemConcept implements CodeSystemConcept {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -6013,8 +6006,8 @@ class _$CodeSystemConcept implements CodeSystemConcept {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -6022,8 +6015,8 @@ class _$CodeSystemConcept implements CodeSystemConcept {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -6032,7 +6025,7 @@ class _$CodeSystemConcept implements CodeSystemConcept {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -6058,8 +6051,8 @@ class _$CodeSystemConcept implements CodeSystemConcept {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -6084,8 +6077,8 @@ class _$CodeSystemConcept implements CodeSystemConcept {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -6115,7 +6108,7 @@ class _$CodeSystemConcept implements CodeSystemConcept {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -6141,7 +6134,7 @@ class _$CodeSystemConcept implements CodeSystemConcept {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -6152,7 +6145,7 @@ class _$CodeSystemConcept implements CodeSystemConcept {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -6165,7 +6158,7 @@ class _$CodeSystemConcept implements CodeSystemConcept {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -6215,7 +6208,7 @@ class _$CodeSystemConcept implements CodeSystemConcept {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -6256,7 +6249,7 @@ class _$CodeSystemConcept implements CodeSystemConcept {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -6266,7 +6259,7 @@ class _$CodeSystemConcept implements CodeSystemConcept {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -6275,7 +6268,7 @@ class _$CodeSystemConcept implements CodeSystemConcept {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -6285,8 +6278,8 @@ class _$CodeSystemConcept implements CodeSystemConcept {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -6380,9 +6373,9 @@ class _$CodeSystemConcept implements CodeSystemConcept {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -6406,9 +6399,9 @@ class _$CodeSystemConcept implements CodeSystemConcept {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -6462,16 +6455,16 @@ class _$CodeSystemConcept implements CodeSystemConcept {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -6479,7 +6472,7 @@ class _$CodeSystemConcept implements CodeSystemConcept {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -6502,8 +6495,8 @@ class _$CodeSystemConcept implements CodeSystemConcept {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -6526,8 +6519,8 @@ class _$CodeSystemConcept implements CodeSystemConcept {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -6556,7 +6549,7 @@ class _$CodeSystemConcept implements CodeSystemConcept {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -6575,7 +6568,7 @@ class _$CodeSystemConcept implements CodeSystemConcept {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -6585,7 +6578,7 @@ class _$CodeSystemConcept implements CodeSystemConcept {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -6596,7 +6589,7 @@ class _$CodeSystemConcept implements CodeSystemConcept {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -6634,7 +6627,7 @@ class _$CodeSystemConcept implements CodeSystemConcept {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -6673,7 +6666,7 @@ class _$CodeSystemConcept implements CodeSystemConcept {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -6682,7 +6675,7 @@ class _$CodeSystemConcept implements CodeSystemConcept {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -6690,7 +6683,7 @@ class _$CodeSystemConcept implements CodeSystemConcept {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -6699,8 +6692,8 @@ class _$CodeSystemConcept implements CodeSystemConcept {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -6890,9 +6883,9 @@ abstract class CodeSystemConcept implements Terminology {
       Code code,
       String display,
       String definition,
-      List<CodeSystemDesignation> designation,
-      List<CodeSystemProperty1> property,
-      List<CodeSystemConcept> concept}) = _$CodeSystemConcept;
+      List<dynamic> designation,
+      List<dynamic> property,
+      List<dynamic> concept}) = _$CodeSystemConcept;
 
   factory CodeSystemConcept.fromJson(Map<String, dynamic> json) =
       _$CodeSystemConcept.fromJson;
@@ -6905,9 +6898,9 @@ abstract class CodeSystemConcept implements Terminology {
   Code get code;
   String get display;
   String get definition;
-  List<CodeSystemDesignation> get designation;
-  List<CodeSystemProperty1> get property;
-  List<CodeSystemConcept> get concept;
+  List<dynamic> get designation;
+  List<dynamic> get property;
+  List<dynamic> get concept;
   @override
   $CodeSystemConceptCopyWith<CodeSystemConcept> get copyWith;
 }
@@ -7064,9 +7057,9 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -7093,9 +7086,9 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -7153,8 +7146,8 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -7162,8 +7155,8 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -7172,7 +7165,7 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -7198,8 +7191,8 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -7224,8 +7217,8 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -7255,7 +7248,7 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -7281,7 +7274,7 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -7292,7 +7285,7 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -7305,7 +7298,7 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -7355,7 +7348,7 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -7396,7 +7389,7 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -7406,7 +7399,7 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -7415,7 +7408,7 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -7425,8 +7418,8 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -7520,9 +7513,9 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -7546,9 +7539,9 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -7602,16 +7595,16 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -7619,7 +7612,7 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -7642,8 +7635,8 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -7666,8 +7659,8 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -7696,7 +7689,7 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -7715,7 +7708,7 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -7725,7 +7718,7 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -7736,7 +7729,7 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -7774,7 +7767,7 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -7813,7 +7806,7 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -7822,7 +7815,7 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -7830,7 +7823,7 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -7839,8 +7832,8 @@ class _$CodeSystemDesignation implements CodeSystemDesignation {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -8256,9 +8249,9 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -8285,9 +8278,9 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -8345,8 +8338,8 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -8354,8 +8347,8 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -8364,7 +8357,7 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -8390,8 +8383,8 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -8416,8 +8409,8 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -8447,7 +8440,7 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -8473,7 +8466,7 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -8484,7 +8477,7 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -8497,7 +8490,7 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -8547,7 +8540,7 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -8588,7 +8581,7 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -8598,7 +8591,7 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -8607,7 +8600,7 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -8617,8 +8610,8 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -8722,9 +8715,9 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -8748,9 +8741,9 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -8804,16 +8797,16 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -8821,7 +8814,7 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -8844,8 +8837,8 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -8868,8 +8861,8 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -8898,7 +8891,7 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -8917,7 +8910,7 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -8927,7 +8920,7 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -8938,7 +8931,7 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -8976,7 +8969,7 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -9015,7 +9008,7 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -9024,7 +9017,7 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -9032,7 +9025,7 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -9041,8 +9034,8 @@ class _$CodeSystemProperty1 implements CodeSystemProperty1 {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -9633,9 +9626,9 @@ class _$ValueSet implements ValueSet {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -9662,9 +9655,9 @@ class _$ValueSet implements ValueSet {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -9722,8 +9715,8 @@ class _$ValueSet implements ValueSet {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -9731,8 +9724,8 @@ class _$ValueSet implements ValueSet {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -9741,7 +9734,7 @@ class _$ValueSet implements ValueSet {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -9767,8 +9760,8 @@ class _$ValueSet implements ValueSet {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -9793,8 +9786,8 @@ class _$ValueSet implements ValueSet {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -9824,7 +9817,7 @@ class _$ValueSet implements ValueSet {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -9850,7 +9843,7 @@ class _$ValueSet implements ValueSet {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -9861,7 +9854,7 @@ class _$ValueSet implements ValueSet {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -9874,7 +9867,7 @@ class _$ValueSet implements ValueSet {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -9924,7 +9917,7 @@ class _$ValueSet implements ValueSet {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -9965,7 +9958,7 @@ class _$ValueSet implements ValueSet {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -9975,7 +9968,7 @@ class _$ValueSet implements ValueSet {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -9984,7 +9977,7 @@ class _$ValueSet implements ValueSet {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -9994,8 +9987,8 @@ class _$ValueSet implements ValueSet {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -10115,9 +10108,9 @@ class _$ValueSet implements ValueSet {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -10141,9 +10134,9 @@ class _$ValueSet implements ValueSet {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -10197,16 +10190,16 @@ class _$ValueSet implements ValueSet {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -10214,7 +10207,7 @@ class _$ValueSet implements ValueSet {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -10237,8 +10230,8 @@ class _$ValueSet implements ValueSet {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -10261,8 +10254,8 @@ class _$ValueSet implements ValueSet {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -10291,7 +10284,7 @@ class _$ValueSet implements ValueSet {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -10310,7 +10303,7 @@ class _$ValueSet implements ValueSet {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -10320,7 +10313,7 @@ class _$ValueSet implements ValueSet {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -10331,7 +10324,7 @@ class _$ValueSet implements ValueSet {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -10369,7 +10362,7 @@ class _$ValueSet implements ValueSet {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -10408,7 +10401,7 @@ class _$ValueSet implements ValueSet {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -10417,7 +10410,7 @@ class _$ValueSet implements ValueSet {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -10425,7 +10418,7 @@ class _$ValueSet implements ValueSet {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -10434,8 +10427,8 @@ class _$ValueSet implements ValueSet {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -10719,8 +10712,8 @@ abstract class $ValueSetComposeCopyWith<$Res>
       List<dynamic> modifierExtension,
       Date lockedDate,
       bool inactive,
-      List<ValueSetInclude> include,
-      List<ValueSetInclude> exclude});
+      List<dynamic> include,
+      List<dynamic> exclude});
 }
 
 class _$ValueSetComposeCopyWithImpl<$Res>
@@ -10753,12 +10746,8 @@ class _$ValueSetComposeCopyWithImpl<$Res>
       lockedDate:
           lockedDate == freezed ? _value.lockedDate : lockedDate as Date,
       inactive: inactive == freezed ? _value.inactive : inactive as bool,
-      include: include == freezed
-          ? _value.include
-          : include as List<ValueSetInclude>,
-      exclude: exclude == freezed
-          ? _value.exclude
-          : exclude as List<ValueSetInclude>,
+      include: include == freezed ? _value.include : include as List<dynamic>,
+      exclude: exclude == freezed ? _value.exclude : exclude as List<dynamic>,
     ));
   }
 }
@@ -10788,9 +10777,9 @@ class _$ValueSetCompose implements ValueSetCompose {
   @override
   final bool inactive;
   @override
-  final List<ValueSetInclude> include;
+  final List<dynamic> include;
   @override
-  final List<ValueSetInclude> exclude;
+  final List<dynamic> exclude;
 
   @override
   String toString() {
@@ -10874,9 +10863,9 @@ class _$ValueSetCompose implements ValueSetCompose {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -10903,9 +10892,9 @@ class _$ValueSetCompose implements ValueSetCompose {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -10963,8 +10952,8 @@ class _$ValueSetCompose implements ValueSetCompose {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -10972,8 +10961,8 @@ class _$ValueSetCompose implements ValueSetCompose {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -10982,7 +10971,7 @@ class _$ValueSetCompose implements ValueSetCompose {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -11008,8 +10997,8 @@ class _$ValueSetCompose implements ValueSetCompose {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -11034,8 +11023,8 @@ class _$ValueSetCompose implements ValueSetCompose {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -11065,7 +11054,7 @@ class _$ValueSetCompose implements ValueSetCompose {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -11091,7 +11080,7 @@ class _$ValueSetCompose implements ValueSetCompose {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -11102,7 +11091,7 @@ class _$ValueSetCompose implements ValueSetCompose {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -11115,7 +11104,7 @@ class _$ValueSetCompose implements ValueSetCompose {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -11165,7 +11154,7 @@ class _$ValueSetCompose implements ValueSetCompose {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -11206,7 +11195,7 @@ class _$ValueSetCompose implements ValueSetCompose {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -11216,7 +11205,7 @@ class _$ValueSetCompose implements ValueSetCompose {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -11225,7 +11214,7 @@ class _$ValueSetCompose implements ValueSetCompose {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -11235,8 +11224,8 @@ class _$ValueSetCompose implements ValueSetCompose {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -11330,9 +11319,9 @@ class _$ValueSetCompose implements ValueSetCompose {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -11356,9 +11345,9 @@ class _$ValueSetCompose implements ValueSetCompose {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -11412,16 +11401,16 @@ class _$ValueSetCompose implements ValueSetCompose {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -11429,7 +11418,7 @@ class _$ValueSetCompose implements ValueSetCompose {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -11452,8 +11441,8 @@ class _$ValueSetCompose implements ValueSetCompose {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -11476,8 +11465,8 @@ class _$ValueSetCompose implements ValueSetCompose {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -11506,7 +11495,7 @@ class _$ValueSetCompose implements ValueSetCompose {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -11525,7 +11514,7 @@ class _$ValueSetCompose implements ValueSetCompose {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -11535,7 +11524,7 @@ class _$ValueSetCompose implements ValueSetCompose {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -11546,7 +11535,7 @@ class _$ValueSetCompose implements ValueSetCompose {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -11584,7 +11573,7 @@ class _$ValueSetCompose implements ValueSetCompose {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -11623,7 +11612,7 @@ class _$ValueSetCompose implements ValueSetCompose {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -11632,7 +11621,7 @@ class _$ValueSetCompose implements ValueSetCompose {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -11640,7 +11629,7 @@ class _$ValueSetCompose implements ValueSetCompose {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -11649,8 +11638,8 @@ class _$ValueSetCompose implements ValueSetCompose {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -11838,8 +11827,8 @@ abstract class ValueSetCompose implements Terminology {
       List<dynamic> modifierExtension,
       Date lockedDate,
       bool inactive,
-      List<ValueSetInclude> include,
-      List<ValueSetInclude> exclude}) = _$ValueSetCompose;
+      List<dynamic> include,
+      List<dynamic> exclude}) = _$ValueSetCompose;
 
   factory ValueSetCompose.fromJson(Map<String, dynamic> json) =
       _$ValueSetCompose.fromJson;
@@ -11851,8 +11840,8 @@ abstract class ValueSetCompose implements Terminology {
   List<dynamic> get modifierExtension;
   Date get lockedDate;
   bool get inactive;
-  List<ValueSetInclude> get include;
-  List<ValueSetInclude> get exclude;
+  List<dynamic> get include;
+  List<dynamic> get exclude;
   @override
   $ValueSetComposeCopyWith<ValueSetCompose> get copyWith;
 }
@@ -11869,8 +11858,8 @@ abstract class $ValueSetIncludeCopyWith<$Res>
       List<dynamic> modifierExtension,
       FhirUri system,
       String version,
-      List<ValueSetConcept> concept,
-      List<ValueSetFilter> filter,
+      List<dynamic> concept,
+      List<dynamic> filter,
       List<Canonical> valueSet});
 }
 
@@ -11904,11 +11893,8 @@ class _$ValueSetIncludeCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       system: system == freezed ? _value.system : system as FhirUri,
       version: version == freezed ? _value.version : version as String,
-      concept: concept == freezed
-          ? _value.concept
-          : concept as List<ValueSetConcept>,
-      filter:
-          filter == freezed ? _value.filter : filter as List<ValueSetFilter>,
+      concept: concept == freezed ? _value.concept : concept as List<dynamic>,
+      filter: filter == freezed ? _value.filter : filter as List<dynamic>,
       valueSet:
           valueSet == freezed ? _value.valueSet : valueSet as List<Canonical>,
     ));
@@ -11941,9 +11927,9 @@ class _$ValueSetInclude implements ValueSetInclude {
   @override
   final String version;
   @override
-  final List<ValueSetConcept> concept;
+  final List<dynamic> concept;
   @override
-  final List<ValueSetFilter> filter;
+  final List<dynamic> filter;
   @override
   final List<Canonical> valueSet;
 
@@ -12032,9 +12018,9 @@ class _$ValueSetInclude implements ValueSetInclude {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -12061,9 +12047,9 @@ class _$ValueSetInclude implements ValueSetInclude {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -12121,8 +12107,8 @@ class _$ValueSetInclude implements ValueSetInclude {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -12130,8 +12116,8 @@ class _$ValueSetInclude implements ValueSetInclude {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -12140,7 +12126,7 @@ class _$ValueSetInclude implements ValueSetInclude {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -12166,8 +12152,8 @@ class _$ValueSetInclude implements ValueSetInclude {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -12192,8 +12178,8 @@ class _$ValueSetInclude implements ValueSetInclude {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -12223,7 +12209,7 @@ class _$ValueSetInclude implements ValueSetInclude {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -12249,7 +12235,7 @@ class _$ValueSetInclude implements ValueSetInclude {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -12260,7 +12246,7 @@ class _$ValueSetInclude implements ValueSetInclude {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -12273,7 +12259,7 @@ class _$ValueSetInclude implements ValueSetInclude {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -12323,7 +12309,7 @@ class _$ValueSetInclude implements ValueSetInclude {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -12364,7 +12350,7 @@ class _$ValueSetInclude implements ValueSetInclude {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -12374,7 +12360,7 @@ class _$ValueSetInclude implements ValueSetInclude {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -12383,7 +12369,7 @@ class _$ValueSetInclude implements ValueSetInclude {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -12393,8 +12379,8 @@ class _$ValueSetInclude implements ValueSetInclude {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -12488,9 +12474,9 @@ class _$ValueSetInclude implements ValueSetInclude {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -12514,9 +12500,9 @@ class _$ValueSetInclude implements ValueSetInclude {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -12570,16 +12556,16 @@ class _$ValueSetInclude implements ValueSetInclude {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -12587,7 +12573,7 @@ class _$ValueSetInclude implements ValueSetInclude {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -12610,8 +12596,8 @@ class _$ValueSetInclude implements ValueSetInclude {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -12634,8 +12620,8 @@ class _$ValueSetInclude implements ValueSetInclude {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -12664,7 +12650,7 @@ class _$ValueSetInclude implements ValueSetInclude {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -12683,7 +12669,7 @@ class _$ValueSetInclude implements ValueSetInclude {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -12693,7 +12679,7 @@ class _$ValueSetInclude implements ValueSetInclude {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -12704,7 +12690,7 @@ class _$ValueSetInclude implements ValueSetInclude {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -12742,7 +12728,7 @@ class _$ValueSetInclude implements ValueSetInclude {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -12781,7 +12767,7 @@ class _$ValueSetInclude implements ValueSetInclude {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -12790,7 +12776,7 @@ class _$ValueSetInclude implements ValueSetInclude {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -12798,7 +12784,7 @@ class _$ValueSetInclude implements ValueSetInclude {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -12807,8 +12793,8 @@ class _$ValueSetInclude implements ValueSetInclude {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -12996,8 +12982,8 @@ abstract class ValueSetInclude implements Terminology {
       List<dynamic> modifierExtension,
       FhirUri system,
       String version,
-      List<ValueSetConcept> concept,
-      List<ValueSetFilter> filter,
+      List<dynamic> concept,
+      List<dynamic> filter,
       List<Canonical> valueSet}) = _$ValueSetInclude;
 
   factory ValueSetInclude.fromJson(Map<String, dynamic> json) =
@@ -13010,8 +12996,8 @@ abstract class ValueSetInclude implements Terminology {
   List<dynamic> get modifierExtension;
   FhirUri get system;
   String get version;
-  List<ValueSetConcept> get concept;
-  List<ValueSetFilter> get filter;
+  List<dynamic> get concept;
+  List<dynamic> get filter;
   List<Canonical> get valueSet;
   @override
   $ValueSetIncludeCopyWith<ValueSetInclude> get copyWith;
@@ -13029,7 +13015,7 @@ abstract class $ValueSetConceptCopyWith<$Res>
       List<dynamic> modifierExtension,
       Code code,
       String display,
-      List<ValueSetDesignation> designation});
+      List<dynamic> designation});
 }
 
 class _$ValueSetConceptCopyWithImpl<$Res>
@@ -13062,7 +13048,7 @@ class _$ValueSetConceptCopyWithImpl<$Res>
       display: display == freezed ? _value.display : display as String,
       designation: designation == freezed
           ? _value.designation
-          : designation as List<ValueSetDesignation>,
+          : designation as List<dynamic>,
     ));
   }
 }
@@ -13091,7 +13077,7 @@ class _$ValueSetConcept implements ValueSetConcept {
   @override
   final String display;
   @override
-  final List<ValueSetDesignation> designation;
+  final List<dynamic> designation;
 
   @override
   String toString() {
@@ -13171,9 +13157,9 @@ class _$ValueSetConcept implements ValueSetConcept {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -13200,9 +13186,9 @@ class _$ValueSetConcept implements ValueSetConcept {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -13260,8 +13246,8 @@ class _$ValueSetConcept implements ValueSetConcept {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -13269,8 +13255,8 @@ class _$ValueSetConcept implements ValueSetConcept {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -13279,7 +13265,7 @@ class _$ValueSetConcept implements ValueSetConcept {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -13305,8 +13291,8 @@ class _$ValueSetConcept implements ValueSetConcept {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -13331,8 +13317,8 @@ class _$ValueSetConcept implements ValueSetConcept {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -13362,7 +13348,7 @@ class _$ValueSetConcept implements ValueSetConcept {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -13388,7 +13374,7 @@ class _$ValueSetConcept implements ValueSetConcept {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -13399,7 +13385,7 @@ class _$ValueSetConcept implements ValueSetConcept {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -13412,7 +13398,7 @@ class _$ValueSetConcept implements ValueSetConcept {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -13462,7 +13448,7 @@ class _$ValueSetConcept implements ValueSetConcept {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -13503,7 +13489,7 @@ class _$ValueSetConcept implements ValueSetConcept {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -13513,7 +13499,7 @@ class _$ValueSetConcept implements ValueSetConcept {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -13522,7 +13508,7 @@ class _$ValueSetConcept implements ValueSetConcept {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -13532,8 +13518,8 @@ class _$ValueSetConcept implements ValueSetConcept {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -13627,9 +13613,9 @@ class _$ValueSetConcept implements ValueSetConcept {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -13653,9 +13639,9 @@ class _$ValueSetConcept implements ValueSetConcept {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -13709,16 +13695,16 @@ class _$ValueSetConcept implements ValueSetConcept {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -13726,7 +13712,7 @@ class _$ValueSetConcept implements ValueSetConcept {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -13749,8 +13735,8 @@ class _$ValueSetConcept implements ValueSetConcept {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -13773,8 +13759,8 @@ class _$ValueSetConcept implements ValueSetConcept {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -13803,7 +13789,7 @@ class _$ValueSetConcept implements ValueSetConcept {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -13822,7 +13808,7 @@ class _$ValueSetConcept implements ValueSetConcept {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -13832,7 +13818,7 @@ class _$ValueSetConcept implements ValueSetConcept {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -13843,7 +13829,7 @@ class _$ValueSetConcept implements ValueSetConcept {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -13881,7 +13867,7 @@ class _$ValueSetConcept implements ValueSetConcept {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -13920,7 +13906,7 @@ class _$ValueSetConcept implements ValueSetConcept {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -13929,7 +13915,7 @@ class _$ValueSetConcept implements ValueSetConcept {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -13937,7 +13923,7 @@ class _$ValueSetConcept implements ValueSetConcept {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -13946,8 +13932,8 @@ class _$ValueSetConcept implements ValueSetConcept {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -14135,7 +14121,7 @@ abstract class ValueSetConcept implements Terminology {
       List<dynamic> modifierExtension,
       Code code,
       String display,
-      List<ValueSetDesignation> designation}) = _$ValueSetConcept;
+      List<dynamic> designation}) = _$ValueSetConcept;
 
   factory ValueSetConcept.fromJson(Map<String, dynamic> json) =
       _$ValueSetConcept.fromJson;
@@ -14147,7 +14133,7 @@ abstract class ValueSetConcept implements Terminology {
   List<dynamic> get modifierExtension;
   Code get code;
   String get display;
-  List<ValueSetDesignation> get designation;
+  List<dynamic> get designation;
   @override
   $ValueSetConceptCopyWith<ValueSetConcept> get copyWith;
 }
@@ -14303,9 +14289,9 @@ class _$ValueSetDesignation implements ValueSetDesignation {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -14332,9 +14318,9 @@ class _$ValueSetDesignation implements ValueSetDesignation {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -14392,8 +14378,8 @@ class _$ValueSetDesignation implements ValueSetDesignation {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -14401,8 +14387,8 @@ class _$ValueSetDesignation implements ValueSetDesignation {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -14411,7 +14397,7 @@ class _$ValueSetDesignation implements ValueSetDesignation {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -14437,8 +14423,8 @@ class _$ValueSetDesignation implements ValueSetDesignation {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -14463,8 +14449,8 @@ class _$ValueSetDesignation implements ValueSetDesignation {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -14494,7 +14480,7 @@ class _$ValueSetDesignation implements ValueSetDesignation {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -14520,7 +14506,7 @@ class _$ValueSetDesignation implements ValueSetDesignation {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -14531,7 +14517,7 @@ class _$ValueSetDesignation implements ValueSetDesignation {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -14544,7 +14530,7 @@ class _$ValueSetDesignation implements ValueSetDesignation {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -14594,7 +14580,7 @@ class _$ValueSetDesignation implements ValueSetDesignation {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -14635,7 +14621,7 @@ class _$ValueSetDesignation implements ValueSetDesignation {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -14645,7 +14631,7 @@ class _$ValueSetDesignation implements ValueSetDesignation {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -14654,7 +14640,7 @@ class _$ValueSetDesignation implements ValueSetDesignation {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -14664,8 +14650,8 @@ class _$ValueSetDesignation implements ValueSetDesignation {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -14759,9 +14745,9 @@ class _$ValueSetDesignation implements ValueSetDesignation {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -14785,9 +14771,9 @@ class _$ValueSetDesignation implements ValueSetDesignation {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -14841,16 +14827,16 @@ class _$ValueSetDesignation implements ValueSetDesignation {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -14858,7 +14844,7 @@ class _$ValueSetDesignation implements ValueSetDesignation {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -14881,8 +14867,8 @@ class _$ValueSetDesignation implements ValueSetDesignation {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -14905,8 +14891,8 @@ class _$ValueSetDesignation implements ValueSetDesignation {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -14935,7 +14921,7 @@ class _$ValueSetDesignation implements ValueSetDesignation {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -14954,7 +14940,7 @@ class _$ValueSetDesignation implements ValueSetDesignation {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -14964,7 +14950,7 @@ class _$ValueSetDesignation implements ValueSetDesignation {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -14975,7 +14961,7 @@ class _$ValueSetDesignation implements ValueSetDesignation {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -15013,7 +14999,7 @@ class _$ValueSetDesignation implements ValueSetDesignation {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -15052,7 +15038,7 @@ class _$ValueSetDesignation implements ValueSetDesignation {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -15061,7 +15047,7 @@ class _$ValueSetDesignation implements ValueSetDesignation {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -15069,7 +15055,7 @@ class _$ValueSetDesignation implements ValueSetDesignation {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -15078,8 +15064,8 @@ class _$ValueSetDesignation implements ValueSetDesignation {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -15435,9 +15421,9 @@ class _$ValueSetFilter implements ValueSetFilter {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -15464,9 +15450,9 @@ class _$ValueSetFilter implements ValueSetFilter {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -15524,8 +15510,8 @@ class _$ValueSetFilter implements ValueSetFilter {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -15533,8 +15519,8 @@ class _$ValueSetFilter implements ValueSetFilter {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -15543,7 +15529,7 @@ class _$ValueSetFilter implements ValueSetFilter {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -15569,8 +15555,8 @@ class _$ValueSetFilter implements ValueSetFilter {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -15595,8 +15581,8 @@ class _$ValueSetFilter implements ValueSetFilter {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -15626,7 +15612,7 @@ class _$ValueSetFilter implements ValueSetFilter {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -15652,7 +15638,7 @@ class _$ValueSetFilter implements ValueSetFilter {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -15663,7 +15649,7 @@ class _$ValueSetFilter implements ValueSetFilter {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -15676,7 +15662,7 @@ class _$ValueSetFilter implements ValueSetFilter {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -15726,7 +15712,7 @@ class _$ValueSetFilter implements ValueSetFilter {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -15767,7 +15753,7 @@ class _$ValueSetFilter implements ValueSetFilter {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -15777,7 +15763,7 @@ class _$ValueSetFilter implements ValueSetFilter {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -15786,7 +15772,7 @@ class _$ValueSetFilter implements ValueSetFilter {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -15796,8 +15782,8 @@ class _$ValueSetFilter implements ValueSetFilter {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -15891,9 +15877,9 @@ class _$ValueSetFilter implements ValueSetFilter {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -15917,9 +15903,9 @@ class _$ValueSetFilter implements ValueSetFilter {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -15973,16 +15959,16 @@ class _$ValueSetFilter implements ValueSetFilter {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -15990,7 +15976,7 @@ class _$ValueSetFilter implements ValueSetFilter {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -16013,8 +15999,8 @@ class _$ValueSetFilter implements ValueSetFilter {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -16037,8 +16023,8 @@ class _$ValueSetFilter implements ValueSetFilter {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -16067,7 +16053,7 @@ class _$ValueSetFilter implements ValueSetFilter {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -16086,7 +16072,7 @@ class _$ValueSetFilter implements ValueSetFilter {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -16096,7 +16082,7 @@ class _$ValueSetFilter implements ValueSetFilter {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -16107,7 +16093,7 @@ class _$ValueSetFilter implements ValueSetFilter {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -16145,7 +16131,7 @@ class _$ValueSetFilter implements ValueSetFilter {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -16184,7 +16170,7 @@ class _$ValueSetFilter implements ValueSetFilter {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -16193,7 +16179,7 @@ class _$ValueSetFilter implements ValueSetFilter {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -16201,7 +16187,7 @@ class _$ValueSetFilter implements ValueSetFilter {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -16210,8 +16196,8 @@ class _$ValueSetFilter implements ValueSetFilter {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -16430,8 +16416,8 @@ abstract class $ValueSetExpansionCopyWith<$Res>
       FhirDateTime timestamp,
       int total,
       int offset,
-      List<ValueSetParameter> parameter,
-      List<ValueSetContains> contains});
+      List<dynamic> parameter,
+      List<dynamic> contains});
 }
 
 class _$ValueSetExpansionCopyWithImpl<$Res>
@@ -16469,12 +16455,10 @@ class _$ValueSetExpansionCopyWithImpl<$Res>
           timestamp == freezed ? _value.timestamp : timestamp as FhirDateTime,
       total: total == freezed ? _value.total : total as int,
       offset: offset == freezed ? _value.offset : offset as int,
-      parameter: parameter == freezed
-          ? _value.parameter
-          : parameter as List<ValueSetParameter>,
-      contains: contains == freezed
-          ? _value.contains
-          : contains as List<ValueSetContains>,
+      parameter:
+          parameter == freezed ? _value.parameter : parameter as List<dynamic>,
+      contains:
+          contains == freezed ? _value.contains : contains as List<dynamic>,
     ));
   }
 }
@@ -16510,9 +16494,9 @@ class _$ValueSetExpansion implements ValueSetExpansion {
   @override
   final int offset;
   @override
-  final List<ValueSetParameter> parameter;
+  final List<dynamic> parameter;
   @override
-  final List<ValueSetContains> contains;
+  final List<dynamic> contains;
 
   @override
   String toString() {
@@ -16603,9 +16587,9 @@ class _$ValueSetExpansion implements ValueSetExpansion {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -16632,9 +16616,9 @@ class _$ValueSetExpansion implements ValueSetExpansion {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -16692,8 +16676,8 @@ class _$ValueSetExpansion implements ValueSetExpansion {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -16701,8 +16685,8 @@ class _$ValueSetExpansion implements ValueSetExpansion {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -16711,7 +16695,7 @@ class _$ValueSetExpansion implements ValueSetExpansion {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -16737,8 +16721,8 @@ class _$ValueSetExpansion implements ValueSetExpansion {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -16763,8 +16747,8 @@ class _$ValueSetExpansion implements ValueSetExpansion {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -16794,7 +16778,7 @@ class _$ValueSetExpansion implements ValueSetExpansion {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -16820,7 +16804,7 @@ class _$ValueSetExpansion implements ValueSetExpansion {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -16831,7 +16815,7 @@ class _$ValueSetExpansion implements ValueSetExpansion {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -16844,7 +16828,7 @@ class _$ValueSetExpansion implements ValueSetExpansion {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -16894,7 +16878,7 @@ class _$ValueSetExpansion implements ValueSetExpansion {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -16935,7 +16919,7 @@ class _$ValueSetExpansion implements ValueSetExpansion {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -16945,7 +16929,7 @@ class _$ValueSetExpansion implements ValueSetExpansion {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -16954,7 +16938,7 @@ class _$ValueSetExpansion implements ValueSetExpansion {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -16964,8 +16948,8 @@ class _$ValueSetExpansion implements ValueSetExpansion {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -17059,9 +17043,9 @@ class _$ValueSetExpansion implements ValueSetExpansion {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -17085,9 +17069,9 @@ class _$ValueSetExpansion implements ValueSetExpansion {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -17141,16 +17125,16 @@ class _$ValueSetExpansion implements ValueSetExpansion {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -17158,7 +17142,7 @@ class _$ValueSetExpansion implements ValueSetExpansion {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -17181,8 +17165,8 @@ class _$ValueSetExpansion implements ValueSetExpansion {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -17205,8 +17189,8 @@ class _$ValueSetExpansion implements ValueSetExpansion {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -17235,7 +17219,7 @@ class _$ValueSetExpansion implements ValueSetExpansion {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -17254,7 +17238,7 @@ class _$ValueSetExpansion implements ValueSetExpansion {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -17264,7 +17248,7 @@ class _$ValueSetExpansion implements ValueSetExpansion {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -17275,7 +17259,7 @@ class _$ValueSetExpansion implements ValueSetExpansion {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -17313,7 +17297,7 @@ class _$ValueSetExpansion implements ValueSetExpansion {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -17352,7 +17336,7 @@ class _$ValueSetExpansion implements ValueSetExpansion {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -17361,7 +17345,7 @@ class _$ValueSetExpansion implements ValueSetExpansion {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -17369,7 +17353,7 @@ class _$ValueSetExpansion implements ValueSetExpansion {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -17378,8 +17362,8 @@ class _$ValueSetExpansion implements ValueSetExpansion {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -17570,8 +17554,8 @@ abstract class ValueSetExpansion implements Terminology {
       FhirDateTime timestamp,
       int total,
       int offset,
-      List<ValueSetParameter> parameter,
-      List<ValueSetContains> contains}) = _$ValueSetExpansion;
+      List<dynamic> parameter,
+      List<dynamic> contains}) = _$ValueSetExpansion;
 
   factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =
       _$ValueSetExpansion.fromJson;
@@ -17585,8 +17569,8 @@ abstract class ValueSetExpansion implements Terminology {
   FhirDateTime get timestamp;
   int get total;
   int get offset;
-  List<ValueSetParameter> get parameter;
-  List<ValueSetContains> get contains;
+  List<dynamic> get parameter;
+  List<dynamic> get contains;
   @override
   $ValueSetExpansionCopyWith<ValueSetExpansion> get copyWith;
 }
@@ -17800,9 +17784,9 @@ class _$ValueSetParameter implements ValueSetParameter {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -17829,9 +17813,9 @@ class _$ValueSetParameter implements ValueSetParameter {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -17889,8 +17873,8 @@ class _$ValueSetParameter implements ValueSetParameter {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -17898,8 +17882,8 @@ class _$ValueSetParameter implements ValueSetParameter {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -17908,7 +17892,7 @@ class _$ValueSetParameter implements ValueSetParameter {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -17934,8 +17918,8 @@ class _$ValueSetParameter implements ValueSetParameter {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -17960,8 +17944,8 @@ class _$ValueSetParameter implements ValueSetParameter {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -17991,7 +17975,7 @@ class _$ValueSetParameter implements ValueSetParameter {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -18017,7 +18001,7 @@ class _$ValueSetParameter implements ValueSetParameter {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -18028,7 +18012,7 @@ class _$ValueSetParameter implements ValueSetParameter {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -18041,7 +18025,7 @@ class _$ValueSetParameter implements ValueSetParameter {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -18091,7 +18075,7 @@ class _$ValueSetParameter implements ValueSetParameter {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -18132,7 +18116,7 @@ class _$ValueSetParameter implements ValueSetParameter {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -18142,7 +18126,7 @@ class _$ValueSetParameter implements ValueSetParameter {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -18151,7 +18135,7 @@ class _$ValueSetParameter implements ValueSetParameter {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -18161,8 +18145,8 @@ class _$ValueSetParameter implements ValueSetParameter {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -18266,9 +18250,9 @@ class _$ValueSetParameter implements ValueSetParameter {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -18292,9 +18276,9 @@ class _$ValueSetParameter implements ValueSetParameter {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -18348,16 +18332,16 @@ class _$ValueSetParameter implements ValueSetParameter {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -18365,7 +18349,7 @@ class _$ValueSetParameter implements ValueSetParameter {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -18388,8 +18372,8 @@ class _$ValueSetParameter implements ValueSetParameter {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -18412,8 +18396,8 @@ class _$ValueSetParameter implements ValueSetParameter {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -18442,7 +18426,7 @@ class _$ValueSetParameter implements ValueSetParameter {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -18461,7 +18445,7 @@ class _$ValueSetParameter implements ValueSetParameter {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -18471,7 +18455,7 @@ class _$ValueSetParameter implements ValueSetParameter {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -18482,7 +18466,7 @@ class _$ValueSetParameter implements ValueSetParameter {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -18520,7 +18504,7 @@ class _$ValueSetParameter implements ValueSetParameter {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -18559,7 +18543,7 @@ class _$ValueSetParameter implements ValueSetParameter {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -18568,7 +18552,7 @@ class _$ValueSetParameter implements ValueSetParameter {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -18576,7 +18560,7 @@ class _$ValueSetParameter implements ValueSetParameter {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -18585,8 +18569,8 @@ class _$ValueSetParameter implements ValueSetParameter {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -18828,8 +18812,8 @@ abstract class $ValueSetContainsCopyWith<$Res>
       String version,
       Code code,
       String display,
-      List<ValueSetDesignation> designation,
-      List<ValueSetContains> contains});
+      List<dynamic> designation,
+      List<dynamic> contains});
 }
 
 class _$ValueSetContainsCopyWithImpl<$Res>
@@ -18871,10 +18855,9 @@ class _$ValueSetContainsCopyWithImpl<$Res>
       display: display == freezed ? _value.display : display as String,
       designation: designation == freezed
           ? _value.designation
-          : designation as List<ValueSetDesignation>,
-      contains: contains == freezed
-          ? _value.contains
-          : contains as List<ValueSetContains>,
+          : designation as List<dynamic>,
+      contains:
+          contains == freezed ? _value.contains : contains as List<dynamic>,
     ));
   }
 }
@@ -18916,9 +18899,9 @@ class _$ValueSetContains implements ValueSetContains {
   @override
   final String display;
   @override
-  final List<ValueSetDesignation> designation;
+  final List<dynamic> designation;
   @override
-  final List<ValueSetContains> contains;
+  final List<dynamic> contains;
 
   @override
   String toString() {
@@ -19017,9 +19000,9 @@ class _$ValueSetContains implements ValueSetContains {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -19046,9 +19029,9 @@ class _$ValueSetContains implements ValueSetContains {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -19106,8 +19089,8 @@ class _$ValueSetContains implements ValueSetContains {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -19115,8 +19098,8 @@ class _$ValueSetContains implements ValueSetContains {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -19125,7 +19108,7 @@ class _$ValueSetContains implements ValueSetContains {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -19151,8 +19134,8 @@ class _$ValueSetContains implements ValueSetContains {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -19177,8 +19160,8 @@ class _$ValueSetContains implements ValueSetContains {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -19208,7 +19191,7 @@ class _$ValueSetContains implements ValueSetContains {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -19234,7 +19217,7 @@ class _$ValueSetContains implements ValueSetContains {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -19245,7 +19228,7 @@ class _$ValueSetContains implements ValueSetContains {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -19258,7 +19241,7 @@ class _$ValueSetContains implements ValueSetContains {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -19308,7 +19291,7 @@ class _$ValueSetContains implements ValueSetContains {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -19349,7 +19332,7 @@ class _$ValueSetContains implements ValueSetContains {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -19359,7 +19342,7 @@ class _$ValueSetContains implements ValueSetContains {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -19368,7 +19351,7 @@ class _$ValueSetContains implements ValueSetContains {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -19378,8 +19361,8 @@ class _$ValueSetContains implements ValueSetContains {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -19473,9 +19456,9 @@ class _$ValueSetContains implements ValueSetContains {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -19499,9 +19482,9 @@ class _$ValueSetContains implements ValueSetContains {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -19555,16 +19538,16 @@ class _$ValueSetContains implements ValueSetContains {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -19572,7 +19555,7 @@ class _$ValueSetContains implements ValueSetContains {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -19595,8 +19578,8 @@ class _$ValueSetContains implements ValueSetContains {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -19619,8 +19602,8 @@ class _$ValueSetContains implements ValueSetContains {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -19649,7 +19632,7 @@ class _$ValueSetContains implements ValueSetContains {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -19668,7 +19651,7 @@ class _$ValueSetContains implements ValueSetContains {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -19678,7 +19661,7 @@ class _$ValueSetContains implements ValueSetContains {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -19689,7 +19672,7 @@ class _$ValueSetContains implements ValueSetContains {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -19727,7 +19710,7 @@ class _$ValueSetContains implements ValueSetContains {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -19766,7 +19749,7 @@ class _$ValueSetContains implements ValueSetContains {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -19775,7 +19758,7 @@ class _$ValueSetContains implements ValueSetContains {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -19783,7 +19766,7 @@ class _$ValueSetContains implements ValueSetContains {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -19792,8 +19775,8 @@ class _$ValueSetContains implements ValueSetContains {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -19986,8 +19969,8 @@ abstract class ValueSetContains implements Terminology {
       String version,
       Code code,
       String display,
-      List<ValueSetDesignation> designation,
-      List<ValueSetContains> contains}) = _$ValueSetContains;
+      List<dynamic> designation,
+      List<dynamic> contains}) = _$ValueSetContains;
 
   factory ValueSetContains.fromJson(Map<String, dynamic> json) =
       _$ValueSetContains.fromJson;
@@ -20003,8 +19986,8 @@ abstract class ValueSetContains implements Terminology {
   String get version;
   Code get code;
   String get display;
-  List<ValueSetDesignation> get designation;
-  List<ValueSetContains> get contains;
+  List<dynamic> get designation;
+  List<dynamic> get contains;
   @override
   $ValueSetContainsCopyWith<ValueSetContains> get copyWith;
 }
@@ -20043,7 +20026,7 @@ abstract class $TerminologyCapabilitiesCopyWith<$Res>
       TerminologyCapabilitiesSoftware software,
       TerminologyCapabilitiesImplementation implementation,
       bool lockedDate,
-      List<TerminologyCapabilitiesCodeSystem> codeSystem,
+      List<dynamic> codeSystem,
       TerminologyCapabilitiesExpansion expansion,
       TerminologyCapabilitiesCodeSearch codeSearch,
       TerminologyCapabilitiesValidateCode validateCode,
@@ -20149,7 +20132,7 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res>
           lockedDate == freezed ? _value.lockedDate : lockedDate as bool,
       codeSystem: codeSystem == freezed
           ? _value.codeSystem
-          : codeSystem as List<TerminologyCapabilitiesCodeSystem>,
+          : codeSystem as List<dynamic>,
       expansion: expansion == freezed
           ? _value.expansion
           : expansion as TerminologyCapabilitiesExpansion,
@@ -20264,7 +20247,7 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
   @override
   final bool lockedDate;
   @override
-  final List<TerminologyCapabilitiesCodeSystem> codeSystem;
+  final List<dynamic> codeSystem;
   @override
   final TerminologyCapabilitiesExpansion expansion;
   @override
@@ -20442,9 +20425,9 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -20471,9 +20454,9 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -20531,8 +20514,8 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -20540,8 +20523,8 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -20550,7 +20533,7 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -20576,8 +20559,8 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -20602,8 +20585,8 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -20633,7 +20616,7 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -20659,7 +20642,7 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -20670,7 +20653,7 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -20683,7 +20666,7 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -20733,7 +20716,7 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -20774,7 +20757,7 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -20784,7 +20767,7 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -20793,7 +20776,7 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -20803,8 +20786,8 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -20930,9 +20913,9 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -20956,9 +20939,9 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -21012,16 +20995,16 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -21029,7 +21012,7 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -21052,8 +21035,8 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -21076,8 +21059,8 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -21106,7 +21089,7 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -21125,7 +21108,7 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -21135,7 +21118,7 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -21146,7 +21129,7 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -21184,7 +21167,7 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -21223,7 +21206,7 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -21232,7 +21215,7 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -21240,7 +21223,7 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -21249,8 +21232,8 @@ class _$TerminologyCapabilities implements TerminologyCapabilities {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -21493,7 +21476,7 @@ abstract class TerminologyCapabilities implements Terminology {
       TerminologyCapabilitiesSoftware software,
       TerminologyCapabilitiesImplementation implementation,
       bool lockedDate,
-      List<TerminologyCapabilitiesCodeSystem> codeSystem,
+      List<dynamic> codeSystem,
       TerminologyCapabilitiesExpansion expansion,
       TerminologyCapabilitiesCodeSearch codeSearch,
       TerminologyCapabilitiesValidateCode validateCode,
@@ -21532,7 +21515,7 @@ abstract class TerminologyCapabilities implements Terminology {
   TerminologyCapabilitiesSoftware get software;
   TerminologyCapabilitiesImplementation get implementation;
   bool get lockedDate;
-  List<TerminologyCapabilitiesCodeSystem> get codeSystem;
+  List<dynamic> get codeSystem;
   TerminologyCapabilitiesExpansion get expansion;
   TerminologyCapabilitiesCodeSearch get codeSearch;
   TerminologyCapabilitiesValidateCode get validateCode;
@@ -21689,9 +21672,9 @@ class _$TerminologyCapabilitiesSoftware
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -21718,9 +21701,9 @@ class _$TerminologyCapabilitiesSoftware
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -21778,8 +21761,8 @@ class _$TerminologyCapabilitiesSoftware
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -21787,8 +21770,8 @@ class _$TerminologyCapabilitiesSoftware
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -21797,7 +21780,7 @@ class _$TerminologyCapabilitiesSoftware
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -21823,8 +21806,8 @@ class _$TerminologyCapabilitiesSoftware
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -21849,8 +21832,8 @@ class _$TerminologyCapabilitiesSoftware
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -21880,7 +21863,7 @@ class _$TerminologyCapabilitiesSoftware
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -21906,7 +21889,7 @@ class _$TerminologyCapabilitiesSoftware
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -21917,7 +21900,7 @@ class _$TerminologyCapabilitiesSoftware
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -21930,7 +21913,7 @@ class _$TerminologyCapabilitiesSoftware
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -21980,7 +21963,7 @@ class _$TerminologyCapabilitiesSoftware
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -22021,7 +22004,7 @@ class _$TerminologyCapabilitiesSoftware
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -22031,7 +22014,7 @@ class _$TerminologyCapabilitiesSoftware
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -22040,7 +22023,7 @@ class _$TerminologyCapabilitiesSoftware
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -22050,8 +22033,8 @@ class _$TerminologyCapabilitiesSoftware
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -22145,9 +22128,9 @@ class _$TerminologyCapabilitiesSoftware
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -22171,9 +22154,9 @@ class _$TerminologyCapabilitiesSoftware
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -22227,16 +22210,16 @@ class _$TerminologyCapabilitiesSoftware
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -22244,7 +22227,7 @@ class _$TerminologyCapabilitiesSoftware
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -22267,8 +22250,8 @@ class _$TerminologyCapabilitiesSoftware
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -22291,8 +22274,8 @@ class _$TerminologyCapabilitiesSoftware
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -22321,7 +22304,7 @@ class _$TerminologyCapabilitiesSoftware
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -22340,7 +22323,7 @@ class _$TerminologyCapabilitiesSoftware
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -22350,7 +22333,7 @@ class _$TerminologyCapabilitiesSoftware
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -22361,7 +22344,7 @@ class _$TerminologyCapabilitiesSoftware
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -22399,7 +22382,7 @@ class _$TerminologyCapabilitiesSoftware
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -22438,7 +22421,7 @@ class _$TerminologyCapabilitiesSoftware
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -22447,7 +22430,7 @@ class _$TerminologyCapabilitiesSoftware
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -22455,7 +22438,7 @@ class _$TerminologyCapabilitiesSoftware
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -22464,8 +22447,8 @@ class _$TerminologyCapabilitiesSoftware
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -22820,9 +22803,9 @@ class _$TerminologyCapabilitiesImplementation
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -22849,9 +22832,9 @@ class _$TerminologyCapabilitiesImplementation
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -22909,8 +22892,8 @@ class _$TerminologyCapabilitiesImplementation
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -22918,8 +22901,8 @@ class _$TerminologyCapabilitiesImplementation
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -22928,7 +22911,7 @@ class _$TerminologyCapabilitiesImplementation
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -22954,8 +22937,8 @@ class _$TerminologyCapabilitiesImplementation
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -22980,8 +22963,8 @@ class _$TerminologyCapabilitiesImplementation
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -23011,7 +22994,7 @@ class _$TerminologyCapabilitiesImplementation
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -23037,7 +23020,7 @@ class _$TerminologyCapabilitiesImplementation
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -23048,7 +23031,7 @@ class _$TerminologyCapabilitiesImplementation
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -23061,7 +23044,7 @@ class _$TerminologyCapabilitiesImplementation
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -23111,7 +23094,7 @@ class _$TerminologyCapabilitiesImplementation
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -23152,7 +23135,7 @@ class _$TerminologyCapabilitiesImplementation
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -23162,7 +23145,7 @@ class _$TerminologyCapabilitiesImplementation
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -23171,7 +23154,7 @@ class _$TerminologyCapabilitiesImplementation
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -23181,8 +23164,8 @@ class _$TerminologyCapabilitiesImplementation
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -23276,9 +23259,9 @@ class _$TerminologyCapabilitiesImplementation
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -23302,9 +23285,9 @@ class _$TerminologyCapabilitiesImplementation
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -23358,16 +23341,16 @@ class _$TerminologyCapabilitiesImplementation
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -23375,7 +23358,7 @@ class _$TerminologyCapabilitiesImplementation
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -23398,8 +23381,8 @@ class _$TerminologyCapabilitiesImplementation
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -23422,8 +23405,8 @@ class _$TerminologyCapabilitiesImplementation
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -23452,7 +23435,7 @@ class _$TerminologyCapabilitiesImplementation
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -23471,7 +23454,7 @@ class _$TerminologyCapabilitiesImplementation
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -23481,7 +23464,7 @@ class _$TerminologyCapabilitiesImplementation
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -23492,7 +23475,7 @@ class _$TerminologyCapabilitiesImplementation
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -23530,7 +23513,7 @@ class _$TerminologyCapabilitiesImplementation
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -23569,7 +23552,7 @@ class _$TerminologyCapabilitiesImplementation
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -23578,7 +23561,7 @@ class _$TerminologyCapabilitiesImplementation
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -23586,7 +23569,7 @@ class _$TerminologyCapabilitiesImplementation
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -23595,8 +23578,8 @@ class _$TerminologyCapabilitiesImplementation
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -23814,7 +23797,7 @@ abstract class $TerminologyCapabilitiesCodeSystemCopyWith<$Res>
       List<dynamic> extension,
       List<dynamic> modifierExtension,
       Canonical uri,
-      List<TerminologyCapabilitiesVersion> version,
+      List<dynamic> version,
       bool subsumption});
 }
 
@@ -23847,9 +23830,7 @@ class _$TerminologyCapabilitiesCodeSystemCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
       uri: uri == freezed ? _value.uri : uri as Canonical,
-      version: version == freezed
-          ? _value.version
-          : version as List<TerminologyCapabilitiesVersion>,
+      version: version == freezed ? _value.version : version as List<dynamic>,
       subsumption:
           subsumption == freezed ? _value.subsumption : subsumption as bool,
     ));
@@ -23880,7 +23861,7 @@ class _$TerminologyCapabilitiesCodeSystem
   @override
   final Canonical uri;
   @override
-  final List<TerminologyCapabilitiesVersion> version;
+  final List<dynamic> version;
   @override
   final bool subsumption;
 
@@ -23963,9 +23944,9 @@ class _$TerminologyCapabilitiesCodeSystem
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -23992,9 +23973,9 @@ class _$TerminologyCapabilitiesCodeSystem
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -24052,8 +24033,8 @@ class _$TerminologyCapabilitiesCodeSystem
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -24061,8 +24042,8 @@ class _$TerminologyCapabilitiesCodeSystem
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -24071,7 +24052,7 @@ class _$TerminologyCapabilitiesCodeSystem
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -24097,8 +24078,8 @@ class _$TerminologyCapabilitiesCodeSystem
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -24123,8 +24104,8 @@ class _$TerminologyCapabilitiesCodeSystem
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -24154,7 +24135,7 @@ class _$TerminologyCapabilitiesCodeSystem
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -24180,7 +24161,7 @@ class _$TerminologyCapabilitiesCodeSystem
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -24191,7 +24172,7 @@ class _$TerminologyCapabilitiesCodeSystem
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -24204,7 +24185,7 @@ class _$TerminologyCapabilitiesCodeSystem
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -24254,7 +24235,7 @@ class _$TerminologyCapabilitiesCodeSystem
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -24295,7 +24276,7 @@ class _$TerminologyCapabilitiesCodeSystem
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -24305,7 +24286,7 @@ class _$TerminologyCapabilitiesCodeSystem
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -24314,7 +24295,7 @@ class _$TerminologyCapabilitiesCodeSystem
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -24324,8 +24305,8 @@ class _$TerminologyCapabilitiesCodeSystem
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -24419,9 +24400,9 @@ class _$TerminologyCapabilitiesCodeSystem
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -24445,9 +24426,9 @@ class _$TerminologyCapabilitiesCodeSystem
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -24501,16 +24482,16 @@ class _$TerminologyCapabilitiesCodeSystem
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -24518,7 +24499,7 @@ class _$TerminologyCapabilitiesCodeSystem
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -24541,8 +24522,8 @@ class _$TerminologyCapabilitiesCodeSystem
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -24565,8 +24546,8 @@ class _$TerminologyCapabilitiesCodeSystem
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -24595,7 +24576,7 @@ class _$TerminologyCapabilitiesCodeSystem
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -24614,7 +24595,7 @@ class _$TerminologyCapabilitiesCodeSystem
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -24624,7 +24605,7 @@ class _$TerminologyCapabilitiesCodeSystem
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -24635,7 +24616,7 @@ class _$TerminologyCapabilitiesCodeSystem
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -24673,7 +24654,7 @@ class _$TerminologyCapabilitiesCodeSystem
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -24712,7 +24693,7 @@ class _$TerminologyCapabilitiesCodeSystem
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -24721,7 +24702,7 @@ class _$TerminologyCapabilitiesCodeSystem
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -24729,7 +24710,7 @@ class _$TerminologyCapabilitiesCodeSystem
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -24738,8 +24719,8 @@ class _$TerminologyCapabilitiesCodeSystem
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -24927,7 +24908,7 @@ abstract class TerminologyCapabilitiesCodeSystem implements Terminology {
       List<dynamic> extension,
       List<dynamic> modifierExtension,
       Canonical uri,
-      List<TerminologyCapabilitiesVersion> version,
+      List<dynamic> version,
       bool subsumption}) = _$TerminologyCapabilitiesCodeSystem;
 
   factory TerminologyCapabilitiesCodeSystem.fromJson(
@@ -24939,7 +24920,7 @@ abstract class TerminologyCapabilitiesCodeSystem implements Terminology {
   @override
   List<dynamic> get modifierExtension;
   Canonical get uri;
-  List<TerminologyCapabilitiesVersion> get version;
+  List<dynamic> get version;
   bool get subsumption;
   @override
   $TerminologyCapabilitiesCodeSystemCopyWith<TerminologyCapabilitiesCodeSystem>
@@ -24961,7 +24942,7 @@ abstract class $TerminologyCapabilitiesVersionCopyWith<$Res>
       bool isDefault,
       bool compositional,
       List<Code> language,
-      List<TerminologyCapabilitiesFilter> filter,
+      List<dynamic> filter,
       List<Code> property});
 }
 
@@ -25002,9 +24983,7 @@ class _$TerminologyCapabilitiesVersionCopyWithImpl<$Res>
           ? _value.compositional
           : compositional as bool,
       language: language == freezed ? _value.language : language as List<Code>,
-      filter: filter == freezed
-          ? _value.filter
-          : filter as List<TerminologyCapabilitiesFilter>,
+      filter: filter == freezed ? _value.filter : filter as List<dynamic>,
       property: property == freezed ? _value.property : property as List<Code>,
     ));
   }
@@ -25043,7 +25022,7 @@ class _$TerminologyCapabilitiesVersion
   @override
   final List<Code> language;
   @override
-  final List<TerminologyCapabilitiesFilter> filter;
+  final List<dynamic> filter;
   @override
   final List<Code> property;
 
@@ -25137,9 +25116,9 @@ class _$TerminologyCapabilitiesVersion
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -25166,9 +25145,9 @@ class _$TerminologyCapabilitiesVersion
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -25226,8 +25205,8 @@ class _$TerminologyCapabilitiesVersion
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -25235,8 +25214,8 @@ class _$TerminologyCapabilitiesVersion
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -25245,7 +25224,7 @@ class _$TerminologyCapabilitiesVersion
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -25271,8 +25250,8 @@ class _$TerminologyCapabilitiesVersion
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -25297,8 +25276,8 @@ class _$TerminologyCapabilitiesVersion
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -25328,7 +25307,7 @@ class _$TerminologyCapabilitiesVersion
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -25354,7 +25333,7 @@ class _$TerminologyCapabilitiesVersion
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -25365,7 +25344,7 @@ class _$TerminologyCapabilitiesVersion
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -25378,7 +25357,7 @@ class _$TerminologyCapabilitiesVersion
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -25428,7 +25407,7 @@ class _$TerminologyCapabilitiesVersion
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -25469,7 +25448,7 @@ class _$TerminologyCapabilitiesVersion
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -25479,7 +25458,7 @@ class _$TerminologyCapabilitiesVersion
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -25488,7 +25467,7 @@ class _$TerminologyCapabilitiesVersion
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -25498,8 +25477,8 @@ class _$TerminologyCapabilitiesVersion
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -25593,9 +25572,9 @@ class _$TerminologyCapabilitiesVersion
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -25619,9 +25598,9 @@ class _$TerminologyCapabilitiesVersion
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -25675,16 +25654,16 @@ class _$TerminologyCapabilitiesVersion
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -25692,7 +25671,7 @@ class _$TerminologyCapabilitiesVersion
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -25715,8 +25694,8 @@ class _$TerminologyCapabilitiesVersion
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -25739,8 +25718,8 @@ class _$TerminologyCapabilitiesVersion
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -25769,7 +25748,7 @@ class _$TerminologyCapabilitiesVersion
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -25788,7 +25767,7 @@ class _$TerminologyCapabilitiesVersion
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -25798,7 +25777,7 @@ class _$TerminologyCapabilitiesVersion
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -25809,7 +25788,7 @@ class _$TerminologyCapabilitiesVersion
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -25847,7 +25826,7 @@ class _$TerminologyCapabilitiesVersion
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -25886,7 +25865,7 @@ class _$TerminologyCapabilitiesVersion
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -25895,7 +25874,7 @@ class _$TerminologyCapabilitiesVersion
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -25903,7 +25882,7 @@ class _$TerminologyCapabilitiesVersion
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -25912,8 +25891,8 @@ class _$TerminologyCapabilitiesVersion
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -26104,7 +26083,7 @@ abstract class TerminologyCapabilitiesVersion implements Terminology {
       bool isDefault,
       bool compositional,
       List<Code> language,
-      List<TerminologyCapabilitiesFilter> filter,
+      List<dynamic> filter,
       List<Code> property}) = _$TerminologyCapabilitiesVersion;
 
   factory TerminologyCapabilitiesVersion.fromJson(Map<String, dynamic> json) =
@@ -26119,7 +26098,7 @@ abstract class TerminologyCapabilitiesVersion implements Terminology {
   bool get isDefault;
   bool get compositional;
   List<Code> get language;
-  List<TerminologyCapabilitiesFilter> get filter;
+  List<dynamic> get filter;
   List<Code> get property;
   @override
   $TerminologyCapabilitiesVersionCopyWith<TerminologyCapabilitiesVersion>
@@ -26267,9 +26246,9 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -26296,9 +26275,9 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -26356,8 +26335,8 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -26365,8 +26344,8 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -26375,7 +26354,7 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -26401,8 +26380,8 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -26427,8 +26406,8 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -26458,7 +26437,7 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -26484,7 +26463,7 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -26495,7 +26474,7 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -26508,7 +26487,7 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -26558,7 +26537,7 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -26599,7 +26578,7 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -26609,7 +26588,7 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -26618,7 +26597,7 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -26628,8 +26607,8 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -26723,9 +26702,9 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -26749,9 +26728,9 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -26805,16 +26784,16 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -26822,7 +26801,7 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -26845,8 +26824,8 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -26869,8 +26848,8 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -26899,7 +26878,7 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -26918,7 +26897,7 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -26928,7 +26907,7 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -26939,7 +26918,7 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -26977,7 +26956,7 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -27016,7 +26995,7 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -27025,7 +27004,7 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -27033,7 +27012,7 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -27042,8 +27021,8 @@ class _$TerminologyCapabilitiesFilter implements TerminologyCapabilitiesFilter {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -27262,7 +27241,7 @@ abstract class $TerminologyCapabilitiesExpansionCopyWith<$Res>
       bool hierarchical,
       bool paging,
       bool incomplete,
-      List<TerminologyCapabilitiesParameter> parameter,
+      List<dynamic> parameter,
       Markdown textFilter});
 }
 
@@ -27301,9 +27280,8 @@ class _$TerminologyCapabilitiesExpansionCopyWithImpl<$Res>
       paging: paging == freezed ? _value.paging : paging as bool,
       incomplete:
           incomplete == freezed ? _value.incomplete : incomplete as bool,
-      parameter: parameter == freezed
-          ? _value.parameter
-          : parameter as List<TerminologyCapabilitiesParameter>,
+      parameter:
+          parameter == freezed ? _value.parameter : parameter as List<dynamic>,
       textFilter:
           textFilter == freezed ? _value.textFilter : textFilter as Markdown,
     ));
@@ -27340,7 +27318,7 @@ class _$TerminologyCapabilitiesExpansion
   @override
   final bool incomplete;
   @override
-  final List<TerminologyCapabilitiesParameter> parameter;
+  final List<dynamic> parameter;
   @override
   final Markdown textFilter;
 
@@ -27431,9 +27409,9 @@ class _$TerminologyCapabilitiesExpansion
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -27460,9 +27438,9 @@ class _$TerminologyCapabilitiesExpansion
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -27520,8 +27498,8 @@ class _$TerminologyCapabilitiesExpansion
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -27529,8 +27507,8 @@ class _$TerminologyCapabilitiesExpansion
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -27539,7 +27517,7 @@ class _$TerminologyCapabilitiesExpansion
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -27565,8 +27543,8 @@ class _$TerminologyCapabilitiesExpansion
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -27591,8 +27569,8 @@ class _$TerminologyCapabilitiesExpansion
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -27622,7 +27600,7 @@ class _$TerminologyCapabilitiesExpansion
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -27648,7 +27626,7 @@ class _$TerminologyCapabilitiesExpansion
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -27659,7 +27637,7 @@ class _$TerminologyCapabilitiesExpansion
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -27672,7 +27650,7 @@ class _$TerminologyCapabilitiesExpansion
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -27722,7 +27700,7 @@ class _$TerminologyCapabilitiesExpansion
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -27763,7 +27741,7 @@ class _$TerminologyCapabilitiesExpansion
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -27773,7 +27751,7 @@ class _$TerminologyCapabilitiesExpansion
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -27782,7 +27760,7 @@ class _$TerminologyCapabilitiesExpansion
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -27792,8 +27770,8 @@ class _$TerminologyCapabilitiesExpansion
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -27887,9 +27865,9 @@ class _$TerminologyCapabilitiesExpansion
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -27913,9 +27891,9 @@ class _$TerminologyCapabilitiesExpansion
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -27969,16 +27947,16 @@ class _$TerminologyCapabilitiesExpansion
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -27986,7 +27964,7 @@ class _$TerminologyCapabilitiesExpansion
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -28009,8 +27987,8 @@ class _$TerminologyCapabilitiesExpansion
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -28033,8 +28011,8 @@ class _$TerminologyCapabilitiesExpansion
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -28063,7 +28041,7 @@ class _$TerminologyCapabilitiesExpansion
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -28082,7 +28060,7 @@ class _$TerminologyCapabilitiesExpansion
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -28092,7 +28070,7 @@ class _$TerminologyCapabilitiesExpansion
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -28103,7 +28081,7 @@ class _$TerminologyCapabilitiesExpansion
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -28141,7 +28119,7 @@ class _$TerminologyCapabilitiesExpansion
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -28180,7 +28158,7 @@ class _$TerminologyCapabilitiesExpansion
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -28189,7 +28167,7 @@ class _$TerminologyCapabilitiesExpansion
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -28197,7 +28175,7 @@ class _$TerminologyCapabilitiesExpansion
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -28206,8 +28184,8 @@ class _$TerminologyCapabilitiesExpansion
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -28397,7 +28375,7 @@ abstract class TerminologyCapabilitiesExpansion implements Terminology {
       bool hierarchical,
       bool paging,
       bool incomplete,
-      List<TerminologyCapabilitiesParameter> parameter,
+      List<dynamic> parameter,
       Markdown textFilter}) = _$TerminologyCapabilitiesExpansion;
 
   factory TerminologyCapabilitiesExpansion.fromJson(Map<String, dynamic> json) =
@@ -28411,7 +28389,7 @@ abstract class TerminologyCapabilitiesExpansion implements Terminology {
   bool get hierarchical;
   bool get paging;
   bool get incomplete;
-  List<TerminologyCapabilitiesParameter> get parameter;
+  List<dynamic> get parameter;
   Markdown get textFilter;
   @override
   $TerminologyCapabilitiesExpansionCopyWith<TerminologyCapabilitiesExpansion>
@@ -28568,9 +28546,9 @@ class _$TerminologyCapabilitiesParameter
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -28597,9 +28575,9 @@ class _$TerminologyCapabilitiesParameter
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -28657,8 +28635,8 @@ class _$TerminologyCapabilitiesParameter
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -28666,8 +28644,8 @@ class _$TerminologyCapabilitiesParameter
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -28676,7 +28654,7 @@ class _$TerminologyCapabilitiesParameter
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -28702,8 +28680,8 @@ class _$TerminologyCapabilitiesParameter
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -28728,8 +28706,8 @@ class _$TerminologyCapabilitiesParameter
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -28759,7 +28737,7 @@ class _$TerminologyCapabilitiesParameter
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -28785,7 +28763,7 @@ class _$TerminologyCapabilitiesParameter
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -28796,7 +28774,7 @@ class _$TerminologyCapabilitiesParameter
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -28809,7 +28787,7 @@ class _$TerminologyCapabilitiesParameter
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -28859,7 +28837,7 @@ class _$TerminologyCapabilitiesParameter
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -28900,7 +28878,7 @@ class _$TerminologyCapabilitiesParameter
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -28910,7 +28888,7 @@ class _$TerminologyCapabilitiesParameter
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -28919,7 +28897,7 @@ class _$TerminologyCapabilitiesParameter
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -28929,8 +28907,8 @@ class _$TerminologyCapabilitiesParameter
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -29024,9 +29002,9 @@ class _$TerminologyCapabilitiesParameter
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -29050,9 +29028,9 @@ class _$TerminologyCapabilitiesParameter
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -29106,16 +29084,16 @@ class _$TerminologyCapabilitiesParameter
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -29123,7 +29101,7 @@ class _$TerminologyCapabilitiesParameter
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -29146,8 +29124,8 @@ class _$TerminologyCapabilitiesParameter
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -29170,8 +29148,8 @@ class _$TerminologyCapabilitiesParameter
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -29200,7 +29178,7 @@ class _$TerminologyCapabilitiesParameter
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -29219,7 +29197,7 @@ class _$TerminologyCapabilitiesParameter
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -29229,7 +29207,7 @@ class _$TerminologyCapabilitiesParameter
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -29240,7 +29218,7 @@ class _$TerminologyCapabilitiesParameter
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -29278,7 +29256,7 @@ class _$TerminologyCapabilitiesParameter
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -29317,7 +29295,7 @@ class _$TerminologyCapabilitiesParameter
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -29326,7 +29304,7 @@ class _$TerminologyCapabilitiesParameter
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -29334,7 +29312,7 @@ class _$TerminologyCapabilitiesParameter
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -29343,8 +29321,8 @@ class _$TerminologyCapabilitiesParameter
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -29687,9 +29665,9 @@ class _$TerminologyCapabilitiesValidateCode
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -29716,9 +29694,9 @@ class _$TerminologyCapabilitiesValidateCode
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -29776,8 +29754,8 @@ class _$TerminologyCapabilitiesValidateCode
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -29785,8 +29763,8 @@ class _$TerminologyCapabilitiesValidateCode
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -29795,7 +29773,7 @@ class _$TerminologyCapabilitiesValidateCode
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -29821,8 +29799,8 @@ class _$TerminologyCapabilitiesValidateCode
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -29847,8 +29825,8 @@ class _$TerminologyCapabilitiesValidateCode
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -29878,7 +29856,7 @@ class _$TerminologyCapabilitiesValidateCode
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -29904,7 +29882,7 @@ class _$TerminologyCapabilitiesValidateCode
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -29915,7 +29893,7 @@ class _$TerminologyCapabilitiesValidateCode
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -29928,7 +29906,7 @@ class _$TerminologyCapabilitiesValidateCode
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -29978,7 +29956,7 @@ class _$TerminologyCapabilitiesValidateCode
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -30019,7 +29997,7 @@ class _$TerminologyCapabilitiesValidateCode
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -30029,7 +30007,7 @@ class _$TerminologyCapabilitiesValidateCode
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -30038,7 +30016,7 @@ class _$TerminologyCapabilitiesValidateCode
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -30048,8 +30026,8 @@ class _$TerminologyCapabilitiesValidateCode
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -30143,9 +30121,9 @@ class _$TerminologyCapabilitiesValidateCode
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -30169,9 +30147,9 @@ class _$TerminologyCapabilitiesValidateCode
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -30225,16 +30203,16 @@ class _$TerminologyCapabilitiesValidateCode
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -30242,7 +30220,7 @@ class _$TerminologyCapabilitiesValidateCode
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -30265,8 +30243,8 @@ class _$TerminologyCapabilitiesValidateCode
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -30289,8 +30267,8 @@ class _$TerminologyCapabilitiesValidateCode
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -30319,7 +30297,7 @@ class _$TerminologyCapabilitiesValidateCode
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -30338,7 +30316,7 @@ class _$TerminologyCapabilitiesValidateCode
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -30348,7 +30326,7 @@ class _$TerminologyCapabilitiesValidateCode
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -30359,7 +30337,7 @@ class _$TerminologyCapabilitiesValidateCode
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -30397,7 +30375,7 @@ class _$TerminologyCapabilitiesValidateCode
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -30436,7 +30414,7 @@ class _$TerminologyCapabilitiesValidateCode
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -30445,7 +30423,7 @@ class _$TerminologyCapabilitiesValidateCode
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -30453,7 +30431,7 @@ class _$TerminologyCapabilitiesValidateCode
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -30462,8 +30440,8 @@ class _$TerminologyCapabilitiesValidateCode
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -30804,9 +30782,9 @@ class _$TerminologyCapabilitiesTranslation
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -30833,9 +30811,9 @@ class _$TerminologyCapabilitiesTranslation
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -30893,8 +30871,8 @@ class _$TerminologyCapabilitiesTranslation
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -30902,8 +30880,8 @@ class _$TerminologyCapabilitiesTranslation
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -30912,7 +30890,7 @@ class _$TerminologyCapabilitiesTranslation
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -30938,8 +30916,8 @@ class _$TerminologyCapabilitiesTranslation
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -30964,8 +30942,8 @@ class _$TerminologyCapabilitiesTranslation
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -30995,7 +30973,7 @@ class _$TerminologyCapabilitiesTranslation
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -31021,7 +30999,7 @@ class _$TerminologyCapabilitiesTranslation
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -31032,7 +31010,7 @@ class _$TerminologyCapabilitiesTranslation
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -31045,7 +31023,7 @@ class _$TerminologyCapabilitiesTranslation
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -31095,7 +31073,7 @@ class _$TerminologyCapabilitiesTranslation
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -31136,7 +31114,7 @@ class _$TerminologyCapabilitiesTranslation
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -31146,7 +31124,7 @@ class _$TerminologyCapabilitiesTranslation
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -31155,7 +31133,7 @@ class _$TerminologyCapabilitiesTranslation
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -31165,8 +31143,8 @@ class _$TerminologyCapabilitiesTranslation
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -31260,9 +31238,9 @@ class _$TerminologyCapabilitiesTranslation
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -31286,9 +31264,9 @@ class _$TerminologyCapabilitiesTranslation
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -31342,16 +31320,16 @@ class _$TerminologyCapabilitiesTranslation
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -31359,7 +31337,7 @@ class _$TerminologyCapabilitiesTranslation
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -31382,8 +31360,8 @@ class _$TerminologyCapabilitiesTranslation
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -31406,8 +31384,8 @@ class _$TerminologyCapabilitiesTranslation
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -31436,7 +31414,7 @@ class _$TerminologyCapabilitiesTranslation
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -31455,7 +31433,7 @@ class _$TerminologyCapabilitiesTranslation
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -31465,7 +31443,7 @@ class _$TerminologyCapabilitiesTranslation
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -31476,7 +31454,7 @@ class _$TerminologyCapabilitiesTranslation
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -31514,7 +31492,7 @@ class _$TerminologyCapabilitiesTranslation
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -31553,7 +31531,7 @@ class _$TerminologyCapabilitiesTranslation
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -31562,7 +31540,7 @@ class _$TerminologyCapabilitiesTranslation
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -31570,7 +31548,7 @@ class _$TerminologyCapabilitiesTranslation
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -31579,8 +31557,8 @@ class _$TerminologyCapabilitiesTranslation
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -31921,9 +31899,9 @@ class _$TerminologyCapabilitiesClosure
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -31950,9 +31928,9 @@ class _$TerminologyCapabilitiesClosure
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -32010,8 +31988,8 @@ class _$TerminologyCapabilitiesClosure
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -32019,8 +31997,8 @@ class _$TerminologyCapabilitiesClosure
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -32029,7 +32007,7 @@ class _$TerminologyCapabilitiesClosure
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -32055,8 +32033,8 @@ class _$TerminologyCapabilitiesClosure
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -32081,8 +32059,8 @@ class _$TerminologyCapabilitiesClosure
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -32112,7 +32090,7 @@ class _$TerminologyCapabilitiesClosure
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -32138,7 +32116,7 @@ class _$TerminologyCapabilitiesClosure
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -32149,7 +32127,7 @@ class _$TerminologyCapabilitiesClosure
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -32162,7 +32140,7 @@ class _$TerminologyCapabilitiesClosure
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -32212,7 +32190,7 @@ class _$TerminologyCapabilitiesClosure
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -32253,7 +32231,7 @@ class _$TerminologyCapabilitiesClosure
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -32263,7 +32241,7 @@ class _$TerminologyCapabilitiesClosure
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -32272,7 +32250,7 @@ class _$TerminologyCapabilitiesClosure
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -32282,8 +32260,8 @@ class _$TerminologyCapabilitiesClosure
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -32377,9 +32355,9 @@ class _$TerminologyCapabilitiesClosure
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -32403,9 +32381,9 @@ class _$TerminologyCapabilitiesClosure
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -32459,16 +32437,16 @@ class _$TerminologyCapabilitiesClosure
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -32476,7 +32454,7 @@ class _$TerminologyCapabilitiesClosure
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -32499,8 +32477,8 @@ class _$TerminologyCapabilitiesClosure
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -32523,8 +32501,8 @@ class _$TerminologyCapabilitiesClosure
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -32553,7 +32531,7 @@ class _$TerminologyCapabilitiesClosure
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -32572,7 +32550,7 @@ class _$TerminologyCapabilitiesClosure
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -32582,7 +32560,7 @@ class _$TerminologyCapabilitiesClosure
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -32593,7 +32571,7 @@ class _$TerminologyCapabilitiesClosure
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -32631,7 +32609,7 @@ class _$TerminologyCapabilitiesClosure
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -32670,7 +32648,7 @@ class _$TerminologyCapabilitiesClosure
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -32679,7 +32657,7 @@ class _$TerminologyCapabilitiesClosure
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -32687,7 +32665,7 @@ class _$TerminologyCapabilitiesClosure
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -32696,8 +32674,8 @@ class _$TerminologyCapabilitiesClosure
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -32928,7 +32906,7 @@ abstract class $NamingSystemCopyWith<$Res>
       List<dynamic> useContext,
       List<dynamic> jurisdiction,
       String usage,
-      List<NamingSystemUniqueId> uniqueId});
+      List<dynamic> uniqueId});
 }
 
 class _$NamingSystemCopyWithImpl<$Res> extends _$TerminologyCopyWithImpl<$Res>
@@ -33001,9 +32979,8 @@ class _$NamingSystemCopyWithImpl<$Res> extends _$TerminologyCopyWithImpl<$Res>
           ? _value.jurisdiction
           : jurisdiction as List<dynamic>,
       usage: usage == freezed ? _value.usage : usage as String,
-      uniqueId: uniqueId == freezed
-          ? _value.uniqueId
-          : uniqueId as List<NamingSystemUniqueId>,
+      uniqueId:
+          uniqueId == freezed ? _value.uniqueId : uniqueId as List<dynamic>,
     ));
   }
 }
@@ -33080,7 +33057,7 @@ class _$NamingSystem implements NamingSystem {
   @override
   final String usage;
   @override
-  final List<NamingSystemUniqueId> uniqueId;
+  final List<dynamic> uniqueId;
 
   @override
   String toString() {
@@ -33217,9 +33194,9 @@ class _$NamingSystem implements NamingSystem {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -33246,9 +33223,9 @@ class _$NamingSystem implements NamingSystem {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -33306,8 +33283,8 @@ class _$NamingSystem implements NamingSystem {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -33315,8 +33292,8 @@ class _$NamingSystem implements NamingSystem {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -33325,7 +33302,7 @@ class _$NamingSystem implements NamingSystem {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -33351,8 +33328,8 @@ class _$NamingSystem implements NamingSystem {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -33377,8 +33354,8 @@ class _$NamingSystem implements NamingSystem {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -33408,7 +33385,7 @@ class _$NamingSystem implements NamingSystem {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -33434,7 +33411,7 @@ class _$NamingSystem implements NamingSystem {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -33445,7 +33422,7 @@ class _$NamingSystem implements NamingSystem {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -33458,7 +33435,7 @@ class _$NamingSystem implements NamingSystem {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -33508,7 +33485,7 @@ class _$NamingSystem implements NamingSystem {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -33549,7 +33526,7 @@ class _$NamingSystem implements NamingSystem {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -33559,7 +33536,7 @@ class _$NamingSystem implements NamingSystem {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -33568,7 +33545,7 @@ class _$NamingSystem implements NamingSystem {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -33578,8 +33555,8 @@ class _$NamingSystem implements NamingSystem {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -33694,9 +33671,9 @@ class _$NamingSystem implements NamingSystem {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -33720,9 +33697,9 @@ class _$NamingSystem implements NamingSystem {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -33776,16 +33753,16 @@ class _$NamingSystem implements NamingSystem {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -33793,7 +33770,7 @@ class _$NamingSystem implements NamingSystem {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -33816,8 +33793,8 @@ class _$NamingSystem implements NamingSystem {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -33840,8 +33817,8 @@ class _$NamingSystem implements NamingSystem {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -33870,7 +33847,7 @@ class _$NamingSystem implements NamingSystem {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -33889,7 +33866,7 @@ class _$NamingSystem implements NamingSystem {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -33899,7 +33876,7 @@ class _$NamingSystem implements NamingSystem {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -33910,7 +33887,7 @@ class _$NamingSystem implements NamingSystem {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -33948,7 +33925,7 @@ class _$NamingSystem implements NamingSystem {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -33987,7 +33964,7 @@ class _$NamingSystem implements NamingSystem {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -33996,7 +33973,7 @@ class _$NamingSystem implements NamingSystem {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -34004,7 +33981,7 @@ class _$NamingSystem implements NamingSystem {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -34013,8 +33990,8 @@ class _$NamingSystem implements NamingSystem {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -34239,7 +34216,7 @@ abstract class NamingSystem implements Terminology {
       List<dynamic> useContext,
       List<dynamic> jurisdiction,
       String usage,
-      List<NamingSystemUniqueId> uniqueId}) = _$NamingSystem;
+      List<dynamic> uniqueId}) = _$NamingSystem;
 
   factory NamingSystem.fromJson(Map<String, dynamic> json) =
       _$NamingSystem.fromJson;
@@ -34267,7 +34244,7 @@ abstract class NamingSystem implements Terminology {
   List<dynamic> get useContext;
   List<dynamic> get jurisdiction;
   String get usage;
-  List<NamingSystemUniqueId> get uniqueId;
+  List<dynamic> get uniqueId;
   @override
   $NamingSystemCopyWith<NamingSystem> get copyWith;
 }
@@ -34443,9 +34420,9 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -34472,9 +34449,9 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -34532,8 +34509,8 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -34541,8 +34518,8 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -34551,7 +34528,7 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -34577,8 +34554,8 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -34603,8 +34580,8 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -34634,7 +34611,7 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -34660,7 +34637,7 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -34671,7 +34648,7 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -34684,7 +34661,7 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -34734,7 +34711,7 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -34775,7 +34752,7 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -34785,7 +34762,7 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -34794,7 +34771,7 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -34804,8 +34781,8 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -34899,9 +34876,9 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -34925,9 +34902,9 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -34981,16 +34958,16 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -34998,7 +34975,7 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -35021,8 +34998,8 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -35045,8 +35022,8 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -35075,7 +35052,7 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -35094,7 +35071,7 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -35104,7 +35081,7 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -35115,7 +35092,7 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -35153,7 +35130,7 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -35192,7 +35169,7 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -35201,7 +35178,7 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -35209,7 +35186,7 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -35218,8 +35195,8 @@ class _$NamingSystemUniqueId implements NamingSystemUniqueId {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -35463,7 +35440,7 @@ abstract class $ConceptMapCopyWith<$Res> implements $TerminologyCopyWith<$Res> {
       Canonical sourceCanonical,
       FhirUri targetUri,
       Canonical targetCanonical,
-      List<ConceptMapGroup> group});
+      List<dynamic> group});
 }
 
 class _$ConceptMapCopyWithImpl<$Res> extends _$TerminologyCopyWithImpl<$Res>
@@ -35555,7 +35532,7 @@ class _$ConceptMapCopyWithImpl<$Res> extends _$TerminologyCopyWithImpl<$Res>
       targetCanonical: targetCanonical == freezed
           ? _value.targetCanonical
           : targetCanonical as Canonical,
-      group: group == freezed ? _value.group : group as List<ConceptMapGroup>,
+      group: group == freezed ? _value.group : group as List<dynamic>,
     ));
   }
 }
@@ -35653,7 +35630,7 @@ class _$ConceptMap implements ConceptMap {
   @override
   final Canonical targetCanonical;
   @override
-  final List<ConceptMapGroup> group;
+  final List<dynamic> group;
 
   @override
   String toString() {
@@ -35812,9 +35789,9 @@ class _$ConceptMap implements ConceptMap {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -35841,9 +35818,9 @@ class _$ConceptMap implements ConceptMap {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -35901,8 +35878,8 @@ class _$ConceptMap implements ConceptMap {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -35910,8 +35887,8 @@ class _$ConceptMap implements ConceptMap {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -35920,7 +35897,7 @@ class _$ConceptMap implements ConceptMap {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -35946,8 +35923,8 @@ class _$ConceptMap implements ConceptMap {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -35972,8 +35949,8 @@ class _$ConceptMap implements ConceptMap {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -36003,7 +35980,7 @@ class _$ConceptMap implements ConceptMap {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -36029,7 +36006,7 @@ class _$ConceptMap implements ConceptMap {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -36040,7 +36017,7 @@ class _$ConceptMap implements ConceptMap {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -36053,7 +36030,7 @@ class _$ConceptMap implements ConceptMap {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -36103,7 +36080,7 @@ class _$ConceptMap implements ConceptMap {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -36144,7 +36121,7 @@ class _$ConceptMap implements ConceptMap {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -36154,7 +36131,7 @@ class _$ConceptMap implements ConceptMap {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -36163,7 +36140,7 @@ class _$ConceptMap implements ConceptMap {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -36173,8 +36150,8 @@ class _$ConceptMap implements ConceptMap {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -36296,9 +36273,9 @@ class _$ConceptMap implements ConceptMap {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -36322,9 +36299,9 @@ class _$ConceptMap implements ConceptMap {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -36378,16 +36355,16 @@ class _$ConceptMap implements ConceptMap {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -36395,7 +36372,7 @@ class _$ConceptMap implements ConceptMap {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -36418,8 +36395,8 @@ class _$ConceptMap implements ConceptMap {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -36442,8 +36419,8 @@ class _$ConceptMap implements ConceptMap {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -36472,7 +36449,7 @@ class _$ConceptMap implements ConceptMap {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -36491,7 +36468,7 @@ class _$ConceptMap implements ConceptMap {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -36501,7 +36478,7 @@ class _$ConceptMap implements ConceptMap {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -36512,7 +36489,7 @@ class _$ConceptMap implements ConceptMap {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -36550,7 +36527,7 @@ class _$ConceptMap implements ConceptMap {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -36589,7 +36566,7 @@ class _$ConceptMap implements ConceptMap {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -36598,7 +36575,7 @@ class _$ConceptMap implements ConceptMap {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -36606,7 +36583,7 @@ class _$ConceptMap implements ConceptMap {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -36615,8 +36592,8 @@ class _$ConceptMap implements ConceptMap {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -36855,7 +36832,7 @@ abstract class ConceptMap implements Terminology {
       Canonical sourceCanonical,
       FhirUri targetUri,
       Canonical targetCanonical,
-      List<ConceptMapGroup> group}) = _$ConceptMap;
+      List<dynamic> group}) = _$ConceptMap;
 
   factory ConceptMap.fromJson(Map<String, dynamic> json) =
       _$ConceptMap.fromJson;
@@ -36890,7 +36867,7 @@ abstract class ConceptMap implements Terminology {
   Canonical get sourceCanonical;
   FhirUri get targetUri;
   Canonical get targetCanonical;
-  List<ConceptMapGroup> get group;
+  List<dynamic> get group;
   @override
   $ConceptMapCopyWith<ConceptMap> get copyWith;
 }
@@ -36909,7 +36886,7 @@ abstract class $ConceptMapGroupCopyWith<$Res>
       String sourceVersion,
       FhirUri target,
       String targetVersion,
-      List<ConceptMapElement> element,
+      List<dynamic> element,
       ConceptMapUnmapped unmapped});
 }
 
@@ -36950,9 +36927,7 @@ class _$ConceptMapGroupCopyWithImpl<$Res>
       targetVersion: targetVersion == freezed
           ? _value.targetVersion
           : targetVersion as String,
-      element: element == freezed
-          ? _value.element
-          : element as List<ConceptMapElement>,
+      element: element == freezed ? _value.element : element as List<dynamic>,
       unmapped: unmapped == freezed
           ? _value.unmapped
           : unmapped as ConceptMapUnmapped,
@@ -36991,7 +36966,7 @@ class _$ConceptMapGroup implements ConceptMapGroup {
   @override
   final String targetVersion;
   @override
-  final List<ConceptMapElement> element;
+  final List<dynamic> element;
   @override
   final ConceptMapUnmapped unmapped;
 
@@ -37084,9 +37059,9 @@ class _$ConceptMapGroup implements ConceptMapGroup {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -37113,9 +37088,9 @@ class _$ConceptMapGroup implements ConceptMapGroup {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -37173,8 +37148,8 @@ class _$ConceptMapGroup implements ConceptMapGroup {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -37182,8 +37157,8 @@ class _$ConceptMapGroup implements ConceptMapGroup {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -37192,7 +37167,7 @@ class _$ConceptMapGroup implements ConceptMapGroup {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -37218,8 +37193,8 @@ class _$ConceptMapGroup implements ConceptMapGroup {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -37244,8 +37219,8 @@ class _$ConceptMapGroup implements ConceptMapGroup {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -37275,7 +37250,7 @@ class _$ConceptMapGroup implements ConceptMapGroup {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -37301,7 +37276,7 @@ class _$ConceptMapGroup implements ConceptMapGroup {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -37312,7 +37287,7 @@ class _$ConceptMapGroup implements ConceptMapGroup {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -37325,7 +37300,7 @@ class _$ConceptMapGroup implements ConceptMapGroup {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -37375,7 +37350,7 @@ class _$ConceptMapGroup implements ConceptMapGroup {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -37416,7 +37391,7 @@ class _$ConceptMapGroup implements ConceptMapGroup {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -37426,7 +37401,7 @@ class _$ConceptMapGroup implements ConceptMapGroup {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -37435,7 +37410,7 @@ class _$ConceptMapGroup implements ConceptMapGroup {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -37445,8 +37420,8 @@ class _$ConceptMapGroup implements ConceptMapGroup {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -37540,9 +37515,9 @@ class _$ConceptMapGroup implements ConceptMapGroup {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -37566,9 +37541,9 @@ class _$ConceptMapGroup implements ConceptMapGroup {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -37622,16 +37597,16 @@ class _$ConceptMapGroup implements ConceptMapGroup {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -37639,7 +37614,7 @@ class _$ConceptMapGroup implements ConceptMapGroup {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -37662,8 +37637,8 @@ class _$ConceptMapGroup implements ConceptMapGroup {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -37686,8 +37661,8 @@ class _$ConceptMapGroup implements ConceptMapGroup {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -37716,7 +37691,7 @@ class _$ConceptMapGroup implements ConceptMapGroup {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -37735,7 +37710,7 @@ class _$ConceptMapGroup implements ConceptMapGroup {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -37745,7 +37720,7 @@ class _$ConceptMapGroup implements ConceptMapGroup {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -37756,7 +37731,7 @@ class _$ConceptMapGroup implements ConceptMapGroup {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -37794,7 +37769,7 @@ class _$ConceptMapGroup implements ConceptMapGroup {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -37833,7 +37808,7 @@ class _$ConceptMapGroup implements ConceptMapGroup {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -37842,7 +37817,7 @@ class _$ConceptMapGroup implements ConceptMapGroup {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -37850,7 +37825,7 @@ class _$ConceptMapGroup implements ConceptMapGroup {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -37859,8 +37834,8 @@ class _$ConceptMapGroup implements ConceptMapGroup {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -38050,7 +38025,7 @@ abstract class ConceptMapGroup implements Terminology {
       String sourceVersion,
       FhirUri target,
       String targetVersion,
-      List<ConceptMapElement> element,
+      List<dynamic> element,
       ConceptMapUnmapped unmapped}) = _$ConceptMapGroup;
 
   factory ConceptMapGroup.fromJson(Map<String, dynamic> json) =
@@ -38065,7 +38040,7 @@ abstract class ConceptMapGroup implements Terminology {
   String get sourceVersion;
   FhirUri get target;
   String get targetVersion;
-  List<ConceptMapElement> get element;
+  List<dynamic> get element;
   ConceptMapUnmapped get unmapped;
   @override
   $ConceptMapGroupCopyWith<ConceptMapGroup> get copyWith;
@@ -38083,7 +38058,7 @@ abstract class $ConceptMapElementCopyWith<$Res>
       List<dynamic> modifierExtension,
       Code code,
       String display,
-      List<ConceptMapTarget> target});
+      List<dynamic> target});
 }
 
 class _$ConceptMapElementCopyWithImpl<$Res>
@@ -38114,8 +38089,7 @@ class _$ConceptMapElementCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       code: code == freezed ? _value.code : code as Code,
       display: display == freezed ? _value.display : display as String,
-      target:
-          target == freezed ? _value.target : target as List<ConceptMapTarget>,
+      target: target == freezed ? _value.target : target as List<dynamic>,
     ));
   }
 }
@@ -38144,7 +38118,7 @@ class _$ConceptMapElement implements ConceptMapElement {
   @override
   final String display;
   @override
-  final List<ConceptMapTarget> target;
+  final List<dynamic> target;
 
   @override
   String toString() {
@@ -38223,9 +38197,9 @@ class _$ConceptMapElement implements ConceptMapElement {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -38252,9 +38226,9 @@ class _$ConceptMapElement implements ConceptMapElement {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -38312,8 +38286,8 @@ class _$ConceptMapElement implements ConceptMapElement {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -38321,8 +38295,8 @@ class _$ConceptMapElement implements ConceptMapElement {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -38331,7 +38305,7 @@ class _$ConceptMapElement implements ConceptMapElement {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -38357,8 +38331,8 @@ class _$ConceptMapElement implements ConceptMapElement {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -38383,8 +38357,8 @@ class _$ConceptMapElement implements ConceptMapElement {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -38414,7 +38388,7 @@ class _$ConceptMapElement implements ConceptMapElement {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -38440,7 +38414,7 @@ class _$ConceptMapElement implements ConceptMapElement {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -38451,7 +38425,7 @@ class _$ConceptMapElement implements ConceptMapElement {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -38464,7 +38438,7 @@ class _$ConceptMapElement implements ConceptMapElement {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -38514,7 +38488,7 @@ class _$ConceptMapElement implements ConceptMapElement {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -38555,7 +38529,7 @@ class _$ConceptMapElement implements ConceptMapElement {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -38565,7 +38539,7 @@ class _$ConceptMapElement implements ConceptMapElement {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -38574,7 +38548,7 @@ class _$ConceptMapElement implements ConceptMapElement {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -38584,8 +38558,8 @@ class _$ConceptMapElement implements ConceptMapElement {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -38679,9 +38653,9 @@ class _$ConceptMapElement implements ConceptMapElement {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -38705,9 +38679,9 @@ class _$ConceptMapElement implements ConceptMapElement {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -38761,16 +38735,16 @@ class _$ConceptMapElement implements ConceptMapElement {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -38778,7 +38752,7 @@ class _$ConceptMapElement implements ConceptMapElement {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -38801,8 +38775,8 @@ class _$ConceptMapElement implements ConceptMapElement {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -38825,8 +38799,8 @@ class _$ConceptMapElement implements ConceptMapElement {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -38855,7 +38829,7 @@ class _$ConceptMapElement implements ConceptMapElement {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -38874,7 +38848,7 @@ class _$ConceptMapElement implements ConceptMapElement {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -38884,7 +38858,7 @@ class _$ConceptMapElement implements ConceptMapElement {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -38895,7 +38869,7 @@ class _$ConceptMapElement implements ConceptMapElement {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -38933,7 +38907,7 @@ class _$ConceptMapElement implements ConceptMapElement {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -38972,7 +38946,7 @@ class _$ConceptMapElement implements ConceptMapElement {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -38981,7 +38955,7 @@ class _$ConceptMapElement implements ConceptMapElement {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -38989,7 +38963,7 @@ class _$ConceptMapElement implements ConceptMapElement {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -38998,8 +38972,8 @@ class _$ConceptMapElement implements ConceptMapElement {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -39188,7 +39162,7 @@ abstract class ConceptMapElement implements Terminology {
       List<dynamic> modifierExtension,
       Code code,
       String display,
-      List<ConceptMapTarget> target}) = _$ConceptMapElement;
+      List<dynamic> target}) = _$ConceptMapElement;
 
   factory ConceptMapElement.fromJson(Map<String, dynamic> json) =
       _$ConceptMapElement.fromJson;
@@ -39200,7 +39174,7 @@ abstract class ConceptMapElement implements Terminology {
   List<dynamic> get modifierExtension;
   Code get code;
   String get display;
-  List<ConceptMapTarget> get target;
+  List<dynamic> get target;
   @override
   $ConceptMapElementCopyWith<ConceptMapElement> get copyWith;
 }
@@ -39219,8 +39193,8 @@ abstract class $ConceptMapTargetCopyWith<$Res>
       String display,
       ConceptMapTargetEquivalence equivalence,
       String comment,
-      List<ConceptMapDependsOn> dependsOn,
-      List<ConceptMapDependsOn> product});
+      List<dynamic> dependsOn,
+      List<dynamic> product});
 }
 
 class _$ConceptMapTargetCopyWithImpl<$Res>
@@ -39258,12 +39232,9 @@ class _$ConceptMapTargetCopyWithImpl<$Res>
           ? _value.equivalence
           : equivalence as ConceptMapTargetEquivalence,
       comment: comment == freezed ? _value.comment : comment as String,
-      dependsOn: dependsOn == freezed
-          ? _value.dependsOn
-          : dependsOn as List<ConceptMapDependsOn>,
-      product: product == freezed
-          ? _value.product
-          : product as List<ConceptMapDependsOn>,
+      dependsOn:
+          dependsOn == freezed ? _value.dependsOn : dependsOn as List<dynamic>,
+      product: product == freezed ? _value.product : product as List<dynamic>,
     ));
   }
 }
@@ -39299,9 +39270,9 @@ class _$ConceptMapTarget implements ConceptMapTarget {
   @override
   final String comment;
   @override
-  final List<ConceptMapDependsOn> dependsOn;
+  final List<dynamic> dependsOn;
   @override
-  final List<ConceptMapDependsOn> product;
+  final List<dynamic> product;
 
   @override
   String toString() {
@@ -39392,9 +39363,9 @@ class _$ConceptMapTarget implements ConceptMapTarget {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -39421,9 +39392,9 @@ class _$ConceptMapTarget implements ConceptMapTarget {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -39481,8 +39452,8 @@ class _$ConceptMapTarget implements ConceptMapTarget {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -39490,8 +39461,8 @@ class _$ConceptMapTarget implements ConceptMapTarget {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -39500,7 +39471,7 @@ class _$ConceptMapTarget implements ConceptMapTarget {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -39526,8 +39497,8 @@ class _$ConceptMapTarget implements ConceptMapTarget {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -39552,8 +39523,8 @@ class _$ConceptMapTarget implements ConceptMapTarget {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -39583,7 +39554,7 @@ class _$ConceptMapTarget implements ConceptMapTarget {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -39609,7 +39580,7 @@ class _$ConceptMapTarget implements ConceptMapTarget {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -39620,7 +39591,7 @@ class _$ConceptMapTarget implements ConceptMapTarget {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -39633,7 +39604,7 @@ class _$ConceptMapTarget implements ConceptMapTarget {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -39683,7 +39654,7 @@ class _$ConceptMapTarget implements ConceptMapTarget {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -39724,7 +39695,7 @@ class _$ConceptMapTarget implements ConceptMapTarget {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -39734,7 +39705,7 @@ class _$ConceptMapTarget implements ConceptMapTarget {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -39743,7 +39714,7 @@ class _$ConceptMapTarget implements ConceptMapTarget {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -39753,8 +39724,8 @@ class _$ConceptMapTarget implements ConceptMapTarget {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -39848,9 +39819,9 @@ class _$ConceptMapTarget implements ConceptMapTarget {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -39874,9 +39845,9 @@ class _$ConceptMapTarget implements ConceptMapTarget {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -39930,16 +39901,16 @@ class _$ConceptMapTarget implements ConceptMapTarget {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -39947,7 +39918,7 @@ class _$ConceptMapTarget implements ConceptMapTarget {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -39970,8 +39941,8 @@ class _$ConceptMapTarget implements ConceptMapTarget {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -39994,8 +39965,8 @@ class _$ConceptMapTarget implements ConceptMapTarget {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -40024,7 +39995,7 @@ class _$ConceptMapTarget implements ConceptMapTarget {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -40043,7 +40014,7 @@ class _$ConceptMapTarget implements ConceptMapTarget {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -40053,7 +40024,7 @@ class _$ConceptMapTarget implements ConceptMapTarget {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -40064,7 +40035,7 @@ class _$ConceptMapTarget implements ConceptMapTarget {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -40102,7 +40073,7 @@ class _$ConceptMapTarget implements ConceptMapTarget {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -40141,7 +40112,7 @@ class _$ConceptMapTarget implements ConceptMapTarget {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -40150,7 +40121,7 @@ class _$ConceptMapTarget implements ConceptMapTarget {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -40158,7 +40129,7 @@ class _$ConceptMapTarget implements ConceptMapTarget {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -40167,8 +40138,8 @@ class _$ConceptMapTarget implements ConceptMapTarget {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -40359,8 +40330,8 @@ abstract class ConceptMapTarget implements Terminology {
       String display,
       ConceptMapTargetEquivalence equivalence,
       String comment,
-      List<ConceptMapDependsOn> dependsOn,
-      List<ConceptMapDependsOn> product}) = _$ConceptMapTarget;
+      List<dynamic> dependsOn,
+      List<dynamic> product}) = _$ConceptMapTarget;
 
   factory ConceptMapTarget.fromJson(Map<String, dynamic> json) =
       _$ConceptMapTarget.fromJson;
@@ -40374,8 +40345,8 @@ abstract class ConceptMapTarget implements Terminology {
   String get display;
   ConceptMapTargetEquivalence get equivalence;
   String get comment;
-  List<ConceptMapDependsOn> get dependsOn;
-  List<ConceptMapDependsOn> get product;
+  List<dynamic> get dependsOn;
+  List<dynamic> get product;
   @override
   $ConceptMapTargetCopyWith<ConceptMapTarget> get copyWith;
 }
@@ -40540,9 +40511,9 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -40569,9 +40540,9 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -40629,8 +40600,8 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -40638,8 +40609,8 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -40648,7 +40619,7 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -40674,8 +40645,8 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -40700,8 +40671,8 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -40731,7 +40702,7 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -40757,7 +40728,7 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -40768,7 +40739,7 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -40781,7 +40752,7 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -40831,7 +40802,7 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -40872,7 +40843,7 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -40882,7 +40853,7 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -40891,7 +40862,7 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -40901,8 +40872,8 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -40996,9 +40967,9 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -41022,9 +40993,9 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -41078,16 +41049,16 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -41095,7 +41066,7 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -41118,8 +41089,8 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -41142,8 +41113,8 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -41172,7 +41143,7 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -41191,7 +41162,7 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -41201,7 +41172,7 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -41212,7 +41183,7 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -41250,7 +41221,7 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -41289,7 +41260,7 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -41298,7 +41269,7 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -41306,7 +41277,7 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -41315,8 +41286,8 @@ class _$ConceptMapDependsOn implements ConceptMapDependsOn {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,
@@ -41684,9 +41655,9 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
             CodeSystemContent content,
             Canonical supplements,
             int count,
-            List<CodeSystemFilter> filter,
-            List<CodeSystemProperty> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> filter,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemFilter(
             String id,
@@ -41713,9 +41684,9 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
             Code code,
             String display,
             String definition,
-            List<CodeSystemDesignation> designation,
-            List<CodeSystemProperty1> property,
-            List<CodeSystemConcept> concept),
+            List<dynamic> designation,
+            List<dynamic> property,
+            List<dynamic> concept),
     @required
         Result codeSystemDesignation(
             String id,
@@ -41773,8 +41744,8 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
             List<dynamic> modifierExtension,
             Date lockedDate,
             bool inactive,
-            List<ValueSetInclude> include,
-            List<ValueSetInclude> exclude),
+            List<dynamic> include,
+            List<dynamic> exclude),
     @required
         Result valueSetInclude(
             String id,
@@ -41782,8 +41753,8 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
             List<dynamic> modifierExtension,
             FhirUri system,
             String version,
-            List<ValueSetConcept> concept,
-            List<ValueSetFilter> filter,
+            List<dynamic> concept,
+            List<dynamic> filter,
             List<Canonical> valueSet),
     @required
         Result valueSetConcept(
@@ -41792,7 +41763,7 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ValueSetDesignation> designation),
+            List<dynamic> designation),
     @required
         Result valueSetDesignation(
             String id,
@@ -41818,8 +41789,8 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
             FhirDateTime timestamp,
             int total,
             int offset,
-            List<ValueSetParameter> parameter,
-            List<ValueSetContains> contains),
+            List<dynamic> parameter,
+            List<dynamic> contains),
     @required
         Result valueSetParameter(
             String id,
@@ -41844,8 +41815,8 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
             String version,
             Code code,
             String display,
-            List<ValueSetDesignation> designation,
-            List<ValueSetContains> contains),
+            List<dynamic> designation,
+            List<dynamic> contains),
     @required
         Result terminologyCapabilities(
             String resourceType,
@@ -41875,7 +41846,7 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
             TerminologyCapabilitiesSoftware software,
             TerminologyCapabilitiesImplementation implementation,
             bool lockedDate,
-            List<TerminologyCapabilitiesCodeSystem> codeSystem,
+            List<dynamic> codeSystem,
             TerminologyCapabilitiesExpansion expansion,
             TerminologyCapabilitiesCodeSearch codeSearch,
             TerminologyCapabilitiesValidateCode validateCode,
@@ -41901,7 +41872,7 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
             List<dynamic> extension,
             List<dynamic> modifierExtension,
             Canonical uri,
-            List<TerminologyCapabilitiesVersion> version,
+            List<dynamic> version,
             bool subsumption),
     @required
         Result terminologyCapabilitiesVersion(
@@ -41912,7 +41883,7 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
             bool isDefault,
             bool compositional,
             List<Code> language,
-            List<TerminologyCapabilitiesFilter> filter,
+            List<dynamic> filter,
             List<Code> property),
     @required
         Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
@@ -41925,7 +41896,7 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
             bool hierarchical,
             bool paging,
             bool incomplete,
-            List<TerminologyCapabilitiesParameter> parameter,
+            List<dynamic> parameter,
             Markdown textFilter),
     @required
         Result terminologyCapabilitiesParameter(
@@ -41975,7 +41946,7 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
             List<dynamic> useContext,
             List<dynamic> jurisdiction,
             String usage,
-            List<NamingSystemUniqueId> uniqueId),
+            List<dynamic> uniqueId),
     @required
         Result namingSystemUniqueId(
             String id,
@@ -42016,7 +41987,7 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
             Canonical sourceCanonical,
             FhirUri targetUri,
             Canonical targetCanonical,
-            List<ConceptMapGroup> group),
+            List<dynamic> group),
     @required
         Result conceptMapGroup(
             String id,
@@ -42026,7 +41997,7 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
             String sourceVersion,
             FhirUri target,
             String targetVersion,
-            List<ConceptMapElement> element,
+            List<dynamic> element,
             ConceptMapUnmapped unmapped),
     @required
         Result conceptMapElement(
@@ -42035,7 +42006,7 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
             List<dynamic> modifierExtension,
             Code code,
             String display,
-            List<ConceptMapTarget> target),
+            List<dynamic> target),
     @required
         Result conceptMapTarget(
             String id,
@@ -42045,8 +42016,8 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
             String display,
             ConceptMapTargetEquivalence equivalence,
             String comment,
-            List<ConceptMapDependsOn> dependsOn,
-            List<ConceptMapDependsOn> product),
+            List<dynamic> dependsOn,
+            List<dynamic> product),
     @required
         Result conceptMapDependsOn(
             String id,
@@ -42140,9 +42111,9 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
         CodeSystemContent content,
         Canonical supplements,
         int count,
-        List<CodeSystemFilter> filter,
-        List<CodeSystemProperty> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> filter,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemFilter(
         String id,
         List<dynamic> extension,
@@ -42166,9 +42137,9 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
         Code code,
         String display,
         String definition,
-        List<CodeSystemDesignation> designation,
-        List<CodeSystemProperty1> property,
-        List<CodeSystemConcept> concept),
+        List<dynamic> designation,
+        List<dynamic> property,
+        List<dynamic> concept),
     Result codeSystemDesignation(
         String id,
         List<dynamic> extension,
@@ -42222,16 +42193,16 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
         List<dynamic> modifierExtension,
         Date lockedDate,
         bool inactive,
-        List<ValueSetInclude> include,
-        List<ValueSetInclude> exclude),
+        List<dynamic> include,
+        List<dynamic> exclude),
     Result valueSetInclude(
         String id,
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         FhirUri system,
         String version,
-        List<ValueSetConcept> concept,
-        List<ValueSetFilter> filter,
+        List<dynamic> concept,
+        List<dynamic> filter,
         List<Canonical> valueSet),
     Result valueSetConcept(
         String id,
@@ -42239,7 +42210,7 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ValueSetDesignation> designation),
+        List<dynamic> designation),
     Result valueSetDesignation(
         String id,
         List<dynamic> extension,
@@ -42262,8 +42233,8 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
         FhirDateTime timestamp,
         int total,
         int offset,
-        List<ValueSetParameter> parameter,
-        List<ValueSetContains> contains),
+        List<dynamic> parameter,
+        List<dynamic> contains),
     Result valueSetParameter(
         String id,
         List<dynamic> extension,
@@ -42286,8 +42257,8 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
         String version,
         Code code,
         String display,
-        List<ValueSetDesignation> designation,
-        List<ValueSetContains> contains),
+        List<dynamic> designation,
+        List<dynamic> contains),
     Result terminologyCapabilities(
         String resourceType,
         Id id,
@@ -42316,7 +42287,7 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
         TerminologyCapabilitiesSoftware software,
         TerminologyCapabilitiesImplementation implementation,
         bool lockedDate,
-        List<TerminologyCapabilitiesCodeSystem> codeSystem,
+        List<dynamic> codeSystem,
         TerminologyCapabilitiesExpansion expansion,
         TerminologyCapabilitiesCodeSearch codeSearch,
         TerminologyCapabilitiesValidateCode validateCode,
@@ -42335,7 +42306,7 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
         List<dynamic> extension,
         List<dynamic> modifierExtension,
         Canonical uri,
-        List<TerminologyCapabilitiesVersion> version,
+        List<dynamic> version,
         bool subsumption),
     Result terminologyCapabilitiesVersion(
         String id,
@@ -42345,7 +42316,7 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
         bool isDefault,
         bool compositional,
         List<Code> language,
-        List<TerminologyCapabilitiesFilter> filter,
+        List<dynamic> filter,
         List<Code> property),
     Result terminologyCapabilitiesFilter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code code, List<Code> op),
@@ -42356,7 +42327,7 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
         bool hierarchical,
         bool paging,
         bool incomplete,
-        List<TerminologyCapabilitiesParameter> parameter,
+        List<dynamic> parameter,
         Markdown textFilter),
     Result terminologyCapabilitiesParameter(String id, List<dynamic> extension,
         List<dynamic> modifierExtension, Code name, String documentation),
@@ -42394,7 +42365,7 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
         List<dynamic> useContext,
         List<dynamic> jurisdiction,
         String usage,
-        List<NamingSystemUniqueId> uniqueId),
+        List<dynamic> uniqueId),
     Result namingSystemUniqueId(
         String id,
         List<dynamic> extension,
@@ -42433,7 +42404,7 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
         Canonical sourceCanonical,
         FhirUri targetUri,
         Canonical targetCanonical,
-        List<ConceptMapGroup> group),
+        List<dynamic> group),
     Result conceptMapGroup(
         String id,
         List<dynamic> extension,
@@ -42442,7 +42413,7 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
         String sourceVersion,
         FhirUri target,
         String targetVersion,
-        List<ConceptMapElement> element,
+        List<dynamic> element,
         ConceptMapUnmapped unmapped),
     Result conceptMapElement(
         String id,
@@ -42450,7 +42421,7 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
         List<dynamic> modifierExtension,
         Code code,
         String display,
-        List<ConceptMapTarget> target),
+        List<dynamic> target),
     Result conceptMapTarget(
         String id,
         List<dynamic> extension,
@@ -42459,8 +42430,8 @@ class _$ConceptMapUnmapped implements ConceptMapUnmapped {
         String display,
         ConceptMapTargetEquivalence equivalence,
         String comment,
-        List<ConceptMapDependsOn> dependsOn,
-        List<ConceptMapDependsOn> product),
+        List<dynamic> dependsOn,
+        List<dynamic> product),
     Result conceptMapDependsOn(
         String id,
         List<dynamic> extension,

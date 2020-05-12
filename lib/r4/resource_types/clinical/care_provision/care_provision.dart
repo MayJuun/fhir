@@ -16,8 +16,8 @@ const factory CareProvision.visionPrescription({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Code status,
   FhirDateTime created,
@@ -31,8 +31,8 @@ const factory CareProvision.visionPrescription({
 
 const factory CareProvision.visionPrescriptionLensSpecification({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept product,
   VisionPrescriptionLensSpecificationEye eye,
   double sphere,
@@ -52,8 +52,8 @@ const factory CareProvision.visionPrescriptionLensSpecification({
 
 const factory CareProvision.visionPrescriptionPrism({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   double amount,
   VisionPrescriptionPrismBase base,
 
@@ -67,8 +67,8 @@ const factory CareProvision.riskAssessment({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   Reference basedOn,
   Reference parent,
@@ -92,8 +92,8 @@ const factory CareProvision.riskAssessment({
 
 const factory CareProvision.riskAssessmentPrediction({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept outcome,
   double probabilityDecimal,
   Range probabilityRange,
@@ -113,8 +113,8 @@ const factory CareProvision.serviceRequest({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   List<Canonical> instantiatesCanonical,
   List<FhirUri> instantiatesUri,
@@ -164,8 +164,8 @@ const factory CareProvision.goal({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   GoalLifecycleStatus lifecycleStatus,
   CodeableConcept achievementStatus,
@@ -188,8 +188,8 @@ const factory CareProvision.goal({
 
 const factory CareProvision.goalTarget({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept measure,
   Quantity detailQuantity,
   Range detailRange,
@@ -211,8 +211,8 @@ const factory CareProvision.nutritionOrder({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   List<Canonical> instantiatesCanonical,
   List<FhirUri> instantiatesUri,
@@ -235,8 +235,8 @@ const factory CareProvision.nutritionOrder({
 
 const factory CareProvision.nutritionOrderOralDiet({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<CodeableConcept> type,
   List<Timing> schedule,
   List<NutritionOrderNutrient> nutrient,
@@ -248,8 +248,8 @@ const factory CareProvision.nutritionOrderOralDiet({
 
 const factory CareProvision.nutritionOrderNutrient({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept modifier,
   Quantity amount,
 
@@ -257,8 +257,8 @@ const factory CareProvision.nutritionOrderNutrient({
 
 const factory CareProvision.nutritionOrderTexture({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept modifier,
   CodeableConcept foodType,
 
@@ -266,8 +266,8 @@ const factory CareProvision.nutritionOrderTexture({
 
 const factory CareProvision.nutritionOrderSupplement({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   String productName,
   List<Timing> schedule,
@@ -278,8 +278,8 @@ const factory CareProvision.nutritionOrderSupplement({
 
 const factory CareProvision.nutritionOrderEnteralFormula({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept baseFormulaType,
   String baseFormulaProductName,
   CodeableConcept additiveType,
@@ -294,8 +294,8 @@ const factory CareProvision.nutritionOrderEnteralFormula({
 
 const factory CareProvision.nutritionOrderAdministration({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Timing schedule,
   Quantity quantity,
   Quantity rateQuantity,
@@ -311,8 +311,8 @@ const factory CareProvision.carePlan({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   List<Canonical> instantiatesCanonical,
   List<FhirUri> instantiatesUri,
@@ -341,8 +341,8 @@ const factory CareProvision.carePlan({
 
 const factory CareProvision.carePlanActivity({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<CodeableConcept> outcomeCodeableConcept,
   List<Reference> outcomeReference,
   List<Annotation> progress,
@@ -353,8 +353,8 @@ const factory CareProvision.carePlanActivity({
 
 const factory CareProvision.carePlanDetail({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Code kind,
   List<Canonical> instantiatesCanonical,
   List<FhirUri> instantiatesUri,
@@ -386,8 +386,8 @@ const factory CareProvision.careTeam({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   CareTeamStatus status,
   List<CodeableConcept> category,
@@ -406,8 +406,8 @@ const factory CareProvision.careTeam({
 
 const factory CareProvision.careTeamParticipant({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<CodeableConcept> role,
   Reference member,
   Reference onBehalfOf,
@@ -423,8 +423,8 @@ const factory CareProvision.requestGroup({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   List<Canonical> instantiatesCanonical,
   List<FhirUri> instantiatesUri,
@@ -448,8 +448,8 @@ const factory CareProvision.requestGroup({
 
 const factory CareProvision.requestGroupAction({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String prefix,
   String title,
   String description,
@@ -479,8 +479,8 @@ const factory CareProvision.requestGroupAction({
 
 const factory CareProvision.requestGroupCondition({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Code kind,
   Expression expression,
 
@@ -488,8 +488,8 @@ const factory CareProvision.requestGroupCondition({
 
 const factory CareProvision.requestGroupRelatedAction({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Id actionId,
   Code relationship,
   Duration offsetDuration,

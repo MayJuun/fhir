@@ -16,8 +16,8 @@ const factory Documents.catalogEntry({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
   CodeableConcept type,
   bool orderable,
@@ -36,8 +36,8 @@ const factory Documents.catalogEntry({
 
 const factory Documents.catalogEntryRelatedEntry({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CatalogEntryRelatedEntryRelationtype relationtype,
   Reference item,
 
@@ -51,8 +51,8 @@ const factory Documents.composition({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Identifier identifier,
   CompositionStatus status,
   CodeableConcept type,
@@ -73,8 +73,8 @@ const factory Documents.composition({
 
 const factory Documents.compositionAttester({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CompositionAttesterMode mode,
   FhirDateTime time,
   Reference party,
@@ -83,8 +83,8 @@ const factory Documents.compositionAttester({
 
 const factory Documents.compositionRelatesTo({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Code code,
   Identifier targetIdentifier,
   Reference targetReference,
@@ -93,8 +93,8 @@ const factory Documents.compositionRelatesTo({
 
 const factory Documents.compositionEvent({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<CodeableConcept> code,
   Period period,
   List<Reference> detail,
@@ -103,8 +103,8 @@ const factory Documents.compositionEvent({
 
 const factory Documents.compositionSection({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String title,
   CodeableConcept code,
   List<Reference> author,
@@ -126,8 +126,8 @@ const factory Documents.documentManifest({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Identifier masterIdentifier,
   List<Identifier> identifier,
   DocumentManifestStatus status,
@@ -145,8 +145,8 @@ const factory Documents.documentManifest({
 
 const factory Documents.documentManifestRelated({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Identifier identifier,
   Reference ref,
 
@@ -160,8 +160,8 @@ const factory Documents.documentReference({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Identifier masterIdentifier,
   List<Identifier> identifier,
   DocumentReferenceStatus status,
@@ -183,8 +183,8 @@ const factory Documents.documentReference({
 
 const factory Documents.documentReferenceRelatesTo({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   DocumentReferenceRelatesToCode code,
   Reference target,
 
@@ -192,8 +192,8 @@ const factory Documents.documentReferenceRelatesTo({
 
 const factory Documents.documentReferenceContent({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   Attachment attachment,
   Coding format,
 
@@ -201,8 +201,8 @@ const factory Documents.documentReferenceContent({
 
 const factory Documents.documentReferenceContext({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<Reference> encounter,
   List<CodeableConcept> event,
   Period period,

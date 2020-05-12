@@ -23,14 +23,8 @@ TestReport _$TestReportFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -84,10 +78,8 @@ Map<String, dynamic> _$TestReportToJson(TestReport instance) {
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('status', instance.status?.toJson());
@@ -108,14 +100,8 @@ TestReportParticipant _$TestReportParticipantFromJson(
     Map<String, dynamic> json) {
   return TestReportParticipant(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: json['type'] == null
         ? null
         : TestReportParticipantType.fromJson(json['type'] as String),
@@ -135,10 +121,8 @@ Map<String, dynamic> _$TestReportParticipantToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('uri', instance.uri?.toJson());
   writeNotNull('display', instance.display);
@@ -148,14 +132,8 @@ Map<String, dynamic> _$TestReportParticipantToJson(
 TestReportSetup _$TestReportSetupFromJson(Map<String, dynamic> json) {
   return TestReportSetup(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     action: (json['action'] as List)
         ?.map((e) => e == null
             ? null
@@ -174,10 +152,8 @@ Map<String, dynamic> _$TestReportSetupToJson(TestReportSetup instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('action', instance.action?.map((e) => e?.toJson())?.toList());
   return val;
 }
@@ -185,14 +161,8 @@ Map<String, dynamic> _$TestReportSetupToJson(TestReportSetup instance) {
 TestReportAction _$TestReportActionFromJson(Map<String, dynamic> json) {
   return TestReportAction(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     operation: json['operation'] == null
         ? null
         : TestReportOperation.fromJson(
@@ -213,10 +183,8 @@ Map<String, dynamic> _$TestReportActionToJson(TestReportAction instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('operation', instance.operation?.toJson());
   writeNotNull('asserts', instance.asserts?.toJson());
   return val;
@@ -225,14 +193,8 @@ Map<String, dynamic> _$TestReportActionToJson(TestReportAction instance) {
 TestReportOperation _$TestReportOperationFromJson(Map<String, dynamic> json) {
   return TestReportOperation(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     result: json['result'] == null
         ? null
         : TestReportOperationResult.fromJson(json['result'] as String),
@@ -255,10 +217,8 @@ Map<String, dynamic> _$TestReportOperationToJson(TestReportOperation instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('result', instance.result?.toJson());
   writeNotNull('message', instance.message?.toJson());
   writeNotNull('detail', instance.detail?.toJson());
@@ -268,14 +228,8 @@ Map<String, dynamic> _$TestReportOperationToJson(TestReportOperation instance) {
 TestReportAssert _$TestReportAssertFromJson(Map<String, dynamic> json) {
   return TestReportAssert(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     result: json['result'] == null
         ? null
         : TestReportAssertResult.fromJson(json['result'] as String),
@@ -296,10 +250,8 @@ Map<String, dynamic> _$TestReportAssertToJson(TestReportAssert instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('result', instance.result?.toJson());
   writeNotNull('message', instance.message?.toJson());
   writeNotNull('detail', instance.detail);
@@ -309,14 +261,8 @@ Map<String, dynamic> _$TestReportAssertToJson(TestReportAssert instance) {
 TestReportTest _$TestReportTestFromJson(Map<String, dynamic> json) {
   return TestReportTest(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     name: json['name'] as String,
     description: json['description'] as String,
     action: (json['action'] as List)
@@ -337,10 +283,8 @@ Map<String, dynamic> _$TestReportTestToJson(TestReportTest instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('name', instance.name);
   writeNotNull('description', instance.description);
   writeNotNull('action', instance.action?.map((e) => e?.toJson())?.toList());
@@ -350,14 +294,8 @@ Map<String, dynamic> _$TestReportTestToJson(TestReportTest instance) {
 TestReportAction1 _$TestReportAction1FromJson(Map<String, dynamic> json) {
   return TestReportAction1(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     operation: json['operation'] == null
         ? null
         : TestReportOperation.fromJson(
@@ -378,10 +316,8 @@ Map<String, dynamic> _$TestReportAction1ToJson(TestReportAction1 instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('operation', instance.operation?.toJson());
   writeNotNull('asserts', instance.asserts?.toJson());
   return val;
@@ -390,14 +326,8 @@ Map<String, dynamic> _$TestReportAction1ToJson(TestReportAction1 instance) {
 TestReportTeardown _$TestReportTeardownFromJson(Map<String, dynamic> json) {
   return TestReportTeardown(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     action: (json['action'] as List)
         ?.map((e) => e == null
             ? null
@@ -416,10 +346,8 @@ Map<String, dynamic> _$TestReportTeardownToJson(TestReportTeardown instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('action', instance.action?.map((e) => e?.toJson())?.toList());
   return val;
 }
@@ -427,14 +355,8 @@ Map<String, dynamic> _$TestReportTeardownToJson(TestReportTeardown instance) {
 TestReportAction2 _$TestReportAction2FromJson(Map<String, dynamic> json) {
   return TestReportAction2(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     operation: json['operation'] == null
         ? null
         : TestReportOperation.fromJson(
@@ -452,10 +374,8 @@ Map<String, dynamic> _$TestReportAction2ToJson(TestReportAction2 instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('operation', instance.operation?.toJson());
   return val;
 }

@@ -24,14 +24,8 @@ SubstanceReferenceInformation _$SubstanceReferenceInformationFromJson(
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     comment: json['comment'] as String,
     gene: (json['gene'] as List)
         ?.map((e) => e == null
@@ -77,10 +71,8 @@ Map<String, dynamic> _$SubstanceReferenceInformationToJson(
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('contained', instance.contained);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('comment', instance.comment);
   writeNotNull('gene', instance.gene?.map((e) => e?.toJson())?.toList());
   writeNotNull(
@@ -95,14 +87,8 @@ SubstanceReferenceInformationGene _$SubstanceReferenceInformationGeneFromJson(
     Map<String, dynamic> json) {
   return SubstanceReferenceInformationGene(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     geneSequenceOrigin: json['geneSequenceOrigin'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -128,10 +114,8 @@ Map<String, dynamic> _$SubstanceReferenceInformationGeneToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('geneSequenceOrigin', instance.geneSequenceOrigin?.toJson());
   writeNotNull('gene', instance.gene?.toJson());
   writeNotNull('source', instance.source?.map((e) => e?.toJson())?.toList());
@@ -143,14 +127,8 @@ SubstanceReferenceInformationGeneElement
         Map<String, dynamic> json) {
   return SubstanceReferenceInformationGeneElement(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -175,10 +153,8 @@ Map<String, dynamic> _$SubstanceReferenceInformationGeneElementToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('element', instance.element?.toJson());
   writeNotNull('source', instance.source?.map((e) => e?.toJson())?.toList());
@@ -190,14 +166,8 @@ SubstanceReferenceInformationClassification
         Map<String, dynamic> json) {
   return SubstanceReferenceInformationClassification(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     domain: json['domain'] == null
         ? null
         : CodeableConcept.fromJson(json['domain'] as Map<String, dynamic>),
@@ -228,10 +198,8 @@ Map<String, dynamic> _$SubstanceReferenceInformationClassificationToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('domain', instance.domain?.toJson());
   writeNotNull('classification', instance.classification?.toJson());
   writeNotNull('subtype', instance.subtype?.map((e) => e?.toJson())?.toList());
@@ -243,14 +211,8 @@ SubstanceReferenceInformationTarget
     _$SubstanceReferenceInformationTargetFromJson(Map<String, dynamic> json) {
   return SubstanceReferenceInformationTarget(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) =>
-            e == null ? null : Extension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     target: json['target'] == null
         ? null
         : Identifier.fromJson(json['target'] as Map<String, dynamic>),
@@ -295,10 +257,8 @@ Map<String, dynamic> _$SubstanceReferenceInformationTargetToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension?.map((e) => e?.toJson())?.toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson())?.toList());
+  writeNotNull('extension', instance.extension);
+  writeNotNull('modifierExtension', instance.modifierExtension);
   writeNotNull('target', instance.target?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('interaction', instance.interaction?.toJson());

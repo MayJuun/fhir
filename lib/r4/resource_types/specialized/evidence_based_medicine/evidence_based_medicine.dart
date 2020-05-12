@@ -16,8 +16,8 @@ const factory EvidenceBasedMedicine.riskEvidenceSynthesis({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   List<Identifier> identifier,
   String version,
@@ -54,8 +54,8 @@ const factory EvidenceBasedMedicine.riskEvidenceSynthesis({
 
 const factory EvidenceBasedMedicine.riskEvidenceSynthesisSampleSize({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String description,
   int numberOfStudies,
   int numberOfParticipants,
@@ -64,8 +64,8 @@ const factory EvidenceBasedMedicine.riskEvidenceSynthesisSampleSize({
 
 const factory EvidenceBasedMedicine.riskEvidenceSynthesisRiskEstimate({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String description,
   CodeableConcept type,
   double value,
@@ -78,8 +78,8 @@ const factory EvidenceBasedMedicine.riskEvidenceSynthesisRiskEstimate({
 
 const factory EvidenceBasedMedicine.riskEvidenceSynthesisPrecisionEstimate({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   double level,
   double from,
@@ -89,8 +89,8 @@ const factory EvidenceBasedMedicine.riskEvidenceSynthesisPrecisionEstimate({
 
 const factory EvidenceBasedMedicine.riskEvidenceSynthesisCertainty({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<CodeableConcept> rating,
   List<Annotation> note,
   List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent,
@@ -99,8 +99,8 @@ const factory EvidenceBasedMedicine.riskEvidenceSynthesisCertainty({
 
 const factory EvidenceBasedMedicine.riskEvidenceSynthesisCertaintySubcomponent({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   List<CodeableConcept> rating,
   List<Annotation> note,
@@ -115,8 +115,8 @@ const factory EvidenceBasedMedicine.evidenceVariable({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   List<Identifier> identifier,
   String version,
@@ -149,8 +149,8 @@ const factory EvidenceBasedMedicine.evidenceVariable({
 
 const factory EvidenceBasedMedicine.evidenceVariableCharacteristic({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String description,
   Reference definitionReference,
   Canonical definitionCanonical,
@@ -177,8 +177,8 @@ const factory EvidenceBasedMedicine.evidence({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   List<Identifier> identifier,
   String version,
@@ -218,8 +218,8 @@ const factory EvidenceBasedMedicine.researchElementDefinition({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   List<Identifier> identifier,
   String version,
@@ -259,8 +259,8 @@ const factory EvidenceBasedMedicine.researchElementDefinition({
 
 const factory EvidenceBasedMedicine.researchElementDefinitionCharacteristic({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept definitionCodeableConcept,
   Canonical definitionCanonical,
   Expression definitionExpression,
@@ -295,8 +295,8 @@ const factory EvidenceBasedMedicine.researchDefinition({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   List<Identifier> identifier,
   String version,
@@ -343,8 +343,8 @@ const factory EvidenceBasedMedicine.effectEvidenceSynthesis({
   Code language,
   Narrative text,
   List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   FhirUri url,
   List<Identifier> identifier,
   String version,
@@ -383,8 +383,8 @@ const factory EvidenceBasedMedicine.effectEvidenceSynthesis({
 
 const factory EvidenceBasedMedicine.effectEvidenceSynthesisSampleSize({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String description,
   int numberOfStudies,
   int numberOfParticipants,
@@ -393,8 +393,8 @@ const factory EvidenceBasedMedicine.effectEvidenceSynthesisSampleSize({
 
 const factory EvidenceBasedMedicine.effectEvidenceSynthesisResultsByExposure({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String description,
   EffectEvidenceSynthesisResultsByExposureState exposureState,
   CodeableConcept variantState,
@@ -404,8 +404,8 @@ const factory EvidenceBasedMedicine.effectEvidenceSynthesisResultsByExposure({
 
 const factory EvidenceBasedMedicine.effectEvidenceSynthesisEffectEstimate({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   String description,
   CodeableConcept type,
   CodeableConcept variantState,
@@ -417,8 +417,8 @@ const factory EvidenceBasedMedicine.effectEvidenceSynthesisEffectEstimate({
 
 const factory EvidenceBasedMedicine.effectEvidenceSynthesisPrecisionEstimate({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   double level,
   double from,
@@ -428,8 +428,8 @@ const factory EvidenceBasedMedicine.effectEvidenceSynthesisPrecisionEstimate({
 
 const factory EvidenceBasedMedicine.effectEvidenceSynthesisCertainty({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   List<CodeableConcept> rating,
   List<Annotation> note,
   List<EffectEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent,
@@ -438,8 +438,8 @@ const factory EvidenceBasedMedicine.effectEvidenceSynthesisCertainty({
 
 const factory EvidenceBasedMedicine.effectEvidenceSynthesisCertaintySubcomponent({
   String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
   CodeableConcept type,
   List<CodeableConcept> rating,
   List<Annotation> note,

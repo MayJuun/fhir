@@ -1,6 +1,6 @@
-export 'r4/draftTypes.dart';
-export 'r4/generalTypes.dart';
-export 'r4/metadataTypes.dart';
+export 'r4/draft_types/draft_types.dart';
+export 'r4/general_types/general_types.dart';
+export 'r4/metadata_types/metadata_types.dart';
 export 'primitiveTypes/primitiveTypes.dart';
-export 'r4/resourceTypes.dart';
-export 'r4/specialTypes.dart';
+export 'r4/resource_types/types.dart';
+export 'r4/special_types/special_types.dart';
