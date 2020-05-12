@@ -429,6 +429,14 @@ abstract class Medications with _$Medications {
     List<Reference> contraindication,
     List<MedicationKnowledgeRegulatory> regulatory,
     List<MedicationKnowledgeKinetics> kinetics,
+  }) = MedicationKnowledge;
+
+  const factory Medications.medicationKnowledgeRelatedMedicationKnowledge({
+    String id,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    CodeableConcept type,
+    List<Reference> reference,
   }) = MedicationKnowledgeRelatedMedicationKnowledge;
 
   const factory Medications.medicationKnowledgeMonograph({

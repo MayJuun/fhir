@@ -23,20 +23,9 @@ _$EnrollmentRequest _$_$EnrollmentRequestFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    identifier: json['identifier'] as List,
     status:
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     created: json['created'] == null
@@ -94,20 +83,9 @@ _$EnrollmentResponse _$_$EnrollmentResponseFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    identifier: json['identifier'] as List,
     status:
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     request: json['request'] == null
@@ -207,15 +185,8 @@ _$CoverageEligibilityResponse _$_$CoverageEligibilityResponseFromJson(
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    identifier: json['identifier'] as List,
     status:
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     purpose: (json['purpose'] as List)?.map((e) => e as String)?.toList(),
@@ -294,16 +265,8 @@ _$CoverageEligibilityResponseInsurance
         Map<String, dynamic> json) {
   return _$CoverageEligibilityResponseInsurance(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     coverage: json['coverage'] == null
         ? null
         : Reference.fromJson(json['coverage'] as Map<String, dynamic>),
@@ -327,16 +290,8 @@ _$CoverageEligibilityResponseItem _$_$CoverageEligibilityResponseItemFromJson(
     Map<String, dynamic> json) {
   return _$CoverageEligibilityResponseItem(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     category: json['category'] == null
         ? null
         : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
@@ -344,11 +299,7 @@ _$CoverageEligibilityResponseItem _$_$CoverageEligibilityResponseItemFromJson(
         ? null
         : CodeableConcept.fromJson(
             json['productOrService'] as Map<String, dynamic>),
-    modifier: (json['modifier'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    modifier: json['modifier'] as List,
     provider: json['provider'] == null
         ? null
         : Reference.fromJson(json['provider'] as Map<String, dynamic>),
@@ -366,11 +317,7 @@ _$CoverageEligibilityResponseItem _$_$CoverageEligibilityResponseItemFromJson(
         : CodeableConcept.fromJson(json['term'] as Map<String, dynamic>),
     benefit: json['benefit'] as List,
     authorizationRequired: json['authorizationRequired'] as bool,
-    authorizationSupporting: (json['authorizationSupporting'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    authorizationSupporting: json['authorizationSupporting'] as List,
     authorizationUrl: json['authorizationUrl'] == null
         ? null
         : FhirUri.fromJson(json['authorizationUrl'] as String),
@@ -403,16 +350,8 @@ _$CoverageEligibilityResponseBenefit
     _$_$CoverageEligibilityResponseBenefitFromJson(Map<String, dynamic> json) {
   return _$CoverageEligibilityResponseBenefit(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -448,16 +387,8 @@ _$CoverageEligibilityResponseError _$_$CoverageEligibilityResponseErrorFromJson(
     Map<String, dynamic> json) {
   return _$CoverageEligibilityResponseError(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -491,20 +422,9 @@ _$CoverageEligibilityRequest _$_$CoverageEligibilityRequestFromJson(
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    identifier: json['identifier'] as List,
     status:
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     priority: json['priority'] == null
@@ -575,16 +495,8 @@ _$CoverageEligibilityRequestSupportingInfo
         Map<String, dynamic> json) {
   return _$CoverageEligibilityRequestSupportingInfo(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     sequence: json['sequence'] as int,
     information: json['information'] == null
         ? null
@@ -608,16 +520,8 @@ _$CoverageEligibilityRequestInsurance
     _$_$CoverageEligibilityRequestInsuranceFromJson(Map<String, dynamic> json) {
   return _$CoverageEligibilityRequestInsurance(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     focal: json['focal'] as bool,
     coverage: json['coverage'] == null
         ? null
@@ -641,16 +545,8 @@ _$CoverageEligibilityRequestItem _$_$CoverageEligibilityRequestItemFromJson(
     Map<String, dynamic> json) {
   return _$CoverageEligibilityRequestItem(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     supportingInfoSequence: (json['supportingInfoSequence'] as List)
         ?.map((e) => e as int)
         ?.toList(),
@@ -661,11 +557,7 @@ _$CoverageEligibilityRequestItem _$_$CoverageEligibilityRequestItemFromJson(
         ? null
         : CodeableConcept.fromJson(
             json['productOrService'] as Map<String, dynamic>),
-    modifier: (json['modifier'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    modifier: json['modifier'] as List,
     provider: json['provider'] == null
         ? null
         : Reference.fromJson(json['provider'] as Map<String, dynamic>),
@@ -679,10 +571,7 @@ _$CoverageEligibilityRequestItem _$_$CoverageEligibilityRequestItemFromJson(
         ? null
         : Reference.fromJson(json['facility'] as Map<String, dynamic>),
     diagnosis: json['diagnosis'] as List,
-    detail: (json['detail'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    detail: json['detail'] as List,
   );
 }
 
@@ -708,16 +597,8 @@ _$CoverageEligibilityRequestDiagnosis
     _$_$CoverageEligibilityRequestDiagnosisFromJson(Map<String, dynamic> json) {
   return _$CoverageEligibilityRequestDiagnosis(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     diagnosisCodeableConcept: json['diagnosisCodeableConcept'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -756,20 +637,9 @@ _$Coverage _$_$CoverageFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    identifier: json['identifier'] as List,
     status:
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     type: json['type'] == null
@@ -793,19 +663,13 @@ _$Coverage _$_$CoverageFromJson(Map<String, dynamic> json) {
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
-    payor: (json['payor'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    payor: json['payor'] as List,
     clas: json['clas'] as List,
     order: json['order'] as int,
     network: json['network'] as String,
     costToBeneficiary: json['costToBeneficiary'] as List,
     subrogation: json['subrogation'] as bool,
-    contract: (json['contract'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    contract: json['contract'] as List,
   );
 }
 
@@ -842,16 +706,8 @@ Map<String, dynamic> _$_$CoverageToJson(_$Coverage instance) =>
 _$CoverageClass _$_$CoverageClassFromJson(Map<String, dynamic> json) {
   return _$CoverageClass(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -874,16 +730,8 @@ _$CoverageCostToBeneficiary _$_$CoverageCostToBeneficiaryFromJson(
     Map<String, dynamic> json) {
   return _$CoverageCostToBeneficiary(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -912,16 +760,8 @@ Map<String, dynamic> _$_$CoverageCostToBeneficiaryToJson(
 _$CoverageException _$_$CoverageExceptionFromJson(Map<String, dynamic> json) {
   return _$CoverageException(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),

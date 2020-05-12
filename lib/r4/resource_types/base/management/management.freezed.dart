@@ -36,6 +36,8 @@ Management _$ManagementFromJson(Map<String, dynamic> json) {
       return EncounterHospitalization.fromJson(json);
     case 'encounterLocation':
       return EncounterLocation.fromJson(json);
+    case 'flag':
+      return Flag.fromJson(json);
 
     default:
       throw FallThroughError();
@@ -53,10 +55,10 @@ class _$ManagementTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       FhirUri url,
-      List<Identifier> identifier,
+      List<dynamic> identifier,
       String version,
       String name,
       String title,
@@ -68,25 +70,25 @@ class _$ManagementTearOff {
       Reference subjectReference,
       FhirDateTime date,
       String publisher,
-      List<ContactDetail> contact,
+      List<dynamic> contact,
       Markdown description,
-      List<UsageContext> useContext,
-      List<CodeableConcept> jurisdiction,
+      List<dynamic> useContext,
+      List<dynamic> jurisdiction,
       Markdown purpose,
       String usage,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<CodeableConcept> topic,
-      List<ContactDetail> author,
-      List<ContactDetail> editor,
-      List<ContactDetail> reviewer,
-      List<ContactDetail> endorser,
-      List<RelatedArtifact> relatedArtifact,
-      List<ParameterDefinition> parameter,
-      List<DataRequirement> dataRequirement,
-      List<Attachment> content}) {
+      List<dynamic> topic,
+      List<dynamic> author,
+      List<dynamic> editor,
+      List<dynamic> reviewer,
+      List<dynamic> endorser,
+      List<dynamic> relatedArtifact,
+      List<dynamic> parameter,
+      List<dynamic> dataRequirement,
+      List<dynamic> content}) {
     return Library(
       resourceType: resourceType,
       id: id,
@@ -140,9 +142,9 @@ class _$ManagementTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       ListStatus status,
       ListMode mode,
       String title,
@@ -152,7 +154,7 @@ class _$ManagementTearOff {
       FhirDateTime date,
       Reference source,
       CodeableConcept orderedBy,
-      List<Annotation> note,
+      List<dynamic> note,
       List<dynamic> entry,
       CodeableConcept emptyReason}) {
     return Lists(
@@ -183,8 +185,8 @@ class _$ManagementTearOff {
 
   ListEntry listEntry(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       CodeableConcept flag,
       bool deleted,
       FhirDateTime date,
@@ -208,20 +210,20 @@ class _$ManagementTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       EpisodeOfCareStatus status,
       List<dynamic> statusHistory,
-      List<CodeableConcept> type,
+      List<dynamic> type,
       List<dynamic> diagnosis,
       Reference patient,
       Reference managingOrganization,
       Period period,
-      List<Reference> referralRequest,
+      List<dynamic> referralRequest,
       Reference careManager,
-      List<Reference> team,
-      List<Reference> account}) {
+      List<dynamic> team,
+      List<dynamic> account}) {
     return EpisodeOfCare(
       resourceType: resourceType,
       id: id,
@@ -249,8 +251,8 @@ class _$ManagementTearOff {
 
   EpisodeOfCareStatusHistory episodeOfCareStatusHistory(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       EpisodeOfCareStatusHistoryStatus status,
       Period period}) {
     return EpisodeOfCareStatusHistory(
@@ -264,8 +266,8 @@ class _$ManagementTearOff {
 
   EpisodeOfCareDiagnosis episodeOfCareDiagnosis(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Reference condition,
       CodeableConcept role,
       int rank}) {
@@ -287,27 +289,27 @@ class _$ManagementTearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       EncounterStatus status,
       List<dynamic> statusHistory,
       Coding clas,
       List<dynamic> classHistory,
-      List<CodeableConcept> type,
+      List<dynamic> type,
       CodeableConcept serviceType,
       CodeableConcept priority,
       Reference subject,
-      List<Reference> episodeOfCare,
-      List<Reference> basedOn,
+      List<dynamic> episodeOfCare,
+      List<dynamic> basedOn,
       List<dynamic> participant,
-      List<Reference> appointment,
+      List<dynamic> appointment,
       Period period,
       Duration length,
-      List<CodeableConcept> reasonCode,
-      List<Reference> reasonReference,
+      List<dynamic> reasonCode,
+      List<dynamic> reasonReference,
       List<dynamic> diagnosis,
-      List<Reference> account,
+      List<dynamic> account,
       EncounterHospitalization hospitalization,
       List<dynamic> location,
       Reference serviceProvider,
@@ -350,8 +352,8 @@ class _$ManagementTearOff {
 
   EncounterStatusHistory encounterStatusHistory(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       EncounterStatusHistoryStatus status,
       Period period}) {
     return EncounterStatusHistory(
@@ -365,8 +367,8 @@ class _$ManagementTearOff {
 
   EncounterClassHistory encounterClassHistory(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Coding clas,
       Period period}) {
     return EncounterClassHistory(
@@ -380,9 +382,9 @@ class _$ManagementTearOff {
 
   EncounterParticipant encounterParticipant(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> type,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> type,
       Period period,
       Reference individual}) {
     return EncounterParticipant(
@@ -397,8 +399,8 @@ class _$ManagementTearOff {
 
   EncounterDiagnosis encounterDiagnosis(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Reference condition,
       CodeableConcept use,
       int rank}) {
@@ -414,15 +416,15 @@ class _$ManagementTearOff {
 
   EncounterHospitalization encounterHospitalization(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Identifier preAdmissionIdentifier,
       Reference origin,
       CodeableConcept admitSource,
       CodeableConcept reAdmission,
-      List<CodeableConcept> dietPreference,
-      List<CodeableConcept> specialCourtesy,
-      List<CodeableConcept> specialArrangement,
+      List<dynamic> dietPreference,
+      List<dynamic> specialCourtesy,
+      List<dynamic> specialArrangement,
       Reference destination,
       CodeableConcept dischargeDisposition}) {
     return EncounterHospitalization(
@@ -443,8 +445,8 @@ class _$ManagementTearOff {
 
   EncounterLocation encounterLocation(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Reference location,
       EncounterLocationStatus status,
       CodeableConcept physicalType,
@@ -459,14 +461,53 @@ class _$ManagementTearOff {
       period: period,
     );
   }
+
+  Flag flag(
+      {String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<dynamic> contained,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
+      FlagStatus status,
+      List<dynamic> category,
+      CodeableConcept code,
+      Reference subject,
+      Period period,
+      Reference encounter,
+      Reference author}) {
+    return Flag(
+      resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      language: language,
+      text: text,
+      contained: contained,
+      extension: extension,
+      modifierExtension: modifierExtension,
+      identifier: identifier,
+      status: status,
+      category: category,
+      code: code,
+      subject: subject,
+      period: period,
+      encounter: encounter,
+      author: author,
+    );
+  }
 }
 
 // ignore: unused_element
 const $Management = _$ManagementTearOff();
 
 mixin _$Management {
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get extension;
+  List<dynamic> get modifierExtension;
 
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -479,10 +520,10 @@ mixin _$Management {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             FhirUri url,
-            List<Identifier> identifier,
+            List<dynamic> identifier,
             String version,
             String name,
             String title,
@@ -494,25 +535,25 @@ mixin _$Management {
             Reference subjectReference,
             FhirDateTime date,
             String publisher,
-            List<ContactDetail> contact,
+            List<dynamic> contact,
             Markdown description,
-            List<UsageContext> useContext,
-            List<CodeableConcept> jurisdiction,
+            List<dynamic> useContext,
+            List<dynamic> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<CodeableConcept> topic,
-            List<ContactDetail> author,
-            List<ContactDetail> editor,
-            List<ContactDetail> reviewer,
-            List<ContactDetail> endorser,
-            List<RelatedArtifact> relatedArtifact,
-            List<ParameterDefinition> parameter,
-            List<DataRequirement> dataRequirement,
-            List<Attachment> content),
+            List<dynamic> topic,
+            List<dynamic> author,
+            List<dynamic> editor,
+            List<dynamic> reviewer,
+            List<dynamic> endorser,
+            List<dynamic> relatedArtifact,
+            List<dynamic> parameter,
+            List<dynamic> dataRequirement,
+            List<dynamic> content),
     @required
         Result lists(
             String resourceType,
@@ -522,9 +563,9 @@ mixin _$Management {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -534,14 +575,14 @@ mixin _$Management {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<Annotation> note,
+            List<dynamic> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
         Result listEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept flag,
             bool deleted,
             FhirDateTime date,
@@ -555,32 +596,32 @@ mixin _$Management {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
             Period period,
-            List<Reference> referralRequest,
+            List<dynamic> referralRequest,
             Reference careManager,
-            List<Reference> team,
-            List<Reference> account),
+            List<dynamic> team,
+            List<dynamic> account),
     @required
         Result episodeOfCareStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EpisodeOfCareStatusHistoryStatus status,
             Period period),
     @required
         Result episodeOfCareDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept role,
             int rank),
@@ -593,27 +634,27 @@ mixin _$Management {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             Coding clas,
             List<dynamic> classHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
-            List<Reference> episodeOfCare,
-            List<Reference> basedOn,
+            List<dynamic> episodeOfCare,
+            List<dynamic> basedOn,
             List<dynamic> participant,
-            List<Reference> appointment,
+            List<dynamic> appointment,
             Period period,
             Duration length,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
             List<dynamic> diagnosis,
-            List<Reference> account,
+            List<dynamic> account,
             EncounterHospitalization hospitalization,
             List<dynamic> location,
             Reference serviceProvider,
@@ -621,52 +662,71 @@ mixin _$Management {
     @required
         Result encounterStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EncounterStatusHistoryStatus status,
             Period period),
     @required
-        Result encounterClassHistory(String id, List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension, Coding clas, Period period),
+        Result encounterClassHistory(String id, List<dynamic> extension,
+            List<dynamic> modifierExtension, Coding clas, Period period),
     @required
         Result encounterParticipant(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> type,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> type,
             Period period,
             Reference individual),
     @required
         Result encounterDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept use,
             int rank),
     @required
         Result encounterHospitalization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier preAdmissionIdentifier,
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<CodeableConcept> dietPreference,
-            List<CodeableConcept> specialCourtesy,
-            List<CodeableConcept> specialArrangement,
+            List<dynamic> dietPreference,
+            List<dynamic> specialCourtesy,
+            List<dynamic> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
         Result encounterLocation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference location,
             EncounterLocationStatus status,
             CodeableConcept physicalType,
             Period period),
+    @required
+        Result flag(
+            String resourceType,
+            Id id,
+            Meta meta,
+            FhirUri implicitRules,
+            Code language,
+            Narrative text,
+            List<dynamic> contained,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            FlagStatus status,
+            List<dynamic> category,
+            CodeableConcept code,
+            Reference subject,
+            Period period,
+            Reference encounter,
+            Reference author),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
@@ -678,10 +738,10 @@ mixin _$Management {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         FhirUri url,
-        List<Identifier> identifier,
+        List<dynamic> identifier,
         String version,
         String name,
         String title,
@@ -693,25 +753,25 @@ mixin _$Management {
         Reference subjectReference,
         FhirDateTime date,
         String publisher,
-        List<ContactDetail> contact,
+        List<dynamic> contact,
         Markdown description,
-        List<UsageContext> useContext,
-        List<CodeableConcept> jurisdiction,
+        List<dynamic> useContext,
+        List<dynamic> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<CodeableConcept> topic,
-        List<ContactDetail> author,
-        List<ContactDetail> editor,
-        List<ContactDetail> reviewer,
-        List<ContactDetail> endorser,
-        List<RelatedArtifact> relatedArtifact,
-        List<ParameterDefinition> parameter,
-        List<DataRequirement> dataRequirement,
-        List<Attachment> content),
+        List<dynamic> topic,
+        List<dynamic> author,
+        List<dynamic> editor,
+        List<dynamic> reviewer,
+        List<dynamic> endorser,
+        List<dynamic> relatedArtifact,
+        List<dynamic> parameter,
+        List<dynamic> dataRequirement,
+        List<dynamic> content),
     Result lists(
         String resourceType,
         Id id,
@@ -720,9 +780,9 @@ mixin _$Management {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -732,13 +792,13 @@ mixin _$Management {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<Annotation> note,
+        List<dynamic> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept flag,
         bool deleted,
         FhirDateTime date,
@@ -751,30 +811,30 @@ mixin _$Management {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
         Period period,
-        List<Reference> referralRequest,
+        List<dynamic> referralRequest,
         Reference careManager,
-        List<Reference> team,
-        List<Reference> account),
+        List<dynamic> team,
+        List<dynamic> account),
     Result episodeOfCareStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EpisodeOfCareStatusHistoryStatus status,
         Period period),
     Result episodeOfCareDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept role,
         int rank),
@@ -786,74 +846,92 @@ mixin _$Management {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         Coding clas,
         List<dynamic> classHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
-        List<Reference> episodeOfCare,
-        List<Reference> basedOn,
+        List<dynamic> episodeOfCare,
+        List<dynamic> basedOn,
         List<dynamic> participant,
-        List<Reference> appointment,
+        List<dynamic> appointment,
         Period period,
         Duration length,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
         List<dynamic> diagnosis,
-        List<Reference> account,
+        List<dynamic> account,
         EncounterHospitalization hospitalization,
         List<dynamic> location,
         Reference serviceProvider,
         Reference partOf),
     Result encounterStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EncounterStatusHistoryStatus status,
         Period period),
-    Result encounterClassHistory(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, Coding clas, Period period),
+    Result encounterClassHistory(String id, List<dynamic> extension,
+        List<dynamic> modifierExtension, Coding clas, Period period),
     Result encounterParticipant(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> type,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept use,
         int rank),
     Result encounterHospitalization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier preAdmissionIdentifier,
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<CodeableConcept> dietPreference,
-        List<CodeableConcept> specialCourtesy,
-        List<CodeableConcept> specialArrangement,
+        List<dynamic> dietPreference,
+        List<dynamic> specialCourtesy,
+        List<dynamic> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference location,
         EncounterLocationStatus status,
         CodeableConcept physicalType,
         Period period),
+    Result flag(
+        String resourceType,
+        Id id,
+        Meta meta,
+        FhirUri implicitRules,
+        Code language,
+        Narrative text,
+        List<dynamic> contained,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        FlagStatus status,
+        List<dynamic> category,
+        CodeableConcept code,
+        Reference subject,
+        Period period,
+        Reference encounter,
+        Reference author),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -872,6 +950,7 @@ mixin _$Management {
     @required Result encounterDiagnosis(EncounterDiagnosis value),
     @required Result encounterHospitalization(EncounterHospitalization value),
     @required Result encounterLocation(EncounterLocation value),
+    @required Result flag(Flag value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
@@ -888,6 +967,7 @@ mixin _$Management {
     Result encounterDiagnosis(EncounterDiagnosis value),
     Result encounterHospitalization(EncounterHospitalization value),
     Result encounterLocation(EncounterLocation value),
+    Result flag(Flag value),
     @required Result orElse(),
   });
   Map<String, dynamic> toJson();
@@ -898,8 +978,7 @@ abstract class $ManagementCopyWith<$Res> {
   factory $ManagementCopyWith(
           Management value, $Res Function(Management) then) =
       _$ManagementCopyWithImpl<$Res>;
-  $Res call(
-      {List<FhirExtension> extension, List<FhirExtension> modifierExtension});
+  $Res call({List<dynamic> extension, List<dynamic> modifierExtension});
 }
 
 class _$ManagementCopyWithImpl<$Res> implements $ManagementCopyWith<$Res> {
@@ -915,12 +994,11 @@ class _$ManagementCopyWithImpl<$Res> implements $ManagementCopyWith<$Res> {
     Object modifierExtension = freezed,
   }) {
     return _then(_value.copyWith(
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
     ));
   }
 }
@@ -937,10 +1015,10 @@ abstract class $LibraryCopyWith<$Res> implements $ManagementCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       FhirUri url,
-      List<Identifier> identifier,
+      List<dynamic> identifier,
       String version,
       String name,
       String title,
@@ -952,25 +1030,25 @@ abstract class $LibraryCopyWith<$Res> implements $ManagementCopyWith<$Res> {
       Reference subjectReference,
       FhirDateTime date,
       String publisher,
-      List<ContactDetail> contact,
+      List<dynamic> contact,
       Markdown description,
-      List<UsageContext> useContext,
-      List<CodeableConcept> jurisdiction,
+      List<dynamic> useContext,
+      List<dynamic> jurisdiction,
       Markdown purpose,
       String usage,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<CodeableConcept> topic,
-      List<ContactDetail> author,
-      List<ContactDetail> editor,
-      List<ContactDetail> reviewer,
-      List<ContactDetail> endorser,
-      List<RelatedArtifact> relatedArtifact,
-      List<ParameterDefinition> parameter,
-      List<DataRequirement> dataRequirement,
-      List<Attachment> content});
+      List<dynamic> topic,
+      List<dynamic> author,
+      List<dynamic> editor,
+      List<dynamic> reviewer,
+      List<dynamic> endorser,
+      List<dynamic> relatedArtifact,
+      List<dynamic> parameter,
+      List<dynamic> dataRequirement,
+      List<dynamic> content});
 }
 
 class _$LibraryCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
@@ -1038,16 +1116,15 @@ class _$LibraryCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       url: url == freezed ? _value.url : url as FhirUri,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
@@ -1064,16 +1141,15 @@ class _$LibraryCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
           : subjectReference as Reference,
       date: date == freezed ? _value.date : date as FhirDateTime,
       publisher: publisher == freezed ? _value.publisher : publisher as String,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>,
+      contact: contact == freezed ? _value.contact : contact as List<dynamic>,
       description:
           description == freezed ? _value.description : description as Markdown,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>,
+          : useContext as List<dynamic>,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>,
+          : jurisdiction as List<dynamic>,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown,
       usage: usage == freezed ? _value.usage : usage as String,
       copyright:
@@ -1086,26 +1162,22 @@ class _$LibraryCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
-      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept>,
-      author: author == freezed ? _value.author : author as List<ContactDetail>,
-      editor: editor == freezed ? _value.editor : editor as List<ContactDetail>,
-      reviewer: reviewer == freezed
-          ? _value.reviewer
-          : reviewer as List<ContactDetail>,
-      endorser: endorser == freezed
-          ? _value.endorser
-          : endorser as List<ContactDetail>,
+      topic: topic == freezed ? _value.topic : topic as List<dynamic>,
+      author: author == freezed ? _value.author : author as List<dynamic>,
+      editor: editor == freezed ? _value.editor : editor as List<dynamic>,
+      reviewer:
+          reviewer == freezed ? _value.reviewer : reviewer as List<dynamic>,
+      endorser:
+          endorser == freezed ? _value.endorser : endorser as List<dynamic>,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
-          : relatedArtifact as List<RelatedArtifact>,
-      parameter: parameter == freezed
-          ? _value.parameter
-          : parameter as List<ParameterDefinition>,
+          : relatedArtifact as List<dynamic>,
+      parameter:
+          parameter == freezed ? _value.parameter : parameter as List<dynamic>,
       dataRequirement: dataRequirement == freezed
           ? _value.dataRequirement
-          : dataRequirement as List<DataRequirement>,
-      content:
-          content == freezed ? _value.content : content as List<Attachment>,
+          : dataRequirement as List<dynamic>,
+      content: content == freezed ? _value.content : content as List<dynamic>,
     ));
   }
 }
@@ -1173,13 +1245,13 @@ class _$Library implements Library {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final FhirUri url;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final String version;
   @override
@@ -1203,13 +1275,13 @@ class _$Library implements Library {
   @override
   final String publisher;
   @override
-  final List<ContactDetail> contact;
+  final List<dynamic> contact;
   @override
   final Markdown description;
   @override
-  final List<UsageContext> useContext;
+  final List<dynamic> useContext;
   @override
-  final List<CodeableConcept> jurisdiction;
+  final List<dynamic> jurisdiction;
   @override
   final Markdown purpose;
   @override
@@ -1223,23 +1295,23 @@ class _$Library implements Library {
   @override
   final Period effectivePeriod;
   @override
-  final List<CodeableConcept> topic;
+  final List<dynamic> topic;
   @override
-  final List<ContactDetail> author;
+  final List<dynamic> author;
   @override
-  final List<ContactDetail> editor;
+  final List<dynamic> editor;
   @override
-  final List<ContactDetail> reviewer;
+  final List<dynamic> reviewer;
   @override
-  final List<ContactDetail> endorser;
+  final List<dynamic> endorser;
   @override
-  final List<RelatedArtifact> relatedArtifact;
+  final List<dynamic> relatedArtifact;
   @override
-  final List<ParameterDefinition> parameter;
+  final List<dynamic> parameter;
   @override
-  final List<DataRequirement> dataRequirement;
+  final List<dynamic> dataRequirement;
   @override
-  final List<Attachment> content;
+  final List<dynamic> content;
 
   @override
   String toString() {
@@ -1396,10 +1468,10 @@ class _$Library implements Library {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             FhirUri url,
-            List<Identifier> identifier,
+            List<dynamic> identifier,
             String version,
             String name,
             String title,
@@ -1411,25 +1483,25 @@ class _$Library implements Library {
             Reference subjectReference,
             FhirDateTime date,
             String publisher,
-            List<ContactDetail> contact,
+            List<dynamic> contact,
             Markdown description,
-            List<UsageContext> useContext,
-            List<CodeableConcept> jurisdiction,
+            List<dynamic> useContext,
+            List<dynamic> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<CodeableConcept> topic,
-            List<ContactDetail> author,
-            List<ContactDetail> editor,
-            List<ContactDetail> reviewer,
-            List<ContactDetail> endorser,
-            List<RelatedArtifact> relatedArtifact,
-            List<ParameterDefinition> parameter,
-            List<DataRequirement> dataRequirement,
-            List<Attachment> content),
+            List<dynamic> topic,
+            List<dynamic> author,
+            List<dynamic> editor,
+            List<dynamic> reviewer,
+            List<dynamic> endorser,
+            List<dynamic> relatedArtifact,
+            List<dynamic> parameter,
+            List<dynamic> dataRequirement,
+            List<dynamic> content),
     @required
         Result lists(
             String resourceType,
@@ -1439,9 +1511,9 @@ class _$Library implements Library {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -1451,14 +1523,14 @@ class _$Library implements Library {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<Annotation> note,
+            List<dynamic> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
         Result listEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept flag,
             bool deleted,
             FhirDateTime date,
@@ -1472,32 +1544,32 @@ class _$Library implements Library {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
             Period period,
-            List<Reference> referralRequest,
+            List<dynamic> referralRequest,
             Reference careManager,
-            List<Reference> team,
-            List<Reference> account),
+            List<dynamic> team,
+            List<dynamic> account),
     @required
         Result episodeOfCareStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EpisodeOfCareStatusHistoryStatus status,
             Period period),
     @required
         Result episodeOfCareDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept role,
             int rank),
@@ -1510,27 +1582,27 @@ class _$Library implements Library {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             Coding clas,
             List<dynamic> classHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
-            List<Reference> episodeOfCare,
-            List<Reference> basedOn,
+            List<dynamic> episodeOfCare,
+            List<dynamic> basedOn,
             List<dynamic> participant,
-            List<Reference> appointment,
+            List<dynamic> appointment,
             Period period,
             Duration length,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
             List<dynamic> diagnosis,
-            List<Reference> account,
+            List<dynamic> account,
             EncounterHospitalization hospitalization,
             List<dynamic> location,
             Reference serviceProvider,
@@ -1538,52 +1610,71 @@ class _$Library implements Library {
     @required
         Result encounterStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EncounterStatusHistoryStatus status,
             Period period),
     @required
-        Result encounterClassHistory(String id, List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension, Coding clas, Period period),
+        Result encounterClassHistory(String id, List<dynamic> extension,
+            List<dynamic> modifierExtension, Coding clas, Period period),
     @required
         Result encounterParticipant(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> type,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> type,
             Period period,
             Reference individual),
     @required
         Result encounterDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept use,
             int rank),
     @required
         Result encounterHospitalization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier preAdmissionIdentifier,
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<CodeableConcept> dietPreference,
-            List<CodeableConcept> specialCourtesy,
-            List<CodeableConcept> specialArrangement,
+            List<dynamic> dietPreference,
+            List<dynamic> specialCourtesy,
+            List<dynamic> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
         Result encounterLocation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference location,
             EncounterLocationStatus status,
             CodeableConcept physicalType,
             Period period),
+    @required
+        Result flag(
+            String resourceType,
+            Id id,
+            Meta meta,
+            FhirUri implicitRules,
+            Code language,
+            Narrative text,
+            List<dynamic> contained,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            FlagStatus status,
+            List<dynamic> category,
+            CodeableConcept code,
+            Reference subject,
+            Period period,
+            Reference encounter,
+            Reference author),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -1598,6 +1689,7 @@ class _$Library implements Library {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return library(
         resourceType,
         id,
@@ -1653,10 +1745,10 @@ class _$Library implements Library {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         FhirUri url,
-        List<Identifier> identifier,
+        List<dynamic> identifier,
         String version,
         String name,
         String title,
@@ -1668,25 +1760,25 @@ class _$Library implements Library {
         Reference subjectReference,
         FhirDateTime date,
         String publisher,
-        List<ContactDetail> contact,
+        List<dynamic> contact,
         Markdown description,
-        List<UsageContext> useContext,
-        List<CodeableConcept> jurisdiction,
+        List<dynamic> useContext,
+        List<dynamic> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<CodeableConcept> topic,
-        List<ContactDetail> author,
-        List<ContactDetail> editor,
-        List<ContactDetail> reviewer,
-        List<ContactDetail> endorser,
-        List<RelatedArtifact> relatedArtifact,
-        List<ParameterDefinition> parameter,
-        List<DataRequirement> dataRequirement,
-        List<Attachment> content),
+        List<dynamic> topic,
+        List<dynamic> author,
+        List<dynamic> editor,
+        List<dynamic> reviewer,
+        List<dynamic> endorser,
+        List<dynamic> relatedArtifact,
+        List<dynamic> parameter,
+        List<dynamic> dataRequirement,
+        List<dynamic> content),
     Result lists(
         String resourceType,
         Id id,
@@ -1695,9 +1787,9 @@ class _$Library implements Library {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -1707,13 +1799,13 @@ class _$Library implements Library {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<Annotation> note,
+        List<dynamic> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept flag,
         bool deleted,
         FhirDateTime date,
@@ -1726,30 +1818,30 @@ class _$Library implements Library {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
         Period period,
-        List<Reference> referralRequest,
+        List<dynamic> referralRequest,
         Reference careManager,
-        List<Reference> team,
-        List<Reference> account),
+        List<dynamic> team,
+        List<dynamic> account),
     Result episodeOfCareStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EpisodeOfCareStatusHistoryStatus status,
         Period period),
     Result episodeOfCareDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept role,
         int rank),
@@ -1761,74 +1853,92 @@ class _$Library implements Library {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         Coding clas,
         List<dynamic> classHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
-        List<Reference> episodeOfCare,
-        List<Reference> basedOn,
+        List<dynamic> episodeOfCare,
+        List<dynamic> basedOn,
         List<dynamic> participant,
-        List<Reference> appointment,
+        List<dynamic> appointment,
         Period period,
         Duration length,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
         List<dynamic> diagnosis,
-        List<Reference> account,
+        List<dynamic> account,
         EncounterHospitalization hospitalization,
         List<dynamic> location,
         Reference serviceProvider,
         Reference partOf),
     Result encounterStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EncounterStatusHistoryStatus status,
         Period period),
-    Result encounterClassHistory(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, Coding clas, Period period),
+    Result encounterClassHistory(String id, List<dynamic> extension,
+        List<dynamic> modifierExtension, Coding clas, Period period),
     Result encounterParticipant(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> type,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept use,
         int rank),
     Result encounterHospitalization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier preAdmissionIdentifier,
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<CodeableConcept> dietPreference,
-        List<CodeableConcept> specialCourtesy,
-        List<CodeableConcept> specialArrangement,
+        List<dynamic> dietPreference,
+        List<dynamic> specialCourtesy,
+        List<dynamic> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference location,
         EncounterLocationStatus status,
         CodeableConcept physicalType,
         Period period),
+    Result flag(
+        String resourceType,
+        Id id,
+        Meta meta,
+        FhirUri implicitRules,
+        Code language,
+        Narrative text,
+        List<dynamic> contained,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        FlagStatus status,
+        List<dynamic> category,
+        CodeableConcept code,
+        Reference subject,
+        Period period,
+        Reference encounter,
+        Reference author),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1896,6 +2006,7 @@ class _$Library implements Library {
     @required Result encounterDiagnosis(EncounterDiagnosis value),
     @required Result encounterHospitalization(EncounterHospitalization value),
     @required Result encounterLocation(EncounterLocation value),
+    @required Result flag(Flag value),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -1910,6 +2021,7 @@ class _$Library implements Library {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return library(this);
   }
 
@@ -1929,6 +2041,7 @@ class _$Library implements Library {
     Result encounterDiagnosis(EncounterDiagnosis value),
     Result encounterHospitalization(EncounterHospitalization value),
     Result encounterLocation(EncounterLocation value),
+    Result flag(Flag value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1953,10 +2066,10 @@ abstract class Library implements Management {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       FhirUri url,
-      List<Identifier> identifier,
+      List<dynamic> identifier,
       String version,
       String name,
       String title,
@@ -1968,25 +2081,25 @@ abstract class Library implements Management {
       Reference subjectReference,
       FhirDateTime date,
       String publisher,
-      List<ContactDetail> contact,
+      List<dynamic> contact,
       Markdown description,
-      List<UsageContext> useContext,
-      List<CodeableConcept> jurisdiction,
+      List<dynamic> useContext,
+      List<dynamic> jurisdiction,
       Markdown purpose,
       String usage,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<CodeableConcept> topic,
-      List<ContactDetail> author,
-      List<ContactDetail> editor,
-      List<ContactDetail> reviewer,
-      List<ContactDetail> endorser,
-      List<RelatedArtifact> relatedArtifact,
-      List<ParameterDefinition> parameter,
-      List<DataRequirement> dataRequirement,
-      List<Attachment> content}) = _$Library;
+      List<dynamic> topic,
+      List<dynamic> author,
+      List<dynamic> editor,
+      List<dynamic> reviewer,
+      List<dynamic> endorser,
+      List<dynamic> relatedArtifact,
+      List<dynamic> parameter,
+      List<dynamic> dataRequirement,
+      List<dynamic> content}) = _$Library;
 
   factory Library.fromJson(Map<String, dynamic> json) = _$Library.fromJson;
 
@@ -1998,11 +2111,11 @@ abstract class Library implements Management {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   FhirUri get url;
-  List<Identifier> get identifier;
+  List<dynamic> get identifier;
   String get version;
   String get name;
   String get title;
@@ -2014,25 +2127,25 @@ abstract class Library implements Management {
   Reference get subjectReference;
   FhirDateTime get date;
   String get publisher;
-  List<ContactDetail> get contact;
+  List<dynamic> get contact;
   Markdown get description;
-  List<UsageContext> get useContext;
-  List<CodeableConcept> get jurisdiction;
+  List<dynamic> get useContext;
+  List<dynamic> get jurisdiction;
   Markdown get purpose;
   String get usage;
   Markdown get copyright;
   Date get approvalDate;
   Date get lastReviewDate;
   Period get effectivePeriod;
-  List<CodeableConcept> get topic;
-  List<ContactDetail> get author;
-  List<ContactDetail> get editor;
-  List<ContactDetail> get reviewer;
-  List<ContactDetail> get endorser;
-  List<RelatedArtifact> get relatedArtifact;
-  List<ParameterDefinition> get parameter;
-  List<DataRequirement> get dataRequirement;
-  List<Attachment> get content;
+  List<dynamic> get topic;
+  List<dynamic> get author;
+  List<dynamic> get editor;
+  List<dynamic> get reviewer;
+  List<dynamic> get endorser;
+  List<dynamic> get relatedArtifact;
+  List<dynamic> get parameter;
+  List<dynamic> get dataRequirement;
+  List<dynamic> get content;
   @override
   $LibraryCopyWith<Library> get copyWith;
 }
@@ -2049,9 +2162,9 @@ abstract class $ListsCopyWith<$Res> implements $ManagementCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       ListStatus status,
       ListMode mode,
       String title,
@@ -2061,7 +2174,7 @@ abstract class $ListsCopyWith<$Res> implements $ManagementCopyWith<$Res> {
       FhirDateTime date,
       Reference source,
       CodeableConcept orderedBy,
-      List<Annotation> note,
+      List<dynamic> note,
       List<dynamic> entry,
       CodeableConcept emptyReason});
 }
@@ -2112,15 +2225,14 @@ class _$ListsCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       status: status == freezed ? _value.status : status as ListStatus,
       mode: mode == freezed ? _value.mode : mode as ListMode,
       title: title == freezed ? _value.title : title as String,
@@ -2133,7 +2245,7 @@ class _$ListsCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
       orderedBy: orderedBy == freezed
           ? _value.orderedBy
           : orderedBy as CodeableConcept,
-      note: note == freezed ? _value.note : note as List<Annotation>,
+      note: note == freezed ? _value.note : note as List<dynamic>,
       entry: entry == freezed ? _value.entry : entry as List<dynamic>,
       emptyReason: emptyReason == freezed
           ? _value.emptyReason
@@ -2186,11 +2298,11 @@ class _$Lists implements Lists {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final ListStatus status;
   @override
@@ -2210,7 +2322,7 @@ class _$Lists implements Lists {
   @override
   final CodeableConcept orderedBy;
   @override
-  final List<Annotation> note;
+  final List<dynamic> note;
   @override
   final List<dynamic> entry;
   @override
@@ -2324,10 +2436,10 @@ class _$Lists implements Lists {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             FhirUri url,
-            List<Identifier> identifier,
+            List<dynamic> identifier,
             String version,
             String name,
             String title,
@@ -2339,25 +2451,25 @@ class _$Lists implements Lists {
             Reference subjectReference,
             FhirDateTime date,
             String publisher,
-            List<ContactDetail> contact,
+            List<dynamic> contact,
             Markdown description,
-            List<UsageContext> useContext,
-            List<CodeableConcept> jurisdiction,
+            List<dynamic> useContext,
+            List<dynamic> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<CodeableConcept> topic,
-            List<ContactDetail> author,
-            List<ContactDetail> editor,
-            List<ContactDetail> reviewer,
-            List<ContactDetail> endorser,
-            List<RelatedArtifact> relatedArtifact,
-            List<ParameterDefinition> parameter,
-            List<DataRequirement> dataRequirement,
-            List<Attachment> content),
+            List<dynamic> topic,
+            List<dynamic> author,
+            List<dynamic> editor,
+            List<dynamic> reviewer,
+            List<dynamic> endorser,
+            List<dynamic> relatedArtifact,
+            List<dynamic> parameter,
+            List<dynamic> dataRequirement,
+            List<dynamic> content),
     @required
         Result lists(
             String resourceType,
@@ -2367,9 +2479,9 @@ class _$Lists implements Lists {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -2379,14 +2491,14 @@ class _$Lists implements Lists {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<Annotation> note,
+            List<dynamic> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
         Result listEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept flag,
             bool deleted,
             FhirDateTime date,
@@ -2400,32 +2512,32 @@ class _$Lists implements Lists {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
             Period period,
-            List<Reference> referralRequest,
+            List<dynamic> referralRequest,
             Reference careManager,
-            List<Reference> team,
-            List<Reference> account),
+            List<dynamic> team,
+            List<dynamic> account),
     @required
         Result episodeOfCareStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EpisodeOfCareStatusHistoryStatus status,
             Period period),
     @required
         Result episodeOfCareDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept role,
             int rank),
@@ -2438,27 +2550,27 @@ class _$Lists implements Lists {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             Coding clas,
             List<dynamic> classHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
-            List<Reference> episodeOfCare,
-            List<Reference> basedOn,
+            List<dynamic> episodeOfCare,
+            List<dynamic> basedOn,
             List<dynamic> participant,
-            List<Reference> appointment,
+            List<dynamic> appointment,
             Period period,
             Duration length,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
             List<dynamic> diagnosis,
-            List<Reference> account,
+            List<dynamic> account,
             EncounterHospitalization hospitalization,
             List<dynamic> location,
             Reference serviceProvider,
@@ -2466,52 +2578,71 @@ class _$Lists implements Lists {
     @required
         Result encounterStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EncounterStatusHistoryStatus status,
             Period period),
     @required
-        Result encounterClassHistory(String id, List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension, Coding clas, Period period),
+        Result encounterClassHistory(String id, List<dynamic> extension,
+            List<dynamic> modifierExtension, Coding clas, Period period),
     @required
         Result encounterParticipant(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> type,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> type,
             Period period,
             Reference individual),
     @required
         Result encounterDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept use,
             int rank),
     @required
         Result encounterHospitalization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier preAdmissionIdentifier,
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<CodeableConcept> dietPreference,
-            List<CodeableConcept> specialCourtesy,
-            List<CodeableConcept> specialArrangement,
+            List<dynamic> dietPreference,
+            List<dynamic> specialCourtesy,
+            List<dynamic> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
         Result encounterLocation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference location,
             EncounterLocationStatus status,
             CodeableConcept physicalType,
             Period period),
+    @required
+        Result flag(
+            String resourceType,
+            Id id,
+            Meta meta,
+            FhirUri implicitRules,
+            Code language,
+            Narrative text,
+            List<dynamic> contained,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            FlagStatus status,
+            List<dynamic> category,
+            CodeableConcept code,
+            Reference subject,
+            Period period,
+            Reference encounter,
+            Reference author),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -2526,6 +2657,7 @@ class _$Lists implements Lists {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return lists(
         resourceType,
         id,
@@ -2562,10 +2694,10 @@ class _$Lists implements Lists {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         FhirUri url,
-        List<Identifier> identifier,
+        List<dynamic> identifier,
         String version,
         String name,
         String title,
@@ -2577,25 +2709,25 @@ class _$Lists implements Lists {
         Reference subjectReference,
         FhirDateTime date,
         String publisher,
-        List<ContactDetail> contact,
+        List<dynamic> contact,
         Markdown description,
-        List<UsageContext> useContext,
-        List<CodeableConcept> jurisdiction,
+        List<dynamic> useContext,
+        List<dynamic> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<CodeableConcept> topic,
-        List<ContactDetail> author,
-        List<ContactDetail> editor,
-        List<ContactDetail> reviewer,
-        List<ContactDetail> endorser,
-        List<RelatedArtifact> relatedArtifact,
-        List<ParameterDefinition> parameter,
-        List<DataRequirement> dataRequirement,
-        List<Attachment> content),
+        List<dynamic> topic,
+        List<dynamic> author,
+        List<dynamic> editor,
+        List<dynamic> reviewer,
+        List<dynamic> endorser,
+        List<dynamic> relatedArtifact,
+        List<dynamic> parameter,
+        List<dynamic> dataRequirement,
+        List<dynamic> content),
     Result lists(
         String resourceType,
         Id id,
@@ -2604,9 +2736,9 @@ class _$Lists implements Lists {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -2616,13 +2748,13 @@ class _$Lists implements Lists {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<Annotation> note,
+        List<dynamic> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept flag,
         bool deleted,
         FhirDateTime date,
@@ -2635,30 +2767,30 @@ class _$Lists implements Lists {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
         Period period,
-        List<Reference> referralRequest,
+        List<dynamic> referralRequest,
         Reference careManager,
-        List<Reference> team,
-        List<Reference> account),
+        List<dynamic> team,
+        List<dynamic> account),
     Result episodeOfCareStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EpisodeOfCareStatusHistoryStatus status,
         Period period),
     Result episodeOfCareDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept role,
         int rank),
@@ -2670,74 +2802,92 @@ class _$Lists implements Lists {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         Coding clas,
         List<dynamic> classHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
-        List<Reference> episodeOfCare,
-        List<Reference> basedOn,
+        List<dynamic> episodeOfCare,
+        List<dynamic> basedOn,
         List<dynamic> participant,
-        List<Reference> appointment,
+        List<dynamic> appointment,
         Period period,
         Duration length,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
         List<dynamic> diagnosis,
-        List<Reference> account,
+        List<dynamic> account,
         EncounterHospitalization hospitalization,
         List<dynamic> location,
         Reference serviceProvider,
         Reference partOf),
     Result encounterStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EncounterStatusHistoryStatus status,
         Period period),
-    Result encounterClassHistory(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, Coding clas, Period period),
+    Result encounterClassHistory(String id, List<dynamic> extension,
+        List<dynamic> modifierExtension, Coding clas, Period period),
     Result encounterParticipant(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> type,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept use,
         int rank),
     Result encounterHospitalization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier preAdmissionIdentifier,
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<CodeableConcept> dietPreference,
-        List<CodeableConcept> specialCourtesy,
-        List<CodeableConcept> specialArrangement,
+        List<dynamic> dietPreference,
+        List<dynamic> specialCourtesy,
+        List<dynamic> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference location,
         EncounterLocationStatus status,
         CodeableConcept physicalType,
         Period period),
+    Result flag(
+        String resourceType,
+        Id id,
+        Meta meta,
+        FhirUri implicitRules,
+        Code language,
+        Narrative text,
+        List<dynamic> contained,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        FlagStatus status,
+        List<dynamic> category,
+        CodeableConcept code,
+        Reference subject,
+        Period period,
+        Reference encounter,
+        Reference author),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2786,6 +2936,7 @@ class _$Lists implements Lists {
     @required Result encounterDiagnosis(EncounterDiagnosis value),
     @required Result encounterHospitalization(EncounterHospitalization value),
     @required Result encounterLocation(EncounterLocation value),
+    @required Result flag(Flag value),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -2800,6 +2951,7 @@ class _$Lists implements Lists {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return lists(this);
   }
 
@@ -2819,6 +2971,7 @@ class _$Lists implements Lists {
     Result encounterDiagnosis(EncounterDiagnosis value),
     Result encounterHospitalization(EncounterHospitalization value),
     Result encounterLocation(EncounterLocation value),
+    Result flag(Flag value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2843,9 +2996,9 @@ abstract class Lists implements Management {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       ListStatus status,
       ListMode mode,
       String title,
@@ -2855,7 +3008,7 @@ abstract class Lists implements Management {
       FhirDateTime date,
       Reference source,
       CodeableConcept orderedBy,
-      List<Annotation> note,
+      List<dynamic> note,
       List<dynamic> entry,
       CodeableConcept emptyReason}) = _$Lists;
 
@@ -2869,10 +3022,10 @@ abstract class Lists implements Management {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   ListStatus get status;
   ListMode get mode;
   String get title;
@@ -2882,7 +3035,7 @@ abstract class Lists implements Management {
   FhirDateTime get date;
   Reference get source;
   CodeableConcept get orderedBy;
-  List<Annotation> get note;
+  List<dynamic> get note;
   List<dynamic> get entry;
   CodeableConcept get emptyReason;
   @override
@@ -2895,8 +3048,8 @@ abstract class $ListEntryCopyWith<$Res> implements $ManagementCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       CodeableConcept flag,
       bool deleted,
       FhirDateTime date,
@@ -2923,12 +3076,11 @@ class _$ListEntryCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
   }) {
     return _then(ListEntry(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       flag: flag == freezed ? _value.flag : flag as CodeableConcept,
       deleted: deleted == freezed ? _value.deleted : deleted as bool,
       date: date == freezed ? _value.date : date as FhirDateTime,
@@ -2954,9 +3106,9 @@ class _$ListEntry implements ListEntry {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept flag;
   @override
@@ -3021,10 +3173,10 @@ class _$ListEntry implements ListEntry {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             FhirUri url,
-            List<Identifier> identifier,
+            List<dynamic> identifier,
             String version,
             String name,
             String title,
@@ -3036,25 +3188,25 @@ class _$ListEntry implements ListEntry {
             Reference subjectReference,
             FhirDateTime date,
             String publisher,
-            List<ContactDetail> contact,
+            List<dynamic> contact,
             Markdown description,
-            List<UsageContext> useContext,
-            List<CodeableConcept> jurisdiction,
+            List<dynamic> useContext,
+            List<dynamic> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<CodeableConcept> topic,
-            List<ContactDetail> author,
-            List<ContactDetail> editor,
-            List<ContactDetail> reviewer,
-            List<ContactDetail> endorser,
-            List<RelatedArtifact> relatedArtifact,
-            List<ParameterDefinition> parameter,
-            List<DataRequirement> dataRequirement,
-            List<Attachment> content),
+            List<dynamic> topic,
+            List<dynamic> author,
+            List<dynamic> editor,
+            List<dynamic> reviewer,
+            List<dynamic> endorser,
+            List<dynamic> relatedArtifact,
+            List<dynamic> parameter,
+            List<dynamic> dataRequirement,
+            List<dynamic> content),
     @required
         Result lists(
             String resourceType,
@@ -3064,9 +3216,9 @@ class _$ListEntry implements ListEntry {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -3076,14 +3228,14 @@ class _$ListEntry implements ListEntry {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<Annotation> note,
+            List<dynamic> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
         Result listEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept flag,
             bool deleted,
             FhirDateTime date,
@@ -3097,32 +3249,32 @@ class _$ListEntry implements ListEntry {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
             Period period,
-            List<Reference> referralRequest,
+            List<dynamic> referralRequest,
             Reference careManager,
-            List<Reference> team,
-            List<Reference> account),
+            List<dynamic> team,
+            List<dynamic> account),
     @required
         Result episodeOfCareStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EpisodeOfCareStatusHistoryStatus status,
             Period period),
     @required
         Result episodeOfCareDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept role,
             int rank),
@@ -3135,27 +3287,27 @@ class _$ListEntry implements ListEntry {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             Coding clas,
             List<dynamic> classHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
-            List<Reference> episodeOfCare,
-            List<Reference> basedOn,
+            List<dynamic> episodeOfCare,
+            List<dynamic> basedOn,
             List<dynamic> participant,
-            List<Reference> appointment,
+            List<dynamic> appointment,
             Period period,
             Duration length,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
             List<dynamic> diagnosis,
-            List<Reference> account,
+            List<dynamic> account,
             EncounterHospitalization hospitalization,
             List<dynamic> location,
             Reference serviceProvider,
@@ -3163,52 +3315,71 @@ class _$ListEntry implements ListEntry {
     @required
         Result encounterStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EncounterStatusHistoryStatus status,
             Period period),
     @required
-        Result encounterClassHistory(String id, List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension, Coding clas, Period period),
+        Result encounterClassHistory(String id, List<dynamic> extension,
+            List<dynamic> modifierExtension, Coding clas, Period period),
     @required
         Result encounterParticipant(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> type,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> type,
             Period period,
             Reference individual),
     @required
         Result encounterDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept use,
             int rank),
     @required
         Result encounterHospitalization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier preAdmissionIdentifier,
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<CodeableConcept> dietPreference,
-            List<CodeableConcept> specialCourtesy,
-            List<CodeableConcept> specialArrangement,
+            List<dynamic> dietPreference,
+            List<dynamic> specialCourtesy,
+            List<dynamic> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
         Result encounterLocation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference location,
             EncounterLocationStatus status,
             CodeableConcept physicalType,
             Period period),
+    @required
+        Result flag(
+            String resourceType,
+            Id id,
+            Meta meta,
+            FhirUri implicitRules,
+            Code language,
+            Narrative text,
+            List<dynamic> contained,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            FlagStatus status,
+            List<dynamic> category,
+            CodeableConcept code,
+            Reference subject,
+            Period period,
+            Reference encounter,
+            Reference author),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -3223,8 +3394,9 @@ class _$ListEntry implements ListEntry {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return listEntry(
-        id, extension, modifierExtension, flag, deleted, date, item);
+        id, extension, modifierExtension, this.flag, deleted, date, item);
   }
 
   @override
@@ -3238,10 +3410,10 @@ class _$ListEntry implements ListEntry {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         FhirUri url,
-        List<Identifier> identifier,
+        List<dynamic> identifier,
         String version,
         String name,
         String title,
@@ -3253,25 +3425,25 @@ class _$ListEntry implements ListEntry {
         Reference subjectReference,
         FhirDateTime date,
         String publisher,
-        List<ContactDetail> contact,
+        List<dynamic> contact,
         Markdown description,
-        List<UsageContext> useContext,
-        List<CodeableConcept> jurisdiction,
+        List<dynamic> useContext,
+        List<dynamic> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<CodeableConcept> topic,
-        List<ContactDetail> author,
-        List<ContactDetail> editor,
-        List<ContactDetail> reviewer,
-        List<ContactDetail> endorser,
-        List<RelatedArtifact> relatedArtifact,
-        List<ParameterDefinition> parameter,
-        List<DataRequirement> dataRequirement,
-        List<Attachment> content),
+        List<dynamic> topic,
+        List<dynamic> author,
+        List<dynamic> editor,
+        List<dynamic> reviewer,
+        List<dynamic> endorser,
+        List<dynamic> relatedArtifact,
+        List<dynamic> parameter,
+        List<dynamic> dataRequirement,
+        List<dynamic> content),
     Result lists(
         String resourceType,
         Id id,
@@ -3280,9 +3452,9 @@ class _$ListEntry implements ListEntry {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -3292,13 +3464,13 @@ class _$ListEntry implements ListEntry {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<Annotation> note,
+        List<dynamic> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept flag,
         bool deleted,
         FhirDateTime date,
@@ -3311,30 +3483,30 @@ class _$ListEntry implements ListEntry {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
         Period period,
-        List<Reference> referralRequest,
+        List<dynamic> referralRequest,
         Reference careManager,
-        List<Reference> team,
-        List<Reference> account),
+        List<dynamic> team,
+        List<dynamic> account),
     Result episodeOfCareStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EpisodeOfCareStatusHistoryStatus status,
         Period period),
     Result episodeOfCareDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept role,
         int rank),
@@ -3346,80 +3518,98 @@ class _$ListEntry implements ListEntry {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         Coding clas,
         List<dynamic> classHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
-        List<Reference> episodeOfCare,
-        List<Reference> basedOn,
+        List<dynamic> episodeOfCare,
+        List<dynamic> basedOn,
         List<dynamic> participant,
-        List<Reference> appointment,
+        List<dynamic> appointment,
         Period period,
         Duration length,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
         List<dynamic> diagnosis,
-        List<Reference> account,
+        List<dynamic> account,
         EncounterHospitalization hospitalization,
         List<dynamic> location,
         Reference serviceProvider,
         Reference partOf),
     Result encounterStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EncounterStatusHistoryStatus status,
         Period period),
-    Result encounterClassHistory(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, Coding clas, Period period),
+    Result encounterClassHistory(String id, List<dynamic> extension,
+        List<dynamic> modifierExtension, Coding clas, Period period),
     Result encounterParticipant(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> type,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept use,
         int rank),
     Result encounterHospitalization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier preAdmissionIdentifier,
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<CodeableConcept> dietPreference,
-        List<CodeableConcept> specialCourtesy,
-        List<CodeableConcept> specialArrangement,
+        List<dynamic> dietPreference,
+        List<dynamic> specialCourtesy,
+        List<dynamic> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference location,
         EncounterLocationStatus status,
         CodeableConcept physicalType,
         Period period),
+    Result flag(
+        String resourceType,
+        Id id,
+        Meta meta,
+        FhirUri implicitRules,
+        Code language,
+        Narrative text,
+        List<dynamic> contained,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        FlagStatus status,
+        List<dynamic> category,
+        CodeableConcept code,
+        Reference subject,
+        Period period,
+        Reference encounter,
+        Reference author),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (listEntry != null) {
       return listEntry(
-          id, extension, modifierExtension, flag, deleted, date, item);
+          id, extension, modifierExtension, this.flag, deleted, date, item);
     }
     return orElse();
   }
@@ -3441,6 +3631,7 @@ class _$ListEntry implements ListEntry {
     @required Result encounterDiagnosis(EncounterDiagnosis value),
     @required Result encounterHospitalization(EncounterHospitalization value),
     @required Result encounterLocation(EncounterLocation value),
+    @required Result flag(Flag value),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -3455,6 +3646,7 @@ class _$ListEntry implements ListEntry {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return listEntry(this);
   }
 
@@ -3474,6 +3666,7 @@ class _$ListEntry implements ListEntry {
     Result encounterDiagnosis(EncounterDiagnosis value),
     Result encounterHospitalization(EncounterHospitalization value),
     Result encounterLocation(EncounterLocation value),
+    Result flag(Flag value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3492,8 +3685,8 @@ class _$ListEntry implements ListEntry {
 abstract class ListEntry implements Management {
   const factory ListEntry(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       CodeableConcept flag,
       bool deleted,
       FhirDateTime date,
@@ -3503,9 +3696,9 @@ abstract class ListEntry implements Management {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get flag;
   bool get deleted;
   FhirDateTime get date;
@@ -3528,20 +3721,20 @@ abstract class $EpisodeOfCareCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       EpisodeOfCareStatus status,
       List<dynamic> statusHistory,
-      List<CodeableConcept> type,
+      List<dynamic> type,
       List<dynamic> diagnosis,
       Reference patient,
       Reference managingOrganization,
       Period period,
-      List<Reference> referralRequest,
+      List<dynamic> referralRequest,
       Reference careManager,
-      List<Reference> team,
-      List<Reference> account});
+      List<dynamic> team,
+      List<dynamic> account});
 }
 
 class _$EpisodeOfCareCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
@@ -3590,20 +3783,19 @@ class _$EpisodeOfCareCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       status: status == freezed ? _value.status : status as EpisodeOfCareStatus,
       statusHistory: statusHistory == freezed
           ? _value.statusHistory
           : statusHistory as List<dynamic>,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>,
+      type: type == freezed ? _value.type : type as List<dynamic>,
       diagnosis:
           diagnosis == freezed ? _value.diagnosis : diagnosis as List<dynamic>,
       patient: patient == freezed ? _value.patient : patient as Reference,
@@ -3613,12 +3805,12 @@ class _$EpisodeOfCareCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
       period: period == freezed ? _value.period : period as Period,
       referralRequest: referralRequest == freezed
           ? _value.referralRequest
-          : referralRequest as List<Reference>,
+          : referralRequest as List<dynamic>,
       careManager: careManager == freezed
           ? _value.careManager
           : careManager as Reference,
-      team: team == freezed ? _value.team : team as List<Reference>,
-      account: account == freezed ? _value.account : account as List<Reference>,
+      team: team == freezed ? _value.team : team as List<dynamic>,
+      account: account == freezed ? _value.account : account as List<dynamic>,
     ));
   }
 }
@@ -3666,17 +3858,17 @@ class _$EpisodeOfCare implements EpisodeOfCare {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final EpisodeOfCareStatus status;
   @override
   final List<dynamic> statusHistory;
   @override
-  final List<CodeableConcept> type;
+  final List<dynamic> type;
   @override
   final List<dynamic> diagnosis;
   @override
@@ -3686,13 +3878,13 @@ class _$EpisodeOfCare implements EpisodeOfCare {
   @override
   final Period period;
   @override
-  final List<Reference> referralRequest;
+  final List<dynamic> referralRequest;
   @override
   final Reference careManager;
   @override
-  final List<Reference> team;
+  final List<dynamic> team;
   @override
-  final List<Reference> account;
+  final List<dynamic> account;
 
   @override
   String toString() {
@@ -3801,10 +3993,10 @@ class _$EpisodeOfCare implements EpisodeOfCare {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             FhirUri url,
-            List<Identifier> identifier,
+            List<dynamic> identifier,
             String version,
             String name,
             String title,
@@ -3816,25 +4008,25 @@ class _$EpisodeOfCare implements EpisodeOfCare {
             Reference subjectReference,
             FhirDateTime date,
             String publisher,
-            List<ContactDetail> contact,
+            List<dynamic> contact,
             Markdown description,
-            List<UsageContext> useContext,
-            List<CodeableConcept> jurisdiction,
+            List<dynamic> useContext,
+            List<dynamic> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<CodeableConcept> topic,
-            List<ContactDetail> author,
-            List<ContactDetail> editor,
-            List<ContactDetail> reviewer,
-            List<ContactDetail> endorser,
-            List<RelatedArtifact> relatedArtifact,
-            List<ParameterDefinition> parameter,
-            List<DataRequirement> dataRequirement,
-            List<Attachment> content),
+            List<dynamic> topic,
+            List<dynamic> author,
+            List<dynamic> editor,
+            List<dynamic> reviewer,
+            List<dynamic> endorser,
+            List<dynamic> relatedArtifact,
+            List<dynamic> parameter,
+            List<dynamic> dataRequirement,
+            List<dynamic> content),
     @required
         Result lists(
             String resourceType,
@@ -3844,9 +4036,9 @@ class _$EpisodeOfCare implements EpisodeOfCare {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -3856,14 +4048,14 @@ class _$EpisodeOfCare implements EpisodeOfCare {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<Annotation> note,
+            List<dynamic> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
         Result listEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept flag,
             bool deleted,
             FhirDateTime date,
@@ -3877,32 +4069,32 @@ class _$EpisodeOfCare implements EpisodeOfCare {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
             Period period,
-            List<Reference> referralRequest,
+            List<dynamic> referralRequest,
             Reference careManager,
-            List<Reference> team,
-            List<Reference> account),
+            List<dynamic> team,
+            List<dynamic> account),
     @required
         Result episodeOfCareStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EpisodeOfCareStatusHistoryStatus status,
             Period period),
     @required
         Result episodeOfCareDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept role,
             int rank),
@@ -3915,27 +4107,27 @@ class _$EpisodeOfCare implements EpisodeOfCare {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             Coding clas,
             List<dynamic> classHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
-            List<Reference> episodeOfCare,
-            List<Reference> basedOn,
+            List<dynamic> episodeOfCare,
+            List<dynamic> basedOn,
             List<dynamic> participant,
-            List<Reference> appointment,
+            List<dynamic> appointment,
             Period period,
             Duration length,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
             List<dynamic> diagnosis,
-            List<Reference> account,
+            List<dynamic> account,
             EncounterHospitalization hospitalization,
             List<dynamic> location,
             Reference serviceProvider,
@@ -3943,52 +4135,71 @@ class _$EpisodeOfCare implements EpisodeOfCare {
     @required
         Result encounterStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EncounterStatusHistoryStatus status,
             Period period),
     @required
-        Result encounterClassHistory(String id, List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension, Coding clas, Period period),
+        Result encounterClassHistory(String id, List<dynamic> extension,
+            List<dynamic> modifierExtension, Coding clas, Period period),
     @required
         Result encounterParticipant(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> type,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> type,
             Period period,
             Reference individual),
     @required
         Result encounterDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept use,
             int rank),
     @required
         Result encounterHospitalization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier preAdmissionIdentifier,
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<CodeableConcept> dietPreference,
-            List<CodeableConcept> specialCourtesy,
-            List<CodeableConcept> specialArrangement,
+            List<dynamic> dietPreference,
+            List<dynamic> specialCourtesy,
+            List<dynamic> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
         Result encounterLocation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference location,
             EncounterLocationStatus status,
             CodeableConcept physicalType,
             Period period),
+    @required
+        Result flag(
+            String resourceType,
+            Id id,
+            Meta meta,
+            FhirUri implicitRules,
+            Code language,
+            Narrative text,
+            List<dynamic> contained,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            FlagStatus status,
+            List<dynamic> category,
+            CodeableConcept code,
+            Reference subject,
+            Period period,
+            Reference encounter,
+            Reference author),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -4003,6 +4214,7 @@ class _$EpisodeOfCare implements EpisodeOfCare {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return episodeOfCare(
         resourceType,
         id,
@@ -4038,10 +4250,10 @@ class _$EpisodeOfCare implements EpisodeOfCare {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         FhirUri url,
-        List<Identifier> identifier,
+        List<dynamic> identifier,
         String version,
         String name,
         String title,
@@ -4053,25 +4265,25 @@ class _$EpisodeOfCare implements EpisodeOfCare {
         Reference subjectReference,
         FhirDateTime date,
         String publisher,
-        List<ContactDetail> contact,
+        List<dynamic> contact,
         Markdown description,
-        List<UsageContext> useContext,
-        List<CodeableConcept> jurisdiction,
+        List<dynamic> useContext,
+        List<dynamic> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<CodeableConcept> topic,
-        List<ContactDetail> author,
-        List<ContactDetail> editor,
-        List<ContactDetail> reviewer,
-        List<ContactDetail> endorser,
-        List<RelatedArtifact> relatedArtifact,
-        List<ParameterDefinition> parameter,
-        List<DataRequirement> dataRequirement,
-        List<Attachment> content),
+        List<dynamic> topic,
+        List<dynamic> author,
+        List<dynamic> editor,
+        List<dynamic> reviewer,
+        List<dynamic> endorser,
+        List<dynamic> relatedArtifact,
+        List<dynamic> parameter,
+        List<dynamic> dataRequirement,
+        List<dynamic> content),
     Result lists(
         String resourceType,
         Id id,
@@ -4080,9 +4292,9 @@ class _$EpisodeOfCare implements EpisodeOfCare {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -4092,13 +4304,13 @@ class _$EpisodeOfCare implements EpisodeOfCare {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<Annotation> note,
+        List<dynamic> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept flag,
         bool deleted,
         FhirDateTime date,
@@ -4111,30 +4323,30 @@ class _$EpisodeOfCare implements EpisodeOfCare {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
         Period period,
-        List<Reference> referralRequest,
+        List<dynamic> referralRequest,
         Reference careManager,
-        List<Reference> team,
-        List<Reference> account),
+        List<dynamic> team,
+        List<dynamic> account),
     Result episodeOfCareStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EpisodeOfCareStatusHistoryStatus status,
         Period period),
     Result episodeOfCareDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept role,
         int rank),
@@ -4146,74 +4358,92 @@ class _$EpisodeOfCare implements EpisodeOfCare {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         Coding clas,
         List<dynamic> classHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
-        List<Reference> episodeOfCare,
-        List<Reference> basedOn,
+        List<dynamic> episodeOfCare,
+        List<dynamic> basedOn,
         List<dynamic> participant,
-        List<Reference> appointment,
+        List<dynamic> appointment,
         Period period,
         Duration length,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
         List<dynamic> diagnosis,
-        List<Reference> account,
+        List<dynamic> account,
         EncounterHospitalization hospitalization,
         List<dynamic> location,
         Reference serviceProvider,
         Reference partOf),
     Result encounterStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EncounterStatusHistoryStatus status,
         Period period),
-    Result encounterClassHistory(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, Coding clas, Period period),
+    Result encounterClassHistory(String id, List<dynamic> extension,
+        List<dynamic> modifierExtension, Coding clas, Period period),
     Result encounterParticipant(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> type,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept use,
         int rank),
     Result encounterHospitalization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier preAdmissionIdentifier,
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<CodeableConcept> dietPreference,
-        List<CodeableConcept> specialCourtesy,
-        List<CodeableConcept> specialArrangement,
+        List<dynamic> dietPreference,
+        List<dynamic> specialCourtesy,
+        List<dynamic> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference location,
         EncounterLocationStatus status,
         CodeableConcept physicalType,
         Period period),
+    Result flag(
+        String resourceType,
+        Id id,
+        Meta meta,
+        FhirUri implicitRules,
+        Code language,
+        Narrative text,
+        List<dynamic> contained,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        FlagStatus status,
+        List<dynamic> category,
+        CodeableConcept code,
+        Reference subject,
+        Period period,
+        Reference encounter,
+        Reference author),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4261,6 +4491,7 @@ class _$EpisodeOfCare implements EpisodeOfCare {
     @required Result encounterDiagnosis(EncounterDiagnosis value),
     @required Result encounterHospitalization(EncounterHospitalization value),
     @required Result encounterLocation(EncounterLocation value),
+    @required Result flag(Flag value),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -4275,6 +4506,7 @@ class _$EpisodeOfCare implements EpisodeOfCare {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return episodeOfCare(this);
   }
 
@@ -4294,6 +4526,7 @@ class _$EpisodeOfCare implements EpisodeOfCare {
     Result encounterDiagnosis(EncounterDiagnosis value),
     Result encounterHospitalization(EncounterHospitalization value),
     Result encounterLocation(EncounterLocation value),
+    Result flag(Flag value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4318,20 +4551,20 @@ abstract class EpisodeOfCare implements Management {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       EpisodeOfCareStatus status,
       List<dynamic> statusHistory,
-      List<CodeableConcept> type,
+      List<dynamic> type,
       List<dynamic> diagnosis,
       Reference patient,
       Reference managingOrganization,
       Period period,
-      List<Reference> referralRequest,
+      List<dynamic> referralRequest,
       Reference careManager,
-      List<Reference> team,
-      List<Reference> account}) = _$EpisodeOfCare;
+      List<dynamic> team,
+      List<dynamic> account}) = _$EpisodeOfCare;
 
   factory EpisodeOfCare.fromJson(Map<String, dynamic> json) =
       _$EpisodeOfCare.fromJson;
@@ -4344,21 +4577,21 @@ abstract class EpisodeOfCare implements Management {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   EpisodeOfCareStatus get status;
   List<dynamic> get statusHistory;
-  List<CodeableConcept> get type;
+  List<dynamic> get type;
   List<dynamic> get diagnosis;
   Reference get patient;
   Reference get managingOrganization;
   Period get period;
-  List<Reference> get referralRequest;
+  List<dynamic> get referralRequest;
   Reference get careManager;
-  List<Reference> get team;
-  List<Reference> get account;
+  List<dynamic> get team;
+  List<dynamic> get account;
   @override
   $EpisodeOfCareCopyWith<EpisodeOfCare> get copyWith;
 }
@@ -4371,8 +4604,8 @@ abstract class $EpisodeOfCareStatusHistoryCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       EpisodeOfCareStatusHistoryStatus status,
       Period period});
 }
@@ -4398,12 +4631,11 @@ class _$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
   }) {
     return _then(EpisodeOfCareStatusHistory(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       status: status == freezed
           ? _value.status
           : status as EpisodeOfCareStatusHistoryStatus,
@@ -4427,9 +4659,9 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final EpisodeOfCareStatusHistoryStatus status;
   @override
@@ -4485,10 +4717,10 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             FhirUri url,
-            List<Identifier> identifier,
+            List<dynamic> identifier,
             String version,
             String name,
             String title,
@@ -4500,25 +4732,25 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
             Reference subjectReference,
             FhirDateTime date,
             String publisher,
-            List<ContactDetail> contact,
+            List<dynamic> contact,
             Markdown description,
-            List<UsageContext> useContext,
-            List<CodeableConcept> jurisdiction,
+            List<dynamic> useContext,
+            List<dynamic> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<CodeableConcept> topic,
-            List<ContactDetail> author,
-            List<ContactDetail> editor,
-            List<ContactDetail> reviewer,
-            List<ContactDetail> endorser,
-            List<RelatedArtifact> relatedArtifact,
-            List<ParameterDefinition> parameter,
-            List<DataRequirement> dataRequirement,
-            List<Attachment> content),
+            List<dynamic> topic,
+            List<dynamic> author,
+            List<dynamic> editor,
+            List<dynamic> reviewer,
+            List<dynamic> endorser,
+            List<dynamic> relatedArtifact,
+            List<dynamic> parameter,
+            List<dynamic> dataRequirement,
+            List<dynamic> content),
     @required
         Result lists(
             String resourceType,
@@ -4528,9 +4760,9 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -4540,14 +4772,14 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<Annotation> note,
+            List<dynamic> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
         Result listEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept flag,
             bool deleted,
             FhirDateTime date,
@@ -4561,32 +4793,32 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
             Period period,
-            List<Reference> referralRequest,
+            List<dynamic> referralRequest,
             Reference careManager,
-            List<Reference> team,
-            List<Reference> account),
+            List<dynamic> team,
+            List<dynamic> account),
     @required
         Result episodeOfCareStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EpisodeOfCareStatusHistoryStatus status,
             Period period),
     @required
         Result episodeOfCareDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept role,
             int rank),
@@ -4599,27 +4831,27 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             Coding clas,
             List<dynamic> classHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
-            List<Reference> episodeOfCare,
-            List<Reference> basedOn,
+            List<dynamic> episodeOfCare,
+            List<dynamic> basedOn,
             List<dynamic> participant,
-            List<Reference> appointment,
+            List<dynamic> appointment,
             Period period,
             Duration length,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
             List<dynamic> diagnosis,
-            List<Reference> account,
+            List<dynamic> account,
             EncounterHospitalization hospitalization,
             List<dynamic> location,
             Reference serviceProvider,
@@ -4627,52 +4859,71 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
     @required
         Result encounterStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EncounterStatusHistoryStatus status,
             Period period),
     @required
-        Result encounterClassHistory(String id, List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension, Coding clas, Period period),
+        Result encounterClassHistory(String id, List<dynamic> extension,
+            List<dynamic> modifierExtension, Coding clas, Period period),
     @required
         Result encounterParticipant(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> type,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> type,
             Period period,
             Reference individual),
     @required
         Result encounterDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept use,
             int rank),
     @required
         Result encounterHospitalization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier preAdmissionIdentifier,
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<CodeableConcept> dietPreference,
-            List<CodeableConcept> specialCourtesy,
-            List<CodeableConcept> specialArrangement,
+            List<dynamic> dietPreference,
+            List<dynamic> specialCourtesy,
+            List<dynamic> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
         Result encounterLocation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference location,
             EncounterLocationStatus status,
             CodeableConcept physicalType,
             Period period),
+    @required
+        Result flag(
+            String resourceType,
+            Id id,
+            Meta meta,
+            FhirUri implicitRules,
+            Code language,
+            Narrative text,
+            List<dynamic> contained,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            FlagStatus status,
+            List<dynamic> category,
+            CodeableConcept code,
+            Reference subject,
+            Period period,
+            Reference encounter,
+            Reference author),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -4687,6 +4938,7 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return episodeOfCareStatusHistory(
         id, extension, modifierExtension, status, period);
   }
@@ -4702,10 +4954,10 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         FhirUri url,
-        List<Identifier> identifier,
+        List<dynamic> identifier,
         String version,
         String name,
         String title,
@@ -4717,25 +4969,25 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
         Reference subjectReference,
         FhirDateTime date,
         String publisher,
-        List<ContactDetail> contact,
+        List<dynamic> contact,
         Markdown description,
-        List<UsageContext> useContext,
-        List<CodeableConcept> jurisdiction,
+        List<dynamic> useContext,
+        List<dynamic> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<CodeableConcept> topic,
-        List<ContactDetail> author,
-        List<ContactDetail> editor,
-        List<ContactDetail> reviewer,
-        List<ContactDetail> endorser,
-        List<RelatedArtifact> relatedArtifact,
-        List<ParameterDefinition> parameter,
-        List<DataRequirement> dataRequirement,
-        List<Attachment> content),
+        List<dynamic> topic,
+        List<dynamic> author,
+        List<dynamic> editor,
+        List<dynamic> reviewer,
+        List<dynamic> endorser,
+        List<dynamic> relatedArtifact,
+        List<dynamic> parameter,
+        List<dynamic> dataRequirement,
+        List<dynamic> content),
     Result lists(
         String resourceType,
         Id id,
@@ -4744,9 +4996,9 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -4756,13 +5008,13 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<Annotation> note,
+        List<dynamic> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept flag,
         bool deleted,
         FhirDateTime date,
@@ -4775,30 +5027,30 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
         Period period,
-        List<Reference> referralRequest,
+        List<dynamic> referralRequest,
         Reference careManager,
-        List<Reference> team,
-        List<Reference> account),
+        List<dynamic> team,
+        List<dynamic> account),
     Result episodeOfCareStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EpisodeOfCareStatusHistoryStatus status,
         Period period),
     Result episodeOfCareDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept role,
         int rank),
@@ -4810,74 +5062,92 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         Coding clas,
         List<dynamic> classHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
-        List<Reference> episodeOfCare,
-        List<Reference> basedOn,
+        List<dynamic> episodeOfCare,
+        List<dynamic> basedOn,
         List<dynamic> participant,
-        List<Reference> appointment,
+        List<dynamic> appointment,
         Period period,
         Duration length,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
         List<dynamic> diagnosis,
-        List<Reference> account,
+        List<dynamic> account,
         EncounterHospitalization hospitalization,
         List<dynamic> location,
         Reference serviceProvider,
         Reference partOf),
     Result encounterStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EncounterStatusHistoryStatus status,
         Period period),
-    Result encounterClassHistory(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, Coding clas, Period period),
+    Result encounterClassHistory(String id, List<dynamic> extension,
+        List<dynamic> modifierExtension, Coding clas, Period period),
     Result encounterParticipant(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> type,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept use,
         int rank),
     Result encounterHospitalization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier preAdmissionIdentifier,
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<CodeableConcept> dietPreference,
-        List<CodeableConcept> specialCourtesy,
-        List<CodeableConcept> specialArrangement,
+        List<dynamic> dietPreference,
+        List<dynamic> specialCourtesy,
+        List<dynamic> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference location,
         EncounterLocationStatus status,
         CodeableConcept physicalType,
         Period period),
+    Result flag(
+        String resourceType,
+        Id id,
+        Meta meta,
+        FhirUri implicitRules,
+        Code language,
+        Narrative text,
+        List<dynamic> contained,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        FlagStatus status,
+        List<dynamic> category,
+        CodeableConcept code,
+        Reference subject,
+        Period period,
+        Reference encounter,
+        Reference author),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4905,6 +5175,7 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
     @required Result encounterDiagnosis(EncounterDiagnosis value),
     @required Result encounterHospitalization(EncounterHospitalization value),
     @required Result encounterLocation(EncounterLocation value),
+    @required Result flag(Flag value),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -4919,6 +5190,7 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return episodeOfCareStatusHistory(this);
   }
 
@@ -4938,6 +5210,7 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
     Result encounterDiagnosis(EncounterDiagnosis value),
     Result encounterHospitalization(EncounterHospitalization value),
     Result encounterLocation(EncounterLocation value),
+    Result flag(Flag value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4957,8 +5230,8 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
 abstract class EpisodeOfCareStatusHistory implements Management {
   const factory EpisodeOfCareStatusHistory(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       EpisodeOfCareStatusHistoryStatus status,
       Period period}) = _$EpisodeOfCareStatusHistory;
 
@@ -4967,9 +5240,9 @@ abstract class EpisodeOfCareStatusHistory implements Management {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   EpisodeOfCareStatusHistoryStatus get status;
   Period get period;
   @override
@@ -4984,8 +5257,8 @@ abstract class $EpisodeOfCareDiagnosisCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Reference condition,
       CodeableConcept role,
       int rank});
@@ -5012,12 +5285,11 @@ class _$EpisodeOfCareDiagnosisCopyWithImpl<$Res>
   }) {
     return _then(EpisodeOfCareDiagnosis(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       condition:
           condition == freezed ? _value.condition : condition as Reference,
       role: role == freezed ? _value.role : role as CodeableConcept,
@@ -5042,9 +5314,9 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Reference condition;
   @override
@@ -5105,10 +5377,10 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             FhirUri url,
-            List<Identifier> identifier,
+            List<dynamic> identifier,
             String version,
             String name,
             String title,
@@ -5120,25 +5392,25 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
             Reference subjectReference,
             FhirDateTime date,
             String publisher,
-            List<ContactDetail> contact,
+            List<dynamic> contact,
             Markdown description,
-            List<UsageContext> useContext,
-            List<CodeableConcept> jurisdiction,
+            List<dynamic> useContext,
+            List<dynamic> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<CodeableConcept> topic,
-            List<ContactDetail> author,
-            List<ContactDetail> editor,
-            List<ContactDetail> reviewer,
-            List<ContactDetail> endorser,
-            List<RelatedArtifact> relatedArtifact,
-            List<ParameterDefinition> parameter,
-            List<DataRequirement> dataRequirement,
-            List<Attachment> content),
+            List<dynamic> topic,
+            List<dynamic> author,
+            List<dynamic> editor,
+            List<dynamic> reviewer,
+            List<dynamic> endorser,
+            List<dynamic> relatedArtifact,
+            List<dynamic> parameter,
+            List<dynamic> dataRequirement,
+            List<dynamic> content),
     @required
         Result lists(
             String resourceType,
@@ -5148,9 +5420,9 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -5160,14 +5432,14 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<Annotation> note,
+            List<dynamic> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
         Result listEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept flag,
             bool deleted,
             FhirDateTime date,
@@ -5181,32 +5453,32 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
             Period period,
-            List<Reference> referralRequest,
+            List<dynamic> referralRequest,
             Reference careManager,
-            List<Reference> team,
-            List<Reference> account),
+            List<dynamic> team,
+            List<dynamic> account),
     @required
         Result episodeOfCareStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EpisodeOfCareStatusHistoryStatus status,
             Period period),
     @required
         Result episodeOfCareDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept role,
             int rank),
@@ -5219,27 +5491,27 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             Coding clas,
             List<dynamic> classHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
-            List<Reference> episodeOfCare,
-            List<Reference> basedOn,
+            List<dynamic> episodeOfCare,
+            List<dynamic> basedOn,
             List<dynamic> participant,
-            List<Reference> appointment,
+            List<dynamic> appointment,
             Period period,
             Duration length,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
             List<dynamic> diagnosis,
-            List<Reference> account,
+            List<dynamic> account,
             EncounterHospitalization hospitalization,
             List<dynamic> location,
             Reference serviceProvider,
@@ -5247,52 +5519,71 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
     @required
         Result encounterStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EncounterStatusHistoryStatus status,
             Period period),
     @required
-        Result encounterClassHistory(String id, List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension, Coding clas, Period period),
+        Result encounterClassHistory(String id, List<dynamic> extension,
+            List<dynamic> modifierExtension, Coding clas, Period period),
     @required
         Result encounterParticipant(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> type,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> type,
             Period period,
             Reference individual),
     @required
         Result encounterDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept use,
             int rank),
     @required
         Result encounterHospitalization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier preAdmissionIdentifier,
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<CodeableConcept> dietPreference,
-            List<CodeableConcept> specialCourtesy,
-            List<CodeableConcept> specialArrangement,
+            List<dynamic> dietPreference,
+            List<dynamic> specialCourtesy,
+            List<dynamic> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
         Result encounterLocation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference location,
             EncounterLocationStatus status,
             CodeableConcept physicalType,
             Period period),
+    @required
+        Result flag(
+            String resourceType,
+            Id id,
+            Meta meta,
+            FhirUri implicitRules,
+            Code language,
+            Narrative text,
+            List<dynamic> contained,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            FlagStatus status,
+            List<dynamic> category,
+            CodeableConcept code,
+            Reference subject,
+            Period period,
+            Reference encounter,
+            Reference author),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -5307,6 +5598,7 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return episodeOfCareDiagnosis(
         id, extension, modifierExtension, condition, role, rank);
   }
@@ -5322,10 +5614,10 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         FhirUri url,
-        List<Identifier> identifier,
+        List<dynamic> identifier,
         String version,
         String name,
         String title,
@@ -5337,25 +5629,25 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
         Reference subjectReference,
         FhirDateTime date,
         String publisher,
-        List<ContactDetail> contact,
+        List<dynamic> contact,
         Markdown description,
-        List<UsageContext> useContext,
-        List<CodeableConcept> jurisdiction,
+        List<dynamic> useContext,
+        List<dynamic> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<CodeableConcept> topic,
-        List<ContactDetail> author,
-        List<ContactDetail> editor,
-        List<ContactDetail> reviewer,
-        List<ContactDetail> endorser,
-        List<RelatedArtifact> relatedArtifact,
-        List<ParameterDefinition> parameter,
-        List<DataRequirement> dataRequirement,
-        List<Attachment> content),
+        List<dynamic> topic,
+        List<dynamic> author,
+        List<dynamic> editor,
+        List<dynamic> reviewer,
+        List<dynamic> endorser,
+        List<dynamic> relatedArtifact,
+        List<dynamic> parameter,
+        List<dynamic> dataRequirement,
+        List<dynamic> content),
     Result lists(
         String resourceType,
         Id id,
@@ -5364,9 +5656,9 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -5376,13 +5668,13 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<Annotation> note,
+        List<dynamic> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept flag,
         bool deleted,
         FhirDateTime date,
@@ -5395,30 +5687,30 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
         Period period,
-        List<Reference> referralRequest,
+        List<dynamic> referralRequest,
         Reference careManager,
-        List<Reference> team,
-        List<Reference> account),
+        List<dynamic> team,
+        List<dynamic> account),
     Result episodeOfCareStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EpisodeOfCareStatusHistoryStatus status,
         Period period),
     Result episodeOfCareDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept role,
         int rank),
@@ -5430,74 +5722,92 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         Coding clas,
         List<dynamic> classHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
-        List<Reference> episodeOfCare,
-        List<Reference> basedOn,
+        List<dynamic> episodeOfCare,
+        List<dynamic> basedOn,
         List<dynamic> participant,
-        List<Reference> appointment,
+        List<dynamic> appointment,
         Period period,
         Duration length,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
         List<dynamic> diagnosis,
-        List<Reference> account,
+        List<dynamic> account,
         EncounterHospitalization hospitalization,
         List<dynamic> location,
         Reference serviceProvider,
         Reference partOf),
     Result encounterStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EncounterStatusHistoryStatus status,
         Period period),
-    Result encounterClassHistory(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, Coding clas, Period period),
+    Result encounterClassHistory(String id, List<dynamic> extension,
+        List<dynamic> modifierExtension, Coding clas, Period period),
     Result encounterParticipant(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> type,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept use,
         int rank),
     Result encounterHospitalization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier preAdmissionIdentifier,
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<CodeableConcept> dietPreference,
-        List<CodeableConcept> specialCourtesy,
-        List<CodeableConcept> specialArrangement,
+        List<dynamic> dietPreference,
+        List<dynamic> specialCourtesy,
+        List<dynamic> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference location,
         EncounterLocationStatus status,
         CodeableConcept physicalType,
         Period period),
+    Result flag(
+        String resourceType,
+        Id id,
+        Meta meta,
+        FhirUri implicitRules,
+        Code language,
+        Narrative text,
+        List<dynamic> contained,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        FlagStatus status,
+        List<dynamic> category,
+        CodeableConcept code,
+        Reference subject,
+        Period period,
+        Reference encounter,
+        Reference author),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5525,6 +5835,7 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
     @required Result encounterDiagnosis(EncounterDiagnosis value),
     @required Result encounterHospitalization(EncounterHospitalization value),
     @required Result encounterLocation(EncounterLocation value),
+    @required Result flag(Flag value),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -5539,6 +5850,7 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return episodeOfCareDiagnosis(this);
   }
 
@@ -5558,6 +5870,7 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
     Result encounterDiagnosis(EncounterDiagnosis value),
     Result encounterHospitalization(EncounterHospitalization value),
     Result encounterLocation(EncounterLocation value),
+    Result flag(Flag value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5577,8 +5890,8 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
 abstract class EpisodeOfCareDiagnosis implements Management {
   const factory EpisodeOfCareDiagnosis(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Reference condition,
       CodeableConcept role,
       int rank}) = _$EpisodeOfCareDiagnosis;
@@ -5588,9 +5901,9 @@ abstract class EpisodeOfCareDiagnosis implements Management {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   Reference get condition;
   CodeableConcept get role;
   int get rank;
@@ -5610,27 +5923,27 @@ abstract class $EncounterCopyWith<$Res> implements $ManagementCopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       EncounterStatus status,
       List<dynamic> statusHistory,
       Coding clas,
       List<dynamic> classHistory,
-      List<CodeableConcept> type,
+      List<dynamic> type,
       CodeableConcept serviceType,
       CodeableConcept priority,
       Reference subject,
-      List<Reference> episodeOfCare,
-      List<Reference> basedOn,
+      List<dynamic> episodeOfCare,
+      List<dynamic> basedOn,
       List<dynamic> participant,
-      List<Reference> appointment,
+      List<dynamic> appointment,
       Period period,
       Duration length,
-      List<CodeableConcept> reasonCode,
-      List<Reference> reasonReference,
+      List<dynamic> reasonCode,
+      List<dynamic> reasonReference,
       List<dynamic> diagnosis,
-      List<Reference> account,
+      List<dynamic> account,
       EncounterHospitalization hospitalization,
       List<dynamic> location,
       Reference serviceProvider,
@@ -5693,15 +6006,14 @@ class _$EncounterCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       status: status == freezed ? _value.status : status as EncounterStatus,
       statusHistory: statusHistory == freezed
           ? _value.statusHistory
@@ -5710,7 +6022,7 @@ class _$EncounterCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
       classHistory: classHistory == freezed
           ? _value.classHistory
           : classHistory as List<dynamic>,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>,
+      type: type == freezed ? _value.type : type as List<dynamic>,
       serviceType: serviceType == freezed
           ? _value.serviceType
           : serviceType as CodeableConcept,
@@ -5719,25 +6031,25 @@ class _$EncounterCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference,
       episodeOfCare: episodeOfCare == freezed
           ? _value.episodeOfCare
-          : episodeOfCare as List<Reference>,
-      basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
+          : episodeOfCare as List<dynamic>,
+      basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<dynamic>,
       participant: participant == freezed
           ? _value.participant
           : participant as List<dynamic>,
       appointment: appointment == freezed
           ? _value.appointment
-          : appointment as List<Reference>,
+          : appointment as List<dynamic>,
       period: period == freezed ? _value.period : period as Period,
       length: length == freezed ? _value.length : length as Duration,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<CodeableConcept>,
+          : reasonCode as List<dynamic>,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
-          : reasonReference as List<Reference>,
+          : reasonReference as List<dynamic>,
       diagnosis:
           diagnosis == freezed ? _value.diagnosis : diagnosis as List<dynamic>,
-      account: account == freezed ? _value.account : account as List<Reference>,
+      account: account == freezed ? _value.account : account as List<dynamic>,
       hospitalization: hospitalization == freezed
           ? _value.hospitalization
           : hospitalization as EncounterHospitalization,
@@ -5805,11 +6117,11 @@ class _$Encounter implements Encounter {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final EncounterStatus status;
   @override
@@ -5819,7 +6131,7 @@ class _$Encounter implements Encounter {
   @override
   final List<dynamic> classHistory;
   @override
-  final List<CodeableConcept> type;
+  final List<dynamic> type;
   @override
   final CodeableConcept serviceType;
   @override
@@ -5827,25 +6139,25 @@ class _$Encounter implements Encounter {
   @override
   final Reference subject;
   @override
-  final List<Reference> episodeOfCare;
+  final List<dynamic> episodeOfCare;
   @override
-  final List<Reference> basedOn;
+  final List<dynamic> basedOn;
   @override
   final List<dynamic> participant;
   @override
-  final List<Reference> appointment;
+  final List<dynamic> appointment;
   @override
   final Period period;
   @override
   final Duration length;
   @override
-  final List<CodeableConcept> reasonCode;
+  final List<dynamic> reasonCode;
   @override
-  final List<Reference> reasonReference;
+  final List<dynamic> reasonReference;
   @override
   final List<dynamic> diagnosis;
   @override
-  final List<Reference> account;
+  final List<dynamic> account;
   @override
   final EncounterHospitalization hospitalization;
   @override
@@ -5993,10 +6305,10 @@ class _$Encounter implements Encounter {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             FhirUri url,
-            List<Identifier> identifier,
+            List<dynamic> identifier,
             String version,
             String name,
             String title,
@@ -6008,25 +6320,25 @@ class _$Encounter implements Encounter {
             Reference subjectReference,
             FhirDateTime date,
             String publisher,
-            List<ContactDetail> contact,
+            List<dynamic> contact,
             Markdown description,
-            List<UsageContext> useContext,
-            List<CodeableConcept> jurisdiction,
+            List<dynamic> useContext,
+            List<dynamic> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<CodeableConcept> topic,
-            List<ContactDetail> author,
-            List<ContactDetail> editor,
-            List<ContactDetail> reviewer,
-            List<ContactDetail> endorser,
-            List<RelatedArtifact> relatedArtifact,
-            List<ParameterDefinition> parameter,
-            List<DataRequirement> dataRequirement,
-            List<Attachment> content),
+            List<dynamic> topic,
+            List<dynamic> author,
+            List<dynamic> editor,
+            List<dynamic> reviewer,
+            List<dynamic> endorser,
+            List<dynamic> relatedArtifact,
+            List<dynamic> parameter,
+            List<dynamic> dataRequirement,
+            List<dynamic> content),
     @required
         Result lists(
             String resourceType,
@@ -6036,9 +6348,9 @@ class _$Encounter implements Encounter {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -6048,14 +6360,14 @@ class _$Encounter implements Encounter {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<Annotation> note,
+            List<dynamic> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
         Result listEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept flag,
             bool deleted,
             FhirDateTime date,
@@ -6069,32 +6381,32 @@ class _$Encounter implements Encounter {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
             Period period,
-            List<Reference> referralRequest,
+            List<dynamic> referralRequest,
             Reference careManager,
-            List<Reference> team,
-            List<Reference> account),
+            List<dynamic> team,
+            List<dynamic> account),
     @required
         Result episodeOfCareStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EpisodeOfCareStatusHistoryStatus status,
             Period period),
     @required
         Result episodeOfCareDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept role,
             int rank),
@@ -6107,27 +6419,27 @@ class _$Encounter implements Encounter {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             Coding clas,
             List<dynamic> classHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
-            List<Reference> episodeOfCare,
-            List<Reference> basedOn,
+            List<dynamic> episodeOfCare,
+            List<dynamic> basedOn,
             List<dynamic> participant,
-            List<Reference> appointment,
+            List<dynamic> appointment,
             Period period,
             Duration length,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
             List<dynamic> diagnosis,
-            List<Reference> account,
+            List<dynamic> account,
             EncounterHospitalization hospitalization,
             List<dynamic> location,
             Reference serviceProvider,
@@ -6135,52 +6447,71 @@ class _$Encounter implements Encounter {
     @required
         Result encounterStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EncounterStatusHistoryStatus status,
             Period period),
     @required
-        Result encounterClassHistory(String id, List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension, Coding clas, Period period),
+        Result encounterClassHistory(String id, List<dynamic> extension,
+            List<dynamic> modifierExtension, Coding clas, Period period),
     @required
         Result encounterParticipant(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> type,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> type,
             Period period,
             Reference individual),
     @required
         Result encounterDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept use,
             int rank),
     @required
         Result encounterHospitalization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier preAdmissionIdentifier,
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<CodeableConcept> dietPreference,
-            List<CodeableConcept> specialCourtesy,
-            List<CodeableConcept> specialArrangement,
+            List<dynamic> dietPreference,
+            List<dynamic> specialCourtesy,
+            List<dynamic> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
         Result encounterLocation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference location,
             EncounterLocationStatus status,
             CodeableConcept physicalType,
             Period period),
+    @required
+        Result flag(
+            String resourceType,
+            Id id,
+            Meta meta,
+            FhirUri implicitRules,
+            Code language,
+            Narrative text,
+            List<dynamic> contained,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            FlagStatus status,
+            List<dynamic> category,
+            CodeableConcept code,
+            Reference subject,
+            Period period,
+            Reference encounter,
+            Reference author),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -6195,6 +6526,7 @@ class _$Encounter implements Encounter {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return encounter(
         resourceType,
         id,
@@ -6241,10 +6573,10 @@ class _$Encounter implements Encounter {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         FhirUri url,
-        List<Identifier> identifier,
+        List<dynamic> identifier,
         String version,
         String name,
         String title,
@@ -6256,25 +6588,25 @@ class _$Encounter implements Encounter {
         Reference subjectReference,
         FhirDateTime date,
         String publisher,
-        List<ContactDetail> contact,
+        List<dynamic> contact,
         Markdown description,
-        List<UsageContext> useContext,
-        List<CodeableConcept> jurisdiction,
+        List<dynamic> useContext,
+        List<dynamic> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<CodeableConcept> topic,
-        List<ContactDetail> author,
-        List<ContactDetail> editor,
-        List<ContactDetail> reviewer,
-        List<ContactDetail> endorser,
-        List<RelatedArtifact> relatedArtifact,
-        List<ParameterDefinition> parameter,
-        List<DataRequirement> dataRequirement,
-        List<Attachment> content),
+        List<dynamic> topic,
+        List<dynamic> author,
+        List<dynamic> editor,
+        List<dynamic> reviewer,
+        List<dynamic> endorser,
+        List<dynamic> relatedArtifact,
+        List<dynamic> parameter,
+        List<dynamic> dataRequirement,
+        List<dynamic> content),
     Result lists(
         String resourceType,
         Id id,
@@ -6283,9 +6615,9 @@ class _$Encounter implements Encounter {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -6295,13 +6627,13 @@ class _$Encounter implements Encounter {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<Annotation> note,
+        List<dynamic> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept flag,
         bool deleted,
         FhirDateTime date,
@@ -6314,30 +6646,30 @@ class _$Encounter implements Encounter {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
         Period period,
-        List<Reference> referralRequest,
+        List<dynamic> referralRequest,
         Reference careManager,
-        List<Reference> team,
-        List<Reference> account),
+        List<dynamic> team,
+        List<dynamic> account),
     Result episodeOfCareStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EpisodeOfCareStatusHistoryStatus status,
         Period period),
     Result episodeOfCareDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept role,
         int rank),
@@ -6349,74 +6681,92 @@ class _$Encounter implements Encounter {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         Coding clas,
         List<dynamic> classHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
-        List<Reference> episodeOfCare,
-        List<Reference> basedOn,
+        List<dynamic> episodeOfCare,
+        List<dynamic> basedOn,
         List<dynamic> participant,
-        List<Reference> appointment,
+        List<dynamic> appointment,
         Period period,
         Duration length,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
         List<dynamic> diagnosis,
-        List<Reference> account,
+        List<dynamic> account,
         EncounterHospitalization hospitalization,
         List<dynamic> location,
         Reference serviceProvider,
         Reference partOf),
     Result encounterStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EncounterStatusHistoryStatus status,
         Period period),
-    Result encounterClassHistory(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, Coding clas, Period period),
+    Result encounterClassHistory(String id, List<dynamic> extension,
+        List<dynamic> modifierExtension, Coding clas, Period period),
     Result encounterParticipant(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> type,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept use,
         int rank),
     Result encounterHospitalization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier preAdmissionIdentifier,
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<CodeableConcept> dietPreference,
-        List<CodeableConcept> specialCourtesy,
-        List<CodeableConcept> specialArrangement,
+        List<dynamic> dietPreference,
+        List<dynamic> specialCourtesy,
+        List<dynamic> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference location,
         EncounterLocationStatus status,
         CodeableConcept physicalType,
         Period period),
+    Result flag(
+        String resourceType,
+        Id id,
+        Meta meta,
+        FhirUri implicitRules,
+        Code language,
+        Narrative text,
+        List<dynamic> contained,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        FlagStatus status,
+        List<dynamic> category,
+        CodeableConcept code,
+        Reference subject,
+        Period period,
+        Reference encounter,
+        Reference author),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6475,6 +6825,7 @@ class _$Encounter implements Encounter {
     @required Result encounterDiagnosis(EncounterDiagnosis value),
     @required Result encounterHospitalization(EncounterHospitalization value),
     @required Result encounterLocation(EncounterLocation value),
+    @required Result flag(Flag value),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -6489,6 +6840,7 @@ class _$Encounter implements Encounter {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return encounter(this);
   }
 
@@ -6508,6 +6860,7 @@ class _$Encounter implements Encounter {
     Result encounterDiagnosis(EncounterDiagnosis value),
     Result encounterHospitalization(EncounterHospitalization value),
     Result encounterLocation(EncounterLocation value),
+    Result flag(Flag value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6532,27 +6885,27 @@ abstract class Encounter implements Management {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       EncounterStatus status,
       List<dynamic> statusHistory,
       Coding clas,
       List<dynamic> classHistory,
-      List<CodeableConcept> type,
+      List<dynamic> type,
       CodeableConcept serviceType,
       CodeableConcept priority,
       Reference subject,
-      List<Reference> episodeOfCare,
-      List<Reference> basedOn,
+      List<dynamic> episodeOfCare,
+      List<dynamic> basedOn,
       List<dynamic> participant,
-      List<Reference> appointment,
+      List<dynamic> appointment,
       Period period,
       Duration length,
-      List<CodeableConcept> reasonCode,
-      List<Reference> reasonReference,
+      List<dynamic> reasonCode,
+      List<dynamic> reasonReference,
       List<dynamic> diagnosis,
-      List<Reference> account,
+      List<dynamic> account,
       EncounterHospitalization hospitalization,
       List<dynamic> location,
       Reference serviceProvider,
@@ -6568,28 +6921,28 @@ abstract class Encounter implements Management {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   EncounterStatus get status;
   List<dynamic> get statusHistory;
   Coding get clas;
   List<dynamic> get classHistory;
-  List<CodeableConcept> get type;
+  List<dynamic> get type;
   CodeableConcept get serviceType;
   CodeableConcept get priority;
   Reference get subject;
-  List<Reference> get episodeOfCare;
-  List<Reference> get basedOn;
+  List<dynamic> get episodeOfCare;
+  List<dynamic> get basedOn;
   List<dynamic> get participant;
-  List<Reference> get appointment;
+  List<dynamic> get appointment;
   Period get period;
   Duration get length;
-  List<CodeableConcept> get reasonCode;
-  List<Reference> get reasonReference;
+  List<dynamic> get reasonCode;
+  List<dynamic> get reasonReference;
   List<dynamic> get diagnosis;
-  List<Reference> get account;
+  List<dynamic> get account;
   EncounterHospitalization get hospitalization;
   List<dynamic> get location;
   Reference get serviceProvider;
@@ -6606,8 +6959,8 @@ abstract class $EncounterStatusHistoryCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       EncounterStatusHistoryStatus status,
       Period period});
 }
@@ -6632,12 +6985,11 @@ class _$EncounterStatusHistoryCopyWithImpl<$Res>
   }) {
     return _then(EncounterStatusHistory(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       status: status == freezed
           ? _value.status
           : status as EncounterStatusHistoryStatus,
@@ -6661,9 +7013,9 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final EncounterStatusHistoryStatus status;
   @override
@@ -6718,10 +7070,10 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             FhirUri url,
-            List<Identifier> identifier,
+            List<dynamic> identifier,
             String version,
             String name,
             String title,
@@ -6733,25 +7085,25 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
             Reference subjectReference,
             FhirDateTime date,
             String publisher,
-            List<ContactDetail> contact,
+            List<dynamic> contact,
             Markdown description,
-            List<UsageContext> useContext,
-            List<CodeableConcept> jurisdiction,
+            List<dynamic> useContext,
+            List<dynamic> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<CodeableConcept> topic,
-            List<ContactDetail> author,
-            List<ContactDetail> editor,
-            List<ContactDetail> reviewer,
-            List<ContactDetail> endorser,
-            List<RelatedArtifact> relatedArtifact,
-            List<ParameterDefinition> parameter,
-            List<DataRequirement> dataRequirement,
-            List<Attachment> content),
+            List<dynamic> topic,
+            List<dynamic> author,
+            List<dynamic> editor,
+            List<dynamic> reviewer,
+            List<dynamic> endorser,
+            List<dynamic> relatedArtifact,
+            List<dynamic> parameter,
+            List<dynamic> dataRequirement,
+            List<dynamic> content),
     @required
         Result lists(
             String resourceType,
@@ -6761,9 +7113,9 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -6773,14 +7125,14 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<Annotation> note,
+            List<dynamic> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
         Result listEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept flag,
             bool deleted,
             FhirDateTime date,
@@ -6794,32 +7146,32 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
             Period period,
-            List<Reference> referralRequest,
+            List<dynamic> referralRequest,
             Reference careManager,
-            List<Reference> team,
-            List<Reference> account),
+            List<dynamic> team,
+            List<dynamic> account),
     @required
         Result episodeOfCareStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EpisodeOfCareStatusHistoryStatus status,
             Period period),
     @required
         Result episodeOfCareDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept role,
             int rank),
@@ -6832,27 +7184,27 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             Coding clas,
             List<dynamic> classHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
-            List<Reference> episodeOfCare,
-            List<Reference> basedOn,
+            List<dynamic> episodeOfCare,
+            List<dynamic> basedOn,
             List<dynamic> participant,
-            List<Reference> appointment,
+            List<dynamic> appointment,
             Period period,
             Duration length,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
             List<dynamic> diagnosis,
-            List<Reference> account,
+            List<dynamic> account,
             EncounterHospitalization hospitalization,
             List<dynamic> location,
             Reference serviceProvider,
@@ -6860,52 +7212,71 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
     @required
         Result encounterStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EncounterStatusHistoryStatus status,
             Period period),
     @required
-        Result encounterClassHistory(String id, List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension, Coding clas, Period period),
+        Result encounterClassHistory(String id, List<dynamic> extension,
+            List<dynamic> modifierExtension, Coding clas, Period period),
     @required
         Result encounterParticipant(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> type,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> type,
             Period period,
             Reference individual),
     @required
         Result encounterDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept use,
             int rank),
     @required
         Result encounterHospitalization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier preAdmissionIdentifier,
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<CodeableConcept> dietPreference,
-            List<CodeableConcept> specialCourtesy,
-            List<CodeableConcept> specialArrangement,
+            List<dynamic> dietPreference,
+            List<dynamic> specialCourtesy,
+            List<dynamic> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
         Result encounterLocation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference location,
             EncounterLocationStatus status,
             CodeableConcept physicalType,
             Period period),
+    @required
+        Result flag(
+            String resourceType,
+            Id id,
+            Meta meta,
+            FhirUri implicitRules,
+            Code language,
+            Narrative text,
+            List<dynamic> contained,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            FlagStatus status,
+            List<dynamic> category,
+            CodeableConcept code,
+            Reference subject,
+            Period period,
+            Reference encounter,
+            Reference author),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -6920,6 +7291,7 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return encounterStatusHistory(
         id, extension, modifierExtension, status, period);
   }
@@ -6935,10 +7307,10 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         FhirUri url,
-        List<Identifier> identifier,
+        List<dynamic> identifier,
         String version,
         String name,
         String title,
@@ -6950,25 +7322,25 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
         Reference subjectReference,
         FhirDateTime date,
         String publisher,
-        List<ContactDetail> contact,
+        List<dynamic> contact,
         Markdown description,
-        List<UsageContext> useContext,
-        List<CodeableConcept> jurisdiction,
+        List<dynamic> useContext,
+        List<dynamic> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<CodeableConcept> topic,
-        List<ContactDetail> author,
-        List<ContactDetail> editor,
-        List<ContactDetail> reviewer,
-        List<ContactDetail> endorser,
-        List<RelatedArtifact> relatedArtifact,
-        List<ParameterDefinition> parameter,
-        List<DataRequirement> dataRequirement,
-        List<Attachment> content),
+        List<dynamic> topic,
+        List<dynamic> author,
+        List<dynamic> editor,
+        List<dynamic> reviewer,
+        List<dynamic> endorser,
+        List<dynamic> relatedArtifact,
+        List<dynamic> parameter,
+        List<dynamic> dataRequirement,
+        List<dynamic> content),
     Result lists(
         String resourceType,
         Id id,
@@ -6977,9 +7349,9 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -6989,13 +7361,13 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<Annotation> note,
+        List<dynamic> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept flag,
         bool deleted,
         FhirDateTime date,
@@ -7008,30 +7380,30 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
         Period period,
-        List<Reference> referralRequest,
+        List<dynamic> referralRequest,
         Reference careManager,
-        List<Reference> team,
-        List<Reference> account),
+        List<dynamic> team,
+        List<dynamic> account),
     Result episodeOfCareStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EpisodeOfCareStatusHistoryStatus status,
         Period period),
     Result episodeOfCareDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept role,
         int rank),
@@ -7043,74 +7415,92 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         Coding clas,
         List<dynamic> classHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
-        List<Reference> episodeOfCare,
-        List<Reference> basedOn,
+        List<dynamic> episodeOfCare,
+        List<dynamic> basedOn,
         List<dynamic> participant,
-        List<Reference> appointment,
+        List<dynamic> appointment,
         Period period,
         Duration length,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
         List<dynamic> diagnosis,
-        List<Reference> account,
+        List<dynamic> account,
         EncounterHospitalization hospitalization,
         List<dynamic> location,
         Reference serviceProvider,
         Reference partOf),
     Result encounterStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EncounterStatusHistoryStatus status,
         Period period),
-    Result encounterClassHistory(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, Coding clas, Period period),
+    Result encounterClassHistory(String id, List<dynamic> extension,
+        List<dynamic> modifierExtension, Coding clas, Period period),
     Result encounterParticipant(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> type,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept use,
         int rank),
     Result encounterHospitalization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier preAdmissionIdentifier,
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<CodeableConcept> dietPreference,
-        List<CodeableConcept> specialCourtesy,
-        List<CodeableConcept> specialArrangement,
+        List<dynamic> dietPreference,
+        List<dynamic> specialCourtesy,
+        List<dynamic> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference location,
         EncounterLocationStatus status,
         CodeableConcept physicalType,
         Period period),
+    Result flag(
+        String resourceType,
+        Id id,
+        Meta meta,
+        FhirUri implicitRules,
+        Code language,
+        Narrative text,
+        List<dynamic> contained,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        FlagStatus status,
+        List<dynamic> category,
+        CodeableConcept code,
+        Reference subject,
+        Period period,
+        Reference encounter,
+        Reference author),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7138,6 +7528,7 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
     @required Result encounterDiagnosis(EncounterDiagnosis value),
     @required Result encounterHospitalization(EncounterHospitalization value),
     @required Result encounterLocation(EncounterLocation value),
+    @required Result flag(Flag value),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -7152,6 +7543,7 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return encounterStatusHistory(this);
   }
 
@@ -7171,6 +7563,7 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
     Result encounterDiagnosis(EncounterDiagnosis value),
     Result encounterHospitalization(EncounterHospitalization value),
     Result encounterLocation(EncounterLocation value),
+    Result flag(Flag value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7190,8 +7583,8 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
 abstract class EncounterStatusHistory implements Management {
   const factory EncounterStatusHistory(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       EncounterStatusHistoryStatus status,
       Period period}) = _$EncounterStatusHistory;
 
@@ -7200,9 +7593,9 @@ abstract class EncounterStatusHistory implements Management {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   EncounterStatusHistoryStatus get status;
   Period get period;
   @override
@@ -7217,8 +7610,8 @@ abstract class $EncounterClassHistoryCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Coding clas,
       Period period});
 }
@@ -7243,12 +7636,11 @@ class _$EncounterClassHistoryCopyWithImpl<$Res>
   }) {
     return _then(EncounterClassHistory(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       clas: clas == freezed ? _value.clas : clas as Coding,
       period: period == freezed ? _value.period : period as Period,
     ));
@@ -7270,9 +7662,9 @@ class _$EncounterClassHistory implements EncounterClassHistory {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Coding clas;
   @override
@@ -7327,10 +7719,10 @@ class _$EncounterClassHistory implements EncounterClassHistory {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             FhirUri url,
-            List<Identifier> identifier,
+            List<dynamic> identifier,
             String version,
             String name,
             String title,
@@ -7342,25 +7734,25 @@ class _$EncounterClassHistory implements EncounterClassHistory {
             Reference subjectReference,
             FhirDateTime date,
             String publisher,
-            List<ContactDetail> contact,
+            List<dynamic> contact,
             Markdown description,
-            List<UsageContext> useContext,
-            List<CodeableConcept> jurisdiction,
+            List<dynamic> useContext,
+            List<dynamic> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<CodeableConcept> topic,
-            List<ContactDetail> author,
-            List<ContactDetail> editor,
-            List<ContactDetail> reviewer,
-            List<ContactDetail> endorser,
-            List<RelatedArtifact> relatedArtifact,
-            List<ParameterDefinition> parameter,
-            List<DataRequirement> dataRequirement,
-            List<Attachment> content),
+            List<dynamic> topic,
+            List<dynamic> author,
+            List<dynamic> editor,
+            List<dynamic> reviewer,
+            List<dynamic> endorser,
+            List<dynamic> relatedArtifact,
+            List<dynamic> parameter,
+            List<dynamic> dataRequirement,
+            List<dynamic> content),
     @required
         Result lists(
             String resourceType,
@@ -7370,9 +7762,9 @@ class _$EncounterClassHistory implements EncounterClassHistory {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -7382,14 +7774,14 @@ class _$EncounterClassHistory implements EncounterClassHistory {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<Annotation> note,
+            List<dynamic> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
         Result listEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept flag,
             bool deleted,
             FhirDateTime date,
@@ -7403,32 +7795,32 @@ class _$EncounterClassHistory implements EncounterClassHistory {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
             Period period,
-            List<Reference> referralRequest,
+            List<dynamic> referralRequest,
             Reference careManager,
-            List<Reference> team,
-            List<Reference> account),
+            List<dynamic> team,
+            List<dynamic> account),
     @required
         Result episodeOfCareStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EpisodeOfCareStatusHistoryStatus status,
             Period period),
     @required
         Result episodeOfCareDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept role,
             int rank),
@@ -7441,27 +7833,27 @@ class _$EncounterClassHistory implements EncounterClassHistory {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             Coding clas,
             List<dynamic> classHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
-            List<Reference> episodeOfCare,
-            List<Reference> basedOn,
+            List<dynamic> episodeOfCare,
+            List<dynamic> basedOn,
             List<dynamic> participant,
-            List<Reference> appointment,
+            List<dynamic> appointment,
             Period period,
             Duration length,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
             List<dynamic> diagnosis,
-            List<Reference> account,
+            List<dynamic> account,
             EncounterHospitalization hospitalization,
             List<dynamic> location,
             Reference serviceProvider,
@@ -7469,52 +7861,71 @@ class _$EncounterClassHistory implements EncounterClassHistory {
     @required
         Result encounterStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EncounterStatusHistoryStatus status,
             Period period),
     @required
-        Result encounterClassHistory(String id, List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension, Coding clas, Period period),
+        Result encounterClassHistory(String id, List<dynamic> extension,
+            List<dynamic> modifierExtension, Coding clas, Period period),
     @required
         Result encounterParticipant(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> type,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> type,
             Period period,
             Reference individual),
     @required
         Result encounterDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept use,
             int rank),
     @required
         Result encounterHospitalization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier preAdmissionIdentifier,
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<CodeableConcept> dietPreference,
-            List<CodeableConcept> specialCourtesy,
-            List<CodeableConcept> specialArrangement,
+            List<dynamic> dietPreference,
+            List<dynamic> specialCourtesy,
+            List<dynamic> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
         Result encounterLocation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference location,
             EncounterLocationStatus status,
             CodeableConcept physicalType,
             Period period),
+    @required
+        Result flag(
+            String resourceType,
+            Id id,
+            Meta meta,
+            FhirUri implicitRules,
+            Code language,
+            Narrative text,
+            List<dynamic> contained,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            FlagStatus status,
+            List<dynamic> category,
+            CodeableConcept code,
+            Reference subject,
+            Period period,
+            Reference encounter,
+            Reference author),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -7529,6 +7940,7 @@ class _$EncounterClassHistory implements EncounterClassHistory {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return encounterClassHistory(
         id, extension, modifierExtension, clas, period);
   }
@@ -7544,10 +7956,10 @@ class _$EncounterClassHistory implements EncounterClassHistory {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         FhirUri url,
-        List<Identifier> identifier,
+        List<dynamic> identifier,
         String version,
         String name,
         String title,
@@ -7559,25 +7971,25 @@ class _$EncounterClassHistory implements EncounterClassHistory {
         Reference subjectReference,
         FhirDateTime date,
         String publisher,
-        List<ContactDetail> contact,
+        List<dynamic> contact,
         Markdown description,
-        List<UsageContext> useContext,
-        List<CodeableConcept> jurisdiction,
+        List<dynamic> useContext,
+        List<dynamic> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<CodeableConcept> topic,
-        List<ContactDetail> author,
-        List<ContactDetail> editor,
-        List<ContactDetail> reviewer,
-        List<ContactDetail> endorser,
-        List<RelatedArtifact> relatedArtifact,
-        List<ParameterDefinition> parameter,
-        List<DataRequirement> dataRequirement,
-        List<Attachment> content),
+        List<dynamic> topic,
+        List<dynamic> author,
+        List<dynamic> editor,
+        List<dynamic> reviewer,
+        List<dynamic> endorser,
+        List<dynamic> relatedArtifact,
+        List<dynamic> parameter,
+        List<dynamic> dataRequirement,
+        List<dynamic> content),
     Result lists(
         String resourceType,
         Id id,
@@ -7586,9 +7998,9 @@ class _$EncounterClassHistory implements EncounterClassHistory {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -7598,13 +8010,13 @@ class _$EncounterClassHistory implements EncounterClassHistory {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<Annotation> note,
+        List<dynamic> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept flag,
         bool deleted,
         FhirDateTime date,
@@ -7617,30 +8029,30 @@ class _$EncounterClassHistory implements EncounterClassHistory {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
         Period period,
-        List<Reference> referralRequest,
+        List<dynamic> referralRequest,
         Reference careManager,
-        List<Reference> team,
-        List<Reference> account),
+        List<dynamic> team,
+        List<dynamic> account),
     Result episodeOfCareStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EpisodeOfCareStatusHistoryStatus status,
         Period period),
     Result episodeOfCareDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept role,
         int rank),
@@ -7652,74 +8064,92 @@ class _$EncounterClassHistory implements EncounterClassHistory {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         Coding clas,
         List<dynamic> classHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
-        List<Reference> episodeOfCare,
-        List<Reference> basedOn,
+        List<dynamic> episodeOfCare,
+        List<dynamic> basedOn,
         List<dynamic> participant,
-        List<Reference> appointment,
+        List<dynamic> appointment,
         Period period,
         Duration length,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
         List<dynamic> diagnosis,
-        List<Reference> account,
+        List<dynamic> account,
         EncounterHospitalization hospitalization,
         List<dynamic> location,
         Reference serviceProvider,
         Reference partOf),
     Result encounterStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EncounterStatusHistoryStatus status,
         Period period),
-    Result encounterClassHistory(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, Coding clas, Period period),
+    Result encounterClassHistory(String id, List<dynamic> extension,
+        List<dynamic> modifierExtension, Coding clas, Period period),
     Result encounterParticipant(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> type,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept use,
         int rank),
     Result encounterHospitalization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier preAdmissionIdentifier,
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<CodeableConcept> dietPreference,
-        List<CodeableConcept> specialCourtesy,
-        List<CodeableConcept> specialArrangement,
+        List<dynamic> dietPreference,
+        List<dynamic> specialCourtesy,
+        List<dynamic> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference location,
         EncounterLocationStatus status,
         CodeableConcept physicalType,
         Period period),
+    Result flag(
+        String resourceType,
+        Id id,
+        Meta meta,
+        FhirUri implicitRules,
+        Code language,
+        Narrative text,
+        List<dynamic> contained,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        FlagStatus status,
+        List<dynamic> category,
+        CodeableConcept code,
+        Reference subject,
+        Period period,
+        Reference encounter,
+        Reference author),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7747,6 +8177,7 @@ class _$EncounterClassHistory implements EncounterClassHistory {
     @required Result encounterDiagnosis(EncounterDiagnosis value),
     @required Result encounterHospitalization(EncounterHospitalization value),
     @required Result encounterLocation(EncounterLocation value),
+    @required Result flag(Flag value),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -7761,6 +8192,7 @@ class _$EncounterClassHistory implements EncounterClassHistory {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return encounterClassHistory(this);
   }
 
@@ -7780,6 +8212,7 @@ class _$EncounterClassHistory implements EncounterClassHistory {
     Result encounterDiagnosis(EncounterDiagnosis value),
     Result encounterHospitalization(EncounterHospitalization value),
     Result encounterLocation(EncounterLocation value),
+    Result flag(Flag value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7799,8 +8232,8 @@ class _$EncounterClassHistory implements EncounterClassHistory {
 abstract class EncounterClassHistory implements Management {
   const factory EncounterClassHistory(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Coding clas,
       Period period}) = _$EncounterClassHistory;
 
@@ -7809,9 +8242,9 @@ abstract class EncounterClassHistory implements Management {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   Coding get clas;
   Period get period;
   @override
@@ -7826,9 +8259,9 @@ abstract class $EncounterParticipantCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> type,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> type,
       Period period,
       Reference individual});
 }
@@ -7854,13 +8287,12 @@ class _$EncounterParticipantCopyWithImpl<$Res>
   }) {
     return _then(EncounterParticipant(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>,
+          : modifierExtension as List<dynamic>,
+      type: type == freezed ? _value.type : type as List<dynamic>,
       period: period == freezed ? _value.period : period as Period,
       individual:
           individual == freezed ? _value.individual : individual as Reference,
@@ -7884,11 +8316,11 @@ class _$EncounterParticipant implements EncounterParticipant {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<CodeableConcept> type;
+  final List<dynamic> type;
   @override
   final Period period;
   @override
@@ -7947,10 +8379,10 @@ class _$EncounterParticipant implements EncounterParticipant {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             FhirUri url,
-            List<Identifier> identifier,
+            List<dynamic> identifier,
             String version,
             String name,
             String title,
@@ -7962,25 +8394,25 @@ class _$EncounterParticipant implements EncounterParticipant {
             Reference subjectReference,
             FhirDateTime date,
             String publisher,
-            List<ContactDetail> contact,
+            List<dynamic> contact,
             Markdown description,
-            List<UsageContext> useContext,
-            List<CodeableConcept> jurisdiction,
+            List<dynamic> useContext,
+            List<dynamic> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<CodeableConcept> topic,
-            List<ContactDetail> author,
-            List<ContactDetail> editor,
-            List<ContactDetail> reviewer,
-            List<ContactDetail> endorser,
-            List<RelatedArtifact> relatedArtifact,
-            List<ParameterDefinition> parameter,
-            List<DataRequirement> dataRequirement,
-            List<Attachment> content),
+            List<dynamic> topic,
+            List<dynamic> author,
+            List<dynamic> editor,
+            List<dynamic> reviewer,
+            List<dynamic> endorser,
+            List<dynamic> relatedArtifact,
+            List<dynamic> parameter,
+            List<dynamic> dataRequirement,
+            List<dynamic> content),
     @required
         Result lists(
             String resourceType,
@@ -7990,9 +8422,9 @@ class _$EncounterParticipant implements EncounterParticipant {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -8002,14 +8434,14 @@ class _$EncounterParticipant implements EncounterParticipant {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<Annotation> note,
+            List<dynamic> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
         Result listEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept flag,
             bool deleted,
             FhirDateTime date,
@@ -8023,32 +8455,32 @@ class _$EncounterParticipant implements EncounterParticipant {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
             Period period,
-            List<Reference> referralRequest,
+            List<dynamic> referralRequest,
             Reference careManager,
-            List<Reference> team,
-            List<Reference> account),
+            List<dynamic> team,
+            List<dynamic> account),
     @required
         Result episodeOfCareStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EpisodeOfCareStatusHistoryStatus status,
             Period period),
     @required
         Result episodeOfCareDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept role,
             int rank),
@@ -8061,27 +8493,27 @@ class _$EncounterParticipant implements EncounterParticipant {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             Coding clas,
             List<dynamic> classHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
-            List<Reference> episodeOfCare,
-            List<Reference> basedOn,
+            List<dynamic> episodeOfCare,
+            List<dynamic> basedOn,
             List<dynamic> participant,
-            List<Reference> appointment,
+            List<dynamic> appointment,
             Period period,
             Duration length,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
             List<dynamic> diagnosis,
-            List<Reference> account,
+            List<dynamic> account,
             EncounterHospitalization hospitalization,
             List<dynamic> location,
             Reference serviceProvider,
@@ -8089,52 +8521,71 @@ class _$EncounterParticipant implements EncounterParticipant {
     @required
         Result encounterStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EncounterStatusHistoryStatus status,
             Period period),
     @required
-        Result encounterClassHistory(String id, List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension, Coding clas, Period period),
+        Result encounterClassHistory(String id, List<dynamic> extension,
+            List<dynamic> modifierExtension, Coding clas, Period period),
     @required
         Result encounterParticipant(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> type,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> type,
             Period period,
             Reference individual),
     @required
         Result encounterDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept use,
             int rank),
     @required
         Result encounterHospitalization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier preAdmissionIdentifier,
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<CodeableConcept> dietPreference,
-            List<CodeableConcept> specialCourtesy,
-            List<CodeableConcept> specialArrangement,
+            List<dynamic> dietPreference,
+            List<dynamic> specialCourtesy,
+            List<dynamic> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
         Result encounterLocation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference location,
             EncounterLocationStatus status,
             CodeableConcept physicalType,
             Period period),
+    @required
+        Result flag(
+            String resourceType,
+            Id id,
+            Meta meta,
+            FhirUri implicitRules,
+            Code language,
+            Narrative text,
+            List<dynamic> contained,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            FlagStatus status,
+            List<dynamic> category,
+            CodeableConcept code,
+            Reference subject,
+            Period period,
+            Reference encounter,
+            Reference author),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -8149,6 +8600,7 @@ class _$EncounterParticipant implements EncounterParticipant {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return encounterParticipant(
         id, extension, modifierExtension, type, period, individual);
   }
@@ -8164,10 +8616,10 @@ class _$EncounterParticipant implements EncounterParticipant {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         FhirUri url,
-        List<Identifier> identifier,
+        List<dynamic> identifier,
         String version,
         String name,
         String title,
@@ -8179,25 +8631,25 @@ class _$EncounterParticipant implements EncounterParticipant {
         Reference subjectReference,
         FhirDateTime date,
         String publisher,
-        List<ContactDetail> contact,
+        List<dynamic> contact,
         Markdown description,
-        List<UsageContext> useContext,
-        List<CodeableConcept> jurisdiction,
+        List<dynamic> useContext,
+        List<dynamic> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<CodeableConcept> topic,
-        List<ContactDetail> author,
-        List<ContactDetail> editor,
-        List<ContactDetail> reviewer,
-        List<ContactDetail> endorser,
-        List<RelatedArtifact> relatedArtifact,
-        List<ParameterDefinition> parameter,
-        List<DataRequirement> dataRequirement,
-        List<Attachment> content),
+        List<dynamic> topic,
+        List<dynamic> author,
+        List<dynamic> editor,
+        List<dynamic> reviewer,
+        List<dynamic> endorser,
+        List<dynamic> relatedArtifact,
+        List<dynamic> parameter,
+        List<dynamic> dataRequirement,
+        List<dynamic> content),
     Result lists(
         String resourceType,
         Id id,
@@ -8206,9 +8658,9 @@ class _$EncounterParticipant implements EncounterParticipant {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -8218,13 +8670,13 @@ class _$EncounterParticipant implements EncounterParticipant {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<Annotation> note,
+        List<dynamic> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept flag,
         bool deleted,
         FhirDateTime date,
@@ -8237,30 +8689,30 @@ class _$EncounterParticipant implements EncounterParticipant {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
         Period period,
-        List<Reference> referralRequest,
+        List<dynamic> referralRequest,
         Reference careManager,
-        List<Reference> team,
-        List<Reference> account),
+        List<dynamic> team,
+        List<dynamic> account),
     Result episodeOfCareStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EpisodeOfCareStatusHistoryStatus status,
         Period period),
     Result episodeOfCareDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept role,
         int rank),
@@ -8272,74 +8724,92 @@ class _$EncounterParticipant implements EncounterParticipant {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         Coding clas,
         List<dynamic> classHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
-        List<Reference> episodeOfCare,
-        List<Reference> basedOn,
+        List<dynamic> episodeOfCare,
+        List<dynamic> basedOn,
         List<dynamic> participant,
-        List<Reference> appointment,
+        List<dynamic> appointment,
         Period period,
         Duration length,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
         List<dynamic> diagnosis,
-        List<Reference> account,
+        List<dynamic> account,
         EncounterHospitalization hospitalization,
         List<dynamic> location,
         Reference serviceProvider,
         Reference partOf),
     Result encounterStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EncounterStatusHistoryStatus status,
         Period period),
-    Result encounterClassHistory(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, Coding clas, Period period),
+    Result encounterClassHistory(String id, List<dynamic> extension,
+        List<dynamic> modifierExtension, Coding clas, Period period),
     Result encounterParticipant(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> type,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept use,
         int rank),
     Result encounterHospitalization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier preAdmissionIdentifier,
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<CodeableConcept> dietPreference,
-        List<CodeableConcept> specialCourtesy,
-        List<CodeableConcept> specialArrangement,
+        List<dynamic> dietPreference,
+        List<dynamic> specialCourtesy,
+        List<dynamic> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference location,
         EncounterLocationStatus status,
         CodeableConcept physicalType,
         Period period),
+    Result flag(
+        String resourceType,
+        Id id,
+        Meta meta,
+        FhirUri implicitRules,
+        Code language,
+        Narrative text,
+        List<dynamic> contained,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        FlagStatus status,
+        List<dynamic> category,
+        CodeableConcept code,
+        Reference subject,
+        Period period,
+        Reference encounter,
+        Reference author),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8367,6 +8837,7 @@ class _$EncounterParticipant implements EncounterParticipant {
     @required Result encounterDiagnosis(EncounterDiagnosis value),
     @required Result encounterHospitalization(EncounterHospitalization value),
     @required Result encounterLocation(EncounterLocation value),
+    @required Result flag(Flag value),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -8381,6 +8852,7 @@ class _$EncounterParticipant implements EncounterParticipant {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return encounterParticipant(this);
   }
 
@@ -8400,6 +8872,7 @@ class _$EncounterParticipant implements EncounterParticipant {
     Result encounterDiagnosis(EncounterDiagnosis value),
     Result encounterHospitalization(EncounterHospitalization value),
     Result encounterLocation(EncounterLocation value),
+    Result flag(Flag value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8419,9 +8892,9 @@ class _$EncounterParticipant implements EncounterParticipant {
 abstract class EncounterParticipant implements Management {
   const factory EncounterParticipant(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<CodeableConcept> type,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> type,
       Period period,
       Reference individual}) = _$EncounterParticipant;
 
@@ -8430,10 +8903,10 @@ abstract class EncounterParticipant implements Management {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<CodeableConcept> get type;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get type;
   Period get period;
   Reference get individual;
   @override
@@ -8448,8 +8921,8 @@ abstract class $EncounterDiagnosisCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Reference condition,
       CodeableConcept use,
       int rank});
@@ -8476,12 +8949,11 @@ class _$EncounterDiagnosisCopyWithImpl<$Res>
   }) {
     return _then(EncounterDiagnosis(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       condition:
           condition == freezed ? _value.condition : condition as Reference,
       use: use == freezed ? _value.use : use as CodeableConcept,
@@ -8506,9 +8978,9 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Reference condition;
   @override
@@ -8568,10 +9040,10 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             FhirUri url,
-            List<Identifier> identifier,
+            List<dynamic> identifier,
             String version,
             String name,
             String title,
@@ -8583,25 +9055,25 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
             Reference subjectReference,
             FhirDateTime date,
             String publisher,
-            List<ContactDetail> contact,
+            List<dynamic> contact,
             Markdown description,
-            List<UsageContext> useContext,
-            List<CodeableConcept> jurisdiction,
+            List<dynamic> useContext,
+            List<dynamic> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<CodeableConcept> topic,
-            List<ContactDetail> author,
-            List<ContactDetail> editor,
-            List<ContactDetail> reviewer,
-            List<ContactDetail> endorser,
-            List<RelatedArtifact> relatedArtifact,
-            List<ParameterDefinition> parameter,
-            List<DataRequirement> dataRequirement,
-            List<Attachment> content),
+            List<dynamic> topic,
+            List<dynamic> author,
+            List<dynamic> editor,
+            List<dynamic> reviewer,
+            List<dynamic> endorser,
+            List<dynamic> relatedArtifact,
+            List<dynamic> parameter,
+            List<dynamic> dataRequirement,
+            List<dynamic> content),
     @required
         Result lists(
             String resourceType,
@@ -8611,9 +9083,9 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -8623,14 +9095,14 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<Annotation> note,
+            List<dynamic> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
         Result listEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept flag,
             bool deleted,
             FhirDateTime date,
@@ -8644,32 +9116,32 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
             Period period,
-            List<Reference> referralRequest,
+            List<dynamic> referralRequest,
             Reference careManager,
-            List<Reference> team,
-            List<Reference> account),
+            List<dynamic> team,
+            List<dynamic> account),
     @required
         Result episodeOfCareStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EpisodeOfCareStatusHistoryStatus status,
             Period period),
     @required
         Result episodeOfCareDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept role,
             int rank),
@@ -8682,27 +9154,27 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             Coding clas,
             List<dynamic> classHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
-            List<Reference> episodeOfCare,
-            List<Reference> basedOn,
+            List<dynamic> episodeOfCare,
+            List<dynamic> basedOn,
             List<dynamic> participant,
-            List<Reference> appointment,
+            List<dynamic> appointment,
             Period period,
             Duration length,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
             List<dynamic> diagnosis,
-            List<Reference> account,
+            List<dynamic> account,
             EncounterHospitalization hospitalization,
             List<dynamic> location,
             Reference serviceProvider,
@@ -8710,52 +9182,71 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
     @required
         Result encounterStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EncounterStatusHistoryStatus status,
             Period period),
     @required
-        Result encounterClassHistory(String id, List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension, Coding clas, Period period),
+        Result encounterClassHistory(String id, List<dynamic> extension,
+            List<dynamic> modifierExtension, Coding clas, Period period),
     @required
         Result encounterParticipant(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> type,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> type,
             Period period,
             Reference individual),
     @required
         Result encounterDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept use,
             int rank),
     @required
         Result encounterHospitalization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier preAdmissionIdentifier,
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<CodeableConcept> dietPreference,
-            List<CodeableConcept> specialCourtesy,
-            List<CodeableConcept> specialArrangement,
+            List<dynamic> dietPreference,
+            List<dynamic> specialCourtesy,
+            List<dynamic> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
         Result encounterLocation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference location,
             EncounterLocationStatus status,
             CodeableConcept physicalType,
             Period period),
+    @required
+        Result flag(
+            String resourceType,
+            Id id,
+            Meta meta,
+            FhirUri implicitRules,
+            Code language,
+            Narrative text,
+            List<dynamic> contained,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            FlagStatus status,
+            List<dynamic> category,
+            CodeableConcept code,
+            Reference subject,
+            Period period,
+            Reference encounter,
+            Reference author),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -8770,6 +9261,7 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return encounterDiagnosis(
         id, extension, modifierExtension, condition, use, rank);
   }
@@ -8785,10 +9277,10 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         FhirUri url,
-        List<Identifier> identifier,
+        List<dynamic> identifier,
         String version,
         String name,
         String title,
@@ -8800,25 +9292,25 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
         Reference subjectReference,
         FhirDateTime date,
         String publisher,
-        List<ContactDetail> contact,
+        List<dynamic> contact,
         Markdown description,
-        List<UsageContext> useContext,
-        List<CodeableConcept> jurisdiction,
+        List<dynamic> useContext,
+        List<dynamic> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<CodeableConcept> topic,
-        List<ContactDetail> author,
-        List<ContactDetail> editor,
-        List<ContactDetail> reviewer,
-        List<ContactDetail> endorser,
-        List<RelatedArtifact> relatedArtifact,
-        List<ParameterDefinition> parameter,
-        List<DataRequirement> dataRequirement,
-        List<Attachment> content),
+        List<dynamic> topic,
+        List<dynamic> author,
+        List<dynamic> editor,
+        List<dynamic> reviewer,
+        List<dynamic> endorser,
+        List<dynamic> relatedArtifact,
+        List<dynamic> parameter,
+        List<dynamic> dataRequirement,
+        List<dynamic> content),
     Result lists(
         String resourceType,
         Id id,
@@ -8827,9 +9319,9 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -8839,13 +9331,13 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<Annotation> note,
+        List<dynamic> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept flag,
         bool deleted,
         FhirDateTime date,
@@ -8858,30 +9350,30 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
         Period period,
-        List<Reference> referralRequest,
+        List<dynamic> referralRequest,
         Reference careManager,
-        List<Reference> team,
-        List<Reference> account),
+        List<dynamic> team,
+        List<dynamic> account),
     Result episodeOfCareStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EpisodeOfCareStatusHistoryStatus status,
         Period period),
     Result episodeOfCareDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept role,
         int rank),
@@ -8893,74 +9385,92 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         Coding clas,
         List<dynamic> classHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
-        List<Reference> episodeOfCare,
-        List<Reference> basedOn,
+        List<dynamic> episodeOfCare,
+        List<dynamic> basedOn,
         List<dynamic> participant,
-        List<Reference> appointment,
+        List<dynamic> appointment,
         Period period,
         Duration length,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
         List<dynamic> diagnosis,
-        List<Reference> account,
+        List<dynamic> account,
         EncounterHospitalization hospitalization,
         List<dynamic> location,
         Reference serviceProvider,
         Reference partOf),
     Result encounterStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EncounterStatusHistoryStatus status,
         Period period),
-    Result encounterClassHistory(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, Coding clas, Period period),
+    Result encounterClassHistory(String id, List<dynamic> extension,
+        List<dynamic> modifierExtension, Coding clas, Period period),
     Result encounterParticipant(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> type,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept use,
         int rank),
     Result encounterHospitalization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier preAdmissionIdentifier,
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<CodeableConcept> dietPreference,
-        List<CodeableConcept> specialCourtesy,
-        List<CodeableConcept> specialArrangement,
+        List<dynamic> dietPreference,
+        List<dynamic> specialCourtesy,
+        List<dynamic> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference location,
         EncounterLocationStatus status,
         CodeableConcept physicalType,
         Period period),
+    Result flag(
+        String resourceType,
+        Id id,
+        Meta meta,
+        FhirUri implicitRules,
+        Code language,
+        Narrative text,
+        List<dynamic> contained,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        FlagStatus status,
+        List<dynamic> category,
+        CodeableConcept code,
+        Reference subject,
+        Period period,
+        Reference encounter,
+        Reference author),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8988,6 +9498,7 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
     @required Result encounterDiagnosis(EncounterDiagnosis value),
     @required Result encounterHospitalization(EncounterHospitalization value),
     @required Result encounterLocation(EncounterLocation value),
+    @required Result flag(Flag value),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -9002,6 +9513,7 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return encounterDiagnosis(this);
   }
 
@@ -9021,6 +9533,7 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
     Result encounterDiagnosis(EncounterDiagnosis value),
     Result encounterHospitalization(EncounterHospitalization value),
     Result encounterLocation(EncounterLocation value),
+    Result flag(Flag value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -9040,8 +9553,8 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
 abstract class EncounterDiagnosis implements Management {
   const factory EncounterDiagnosis(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Reference condition,
       CodeableConcept use,
       int rank}) = _$EncounterDiagnosis;
@@ -9051,9 +9564,9 @@ abstract class EncounterDiagnosis implements Management {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   Reference get condition;
   CodeableConcept get use;
   int get rank;
@@ -9069,15 +9582,15 @@ abstract class $EncounterHospitalizationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Identifier preAdmissionIdentifier,
       Reference origin,
       CodeableConcept admitSource,
       CodeableConcept reAdmission,
-      List<CodeableConcept> dietPreference,
-      List<CodeableConcept> specialCourtesy,
-      List<CodeableConcept> specialArrangement,
+      List<dynamic> dietPreference,
+      List<dynamic> specialCourtesy,
+      List<dynamic> specialArrangement,
       Reference destination,
       CodeableConcept dischargeDisposition});
 }
@@ -9110,12 +9623,11 @@ class _$EncounterHospitalizationCopyWithImpl<$Res>
   }) {
     return _then(EncounterHospitalization(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       preAdmissionIdentifier: preAdmissionIdentifier == freezed
           ? _value.preAdmissionIdentifier
           : preAdmissionIdentifier as Identifier,
@@ -9128,13 +9640,13 @@ class _$EncounterHospitalizationCopyWithImpl<$Res>
           : reAdmission as CodeableConcept,
       dietPreference: dietPreference == freezed
           ? _value.dietPreference
-          : dietPreference as List<CodeableConcept>,
+          : dietPreference as List<dynamic>,
       specialCourtesy: specialCourtesy == freezed
           ? _value.specialCourtesy
-          : specialCourtesy as List<CodeableConcept>,
+          : specialCourtesy as List<dynamic>,
       specialArrangement: specialArrangement == freezed
           ? _value.specialArrangement
-          : specialArrangement as List<CodeableConcept>,
+          : specialArrangement as List<dynamic>,
       destination: destination == freezed
           ? _value.destination
           : destination as Reference,
@@ -9167,9 +9679,9 @@ class _$EncounterHospitalization implements EncounterHospitalization {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Identifier preAdmissionIdentifier;
   @override
@@ -9179,11 +9691,11 @@ class _$EncounterHospitalization implements EncounterHospitalization {
   @override
   final CodeableConcept reAdmission;
   @override
-  final List<CodeableConcept> dietPreference;
+  final List<dynamic> dietPreference;
   @override
-  final List<CodeableConcept> specialCourtesy;
+  final List<dynamic> specialCourtesy;
   @override
-  final List<CodeableConcept> specialArrangement;
+  final List<dynamic> specialArrangement;
   @override
   final Reference destination;
   @override
@@ -9267,10 +9779,10 @@ class _$EncounterHospitalization implements EncounterHospitalization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             FhirUri url,
-            List<Identifier> identifier,
+            List<dynamic> identifier,
             String version,
             String name,
             String title,
@@ -9282,25 +9794,25 @@ class _$EncounterHospitalization implements EncounterHospitalization {
             Reference subjectReference,
             FhirDateTime date,
             String publisher,
-            List<ContactDetail> contact,
+            List<dynamic> contact,
             Markdown description,
-            List<UsageContext> useContext,
-            List<CodeableConcept> jurisdiction,
+            List<dynamic> useContext,
+            List<dynamic> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<CodeableConcept> topic,
-            List<ContactDetail> author,
-            List<ContactDetail> editor,
-            List<ContactDetail> reviewer,
-            List<ContactDetail> endorser,
-            List<RelatedArtifact> relatedArtifact,
-            List<ParameterDefinition> parameter,
-            List<DataRequirement> dataRequirement,
-            List<Attachment> content),
+            List<dynamic> topic,
+            List<dynamic> author,
+            List<dynamic> editor,
+            List<dynamic> reviewer,
+            List<dynamic> endorser,
+            List<dynamic> relatedArtifact,
+            List<dynamic> parameter,
+            List<dynamic> dataRequirement,
+            List<dynamic> content),
     @required
         Result lists(
             String resourceType,
@@ -9310,9 +9822,9 @@ class _$EncounterHospitalization implements EncounterHospitalization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -9322,14 +9834,14 @@ class _$EncounterHospitalization implements EncounterHospitalization {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<Annotation> note,
+            List<dynamic> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
         Result listEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept flag,
             bool deleted,
             FhirDateTime date,
@@ -9343,32 +9855,32 @@ class _$EncounterHospitalization implements EncounterHospitalization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
             Period period,
-            List<Reference> referralRequest,
+            List<dynamic> referralRequest,
             Reference careManager,
-            List<Reference> team,
-            List<Reference> account),
+            List<dynamic> team,
+            List<dynamic> account),
     @required
         Result episodeOfCareStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EpisodeOfCareStatusHistoryStatus status,
             Period period),
     @required
         Result episodeOfCareDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept role,
             int rank),
@@ -9381,27 +9893,27 @@ class _$EncounterHospitalization implements EncounterHospitalization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             Coding clas,
             List<dynamic> classHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
-            List<Reference> episodeOfCare,
-            List<Reference> basedOn,
+            List<dynamic> episodeOfCare,
+            List<dynamic> basedOn,
             List<dynamic> participant,
-            List<Reference> appointment,
+            List<dynamic> appointment,
             Period period,
             Duration length,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
             List<dynamic> diagnosis,
-            List<Reference> account,
+            List<dynamic> account,
             EncounterHospitalization hospitalization,
             List<dynamic> location,
             Reference serviceProvider,
@@ -9409,52 +9921,71 @@ class _$EncounterHospitalization implements EncounterHospitalization {
     @required
         Result encounterStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EncounterStatusHistoryStatus status,
             Period period),
     @required
-        Result encounterClassHistory(String id, List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension, Coding clas, Period period),
+        Result encounterClassHistory(String id, List<dynamic> extension,
+            List<dynamic> modifierExtension, Coding clas, Period period),
     @required
         Result encounterParticipant(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> type,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> type,
             Period period,
             Reference individual),
     @required
         Result encounterDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept use,
             int rank),
     @required
         Result encounterHospitalization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier preAdmissionIdentifier,
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<CodeableConcept> dietPreference,
-            List<CodeableConcept> specialCourtesy,
-            List<CodeableConcept> specialArrangement,
+            List<dynamic> dietPreference,
+            List<dynamic> specialCourtesy,
+            List<dynamic> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
         Result encounterLocation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference location,
             EncounterLocationStatus status,
             CodeableConcept physicalType,
             Period period),
+    @required
+        Result flag(
+            String resourceType,
+            Id id,
+            Meta meta,
+            FhirUri implicitRules,
+            Code language,
+            Narrative text,
+            List<dynamic> contained,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            FlagStatus status,
+            List<dynamic> category,
+            CodeableConcept code,
+            Reference subject,
+            Period period,
+            Reference encounter,
+            Reference author),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -9469,6 +10000,7 @@ class _$EncounterHospitalization implements EncounterHospitalization {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return encounterHospitalization(
         id,
         extension,
@@ -9495,10 +10027,10 @@ class _$EncounterHospitalization implements EncounterHospitalization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         FhirUri url,
-        List<Identifier> identifier,
+        List<dynamic> identifier,
         String version,
         String name,
         String title,
@@ -9510,25 +10042,25 @@ class _$EncounterHospitalization implements EncounterHospitalization {
         Reference subjectReference,
         FhirDateTime date,
         String publisher,
-        List<ContactDetail> contact,
+        List<dynamic> contact,
         Markdown description,
-        List<UsageContext> useContext,
-        List<CodeableConcept> jurisdiction,
+        List<dynamic> useContext,
+        List<dynamic> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<CodeableConcept> topic,
-        List<ContactDetail> author,
-        List<ContactDetail> editor,
-        List<ContactDetail> reviewer,
-        List<ContactDetail> endorser,
-        List<RelatedArtifact> relatedArtifact,
-        List<ParameterDefinition> parameter,
-        List<DataRequirement> dataRequirement,
-        List<Attachment> content),
+        List<dynamic> topic,
+        List<dynamic> author,
+        List<dynamic> editor,
+        List<dynamic> reviewer,
+        List<dynamic> endorser,
+        List<dynamic> relatedArtifact,
+        List<dynamic> parameter,
+        List<dynamic> dataRequirement,
+        List<dynamic> content),
     Result lists(
         String resourceType,
         Id id,
@@ -9537,9 +10069,9 @@ class _$EncounterHospitalization implements EncounterHospitalization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -9549,13 +10081,13 @@ class _$EncounterHospitalization implements EncounterHospitalization {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<Annotation> note,
+        List<dynamic> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept flag,
         bool deleted,
         FhirDateTime date,
@@ -9568,30 +10100,30 @@ class _$EncounterHospitalization implements EncounterHospitalization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
         Period period,
-        List<Reference> referralRequest,
+        List<dynamic> referralRequest,
         Reference careManager,
-        List<Reference> team,
-        List<Reference> account),
+        List<dynamic> team,
+        List<dynamic> account),
     Result episodeOfCareStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EpisodeOfCareStatusHistoryStatus status,
         Period period),
     Result episodeOfCareDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept role,
         int rank),
@@ -9603,74 +10135,92 @@ class _$EncounterHospitalization implements EncounterHospitalization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         Coding clas,
         List<dynamic> classHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
-        List<Reference> episodeOfCare,
-        List<Reference> basedOn,
+        List<dynamic> episodeOfCare,
+        List<dynamic> basedOn,
         List<dynamic> participant,
-        List<Reference> appointment,
+        List<dynamic> appointment,
         Period period,
         Duration length,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
         List<dynamic> diagnosis,
-        List<Reference> account,
+        List<dynamic> account,
         EncounterHospitalization hospitalization,
         List<dynamic> location,
         Reference serviceProvider,
         Reference partOf),
     Result encounterStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EncounterStatusHistoryStatus status,
         Period period),
-    Result encounterClassHistory(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, Coding clas, Period period),
+    Result encounterClassHistory(String id, List<dynamic> extension,
+        List<dynamic> modifierExtension, Coding clas, Period period),
     Result encounterParticipant(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> type,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept use,
         int rank),
     Result encounterHospitalization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier preAdmissionIdentifier,
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<CodeableConcept> dietPreference,
-        List<CodeableConcept> specialCourtesy,
-        List<CodeableConcept> specialArrangement,
+        List<dynamic> dietPreference,
+        List<dynamic> specialCourtesy,
+        List<dynamic> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference location,
         EncounterLocationStatus status,
         CodeableConcept physicalType,
         Period period),
+    Result flag(
+        String resourceType,
+        Id id,
+        Meta meta,
+        FhirUri implicitRules,
+        Code language,
+        Narrative text,
+        List<dynamic> contained,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        FlagStatus status,
+        List<dynamic> category,
+        CodeableConcept code,
+        Reference subject,
+        Period period,
+        Reference encounter,
+        Reference author),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -9709,6 +10259,7 @@ class _$EncounterHospitalization implements EncounterHospitalization {
     @required Result encounterDiagnosis(EncounterDiagnosis value),
     @required Result encounterHospitalization(EncounterHospitalization value),
     @required Result encounterLocation(EncounterLocation value),
+    @required Result flag(Flag value),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -9723,6 +10274,7 @@ class _$EncounterHospitalization implements EncounterHospitalization {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return encounterHospitalization(this);
   }
 
@@ -9742,6 +10294,7 @@ class _$EncounterHospitalization implements EncounterHospitalization {
     Result encounterDiagnosis(EncounterDiagnosis value),
     Result encounterHospitalization(EncounterHospitalization value),
     Result encounterLocation(EncounterLocation value),
+    Result flag(Flag value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -9761,15 +10314,15 @@ class _$EncounterHospitalization implements EncounterHospitalization {
 abstract class EncounterHospitalization implements Management {
   const factory EncounterHospitalization(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Identifier preAdmissionIdentifier,
       Reference origin,
       CodeableConcept admitSource,
       CodeableConcept reAdmission,
-      List<CodeableConcept> dietPreference,
-      List<CodeableConcept> specialCourtesy,
-      List<CodeableConcept> specialArrangement,
+      List<dynamic> dietPreference,
+      List<dynamic> specialCourtesy,
+      List<dynamic> specialArrangement,
       Reference destination,
       CodeableConcept dischargeDisposition}) = _$EncounterHospitalization;
 
@@ -9778,16 +10331,16 @@ abstract class EncounterHospitalization implements Management {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   Identifier get preAdmissionIdentifier;
   Reference get origin;
   CodeableConcept get admitSource;
   CodeableConcept get reAdmission;
-  List<CodeableConcept> get dietPreference;
-  List<CodeableConcept> get specialCourtesy;
-  List<CodeableConcept> get specialArrangement;
+  List<dynamic> get dietPreference;
+  List<dynamic> get specialCourtesy;
+  List<dynamic> get specialArrangement;
   Reference get destination;
   CodeableConcept get dischargeDisposition;
   @override
@@ -9802,8 +10355,8 @@ abstract class $EncounterLocationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Reference location,
       EncounterLocationStatus status,
       CodeableConcept physicalType,
@@ -9832,12 +10385,11 @@ class _$EncounterLocationCopyWithImpl<$Res>
   }) {
     return _then(EncounterLocation(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       location: location == freezed ? _value.location : location as Reference,
       status:
           status == freezed ? _value.status : status as EncounterLocationStatus,
@@ -9866,9 +10418,9 @@ class _$EncounterLocation implements EncounterLocation {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Reference location;
   @override
@@ -9934,10 +10486,10 @@ class _$EncounterLocation implements EncounterLocation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             FhirUri url,
-            List<Identifier> identifier,
+            List<dynamic> identifier,
             String version,
             String name,
             String title,
@@ -9949,25 +10501,25 @@ class _$EncounterLocation implements EncounterLocation {
             Reference subjectReference,
             FhirDateTime date,
             String publisher,
-            List<ContactDetail> contact,
+            List<dynamic> contact,
             Markdown description,
-            List<UsageContext> useContext,
-            List<CodeableConcept> jurisdiction,
+            List<dynamic> useContext,
+            List<dynamic> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<CodeableConcept> topic,
-            List<ContactDetail> author,
-            List<ContactDetail> editor,
-            List<ContactDetail> reviewer,
-            List<ContactDetail> endorser,
-            List<RelatedArtifact> relatedArtifact,
-            List<ParameterDefinition> parameter,
-            List<DataRequirement> dataRequirement,
-            List<Attachment> content),
+            List<dynamic> topic,
+            List<dynamic> author,
+            List<dynamic> editor,
+            List<dynamic> reviewer,
+            List<dynamic> endorser,
+            List<dynamic> relatedArtifact,
+            List<dynamic> parameter,
+            List<dynamic> dataRequirement,
+            List<dynamic> content),
     @required
         Result lists(
             String resourceType,
@@ -9977,9 +10529,9 @@ class _$EncounterLocation implements EncounterLocation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -9989,14 +10541,14 @@ class _$EncounterLocation implements EncounterLocation {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<Annotation> note,
+            List<dynamic> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
         Result listEntry(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept flag,
             bool deleted,
             FhirDateTime date,
@@ -10010,32 +10562,32 @@ class _$EncounterLocation implements EncounterLocation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
             Period period,
-            List<Reference> referralRequest,
+            List<dynamic> referralRequest,
             Reference careManager,
-            List<Reference> team,
-            List<Reference> account),
+            List<dynamic> team,
+            List<dynamic> account),
     @required
         Result episodeOfCareStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EpisodeOfCareStatusHistoryStatus status,
             Period period),
     @required
         Result episodeOfCareDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept role,
             int rank),
@@ -10048,27 +10600,27 @@ class _$EncounterLocation implements EncounterLocation {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             Coding clas,
             List<dynamic> classHistory,
-            List<CodeableConcept> type,
+            List<dynamic> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
-            List<Reference> episodeOfCare,
-            List<Reference> basedOn,
+            List<dynamic> episodeOfCare,
+            List<dynamic> basedOn,
             List<dynamic> participant,
-            List<Reference> appointment,
+            List<dynamic> appointment,
             Period period,
             Duration length,
-            List<CodeableConcept> reasonCode,
-            List<Reference> reasonReference,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
             List<dynamic> diagnosis,
-            List<Reference> account,
+            List<dynamic> account,
             EncounterHospitalization hospitalization,
             List<dynamic> location,
             Reference serviceProvider,
@@ -10076,52 +10628,71 @@ class _$EncounterLocation implements EncounterLocation {
     @required
         Result encounterStatusHistory(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             EncounterStatusHistoryStatus status,
             Period period),
     @required
-        Result encounterClassHistory(String id, List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension, Coding clas, Period period),
+        Result encounterClassHistory(String id, List<dynamic> extension,
+            List<dynamic> modifierExtension, Coding clas, Period period),
     @required
         Result encounterParticipant(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<CodeableConcept> type,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> type,
             Period period,
             Reference individual),
     @required
         Result encounterDiagnosis(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference condition,
             CodeableConcept use,
             int rank),
     @required
         Result encounterHospitalization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier preAdmissionIdentifier,
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<CodeableConcept> dietPreference,
-            List<CodeableConcept> specialCourtesy,
-            List<CodeableConcept> specialArrangement,
+            List<dynamic> dietPreference,
+            List<dynamic> specialCourtesy,
+            List<dynamic> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
         Result encounterLocation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference location,
             EncounterLocationStatus status,
             CodeableConcept physicalType,
             Period period),
+    @required
+        Result flag(
+            String resourceType,
+            Id id,
+            Meta meta,
+            FhirUri implicitRules,
+            Code language,
+            Narrative text,
+            List<dynamic> contained,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            FlagStatus status,
+            List<dynamic> category,
+            CodeableConcept code,
+            Reference subject,
+            Period period,
+            Reference encounter,
+            Reference author),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -10136,6 +10707,7 @@ class _$EncounterLocation implements EncounterLocation {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return encounterLocation(id, extension, modifierExtension, location, status,
         physicalType, period);
   }
@@ -10151,10 +10723,10 @@ class _$EncounterLocation implements EncounterLocation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         FhirUri url,
-        List<Identifier> identifier,
+        List<dynamic> identifier,
         String version,
         String name,
         String title,
@@ -10166,25 +10738,25 @@ class _$EncounterLocation implements EncounterLocation {
         Reference subjectReference,
         FhirDateTime date,
         String publisher,
-        List<ContactDetail> contact,
+        List<dynamic> contact,
         Markdown description,
-        List<UsageContext> useContext,
-        List<CodeableConcept> jurisdiction,
+        List<dynamic> useContext,
+        List<dynamic> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<CodeableConcept> topic,
-        List<ContactDetail> author,
-        List<ContactDetail> editor,
-        List<ContactDetail> reviewer,
-        List<ContactDetail> endorser,
-        List<RelatedArtifact> relatedArtifact,
-        List<ParameterDefinition> parameter,
-        List<DataRequirement> dataRequirement,
-        List<Attachment> content),
+        List<dynamic> topic,
+        List<dynamic> author,
+        List<dynamic> editor,
+        List<dynamic> reviewer,
+        List<dynamic> endorser,
+        List<dynamic> relatedArtifact,
+        List<dynamic> parameter,
+        List<dynamic> dataRequirement,
+        List<dynamic> content),
     Result lists(
         String resourceType,
         Id id,
@@ -10193,9 +10765,9 @@ class _$EncounterLocation implements EncounterLocation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -10205,13 +10777,13 @@ class _$EncounterLocation implements EncounterLocation {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<Annotation> note,
+        List<dynamic> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept flag,
         bool deleted,
         FhirDateTime date,
@@ -10224,30 +10796,30 @@ class _$EncounterLocation implements EncounterLocation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
         Period period,
-        List<Reference> referralRequest,
+        List<dynamic> referralRequest,
         Reference careManager,
-        List<Reference> team,
-        List<Reference> account),
+        List<dynamic> team,
+        List<dynamic> account),
     Result episodeOfCareStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EpisodeOfCareStatusHistoryStatus status,
         Period period),
     Result episodeOfCareDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept role,
         int rank),
@@ -10259,74 +10831,92 @@ class _$EncounterLocation implements EncounterLocation {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         Coding clas,
         List<dynamic> classHistory,
-        List<CodeableConcept> type,
+        List<dynamic> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
-        List<Reference> episodeOfCare,
-        List<Reference> basedOn,
+        List<dynamic> episodeOfCare,
+        List<dynamic> basedOn,
         List<dynamic> participant,
-        List<Reference> appointment,
+        List<dynamic> appointment,
         Period period,
         Duration length,
-        List<CodeableConcept> reasonCode,
-        List<Reference> reasonReference,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
         List<dynamic> diagnosis,
-        List<Reference> account,
+        List<dynamic> account,
         EncounterHospitalization hospitalization,
         List<dynamic> location,
         Reference serviceProvider,
         Reference partOf),
     Result encounterStatusHistory(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         EncounterStatusHistoryStatus status,
         Period period),
-    Result encounterClassHistory(String id, List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension, Coding clas, Period period),
+    Result encounterClassHistory(String id, List<dynamic> extension,
+        List<dynamic> modifierExtension, Coding clas, Period period),
     Result encounterParticipant(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<CodeableConcept> type,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference condition,
         CodeableConcept use,
         int rank),
     Result encounterHospitalization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier preAdmissionIdentifier,
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<CodeableConcept> dietPreference,
-        List<CodeableConcept> specialCourtesy,
-        List<CodeableConcept> specialArrangement,
+        List<dynamic> dietPreference,
+        List<dynamic> specialCourtesy,
+        List<dynamic> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference location,
         EncounterLocationStatus status,
         CodeableConcept physicalType,
         Period period),
+    Result flag(
+        String resourceType,
+        Id id,
+        Meta meta,
+        FhirUri implicitRules,
+        Code language,
+        Narrative text,
+        List<dynamic> contained,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        FlagStatus status,
+        List<dynamic> category,
+        CodeableConcept code,
+        Reference subject,
+        Period period,
+        Reference encounter,
+        Reference author),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -10354,6 +10944,7 @@ class _$EncounterLocation implements EncounterLocation {
     @required Result encounterDiagnosis(EncounterDiagnosis value),
     @required Result encounterHospitalization(EncounterHospitalization value),
     @required Result encounterLocation(EncounterLocation value),
+    @required Result flag(Flag value),
   }) {
     assert(library != null);
     assert(lists != null);
@@ -10368,6 +10959,7 @@ class _$EncounterLocation implements EncounterLocation {
     assert(encounterDiagnosis != null);
     assert(encounterHospitalization != null);
     assert(encounterLocation != null);
+    assert(flag != null);
     return encounterLocation(this);
   }
 
@@ -10387,6 +10979,7 @@ class _$EncounterLocation implements EncounterLocation {
     Result encounterDiagnosis(EncounterDiagnosis value),
     Result encounterHospitalization(EncounterHospitalization value),
     Result encounterLocation(EncounterLocation value),
+    Result flag(Flag value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -10406,8 +10999,8 @@ class _$EncounterLocation implements EncounterLocation {
 abstract class EncounterLocation implements Management {
   const factory EncounterLocation(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Reference location,
       EncounterLocationStatus status,
       CodeableConcept physicalType,
@@ -10418,13 +11011,835 @@ abstract class EncounterLocation implements Management {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   Reference get location;
   EncounterLocationStatus get status;
   CodeableConcept get physicalType;
   Period get period;
   @override
   $EncounterLocationCopyWith<EncounterLocation> get copyWith;
+}
+
+abstract class $FlagCopyWith<$Res> implements $ManagementCopyWith<$Res> {
+  factory $FlagCopyWith(Flag value, $Res Function(Flag) then) =
+      _$FlagCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<dynamic> contained,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
+      FlagStatus status,
+      List<dynamic> category,
+      CodeableConcept code,
+      Reference subject,
+      Period period,
+      Reference encounter,
+      Reference author});
+}
+
+class _$FlagCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
+    implements $FlagCopyWith<$Res> {
+  _$FlagCopyWithImpl(Flag _value, $Res Function(Flag) _then)
+      : super(_value, (v) => _then(v as Flag));
+
+  @override
+  Flag get _value => super._value as Flag;
+
+  @override
+  $Res call({
+    Object resourceType = freezed,
+    Object id = freezed,
+    Object meta = freezed,
+    Object implicitRules = freezed,
+    Object language = freezed,
+    Object text = freezed,
+    Object contained = freezed,
+    Object extension = freezed,
+    Object modifierExtension = freezed,
+    Object identifier = freezed,
+    Object status = freezed,
+    Object category = freezed,
+    Object code = freezed,
+    Object subject = freezed,
+    Object period = freezed,
+    Object encounter = freezed,
+    Object author = freezed,
+  }) {
+    return _then(Flag(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType as String,
+      id: id == freezed ? _value.id : id as Id,
+      meta: meta == freezed ? _value.meta : meta as Meta,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules as FhirUri,
+      language: language == freezed ? _value.language : language as Code,
+      text: text == freezed ? _value.text : text as Narrative,
+      contained:
+          contained == freezed ? _value.contained : contained as List<dynamic>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension as List<dynamic>,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<dynamic>,
+      status: status == freezed ? _value.status : status as FlagStatus,
+      category:
+          category == freezed ? _value.category : category as List<dynamic>,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      subject: subject == freezed ? _value.subject : subject as Reference,
+      period: period == freezed ? _value.period : period as Period,
+      encounter:
+          encounter == freezed ? _value.encounter : encounter as Reference,
+      author: author == freezed ? _value.author : author as Reference,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$Flag implements Flag {
+  const _$Flag(
+      {this.resourceType,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      this.language,
+      this.text,
+      this.contained,
+      this.extension,
+      this.modifierExtension,
+      this.identifier,
+      this.status,
+      this.category,
+      this.code,
+      this.subject,
+      this.period,
+      this.encounter,
+      this.author});
+
+  factory _$Flag.fromJson(Map<String, dynamic> json) => _$_$FlagFromJson(json);
+
+  @override
+  final String resourceType;
+  @override
+  final Id id;
+  @override
+  final Meta meta;
+  @override
+  final FhirUri implicitRules;
+  @override
+  final Code language;
+  @override
+  final Narrative text;
+  @override
+  final List<dynamic> contained;
+  @override
+  final List<dynamic> extension;
+  @override
+  final List<dynamic> modifierExtension;
+  @override
+  final List<dynamic> identifier;
+  @override
+  final FlagStatus status;
+  @override
+  final List<dynamic> category;
+  @override
+  final CodeableConcept code;
+  @override
+  final Reference subject;
+  @override
+  final Period period;
+  @override
+  final Reference encounter;
+  @override
+  final Reference author;
+
+  @override
+  String toString() {
+    return 'Management.flag(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension: $extension, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, category: $category, code: $code, subject: $subject, period: $period, encounter: $encounter, author: $author)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is Flag &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension, extension) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension, extension)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.identifier, identifier) ||
+                const DeepCollectionEquality()
+                    .equals(other.identifier, identifier)) &&
+            (identical(other.status, status) ||
+                const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.category, category) ||
+                const DeepCollectionEquality()
+                    .equals(other.category, category)) &&
+            (identical(other.code, code) ||
+                const DeepCollectionEquality().equals(other.code, code)) &&
+            (identical(other.subject, subject) ||
+                const DeepCollectionEquality()
+                    .equals(other.subject, subject)) &&
+            (identical(other.period, period) ||
+                const DeepCollectionEquality().equals(other.period, period)) &&
+            (identical(other.encounter, encounter) ||
+                const DeepCollectionEquality()
+                    .equals(other.encounter, encounter)) &&
+            (identical(other.author, author) ||
+                const DeepCollectionEquality().equals(other.author, author)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(identifier) ^
+      const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(category) ^
+      const DeepCollectionEquality().hash(code) ^
+      const DeepCollectionEquality().hash(subject) ^
+      const DeepCollectionEquality().hash(period) ^
+      const DeepCollectionEquality().hash(encounter) ^
+      const DeepCollectionEquality().hash(author);
+
+  @override
+  $FlagCopyWith<Flag> get copyWith =>
+      _$FlagCopyWithImpl<Flag>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required
+        Result library(
+            String resourceType,
+            Id id,
+            Meta meta,
+            FhirUri implicitRules,
+            Code language,
+            Narrative text,
+            List<dynamic> contained,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            FhirUri url,
+            List<dynamic> identifier,
+            String version,
+            String name,
+            String title,
+            String subtitle,
+            LibraryStatus status,
+            bool experimental,
+            CodeableConcept type,
+            CodeableConcept subjectCodeableConcept,
+            Reference subjectReference,
+            FhirDateTime date,
+            String publisher,
+            List<dynamic> contact,
+            Markdown description,
+            List<dynamic> useContext,
+            List<dynamic> jurisdiction,
+            Markdown purpose,
+            String usage,
+            Markdown copyright,
+            Date approvalDate,
+            Date lastReviewDate,
+            Period effectivePeriod,
+            List<dynamic> topic,
+            List<dynamic> author,
+            List<dynamic> editor,
+            List<dynamic> reviewer,
+            List<dynamic> endorser,
+            List<dynamic> relatedArtifact,
+            List<dynamic> parameter,
+            List<dynamic> dataRequirement,
+            List<dynamic> content),
+    @required
+        Result lists(
+            String resourceType,
+            Id id,
+            Meta meta,
+            FhirUri implicitRules,
+            Code language,
+            Narrative text,
+            List<dynamic> contained,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            ListStatus status,
+            ListMode mode,
+            String title,
+            CodeableConcept code,
+            Reference subject,
+            Reference encounter,
+            FhirDateTime date,
+            Reference source,
+            CodeableConcept orderedBy,
+            List<dynamic> note,
+            List<dynamic> entry,
+            CodeableConcept emptyReason),
+    @required
+        Result listEntry(
+            String id,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            CodeableConcept flag,
+            bool deleted,
+            FhirDateTime date,
+            Reference item),
+    @required
+        Result episodeOfCare(
+            String resourceType,
+            Id id,
+            Meta meta,
+            FhirUri implicitRules,
+            Code language,
+            Narrative text,
+            List<dynamic> contained,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            EpisodeOfCareStatus status,
+            List<dynamic> statusHistory,
+            List<dynamic> type,
+            List<dynamic> diagnosis,
+            Reference patient,
+            Reference managingOrganization,
+            Period period,
+            List<dynamic> referralRequest,
+            Reference careManager,
+            List<dynamic> team,
+            List<dynamic> account),
+    @required
+        Result episodeOfCareStatusHistory(
+            String id,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            EpisodeOfCareStatusHistoryStatus status,
+            Period period),
+    @required
+        Result episodeOfCareDiagnosis(
+            String id,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            Reference condition,
+            CodeableConcept role,
+            int rank),
+    @required
+        Result encounter(
+            String resourceType,
+            Id id,
+            Meta meta,
+            FhirUri implicitRules,
+            Code language,
+            Narrative text,
+            List<dynamic> contained,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            EncounterStatus status,
+            List<dynamic> statusHistory,
+            Coding clas,
+            List<dynamic> classHistory,
+            List<dynamic> type,
+            CodeableConcept serviceType,
+            CodeableConcept priority,
+            Reference subject,
+            List<dynamic> episodeOfCare,
+            List<dynamic> basedOn,
+            List<dynamic> participant,
+            List<dynamic> appointment,
+            Period period,
+            Duration length,
+            List<dynamic> reasonCode,
+            List<dynamic> reasonReference,
+            List<dynamic> diagnosis,
+            List<dynamic> account,
+            EncounterHospitalization hospitalization,
+            List<dynamic> location,
+            Reference serviceProvider,
+            Reference partOf),
+    @required
+        Result encounterStatusHistory(
+            String id,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            EncounterStatusHistoryStatus status,
+            Period period),
+    @required
+        Result encounterClassHistory(String id, List<dynamic> extension,
+            List<dynamic> modifierExtension, Coding clas, Period period),
+    @required
+        Result encounterParticipant(
+            String id,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> type,
+            Period period,
+            Reference individual),
+    @required
+        Result encounterDiagnosis(
+            String id,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            Reference condition,
+            CodeableConcept use,
+            int rank),
+    @required
+        Result encounterHospitalization(
+            String id,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            Identifier preAdmissionIdentifier,
+            Reference origin,
+            CodeableConcept admitSource,
+            CodeableConcept reAdmission,
+            List<dynamic> dietPreference,
+            List<dynamic> specialCourtesy,
+            List<dynamic> specialArrangement,
+            Reference destination,
+            CodeableConcept dischargeDisposition),
+    @required
+        Result encounterLocation(
+            String id,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            Reference location,
+            EncounterLocationStatus status,
+            CodeableConcept physicalType,
+            Period period),
+    @required
+        Result flag(
+            String resourceType,
+            Id id,
+            Meta meta,
+            FhirUri implicitRules,
+            Code language,
+            Narrative text,
+            List<dynamic> contained,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
+            FlagStatus status,
+            List<dynamic> category,
+            CodeableConcept code,
+            Reference subject,
+            Period period,
+            Reference encounter,
+            Reference author),
+  }) {
+    assert(library != null);
+    assert(lists != null);
+    assert(listEntry != null);
+    assert(episodeOfCare != null);
+    assert(episodeOfCareStatusHistory != null);
+    assert(episodeOfCareDiagnosis != null);
+    assert(encounter != null);
+    assert(encounterStatusHistory != null);
+    assert(encounterClassHistory != null);
+    assert(encounterParticipant != null);
+    assert(encounterDiagnosis != null);
+    assert(encounterHospitalization != null);
+    assert(encounterLocation != null);
+    assert(flag != null);
+    return flag(
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        language,
+        text,
+        contained,
+        extension,
+        modifierExtension,
+        identifier,
+        status,
+        category,
+        code,
+        subject,
+        period,
+        this.encounter,
+        author);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result library(
+        String resourceType,
+        Id id,
+        Meta meta,
+        FhirUri implicitRules,
+        Code language,
+        Narrative text,
+        List<dynamic> contained,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        FhirUri url,
+        List<dynamic> identifier,
+        String version,
+        String name,
+        String title,
+        String subtitle,
+        LibraryStatus status,
+        bool experimental,
+        CodeableConcept type,
+        CodeableConcept subjectCodeableConcept,
+        Reference subjectReference,
+        FhirDateTime date,
+        String publisher,
+        List<dynamic> contact,
+        Markdown description,
+        List<dynamic> useContext,
+        List<dynamic> jurisdiction,
+        Markdown purpose,
+        String usage,
+        Markdown copyright,
+        Date approvalDate,
+        Date lastReviewDate,
+        Period effectivePeriod,
+        List<dynamic> topic,
+        List<dynamic> author,
+        List<dynamic> editor,
+        List<dynamic> reviewer,
+        List<dynamic> endorser,
+        List<dynamic> relatedArtifact,
+        List<dynamic> parameter,
+        List<dynamic> dataRequirement,
+        List<dynamic> content),
+    Result lists(
+        String resourceType,
+        Id id,
+        Meta meta,
+        FhirUri implicitRules,
+        Code language,
+        Narrative text,
+        List<dynamic> contained,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        ListStatus status,
+        ListMode mode,
+        String title,
+        CodeableConcept code,
+        Reference subject,
+        Reference encounter,
+        FhirDateTime date,
+        Reference source,
+        CodeableConcept orderedBy,
+        List<dynamic> note,
+        List<dynamic> entry,
+        CodeableConcept emptyReason),
+    Result listEntry(
+        String id,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        CodeableConcept flag,
+        bool deleted,
+        FhirDateTime date,
+        Reference item),
+    Result episodeOfCare(
+        String resourceType,
+        Id id,
+        Meta meta,
+        FhirUri implicitRules,
+        Code language,
+        Narrative text,
+        List<dynamic> contained,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        EpisodeOfCareStatus status,
+        List<dynamic> statusHistory,
+        List<dynamic> type,
+        List<dynamic> diagnosis,
+        Reference patient,
+        Reference managingOrganization,
+        Period period,
+        List<dynamic> referralRequest,
+        Reference careManager,
+        List<dynamic> team,
+        List<dynamic> account),
+    Result episodeOfCareStatusHistory(
+        String id,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        EpisodeOfCareStatusHistoryStatus status,
+        Period period),
+    Result episodeOfCareDiagnosis(
+        String id,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        Reference condition,
+        CodeableConcept role,
+        int rank),
+    Result encounter(
+        String resourceType,
+        Id id,
+        Meta meta,
+        FhirUri implicitRules,
+        Code language,
+        Narrative text,
+        List<dynamic> contained,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        EncounterStatus status,
+        List<dynamic> statusHistory,
+        Coding clas,
+        List<dynamic> classHistory,
+        List<dynamic> type,
+        CodeableConcept serviceType,
+        CodeableConcept priority,
+        Reference subject,
+        List<dynamic> episodeOfCare,
+        List<dynamic> basedOn,
+        List<dynamic> participant,
+        List<dynamic> appointment,
+        Period period,
+        Duration length,
+        List<dynamic> reasonCode,
+        List<dynamic> reasonReference,
+        List<dynamic> diagnosis,
+        List<dynamic> account,
+        EncounterHospitalization hospitalization,
+        List<dynamic> location,
+        Reference serviceProvider,
+        Reference partOf),
+    Result encounterStatusHistory(
+        String id,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        EncounterStatusHistoryStatus status,
+        Period period),
+    Result encounterClassHistory(String id, List<dynamic> extension,
+        List<dynamic> modifierExtension, Coding clas, Period period),
+    Result encounterParticipant(
+        String id,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> type,
+        Period period,
+        Reference individual),
+    Result encounterDiagnosis(
+        String id,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        Reference condition,
+        CodeableConcept use,
+        int rank),
+    Result encounterHospitalization(
+        String id,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        Identifier preAdmissionIdentifier,
+        Reference origin,
+        CodeableConcept admitSource,
+        CodeableConcept reAdmission,
+        List<dynamic> dietPreference,
+        List<dynamic> specialCourtesy,
+        List<dynamic> specialArrangement,
+        Reference destination,
+        CodeableConcept dischargeDisposition),
+    Result encounterLocation(
+        String id,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        Reference location,
+        EncounterLocationStatus status,
+        CodeableConcept physicalType,
+        Period period),
+    Result flag(
+        String resourceType,
+        Id id,
+        Meta meta,
+        FhirUri implicitRules,
+        Code language,
+        Narrative text,
+        List<dynamic> contained,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
+        FlagStatus status,
+        List<dynamic> category,
+        CodeableConcept code,
+        Reference subject,
+        Period period,
+        Reference encounter,
+        Reference author),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (flag != null) {
+      return flag(
+          resourceType,
+          id,
+          meta,
+          implicitRules,
+          language,
+          text,
+          contained,
+          extension,
+          modifierExtension,
+          identifier,
+          status,
+          category,
+          code,
+          subject,
+          period,
+          this.encounter,
+          author);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result library(Library value),
+    @required Result lists(Lists value),
+    @required Result listEntry(ListEntry value),
+    @required Result episodeOfCare(EpisodeOfCare value),
+    @required
+        Result episodeOfCareStatusHistory(EpisodeOfCareStatusHistory value),
+    @required Result episodeOfCareDiagnosis(EpisodeOfCareDiagnosis value),
+    @required Result encounter(Encounter value),
+    @required Result encounterStatusHistory(EncounterStatusHistory value),
+    @required Result encounterClassHistory(EncounterClassHistory value),
+    @required Result encounterParticipant(EncounterParticipant value),
+    @required Result encounterDiagnosis(EncounterDiagnosis value),
+    @required Result encounterHospitalization(EncounterHospitalization value),
+    @required Result encounterLocation(EncounterLocation value),
+    @required Result flag(Flag value),
+  }) {
+    assert(library != null);
+    assert(lists != null);
+    assert(listEntry != null);
+    assert(episodeOfCare != null);
+    assert(episodeOfCareStatusHistory != null);
+    assert(episodeOfCareDiagnosis != null);
+    assert(encounter != null);
+    assert(encounterStatusHistory != null);
+    assert(encounterClassHistory != null);
+    assert(encounterParticipant != null);
+    assert(encounterDiagnosis != null);
+    assert(encounterHospitalization != null);
+    assert(encounterLocation != null);
+    assert(flag != null);
+    return flag(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result library(Library value),
+    Result lists(Lists value),
+    Result listEntry(ListEntry value),
+    Result episodeOfCare(EpisodeOfCare value),
+    Result episodeOfCareStatusHistory(EpisodeOfCareStatusHistory value),
+    Result episodeOfCareDiagnosis(EpisodeOfCareDiagnosis value),
+    Result encounter(Encounter value),
+    Result encounterStatusHistory(EncounterStatusHistory value),
+    Result encounterClassHistory(EncounterClassHistory value),
+    Result encounterParticipant(EncounterParticipant value),
+    Result encounterDiagnosis(EncounterDiagnosis value),
+    Result encounterHospitalization(EncounterHospitalization value),
+    Result encounterLocation(EncounterLocation value),
+    Result flag(Flag value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (flag != null) {
+      return flag(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$FlagToJson(this)..['runtimeType'] = 'flag';
+  }
+}
+
+abstract class Flag implements Management {
+  const factory Flag(
+      {String resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      Code language,
+      Narrative text,
+      List<dynamic> contained,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
+      FlagStatus status,
+      List<dynamic> category,
+      CodeableConcept code,
+      Reference subject,
+      Period period,
+      Reference encounter,
+      Reference author}) = _$Flag;
+
+  factory Flag.fromJson(Map<String, dynamic> json) = _$Flag.fromJson;
+
+  String get resourceType;
+  Id get id;
+  Meta get meta;
+  FhirUri get implicitRules;
+  Code get language;
+  Narrative get text;
+  List<dynamic> get contained;
+  @override
+  List<dynamic> get extension;
+  @override
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
+  FlagStatus get status;
+  List<dynamic> get category;
+  CodeableConcept get code;
+  Reference get subject;
+  Period get period;
+  Reference get encounter;
+  Reference get author;
+  @override
+  $FlagCopyWith<Flag> get copyWith;
 }

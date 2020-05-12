@@ -23,29 +23,12 @@ _$ResearchStudy _$_$ResearchStudyFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
+    identifier: json['identifier'] as List,
     title: json['title'] as String,
-    protocol: (json['protocol'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    partOf: (json['partOf'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    protocol: json['protocol'] as List,
+    partOf: json['partOf'] as List,
     status: _$enumDecodeNullable(_$ResearchStudyStatusEnumMap, json['status']),
     primaryPurposeType: json['primaryPurposeType'] == null
         ? null
@@ -54,43 +37,16 @@ _$ResearchStudy _$_$ResearchStudyFromJson(Map<String, dynamic> json) {
     phase: json['phase'] == null
         ? null
         : CodeableConcept.fromJson(json['phase'] as Map<String, dynamic>),
-    focus: (json['focus'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    condition: (json['condition'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    contact: (json['contact'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ContactDetail.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    relatedArtifact: (json['relatedArtifact'] as List)
-        ?.map((e) => e == null
-            ? null
-            : RelatedArtifact.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    keyword: (json['keyword'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    location: (json['location'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    focus: json['focus'] as List,
+    condition: json['condition'] as List,
+    contact: json['contact'] as List,
+    relatedArtifact: json['relatedArtifact'] as List,
+    keyword: json['keyword'] as List,
+    location: json['location'] as List,
     description: json['description'] == null
         ? null
         : Markdown.fromJson(json['description'] as String),
-    enrollment: (json['enrollment'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    enrollment: json['enrollment'] as List,
     sponsor: json['sponsor'] == null
         ? null
         : Reference.fromJson(json['sponsor'] as Map<String, dynamic>),
@@ -98,28 +54,14 @@ _$ResearchStudy _$_$ResearchStudyFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(
             json['principalInvestigator'] as Map<String, dynamic>),
-    site: (json['site'] as List)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    site: json['site'] as List,
     reasonStopped: json['reasonStopped'] == null
         ? null
         : CodeableConcept.fromJson(
             json['reasonStopped'] as Map<String, dynamic>),
-    note: (json['note'] as List)
-        ?.map((e) =>
-            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    arm: (json['arm'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ResearchStudyArm.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    objective: (json['objective'] as List)
-        ?.map((e) => e == null
-            ? null
-            : ResearchStudyObjective.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    note: json['note'] as List,
+    arm: json['arm'] as List,
+    objective: json['objective'] as List,
   );
 }
 
@@ -211,16 +153,8 @@ const _$ResearchStudyStatusEnumMap = {
 _$ResearchStudyArm _$_$ResearchStudyArmFromJson(Map<String, dynamic> json) {
   return _$ResearchStudyArm(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     name: json['name'] as String,
     type: json['type'] == null
         ? null
@@ -243,16 +177,8 @@ _$ResearchStudyObjective _$_$ResearchStudyObjectiveFromJson(
     Map<String, dynamic> json) {
   return _$ResearchStudyObjective(
     id: json['id'] as String,
-    extension: (json['extension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    extension: json['extension'] as List,
+    modifierExtension: json['modifierExtension'] as List,
     name: json['name'] as String,
     type: json['type'] == null
         ? null
@@ -287,15 +213,8 @@ _$ResearchSubject _$_$ResearchSubjectFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
-    modifierExtension: (json['modifierExtension'] as List)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    identifier: (json['identifier'] as List)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    modifierExtension: json['modifierExtension'] as List,
+    identifier: json['identifier'] as List,
     status:
         _$enumDecodeNullable(_$ResearchSubjectStatusEnumMap, json['status']),
     period: json['period'] == null

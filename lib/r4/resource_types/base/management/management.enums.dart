@@ -125,3 +125,9 @@ enum EncounterLocationStatus {
   @JsonValue('unknown')
   unknown,
 }
+
+enum FlagStatus{
+          @JsonValue('active') active,
+          @JsonValue('inactive') inactive,
+          @JsonValue('entered-in-error') entered_in_error,
+}

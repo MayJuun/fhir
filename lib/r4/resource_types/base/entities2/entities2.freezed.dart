@@ -59,11 +59,11 @@ class _$Entities2TearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       SubstanceStatus status,
-      List<CodeableConcept> category,
+      List<dynamic> category,
       CodeableConcept code,
       String description,
       List<dynamic> instance,
@@ -90,8 +90,8 @@ class _$Entities2TearOff {
 
   SubstanceInstance substanceInstance(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Identifier identifier,
       FhirDateTime expiry,
       Quantity quantity}) {
@@ -107,8 +107,8 @@ class _$Entities2TearOff {
 
   SubstanceIngredient substanceIngredient(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Ratio quantity,
       CodeableConcept substanceCodeableConcept,
       Reference substanceReference}) {
@@ -130,15 +130,15 @@ class _$Entities2TearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       BiologicallyDerivedProductCategory productCategory,
       CodeableConcept productCode,
       BiologicallyDerivedProductStatus status,
-      List<Reference> request,
+      List<dynamic> request,
       int quantity,
-      List<Reference> parent,
+      List<dynamic> parent,
       BiologicallyDerivedProductCollection collection,
       List<dynamic> processing,
       BiologicallyDerivedProductManipulation manipulation,
@@ -169,8 +169,8 @@ class _$Entities2TearOff {
 
   BiologicallyDerivedProductCollection biologicallyDerivedProductCollection(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Reference collector,
       Reference source,
       FhirDateTime collectedDateTime,
@@ -188,8 +188,8 @@ class _$Entities2TearOff {
 
   BiologicallyDerivedProductProcessing biologicallyDerivedProductProcessing(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       String description,
       CodeableConcept procedure,
       Reference additive,
@@ -209,8 +209,8 @@ class _$Entities2TearOff {
 
   BiologicallyDerivedProductManipulation biologicallyDerivedProductManipulation(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       String description,
       FhirDateTime timeDateTime,
       Period timePeriod}) {
@@ -226,8 +226,8 @@ class _$Entities2TearOff {
 
   BiologicallyDerivedProductStorage biologicallyDerivedProductStorage(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       String description,
       double temperature,
       BiologicallyDerivedProductStorageScale scale,
@@ -251,13 +251,13 @@ class _$Entities2TearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Reference definition,
       List<dynamic> udiCarrier,
       DeviceStatus status,
-      List<CodeableConcept> statusReason,
+      List<dynamic> statusReason,
       String distinctIdentifier,
       String manufacturer,
       FhirDateTime manufactureDate,
@@ -273,11 +273,11 @@ class _$Entities2TearOff {
       List<dynamic> property,
       Reference patient,
       Reference owner,
-      List<ContactPoint> contact,
+      List<dynamic> contact,
       Reference location,
       FhirUri url,
-      List<Annotation> note,
-      List<CodeableConcept> safety,
+      List<dynamic> note,
+      List<dynamic> safety,
       Reference parent}) {
     return Device(
       resourceType: resourceType,
@@ -320,8 +320,8 @@ class _$Entities2TearOff {
 
   DeviceUdiCarrier deviceUdiCarrier(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       String deviceIdentifier,
       FhirUri issuer,
       FhirUri jurisdiction,
@@ -343,8 +343,8 @@ class _$Entities2TearOff {
 
   DeviceDeviceName deviceDeviceName(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       String name,
       DeviceDeviceNameType type}) {
     return DeviceDeviceName(
@@ -358,8 +358,8 @@ class _$Entities2TearOff {
 
   DeviceSpecialization deviceSpecialization(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       CodeableConcept systemType,
       String version}) {
     return DeviceSpecialization(
@@ -373,8 +373,8 @@ class _$Entities2TearOff {
 
   DeviceVersion deviceVersion(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       CodeableConcept type,
       Identifier component,
       String value}) {
@@ -390,11 +390,11 @@ class _$Entities2TearOff {
 
   DeviceProperty deviceProperty(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       CodeableConcept type,
-      List<Quantity> valueQuantity,
-      List<CodeableConcept> valueCode}) {
+      List<dynamic> valueQuantity,
+      List<dynamic> valueCode}) {
     return DeviceProperty(
       id: id,
       extension: extension,
@@ -413,9 +413,9 @@ class _$Entities2TearOff {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       CodeableConcept type,
       CodeableConcept unit,
       Reference source,
@@ -450,8 +450,8 @@ class _$Entities2TearOff {
 
   DeviceMetricCalibration deviceMetricCalibration(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       DeviceMetricCalibrationType type,
       DeviceMetricCalibrationState state,
       Instant time}) {
@@ -470,8 +470,8 @@ class _$Entities2TearOff {
 const $Entities2 = _$Entities2TearOff();
 
 mixin _$Entities2 {
-  List<FhirExtension> get extension;
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get extension;
+  List<dynamic> get modifierExtension;
 
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -484,11 +484,11 @@ mixin _$Entities2 {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -496,16 +496,16 @@ mixin _$Entities2 {
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -518,15 +518,15 @@ mixin _$Entities2 {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
             List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
@@ -534,8 +534,8 @@ mixin _$Entities2 {
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -543,8 +543,8 @@ mixin _$Entities2 {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -553,16 +553,16 @@ mixin _$Entities2 {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -576,13 +576,13 @@ mixin _$Entities2 {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -598,17 +598,17 @@ mixin _$Entities2 {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -618,33 +618,33 @@ mixin _$Entities2 {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -654,9 +654,9 @@ mixin _$Entities2 {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -669,8 +669,8 @@ mixin _$Entities2 {
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -685,26 +685,26 @@ mixin _$Entities2 {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
         List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -716,31 +716,31 @@ mixin _$Entities2 {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
         List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
         List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -748,15 +748,15 @@ mixin _$Entities2 {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -769,13 +769,13 @@ mixin _$Entities2 {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -791,16 +791,16 @@ mixin _$Entities2 {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -809,30 +809,30 @@ mixin _$Entities2 {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -841,9 +841,9 @@ mixin _$Entities2 {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -855,8 +855,8 @@ mixin _$Entities2 {
         List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -921,8 +921,7 @@ mixin _$Entities2 {
 abstract class $Entities2CopyWith<$Res> {
   factory $Entities2CopyWith(Entities2 value, $Res Function(Entities2) then) =
       _$Entities2CopyWithImpl<$Res>;
-  $Res call(
-      {List<FhirExtension> extension, List<FhirExtension> modifierExtension});
+  $Res call({List<dynamic> extension, List<dynamic> modifierExtension});
 }
 
 class _$Entities2CopyWithImpl<$Res> implements $Entities2CopyWith<$Res> {
@@ -938,12 +937,11 @@ class _$Entities2CopyWithImpl<$Res> implements $Entities2CopyWith<$Res> {
     Object modifierExtension = freezed,
   }) {
     return _then(_value.copyWith(
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
     ));
   }
 }
@@ -960,11 +958,11 @@ abstract class $SubstanceCopyWith<$Res> implements $Entities2CopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       SubstanceStatus status,
-      List<CodeableConcept> category,
+      List<dynamic> category,
       CodeableConcept code,
       String description,
       List<dynamic> instance,
@@ -1011,19 +1009,17 @@ class _$SubstanceCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       status: status == freezed ? _value.status : status as SubstanceStatus,
-      category: category == freezed
-          ? _value.category
-          : category as List<CodeableConcept>,
+      category:
+          category == freezed ? _value.category : category as List<dynamic>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       description:
           description == freezed ? _value.description : description as String,
@@ -1074,15 +1070,15 @@ class _$Substance implements Substance {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final SubstanceStatus status;
   @override
-  final List<CodeableConcept> category;
+  final List<dynamic> category;
   @override
   final CodeableConcept code;
   @override
@@ -1182,11 +1178,11 @@ class _$Substance implements Substance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -1194,16 +1190,16 @@ class _$Substance implements Substance {
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -1216,15 +1212,15 @@ class _$Substance implements Substance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
             List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
@@ -1232,8 +1228,8 @@ class _$Substance implements Substance {
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -1241,8 +1237,8 @@ class _$Substance implements Substance {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -1251,16 +1247,16 @@ class _$Substance implements Substance {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -1274,13 +1270,13 @@ class _$Substance implements Substance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -1296,17 +1292,17 @@ class _$Substance implements Substance {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -1316,33 +1312,33 @@ class _$Substance implements Substance {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -1352,9 +1348,9 @@ class _$Substance implements Substance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -1367,8 +1363,8 @@ class _$Substance implements Substance {
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -1419,26 +1415,26 @@ class _$Substance implements Substance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
         List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -1450,31 +1446,31 @@ class _$Substance implements Substance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
         List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
         List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -1482,15 +1478,15 @@ class _$Substance implements Substance {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -1503,13 +1499,13 @@ class _$Substance implements Substance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -1525,16 +1521,16 @@ class _$Substance implements Substance {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -1543,30 +1539,30 @@ class _$Substance implements Substance {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -1575,9 +1571,9 @@ class _$Substance implements Substance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -1589,8 +1585,8 @@ class _$Substance implements Substance {
         List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -1714,11 +1710,11 @@ abstract class Substance implements Entities2 {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       SubstanceStatus status,
-      List<CodeableConcept> category,
+      List<dynamic> category,
       CodeableConcept code,
       String description,
       List<dynamic> instance,
@@ -1734,12 +1730,12 @@ abstract class Substance implements Entities2 {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   SubstanceStatus get status;
-  List<CodeableConcept> get category;
+  List<dynamic> get category;
   CodeableConcept get code;
   String get description;
   List<dynamic> get instance;
@@ -1756,8 +1752,8 @@ abstract class $SubstanceInstanceCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Identifier identifier,
       FhirDateTime expiry,
       Quantity quantity});
@@ -1784,12 +1780,11 @@ class _$SubstanceInstanceCopyWithImpl<$Res>
   }) {
     return _then(SubstanceInstance(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
       expiry: expiry == freezed ? _value.expiry : expiry as FhirDateTime,
@@ -1814,9 +1809,9 @@ class _$SubstanceInstance implements SubstanceInstance {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Identifier identifier;
   @override
@@ -1877,11 +1872,11 @@ class _$SubstanceInstance implements SubstanceInstance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -1889,16 +1884,16 @@ class _$SubstanceInstance implements SubstanceInstance {
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -1911,15 +1906,15 @@ class _$SubstanceInstance implements SubstanceInstance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
             List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
@@ -1927,8 +1922,8 @@ class _$SubstanceInstance implements SubstanceInstance {
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -1936,8 +1931,8 @@ class _$SubstanceInstance implements SubstanceInstance {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -1946,16 +1941,16 @@ class _$SubstanceInstance implements SubstanceInstance {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -1969,13 +1964,13 @@ class _$SubstanceInstance implements SubstanceInstance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -1991,17 +1986,17 @@ class _$SubstanceInstance implements SubstanceInstance {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -2011,33 +2006,33 @@ class _$SubstanceInstance implements SubstanceInstance {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -2047,9 +2042,9 @@ class _$SubstanceInstance implements SubstanceInstance {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -2062,8 +2057,8 @@ class _$SubstanceInstance implements SubstanceInstance {
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -2099,26 +2094,26 @@ class _$SubstanceInstance implements SubstanceInstance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
         List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -2130,31 +2125,31 @@ class _$SubstanceInstance implements SubstanceInstance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
         List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
         List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -2162,15 +2157,15 @@ class _$SubstanceInstance implements SubstanceInstance {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -2183,13 +2178,13 @@ class _$SubstanceInstance implements SubstanceInstance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -2205,16 +2200,16 @@ class _$SubstanceInstance implements SubstanceInstance {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -2223,30 +2218,30 @@ class _$SubstanceInstance implements SubstanceInstance {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -2255,9 +2250,9 @@ class _$SubstanceInstance implements SubstanceInstance {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -2269,8 +2264,8 @@ class _$SubstanceInstance implements SubstanceInstance {
         List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -2374,8 +2369,8 @@ class _$SubstanceInstance implements SubstanceInstance {
 abstract class SubstanceInstance implements Entities2 {
   const factory SubstanceInstance(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Identifier identifier,
       FhirDateTime expiry,
       Quantity quantity}) = _$SubstanceInstance;
@@ -2385,9 +2380,9 @@ abstract class SubstanceInstance implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   Identifier get identifier;
   FhirDateTime get expiry;
   Quantity get quantity;
@@ -2403,8 +2398,8 @@ abstract class $SubstanceIngredientCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Ratio quantity,
       CodeableConcept substanceCodeableConcept,
       Reference substanceReference});
@@ -2431,12 +2426,11 @@ class _$SubstanceIngredientCopyWithImpl<$Res>
   }) {
     return _then(SubstanceIngredient(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       quantity: quantity == freezed ? _value.quantity : quantity as Ratio,
       substanceCodeableConcept: substanceCodeableConcept == freezed
           ? _value.substanceCodeableConcept
@@ -2464,9 +2458,9 @@ class _$SubstanceIngredient implements SubstanceIngredient {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Ratio quantity;
   @override
@@ -2530,11 +2524,11 @@ class _$SubstanceIngredient implements SubstanceIngredient {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -2542,16 +2536,16 @@ class _$SubstanceIngredient implements SubstanceIngredient {
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -2564,15 +2558,15 @@ class _$SubstanceIngredient implements SubstanceIngredient {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
             List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
@@ -2580,8 +2574,8 @@ class _$SubstanceIngredient implements SubstanceIngredient {
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -2589,8 +2583,8 @@ class _$SubstanceIngredient implements SubstanceIngredient {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -2599,16 +2593,16 @@ class _$SubstanceIngredient implements SubstanceIngredient {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -2622,13 +2616,13 @@ class _$SubstanceIngredient implements SubstanceIngredient {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -2644,17 +2638,17 @@ class _$SubstanceIngredient implements SubstanceIngredient {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -2664,33 +2658,33 @@ class _$SubstanceIngredient implements SubstanceIngredient {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -2700,9 +2694,9 @@ class _$SubstanceIngredient implements SubstanceIngredient {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -2715,8 +2709,8 @@ class _$SubstanceIngredient implements SubstanceIngredient {
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -2752,26 +2746,26 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
         List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -2783,31 +2777,31 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
         List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
         List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -2815,15 +2809,15 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -2836,13 +2830,13 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -2858,16 +2852,16 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -2876,30 +2870,30 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -2908,9 +2902,9 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -2922,8 +2916,8 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -3027,8 +3021,8 @@ class _$SubstanceIngredient implements SubstanceIngredient {
 abstract class SubstanceIngredient implements Entities2 {
   const factory SubstanceIngredient(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Ratio quantity,
       CodeableConcept substanceCodeableConcept,
       Reference substanceReference}) = _$SubstanceIngredient;
@@ -3038,9 +3032,9 @@ abstract class SubstanceIngredient implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   Ratio get quantity;
   CodeableConcept get substanceCodeableConcept;
   Reference get substanceReference;
@@ -3062,15 +3056,15 @@ abstract class $BiologicallyDerivedProductCopyWith<$Res>
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       BiologicallyDerivedProductCategory productCategory,
       CodeableConcept productCode,
       BiologicallyDerivedProductStatus status,
-      List<Reference> request,
+      List<dynamic> request,
       int quantity,
-      List<Reference> parent,
+      List<dynamic> parent,
       BiologicallyDerivedProductCollection collection,
       List<dynamic> processing,
       BiologicallyDerivedProductManipulation manipulation,
@@ -3124,15 +3118,14 @@ class _$BiologicallyDerivedProductCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       productCategory: productCategory == freezed
           ? _value.productCategory
           : productCategory as BiologicallyDerivedProductCategory,
@@ -3142,9 +3135,9 @@ class _$BiologicallyDerivedProductCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status as BiologicallyDerivedProductStatus,
-      request: request == freezed ? _value.request : request as List<Reference>,
+      request: request == freezed ? _value.request : request as List<dynamic>,
       quantity: quantity == freezed ? _value.quantity : quantity as int,
-      parent: parent == freezed ? _value.parent : parent as List<Reference>,
+      parent: parent == freezed ? _value.parent : parent as List<dynamic>,
       collection: collection == freezed
           ? _value.collection
           : collection as BiologicallyDerivedProductCollection,
@@ -3201,11 +3194,11 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final BiologicallyDerivedProductCategory productCategory;
   @override
@@ -3213,11 +3206,11 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
   @override
   final BiologicallyDerivedProductStatus status;
   @override
-  final List<Reference> request;
+  final List<dynamic> request;
   @override
   final int quantity;
   @override
-  final List<Reference> parent;
+  final List<dynamic> parent;
   @override
   final BiologicallyDerivedProductCollection collection;
   @override
@@ -3334,11 +3327,11 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -3346,16 +3339,16 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -3368,15 +3361,15 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
             List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
@@ -3384,8 +3377,8 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -3393,8 +3386,8 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -3403,16 +3396,16 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -3426,13 +3419,13 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -3448,17 +3441,17 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -3468,33 +3461,33 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -3504,9 +3497,9 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -3519,8 +3512,8 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -3575,26 +3568,26 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
         List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -3606,31 +3599,31 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
         List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
         List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -3638,15 +3631,15 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -3659,13 +3652,13 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -3681,16 +3674,16 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -3699,30 +3692,30 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -3731,9 +3724,9 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -3745,8 +3738,8 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -3875,15 +3868,15 @@ abstract class BiologicallyDerivedProduct implements Entities2 {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       BiologicallyDerivedProductCategory productCategory,
       CodeableConcept productCode,
       BiologicallyDerivedProductStatus status,
-      List<Reference> request,
+      List<dynamic> request,
       int quantity,
-      List<Reference> parent,
+      List<dynamic> parent,
       BiologicallyDerivedProductCollection collection,
       List<dynamic> processing,
       BiologicallyDerivedProductManipulation manipulation,
@@ -3900,16 +3893,16 @@ abstract class BiologicallyDerivedProduct implements Entities2 {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   BiologicallyDerivedProductCategory get productCategory;
   CodeableConcept get productCode;
   BiologicallyDerivedProductStatus get status;
-  List<Reference> get request;
+  List<dynamic> get request;
   int get quantity;
-  List<Reference> get parent;
+  List<dynamic> get parent;
   BiologicallyDerivedProductCollection get collection;
   List<dynamic> get processing;
   BiologicallyDerivedProductManipulation get manipulation;
@@ -3927,8 +3920,8 @@ abstract class $BiologicallyDerivedProductCollectionCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Reference collector,
       Reference source,
       FhirDateTime collectedDateTime,
@@ -3959,12 +3952,11 @@ class _$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
   }) {
     return _then(BiologicallyDerivedProductCollection(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       collector:
           collector == freezed ? _value.collector : collector as Reference,
       source: source == freezed ? _value.source : source as Reference,
@@ -3997,9 +3989,9 @@ class _$BiologicallyDerivedProductCollection
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final Reference collector;
   @override
@@ -4068,11 +4060,11 @@ class _$BiologicallyDerivedProductCollection
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -4080,16 +4072,16 @@ class _$BiologicallyDerivedProductCollection
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -4102,15 +4094,15 @@ class _$BiologicallyDerivedProductCollection
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
             List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
@@ -4118,8 +4110,8 @@ class _$BiologicallyDerivedProductCollection
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -4127,8 +4119,8 @@ class _$BiologicallyDerivedProductCollection
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -4137,16 +4129,16 @@ class _$BiologicallyDerivedProductCollection
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -4160,13 +4152,13 @@ class _$BiologicallyDerivedProductCollection
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -4182,17 +4174,17 @@ class _$BiologicallyDerivedProductCollection
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -4202,33 +4194,33 @@ class _$BiologicallyDerivedProductCollection
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -4238,9 +4230,9 @@ class _$BiologicallyDerivedProductCollection
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -4253,8 +4245,8 @@ class _$BiologicallyDerivedProductCollection
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -4296,26 +4288,26 @@ class _$BiologicallyDerivedProductCollection
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
         List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -4327,31 +4319,31 @@ class _$BiologicallyDerivedProductCollection
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
         List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
         List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -4359,15 +4351,15 @@ class _$BiologicallyDerivedProductCollection
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -4380,13 +4372,13 @@ class _$BiologicallyDerivedProductCollection
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -4402,16 +4394,16 @@ class _$BiologicallyDerivedProductCollection
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -4420,30 +4412,30 @@ class _$BiologicallyDerivedProductCollection
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -4452,9 +4444,9 @@ class _$BiologicallyDerivedProductCollection
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -4466,8 +4458,8 @@ class _$BiologicallyDerivedProductCollection
         List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -4577,8 +4569,8 @@ class _$BiologicallyDerivedProductCollection
 abstract class BiologicallyDerivedProductCollection implements Entities2 {
   const factory BiologicallyDerivedProductCollection(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       Reference collector,
       Reference source,
       FhirDateTime collectedDateTime,
@@ -4590,9 +4582,9 @@ abstract class BiologicallyDerivedProductCollection implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   Reference get collector;
   Reference get source;
   FhirDateTime get collectedDateTime;
@@ -4611,8 +4603,8 @@ abstract class $BiologicallyDerivedProductProcessingCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       String description,
       CodeableConcept procedure,
       Reference additive,
@@ -4645,12 +4637,11 @@ class _$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
   }) {
     return _then(BiologicallyDerivedProductProcessing(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       description:
           description == freezed ? _value.description : description as String,
       procedure: procedure == freezed
@@ -4686,9 +4677,9 @@ class _$BiologicallyDerivedProductProcessing
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String description;
   @override
@@ -4764,11 +4755,11 @@ class _$BiologicallyDerivedProductProcessing
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -4776,16 +4767,16 @@ class _$BiologicallyDerivedProductProcessing
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -4798,15 +4789,15 @@ class _$BiologicallyDerivedProductProcessing
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
             List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
@@ -4814,8 +4805,8 @@ class _$BiologicallyDerivedProductProcessing
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -4823,8 +4814,8 @@ class _$BiologicallyDerivedProductProcessing
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -4833,16 +4824,16 @@ class _$BiologicallyDerivedProductProcessing
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -4856,13 +4847,13 @@ class _$BiologicallyDerivedProductProcessing
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -4878,17 +4869,17 @@ class _$BiologicallyDerivedProductProcessing
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -4898,33 +4889,33 @@ class _$BiologicallyDerivedProductProcessing
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -4934,9 +4925,9 @@ class _$BiologicallyDerivedProductProcessing
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -4949,8 +4940,8 @@ class _$BiologicallyDerivedProductProcessing
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -4993,26 +4984,26 @@ class _$BiologicallyDerivedProductProcessing
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
         List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -5024,31 +5015,31 @@ class _$BiologicallyDerivedProductProcessing
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
         List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
         List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -5056,15 +5047,15 @@ class _$BiologicallyDerivedProductProcessing
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -5077,13 +5068,13 @@ class _$BiologicallyDerivedProductProcessing
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -5099,16 +5090,16 @@ class _$BiologicallyDerivedProductProcessing
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -5117,30 +5108,30 @@ class _$BiologicallyDerivedProductProcessing
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -5149,9 +5140,9 @@ class _$BiologicallyDerivedProductProcessing
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -5163,8 +5154,8 @@ class _$BiologicallyDerivedProductProcessing
         List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -5275,8 +5266,8 @@ class _$BiologicallyDerivedProductProcessing
 abstract class BiologicallyDerivedProductProcessing implements Entities2 {
   const factory BiologicallyDerivedProductProcessing(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       String description,
       CodeableConcept procedure,
       Reference additive,
@@ -5289,9 +5280,9 @@ abstract class BiologicallyDerivedProductProcessing implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   String get description;
   CodeableConcept get procedure;
   Reference get additive;
@@ -5311,8 +5302,8 @@ abstract class $BiologicallyDerivedProductManipulationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       String description,
       FhirDateTime timeDateTime,
       Period timePeriod});
@@ -5342,12 +5333,11 @@ class _$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
   }) {
     return _then(BiologicallyDerivedProductManipulation(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       description:
           description == freezed ? _value.description : description as String,
       timeDateTime: timeDateTime == freezed
@@ -5377,9 +5367,9 @@ class _$BiologicallyDerivedProductManipulation
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String description;
   @override
@@ -5443,11 +5433,11 @@ class _$BiologicallyDerivedProductManipulation
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -5455,16 +5445,16 @@ class _$BiologicallyDerivedProductManipulation
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -5477,15 +5467,15 @@ class _$BiologicallyDerivedProductManipulation
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
             List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
@@ -5493,8 +5483,8 @@ class _$BiologicallyDerivedProductManipulation
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -5502,8 +5492,8 @@ class _$BiologicallyDerivedProductManipulation
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -5512,16 +5502,16 @@ class _$BiologicallyDerivedProductManipulation
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -5535,13 +5525,13 @@ class _$BiologicallyDerivedProductManipulation
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -5557,17 +5547,17 @@ class _$BiologicallyDerivedProductManipulation
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -5577,33 +5567,33 @@ class _$BiologicallyDerivedProductManipulation
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -5613,9 +5603,9 @@ class _$BiologicallyDerivedProductManipulation
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -5628,8 +5618,8 @@ class _$BiologicallyDerivedProductManipulation
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -5665,26 +5655,26 @@ class _$BiologicallyDerivedProductManipulation
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
         List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -5696,31 +5686,31 @@ class _$BiologicallyDerivedProductManipulation
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
         List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
         List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -5728,15 +5718,15 @@ class _$BiologicallyDerivedProductManipulation
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -5749,13 +5739,13 @@ class _$BiologicallyDerivedProductManipulation
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -5771,16 +5761,16 @@ class _$BiologicallyDerivedProductManipulation
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -5789,30 +5779,30 @@ class _$BiologicallyDerivedProductManipulation
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -5821,9 +5811,9 @@ class _$BiologicallyDerivedProductManipulation
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -5835,8 +5825,8 @@ class _$BiologicallyDerivedProductManipulation
         List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -5940,8 +5930,8 @@ class _$BiologicallyDerivedProductManipulation
 abstract class BiologicallyDerivedProductManipulation implements Entities2 {
   const factory BiologicallyDerivedProductManipulation(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       String description,
       FhirDateTime timeDateTime,
       Period timePeriod}) = _$BiologicallyDerivedProductManipulation;
@@ -5952,9 +5942,9 @@ abstract class BiologicallyDerivedProductManipulation implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   String get description;
   FhirDateTime get timeDateTime;
   Period get timePeriod;
@@ -5972,8 +5962,8 @@ abstract class $BiologicallyDerivedProductStorageCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       String description,
       double temperature,
       BiologicallyDerivedProductStorageScale scale,
@@ -6004,12 +5994,11 @@ class _$BiologicallyDerivedProductStorageCopyWithImpl<$Res>
   }) {
     return _then(BiologicallyDerivedProductStorage(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       description:
           description == freezed ? _value.description : description as String,
       temperature:
@@ -6041,9 +6030,9 @@ class _$BiologicallyDerivedProductStorage
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String description;
   @override
@@ -6111,11 +6100,11 @@ class _$BiologicallyDerivedProductStorage
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -6123,16 +6112,16 @@ class _$BiologicallyDerivedProductStorage
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -6145,15 +6134,15 @@ class _$BiologicallyDerivedProductStorage
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
             List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
@@ -6161,8 +6150,8 @@ class _$BiologicallyDerivedProductStorage
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -6170,8 +6159,8 @@ class _$BiologicallyDerivedProductStorage
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -6180,16 +6169,16 @@ class _$BiologicallyDerivedProductStorage
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -6203,13 +6192,13 @@ class _$BiologicallyDerivedProductStorage
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -6225,17 +6214,17 @@ class _$BiologicallyDerivedProductStorage
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -6245,33 +6234,33 @@ class _$BiologicallyDerivedProductStorage
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -6281,9 +6270,9 @@ class _$BiologicallyDerivedProductStorage
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -6296,8 +6285,8 @@ class _$BiologicallyDerivedProductStorage
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -6333,26 +6322,26 @@ class _$BiologicallyDerivedProductStorage
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
         List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -6364,31 +6353,31 @@ class _$BiologicallyDerivedProductStorage
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
         List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
         List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -6396,15 +6385,15 @@ class _$BiologicallyDerivedProductStorage
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -6417,13 +6406,13 @@ class _$BiologicallyDerivedProductStorage
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -6439,16 +6428,16 @@ class _$BiologicallyDerivedProductStorage
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -6457,30 +6446,30 @@ class _$BiologicallyDerivedProductStorage
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -6489,9 +6478,9 @@ class _$BiologicallyDerivedProductStorage
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -6503,8 +6492,8 @@ class _$BiologicallyDerivedProductStorage
         List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -6608,8 +6597,8 @@ class _$BiologicallyDerivedProductStorage
 abstract class BiologicallyDerivedProductStorage implements Entities2 {
   const factory BiologicallyDerivedProductStorage(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       String description,
       double temperature,
       BiologicallyDerivedProductStorageScale scale,
@@ -6620,9 +6609,9 @@ abstract class BiologicallyDerivedProductStorage implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   String get description;
   double get temperature;
   BiologicallyDerivedProductStorageScale get scale;
@@ -6644,13 +6633,13 @@ abstract class $DeviceCopyWith<$Res> implements $Entities2CopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Reference definition,
       List<dynamic> udiCarrier,
       DeviceStatus status,
-      List<CodeableConcept> statusReason,
+      List<dynamic> statusReason,
       String distinctIdentifier,
       String manufacturer,
       FhirDateTime manufactureDate,
@@ -6666,11 +6655,11 @@ abstract class $DeviceCopyWith<$Res> implements $Entities2CopyWith<$Res> {
       List<dynamic> property,
       Reference patient,
       Reference owner,
-      List<ContactPoint> contact,
+      List<dynamic> contact,
       Reference location,
       FhirUri url,
-      List<Annotation> note,
-      List<CodeableConcept> safety,
+      List<dynamic> note,
+      List<dynamic> safety,
       Reference parent});
 }
 
@@ -6733,15 +6722,14 @@ class _$DeviceCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       definition:
           definition == freezed ? _value.definition : definition as Reference,
       udiCarrier: udiCarrier == freezed
@@ -6750,7 +6738,7 @@ class _$DeviceCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
       status: status == freezed ? _value.status : status as DeviceStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
-          : statusReason as List<CodeableConcept>,
+          : statusReason as List<dynamic>,
       distinctIdentifier: distinctIdentifier == freezed
           ? _value.distinctIdentifier
           : distinctIdentifier as String,
@@ -6783,13 +6771,11 @@ class _$DeviceCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
           property == freezed ? _value.property : property as List<dynamic>,
       patient: patient == freezed ? _value.patient : patient as Reference,
       owner: owner == freezed ? _value.owner : owner as Reference,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactPoint>,
+      contact: contact == freezed ? _value.contact : contact as List<dynamic>,
       location: location == freezed ? _value.location : location as Reference,
       url: url == freezed ? _value.url : url as FhirUri,
-      note: note == freezed ? _value.note : note as List<Annotation>,
-      safety:
-          safety == freezed ? _value.safety : safety as List<CodeableConcept>,
+      note: note == freezed ? _value.note : note as List<dynamic>,
+      safety: safety == freezed ? _value.safety : safety as List<dynamic>,
       parent: parent == freezed ? _value.parent : parent as Reference,
     ));
   }
@@ -6852,11 +6838,11 @@ class _$Device implements Device {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final Reference definition;
   @override
@@ -6864,7 +6850,7 @@ class _$Device implements Device {
   @override
   final DeviceStatus status;
   @override
-  final List<CodeableConcept> statusReason;
+  final List<dynamic> statusReason;
   @override
   final String distinctIdentifier;
   @override
@@ -6896,15 +6882,15 @@ class _$Device implements Device {
   @override
   final Reference owner;
   @override
-  final List<ContactPoint> contact;
+  final List<dynamic> contact;
   @override
   final Reference location;
   @override
   final FhirUri url;
   @override
-  final List<Annotation> note;
+  final List<dynamic> note;
   @override
-  final List<CodeableConcept> safety;
+  final List<dynamic> safety;
   @override
   final Reference parent;
 
@@ -7052,11 +7038,11 @@ class _$Device implements Device {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -7064,16 +7050,16 @@ class _$Device implements Device {
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -7086,15 +7072,15 @@ class _$Device implements Device {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
             List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
@@ -7102,8 +7088,8 @@ class _$Device implements Device {
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -7111,8 +7097,8 @@ class _$Device implements Device {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -7121,16 +7107,16 @@ class _$Device implements Device {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -7144,13 +7130,13 @@ class _$Device implements Device {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -7166,17 +7152,17 @@ class _$Device implements Device {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -7186,33 +7172,33 @@ class _$Device implements Device {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -7222,9 +7208,9 @@ class _$Device implements Device {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -7237,8 +7223,8 @@ class _$Device implements Device {
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -7308,26 +7294,26 @@ class _$Device implements Device {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
         List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -7339,31 +7325,31 @@ class _$Device implements Device {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
         List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
         List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -7371,15 +7357,15 @@ class _$Device implements Device {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -7392,13 +7378,13 @@ class _$Device implements Device {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -7414,16 +7400,16 @@ class _$Device implements Device {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -7432,30 +7418,30 @@ class _$Device implements Device {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -7464,9 +7450,9 @@ class _$Device implements Device {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -7478,8 +7464,8 @@ class _$Device implements Device {
         List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -7622,13 +7608,13 @@ abstract class Device implements Entities2 {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       Reference definition,
       List<dynamic> udiCarrier,
       DeviceStatus status,
-      List<CodeableConcept> statusReason,
+      List<dynamic> statusReason,
       String distinctIdentifier,
       String manufacturer,
       FhirDateTime manufactureDate,
@@ -7644,11 +7630,11 @@ abstract class Device implements Entities2 {
       List<dynamic> property,
       Reference patient,
       Reference owner,
-      List<ContactPoint> contact,
+      List<dynamic> contact,
       Reference location,
       FhirUri url,
-      List<Annotation> note,
-      List<CodeableConcept> safety,
+      List<dynamic> note,
+      List<dynamic> safety,
       Reference parent}) = _$Device;
 
   factory Device.fromJson(Map<String, dynamic> json) = _$Device.fromJson;
@@ -7661,14 +7647,14 @@ abstract class Device implements Entities2 {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   Reference get definition;
   List<dynamic> get udiCarrier;
   DeviceStatus get status;
-  List<CodeableConcept> get statusReason;
+  List<dynamic> get statusReason;
   String get distinctIdentifier;
   String get manufacturer;
   FhirDateTime get manufactureDate;
@@ -7684,11 +7670,11 @@ abstract class Device implements Entities2 {
   List<dynamic> get property;
   Reference get patient;
   Reference get owner;
-  List<ContactPoint> get contact;
+  List<dynamic> get contact;
   Reference get location;
   FhirUri get url;
-  List<Annotation> get note;
-  List<CodeableConcept> get safety;
+  List<dynamic> get note;
+  List<dynamic> get safety;
   Reference get parent;
   @override
   $DeviceCopyWith<Device> get copyWith;
@@ -7702,8 +7688,8 @@ abstract class $DeviceUdiCarrierCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       String deviceIdentifier,
       FhirUri issuer,
       FhirUri jurisdiction,
@@ -7735,12 +7721,11 @@ class _$DeviceUdiCarrierCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
   }) {
     return _then(DeviceUdiCarrier(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       deviceIdentifier: deviceIdentifier == freezed
           ? _value.deviceIdentifier
           : deviceIdentifier as String,
@@ -7779,9 +7764,9 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String deviceIdentifier;
   @override
@@ -7860,11 +7845,11 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -7872,16 +7857,16 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -7894,15 +7879,15 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
             List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
@@ -7910,8 +7895,8 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -7919,8 +7904,8 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -7929,16 +7914,16 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -7952,13 +7937,13 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -7974,17 +7959,17 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -7994,33 +7979,33 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -8030,9 +8015,9 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -8045,8 +8030,8 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -8082,26 +8067,26 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
         List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -8113,31 +8098,31 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
         List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
         List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -8145,15 +8130,15 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -8166,13 +8151,13 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -8188,16 +8173,16 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -8206,30 +8191,30 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -8238,9 +8223,9 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -8252,8 +8237,8 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -8365,8 +8350,8 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
 abstract class DeviceUdiCarrier implements Entities2 {
   const factory DeviceUdiCarrier(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       String deviceIdentifier,
       FhirUri issuer,
       FhirUri jurisdiction,
@@ -8379,9 +8364,9 @@ abstract class DeviceUdiCarrier implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   String get deviceIdentifier;
   FhirUri get issuer;
   FhirUri get jurisdiction;
@@ -8400,8 +8385,8 @@ abstract class $DeviceDeviceNameCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       String name,
       DeviceDeviceNameType type});
 }
@@ -8425,12 +8410,11 @@ class _$DeviceDeviceNameCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
   }) {
     return _then(DeviceDeviceName(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       name: name == freezed ? _value.name : name as String,
       type: type == freezed ? _value.type : type as DeviceDeviceNameType,
     ));
@@ -8448,9 +8432,9 @@ class _$DeviceDeviceName implements DeviceDeviceName {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final String name;
   @override
@@ -8504,11 +8488,11 @@ class _$DeviceDeviceName implements DeviceDeviceName {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -8516,16 +8500,16 @@ class _$DeviceDeviceName implements DeviceDeviceName {
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -8538,15 +8522,15 @@ class _$DeviceDeviceName implements DeviceDeviceName {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
             List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
@@ -8554,8 +8538,8 @@ class _$DeviceDeviceName implements DeviceDeviceName {
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -8563,8 +8547,8 @@ class _$DeviceDeviceName implements DeviceDeviceName {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -8573,16 +8557,16 @@ class _$DeviceDeviceName implements DeviceDeviceName {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -8596,13 +8580,13 @@ class _$DeviceDeviceName implements DeviceDeviceName {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -8618,17 +8602,17 @@ class _$DeviceDeviceName implements DeviceDeviceName {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -8638,33 +8622,33 @@ class _$DeviceDeviceName implements DeviceDeviceName {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -8674,9 +8658,9 @@ class _$DeviceDeviceName implements DeviceDeviceName {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -8689,8 +8673,8 @@ class _$DeviceDeviceName implements DeviceDeviceName {
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -8725,26 +8709,26 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
         List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -8756,31 +8740,31 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
         List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
         List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -8788,15 +8772,15 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -8809,13 +8793,13 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -8831,16 +8815,16 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -8849,30 +8833,30 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -8881,9 +8865,9 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -8895,8 +8879,8 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -8999,8 +8983,8 @@ class _$DeviceDeviceName implements DeviceDeviceName {
 abstract class DeviceDeviceName implements Entities2 {
   const factory DeviceDeviceName(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       String name,
       DeviceDeviceNameType type}) = _$DeviceDeviceName;
 
@@ -9009,9 +8993,9 @@ abstract class DeviceDeviceName implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   String get name;
   DeviceDeviceNameType get type;
   @override
@@ -9026,8 +9010,8 @@ abstract class $DeviceSpecializationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       CodeableConcept systemType,
       String version});
 }
@@ -9052,12 +9036,11 @@ class _$DeviceSpecializationCopyWithImpl<$Res>
   }) {
     return _then(DeviceSpecialization(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       systemType: systemType == freezed
           ? _value.systemType
           : systemType as CodeableConcept,
@@ -9081,9 +9064,9 @@ class _$DeviceSpecialization implements DeviceSpecialization {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept systemType;
   @override
@@ -9139,11 +9122,11 @@ class _$DeviceSpecialization implements DeviceSpecialization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -9151,16 +9134,16 @@ class _$DeviceSpecialization implements DeviceSpecialization {
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -9173,15 +9156,15 @@ class _$DeviceSpecialization implements DeviceSpecialization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
             List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
@@ -9189,8 +9172,8 @@ class _$DeviceSpecialization implements DeviceSpecialization {
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -9198,8 +9181,8 @@ class _$DeviceSpecialization implements DeviceSpecialization {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -9208,16 +9191,16 @@ class _$DeviceSpecialization implements DeviceSpecialization {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -9231,13 +9214,13 @@ class _$DeviceSpecialization implements DeviceSpecialization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -9253,17 +9236,17 @@ class _$DeviceSpecialization implements DeviceSpecialization {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -9273,33 +9256,33 @@ class _$DeviceSpecialization implements DeviceSpecialization {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -9309,9 +9292,9 @@ class _$DeviceSpecialization implements DeviceSpecialization {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -9324,8 +9307,8 @@ class _$DeviceSpecialization implements DeviceSpecialization {
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -9361,26 +9344,26 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
         List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -9392,31 +9375,31 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
         List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
         List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -9424,15 +9407,15 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -9445,13 +9428,13 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -9467,16 +9450,16 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -9485,30 +9468,30 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -9517,9 +9500,9 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -9531,8 +9514,8 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -9636,8 +9619,8 @@ class _$DeviceSpecialization implements DeviceSpecialization {
 abstract class DeviceSpecialization implements Entities2 {
   const factory DeviceSpecialization(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       CodeableConcept systemType,
       String version}) = _$DeviceSpecialization;
 
@@ -9646,9 +9629,9 @@ abstract class DeviceSpecialization implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get systemType;
   String get version;
   @override
@@ -9663,8 +9646,8 @@ abstract class $DeviceVersionCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       CodeableConcept type,
       Identifier component,
       String value});
@@ -9690,12 +9673,11 @@ class _$DeviceVersionCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
   }) {
     return _then(DeviceVersion(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       type: type == freezed ? _value.type : type as CodeableConcept,
       component:
           component == freezed ? _value.component : component as Identifier,
@@ -9720,9 +9702,9 @@ class _$DeviceVersion implements DeviceVersion {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept type;
   @override
@@ -9782,11 +9764,11 @@ class _$DeviceVersion implements DeviceVersion {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -9794,16 +9776,16 @@ class _$DeviceVersion implements DeviceVersion {
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -9816,15 +9798,15 @@ class _$DeviceVersion implements DeviceVersion {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
             List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
@@ -9832,8 +9814,8 @@ class _$DeviceVersion implements DeviceVersion {
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -9841,8 +9823,8 @@ class _$DeviceVersion implements DeviceVersion {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -9851,16 +9833,16 @@ class _$DeviceVersion implements DeviceVersion {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -9874,13 +9856,13 @@ class _$DeviceVersion implements DeviceVersion {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -9896,17 +9878,17 @@ class _$DeviceVersion implements DeviceVersion {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -9916,33 +9898,33 @@ class _$DeviceVersion implements DeviceVersion {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -9952,9 +9934,9 @@ class _$DeviceVersion implements DeviceVersion {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -9967,8 +9949,8 @@ class _$DeviceVersion implements DeviceVersion {
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -10004,26 +9986,26 @@ class _$DeviceVersion implements DeviceVersion {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
         List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -10035,31 +10017,31 @@ class _$DeviceVersion implements DeviceVersion {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
         List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
         List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -10067,15 +10049,15 @@ class _$DeviceVersion implements DeviceVersion {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -10088,13 +10070,13 @@ class _$DeviceVersion implements DeviceVersion {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -10110,16 +10092,16 @@ class _$DeviceVersion implements DeviceVersion {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -10128,30 +10110,30 @@ class _$DeviceVersion implements DeviceVersion {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -10160,9 +10142,9 @@ class _$DeviceVersion implements DeviceVersion {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -10174,8 +10156,8 @@ class _$DeviceVersion implements DeviceVersion {
         List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -10278,8 +10260,8 @@ class _$DeviceVersion implements DeviceVersion {
 abstract class DeviceVersion implements Entities2 {
   const factory DeviceVersion(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       CodeableConcept type,
       Identifier component,
       String value}) = _$DeviceVersion;
@@ -10289,9 +10271,9 @@ abstract class DeviceVersion implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get type;
   Identifier get component;
   String get value;
@@ -10307,11 +10289,11 @@ abstract class $DevicePropertyCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       CodeableConcept type,
-      List<Quantity> valueQuantity,
-      List<CodeableConcept> valueCode});
+      List<dynamic> valueQuantity,
+      List<dynamic> valueCode});
 }
 
 class _$DevicePropertyCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
@@ -10334,19 +10316,17 @@ class _$DevicePropertyCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
   }) {
     return _then(DeviceProperty(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       type: type == freezed ? _value.type : type as CodeableConcept,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as List<Quantity>,
-      valueCode: valueCode == freezed
-          ? _value.valueCode
-          : valueCode as List<CodeableConcept>,
+          : valueQuantity as List<dynamic>,
+      valueCode:
+          valueCode == freezed ? _value.valueCode : valueCode as List<dynamic>,
     ));
   }
 }
@@ -10367,15 +10347,15 @@ class _$DeviceProperty implements DeviceProperty {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final CodeableConcept type;
   @override
-  final List<Quantity> valueQuantity;
+  final List<dynamic> valueQuantity;
   @override
-  final List<CodeableConcept> valueCode;
+  final List<dynamic> valueCode;
 
   @override
   String toString() {
@@ -10430,11 +10410,11 @@ class _$DeviceProperty implements DeviceProperty {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -10442,16 +10422,16 @@ class _$DeviceProperty implements DeviceProperty {
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -10464,15 +10444,15 @@ class _$DeviceProperty implements DeviceProperty {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
             List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
@@ -10480,8 +10460,8 @@ class _$DeviceProperty implements DeviceProperty {
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -10489,8 +10469,8 @@ class _$DeviceProperty implements DeviceProperty {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -10499,16 +10479,16 @@ class _$DeviceProperty implements DeviceProperty {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -10522,13 +10502,13 @@ class _$DeviceProperty implements DeviceProperty {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -10544,17 +10524,17 @@ class _$DeviceProperty implements DeviceProperty {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -10564,33 +10544,33 @@ class _$DeviceProperty implements DeviceProperty {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -10600,9 +10580,9 @@ class _$DeviceProperty implements DeviceProperty {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -10615,8 +10595,8 @@ class _$DeviceProperty implements DeviceProperty {
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -10652,26 +10632,26 @@ class _$DeviceProperty implements DeviceProperty {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
         List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -10683,31 +10663,31 @@ class _$DeviceProperty implements DeviceProperty {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
         List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
         List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -10715,15 +10695,15 @@ class _$DeviceProperty implements DeviceProperty {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -10736,13 +10716,13 @@ class _$DeviceProperty implements DeviceProperty {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -10758,16 +10738,16 @@ class _$DeviceProperty implements DeviceProperty {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -10776,30 +10756,30 @@ class _$DeviceProperty implements DeviceProperty {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -10808,9 +10788,9 @@ class _$DeviceProperty implements DeviceProperty {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -10822,8 +10802,8 @@ class _$DeviceProperty implements DeviceProperty {
         List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -10926,23 +10906,23 @@ class _$DeviceProperty implements DeviceProperty {
 abstract class DeviceProperty implements Entities2 {
   const factory DeviceProperty(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       CodeableConcept type,
-      List<Quantity> valueQuantity,
-      List<CodeableConcept> valueCode}) = _$DeviceProperty;
+      List<dynamic> valueQuantity,
+      List<dynamic> valueCode}) = _$DeviceProperty;
 
   factory DeviceProperty.fromJson(Map<String, dynamic> json) =
       _$DeviceProperty.fromJson;
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   CodeableConcept get type;
-  List<Quantity> get valueQuantity;
-  List<CodeableConcept> get valueCode;
+  List<dynamic> get valueQuantity;
+  List<dynamic> get valueCode;
   @override
   $DevicePropertyCopyWith<DeviceProperty> get copyWith;
 }
@@ -10960,9 +10940,9 @@ abstract class $DeviceMetricCopyWith<$Res> implements $Entities2CopyWith<$Res> {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       CodeableConcept type,
       CodeableConcept unit,
       Reference source,
@@ -11018,15 +10998,14 @@ class _$DeviceMetricCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative,
       contained:
           contained == freezed ? _value.contained : contained as List<dynamic>,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
+          : identifier as List<dynamic>,
       type: type == freezed ? _value.type : type as CodeableConcept,
       unit: unit == freezed ? _value.unit : unit as CodeableConcept,
       source: source == freezed ? _value.source : source as Reference,
@@ -11089,11 +11068,11 @@ class _$DeviceMetric implements DeviceMetric {
   @override
   final List<dynamic> contained;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<dynamic> identifier;
   @override
   final CodeableConcept type;
   @override
@@ -11212,11 +11191,11 @@ class _$DeviceMetric implements DeviceMetric {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -11224,16 +11203,16 @@ class _$DeviceMetric implements DeviceMetric {
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -11246,15 +11225,15 @@ class _$DeviceMetric implements DeviceMetric {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
             List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
@@ -11262,8 +11241,8 @@ class _$DeviceMetric implements DeviceMetric {
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -11271,8 +11250,8 @@ class _$DeviceMetric implements DeviceMetric {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -11281,16 +11260,16 @@ class _$DeviceMetric implements DeviceMetric {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -11304,13 +11283,13 @@ class _$DeviceMetric implements DeviceMetric {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -11326,17 +11305,17 @@ class _$DeviceMetric implements DeviceMetric {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -11346,33 +11325,33 @@ class _$DeviceMetric implements DeviceMetric {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -11382,9 +11361,9 @@ class _$DeviceMetric implements DeviceMetric {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -11397,8 +11376,8 @@ class _$DeviceMetric implements DeviceMetric {
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -11452,26 +11431,26 @@ class _$DeviceMetric implements DeviceMetric {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
         List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -11483,31 +11462,31 @@ class _$DeviceMetric implements DeviceMetric {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
         List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
         List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -11515,15 +11494,15 @@ class _$DeviceMetric implements DeviceMetric {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -11536,13 +11515,13 @@ class _$DeviceMetric implements DeviceMetric {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -11558,16 +11537,16 @@ class _$DeviceMetric implements DeviceMetric {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -11576,30 +11555,30 @@ class _$DeviceMetric implements DeviceMetric {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -11608,9 +11587,9 @@ class _$DeviceMetric implements DeviceMetric {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -11622,8 +11601,8 @@ class _$DeviceMetric implements DeviceMetric {
         List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -11750,9 +11729,9 @@ abstract class DeviceMetric implements Entities2 {
       Code language,
       Narrative text,
       List<dynamic> contained,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
+      List<dynamic> identifier,
       CodeableConcept type,
       CodeableConcept unit,
       Reference source,
@@ -11774,10 +11753,10 @@ abstract class DeviceMetric implements Entities2 {
   Narrative get text;
   List<dynamic> get contained;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
+  List<dynamic> get modifierExtension;
+  List<dynamic> get identifier;
   CodeableConcept get type;
   CodeableConcept get unit;
   Reference get source;
@@ -11799,8 +11778,8 @@ abstract class $DeviceMetricCalibrationCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       DeviceMetricCalibrationType type,
       DeviceMetricCalibrationState state,
       Instant time});
@@ -11827,12 +11806,11 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res>
   }) {
     return _then(DeviceMetricCalibration(
       id: id == freezed ? _value.id : id as String,
-      extension: extension == freezed
-          ? _value.extension
-          : extension as List<FhirExtension>,
+      extension:
+          extension == freezed ? _value.extension : extension as List<dynamic>,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension as List<dynamic>,
       type: type == freezed ? _value.type : type as DeviceMetricCalibrationType,
       state: state == freezed
           ? _value.state
@@ -11858,9 +11836,9 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
   @override
   final String id;
   @override
-  final List<FhirExtension> extension;
+  final List<dynamic> extension;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<dynamic> modifierExtension;
   @override
   final DeviceMetricCalibrationType type;
   @override
@@ -11920,11 +11898,11 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             SubstanceStatus status,
-            List<CodeableConcept> category,
+            List<dynamic> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -11932,16 +11910,16 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
     @required
         Result substanceInstance(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Identifier identifier,
             FhirDateTime expiry,
             Quantity quantity),
     @required
         Result substanceIngredient(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Ratio quantity,
             CodeableConcept substanceCodeableConcept,
             Reference substanceReference),
@@ -11954,15 +11932,15 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
-            List<Reference> request,
+            List<dynamic> request,
             int quantity,
-            List<Reference> parent,
+            List<dynamic> parent,
             BiologicallyDerivedProductCollection collection,
             List<dynamic> processing,
             BiologicallyDerivedProductManipulation manipulation,
@@ -11970,8 +11948,8 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
     @required
         Result biologicallyDerivedProductCollection(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             Reference collector,
             Reference source,
             FhirDateTime collectedDateTime,
@@ -11979,8 +11957,8 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
     @required
         Result biologicallyDerivedProductProcessing(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             CodeableConcept procedure,
             Reference additive,
@@ -11989,16 +11967,16 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
     @required
         Result biologicallyDerivedProductManipulation(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             FhirDateTime timeDateTime,
             Period timePeriod),
     @required
         Result biologicallyDerivedProductStorage(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String description,
             double temperature,
             BiologicallyDerivedProductStorageScale scale,
@@ -12012,13 +11990,13 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<CodeableConcept> statusReason,
+            List<dynamic> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -12034,17 +12012,17 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<ContactPoint> contact,
+            List<dynamic> contact,
             Reference location,
             FhirUri url,
-            List<Annotation> note,
-            List<CodeableConcept> safety,
+            List<dynamic> note,
+            List<dynamic> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String deviceIdentifier,
             FhirUri issuer,
             FhirUri jurisdiction,
@@ -12054,33 +12032,33 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
     @required
         Result deviceDeviceName(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             String name,
             DeviceDeviceNameType type),
     @required
         Result deviceSpecialization(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept systemType,
             String version),
     @required
         Result deviceVersion(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
             Identifier component,
             String value),
     @required
         Result deviceProperty(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<Quantity> valueQuantity,
-            List<CodeableConcept> valueCode),
+            List<dynamic> valueQuantity,
+            List<dynamic> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -12090,9 +12068,9 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
             Code language,
             Narrative text,
             List<dynamic> contained,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
-            List<Identifier> identifier,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
+            List<dynamic> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -12105,8 +12083,8 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
     @required
         Result deviceMetricCalibration(
             String id,
-            List<FhirExtension> extension,
-            List<FhirExtension> modifierExtension,
+            List<dynamic> extension,
+            List<dynamic> modifierExtension,
             DeviceMetricCalibrationType type,
             DeviceMetricCalibrationState state,
             Instant time),
@@ -12142,26 +12120,26 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         SubstanceStatus status,
-        List<CodeableConcept> category,
+        List<dynamic> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
         List<dynamic> ingredient),
     Result substanceInstance(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Identifier identifier,
         FhirDateTime expiry,
         Quantity quantity),
     Result substanceIngredient(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Ratio quantity,
         CodeableConcept substanceCodeableConcept,
         Reference substanceReference),
@@ -12173,31 +12151,31 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
-        List<Reference> request,
+        List<dynamic> request,
         int quantity,
-        List<Reference> parent,
+        List<dynamic> parent,
         BiologicallyDerivedProductCollection collection,
         List<dynamic> processing,
         BiologicallyDerivedProductManipulation manipulation,
         List<dynamic> storage),
     Result biologicallyDerivedProductCollection(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         Reference collector,
         Reference source,
         FhirDateTime collectedDateTime,
         Period collectedPeriod),
     Result biologicallyDerivedProductProcessing(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         CodeableConcept procedure,
         Reference additive,
@@ -12205,15 +12183,15 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         Period timePeriod),
     Result biologicallyDerivedProductManipulation(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         FhirDateTime timeDateTime,
         Period timePeriod),
     Result biologicallyDerivedProductStorage(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String description,
         double temperature,
         BiologicallyDerivedProductStorageScale scale,
@@ -12226,13 +12204,13 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<CodeableConcept> statusReason,
+        List<dynamic> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -12248,16 +12226,16 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<ContactPoint> contact,
+        List<dynamic> contact,
         Reference location,
         FhirUri url,
-        List<Annotation> note,
-        List<CodeableConcept> safety,
+        List<dynamic> note,
+        List<dynamic> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String deviceIdentifier,
         FhirUri issuer,
         FhirUri jurisdiction,
@@ -12266,30 +12244,30 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         DeviceUdiCarrierEntryType entryType),
     Result deviceDeviceName(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         String name,
         DeviceDeviceNameType type),
     Result deviceSpecialization(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept systemType,
         String version),
     Result deviceVersion(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
         Identifier component,
         String value),
     Result deviceProperty(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<Quantity> valueQuantity,
-        List<CodeableConcept> valueCode),
+        List<dynamic> valueQuantity,
+        List<dynamic> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -12298,9 +12276,9 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         Code language,
         Narrative text,
         List<dynamic> contained,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
-        List<Identifier> identifier,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
+        List<dynamic> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -12312,8 +12290,8 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         List<dynamic> calibration),
     Result deviceMetricCalibration(
         String id,
-        List<FhirExtension> extension,
-        List<FhirExtension> modifierExtension,
+        List<dynamic> extension,
+        List<dynamic> modifierExtension,
         DeviceMetricCalibrationType type,
         DeviceMetricCalibrationState state,
         Instant time),
@@ -12417,8 +12395,8 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
 abstract class DeviceMetricCalibration implements Entities2 {
   const factory DeviceMetricCalibration(
       {String id,
-      List<FhirExtension> extension,
-      List<FhirExtension> modifierExtension,
+      List<dynamic> extension,
+      List<dynamic> modifierExtension,
       DeviceMetricCalibrationType type,
       DeviceMetricCalibrationState state,
       Instant time}) = _$DeviceMetricCalibration;
@@ -12428,9 +12406,9 @@ abstract class DeviceMetricCalibration implements Entities2 {
 
   String get id;
   @override
-  List<FhirExtension> get extension;
+  List<dynamic> get extension;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<dynamic> get modifierExtension;
   DeviceMetricCalibrationType get type;
   DeviceMetricCalibrationState get state;
   Instant get time;

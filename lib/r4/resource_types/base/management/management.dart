@@ -222,6 +222,26 @@ abstract class Management with _$Management {
     Period period,
   }) = EncounterLocation;
 
+  const factory Management.flag({
+    String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<dynamic> contained,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    List<Identifier> identifier,
+    FlagStatus status,
+    List<CodeableConcept> category,
+    CodeableConcept code,
+    Reference subject,
+    Period period,
+    Reference encounter,
+    Reference author,
+  }) = Flag;
+
   factory Management.fromJson(Map<String, dynamic> json) =>
       _$ManagementFromJson(json);
 }
