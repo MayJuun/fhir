@@ -446,4 +446,6 @@ const factory EvidenceBasedMedicine.effectEvidenceSynthesisCertaintySubcomponent
 
   }) = EffectEvidenceSynthesisCertaintySubcomponent;
 
-factory EvidenceBasedMedicine.fromJson(Map<String,dynamic> json) => _$EvidenceBasedMedicineFromJson(json);Map<String, dynamic> toJson() => _$EvidenceBasedMedicineToJson(this);
+factory EvidenceBasedMedicine.fromJson(Map<String,dynamic> json) => _$EvidenceBasedMedicineFromJson(json);
+
+}

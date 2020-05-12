@@ -199,5 +199,4 @@ abstract class Entities1 with _$Entities1 {
 
   factory Entities1.fromJson(Map<String, dynamic> json) =>
       _$Entities1FromJson(json);
-  Map<String, dynamic> toJson() => _$Entities1ToJson(this);
 }

@@ -8,475 +8,447 @@ part 'general.freezed.dart';
 
 @freezed
 abstract class General with _$General {
-const factory General.chargeItemDefinition({
-  String resourceType,
-  Id id,
+  const factory General.chargeItemDefinition({
+    String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<dynamic> contained,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    FhirUri url,
+    List<Identifier> identifier,
+    String version,
+    String title,
+    List<FhirUri> derivedFromUri,
+    List<Canonical> partOf,
+    List<Canonical> replaces,
+    ChargeItemDefinitionStatus status,
+    bool experimental,
+    FhirDateTime date,
+    String publisher,
+    List<ContactDetail> contact,
+    Markdown description,
+    List<UsageContext> useContext,
+    List<CodeableConcept> jurisdiction,
+    Markdown copyright,
+    Date approvalDate,
+    Date lastReviewDate,
+    Period effectivePeriod,
+    CodeableConcept code,
+    List<Reference> instance,
+    List<ChargeItemDefinitionApplicability> applicability,
+    List<ChargeItemDefinitionPropertyGroup> propertyGroup,
+  
+    }) = ChargeItemDefinition;
+  
+co  nst factory General.chargeItemDefinitionApplicability({
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+    String description,
+    String language,
+    String expression,
+  
+    }) = ChargeItemDefinitionApplicability;
+  
+  const factory General.c  String id,
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+    List<ChargeItemDefinitionApplicability> applicability,
+    List<ChargeItemDefinitionPriceComponent> priceComponent,
+  
+    }) = ChargeItemDefinitionPropertyGroup;
+  
+co  nst factory General.chargeItemDefinitionPriceComponent({
+  List<FhirExtension> extension,
+  List<FhirExtension> modifierExtension,
+    Code type,
+    CodeableConcept code,
+    double factor,
+    Money amount,
+  
+    }) = ChargeItemDefinitionPriceComponent;
+  
+  const factory General.account({
+    String resourceType,
   Meta meta,
   FhirUri implicitRules,
-  Code language,
-  Narrative text,
-  List<dynamic> contained,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  FhirUri url,
-  List<Identifier> identifier,
-  String version,
-  String title,
-  List<FhirUri> derivedFromUri,
-  List<Canonical> partOf,
-  List<Canonical> replaces,
-  ChargeItemDefinitionStatus status,
-  bool experimental,
-  FhirDateTime date,
-  String publisher,
-  List<ContactDetail> contact,
-  Markdown description,
-  List<UsageContext> useContext,
-  List<CodeableConcept> jurisdiction,
-  Markdown copyright,
-  Date approvalDate,
-  Date lastReviewDate,
-  Period effectivePeriod,
-  CodeableConcept code,
-  List<Reference> instance,
-  List<ChargeItemDefinitionApplicability> applicability,
-  List<ChargeItemDefinitionPropertyGroup> propertyGroup,
-
-  }) = ChargeItemDefinition;
-
-const factory General.chargeItemDefinitionApplicability({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  String description,
-  String language,
-  String expression,
-
-  }) = ChargeItemDefinitionApplicability;
-
-const factory General.chargeItemDefinitionPropertyGroup({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  List<ChargeItemDefinitionApplicability> applicability,
-  List<ChargeItemDefinitionPriceComponent> priceComponent,
-
-  }) = ChargeItemDefinitionPropertyGroup;
-
-const factory General.chargeItemDefinitionPriceComponent({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  Code type,
-  CodeableConcept code,
-  double factor,
-  Money amount,
-
-  }) = ChargeItemDefinitionPriceComponent;
-
-const factory General.account({
-  String resourceType,
-  Id id,
-  Meta meta,
-  FhirUri implicitRules,
-  Code language,
-  Narrative text,
-  List<dynamic> contained,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  List<Identifier> identifier,
-  AccountStatus status,
-  CodeableConcept type,
-  String name,
-  List<Reference> subject,
-  Period servicePeriod,
-  List<AccountCoverage> coverage,
-  Reference owner,
-  String description,
-  List<AccountGuarantor> guarantor,
-  Reference partOf,
+    Code language,
+    Narrative text,
+    List<dynamic> contained,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    List<Identifier> identifier,
+    AccountStatus status,
+    CodeableConcept type,
+    String name,
+    List<Reference> subject,
+    Period servicePeriod,
+    List<AccountCoverage> coverage,
+    Reference owner,
+    String description,
+    List<AccountGuarantor> guarantor,
 
   }) = Account;
-
-const factory General.accountCoverage({
+  
+co  nst factory General.accountCoverage({
+    String id,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    Reference coverage,
+    int priority,
+  
+    }) = AccountCoverage;
+  
   String id,
   List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  Reference coverage,
-  int priority,
-
-  }) = AccountCoverage;
-
-const factory General.accountGuarantor({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  Reference party,
-  bool onHold,
-  Period period,
-
-  }) = AccountGuarantor;
-
-const factory General.chargeItem({
-  String resourceType,
-  Id id,
-  Meta meta,
+    List<FhirExtension> modifierExtension,
+    Reference party,
+    bool onHold,
+    Period period,
+  
+    }) = AccountGuarantor;
+  
+  const factory General.chargeItem({
+    String resourceType,
+    Id id,  Meta meta,
   FhirUri implicitRules,
   Code language,
-  Narrative text,
-  List<dynamic> contained,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  List<Identifier> identifier,
-  List<FhirUri> definitionUri,
-  List<Canonical> definitionCanonical,
-  ChargeItemStatus status,
-  List<Reference> partOf,
-  CodeableConcept code,
-  Reference subject,
-  Reference context,
+    Narrative text,
+    List<dynamic> contained,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    List<Identifier> identifier,
+    List<FhirUri> definitionUri,
+    List<Canonical> definitionCanonical,
+    ChargeItemStatus status,
+    List<Reference> partOf,
+    CodeableConcept code,
+    Reference subject,
   FhirDateTime occurrenceDateTime,
   Period occurrencePeriod,
-  Timing occurrenceTiming,
-  List<ChargeItemPerformer> performer,
-  Reference performingOrganization,
-  Reference requestingOrganization,
-  Reference costCenter,
-  Quantity quantity,
-  List<CodeableConcept> bodysite,
-  double factorOverride,
-  Money priceOverride,
+    Timing occurrenceTiming,
+    List<ChargeItemPerformer> performer,
+    Reference performingOrganization,
+    Reference requestingOrganization,
+    Reference costCenter,
+    Quantity quantity,
+    List<CodeableConcept> bodysite,
+    double factorOverride,
   String overrideReason,
   Reference enterer,
-  FhirDateTime enteredDate,
-  List<CodeableConcept> reason,
-  List<Reference> service,
-  Reference productReference,
-  CodeableConcept productCodeableConcept,
-  List<Reference> account,
-  List<Annotation> note,
-  List<Reference> supportingInformation,
-
-  }) = ChargeItem;
-
-const factory General.chargeItemPerformer({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  CodeableConcept function,
-  Reference actor,
-
-  }) = ChargeItemPerformer;
-
-const factory General.insurancePlan({
-  String resourceType,
-  Id id,
-  Meta meta,
-  FhirUri implicitRules,
-  Code language,
-  Narrative text,
-  List<dynamic> contained,
-  List<FhirExtension> extension,
+    FhirDateTime enteredDate,
+    List<CodeableConcept> reason,
+    List<Reference> service,
+    Reference productReference,
+    CodeableConcept productCodeableConcept,
+    List<Reference> account,
+    List<Annotation> note,
+    List<Reference> supportingInformation,
+  
+    }) = ChargeItem;
+  
+co  nst factory General.chargeItemPerformer({
+    String id,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    CodeableConcept function,
+    Reference actor,
+  
+    }) = ChargeItemPerformer;
+  
+co  nst factory General.insurancePlan({
+    String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<dynamic> contained,
   List<FhirExtension> modifierExtension,
   List<Identifier> identifier,
-  InsurancePlanStatus status,
-  List<CodeableConcept> type,
-  String name,
-  List<String> alias,
-  Period period,
-  Reference ownedBy,
-  Reference administeredBy,
-  List<Reference> coverageArea,
-  List<InsurancePlanContact> contact,
-  List<Reference> endpoint,
-  List<Reference> network,
-  List<InsurancePlanCoverage> coverage,
-  List<InsurancePlanPlan> plan,
-
-  }) = InsurancePlan;
-
-const factory General.insurancePlanContact({
+    InsurancePlanStatus status,
+    List<CodeableConcept> type,
+    String name,
+    List<String> alias,
+    Period period,
+    Reference ownedBy,
+    Reference administeredBy,
+    List<Reference> coverageArea,
+    List<InsurancePlanContact> contact,
+    List<Reference> endpoint,
+    List<Reference> network,
+    List<InsurancePlanCoverage> coverage,
+    List<InsurancePlanPlan> plan,
+  
+    }) = InsurancePlan;
+  
   String id,
   List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  CodeableConcept purpose,
-  HumanName name,
-  List<ContactPoint> telecom,
-  Address address,
-
-  }) = InsurancePlanContact;
-
-const factory General.insurancePlanCoverage({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  CodeableConcept type,
-  List<Reference> network,
-  List<InsurancePlanBenefit> benefit,
-
+    List<FhirExtension> modifierExtension,
+    CodeableConcept purpose,
+    HumanName name,
+    List<ContactPoint> telecom,
+    Address address,
+  
+    }) = InsurancePlanContact;
+  
+  const factory General.insurancePlanCoverage({
+    String id,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    CodeableConcept type,
+    List<Reference> network,
+    List<InsurancePlanBenefit> benefit,
   }) = InsurancePlanCoverage;
 
-const factory General.insurancePlanBenefit({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  CodeableConcept type,
-  String requirement,
-  List<InsurancePlanLimit> limit,
-
-  }) = InsurancePlanBenefit;
-
-const factory General.insurancePlanLimit({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  Quantity value,
-  CodeableConcept code,
-
-  }) = InsurancePlanLimit;
-
-const factory General.insurancePlanPlan({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  List<Identifier> identifier,
-  CodeableConcept type,
-  List<Reference> coverageArea,
-  List<Reference> network,
+  const factory General.insurancePlanBenefit({
+    String id,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    CodeableConcept type,
+    String requirement,
+    List<InsurancePlanLimit> limit,
+  
+    }) = InsurancePlanBenefit;
+  
+  const factory General.insurancePlanLimit({
+    String id,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    Quantity value,
+    CodeableConcept code,
+  
+    }) = InsurancePlanLimit;
+  
+  const factory General.insurancePlanPlan({
+    String id,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    List<Identifier> identifier,
+    CodeableConcept type,
+    List<Reference> coverageArea,
   List<InsurancePlanGeneralCost> generalCost,
   List<InsurancePlanSpecificCost> specificCost,
-
-  }) = InsurancePlanPlan;
-
-const factory General.insurancePlanGeneralCost({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
+  
+    }) = InsurancePlanPlan;
+  
+co  nst factory General.insurancePlanGeneralCost({
+    String id,
+    List<FhirExtension> extension,
   CodeableConcept type,
   int groupSize,
-  Money cost,
-  String comment,
-
-  }) = InsurancePlanGeneralCost;
-
-const factory General.insurancePlanSpecificCost({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
+    Money cost,
+    String comment,
+  
+    }) = InsurancePlanGeneralCost;
+  
+co  nst factory General.insurancePlanSpecificCost({
+    String id,
+    List<FhirExtension> extension,
   CodeableConcept category,
   List<InsurancePlanBenefit1> benefit,
-
-  }) = InsurancePlanSpecificCost;
-
-const factory General.insurancePlanBenefit1({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  CodeableConcept type,
-  List<InsurancePlanCost> cost,
+  
+    }) = InsurancePlanSpecificCost;
+  
+co  nst factory General.insurancePlanBenefit1({
+    String id,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    CodeableConcept type,
 
   }) = InsurancePlanBenefit1;
-
-const factory General.insurancePlanCost({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  CodeableConcept type,
-  CodeableConcept applicability,
-  List<CodeableConcept> qualifiers,
-  Quantity value,
-
-  }) = InsurancePlanCost;
-
-const factory General.explanationOfBenefit({
-  String resourceType,
-  Id id,
-  Meta meta,
-  FhirUri implicitRules,
-  Code language,
-  Narrative text,
-  List<dynamic> contained,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  List<Identifier> identifier,
-  ExplanationOfBenefitStatus status,
-  CodeableConcept type,
-  CodeableConcept subType,
-  Code use,
-  Reference patient,
-  Period billablePeriod,
-  FhirDateTime created,
-  Reference enterer,
-  Reference insurer,
-  Reference provider,
-  CodeableConcept priority,
-  CodeableConcept fundsReserveRequested,
-  CodeableConcept fundsReserve,
-  List<ExplanationOfBenefitRelated> related,
-  Reference prescription,
+  
+co  nst factory General.insurancePlanCost({
+    String id,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    CodeableConcept type,
+    CodeableConcept applicability,
+    List<CodeableConcept> qualifiers,
+    Quantity value,
+  
+    }) = InsurancePlanCost;
+  
+co  nst factory General.explanationOfBenefit({
+    String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<dynamic> contained,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    List<Identifier> identifier,
+    ExplanationOfBenefitStatus status,
+    CodeableConcept type,
+    CodeableConcept subType,
+    Code use,
+    Reference patient,
+    Period billablePeriod,
+    FhirDateTime created,
+    Reference enterer,
+    Reference insurer,
+    Reference provider,
+    CodeableConcept priority,
+    CodeableConcept fundsReserveRequested,
+    CodeableConcept fundsReserve,
+    List<ExplanationOfBenefitRelated> related,
   Reference originalPrescription,
   ExplanationOfBenefitPayee payee,
-  Reference referral,
-  Reference facility,
-  Reference claim,
-  Reference claimResponse,
-  Code outcome,
-  String disposition,
-  List<String> preAuthRef,
-  List<Period> preAuthRefPeriod,
-  List<ExplanationOfBenefitCareTeam> careTeam,
+    Reference referral,
+    Reference facility,
+    Reference claim,
+    Reference claimResponse,
+    Code outcome,
+    String disposition,
+    List<String> preAuthRef,
+    List<Period> preAuthRefPeriod,
   List<ExplanationOfBenefitSupportingInfo> supportingInfo,
   List<ExplanationOfBenefitDiagnosis> diagnosis,
-  List<ExplanationOfBenefitProcedure> procedure,
-  int precedence,
-  List<ExplanationOfBenefitInsurance> insurance,
-  ExplanationOfBenefitAccident accident,
-  List<ExplanationOfBenefitItem> item,
-  List<ExplanationOfBenefitAddItem> addItem,
-  List<ExplanationOfBenefitAdjudication> adjudication,
-  List<ExplanationOfBenefitTotal> total,
-  ExplanationOfBenefitPayment payment,
+    List<ExplanationOfBenefitProcedure> procedure,
+    int precedence,
+    List<ExplanationOfBenefitInsurance> insurance,
+    ExplanationOfBenefitAccident accident,
+    List<ExplanationOfBenefitItem> item,
+    List<ExplanationOfBenefitAddItem> addItem,
+    List<ExplanationOfBenefitAdjudication> adjudication,
+    List<ExplanationOfBenefitTotal> total,
   CodeableConcept formCode,
   Attachment form,
-  List<ExplanationOfBenefitProcessNote> processNote,
-  Period benefitPeriod,
-  List<ExplanationOfBenefitBenefitBalance> benefitBalance,
-
-  }) = ExplanationOfBenefit;
-
-const factory General.explanationOfBenefitRelated({
-  String id,
-  List<FhirExtension> extension,
+    List<ExplanationOfBenefitProcessNote> processNote,
+    Period benefitPeriod,
+    List<ExplanationOfBenefitBenefitBalance> benefitBalance,
+  
+    }) = ExplanationOfBenefit;
+  
+co  nst factory General.explanationOfBenefitRelated({
+    String id,
   List<FhirExtension> modifierExtension,
   Reference claim,
-  CodeableConcept relationship,
-  Identifier reference,
-
-  }) = ExplanationOfBenefitRelated;
-
-const factory General.explanationOfBenefitPayee({
-  String id,
-  List<FhirExtension> extension,
+    CodeableConcept relationship,
+    Identifier reference,
+  
+    }) = ExplanationOfBenefitRelated;
+  
+co  nst factory General.explanationOfBenefitPayee({
+    String id,
   List<FhirExtension> modifierExtension,
   CodeableConcept type,
-  Reference party,
-
-  }) = ExplanationOfBenefitPayee;
-
-const factory General.explanationOfBenefitCareTeam({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  int sequence,
-  Reference provider,
-  bool responsible,
-  CodeableConcept role,
-  CodeableConcept qualification,
-
-  }) = ExplanationOfBenefitCareTeam;
-
-const factory General.explanationOfBenefitSupportingInfo({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  int sequence,
-  CodeableConcept category,
-  CodeableConcept code,
-  Date timingDate,
-  Period timingPeriod,
-  bool valueBoolean,
+    Reference party,
+  
+    }) = ExplanationOfBenefitPayee;
+  
+  const factory General.explanationOfBenefitCareTeam({
+    String id,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    int sequence,
+    Reference provider,
+    bool responsible,
+    CodeableConcept role,
+    CodeableConcept qualification,
+  
+    }) = ExplanationOfBenefitCareTeam;
+  
+  const factory General.explanationOfBenefitSupportingInfo({
+    String id,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    int sequence,
+    CodeableConcept category,
+    CodeableConcept code,
+    Date timingDate,
+    Period timingPeriod,  bool valueBoolean,
   String valueString,
   Quantity valueQuantity,
-  Attachment valueAttachment,
-  Reference valueReference,
-  Coding reason,
-
-  }) = ExplanationOfBenefitSupportingInfo;
-
-const factory General.explanationOfBenefitDiagnosis({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  int sequence,
-  CodeableConcept diagnosisCodeableConcept,
-  Reference diagnosisReference,
-  List<CodeableConcept> type,
+    Attachment valueAttachment,
+    Reference valueReference,
+    Coding reason,
+  
+    }) = ExplanationOfBenefitSupportingInfo;
+  
+  const factory General.explanationOfBenefitDiagnosis({
+    String id,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    int sequence,
+    CodeableConcept diagnosisCodeableConcept,
+    Reference diagnosisReference,  List<CodeableConcept> type,
   CodeableConcept onAdmission,
   CodeableConcept packageCode,
-
-  }) = ExplanationOfBenefitDiagnosis;
-
-const factory General.explanationOfBenefitProcedure({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  int sequence,
-  List<CodeableConcept> type,
-  FhirDateTime date,
-  CodeableConcept procedureCodeableConcept,
-  Reference procedureReference,
-  List<Reference> udi,
+  
+    }) = ExplanationOfBenefitDiagnosis;
+  
+  const factory General.explanationOfBenefitProcedure({
+    String id,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    int sequence,
+    List<CodeableConcept> type,
+    FhirDateTime date,
+    CodeableConcept procedureCodeableConcept,
+    Reference procedureReference,  List<Reference> udi,
 
   }) = ExplanationOfBenefitProcedure;
-
-const factory General.explanationOfBenefitInsurance({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  bool focal,
-  Reference coverage,
+  
+  const factory General.explanationOfBenefitInsurance({
+    String id,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    bool focal,  Reference coverage,
   List<String> preAuthRef,
 
-  }) = ExplanationOfBenefitInsurance;
-
-const factory General.explanationOfBenefitAccident({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  Date date,
-  CodeableConcept type,
-  Address locationAddress,
-  Reference locationReference,
-
+    }) = ExplanationOfBenefitInsurance;
+  
+  const factory General.explanationOfBenefitAccident({
+    String id,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    Date date,
+    CodeableConcept type,
+    Address locationAddress,
+    Reference locationRefe
   }) = ExplanationOfBenefitAccident;
 
-const factory General.explanationOfBenefitItem({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  int sequence,
-  List<int> careTeamSequence,
-  List<int> diagnosisSequence,
-  List<int> procedureSequence,
-  List<int> informationSequence,
+  const factory General.explanationOfBenefitItem({
+    String id,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    int sequence,
+    List<int> careTeamSequence,
+    List<int> diagnosisSequence,
+    List<int> procedureSequen  List<int> informationSequence,
   CodeableConcept revenue,
   CodeableConcept category,
-  CodeableConcept productOrService,
-  List<CodeableConcept> modifier,
-  List<CodeableConcept> programCode,
-  Date servicedDate,
-  Period servicedPeriod,
-  CodeableConcept locationCodeableConcept,
-  Address locationAddress,
-  Reference locationReference,
-  Quantity quantity,
-  Money unitPrice,
+    CodeableConcept productOrService,
+    List<CodeableConcept> modifier,
+    List<CodeableConcept> programCode,
+    Date servicedDate,
+    Period servicedPeriod,
+    CodeableConcept locationCodeableConcept,
+    Address locationAddress,
+    Reference locationReference,
+    Quantity quantity,  Money unitPrice,
   double factor,
   Money net,
-  List<Reference> udi,
-  CodeableConcept bodySite,
-  List<CodeableConcept> subSite,
-  List<Reference> encounter,
-  List<int> noteNumber,
-  List<ExplanationOfBenefitAdjudication> adjudication,
-  List<ExplanationOfBenefitDetail> detail,
-
-  }) = ExplanationOfBenefitItem;
+    List<Reference> udi,
+    CodeableConcept bodySite,
+    List<CodeableConcept> subSite,
+    List<Reference> encounter,
+    List<int> noteNumber,
+    List<ExplanationOfBenefitAdjudication> adjudication,
+    List<ExplanationOfBenefitDetail> detail,
+    }) = ExplanationOfBenefitItem;
 
 const factory General.explanationOfBenefitAdjudication({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
+    String id, 
+       List<FhirExtension> extension,
+ 
+ List<FhirExtension> modifierExtension,
   CodeableConcept category,
   CodeableConcept reason,
   Money amount,
@@ -912,4 +884,6 @@ const factory General.contractRule({
 
   }) = ContractRule;
 
-factory General.fromJson(Map<String,dynamic> json) => _$GeneralFromJson(json);Map<String, dynamic> toJson() => _$GeneralToJson(this);
+factory General.fromJson(Map<String,dynamic> json) => _$GeneralFromJson(json);
+
+}

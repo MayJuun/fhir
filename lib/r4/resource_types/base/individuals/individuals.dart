@@ -266,4 +266,6 @@ const factory Individuals.relatedPersonCommunication({
 
   }) = RelatedPersonCommunication;
 
-factory Individuals.fromJson(Map<String,dynamic> json) => _$IndividualsFromJson(json);Map<String, dynamic> toJson() => _$IndividualsToJson(this);
+factory Individuals.fromJson(Map<String,dynamic> json) => _$IndividualsFromJson(json);
+
+}

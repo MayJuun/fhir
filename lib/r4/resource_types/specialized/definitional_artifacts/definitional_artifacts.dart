@@ -609,4 +609,6 @@ const factory DefinitionalArtifacts.questionnaireInitial({
 
   }) = QuestionnaireInitial;
 
-factory DefinitionalArtifacts.fromJson(Map<String,dynamic> json) => _$DefinitionalArtifactsFromJson(json);Map<String, dynamic> toJson() => _$DefinitionalArtifactsToJson(this);
+factory DefinitionalArtifacts.fromJson(Map<String,dynamic> json) => _$DefinitionalArtifactsFromJson(json);
+
+}

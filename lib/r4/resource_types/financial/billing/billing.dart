@@ -474,4 +474,6 @@ const factory Billing.claimResponseError({
 
   }) = ClaimResponseError;
 
-factory Billing.fromJson(Map<String,dynamic> json) => _$BillingFromJson(json);Map<String, dynamic> toJson() => _$BillingToJson(this);
+factory Billing.fromJson(Map<String,dynamic> json) => _$BillingFromJson(json);
+
+}

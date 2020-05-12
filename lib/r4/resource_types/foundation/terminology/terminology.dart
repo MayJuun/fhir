@@ -8,223 +8,209 @@ part 'terminology.freezed.dart';
 
 @freezed
 abstract class Terminology with _$Terminology {
-const factory Terminology.codeSystem({
-  String resourceType,
-  Id id,
-  Meta meta,
-  FhirUri implicitRules,
-  Code language,
-  Narrative text,
-  List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
-  FhirUri url,
-  List<Identifier> identifier,
-  String version,
-  String name,
-  String title,
-  CodeSystemStatus status,
-  bool experimental,
-  FhirDateTime date,
-  String publisher,
-  List<ContactDetail> contact,
-  Markdown description,
-  List<UsageContext> useContext,
+  const factory Terminology.codeSystem({
+    String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<dynamic> contained,
+    List<Extension> extension,
+    List<Extension> modifierExtension,
+    FhirUri url,
+    List<Identifier> identifier,
+    String version,
+    String name,
+    String title,
+    CodeSystemStatus status,
+    bool experimental,
+    FhirDateTime date,
+    String publisher,
+    List<ContactDetail> contact,
+    Markdown description,
   List<CodeableConcept> jurisdiction,
   Markdown purpose,
-  Markdown copyright,
-  bool caseSensitive,
-  Canonical valueSet,
-  CodeSystemHierarchyMeaning hierarchyMeaning,
-  bool compositional,
-  bool versionNeeded,
-  CodeSystemContent content,
-  Canonical supplements,
-  int count,
-  List<CodeSystemFilter> filter,
-  List<CodeSystemProperty> property,
-  List<CodeSystemConcept> concept,
-
-  }) = CodeSystem;
-
-const factory Terminology.codeSystemFilter({
+    Markdown copyright,
+    bool caseSensitive,
+    Canonical valueSet,
+    CodeSystemHierarchyMeaning hierarchyMeaning,
+    bool compositional,
+    bool versionNeeded,
+    CodeSystemContent content,
+    Canonical supplements,
+    int count,
+    List<CodeSystemFilter> filter,
+    List<CodeSystemProperty> property,
+    List<CodeSystemConcept> concept,
+  
+    }) = CodeSystem;
+  
   String id,
   List<Extension> extension,
-  List<Extension> modifierExtension,
-  Code code,
-  String description,
-  List<Code> operator,
-  String value,
-
-  }) = CodeSystemFilter;
+    List<Extension> modifierExtension,
+    Code code,
+    String description,
+    List<Code> operator,
+    String value,
+  
 
 const factory Terminology.codeSystemProperty({
-  String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
-  Code code,
-  FhirUri uri,
-  String description,
-  CodeSystemPropertyType type,
-
+    String id,
+    List<Extension> extension,
+    List<Extension> modifierExtension,
+    Code code,
+    FhirUri uri,
+    String description,
+    CodeSystemPropertyType type,
   }) = CodeSystemProperty;
 
-const factory Terminology.codeSystemConcept({
+  const factory Terminology.codeSystemConcept({
+    String id,
+    List<Extension> extension,
+    List<Extension> modifierExtension,
+    Code code,
+    String display,
+    String definition,
+    List<CodeSystemDesignation> designation,
+    List<CodeSystemProperty1> property,
+    List<CodeSystemConcept> concept,
+  
+    }) = CodeSystemConcept;
+  
   String id,
   List<Extension> extension,
-  List<Extension> modifierExtension,
-  Code code,
-  String display,
-  String definition,
-  List<CodeSystemDesignation> designation,
-  List<CodeSystemProperty1> property,
-  List<CodeSystemConcept> concept,
-
-  }) = CodeSystemConcept;
-
-const factory Terminology.codeSystemDesignation({
+    List<Extension> modifierExtension,
+    Code language,
+    Coding use,
+    String value,
+  
+    }) = CodeSystemDesignation;
+  
   String id,
   List<Extension> extension,
-  List<Extension> modifierExtension,
-  Code language,
-  Coding use,
-  String value,
-
-  }) = CodeSystemDesignation;
-
-const factory Terminology.codeSystemProperty1({
-  String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
-  Code code,
-  Code valueCode,
-  Coding valueCoding,
-  String valueString,
-  int valueInteger,
-  bool valueBoolean,
-  FhirDateTime valueDateTime,
-  double valueDecimal,
-
-  }) = CodeSystemProperty1;
-
-const factory Terminology.valueSet({
-  String resourceType,
-  Id id,
-  Meta meta,
-  FhirUri implicitRules,
-  Code language,
-  Narrative text,
-  List<dynamic> contained,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
-  FhirUri url,
-  List<Identifier> identifier,
-  String version,
+    List<Extension> modifierExtension,
+    Code code,
+    Code valueCode,
+    Coding valueCoding,
+    String valueString,
+    int valueInteger,
+    bool valueBoolean,
+    FhirDateTime valueDateTime,
+    double valueDecimal,
+  
+    }) = CodeSystemProperty1;
+  
+ co nst factory Terminology.valueSet({
+    String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<dynamic> contained,
+    List<Extension> extension,
+    List<Extension> modifierExtension,
+    FhirUri url,
+    List<Identifier> identifier,
   String name,
   String title,
-  ValueSetStatus status,
-  bool experimental,
-  FhirDateTime date,
-  String publisher,
-  List<ContactDetail> contact,
-  Markdown description,
-  List<UsageContext> useContext,
+    ValueSetStatus status,
+    bool experimental,
+    FhirDateTime date,
+    String publisher,
+    List<ContactDetail> contact,
+    Markdown description,
   List<CodeableConcept> jurisdiction,
   bool immutable,
-  Markdown purpose,
-  Markdown copyright,
-  ValueSetCompose compose,
-  ValueSetExpansion expansion,
-
-  }) = ValueSet;
-
-const factory Terminology.valueSetCompose({
+    Markdown purpose,
+    Markdown copyright,
+    ValueSetCompose compose,
+    ValueSetExpansion expansion,
+  
+    }) = ValueSet;
+  
   String id,
   List<Extension> extension,
-  List<Extension> modifierExtension,
-  Date lockedDate,
-  bool inactive,
-  List<ValueSetInclude> include,
-  List<ValueSetInclude> exclude,
-
-  }) = ValueSetCompose;
-
-const factory Terminology.valueSetInclude({
-  String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
-  FhirUri system,
-  String version,
-  List<ValueSetConcept> concept,
-  List<ValueSetFilter> filter,
+    List<Extension> modifierExtension,
+    Date lockedDate,
+    bool inactive,
+    List<ValueSetInclude> include,
+    List<ValueSetInclude> exclude,
+  
+    }) = ValueSetCompose;
+  
+co  nst factory Terminology.valueSetInclude({
+    String id,
+    List<Extension> extension,
+    List<Extension> modifierExtension,
+    FhirUri system,
+    String version,
+    List<ValueSetConcept> concept,
   List<Canonical> valueSet,
 
-  }) = ValueSetInclude;
-
-const factory Terminology.valueSetConcept({
-  String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
-  Code code,
+    }) = ValueSetInclude;
+  
+ co nst factory Terminology.valueSetConcept({
+    String id,
+    List<Extension> extension,
+    List<Extension> modifierExtension,
   String display,
   List<ValueSetDesignation> designation,
-
-  }) = ValueSetConcept;
-
-const factory Terminology.valueSetDesignation({
-  String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
+  
+    }) = ValueSetConcept;
+  
+  const factory Terminology.valueSetDesignation({
+    String id,
+    List<Extension> extension,
   Code language,
   Coding use,
-  String value,
-
-  }) = ValueSetDesignation;
-
-const factory Terminology.valueSetFilter({
-  String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
-  Code property,
-  ValueSetFilterOp op,
-  String value,
-
-  }) = ValueSetFilter;
-
-const factory Terminology.valueSetExpansion({
-  String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
-  FhirUri identifier,
-  FhirDateTime timestamp,
-  int total,
-  int offset,
+    String value,
+  
+    }) = ValueSetDesignation;
+  
+  const factory Terminology.valueSetFilter({
+    String id,
+    List<Extension> extension,
+    List<Extension> modifierExtension,
+    Code property,
+    ValueSetFilterOp op,
+    String value,
+  
+    }) = ValueSetFilter;
+  
+  const factory Terminology.valueSetExpansion({
+    String id,
+    List<Extension> extension,
+    List<Extension> modifierExtension,
+    FhirUri identifier,
+    FhirDateTime timestamp,
+    int total,
   List<ValueSetParameter> parameter,
   List<ValueSetContains> contains,
-
-  }) = ValueSetExpansion;
-
-const factory Terminology.valueSetParameter({
-  String id,
-  List<Extension> extension,
-  List<Extension> modifierExtension,
-  String name,
-  String valueString,
+  
+    }) = ValueSetExpansion;
+  
+ co nst factory Terminology.valueSetParameter({
+    String id,
+    List<Extension> extension,
+    List<Extension> modifierExtension,
+    String name,
   bool valueBoolean,
   int valueInteger,
-  double valueDecimal,
-  FhirUri valueUri,
-  Code valueCode,
-  FhirDateTime valueDateTime,
-
-  }) = ValueSetParameter;
-
-const factory Terminology.valueSetContains({
+    double valueDecimal,
+    FhirUri valueUri,
+    Code valueCode,
+    FhirDateTime valueDateTime,
+  
+    }) = ValueSetParameter;
+  
   String id,
   List<Extension> extension,
-  List<Extension> modifierExtension,
-  FhirUri system,
-  bool abstract,
+    List<Extension> modifierExtension, 
+       FhirUri system,
+ 
+ bool abstract,
   bool inactive,
   String version,
   Code code,
@@ -495,4 +481,6 @@ const factory Terminology.conceptMapUnmapped({
 
   }) = ConceptMapUnmapped;
 
-factory Terminology.fromJson(Map<String,dynamic> json) => _$TerminologyFromJson(json);Map<String, dynamic> toJson() => _$TerminologyToJson(this);
+factory Terminology.fromJson(Map<String,dynamic> json) => _$TerminologyFromJson(json);
+
+}

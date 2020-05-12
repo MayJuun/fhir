@@ -8,88 +8,85 @@ part 'support.freezed.dart';
 
 @freezed
 abstract class Support with _$Support {
-const factory Support.enrollmentRequest({
-  String resourceType,
-  Id id,
+  const factory Support.enrollmentRequest({
+    String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<dynamic> contained,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    List<Identifier> identifier,
+    Code status,
+    FhirDateTime created,
+    Reference insurer,
+    Reference provider,
+    Reference candidate,
+    Reference coverage,
+  
+    }) = EnrollmentRequest;
+  
+ co nst factory Support.enrollmentResponse({
+    String resourceType,
   Meta meta,
   FhirUri implicitRules,
-  Code language,
-  Narrative text,
-  List<dynamic> contained,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
+    Code language,
+    Narrative text,
+    List<dynamic> contained,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    List<Identifier> identifier,
+    Code status,
+    Reference request,
+    EnrollmentResponseOutcome outcome,
+    String disposition,
+    FhirDateTime created,
+    Reference organization,
+    Reference requestProvider,
+  
+    }) = EnrollmentResponse;
+  
+ co nst factory Support.coverageEligibilityResponse({
+    String resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    Code language,
+    Narrative text,
+    List<dynamic> contained,
+    List<FhirExtension> extension,
   List<Identifier> identifier,
   Code status,
-  FhirDateTime created,
-  Reference insurer,
-  Reference provider,
-  Reference candidate,
-  Reference coverage,
-
-  }) = EnrollmentRequest;
-
-const factory Support.enrollmentResponse({
-  String resourceType,
-  Id id,
-  Meta meta,
-  FhirUri implicitRules,
-  Code language,
-  Narrative text,
-  List<dynamic> contained,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  List<Identifier> identifier,
-  Code status,
-  Reference request,
-  EnrollmentResponseOutcome outcome,
-  String disposition,
-  FhirDateTime created,
-  Reference organization,
-  Reference requestProvider,
-
-  }) = EnrollmentResponse;
-
-const factory Support.coverageEligibilityResponse({
-  String resourceType,
-  Id id,
-  Meta meta,
-  FhirUri implicitRules,
-  Code language,
-  Narrative text,
-  List<dynamic> contained,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  List<Identifier> identifier,
-  Code status,
-  List<String> purpose,
-  Reference patient,
-  Date servicedDate,
-  Period servicedPeriod,
-  FhirDateTime created,
-  Reference requestor,
-  Reference request,
-  CoverageEligibilityResponseOutcome outcome,
-  String disposition,
-  Reference insurer,
-  List<CoverageEligibilityResponseInsurance> insurance,
-  String preAuthRef,
-  CodeableConcept form,
-  List<CoverageEligibilityResponseError> error,
-
+    List<String> purpose,
+    Reference patient,
+    Date servicedDate,
+    Period servicedPeriod,
+    FhirDateTime created,
+    Reference requestor,
+    Reference request,
+    CoverageEligibilityResponseOutcome outcome,
+    String disposition,
+    Reference insurer,
+    List<CoverageEligibilityResponseInsurance> insurance,
+    String preAuthRef,
+    CodeableConcept form,
+    List<CoverageEligibilityResponseError> error,
   }) = CoverageEligibilityResponse;
 
-const factory Support.coverageEligibilityResponseInsurance({
-  String id,
-  List<FhirExtension> extension,
-  List<FhirExtension> modifierExtension,
-  Reference coverage,
-  bool inforce,
-  Period benefitPeriod,
+  const factory Support.coverageEligibilityResponseInsurance({
+    String id,
+    List<FhirExtension> extension,
+    List<FhirExtension> modifierExtension,
+    Reference coverage,
+    bool inforce,
   List<CoverageEligibilityResponseItem> item,
 
-  }) = CoverageEligibilityResponseInsurance;
-
-const factory Support.coverageEligibilityResponseItem({
+    }) = CoverageEligibilityResponseIn surance;
+     
+c
+onst factory Support.coverageEligibilityResponseItem({
   String id,
   List<FhirExtension> extension,
   List<FhirExtension> modifierExtension,
@@ -266,4 +263,6 @@ const factory Support.coverageException({
 
   }) = CoverageException;
 
-factory Support.fromJson(Map<String,dynamic> json) => _$SupportFromJson(json);Map<String, dynamic> toJson() => _$SupportToJson(this);
+factory Support.fromJson(Map<String,dynamic> json) => _$SupportFromJson(json);
+
+}

@@ -222,4 +222,6 @@ const factory Security.provenanceEntity({
 
   }) = ProvenanceEntity;
 
-factory Security.fromJson(Map<String,dynamic> json) => _$SecurityFromJson(json);Map<String, dynamic> toJson() => _$SecurityToJson(this);
+factory Security.fromJson(Map<String,dynamic> json) => _$SecurityFromJson(json);
+
+}

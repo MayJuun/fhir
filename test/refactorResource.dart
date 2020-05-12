@@ -7,50 +7,54 @@ void main() async {
   for (var file in files) {
     if (!file.toString().contains('g.dart')) {
       var className = file.toString().split('/').last.split('.dart')[0];
-      var fileName = category(className);
+      var fileName = enumCategory(className);
 
       var baseClass = await File(fileName[0]).readAsString();
       var classText = await (file as File).readAsString();
       var exp = RegExp(r'(?<=class\s).*(?=\s\{)');
-      for (var text in exp.allMatches(classText)) {
-        if (!text.group(0).contains('PrimitiveObject')) {
-          var start = '${text.group(0)}\\s\\\{';
-          var end = '${text.group(0)}\\(\\{';
-          var newExp = RegExp('(?<=$start)[^]*(?=$end)');
+      var enumList = exp
+          .allMatches(classText)
+          .where((element) => element.group(0).contains('PrimitiveObject'));
+      for (var text in enumList) {
+        print(exp.allMatches(classText).length);
+        print(text.group(0));
+        var newExp = RegExp(
+            r'(?<=validateEnum\(\n\s\s\s\s\s\s\s\svalue,\n\s\s\s\s\s\s\s\s\[)([^;]*)(?=\])');
+        for (var match in newExp.allMatches(classText)) {
+          print(match.group(0));
 
-          for (var match in newExp.allMatches(classText)) {
-            baseClass += 'const factory ${fileName[1]}.'
-                '${text.group(0)[0].toLowerCase() + text.group(0).substring(1, text.group(0).length)}'
-                '({';
-            baseClass += match.group(0).replaceAll(';', ",");
-            baseClass += '}) = ${text.group(0)};\n\n';
-          }
+          //     baseClass += 'const factory ${fileName[1]}.'
+          //         '${text.group(0)[0].toLowerCase() + text.group(0).substring(1, text.group(0).length)}'
+          //         '({';
+          //     baseClass += match.group(0).replaceAll(';', ",");
+          //     baseClass += '}) = ${text.group(0)};\n\n';
+
         }
       }
-      await File(fileName[0]).writeAsString(baseClass);
-    }
-  }
-
-  tempDir = Directory('./lib/r4/resource_types');
-  files = tempDir.listSync(recursive: true).toList();
-  for (var file in files) {
-    if (file.toString().contains('.dart')) {
-      var tempFile = await File(file.path.toString()).readAsString();
-      var className =
-          (file.toString().split('/').last).split('.dart')[0].split('_');
-      var newClass = '';
-      className.forEach((element) {
-        newClass +=
-            element[0].toUpperCase() + element.substring(1, element.length);
-      });
-      tempFile +=
-          'factory $newClass.fromJson(Map<String,dynamic> json) => _\$${newClass}FromJson(json);';
-      tempFile +=
-          'Map<String, dynamic> toJson() => _\$${newClass}ToJson(this);';
-      await File(file.path.toString()).writeAsString(tempFile);
+      // await File(fileName[0]).writeAsString(baseClass);
     }
   }
 }
+
+// tempDir = Directory('./lib/r4/resource_types');
+// files = tempDir.listSync(recursive: true).toList();
+// for (var file in files) {
+//   if (file.toString().contains('.dart')) {
+//     var tempFile = await File(file.path.toString()).readAsString();
+//     var className =
+//         (file.toString().split('/').last).split('.dart')[0].split('_');
+//     var newClass = '';
+//     className.forEach((element) {
+//       newClass +=
+//           element[0].toUpperCase() + element.substring(1, element.length);
+//     });
+//     tempFile +=
+//         'factory $newClass.fromJson(Map<String,dynamic> json) => _\$${newClass}FromJson(json);';
+//     tempFile +=
+//         'Map<String, dynamic> toJson() => _\$${newClass}ToJson(this);';
+//     await File(file.path.toString()).writeAsString(tempFile);
+//   }
+// }
 
 bool superCategory(List<String> category, String className) =>
     category.contains(className.toLowerCase());
@@ -62,10 +66,10 @@ List<String> category(String className) {
   if (superCategory(base, className)) {
     file = './lib/r4/resource_types/base/';
     if (superCategory(entities1, className)) {
-      file += 'entities_1/entities_1.dart';
+      file += 'entities1/entities1.dart';
       type = 'Entities1';
     } else if (superCategory(entities2, className)) {
-      file += 'entities_2/entities_2.dart';
+      file += 'entities2/entities2.dart';
       type = 'Entities2';
     } else if (superCategory(individuals, className)) {
       file += 'individuals/individuals.dart';
@@ -89,8 +93,8 @@ List<String> category(String className) {
       file += 'medications/medications.dart';
       type = 'Medications';
     } else if (superCategory(requestresponse, className)) {
-      file += 'request_response/request_response.dart';
-      type = 'RequestResponse';
+      file += 'request_and_response/request_and_response.dart';
+      type = 'RequestAndResponse';
     } else if (superCategory(summary, className)) {
       file += 'summary/summary.dart';
       type = 'Summary';
@@ -140,11 +144,112 @@ List<String> category(String className) {
       file += 'medication_definition/medication_definition.dart';
       type = 'MedicationDefinition';
     } else if (superCategory(publichealthresearch, className)) {
-      file += 'public_health_research/public_health_research.dart';
-      type = 'PublicHealthResearch';
+      file += 'public_health_and_research/public_health_and_research.dart';
+      type = 'PublicHealthAndResearch';
     } else if (superCategory(qualityreportingtesting, className)) {
-      file += 'quality_reporting_testing/quality_reporting_testing.dart';
-      type = 'QualityReportingTesting';
+      file +=
+          'quality_reporting_and_testing/quality_reporting_and_testing.dart';
+      type = 'QualityReportingAndTesting';
+    }
+  }
+  // print(file);
+  // print(className);
+
+  return [file, type];
+}
+
+List<String> enumCategory(String className) {
+  var file = '';
+  var type;
+
+  if (superCategory(base, className)) {
+    file = './lib/r4/resource_types/base/';
+    if (superCategory(entities1, className)) {
+      file += 'entities1/entities1.enums.dart';
+      type = 'Entities1';
+    } else if (superCategory(entities2, className)) {
+      file += 'entities2/entities2.enums.dart';
+      type = 'Entities2';
+    } else if (superCategory(individuals, className)) {
+      file += 'individuals/individuals.enums.dart';
+      type = 'Individuals';
+    } else if (superCategory(management, className)) {
+      file += 'management/management.enums.dart';
+      type = 'Management';
+    } else if (superCategory(workflow, className)) {
+      file += 'workflow/workflow.enums.dart';
+      type = 'Workflow';
+    }
+  } else if (superCategory(clinical, className)) {
+    file = './lib/r4/resource_types/clinical/';
+    if (superCategory(careprovision, className)) {
+      file += 'care_provision/care_provision.enums.dart';
+      type = 'CareProvision';
+    } else if (superCategory(diagnostics, className)) {
+      file += 'diagnostics/diagnostics.enums.dart';
+      type = 'Diagnostics';
+    } else if (superCategory(medications, className)) {
+      file += 'medications/medications.enums.dart';
+      type = 'Medications';
+    } else if (superCategory(requestresponse, className)) {
+      file += 'request_and_response/request_and_response.enums.dart';
+      type = 'RequestAndResponse';
+    } else if (superCategory(summary, className)) {
+      file += 'summary/summary.enums.dart';
+      type = 'Summary';
+    }
+  } else if (superCategory(financial, className)) {
+    file = './lib/r4/resource_types/financial/';
+    if (superCategory(billing, className)) {
+      file += 'billing/billing.enums.dart';
+      type = 'Billing';
+    } else if (superCategory(general, className)) {
+      file += 'general/general.enums.dart';
+      type = 'General';
+    } else if (superCategory(payment, className)) {
+      file += 'payment/payment.enums.dart';
+      type = 'Payment';
+    } else if (superCategory(support, className)) {
+      file += 'support/support.enums.dart';
+      type = 'Support';
+    }
+  } else if (superCategory(foundation, className)) {
+    file = './lib/r4/resource_types/foundation/';
+    if (superCategory(conformance, className)) {
+      file += 'conformance/conformance.enums.dart';
+      type = 'Conformance';
+    } else if (superCategory(documents, className)) {
+      file += 'documents/documents.enums.dart';
+      type = 'Documents';
+    } else if (superCategory(other, className)) {
+      file += 'other/other.enums.dart';
+      type = 'Other';
+    } else if (superCategory(security, className)) {
+      file += 'security/security.enums.dart';
+      type = 'Security';
+    } else if (superCategory(terminology, className)) {
+      file += 'terminology/terminology.enums.dart';
+      type = 'Terminology';
+    }
+  } else if (superCategory(specialized, className)) {
+    file = './lib/r4/resource_types/specialized/';
+    if (superCategory(definitionalartifacts, className)) {
+      file += 'definitional_artifacts/definitional_artifacts.enums.dart';
+      type = 'DefinitionalArtifacts';
+    } else if (superCategory(evidencebasedmedicine, className)) {
+      file += 'evidence_based_medicine/evidence_based_medicine.enums.dart';
+      type = 'EvidenceBasedMedicine';
+    } else if (superCategory(medicationdefinition, className)) {
+      file += 'medication_definition/medication_definition.enums.dart';
+      type = 'MedicationDefinition';
+    } else if (superCategory(publichealthresearch, className)) {
+      file +=
+          'public_health_and_research/public_health_and_research.enums.dart';
+      type = 'PublicHealthAndResearch';
+    } else if (superCategory(qualityreportingtesting, className)) {
+      file +=
+          'quality_reporting_and_testing/quality_reporting_and_testing.enums.dart';
+      type = 'QualityReportingAndTesting';
     }
   }
   // print(file);
