@@ -9,8 +9,6 @@ part of 'other.dart';
 
 T _$identity<T>(T value) => value;
 Other _$OtherFromJson(Map<String, dynamic> json) {
-  var type = json['resourceType'];
-  type = '${type[0].toLowerCase()}${type.substring(1, type.length)}';
   switch (json['runtimeType'] as String) {
     case 'operationOutcome':
       return OperationOutcome.fromJson(json);
@@ -528,7 +526,7 @@ class _$OtherTearOff {
       modifierExtension: modifierExtension,
       link: link,
       fullUrl: fullUrl,
-      resource: ResourceFromJson(resource),
+      resource: resource,
       search: search,
       request: request,
       response: response,

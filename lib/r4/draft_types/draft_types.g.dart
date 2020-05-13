@@ -6,8 +6,8 @@ part of 'draft_types.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$MarketingStatus _$_$MarketingStatusFromJson(Map<String, dynamic> json) {
-  return _$MarketingStatus(
+_$_MarketingStatus _$_$_MarketingStatusFromJson(Map<String, dynamic> json) {
+  return _$_MarketingStatus(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
@@ -30,7 +30,7 @@ _$MarketingStatus _$_$MarketingStatusFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$MarketingStatusToJson(_$MarketingStatus instance) =>
+Map<String, dynamic> _$_$_MarketingStatusToJson(_$_MarketingStatus instance) =>
     <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
@@ -42,8 +42,8 @@ Map<String, dynamic> _$_$MarketingStatusToJson(_$MarketingStatus instance) =>
       'restoreDate': instance.restoreDate,
     };
 
-_$Population _$_$PopulationFromJson(Map<String, dynamic> json) {
-  return _$Population(
+_$_Population _$_$_PopulationFromJson(Map<String, dynamic> json) {
+  return _$_Population(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
@@ -67,7 +67,7 @@ _$Population _$_$PopulationFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$PopulationToJson(_$Population instance) =>
+Map<String, dynamic> _$_$_PopulationToJson(_$_Population instance) =>
     <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
@@ -79,8 +79,9 @@ Map<String, dynamic> _$_$PopulationToJson(_$Population instance) =>
       'physiologicalCondition': instance.physiologicalCondition,
     };
 
-_$ProdCharacteristic _$_$ProdCharacteristicFromJson(Map<String, dynamic> json) {
-  return _$ProdCharacteristic(
+_$_ProdCharacteristic _$_$_ProdCharacteristicFromJson(
+    Map<String, dynamic> json) {
+  return _$_ProdCharacteristic(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
@@ -112,8 +113,8 @@ _$ProdCharacteristic _$_$ProdCharacteristicFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$ProdCharacteristicToJson(
-        _$ProdCharacteristic instance) =>
+Map<String, dynamic> _$_$_ProdCharacteristicToJson(
+        _$_ProdCharacteristic instance) =>
     <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
@@ -131,8 +132,8 @@ Map<String, dynamic> _$_$ProdCharacteristicToJson(
       'scoring': instance.scoring,
     };
 
-_$ProductShelfLife _$_$ProductShelfLifeFromJson(Map<String, dynamic> json) {
-  return _$ProductShelfLife(
+_$_ProductShelfLife _$_$_ProductShelfLifeFromJson(Map<String, dynamic> json) {
+  return _$_ProductShelfLife(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
@@ -149,7 +150,8 @@ _$ProductShelfLife _$_$ProductShelfLifeFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$ProductShelfLifeToJson(_$ProductShelfLife instance) =>
+Map<String, dynamic> _$_$_ProductShelfLifeToJson(
+        _$_ProductShelfLife instance) =>
     <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
@@ -160,8 +162,8 @@ Map<String, dynamic> _$_$ProductShelfLifeToJson(_$ProductShelfLife instance) =>
       'specialPrecautionsForStorage': instance.specialPrecautionsForStorage,
     };
 
-_$SubstanceAmount _$_$SubstanceAmountFromJson(Map<String, dynamic> json) {
-  return _$SubstanceAmount(
+_$_SubstanceAmount _$_$_SubstanceAmountFromJson(Map<String, dynamic> json) {
+  return _$_SubstanceAmount(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
@@ -185,7 +187,7 @@ _$SubstanceAmount _$_$SubstanceAmountFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$SubstanceAmountToJson(_$SubstanceAmount instance) =>
+Map<String, dynamic> _$_$_SubstanceAmountToJson(_$_SubstanceAmount instance) =>
     <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
@@ -198,9 +200,9 @@ Map<String, dynamic> _$_$SubstanceAmountToJson(_$SubstanceAmount instance) =>
       'referenceRange': instance.referenceRange,
     };
 
-_$SubstanceAmountReferenceRange _$_$SubstanceAmountReferenceRangeFromJson(
+_$_SubstanceAmountReferenceRange _$_$_SubstanceAmountReferenceRangeFromJson(
     Map<String, dynamic> json) {
-  return _$SubstanceAmountReferenceRange(
+  return _$_SubstanceAmountReferenceRange(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
@@ -213,8 +215,8 @@ _$SubstanceAmountReferenceRange _$_$SubstanceAmountReferenceRangeFromJson(
   );
 }
 
-Map<String, dynamic> _$_$SubstanceAmountReferenceRangeToJson(
-        _$SubstanceAmountReferenceRange instance) =>
+Map<String, dynamic> _$_$_SubstanceAmountReferenceRangeToJson(
+        _$_SubstanceAmountReferenceRange instance) =>
     <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,

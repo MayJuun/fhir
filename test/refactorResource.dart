@@ -2,52 +2,76 @@ import 'dart:io';
 import './typeLists.dart';
 
 void main() async {
-  var tempDir = Directory('./lib/r4/resourceTypes');
-  var files = tempDir.listSync().toList();
-  for (var file in files) {
-    if (!file.toString().contains('g.dart')) {
-      var className = file.toString().split('/').last.split('.dart')[0];
-      var fileName = enumCategory(className);
+  var baseFile =
+      await File('./lib/r4/general_types/general_types.dart').readAsString();
+  var exp = RegExp(r'(?<=const\sfactory\sGeneralTypes\.).*(?=\(\{)');
+  for (var match in exp.allMatches(baseFile)) {
+    var matchName = match.group(0)[0].toUpperCase() +
+        match.group(0).substring(1, match.group(0).length);
+    baseFile = baseFile.replaceFirst(
+        'const factory GeneralTypes.${match.group(0)}',
+        '@freezed\n'
+            'abstract Class $matchName with _\$$matchName {\n'
+            'const factory $matchName;');
 
-      var baseClass = await File(fileName[0]).readAsString();
-      if (!baseClass
-          .contains("import 'package:json_annotation/json_annotation.dart';")) {
-        baseClass += "import 'package:json_annotation/json_annotation.dart';";
-      }
-      var classText = await (file as File).readAsString();
-      var exp = RegExp(r'(?<=class\s).*(?=\s\{)');
-      var enumList = (exp.allMatches(classText).toList())
-          .where((element) => element.group(0).contains('PrimitiveObject'))
-          .toList();
-      var newExp = RegExp(
-          r'(?<=validateEnum\(\n\s\s\s\s\s\s\s\svalue,\n\s\s\s\s\s\s\s\s\[)([^;]*)(?=\])');
-      var enumValues = newExp.allMatches(classText).toList();
-      for (var i = 0; i < enumList.length; i++) {
-        baseClass += 'enum ${enumList[i].group(0).split(' ')[0]} {';
-        var unknown = false;
-        for (var val in enumValues[i].group(0).split(',')) {
-          if (val == '\n        ') {
-            if (!unknown) baseClass += "\n@JsonValue('unknown')\nunknown,";
-          } else {
-            baseClass +=
-                '\n@JsonValue($val)\n${val.replaceAll("'", "").replaceAll('-', '_')},';
-            unknown = val.contains('unknown');
-          }
-        }
-        baseClass += '}\n\n';
-      }
-
-      // await File(fileName[0]).writeAsString('');
-      await File(fileName[0]).writeAsString(baseClass);
-      //     baseClass += 'const factory ${fileName[1]}.'
-      //         '${text.group(0)[0].toLowerCase() + text.group(0).substring(1, text.group(0).length)}'
-      //         '({';
-      //     baseClass += match.group(0).replaceAll(';', ",");
-      //     baseClass += '}) = ${text.group(0)};\n\n';
-
-    }
+    baseFile = baseFile.replaceFirst(
+        '= $matchName;',
+        '_$matchName\nfactory $matchName.fromJson(map<String, dynamic> json) =>'
+            '_\$${matchName}FromJson(json);}');
   }
+  baseFile = baseFile.replaceFirst(
+      '''factory GeneralTypes.fromJson(Map<String, dynamic> json) =>
+      _\$GeneralTypesFromJson(json);\n}''', '');
+  await File('./lib/r4/general_types/general_types.dart')
+      .writeAsString(baseFile);
 }
+
+//   var tempDir = Directory('./lib/r4/resourceTypes');
+//   var files = tempDir.listSync().toList();
+//   for (var file in files) {
+//     if (!file.toString().contains('g.dart')) {
+//       var className = file.toString().split('/').last.split('.dart')[0];
+//       var fileName = enumCategory(className);
+
+//       var baseClass = await File(fileName[0]).readAsString();
+//       if (!baseClass
+//           .contains("import 'package:json_annotation/json_annotation.dart';")) {
+//         baseClass += "import 'package:json_annotation/json_annotation.dart';";
+//       }
+//       var classText = await (file as File).readAsString();
+//       var exp = RegExp(r'(?<=class\s).*(?=\s\{)');
+//       var enumList = (exp.allMatches(classText).toList())
+//           .where((element) => element.group(0).contains('PrimitiveObject'))
+//           .toList();
+//       var newExp = RegExp(
+//           r'(?<=validateEnum\(\n\s\s\s\s\s\s\s\svalue,\n\s\s\s\s\s\s\s\s\[)([^;]*)(?=\])');
+//       var enumValues = newExp.allMatches(classText).toList();
+//       for (var i = 0; i < enumList.length; i++) {
+//         baseClass += 'enum ${enumList[i].group(0).split(' ')[0]} {';
+//         var unknown = false;
+//         for (var val in enumValues[i].group(0).split(',')) {
+//           if (val == '\n        ') {
+//             if (!unknown) baseClass += "\n@JsonValue('unknown')\nunknown,";
+//           } else {
+//             baseClass +=
+//                 '\n@JsonValue($val)\n${val.replaceAll("'", "").replaceAll('-', '_')},';
+//             unknown = val.contains('unknown');
+//           }
+//         }
+//         baseClass += '}\n\n';
+//       }
+
+//       // await File(fileName[0]).writeAsString('');
+//       await File(fileName[0]).writeAsString(baseClass);
+//       //     baseClass += 'const factory ${fileName[1]}.'
+//       //         '${text.group(0)[0].toLowerCase() + text.group(0).substring(1, text.group(0).length)}'
+//       //         '({';
+//       //     baseClass += match.group(0).replaceAll(';', ",");
+//       //     baseClass += '}) = ${text.group(0)};\n\n';
+
+//     }
+//   }
+// }
 
 // tempDir = Directory('./lib/r4/resource_types');
 // files = tempDir.listSync(recursive: true).toList();

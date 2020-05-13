@@ -862,7 +862,10 @@ _$MedicinalProductContraindication _$_$MedicinalProductContraindicationFromJson(
     comorbidity: json['comorbidity'] as List,
     therapeuticIndication: json['therapeuticIndication'] as List,
     otherTherapy: json['otherTherapy'] as List,
-    population: json['population'] as List,
+    population: (json['population'] as List)
+        ?.map((e) =>
+            e == null ? null : Population.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -1408,7 +1411,10 @@ _$MedicinalProductUndesirableEffect
         ? null
         : CodeableConcept.fromJson(
             json['frequencyOfOccurrence'] as Map<String, dynamic>),
-    population: json['population'] as List,
+    population: (json['population'] as List)
+        ?.map((e) =>
+            e == null ? null : Population.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -1477,7 +1483,11 @@ _$MedicinalProduct _$_$MedicinalProductFromJson(Map<String, dynamic> json) {
         : CodeableConcept.fromJson(
             json['paediatricUseIndicator'] as Map<String, dynamic>),
     productClassification: json['productClassification'] as List,
-    marketingStatus: json['marketingStatus'] as List,
+    marketingStatus: (json['marketingStatus'] as List)
+        ?.map((e) => e == null
+            ? null
+            : MarketingStatus.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     pharmaceuticalProduct: json['pharmaceuticalProduct'] as List,
     packagedMedicinalProduct: json['packagedMedicinalProduct'] as List,
     attachedDocument: json['attachedDocument'] as List,
@@ -1720,7 +1730,11 @@ _$MedicinalProductPackaged _$_$MedicinalProductPackagedFromJson(
         ? null
         : CodeableConcept.fromJson(
             json['legalStatusOfSupply'] as Map<String, dynamic>),
-    marketingStatus: json['marketingStatus'] as List,
+    marketingStatus: (json['marketingStatus'] as List)
+        ?.map((e) => e == null
+            ? null
+            : MarketingStatus.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     marketingAuthorization: json['marketingAuthorization'] == null
         ? null
         : Reference.fromJson(
@@ -1804,7 +1818,11 @@ _$MedicinalProductPackagedPackageItem
         : ProdCharacteristic.fromJson(
             json['physicalCharacteristics'] as Map<String, dynamic>),
     otherCharacteristics: json['otherCharacteristics'] as List,
-    shelfLifeStorage: json['shelfLifeStorage'] as List,
+    shelfLifeStorage: (json['shelfLifeStorage'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ProductShelfLife.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     manufacturer: json['manufacturer'] as List,
   );
 }
@@ -2670,7 +2688,10 @@ _$MedicinalProductIndication _$_$MedicinalProductIndicationFromJson(
         : Quantity.fromJson(json['duration'] as Map<String, dynamic>),
     otherTherapy: json['otherTherapy'] as List,
     undesirableEffect: json['undesirableEffect'] as List,
-    population: json['population'] as List,
+    population: (json['population'] as List)
+        ?.map((e) =>
+            e == null ? null : Population.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 

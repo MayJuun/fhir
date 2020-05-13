@@ -12,8 +12,8 @@ part 'draft_types.g.dart';
 // We will have to call DraftTypes.marketingStatus to get to the appropriate class
 
 @freezed
-abstract class DraftTypes with _$DraftTypes {
-  const factory DraftTypes.marketingStatus({
+abstract class MarketingStatus with _$MarketingStatus {
+  factory MarketingStatus({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -22,9 +22,15 @@ abstract class DraftTypes with _$DraftTypes {
     CodeableConcept status,
     Period dateRange,
     FhirDateTime restoreDate,
-  }) = MarketingStatus;
+  }) = _MarketingStatus;
 
-  const factory DraftTypes.population({
+  factory MarketingStatus.fromJson(Map<String, dynamic> json) =>
+      _$MarketingStatusFromJson(json);
+}
+
+@freezed
+abstract class Population with _$Population {
+  factory Population({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -33,9 +39,15 @@ abstract class DraftTypes with _$DraftTypes {
     CodeableConcept gender,
     CodeableConcept race,
     CodeableConcept physiologicalCondition,
-  }) = Population;
+  }) = _Population;
 
-  const factory DraftTypes.prodCharacteristic({
+  factory Population.fromJson(Map<String, dynamic> json) =>
+      _$PopulationFromJson(json);
+}
+
+@freezed
+abstract class ProdCharacteristic with _$ProdCharacteristic {
+  factory ProdCharacteristic({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -50,9 +62,15 @@ abstract class DraftTypes with _$DraftTypes {
     List<String> imprint,
     List<Attachment> image,
     CodeableConcept scoring,
-  }) = ProdCharacteristic;
+  }) = _ProdCharacteristic;
 
-  const factory DraftTypes.productShelfLife({
+  factory ProdCharacteristic.fromJson(Map<String, dynamic> json) =>
+      _$ProdCharacteristicFromJson(json);
+}
+
+@freezed
+abstract class ProductShelfLife with _$ProductShelfLife {
+  factory ProductShelfLife({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -60,9 +78,15 @@ abstract class DraftTypes with _$DraftTypes {
     CodeableConcept type,
     Quantity period,
     List<CodeableConcept> specialPrecautionsForStorage,
-  }) = ProductShelfLife;
+  }) = _ProductShelfLife;
 
-  const factory DraftTypes.substanceAmount({
+  factory ProductShelfLife.fromJson(Map<String, dynamic> json) =>
+      _$ProductShelfLifeFromJson(json);
+}
+
+@freezed
+abstract class SubstanceAmount with _$SubstanceAmount {
+  factory SubstanceAmount({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -72,16 +96,23 @@ abstract class DraftTypes with _$DraftTypes {
     CodeableConcept amountType,
     String amountText,
     SubstanceAmountReferenceRange referenceRange,
-  }) = SubstanceAmount;
+  }) = _SubstanceAmount;
 
-  const factory DraftTypes.substanceAmountReferenceRange({
+  factory SubstanceAmount.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceAmountFromJson(json);
+}
+
+@freezed
+abstract class SubstanceAmountReferenceRange
+    with _$SubstanceAmountReferenceRange {
+  factory SubstanceAmountReferenceRange({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Quantity lowLimit,
     Quantity highLimit,
-  }) = SubstanceAmountReferenceRange;
+  }) = _SubstanceAmountReferenceRange;
 
-  factory DraftTypes.fromJson(Map<String, dynamic> json) =>
-      _$DraftTypesFromJson(json);
+  factory SubstanceAmountReferenceRange.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceAmountReferenceRangeFromJson(json);
 }

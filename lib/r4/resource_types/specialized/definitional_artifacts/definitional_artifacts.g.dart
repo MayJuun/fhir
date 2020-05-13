@@ -319,7 +319,11 @@ _$DeviceDefinition _$_$DeviceDefinitionFromJson(Map<String, dynamic> json) {
     specialization: json['specialization'] as List,
     version: (json['version'] as List)?.map((e) => e as String)?.toList(),
     safety: json['safety'] as List,
-    shelfLifeStorage: json['shelfLifeStorage'] as List,
+    shelfLifeStorage: (json['shelfLifeStorage'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ProductShelfLife.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     physicalCharacteristics: json['physicalCharacteristics'] == null
         ? null
         : ProdCharacteristic.fromJson(
