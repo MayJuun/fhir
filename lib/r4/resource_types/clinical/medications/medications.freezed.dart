@@ -524,7 +524,7 @@ class _$MedicationsTearOff {
   }
 
   Immunization immunization(
-      {String resourceType,
+      {String resourceType = 'Immunization',
       Id id,
       Meta meta,
       Code language,
@@ -538,6 +538,7 @@ class _$MedicationsTearOff {
       CodeableConcept vaccineCode,
       Reference patient,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       String occurrenceString,
       FhirDateTime recorded,
       bool primarySource,
@@ -574,6 +575,7 @@ class _$MedicationsTearOff {
       vaccineCode: vaccineCode,
       patient: patient,
       encounter: encounter,
+      occurrenceDateTime: occurrenceDateTime,
       occurrenceString: occurrenceString,
       recorded: recorded,
       primarySource: primarySource,
@@ -1422,6 +1424,7 @@ mixin _$Medications {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -1936,6 +1939,7 @@ mixin _$Medications {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -2912,6 +2916,7 @@ class _$ImmunizationEvaluation implements ImmunizationEvaluation {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -3494,6 +3499,7 @@ class _$ImmunizationEvaluation implements ImmunizationEvaluation {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -4669,6 +4675,7 @@ class _$MedicationDispense implements MedicationDispense {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -5259,6 +5266,7 @@ class _$MedicationDispense implements MedicationDispense {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -6166,6 +6174,7 @@ class _$MedicationDispensePerformer implements MedicationDispensePerformer {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -6724,6 +6733,7 @@ class _$MedicationDispensePerformer implements MedicationDispensePerformer {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -7585,6 +7595,7 @@ class _$MedicationDispenseSubstitution
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -8144,6 +8155,7 @@ class _$MedicationDispenseSubstitution
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -9106,6 +9118,7 @@ class _$Medication implements Medication {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -9681,6 +9694,7 @@ class _$Medication implements Medication {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -10568,6 +10582,7 @@ class _$MedicationIngredient implements MedicationIngredient {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -11127,6 +11142,7 @@ class _$MedicationIngredient implements MedicationIngredient {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -11966,6 +11982,7 @@ class _$MedicationBatch implements MedicationBatch {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -12525,6 +12542,7 @@ class _$MedicationBatch implements MedicationBatch {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -13592,6 +13610,7 @@ class _$MedicationStatement implements MedicationStatement {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -14177,6 +14196,7 @@ class _$MedicationStatement implements MedicationStatement {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -15454,6 +15474,7 @@ class _$MedicationRequest implements MedicationRequest {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -16053,6 +16074,7 @@ class _$MedicationRequest implements MedicationRequest {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -17056,6 +17078,7 @@ class _$MedicationRequestDispenseRequest
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -17623,6 +17646,7 @@ class _$MedicationRequestDispenseRequest
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -18479,6 +18503,7 @@ class _$MedicationRequestInitialFill implements MedicationRequestInitialFill {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -19038,6 +19063,7 @@ class _$MedicationRequestInitialFill implements MedicationRequestInitialFill {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -19882,6 +19908,7 @@ class _$MedicationRequestSubstitution implements MedicationRequestSubstitution {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -20441,6 +20468,7 @@ class _$MedicationRequestSubstitution implements MedicationRequestSubstitution {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -20965,6 +20993,7 @@ abstract class $ImmunizationCopyWith<$Res> {
       CodeableConcept vaccineCode,
       Reference patient,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       String occurrenceString,
       FhirDateTime recorded,
       bool primarySource,
@@ -21013,6 +21042,7 @@ class _$ImmunizationCopyWithImpl<$Res> extends _$MedicationsCopyWithImpl<$Res>
     Object vaccineCode = freezed,
     Object patient = freezed,
     Object encounter = freezed,
+    Object occurrenceDateTime = freezed,
     Object occurrenceString = freezed,
     Object recorded = freezed,
     Object primarySource = freezed,
@@ -21064,6 +21094,9 @@ class _$ImmunizationCopyWithImpl<$Res> extends _$MedicationsCopyWithImpl<$Res>
       patient: patient == freezed ? _value.patient : patient as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
+      occurrenceDateTime: occurrenceDateTime == freezed
+          ? _value.occurrenceDateTime
+          : occurrenceDateTime as FhirDateTime,
       occurrenceString: occurrenceString == freezed
           ? _value.occurrenceString
           : occurrenceString as String,
@@ -21120,7 +21153,7 @@ class _$ImmunizationCopyWithImpl<$Res> extends _$MedicationsCopyWithImpl<$Res>
 @JsonSerializable()
 class _$Immunization implements Immunization {
   const _$Immunization(
-      {this.resourceType,
+      {this.resourceType = 'Immunization',
       this.id,
       this.meta,
       this.language,
@@ -21134,6 +21167,7 @@ class _$Immunization implements Immunization {
       this.vaccineCode,
       this.patient,
       this.encounter,
+      this.occurrenceDateTime,
       this.occurrenceString,
       this.recorded,
       this.primarySource,
@@ -21154,11 +21188,13 @@ class _$Immunization implements Immunization {
       this.programEligibility,
       this.fundingSource,
       this.reaction,
-      this.protocolApplied});
+      this.protocolApplied})
+      : assert(resourceType != null);
 
   factory _$Immunization.fromJson(Map<String, dynamic> json) =>
       _$_$ImmunizationFromJson(json);
 
+  @JsonKey(defaultValue: 'Immunization')
   @override
   final String resourceType;
   @override
@@ -21188,6 +21224,8 @@ class _$Immunization implements Immunization {
   final Reference patient;
   @override
   final Reference encounter;
+  @override
+  final FhirDateTime occurrenceDateTime;
   @override
   final String occurrenceString;
   @override
@@ -21233,7 +21271,7 @@ class _$Immunization implements Immunization {
 
   @override
   String toString() {
-    return 'Medications.immunization(resourceType: $resourceType, id: $id, meta: $meta, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusReason: $statusReason, vaccineCode: $vaccineCode, patient: $patient, encounter: $encounter, occurrenceString: $occurrenceString, recorded: $recorded, primarySource: $primarySource, reportOrigin: $reportOrigin, location: $location, manufacturer: $manufacturer, lotNumber: $lotNumber, expirationDate: $expirationDate, route: $route, doseQuantity: $doseQuantity, performer: $performer, note: $note, reasonCode: $reasonCode, reasonReference: $reasonReference, isSubpotent: $isSubpotent, something: $something, education: $education, programEligibility: $programEligibility, fundingSource: $fundingSource, reaction: $reaction, protocolApplied: $protocolApplied)';
+    return 'Medications.immunization(resourceType: $resourceType, id: $id, meta: $meta, language: $language, text: $text, contained: $contained, fhirExtension: $fhirExtension, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusReason: $statusReason, vaccineCode: $vaccineCode, patient: $patient, encounter: $encounter, occurrenceDateTime: $occurrenceDateTime, occurrenceString: $occurrenceString, recorded: $recorded, primarySource: $primarySource, reportOrigin: $reportOrigin, location: $location, manufacturer: $manufacturer, lotNumber: $lotNumber, expirationDate: $expirationDate, route: $route, doseQuantity: $doseQuantity, performer: $performer, note: $note, reasonCode: $reasonCode, reasonReference: $reasonReference, isSubpotent: $isSubpotent, something: $something, education: $education, programEligibility: $programEligibility, fundingSource: $fundingSource, reaction: $reaction, protocolApplied: $protocolApplied)';
   }
 
   @override
@@ -21278,6 +21316,9 @@ class _$Immunization implements Immunization {
             (identical(other.encounter, encounter) ||
                 const DeepCollectionEquality()
                     .equals(other.encounter, encounter)) &&
+            (identical(other.occurrenceDateTime, occurrenceDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.occurrenceDateTime, occurrenceDateTime)) &&
             (identical(other.occurrenceString, occurrenceString) ||
                 const DeepCollectionEquality()
                     .equals(other.occurrenceString, occurrenceString)) &&
@@ -21304,9 +21345,7 @@ class _$Immunization implements Immunization {
                     .equals(other.expirationDate, expirationDate)) &&
             (identical(other.route, route) ||
                 const DeepCollectionEquality().equals(other.route, route)) &&
-            (identical(other.doseQuantity, doseQuantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.doseQuantity, doseQuantity)) &&
+            (identical(other.doseQuantity, doseQuantity) || const DeepCollectionEquality().equals(other.doseQuantity, doseQuantity)) &&
             (identical(other.performer, performer) || const DeepCollectionEquality().equals(other.performer, performer)) &&
             (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
             (identical(other.reasonCode, reasonCode) || const DeepCollectionEquality().equals(other.reasonCode, reasonCode)) &&
@@ -21337,6 +21376,7 @@ class _$Immunization implements Immunization {
       const DeepCollectionEquality().hash(vaccineCode) ^
       const DeepCollectionEquality().hash(patient) ^
       const DeepCollectionEquality().hash(encounter) ^
+      const DeepCollectionEquality().hash(occurrenceDateTime) ^
       const DeepCollectionEquality().hash(occurrenceString) ^
       const DeepCollectionEquality().hash(recorded) ^
       const DeepCollectionEquality().hash(primarySource) ^
@@ -21588,6 +21628,7 @@ class _$Immunization implements Immunization {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -21946,6 +21987,7 @@ class _$Immunization implements Immunization {
         vaccineCode,
         patient,
         encounter,
+        occurrenceDateTime,
         occurrenceString,
         recorded,
         primarySource,
@@ -22181,6 +22223,7 @@ class _$Immunization implements Immunization {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -22475,6 +22518,7 @@ class _$Immunization implements Immunization {
           vaccineCode,
           patient,
           encounter,
+          occurrenceDateTime,
           occurrenceString,
           recorded,
           primarySource,
@@ -22714,6 +22758,7 @@ abstract class Immunization implements Medications {
       CodeableConcept vaccineCode,
       Reference patient,
       Reference encounter,
+      FhirDateTime occurrenceDateTime,
       String occurrenceString,
       FhirDateTime recorded,
       bool primarySource,
@@ -22754,6 +22799,7 @@ abstract class Immunization implements Medications {
   CodeableConcept get vaccineCode;
   Reference get patient;
   Reference get encounter;
+  FhirDateTime get occurrenceDateTime;
   String get occurrenceString;
   FhirDateTime get recorded;
   bool get primarySource;
@@ -23110,6 +23156,7 @@ class _$ImmunizationPerformer implements ImmunizationPerformer {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -23669,6 +23716,7 @@ class _$ImmunizationPerformer implements ImmunizationPerformer {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -24531,6 +24579,7 @@ class _$ImmunizationEducation implements ImmunizationEducation {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -25090,6 +25139,7 @@ class _$ImmunizationEducation implements ImmunizationEducation {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -25938,6 +25988,7 @@ class _$ImmunizationReaction implements ImmunizationReaction {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -26497,6 +26548,7 @@ class _$ImmunizationReaction implements ImmunizationReaction {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -27397,6 +27449,7 @@ class _$ImmunizationProtocolApplied implements ImmunizationProtocolApplied {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -27965,6 +28018,7 @@ class _$ImmunizationProtocolApplied implements ImmunizationProtocolApplied {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -29074,6 +29128,7 @@ class _$MedicationAdministration implements MedicationAdministration {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -29661,6 +29716,7 @@ class _$MedicationAdministration implements MedicationAdministration {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -30578,6 +30634,7 @@ class _$MedicationAdministrationPerformer
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -31137,6 +31194,7 @@ class _$MedicationAdministrationPerformer
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -32025,6 +32083,7 @@ class _$MedicationAdministrationDosage
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -32584,6 +32643,7 @@ class _$MedicationAdministrationDosage
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -33539,6 +33599,7 @@ class _$ImmunizationRecommendation implements ImmunizationRecommendation {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -34111,6 +34172,7 @@ class _$ImmunizationRecommendation implements ImmunizationRecommendation {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -35108,6 +35170,7 @@ class _$ImmunizationRecommendationRecommendation
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -35681,6 +35744,7 @@ class _$ImmunizationRecommendationRecommendation
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -36559,6 +36623,7 @@ class _$ImmunizationRecommendationDateCriterion
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -37118,6 +37183,7 @@ class _$ImmunizationRecommendationDateCriterion
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -38221,6 +38287,7 @@ class _$MedicationKnowledge implements MedicationKnowledge {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -38809,6 +38876,7 @@ class _$MedicationKnowledge implements MedicationKnowledge {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -39732,6 +39800,7 @@ class _$MedicationKnowledgeRelatedMedicationKnowledge
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -40291,6 +40360,7 @@ class _$MedicationKnowledgeRelatedMedicationKnowledge
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -41132,6 +41202,7 @@ class _$MedicationKnowledgeMonograph implements MedicationKnowledgeMonograph {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -41691,6 +41762,7 @@ class _$MedicationKnowledgeMonograph implements MedicationKnowledgeMonograph {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -42555,6 +42627,7 @@ class _$MedicationKnowledgeIngredient implements MedicationKnowledgeIngredient {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -43114,6 +43187,7 @@ class _$MedicationKnowledgeIngredient implements MedicationKnowledgeIngredient {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -43962,6 +44036,7 @@ class _$MedicationKnowledgeCost implements MedicationKnowledgeCost {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -44521,6 +44596,7 @@ class _$MedicationKnowledgeCost implements MedicationKnowledgeCost {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -45363,6 +45439,7 @@ class _$MedicationKnowledgeMonitoringProgram
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -45922,6 +45999,7 @@ class _$MedicationKnowledgeMonitoringProgram
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -46794,6 +46872,7 @@ class _$MedicationKnowledgeAdministrationGuidelines
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -47359,6 +47438,7 @@ class _$MedicationKnowledgeAdministrationGuidelines
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -48208,6 +48288,7 @@ class _$MedicationKnowledgeDosage implements MedicationKnowledgeDosage {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -48767,6 +48848,7 @@ class _$MedicationKnowledgeDosage implements MedicationKnowledgeDosage {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -49625,6 +49707,7 @@ class _$MedicationKnowledgePatientCharacteristics
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -50189,6 +50272,7 @@ class _$MedicationKnowledgePatientCharacteristics
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -51043,6 +51127,7 @@ class _$MedicationKnowledgeMedicineClassification
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -51602,6 +51687,7 @@ class _$MedicationKnowledgeMedicineClassification
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -52444,6 +52530,7 @@ class _$MedicationKnowledgePackaging implements MedicationKnowledgePackaging {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -53003,6 +53090,7 @@ class _$MedicationKnowledgePackaging implements MedicationKnowledgePackaging {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -53882,6 +53970,7 @@ class _$MedicationKnowledgeDrugCharacteristic
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -54448,6 +54537,7 @@ class _$MedicationKnowledgeDrugCharacteristic
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -55330,6 +55420,7 @@ class _$MedicationKnowledgeRegulatory implements MedicationKnowledgeRegulatory {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -55889,6 +55980,7 @@ class _$MedicationKnowledgeRegulatory implements MedicationKnowledgeRegulatory {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -56734,6 +56826,7 @@ class _$MedicationKnowledgeSubstitution
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -57293,6 +57386,7 @@ class _$MedicationKnowledgeSubstitution
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -58123,6 +58217,7 @@ class _$MedicationKnowledgeSchedule implements MedicationKnowledgeSchedule {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -58682,6 +58777,7 @@ class _$MedicationKnowledgeSchedule implements MedicationKnowledgeSchedule {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -59521,6 +59617,7 @@ class _$MedicationKnowledgeMaxDispense
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -60080,6 +60177,7 @@ class _$MedicationKnowledgeMaxDispense
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,
@@ -60935,6 +61033,7 @@ class _$MedicationKnowledgeKinetics implements MedicationKnowledgeKinetics {
             CodeableConcept vaccineCode,
             Reference patient,
             Reference encounter,
+            FhirDateTime occurrenceDateTime,
             String occurrenceString,
             FhirDateTime recorded,
             bool primarySource,
@@ -61494,6 +61593,7 @@ class _$MedicationKnowledgeKinetics implements MedicationKnowledgeKinetics {
         CodeableConcept vaccineCode,
         Reference patient,
         Reference encounter,
+        FhirDateTime occurrenceDateTime,
         String occurrenceString,
         FhirDateTime recorded,
         bool primarySource,

@@ -699,7 +699,7 @@ Map<String, dynamic> _$_$MedicationRequestSubstitutionToJson(
 
 _$Immunization _$_$ImmunizationFromJson(Map<String, dynamic> json) {
   return _$Immunization(
-    resourceType: json['resourceType'] as String,
+    resourceType: json['resourceType'] as String ?? 'Immunization',
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -729,6 +729,9 @@ _$Immunization _$_$ImmunizationFromJson(Map<String, dynamic> json) {
     encounter: json['encounter'] == null
         ? null
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
+    occurrenceDateTime: json['occurrenceDateTime'] == null
+        ? null
+        : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
     occurrenceString: json['occurrenceString'] as String,
     recorded: json['recorded'] == null
         ? null
@@ -789,6 +792,7 @@ Map<String, dynamic> _$_$ImmunizationToJson(_$Immunization instance) =>
       'vaccineCode': instance.vaccineCode,
       'patient': instance.patient,
       'encounter': instance.encounter,
+      'occurrenceDateTime': instance.occurrenceDateTime,
       'occurrenceString': instance.occurrenceString,
       'recorded': instance.recorded,
       'primarySource': instance.primarySource,
