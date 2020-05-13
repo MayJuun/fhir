@@ -2,12 +2,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../fhir_r4.dart';
 
-part 'medication_definition.g.dart';
 part 'medication_definition.freezed.dart';
+part 'medication_definition.g.dart';
 
 @freezed
-abstract class MedicationDefinition with _$MedicationDefinition {
-  const factory MedicationDefinition.medicinalProductInteraction({
+abstract class MedicinalProductInteraction with _$MedicinalProductInteraction {
+  const factory MedicinalProductInteraction({
     String resourceType,
     Id id,
     Meta meta,
@@ -24,17 +24,30 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     CodeableConcept effect,
     CodeableConcept incidence,
     CodeableConcept management,
-  }) = MedicinalProductInteraction;
+  }) = _MedicinalProductInteraction;
+  factory MedicinalProductInteraction.fromJson(Map<String, dynamic> json) =>
+      _$MedicinalProductInteractionFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductInteractionInteractant({
+@freezed
+abstract class MedicinalProductInteractionInteractant
+    with _$MedicinalProductInteractionInteractant {
+  const factory MedicinalProductInteractionInteractant({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference itemReference,
     CodeableConcept itemCodeableConcept,
-  }) = MedicinalProductInteractionInteractant;
+  }) = _MedicinalProductInteractionInteractant;
+  factory MedicinalProductInteractionInteractant.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicinalProductInteractionInteractantFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceReferenceInformation({
+@freezed
+abstract class SubstanceReferenceInformation
+    with _$SubstanceReferenceInformation {
+  const factory SubstanceReferenceInformation({
     String resourceType,
     Id id,
     Meta meta,
@@ -49,27 +62,47 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     List<SubstanceReferenceInformationGeneElement> geneElement,
     List<SubstanceReferenceInformationClassification> classification,
     List<SubstanceReferenceInformationTarget> target,
-  }) = SubstanceReferenceInformation;
+  }) = _SubstanceReferenceInformation;
+  factory SubstanceReferenceInformation.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceReferenceInformationFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceReferenceInformationGene({
+@freezed
+abstract class SubstanceReferenceInformationGene
+    with _$SubstanceReferenceInformationGene {
+  const factory SubstanceReferenceInformationGene({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept geneSequenceOrigin,
     CodeableConcept gene,
     List<Reference> source,
-  }) = SubstanceReferenceInformationGene;
+  }) = _SubstanceReferenceInformationGene;
+  factory SubstanceReferenceInformationGene.fromJson(
+          Map<String, dynamic> json) =>
+      _$SubstanceReferenceInformationGeneFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceReferenceInformationGeneElement({
+@freezed
+abstract class SubstanceReferenceInformationGeneElement
+    with _$SubstanceReferenceInformationGeneElement {
+  const factory SubstanceReferenceInformationGeneElement({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     Identifier element,
     List<Reference> source,
-  }) = SubstanceReferenceInformationGeneElement;
+  }) = _SubstanceReferenceInformationGeneElement;
+  factory SubstanceReferenceInformationGeneElement.fromJson(
+          Map<String, dynamic> json) =>
+      _$SubstanceReferenceInformationGeneElementFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceReferenceInformationClassification({
+@freezed
+abstract class SubstanceReferenceInformationClassification
+    with _$SubstanceReferenceInformationClassification {
+  const factory SubstanceReferenceInformationClassification({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -77,9 +110,16 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     CodeableConcept classification,
     List<CodeableConcept> subtype,
     List<Reference> source,
-  }) = SubstanceReferenceInformationClassification;
+  }) = _SubstanceReferenceInformationClassification;
+  factory SubstanceReferenceInformationClassification.fromJson(
+          Map<String, dynamic> json) =>
+      _$SubstanceReferenceInformationClassificationFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceReferenceInformationTarget({
+@freezed
+abstract class SubstanceReferenceInformationTarget
+    with _$SubstanceReferenceInformationTarget {
+  const factory SubstanceReferenceInformationTarget({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -93,9 +133,15 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     String amountString,
     CodeableConcept amountType,
     List<Reference> source,
-  }) = SubstanceReferenceInformationTarget;
+  }) = _SubstanceReferenceInformationTarget;
+  factory SubstanceReferenceInformationTarget.fromJson(
+          Map<String, dynamic> json) =>
+      _$SubstanceReferenceInformationTargetFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceSpecification({
+@freezed
+abstract class SubstanceSpecification with _$SubstanceSpecification {
+  const factory SubstanceSpecification({
     String resourceType,
     Id id,
     Meta meta,
@@ -124,9 +170,15 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Reference polymer,
     Reference protein,
     Reference sourceMaterial,
-  }) = SubstanceSpecification;
+  }) = _SubstanceSpecification;
+  factory SubstanceSpecification.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceSpecificationFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceSpecificationMoiety({
+@freezed
+abstract class SubstanceSpecificationMoiety
+    with _$SubstanceSpecificationMoiety {
+  const factory SubstanceSpecificationMoiety({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -138,9 +190,15 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     String molecularFormula,
     Quantity amountQuantity,
     String amountString,
-  }) = SubstanceSpecificationMoiety;
+  }) = _SubstanceSpecificationMoiety;
+  factory SubstanceSpecificationMoiety.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceSpecificationMoietyFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceSpecificationProperty({
+@freezed
+abstract class SubstanceSpecificationProperty
+    with _$SubstanceSpecificationProperty {
+  const factory SubstanceSpecificationProperty({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -151,9 +209,15 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     CodeableConcept definingSubstanceCodeableConcept,
     Quantity amountQuantity,
     String amountString,
-  }) = SubstanceSpecificationProperty;
+  }) = _SubstanceSpecificationProperty;
+  factory SubstanceSpecificationProperty.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceSpecificationPropertyFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceSpecificationStructure({
+@freezed
+abstract class SubstanceSpecificationStructure
+    with _$SubstanceSpecificationStructure {
+  const factory SubstanceSpecificationStructure({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -165,9 +229,15 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     SubstanceSpecificationMolecularWeight molecularWeight,
     List<Reference> source,
     List<SubstanceSpecificationRepresentation> representation,
-  }) = SubstanceSpecificationStructure;
+  }) = _SubstanceSpecificationStructure;
+  factory SubstanceSpecificationStructure.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceSpecificationStructureFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceSpecificationIsotope({
+@freezed
+abstract class SubstanceSpecificationIsotope
+    with _$SubstanceSpecificationIsotope {
+  const factory SubstanceSpecificationIsotope({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -176,27 +246,46 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     CodeableConcept substitution,
     Quantity halfLife,
     SubstanceSpecificationMolecularWeight molecularWeight,
-  }) = SubstanceSpecificationIsotope;
+  }) = _SubstanceSpecificationIsotope;
+  factory SubstanceSpecificationIsotope.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceSpecificationIsotopeFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceSpecificationMolecularWeight({
+@freezed
+abstract class SubstanceSpecificationMolecularWeight
+    with _$SubstanceSpecificationMolecularWeight {
+  const factory SubstanceSpecificationMolecularWeight({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept method,
     CodeableConcept type,
     Quantity amount,
-  }) = SubstanceSpecificationMolecularWeight;
+  }) = _SubstanceSpecificationMolecularWeight;
+  factory SubstanceSpecificationMolecularWeight.fromJson(
+          Map<String, dynamic> json) =>
+      _$SubstanceSpecificationMolecularWeightFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceSpecificationRepresentation({
+@freezed
+abstract class SubstanceSpecificationRepresentation
+    with _$SubstanceSpecificationRepresentation {
+  const factory SubstanceSpecificationRepresentation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     String representation,
     Attachment attachment,
-  }) = SubstanceSpecificationRepresentation;
+  }) = _SubstanceSpecificationRepresentation;
+  factory SubstanceSpecificationRepresentation.fromJson(
+          Map<String, dynamic> json) =>
+      _$SubstanceSpecificationRepresentationFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceSpecificationCode({
+@freezed
+abstract class SubstanceSpecificationCode with _$SubstanceSpecificationCode {
+  const factory SubstanceSpecificationCode({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -205,9 +294,14 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     FhirDateTime statusDate,
     String comment,
     List<Reference> source,
-  }) = SubstanceSpecificationCode;
+  }) = _SubstanceSpecificationCode;
+  factory SubstanceSpecificationCode.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceSpecificationCodeFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceSpecificationName({
+@freezed
+abstract class SubstanceSpecificationName with _$SubstanceSpecificationName {
+  const factory SubstanceSpecificationName({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -222,18 +316,30 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     List<SubstanceSpecificationName> translation,
     List<SubstanceSpecificationOfficial> official,
     List<Reference> source,
-  }) = SubstanceSpecificationName;
+  }) = _SubstanceSpecificationName;
+  factory SubstanceSpecificationName.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceSpecificationNameFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceSpecificationOfficial({
+@freezed
+abstract class SubstanceSpecificationOfficial
+    with _$SubstanceSpecificationOfficial {
+  const factory SubstanceSpecificationOfficial({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept authority,
     CodeableConcept status,
     FhirDateTime date,
-  }) = SubstanceSpecificationOfficial;
+  }) = _SubstanceSpecificationOfficial;
+  factory SubstanceSpecificationOfficial.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceSpecificationOfficialFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceSpecificationRelationship({
+@freezed
+abstract class SubstanceSpecificationRelationship
+    with _$SubstanceSpecificationRelationship {
+  const factory SubstanceSpecificationRelationship({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -248,9 +354,16 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Ratio amountRatioLowLimit,
     CodeableConcept amountType,
     List<Reference> source,
-  }) = SubstanceSpecificationRelationship;
+  }) = _SubstanceSpecificationRelationship;
+  factory SubstanceSpecificationRelationship.fromJson(
+          Map<String, dynamic> json) =>
+      _$SubstanceSpecificationRelationshipFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductManufactured({
+@freezed
+abstract class MedicinalProductManufactured
+    with _$MedicinalProductManufactured {
+  const factory MedicinalProductManufactured({
     String resourceType,
     Id id,
     Meta meta,
@@ -267,9 +380,15 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     List<Reference> ingredient,
     ProdCharacteristic physicalCharacteristics,
     List<CodeableConcept> otherCharacteristics,
-  }) = MedicinalProductManufactured;
+  }) = _MedicinalProductManufactured;
+  factory MedicinalProductManufactured.fromJson(Map<String, dynamic> json) =>
+      _$MedicinalProductManufacturedFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductContraindication({
+@freezed
+abstract class MedicinalProductContraindication
+    with _$MedicinalProductContraindication {
+  const factory MedicinalProductContraindication({
     String resourceType,
     Id id,
     Meta meta,
@@ -286,18 +405,31 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     List<Reference> therapeuticIndication,
     List<MedicinalProductContraindicationOtherTherapy> otherTherapy,
     List<Population> population,
-  }) = MedicinalProductContraindication;
+  }) = _MedicinalProductContraindication;
+  factory MedicinalProductContraindication.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicinalProductContraindicationFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductContraindicationOtherTherapy({
+@freezed
+abstract class MedicinalProductContraindicationOtherTherapy
+    with _$MedicinalProductContraindicationOtherTherapy {
+  const factory MedicinalProductContraindicationOtherTherapy({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept therapyRelationshipType,
     CodeableConcept medicationCodeableConcept,
     Reference medicationReference,
-  }) = MedicinalProductContraindicationOtherTherapy;
+  }) = _MedicinalProductContraindicationOtherTherapy;
+  factory MedicinalProductContraindicationOtherTherapy.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicinalProductContraindicationOtherTherapyFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductIngredient({
+@freezed
+abstract class MedicinalProductIngredient with _$MedicinalProductIngredient {
+  const factory MedicinalProductIngredient({
     String resourceType,
     Id id,
     Meta meta,
@@ -313,9 +445,15 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     List<Reference> manufacturer,
     List<MedicinalProductIngredientSpecifiedSubstance> specifiedSubstance,
     MedicinalProductIngredientSubstance substance,
-  }) = MedicinalProductIngredient;
+  }) = _MedicinalProductIngredient;
+  factory MedicinalProductIngredient.fromJson(Map<String, dynamic> json) =>
+      _$MedicinalProductIngredientFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductIngredientSpecifiedSubstance({
+@freezed
+abstract class MedicinalProductIngredientSpecifiedSubstance
+    with _$MedicinalProductIngredientSpecifiedSubstance {
+  const factory MedicinalProductIngredientSpecifiedSubstance({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -323,9 +461,16 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     CodeableConcept group,
     CodeableConcept confidentiality,
     List<MedicinalProductIngredientStrength> strength,
-  }) = MedicinalProductIngredientSpecifiedSubstance;
+  }) = _MedicinalProductIngredientSpecifiedSubstance;
+  factory MedicinalProductIngredientSpecifiedSubstance.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicinalProductIngredientSpecifiedSubstanceFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductIngredientStrength({
+@freezed
+abstract class MedicinalProductIngredientStrength
+    with _$MedicinalProductIngredientStrength {
+  const factory MedicinalProductIngredientStrength({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -336,9 +481,16 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     String measurementPoint,
     List<CodeableConcept> country,
     List<MedicinalProductIngredientReferenceStrength> referenceStrength,
-  }) = MedicinalProductIngredientStrength;
+  }) = _MedicinalProductIngredientStrength;
+  factory MedicinalProductIngredientStrength.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicinalProductIngredientStrengthFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductIngredientReferenceStrength({
+@freezed
+abstract class MedicinalProductIngredientReferenceStrength
+    with _$MedicinalProductIngredientReferenceStrength {
+  const factory MedicinalProductIngredientReferenceStrength({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -347,17 +499,30 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Ratio strengthLowLimit,
     String measurementPoint,
     List<CodeableConcept> country,
-  }) = MedicinalProductIngredientReferenceStrength;
+  }) = _MedicinalProductIngredientReferenceStrength;
+  factory MedicinalProductIngredientReferenceStrength.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicinalProductIngredientReferenceStrengthFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductIngredientSubstance({
+@freezed
+abstract class MedicinalProductIngredientSubstance
+    with _$MedicinalProductIngredientSubstance {
+  const factory MedicinalProductIngredientSubstance({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     List<MedicinalProductIngredientStrength> strength,
-  }) = MedicinalProductIngredientSubstance;
+  }) = _MedicinalProductIngredientSubstance;
+  factory MedicinalProductIngredientSubstance.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicinalProductIngredientSubstanceFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceSourceMaterial({
+@freezed
+abstract class SubstanceSourceMaterial with _$SubstanceSourceMaterial {
+  const factory SubstanceSourceMaterial({
     String resourceType,
     Id id,
     Meta meta,
@@ -380,17 +545,30 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     List<SubstanceSourceMaterialFractionDescription> fractionDescription,
     SubstanceSourceMaterialOrganism organism,
     List<SubstanceSourceMaterialPartDescription> partDescription,
-  }) = SubstanceSourceMaterial;
+  }) = _SubstanceSourceMaterial;
+  factory SubstanceSourceMaterial.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceSourceMaterialFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceSourceMaterialFractionDescription({
+@freezed
+abstract class SubstanceSourceMaterialFractionDescription
+    with _$SubstanceSourceMaterialFractionDescription {
+  const factory SubstanceSourceMaterialFractionDescription({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String fraction,
     CodeableConcept materialType,
-  }) = SubstanceSourceMaterialFractionDescription;
+  }) = _SubstanceSourceMaterialFractionDescription;
+  factory SubstanceSourceMaterialFractionDescription.fromJson(
+          Map<String, dynamic> json) =>
+      _$SubstanceSourceMaterialFractionDescriptionFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceSourceMaterialOrganism({
+@freezed
+abstract class SubstanceSourceMaterialOrganism
+    with _$SubstanceSourceMaterialOrganism {
+  const factory SubstanceSourceMaterialOrganism({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -402,17 +580,29 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     List<SubstanceSourceMaterialAuthor> author,
     SubstanceSourceMaterialHybrid hybrid,
     SubstanceSourceMaterialOrganismGeneral organismGeneral,
-  }) = SubstanceSourceMaterialOrganism;
+  }) = _SubstanceSourceMaterialOrganism;
+  factory SubstanceSourceMaterialOrganism.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceSourceMaterialOrganismFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceSourceMaterialAuthor({
+@freezed
+abstract class SubstanceSourceMaterialAuthor
+    with _$SubstanceSourceMaterialAuthor {
+  const factory SubstanceSourceMaterialAuthor({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept authorType,
     String authorDescription,
-  }) = SubstanceSourceMaterialAuthor;
+  }) = _SubstanceSourceMaterialAuthor;
+  factory SubstanceSourceMaterialAuthor.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceSourceMaterialAuthorFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceSourceMaterialHybrid({
+@freezed
+abstract class SubstanceSourceMaterialHybrid
+    with _$SubstanceSourceMaterialHybrid {
+  const factory SubstanceSourceMaterialHybrid({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -421,9 +611,15 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     String paternalOrganismId,
     String paternalOrganismName,
     CodeableConcept hybridType,
-  }) = SubstanceSourceMaterialHybrid;
+  }) = _SubstanceSourceMaterialHybrid;
+  factory SubstanceSourceMaterialHybrid.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceSourceMaterialHybridFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceSourceMaterialOrganismGeneral({
+@freezed
+abstract class SubstanceSourceMaterialOrganismGeneral
+    with _$SubstanceSourceMaterialOrganismGeneral {
+  const factory SubstanceSourceMaterialOrganismGeneral({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -431,17 +627,31 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     CodeableConcept phylum,
     @JsonKey(name: 'class') CodeableConcept clas,
     CodeableConcept order,
-  }) = SubstanceSourceMaterialOrganismGeneral;
+  }) = _SubstanceSourceMaterialOrganismGeneral;
+  factory SubstanceSourceMaterialOrganismGeneral.fromJson(
+          Map<String, dynamic> json) =>
+      _$SubstanceSourceMaterialOrganismGeneralFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceSourceMaterialPartDescription({
+@freezed
+abstract class SubstanceSourceMaterialPartDescription
+    with _$SubstanceSourceMaterialPartDescription {
+  const factory SubstanceSourceMaterialPartDescription({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept part,
     CodeableConcept partLocation,
-  }) = SubstanceSourceMaterialPartDescription;
+  }) = _SubstanceSourceMaterialPartDescription;
+  factory SubstanceSourceMaterialPartDescription.fromJson(
+          Map<String, dynamic> json) =>
+      _$SubstanceSourceMaterialPartDescriptionFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductUndesirableEffect({
+@freezed
+abstract class MedicinalProductUndesirableEffect
+    with _$MedicinalProductUndesirableEffect {
+  const factory MedicinalProductUndesirableEffect({
     String resourceType,
     Id id,
     Meta meta,
@@ -456,9 +666,15 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     CodeableConcept classification,
     CodeableConcept frequencyOfOccurrence,
     List<Population> population,
-  }) = MedicinalProductUndesirableEffect;
+  }) = _MedicinalProductUndesirableEffect;
+  factory MedicinalProductUndesirableEffect.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicinalProductUndesirableEffectFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProduct({
+@freezed
+abstract class MedicinalProduct with _$MedicinalProduct {
+  const factory MedicinalProduct({
     String resourceType,
     Id id,
     Meta meta,
@@ -489,35 +705,57 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     List<MedicinalProductManufacturingBusinessOperation>
         manufacturingBusinessOperation,
     List<MedicinalProductSpecialDesignation> specialDesignation,
-  }) = MedicinalProduct;
+  }) = _MedicinalProduct;
+  factory MedicinalProduct.fromJson(Map<String, dynamic> json) =>
+      _$MedicinalProductFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductName({
+@freezed
+abstract class MedicinalProductName with _$MedicinalProductName {
+  const factory MedicinalProductName({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String productName,
     List<MedicinalProductNamePart> namePart,
     List<MedicinalProductCountryLanguage> countryLanguage,
-  }) = MedicinalProductName;
+  }) = _MedicinalProductName;
+  factory MedicinalProductName.fromJson(Map<String, dynamic> json) =>
+      _$MedicinalProductNameFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductNamePart({
+@freezed
+abstract class MedicinalProductNamePart with _$MedicinalProductNamePart {
+  const factory MedicinalProductNamePart({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String part,
     Coding type,
-  }) = MedicinalProductNamePart;
+  }) = _MedicinalProductNamePart;
+  factory MedicinalProductNamePart.fromJson(Map<String, dynamic> json) =>
+      _$MedicinalProductNamePartFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductCountryLanguage({
+@freezed
+abstract class MedicinalProductCountryLanguage
+    with _$MedicinalProductCountryLanguage {
+  const factory MedicinalProductCountryLanguage({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept country,
     CodeableConcept jurisdiction,
     CodeableConcept language,
-  }) = MedicinalProductCountryLanguage;
+  }) = _MedicinalProductCountryLanguage;
+  factory MedicinalProductCountryLanguage.fromJson(Map<String, dynamic> json) =>
+      _$MedicinalProductCountryLanguageFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductManufacturingBusinessOperation({
+@freezed
+abstract class MedicinalProductManufacturingBusinessOperation
+    with _$MedicinalProductManufacturingBusinessOperation {
+  const factory MedicinalProductManufacturingBusinessOperation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -527,9 +765,16 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     CodeableConcept confidentialityIndicator,
     List<Reference> manufacturer,
     Reference regulator,
-  }) = MedicinalProductManufacturingBusinessOperation;
+  }) = _MedicinalProductManufacturingBusinessOperation;
+  factory MedicinalProductManufacturingBusinessOperation.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicinalProductManufacturingBusinessOperationFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductSpecialDesignation({
+@freezed
+abstract class MedicinalProductSpecialDesignation
+    with _$MedicinalProductSpecialDesignation {
+  const factory MedicinalProductSpecialDesignation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -541,9 +786,15 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     CodeableConcept status,
     FhirDateTime date,
     CodeableConcept species,
-  }) = MedicinalProductSpecialDesignation;
+  }) = _MedicinalProductSpecialDesignation;
+  factory MedicinalProductSpecialDesignation.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicinalProductSpecialDesignationFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductPackaged({
+@freezed
+abstract class MedicinalProductPackaged with _$MedicinalProductPackaged {
+  const factory MedicinalProductPackaged({
     String resourceType,
     Id id,
     Meta meta,
@@ -562,17 +813,30 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     List<Reference> manufacturer,
     List<MedicinalProductPackagedBatchIdentifier> batchIdentifier,
     List<MedicinalProductPackagedPackageItem> packageItem,
-  }) = MedicinalProductPackaged;
+  }) = _MedicinalProductPackaged;
+  factory MedicinalProductPackaged.fromJson(Map<String, dynamic> json) =>
+      _$MedicinalProductPackagedFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductPackagedBatchIdentifier({
+@freezed
+abstract class MedicinalProductPackagedBatchIdentifier
+    with _$MedicinalProductPackagedBatchIdentifier {
+  const factory MedicinalProductPackagedBatchIdentifier({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier outerPackaging,
     Identifier immediatePackaging,
-  }) = MedicinalProductPackagedBatchIdentifier;
+  }) = _MedicinalProductPackagedBatchIdentifier;
+  factory MedicinalProductPackagedBatchIdentifier.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicinalProductPackagedBatchIdentifierFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductPackagedPackageItem({
+@freezed
+abstract class MedicinalProductPackagedPackageItem
+    with _$MedicinalProductPackagedPackageItem {
+  const factory MedicinalProductPackagedPackageItem({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -588,9 +852,15 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     List<CodeableConcept> otherCharacteristics,
     List<ProductShelfLife> shelfLifeStorage,
     List<Reference> manufacturer,
-  }) = MedicinalProductPackagedPackageItem;
+  }) = _MedicinalProductPackagedPackageItem;
+  factory MedicinalProductPackagedPackageItem.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicinalProductPackagedPackageItemFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceNucleicAcid({
+@freezed
+abstract class SubstanceNucleicAcid with _$SubstanceNucleicAcid {
+  const factory SubstanceNucleicAcid({
     String resourceType,
     Id id,
     Meta meta,
@@ -605,9 +875,14 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     String areaOfHybridisation,
     CodeableConcept oligoNucleotideType,
     List<SubstanceNucleicAcidSubunit> subunit,
-  }) = SubstanceNucleicAcid;
+  }) = _SubstanceNucleicAcid;
+  factory SubstanceNucleicAcid.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceNucleicAcidFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceNucleicAcidSubunit({
+@freezed
+abstract class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
+  const factory SubstanceNucleicAcidSubunit({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -619,9 +894,14 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     CodeableConcept threePrime,
     List<SubstanceNucleicAcidLinkage> linkage,
     List<SubstanceNucleicAcidSugar> sugar,
-  }) = SubstanceNucleicAcidSubunit;
+  }) = _SubstanceNucleicAcidSubunit;
+  factory SubstanceNucleicAcidSubunit.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceNucleicAcidSubunitFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceNucleicAcidLinkage({
+@freezed
+abstract class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
+  const factory SubstanceNucleicAcidLinkage({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -629,18 +909,29 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Identifier identifier,
     String name,
     String residueSite,
-  }) = SubstanceNucleicAcidLinkage;
+  }) = _SubstanceNucleicAcidLinkage;
+  factory SubstanceNucleicAcidLinkage.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceNucleicAcidLinkageFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceNucleicAcidSugar({
+@freezed
+abstract class SubstanceNucleicAcidSugar with _$SubstanceNucleicAcidSugar {
+  const factory SubstanceNucleicAcidSugar({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
     String name,
     String residueSite,
-  }) = SubstanceNucleicAcidSugar;
+  }) = _SubstanceNucleicAcidSugar;
+  factory SubstanceNucleicAcidSugar.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceNucleicAcidSugarFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductPharmaceutical({
+@freezed
+abstract class MedicinalProductPharmaceutical
+    with _$MedicinalProductPharmaceutical {
+  const factory MedicinalProductPharmaceutical({
     String resourceType,
     Id id,
     Meta meta,
@@ -658,17 +949,30 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     List<MedicinalProductPharmaceuticalCharacteristics> characteristics,
     List<MedicinalProductPharmaceuticalRouteOfAdministration>
         routeOfAdministration,
-  }) = MedicinalProductPharmaceutical;
+  }) = _MedicinalProductPharmaceutical;
+  factory MedicinalProductPharmaceutical.fromJson(Map<String, dynamic> json) =>
+      _$MedicinalProductPharmaceuticalFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductPharmaceuticalCharacteristics({
+@freezed
+abstract class MedicinalProductPharmaceuticalCharacteristics
+    with _$MedicinalProductPharmaceuticalCharacteristics {
+  const factory MedicinalProductPharmaceuticalCharacteristics({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     CodeableConcept status,
-  }) = MedicinalProductPharmaceuticalCharacteristics;
+  }) = _MedicinalProductPharmaceuticalCharacteristics;
+  factory MedicinalProductPharmaceuticalCharacteristics.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicinalProductPharmaceuticalCharacteristicsFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductPharmaceuticalRouteOfAdministration({
+@freezed
+abstract class MedicinalProductPharmaceuticalRouteOfAdministration
+    with _$MedicinalProductPharmaceuticalRouteOfAdministration {
+  const factory MedicinalProductPharmaceuticalRouteOfAdministration({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -679,26 +983,46 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Ratio maxDosePerTreatmentPeriod,
     Duration maxTreatmentPeriod,
     List<MedicinalProductPharmaceuticalTargetSpecies> targetSpecies,
-  }) = MedicinalProductPharmaceuticalRouteOfAdministration;
+  }) = _MedicinalProductPharmaceuticalRouteOfAdministration;
+  factory MedicinalProductPharmaceuticalRouteOfAdministration.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicinalProductPharmaceuticalRouteOfAdministrationFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductPharmaceuticalTargetSpecies({
+@freezed
+abstract class MedicinalProductPharmaceuticalTargetSpecies
+    with _$MedicinalProductPharmaceuticalTargetSpecies {
+  const factory MedicinalProductPharmaceuticalTargetSpecies({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     List<MedicinalProductPharmaceuticalWithdrawalPeriod> withdrawalPeriod,
-  }) = MedicinalProductPharmaceuticalTargetSpecies;
+  }) = _MedicinalProductPharmaceuticalTargetSpecies;
+  factory MedicinalProductPharmaceuticalTargetSpecies.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicinalProductPharmaceuticalTargetSpeciesFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductPharmaceuticalWithdrawalPeriod({
+@freezed
+abstract class MedicinalProductPharmaceuticalWithdrawalPeriod
+    with _$MedicinalProductPharmaceuticalWithdrawalPeriod {
+  const factory MedicinalProductPharmaceuticalWithdrawalPeriod({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept tissue,
     Quantity value,
     String supportingInformation,
-  }) = MedicinalProductPharmaceuticalWithdrawalPeriod;
+  }) = _MedicinalProductPharmaceuticalWithdrawalPeriod;
+  factory MedicinalProductPharmaceuticalWithdrawalPeriod.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicinalProductPharmaceuticalWithdrawalPeriodFromJson(json);
+}
 
-  const factory MedicationDefinition.substancePolymer({
+@freezed
+abstract class SubstancePolymer with _$SubstancePolymer {
+  const factory SubstancePolymer({
     String resourceType,
     Id id,
     Meta meta,
@@ -714,17 +1038,28 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     List<String> modification,
     List<SubstancePolymerMonomerSet> monomerSet,
     List<SubstancePolymerRepeat> repeat,
-  }) = SubstancePolymer;
+  }) = _SubstancePolymer;
+  factory SubstancePolymer.fromJson(Map<String, dynamic> json) =>
+      _$SubstancePolymerFromJson(json);
+}
 
-  const factory MedicationDefinition.substancePolymerMonomerSet({
+@freezed
+abstract class SubstancePolymerMonomerSet with _$SubstancePolymerMonomerSet {
+  const factory SubstancePolymerMonomerSet({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept ratioType,
     List<SubstancePolymerStartingMaterial> startingMaterial,
-  }) = SubstancePolymerMonomerSet;
+  }) = _SubstancePolymerMonomerSet;
+  factory SubstancePolymerMonomerSet.fromJson(Map<String, dynamic> json) =>
+      _$SubstancePolymerMonomerSetFromJson(json);
+}
 
-  const factory MedicationDefinition.substancePolymerStartingMaterial({
+@freezed
+abstract class SubstancePolymerStartingMaterial
+    with _$SubstancePolymerStartingMaterial {
+  const factory SubstancePolymerStartingMaterial({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -732,9 +1067,15 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     CodeableConcept type,
     bool isDefining,
     SubstanceAmount amount,
-  }) = SubstancePolymerStartingMaterial;
+  }) = _SubstancePolymerStartingMaterial;
+  factory SubstancePolymerStartingMaterial.fromJson(
+          Map<String, dynamic> json) =>
+      _$SubstancePolymerStartingMaterialFromJson(json);
+}
 
-  const factory MedicationDefinition.substancePolymerRepeat({
+@freezed
+abstract class SubstancePolymerRepeat with _$SubstancePolymerRepeat {
+  const factory SubstancePolymerRepeat({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -742,9 +1083,14 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     String averageMolecularFormula,
     CodeableConcept repeatUnitAmountType,
     List<SubstancePolymerRepeatUnit> repeatUnit,
-  }) = SubstancePolymerRepeat;
+  }) = _SubstancePolymerRepeat;
+  factory SubstancePolymerRepeat.fromJson(Map<String, dynamic> json) =>
+      _$SubstancePolymerRepeatFromJson(json);
+}
 
-  const factory MedicationDefinition.substancePolymerRepeatUnit({
+@freezed
+abstract class SubstancePolymerRepeatUnit with _$SubstancePolymerRepeatUnit {
+  const factory SubstancePolymerRepeatUnit({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -753,26 +1099,46 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     SubstanceAmount amount,
     List<SubstancePolymerDegreeOfPolymerisation> degreeOfPolymerisation,
     List<SubstancePolymerStructuralRepresentation> structuralRepresentation,
-  }) = SubstancePolymerRepeatUnit;
+  }) = _SubstancePolymerRepeatUnit;
+  factory SubstancePolymerRepeatUnit.fromJson(Map<String, dynamic> json) =>
+      _$SubstancePolymerRepeatUnitFromJson(json);
+}
 
-  const factory MedicationDefinition.substancePolymerDegreeOfPolymerisation({
+@freezed
+abstract class SubstancePolymerDegreeOfPolymerisation
+    with _$SubstancePolymerDegreeOfPolymerisation {
+  const factory SubstancePolymerDegreeOfPolymerisation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept degree,
     SubstanceAmount amount,
-  }) = SubstancePolymerDegreeOfPolymerisation;
+  }) = _SubstancePolymerDegreeOfPolymerisation;
+  factory SubstancePolymerDegreeOfPolymerisation.fromJson(
+          Map<String, dynamic> json) =>
+      _$SubstancePolymerDegreeOfPolymerisationFromJson(json);
+}
 
-  const factory MedicationDefinition.substancePolymerStructuralRepresentation({
+@freezed
+abstract class SubstancePolymerStructuralRepresentation
+    with _$SubstancePolymerStructuralRepresentation {
+  const factory SubstancePolymerStructuralRepresentation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     String representation,
     Attachment attachment,
-  }) = SubstancePolymerStructuralRepresentation;
+  }) = _SubstancePolymerStructuralRepresentation;
+  factory SubstancePolymerStructuralRepresentation.fromJson(
+          Map<String, dynamic> json) =>
+      _$SubstancePolymerStructuralRepresentationFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductAuthorization({
+@freezed
+abstract class MedicinalProductAuthorization
+    with _$MedicinalProductAuthorization {
+  const factory MedicinalProductAuthorization({
     String resourceType,
     Id id,
     Meta meta,
@@ -799,9 +1165,15 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Reference holder,
     Reference regulator,
     MedicinalProductAuthorizationProcedure procedure,
-  }) = MedicinalProductAuthorization;
+  }) = _MedicinalProductAuthorization;
+  factory MedicinalProductAuthorization.fromJson(Map<String, dynamic> json) =>
+      _$MedicinalProductAuthorizationFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductAuthorizationJurisdictionalAuthorization({
+@freezed
+abstract class MedicinalProductAuthorizationJurisdictionalAuthorization
+    with _$MedicinalProductAuthorizationJurisdictionalAuthorization {
+  const factory MedicinalProductAuthorizationJurisdictionalAuthorization({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -810,9 +1182,16 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     List<CodeableConcept> jurisdiction,
     CodeableConcept legalStatusOfSupply,
     Period validityPeriod,
-  }) = MedicinalProductAuthorizationJurisdictionalAuthorization;
+  }) = _MedicinalProductAuthorizationJurisdictionalAuthorization;
+  factory MedicinalProductAuthorizationJurisdictionalAuthorization.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicinalProductAuthorizationJurisdictionalAuthorizationFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductAuthorizationProcedure({
+@freezed
+abstract class MedicinalProductAuthorizationProcedure
+    with _$MedicinalProductAuthorizationProcedure {
+  const factory MedicinalProductAuthorizationProcedure({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -821,9 +1200,15 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     Period datePeriod,
     FhirDateTime dateDateTime,
     List<MedicinalProductAuthorizationProcedure> application,
-  }) = MedicinalProductAuthorizationProcedure;
+  }) = _MedicinalProductAuthorizationProcedure;
+  factory MedicinalProductAuthorizationProcedure.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicinalProductAuthorizationProcedureFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceProtein({
+@freezed
+abstract class SubstanceProtein with _$SubstanceProtein {
+  const factory SubstanceProtein({
     String resourceType,
     Id id,
     Meta meta,
@@ -837,9 +1222,14 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     int numberOfSubunits,
     List<String> disulfideLinkage,
     List<SubstanceProteinSubunit> subunit,
-  }) = SubstanceProtein;
+  }) = _SubstanceProtein;
+  factory SubstanceProtein.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceProteinFromJson(json);
+}
 
-  const factory MedicationDefinition.substanceProteinSubunit({
+@freezed
+abstract class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
+  const factory SubstanceProteinSubunit({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -851,9 +1241,14 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     String nTerminalModification,
     Identifier cTerminalModificationId,
     String cTerminalModification,
-  }) = SubstanceProteinSubunit;
+  }) = _SubstanceProteinSubunit;
+  factory SubstanceProteinSubunit.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceProteinSubunitFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductIndication({
+@freezed
+abstract class MedicinalProductIndication with _$MedicinalProductIndication {
+  const factory MedicinalProductIndication({
     String resourceType,
     Id id,
     Meta meta,
@@ -872,17 +1267,23 @@ abstract class MedicationDefinition with _$MedicationDefinition {
     List<MedicinalProductIndicationOtherTherapy> otherTherapy,
     List<Reference> undesirableEffect,
     List<Population> population,
-  }) = MedicinalProductIndication;
+  }) = _MedicinalProductIndication;
+  factory MedicinalProductIndication.fromJson(Map<String, dynamic> json) =>
+      _$MedicinalProductIndicationFromJson(json);
+}
 
-  const factory MedicationDefinition.medicinalProductIndicationOtherTherapy({
+@freezed
+abstract class MedicinalProductIndicationOtherTherapy
+    with _$MedicinalProductIndicationOtherTherapy {
+  const factory MedicinalProductIndicationOtherTherapy({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept therapyRelationshipType,
     CodeableConcept medicationCodeableConcept,
     Reference medicationReference,
-  }) = MedicinalProductIndicationOtherTherapy;
-
-  factory MedicationDefinition.fromJson(Map<String, dynamic> json) =>
-      _$MedicationDefinitionFromJson(json);
+  }) = _MedicinalProductIndicationOtherTherapy;
+  factory MedicinalProductIndicationOtherTherapy.fromJson(
+          Map<String, dynamic> json) =>
+      _$MedicinalProductIndicationOtherTherapyFromJson(json);
 }

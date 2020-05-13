@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'entities2.enums.dart';
 
-part 'entities2.g.dart';
 part 'entities2.freezed.dart';
+part 'entities2.g.dart';
 
 @freezed
-abstract class Entities2 with _$Entities2 {
-  const factory Entities2.substance({
+abstract class Substance with _$Substance {
+  const factory Substance({
     String resourceType,
     Id id,
     Meta meta,
@@ -25,27 +25,42 @@ abstract class Entities2 with _$Entities2 {
     String description,
     List<SubstanceInstance> instance,
     List<SubstanceIngredient> ingredient,
-  }) = Substance;
+  }) = _Substance;
+  factory Substance.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceFromJson(json);
+}
 
-  const factory Entities2.substanceInstance({
+@freezed
+abstract class SubstanceInstance with _$SubstanceInstance {
+  const factory SubstanceInstance({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
     FhirDateTime expiry,
     Quantity quantity,
-  }) = SubstanceInstance;
+  }) = _SubstanceInstance;
+  factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceInstanceFromJson(json);
+}
 
-  const factory Entities2.substanceIngredient({
+@freezed
+abstract class SubstanceIngredient with _$SubstanceIngredient {
+  const factory SubstanceIngredient({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Ratio quantity,
     CodeableConcept substanceCodeableConcept,
     Reference substanceReference,
-  }) = SubstanceIngredient;
+  }) = _SubstanceIngredient;
+  factory SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
+      _$SubstanceIngredientFromJson(json);
+}
 
-  const factory Entities2.biologicallyDerivedProduct({
+@freezed
+abstract class BiologicallyDerivedProduct with _$BiologicallyDerivedProduct {
+  const factory BiologicallyDerivedProduct({
     String resourceType,
     Id id,
     Meta meta,
@@ -66,9 +81,15 @@ abstract class Entities2 with _$Entities2 {
     List<BiologicallyDerivedProductProcessing> processing,
     BiologicallyDerivedProductManipulation manipulation,
     List<BiologicallyDerivedProductStorage> storage,
-  }) = BiologicallyDerivedProduct;
+  }) = _BiologicallyDerivedProduct;
+  factory BiologicallyDerivedProduct.fromJson(Map<String, dynamic> json) =>
+      _$BiologicallyDerivedProductFromJson(json);
+}
 
-  const factory Entities2.biologicallyDerivedProductCollection({
+@freezed
+abstract class BiologicallyDerivedProductCollection
+    with _$BiologicallyDerivedProductCollection {
+  const factory BiologicallyDerivedProductCollection({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -76,9 +97,16 @@ abstract class Entities2 with _$Entities2 {
     Reference source,
     FhirDateTime collectedDateTime,
     Period collectedPeriod,
-  }) = BiologicallyDerivedProductCollection;
+  }) = _BiologicallyDerivedProductCollection;
+  factory BiologicallyDerivedProductCollection.fromJson(
+          Map<String, dynamic> json) =>
+      _$BiologicallyDerivedProductCollectionFromJson(json);
+}
 
-  const factory Entities2.biologicallyDerivedProductProcessing({
+@freezed
+abstract class BiologicallyDerivedProductProcessing
+    with _$BiologicallyDerivedProductProcessing {
+  const factory BiologicallyDerivedProductProcessing({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -87,18 +115,32 @@ abstract class Entities2 with _$Entities2 {
     Reference additive,
     FhirDateTime timeDateTime,
     Period timePeriod,
-  }) = BiologicallyDerivedProductProcessing;
+  }) = _BiologicallyDerivedProductProcessing;
+  factory BiologicallyDerivedProductProcessing.fromJson(
+          Map<String, dynamic> json) =>
+      _$BiologicallyDerivedProductProcessingFromJson(json);
+}
 
-  const factory Entities2.biologicallyDerivedProductManipulation({
+@freezed
+abstract class BiologicallyDerivedProductManipulation
+    with _$BiologicallyDerivedProductManipulation {
+  const factory BiologicallyDerivedProductManipulation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     FhirDateTime timeDateTime,
     Period timePeriod,
-  }) = BiologicallyDerivedProductManipulation;
+  }) = _BiologicallyDerivedProductManipulation;
+  factory BiologicallyDerivedProductManipulation.fromJson(
+          Map<String, dynamic> json) =>
+      _$BiologicallyDerivedProductManipulationFromJson(json);
+}
 
-  const factory Entities2.biologicallyDerivedProductStorage({
+@freezed
+abstract class BiologicallyDerivedProductStorage
+    with _$BiologicallyDerivedProductStorage {
+  const factory BiologicallyDerivedProductStorage({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -106,9 +148,15 @@ abstract class Entities2 with _$Entities2 {
     double temperature,
     BiologicallyDerivedProductStorageScale scale,
     Period duration,
-  }) = BiologicallyDerivedProductStorage;
+  }) = _BiologicallyDerivedProductStorage;
+  factory BiologicallyDerivedProductStorage.fromJson(
+          Map<String, dynamic> json) =>
+      _$BiologicallyDerivedProductStorageFromJson(json);
+}
 
-  const factory Entities2.device({
+@freezed
+abstract class Device with _$Device {
+  const factory Device({
     String resourceType,
     Id id,
     Meta meta,
@@ -144,9 +192,13 @@ abstract class Entities2 with _$Entities2 {
     List<Annotation> note,
     List<CodeableConcept> safety,
     Reference parent,
-  }) = Device;
+  }) = _Device;
+  factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
+}
 
-  const factory Entities2.deviceUdiCarrier({
+@freezed
+abstract class DeviceUdiCarrier with _$DeviceUdiCarrier {
+  const factory DeviceUdiCarrier({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -156,43 +208,68 @@ abstract class Entities2 with _$Entities2 {
     Base64Binary carrierAIDC,
     String carrierHRF,
     DeviceUdiCarrierEntryType entryType,
-  }) = DeviceUdiCarrier;
+  }) = _DeviceUdiCarrier;
+  factory DeviceUdiCarrier.fromJson(Map<String, dynamic> json) =>
+      _$DeviceUdiCarrierFromJson(json);
+}
 
-  const factory Entities2.deviceDeviceName({
+@freezed
+abstract class DeviceDeviceName with _$DeviceDeviceName {
+  const factory DeviceDeviceName({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     DeviceDeviceNameType type,
-  }) = DeviceDeviceName;
+  }) = _DeviceDeviceName;
+  factory DeviceDeviceName.fromJson(Map<String, dynamic> json) =>
+      _$DeviceDeviceNameFromJson(json);
+}
 
-  const factory Entities2.deviceSpecialization({
+@freezed
+abstract class DeviceSpecialization with _$DeviceSpecialization {
+  const factory DeviceSpecialization({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept systemType,
     String version,
-  }) = DeviceSpecialization;
+  }) = _DeviceSpecialization;
+  factory DeviceSpecialization.fromJson(Map<String, dynamic> json) =>
+      _$DeviceSpecializationFromJson(json);
+}
 
-  const factory Entities2.deviceVersion({
+@freezed
+abstract class DeviceVersion with _$DeviceVersion {
+  const factory DeviceVersion({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     Identifier component,
     String value,
-  }) = DeviceVersion;
+  }) = _DeviceVersion;
+  factory DeviceVersion.fromJson(Map<String, dynamic> json) =>
+      _$DeviceVersionFromJson(json);
+}
 
-  const factory Entities2.deviceProperty({
+@freezed
+abstract class DeviceProperty with _$DeviceProperty {
+  const factory DeviceProperty({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     List<Quantity> valueQuantity,
     List<CodeableConcept> valueCode,
-  }) = DeviceProperty;
+  }) = _DeviceProperty;
+  factory DeviceProperty.fromJson(Map<String, dynamic> json) =>
+      _$DevicePropertyFromJson(json);
+}
 
-  const factory Entities2.deviceMetric({
+@freezed
+abstract class DeviceMetric with _$DeviceMetric {
+  const factory DeviceMetric({
     String resourceType,
     Id id,
     Meta meta,
@@ -212,17 +289,21 @@ abstract class Entities2 with _$Entities2 {
     DeviceMetricCategory category,
     Timing measurementPeriod,
     List<DeviceMetricCalibration> calibration,
-  }) = DeviceMetric;
+  }) = _DeviceMetric;
+  factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
+      _$DeviceMetricFromJson(json);
+}
 
-  const factory Entities2.deviceMetricCalibration({
+@freezed
+abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
+  const factory DeviceMetricCalibration({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     DeviceMetricCalibrationType type,
     DeviceMetricCalibrationState state,
     Instant time,
-  }) = DeviceMetricCalibration;
-
-  factory Entities2.fromJson(Map<String, dynamic> json) =>
-      _$Entities2FromJson(json);
+  }) = _DeviceMetricCalibration;
+  factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
+      _$DeviceMetricCalibrationFromJson(json);
 }

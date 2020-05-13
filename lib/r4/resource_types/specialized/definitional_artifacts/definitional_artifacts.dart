@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'definitional_artifacts.enums.dart';
 
-part 'definitional_artifacts.g.dart';
 part 'definitional_artifacts.freezed.dart';
+part 'definitional_artifacts.g.dart';
 
 @freezed
-abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
-  const factory DefinitionalArtifacts.activityDefinition({
+abstract class ActivityDefinition with _$ActivityDefinition {
+  const factory ActivityDefinition({
     String resourceType,
     Id id,
     Meta meta,
@@ -71,25 +71,42 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     List<Reference> observationResultRequirement,
     Canonical transform,
     List<ActivityDefinitionDynamicValue> dynamicValue,
-  }) = ActivityDefinition;
+  }) = _ActivityDefinition;
+  factory ActivityDefinition.fromJson(Map<String, dynamic> json) =>
+      _$ActivityDefinitionFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.activityDefinitionParticipant({
+@freezed
+abstract class ActivityDefinitionParticipant
+    with _$ActivityDefinitionParticipant {
+  const factory ActivityDefinitionParticipant({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code type,
     CodeableConcept role,
-  }) = ActivityDefinitionParticipant;
+  }) = _ActivityDefinitionParticipant;
+  factory ActivityDefinitionParticipant.fromJson(Map<String, dynamic> json) =>
+      _$ActivityDefinitionParticipantFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.activityDefinitionDynamicValue({
+@freezed
+abstract class ActivityDefinitionDynamicValue
+    with _$ActivityDefinitionDynamicValue {
+  const factory ActivityDefinitionDynamicValue({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String path,
     Expression expression,
-  }) = ActivityDefinitionDynamicValue;
+  }) = _ActivityDefinitionDynamicValue;
+  factory ActivityDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
+      _$ActivityDefinitionDynamicValueFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.deviceDefinition({
+@freezed
+abstract class DeviceDefinition with _$DeviceDefinition {
+  const factory DeviceDefinition({
     String resourceType,
     Id id,
     Meta meta,
@@ -122,60 +139,98 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     Quantity quantity,
     Reference parentDevice,
     List<DeviceDefinitionMaterial> material,
-  }) = DeviceDefinition;
+  }) = _DeviceDefinition;
+  factory DeviceDefinition.fromJson(Map<String, dynamic> json) =>
+      _$DeviceDefinitionFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.deviceDefinitionUdiDeviceIdentifier({
+@freezed
+abstract class DeviceDefinitionUdiDeviceIdentifier
+    with _$DeviceDefinitionUdiDeviceIdentifier {
+  const factory DeviceDefinitionUdiDeviceIdentifier({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String deviceIdentifier,
     FhirUri issuer,
     FhirUri jurisdiction,
-  }) = DeviceDefinitionUdiDeviceIdentifier;
+  }) = _DeviceDefinitionUdiDeviceIdentifier;
+  factory DeviceDefinitionUdiDeviceIdentifier.fromJson(
+          Map<String, dynamic> json) =>
+      _$DeviceDefinitionUdiDeviceIdentifierFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.deviceDefinitionDeviceName({
+@freezed
+abstract class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
+  const factory DeviceDefinitionDeviceName({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     DeviceDefinitionDeviceNameType type,
-  }) = DeviceDefinitionDeviceName;
+  }) = _DeviceDefinitionDeviceName;
+  factory DeviceDefinitionDeviceName.fromJson(Map<String, dynamic> json) =>
+      _$DeviceDefinitionDeviceNameFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.deviceDefinitionSpecialization({
+@freezed
+abstract class DeviceDefinitionSpecialization
+    with _$DeviceDefinitionSpecialization {
+  const factory DeviceDefinitionSpecialization({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String systemType,
     String version,
-  }) = DeviceDefinitionSpecialization;
+  }) = _DeviceDefinitionSpecialization;
+  factory DeviceDefinitionSpecialization.fromJson(Map<String, dynamic> json) =>
+      _$DeviceDefinitionSpecializationFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.deviceDefinitionCapability({
+@freezed
+abstract class DeviceDefinitionCapability with _$DeviceDefinitionCapability {
+  const factory DeviceDefinitionCapability({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     List<CodeableConcept> description,
-  }) = DeviceDefinitionCapability;
+  }) = _DeviceDefinitionCapability;
+  factory DeviceDefinitionCapability.fromJson(Map<String, dynamic> json) =>
+      _$DeviceDefinitionCapabilityFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.deviceDefinitionProperty({
+@freezed
+abstract class DeviceDefinitionProperty with _$DeviceDefinitionProperty {
+  const factory DeviceDefinitionProperty({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     List<Quantity> valueQuantity,
     List<CodeableConcept> valueCode,
-  }) = DeviceDefinitionProperty;
+  }) = _DeviceDefinitionProperty;
+  factory DeviceDefinitionProperty.fromJson(Map<String, dynamic> json) =>
+      _$DeviceDefinitionPropertyFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.deviceDefinitionMaterial({
+@freezed
+abstract class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
+  const factory DeviceDefinitionMaterial({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept substance,
     bool alternate,
     bool allergenicIndicator,
-  }) = DeviceDefinitionMaterial;
+  }) = _DeviceDefinitionMaterial;
+  factory DeviceDefinitionMaterial.fromJson(Map<String, dynamic> json) =>
+      _$DeviceDefinitionMaterialFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.eventDefinition({
+@freezed
+abstract class EventDefinition with _$EventDefinition {
+  const factory EventDefinition({
     String resourceType,
     Id id,
     Meta meta,
@@ -214,9 +269,14 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     List<ContactDetail> endorser,
     List<RelatedArtifact> relatedArtifact,
     List<TriggerDefinition> trigger,
-  }) = EventDefinition;
+  }) = _EventDefinition;
+  factory EventDefinition.fromJson(Map<String, dynamic> json) =>
+      _$EventDefinitionFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.observationDefinition({
+@freezed
+abstract class ObservationDefinition with _$ObservationDefinition {
+  const factory ObservationDefinition({
     String resourceType,
     Id id,
     Meta meta,
@@ -239,9 +299,15 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     Reference normalCodedValueSet,
     Reference abnormalCodedValueSet,
     Reference criticalCodedValueSet,
-  }) = ObservationDefinition;
+  }) = _ObservationDefinition;
+  factory ObservationDefinition.fromJson(Map<String, dynamic> json) =>
+      _$ObservationDefinitionFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.observationDefinitionQuantitativeDetails({
+@freezed
+abstract class ObservationDefinitionQuantitativeDetails
+    with _$ObservationDefinitionQuantitativeDetails {
+  const factory ObservationDefinitionQuantitativeDetails({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -249,9 +315,16 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     CodeableConcept unit,
     double conversionFactor,
     int decimalPrecision,
-  }) = ObservationDefinitionQuantitativeDetails;
+  }) = _ObservationDefinitionQuantitativeDetails;
+  factory ObservationDefinitionQuantitativeDetails.fromJson(
+          Map<String, dynamic> json) =>
+      _$ObservationDefinitionQuantitativeDetailsFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.observationDefinitionQualifiedInterval({
+@freezed
+abstract class ObservationDefinitionQualifiedInterval
+    with _$ObservationDefinitionQualifiedInterval {
+  const factory ObservationDefinitionQualifiedInterval({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -263,9 +336,15 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     Range age,
     Range gestationalAge,
     String condition,
-  }) = ObservationDefinitionQualifiedInterval;
+  }) = _ObservationDefinitionQualifiedInterval;
+  factory ObservationDefinitionQualifiedInterval.fromJson(
+          Map<String, dynamic> json) =>
+      _$ObservationDefinitionQualifiedIntervalFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.specimenDefinition({
+@freezed
+abstract class SpecimenDefinition with _$SpecimenDefinition {
+  const factory SpecimenDefinition({
     @Default('SpecimenDefinition') String resourceType,
     Id id,
     Meta meta,
@@ -281,9 +360,15 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     String timeAspect,
     List<CodeableConcept> collection,
     List<SpecimenDefinitionTypeTested> typeTested,
-  }) = SpecimenDefinition;
+  }) = _SpecimenDefinition;
+  factory SpecimenDefinition.fromJson(Map<String, dynamic> json) =>
+      _$SpecimenDefinitionFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.specimenDefinitionTypeTested({
+@freezed
+abstract class SpecimenDefinitionTypeTested
+    with _$SpecimenDefinitionTypeTested {
+  const factory SpecimenDefinitionTypeTested({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -295,9 +380,14 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     Duration retentionTime,
     List<CodeableConcept> rejectionCriterion,
     List<SpecimenDefinitionHandling> handling,
-  }) = SpecimenDefinitionTypeTested;
+  }) = _SpecimenDefinitionTypeTested;
+  factory SpecimenDefinitionTypeTested.fromJson(Map<String, dynamic> json) =>
+      _$SpecimenDefinitionTypeTestedFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.specimenDefinitionContainer({
+@freezed
+abstract class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
+  const factory SpecimenDefinitionContainer({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -310,17 +400,27 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     String minimumVolumeString,
     List<SpecimenDefinitionAdditive> additive,
     String preparation,
-  }) = SpecimenDefinitionContainer;
+  }) = _SpecimenDefinitionContainer;
+  factory SpecimenDefinitionContainer.fromJson(Map<String, dynamic> json) =>
+      _$SpecimenDefinitionContainerFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.specimenDefinitionAdditive({
+@freezed
+abstract class SpecimenDefinitionAdditive with _$SpecimenDefinitionAdditive {
+  const factory SpecimenDefinitionAdditive({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept additiveCodeableConcept,
     Reference additiveReference,
-  }) = SpecimenDefinitionAdditive;
+  }) = _SpecimenDefinitionAdditive;
+  factory SpecimenDefinitionAdditive.fromJson(Map<String, dynamic> json) =>
+      _$SpecimenDefinitionAdditiveFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.specimenDefinitionHandling({
+@freezed
+abstract class SpecimenDefinitionHandling with _$SpecimenDefinitionHandling {
+  const factory SpecimenDefinitionHandling({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -328,9 +428,14 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     Range temperatureRange,
     Duration maxDuration,
     String instruction,
-  }) = SpecimenDefinitionHandling;
+  }) = _SpecimenDefinitionHandling;
+  factory SpecimenDefinitionHandling.fromJson(Map<String, dynamic> json) =>
+      _$SpecimenDefinitionHandlingFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.planDefinition({
+@freezed
+abstract class PlanDefinition with _$PlanDefinition {
+  const factory PlanDefinition({
     String resourceType,
     Id id,
     Meta meta,
@@ -372,9 +477,14 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     List<Canonical> library,
     List<PlanDefinitionGoal> goal,
     List<PlanDefinitionAction> action,
-  }) = PlanDefinition;
+  }) = _PlanDefinition;
+  factory PlanDefinition.fromJson(Map<String, dynamic> json) =>
+      _$PlanDefinitionFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.planDefinitionGoal({
+@freezed
+abstract class PlanDefinitionGoal with _$PlanDefinitionGoal {
+  const factory PlanDefinitionGoal({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -385,9 +495,14 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     List<CodeableConcept> addresses,
     List<RelatedArtifact> documentation,
     List<PlanDefinitionTarget> target,
-  }) = PlanDefinitionGoal;
+  }) = _PlanDefinitionGoal;
+  factory PlanDefinitionGoal.fromJson(Map<String, dynamic> json) =>
+      _$PlanDefinitionGoalFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.planDefinitionTarget({
+@freezed
+abstract class PlanDefinitionTarget with _$PlanDefinitionTarget {
+  const factory PlanDefinitionTarget({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -396,9 +511,14 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     Range detailRange,
     CodeableConcept detailCodeableConcept,
     Duration due,
-  }) = PlanDefinitionTarget;
+  }) = _PlanDefinitionTarget;
+  factory PlanDefinitionTarget.fromJson(Map<String, dynamic> json) =>
+      _$PlanDefinitionTargetFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.planDefinitionAction({
+@freezed
+abstract class PlanDefinitionAction with _$PlanDefinitionAction {
+  const factory PlanDefinitionAction({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -436,17 +556,27 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     Canonical transform,
     List<PlanDefinitionDynamicValue> dynamicValue,
     List<PlanDefinitionAction> action,
-  }) = PlanDefinitionAction;
+  }) = _PlanDefinitionAction;
+  factory PlanDefinitionAction.fromJson(Map<String, dynamic> json) =>
+      _$PlanDefinitionActionFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.planDefinitionCondition({
+@freezed
+abstract class PlanDefinitionCondition with _$PlanDefinitionCondition {
+  const factory PlanDefinitionCondition({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     PlanDefinitionConditionKind kind,
     Expression expression,
-  }) = PlanDefinitionCondition;
+  }) = _PlanDefinitionCondition;
+  factory PlanDefinitionCondition.fromJson(Map<String, dynamic> json) =>
+      _$PlanDefinitionConditionFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.planDefinitionRelatedAction({
+@freezed
+abstract class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
+  const factory PlanDefinitionRelatedAction({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -454,25 +584,40 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     PlanDefinitionRelatedActionRelationship relationship,
     Duration offsetDuration,
     Range offsetRange,
-  }) = PlanDefinitionRelatedAction;
+  }) = _PlanDefinitionRelatedAction;
+  factory PlanDefinitionRelatedAction.fromJson(Map<String, dynamic> json) =>
+      _$PlanDefinitionRelatedActionFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.planDefinitionParticipant({
+@freezed
+abstract class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
+  const factory PlanDefinitionParticipant({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     PlanDefinitionParticipantType type,
     CodeableConcept role,
-  }) = PlanDefinitionParticipant;
+  }) = _PlanDefinitionParticipant;
+  factory PlanDefinitionParticipant.fromJson(Map<String, dynamic> json) =>
+      _$PlanDefinitionParticipantFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.planDefinitionDynamicValue({
+@freezed
+abstract class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
+  const factory PlanDefinitionDynamicValue({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String path,
     Expression expression,
-  }) = PlanDefinitionDynamicValue;
+  }) = _PlanDefinitionDynamicValue;
+  factory PlanDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
+      _$PlanDefinitionDynamicValueFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.questionnaire({
+@freezed
+abstract class Questionnaire with _$Questionnaire {
+  const factory Questionnaire({
     String resourceType,
     Id id,
     Meta meta,
@@ -504,9 +649,14 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     Period effectivePeriod,
     List<Coding> code,
     List<QuestionnaireItem> item,
-  }) = Questionnaire;
+  }) = _Questionnaire;
+  factory Questionnaire.fromJson(Map<String, dynamic> json) =>
+      _$QuestionnaireFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.questionnaireItem({
+@freezed
+abstract class QuestionnaireItem with _$QuestionnaireItem {
+  const factory QuestionnaireItem({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -526,9 +676,14 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     List<QuestionnaireAnswerOption> answerOption,
     List<QuestionnaireInitial> initial,
     List<QuestionnaireItem> item,
-  }) = QuestionnaireItem;
+  }) = _QuestionnaireItem;
+  factory QuestionnaireItem.fromJson(Map<String, dynamic> json) =>
+      _$QuestionnaireItemFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.questionnaireEnableWhen({
+@freezed
+abstract class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
+  const factory QuestionnaireEnableWhen({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -544,9 +699,14 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     Coding answerCoding,
     Quantity answerQuantity,
     Reference answerReference,
-  }) = QuestionnaireEnableWhen;
+  }) = _QuestionnaireEnableWhen;
+  factory QuestionnaireEnableWhen.fromJson(Map<String, dynamic> json) =>
+      _$QuestionnaireEnableWhenFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.questionnaireAnswerOption({
+@freezed
+abstract class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
+  const factory QuestionnaireAnswerOption({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -557,9 +717,14 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     Coding valueCoding,
     Reference valueReference,
     bool initialSelected,
-  }) = QuestionnaireAnswerOption;
+  }) = _QuestionnaireAnswerOption;
+  factory QuestionnaireAnswerOption.fromJson(Map<String, dynamic> json) =>
+      _$QuestionnaireAnswerOptionFromJson(json);
+}
 
-  const factory DefinitionalArtifacts.questionnaireInitial({
+@freezed
+abstract class QuestionnaireInitial with _$QuestionnaireInitial {
+  const factory QuestionnaireInitial({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -575,8 +740,7 @@ abstract class DefinitionalArtifacts with _$DefinitionalArtifacts {
     Coding valueCoding,
     Quantity valueQuantity,
     Reference valueReference,
-  }) = QuestionnaireInitial;
-
-  factory DefinitionalArtifacts.fromJson(Map<String, dynamic> json) =>
-      _$DefinitionalArtifactsFromJson(json);
+  }) = _QuestionnaireInitial;
+  factory QuestionnaireInitial.fromJson(Map<String, dynamic> json) =>
+      _$QuestionnaireInitialFromJson(json);
 }

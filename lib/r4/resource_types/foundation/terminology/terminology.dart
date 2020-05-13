@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'terminology.enums.dart';
 
-part 'terminology.g.dart';
 part 'terminology.freezed.dart';
+part 'terminology.g.dart';
 
 @freezed
-abstract class Terminology with _$Terminology {
-  const factory Terminology.codeSystem({
+abstract class CodeSystem with _$CodeSystem {
+  const factory CodeSystem({
     String resourceType,
     Id id,
     Meta meta,
@@ -43,9 +43,14 @@ abstract class Terminology with _$Terminology {
     List<CodeSystemFilter> filter,
     List<CodeSystemProperty> property,
     List<CodeSystemConcept> concept,
-  }) = CodeSystem;
+  }) = _CodeSystem;
+  factory CodeSystem.fromJson(Map<String, dynamic> json) =>
+      _$CodeSystemFromJson(json);
+}
 
-  const factory Terminology.codeSystemFilter({
+@freezed
+abstract class CodeSystemFilter with _$CodeSystemFilter {
+  const factory CodeSystemFilter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -53,9 +58,14 @@ abstract class Terminology with _$Terminology {
     String description,
     List<Code> operator,
     String value,
-  }) = CodeSystemFilter;
+  }) = _CodeSystemFilter;
+  factory CodeSystemFilter.fromJson(Map<String, dynamic> json) =>
+      _$CodeSystemFilterFromJson(json);
+}
 
-  const factory Terminology.codeSystemProperty({
+@freezed
+abstract class CodeSystemProperty with _$CodeSystemProperty {
+  const factory CodeSystemProperty({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -63,9 +73,14 @@ abstract class Terminology with _$Terminology {
     FhirUri uri,
     String description,
     CodeSystemPropertyType type,
-  }) = CodeSystemProperty;
+  }) = _CodeSystemProperty;
+  factory CodeSystemProperty.fromJson(Map<String, dynamic> json) =>
+      _$CodeSystemPropertyFromJson(json);
+}
 
-  const factory Terminology.codeSystemConcept({
+@freezed
+abstract class CodeSystemConcept with _$CodeSystemConcept {
+  const factory CodeSystemConcept({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -75,18 +90,28 @@ abstract class Terminology with _$Terminology {
     List<CodeSystemDesignation> designation,
     List<CodeSystemProperty1> property,
     List<CodeSystemConcept> concept,
-  }) = CodeSystemConcept;
+  }) = _CodeSystemConcept;
+  factory CodeSystemConcept.fromJson(Map<String, dynamic> json) =>
+      _$CodeSystemConceptFromJson(json);
+}
 
-  const factory Terminology.codeSystemDesignation({
+@freezed
+abstract class CodeSystemDesignation with _$CodeSystemDesignation {
+  const factory CodeSystemDesignation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code language,
     Coding use,
     String value,
-  }) = CodeSystemDesignation;
+  }) = _CodeSystemDesignation;
+  factory CodeSystemDesignation.fromJson(Map<String, dynamic> json) =>
+      _$CodeSystemDesignationFromJson(json);
+}
 
-  const factory Terminology.codeSystemProperty1({
+@freezed
+abstract class CodeSystemProperty1 with _$CodeSystemProperty1 {
+  const factory CodeSystemProperty1({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -98,9 +123,14 @@ abstract class Terminology with _$Terminology {
     bool valueBoolean,
     FhirDateTime valueDateTime,
     double valueDecimal,
-  }) = CodeSystemProperty1;
+  }) = _CodeSystemProperty1;
+  factory CodeSystemProperty1.fromJson(Map<String, dynamic> json) =>
+      _$CodeSystemProperty1FromJson(json);
+}
 
-  const factory Terminology.valueSet({
+@freezed
+abstract class ValueSet with _$ValueSet {
+  const factory ValueSet({
     String resourceType,
     Id id,
     Meta meta,
@@ -126,9 +156,14 @@ abstract class Terminology with _$Terminology {
     Markdown copyright,
     ValueSetCompose compose,
     ValueSetExpansion expansion,
-  }) = ValueSet;
+  }) = _ValueSet;
+  factory ValueSet.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetFromJson(json);
+}
 
-  const factory Terminology.valueSetCompose({
+@freezed
+abstract class ValueSetCompose with _$ValueSetCompose {
+  const factory ValueSetCompose({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -136,9 +171,14 @@ abstract class Terminology with _$Terminology {
     bool inactive,
     List<ValueSetInclude> include,
     List<ValueSetInclude> exclude,
-  }) = ValueSetCompose;
+  }) = _ValueSetCompose;
+  factory ValueSetCompose.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetComposeFromJson(json);
+}
 
-  const factory Terminology.valueSetInclude({
+@freezed
+abstract class ValueSetInclude with _$ValueSetInclude {
+  const factory ValueSetInclude({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -146,34 +186,54 @@ abstract class Terminology with _$Terminology {
     String version,
     List<ValueSetConcept> concept,
     List<Canonical> valueSet,
-  }) = ValueSetInclude;
+  }) = _ValueSetInclude;
+  factory ValueSetInclude.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetIncludeFromJson(json);
+}
 
-  const factory Terminology.valueSetConcept({
+@freezed
+abstract class ValueSetConcept with _$ValueSetConcept {
+  const factory ValueSetConcept({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String display,
     List<ValueSetDesignation> designation,
-  }) = ValueSetConcept;
+  }) = _ValueSetConcept;
+  factory ValueSetConcept.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetConceptFromJson(json);
+}
 
-  const factory Terminology.valueSetDesignation({
+@freezed
+abstract class ValueSetDesignation with _$ValueSetDesignation {
+  const factory ValueSetDesignation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Code language,
     Coding use,
     String value,
-  }) = ValueSetDesignation;
+  }) = _ValueSetDesignation;
+  factory ValueSetDesignation.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetDesignationFromJson(json);
+}
 
-  const factory Terminology.valueSetFilter({
+@freezed
+abstract class ValueSetFilter with _$ValueSetFilter {
+  const factory ValueSetFilter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code property,
     ValueSetFilterOp op,
     String value,
-  }) = ValueSetFilter;
+  }) = _ValueSetFilter;
+  factory ValueSetFilter.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetFilterFromJson(json);
+}
 
-  const factory Terminology.valueSetExpansion({
+@freezed
+abstract class ValueSetExpansion with _$ValueSetExpansion {
+  const factory ValueSetExpansion({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -182,9 +242,14 @@ abstract class Terminology with _$Terminology {
     int total,
     List<ValueSetParameter> parameter,
     List<ValueSetContains> contains,
-  }) = ValueSetExpansion;
+  }) = _ValueSetExpansion;
+  factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetExpansionFromJson(json);
+}
 
-  const factory Terminology.valueSetParameter({
+@freezed
+abstract class ValueSetParameter with _$ValueSetParameter {
+  const factory ValueSetParameter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -195,9 +260,14 @@ abstract class Terminology with _$Terminology {
     FhirUri valueUri,
     Code valueCode,
     FhirDateTime valueDateTime,
-  }) = ValueSetParameter;
+  }) = _ValueSetParameter;
+  factory ValueSetParameter.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetParameterFromJson(json);
+}
 
-  const factory Terminology.valueSetContains({
+@freezed
+abstract class ValueSetContains with _$ValueSetContains {
+  const factory ValueSetContains({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -209,9 +279,14 @@ abstract class Terminology with _$Terminology {
     String display,
     List<ValueSetDesignation> designation,
     List<ValueSetContains> contains,
-  }) = ValueSetContains;
+  }) = _ValueSetContains;
+  factory ValueSetContains.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetContainsFromJson(json);
+}
 
-  const factory Terminology.terminologyCapabilities({
+@freezed
+abstract class TerminologyCapabilities with _$TerminologyCapabilities {
+  const factory TerminologyCapabilities({
     String resourceType,
     Id id,
     Meta meta,
@@ -245,34 +320,60 @@ abstract class Terminology with _$Terminology {
     TerminologyCapabilitiesValidateCode validateCode,
     TerminologyCapabilitiesTranslation translation,
     TerminologyCapabilitiesClosure closure,
-  }) = TerminologyCapabilities;
+  }) = _TerminologyCapabilities;
+  factory TerminologyCapabilities.fromJson(Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesFromJson(json);
+}
 
-  const factory Terminology.terminologyCapabilitiesSoftware({
+@freezed
+abstract class TerminologyCapabilitiesSoftware
+    with _$TerminologyCapabilitiesSoftware {
+  const factory TerminologyCapabilitiesSoftware({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     String version,
-  }) = TerminologyCapabilitiesSoftware;
+  }) = _TerminologyCapabilitiesSoftware;
+  factory TerminologyCapabilitiesSoftware.fromJson(Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesSoftwareFromJson(json);
+}
 
-  const factory Terminology.terminologyCapabilitiesImplementation({
+@freezed
+abstract class TerminologyCapabilitiesImplementation
+    with _$TerminologyCapabilitiesImplementation {
+  const factory TerminologyCapabilitiesImplementation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     FhirUrl url,
-  }) = TerminologyCapabilitiesImplementation;
+  }) = _TerminologyCapabilitiesImplementation;
+  factory TerminologyCapabilitiesImplementation.fromJson(
+          Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesImplementationFromJson(json);
+}
 
-  const factory Terminology.terminologyCapabilitiesCodeSystem({
+@freezed
+abstract class TerminologyCapabilitiesCodeSystem
+    with _$TerminologyCapabilitiesCodeSystem {
+  const factory TerminologyCapabilitiesCodeSystem({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Canonical uri,
     List<TerminologyCapabilitiesVersion> version,
     bool subsumption,
-  }) = TerminologyCapabilitiesCodeSystem;
+  }) = _TerminologyCapabilitiesCodeSystem;
+  factory TerminologyCapabilitiesCodeSystem.fromJson(
+          Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesCodeSystemFromJson(json);
+}
 
-  const factory Terminology.terminologyCapabilitiesVersion({
+@freezed
+abstract class TerminologyCapabilitiesVersion
+    with _$TerminologyCapabilitiesVersion {
+  const factory TerminologyCapabilitiesVersion({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -282,17 +383,29 @@ abstract class Terminology with _$Terminology {
     List<Code> language,
     List<TerminologyCapabilitiesFilter> filter,
     List<Code> property,
-  }) = TerminologyCapabilitiesVersion;
+  }) = _TerminologyCapabilitiesVersion;
+  factory TerminologyCapabilitiesVersion.fromJson(Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesVersionFromJson(json);
+}
 
-  const factory Terminology.terminologyCapabilitiesFilter({
+@freezed
+abstract class TerminologyCapabilitiesFilter
+    with _$TerminologyCapabilitiesFilter {
+  const factory TerminologyCapabilitiesFilter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code code,
     List<Code> op,
-  }) = TerminologyCapabilitiesFilter;
+  }) = _TerminologyCapabilitiesFilter;
+  factory TerminologyCapabilitiesFilter.fromJson(Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesFilterFromJson(json);
+}
 
-  const factory Terminology.terminologyCapabilitiesExpansion({
+@freezed
+abstract class TerminologyCapabilitiesExpansion
+    with _$TerminologyCapabilitiesExpansion {
+  const factory TerminologyCapabilitiesExpansion({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -301,38 +414,71 @@ abstract class Terminology with _$Terminology {
     bool incomplete,
     List<TerminologyCapabilitiesParameter> parameter,
     Markdown textFilter,
-  }) = TerminologyCapabilitiesExpansion;
+  }) = _TerminologyCapabilitiesExpansion;
+  factory TerminologyCapabilitiesExpansion.fromJson(
+          Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesExpansionFromJson(json);
+}
 
-  const factory Terminology.terminologyCapabilitiesParameter({
+@freezed
+abstract class TerminologyCapabilitiesParameter
+    with _$TerminologyCapabilitiesParameter {
+  const factory TerminologyCapabilitiesParameter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code name,
     String documentation,
-  }) = TerminologyCapabilitiesParameter;
+  }) = _TerminologyCapabilitiesParameter;
+  factory TerminologyCapabilitiesParameter.fromJson(
+          Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesParameterFromJson(json);
+}
 
-  const factory Terminology.terminologyCapabilitiesValidateCode({
+@freezed
+abstract class TerminologyCapabilitiesValidateCode
+    with _$TerminologyCapabilitiesValidateCode {
+  const factory TerminologyCapabilitiesValidateCode({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool translations,
-  }) = TerminologyCapabilitiesValidateCode;
+  }) = _TerminologyCapabilitiesValidateCode;
+  factory TerminologyCapabilitiesValidateCode.fromJson(
+          Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesValidateCodeFromJson(json);
+}
 
-  const factory Terminology.terminologyCapabilitiesTranslation({
+@freezed
+abstract class TerminologyCapabilitiesTranslation
+    with _$TerminologyCapabilitiesTranslation {
+  const factory TerminologyCapabilitiesTranslation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool needsMap,
-  }) = TerminologyCapabilitiesTranslation;
+  }) = _TerminologyCapabilitiesTranslation;
+  factory TerminologyCapabilitiesTranslation.fromJson(
+          Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesTranslationFromJson(json);
+}
 
-  const factory Terminology.terminologyCapabilitiesClosure({
+@freezed
+abstract class TerminologyCapabilitiesClosure
+    with _$TerminologyCapabilitiesClosure {
+  const factory TerminologyCapabilitiesClosure({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool translation,
-  }) = TerminologyCapabilitiesClosure;
+  }) = _TerminologyCapabilitiesClosure;
+  factory TerminologyCapabilitiesClosure.fromJson(Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesClosureFromJson(json);
+}
 
-  const factory Terminology.namingSystem({
+@freezed
+abstract class NamingSystem with _$NamingSystem {
+  const factory NamingSystem({
     String resourceType,
     Id id,
     Meta meta,
@@ -355,9 +501,14 @@ abstract class Terminology with _$Terminology {
     List<CodeableConcept> jurisdiction,
     String usage,
     List<NamingSystemUniqueId> uniqueId,
-  }) = NamingSystem;
+  }) = _NamingSystem;
+  factory NamingSystem.fromJson(Map<String, dynamic> json) =>
+      _$NamingSystemFromJson(json);
+}
 
-  const factory Terminology.namingSystemUniqueId({
+@freezed
+abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
+  const factory NamingSystemUniqueId({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -366,9 +517,14 @@ abstract class Terminology with _$Terminology {
     bool preferred,
     String comment,
     Period period,
-  }) = NamingSystemUniqueId;
+  }) = _NamingSystemUniqueId;
+  factory NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
+      _$NamingSystemUniqueIdFromJson(json);
+}
 
-  const factory Terminology.conceptMap({
+@freezed
+abstract class ConceptMap with _$ConceptMap {
+  const factory ConceptMap({
     String resourceType,
     Id id,
     Meta meta,
@@ -398,9 +554,14 @@ abstract class Terminology with _$Terminology {
     FhirUri targetUri,
     Canonical targetCanonical,
     List<ConceptMapGroup> group,
-  }) = ConceptMap;
+  }) = _ConceptMap;
+  factory ConceptMap.fromJson(Map<String, dynamic> json) =>
+      _$ConceptMapFromJson(json);
+}
 
-  const factory Terminology.conceptMapGroup({
+@freezed
+abstract class ConceptMapGroup with _$ConceptMapGroup {
+  const factory ConceptMapGroup({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -410,18 +571,28 @@ abstract class Terminology with _$Terminology {
     String targetVersion,
     List<ConceptMapElement> element,
     ConceptMapUnmapped unmapped,
-  }) = ConceptMapGroup;
+  }) = _ConceptMapGroup;
+  factory ConceptMapGroup.fromJson(Map<String, dynamic> json) =>
+      _$ConceptMapGroupFromJson(json);
+}
 
-  const factory Terminology.conceptMapElement({
+@freezed
+abstract class ConceptMapElement with _$ConceptMapElement {
+  const factory ConceptMapElement({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code code,
     String display,
     List<ConceptMapTarget> target,
-  }) = ConceptMapElement;
+  }) = _ConceptMapElement;
+  factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
+      _$ConceptMapElementFromJson(json);
+}
 
-  const factory Terminology.conceptMapTarget({
+@freezed
+abstract class ConceptMapTarget with _$ConceptMapTarget {
+  const factory ConceptMapTarget({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -431,9 +602,14 @@ abstract class Terminology with _$Terminology {
     String comment,
     List<ConceptMapDependsOn> dependsOn,
     List<ConceptMapDependsOn> product,
-  }) = ConceptMapTarget;
+  }) = _ConceptMapTarget;
+  factory ConceptMapTarget.fromJson(Map<String, dynamic> json) =>
+      _$ConceptMapTargetFromJson(json);
+}
 
-  const factory Terminology.conceptMapDependsOn({
+@freezed
+abstract class ConceptMapDependsOn with _$ConceptMapDependsOn {
+  const factory ConceptMapDependsOn({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -441,9 +617,14 @@ abstract class Terminology with _$Terminology {
     Canonical system,
     String value,
     String display,
-  }) = ConceptMapDependsOn;
+  }) = _ConceptMapDependsOn;
+  factory ConceptMapDependsOn.fromJson(Map<String, dynamic> json) =>
+      _$ConceptMapDependsOnFromJson(json);
+}
 
-  const factory Terminology.conceptMapUnmapped({
+@freezed
+abstract class ConceptMapUnmapped with _$ConceptMapUnmapped {
+  const factory ConceptMapUnmapped({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -451,8 +632,7 @@ abstract class Terminology with _$Terminology {
     Code code,
     String display,
     Canonical url,
-  }) = ConceptMapUnmapped;
-
-  factory Terminology.fromJson(Map<String, dynamic> json) =>
-      _$TerminologyFromJson(json);
+  }) = _ConceptMapUnmapped;
+  factory ConceptMapUnmapped.fromJson(Map<String, dynamic> json) =>
+      _$ConceptMapUnmappedFromJson(json);
 }

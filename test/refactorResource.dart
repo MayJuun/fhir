@@ -2,15 +2,17 @@ import 'dart:io';
 import './typeLists.dart';
 
 void main() async {
-  var baseFile =
-      await File('./lib/r4/resource_types/base/entities2/entities2.dart')
-          .readAsString();
-  var exp = RegExp(r'(?<=const\sfactory\sEntities2\.).*(?=\(\{)');
+  var file =
+      './lib/r4/resource_types/specialized/quality_reporting_and_testing/quality_reporting_and_testing.dart';
+  var group = 'QualityReportingAndTesting';
+  var baseFile = await File(file).readAsString();
+  var exp =
+      RegExp(r'(?<=const\sfactory\sQualityReportingAndTesting\.).*(?=\(\{)');
   for (var match in exp.allMatches(baseFile)) {
     var matchName = match.group(0)[0].toUpperCase() +
         match.group(0).substring(1, match.group(0).length);
     baseFile = baseFile.replaceFirst(
-        'const factory Entities2.${match.group(0)}',
+        'const factory $group.${match.group(0)}',
         '@freezed\n'
             'abstract class $matchName with _\$$matchName {\n'
             'const factory $matchName');
@@ -21,10 +23,9 @@ void main() async {
             '_\$${matchName}FromJson(json);}');
   }
   baseFile = baseFile
-      .replaceFirst('''factory Entities2.fromJson(Map<String, dynamic> json) =>
-      _\$Entities2FromJson(json);\n}''', '');
-  await File('./lib/r4/resource_types/base/entities1/entities1.dart')
-      .writeAsString(baseFile);
+      .replaceFirst('''factory $group.fromJson(Map<String, dynamic> json) =>
+      _\$${group}FromJson(json);\n}''', '');
+  await File(file).writeAsString(baseFile);
 }
 
 //   var tempDir = Directory('./lib/r4/resourceTypes');

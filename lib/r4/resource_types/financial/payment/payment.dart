@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'payment.enums.dart';
 
-part 'payment.g.dart';
 part 'payment.freezed.dart';
+part 'payment.g.dart';
 
 @freezed
-abstract class Payment with _$Payment {
-  const factory Payment.paymentNotice({
+abstract class PaymentNotice with _$PaymentNotice {
+  const factory PaymentNotice({
     String resourceType,
     Id id,
     Meta meta,
@@ -30,9 +30,14 @@ abstract class Payment with _$Payment {
     Reference recipient,
     Money amount,
     CodeableConcept paymentStatus,
-  }) = PaymentNotice;
+  }) = _PaymentNotice;
+  factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
+      _$PaymentNoticeFromJson(json);
+}
 
-  const factory Payment.paymentReconciliation({
+@freezed
+abstract class PaymentReconciliation with _$PaymentReconciliation {
+  const factory PaymentReconciliation({
     String resourceType,
     Id id,
     Meta meta,
@@ -57,9 +62,14 @@ abstract class Payment with _$Payment {
     List<PaymentReconciliationDetail> detail,
     CodeableConcept formCode,
     List<PaymentReconciliationProcessNote> processNote,
-  }) = PaymentReconciliation;
+  }) = _PaymentReconciliation;
+  factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
+      _$PaymentReconciliationFromJson(json);
+}
 
-  const factory Payment.paymentReconciliationDetail({
+@freezed
+abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
+  const factory PaymentReconciliationDetail({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -73,16 +83,22 @@ abstract class Payment with _$Payment {
     Reference responsible,
     Reference payee,
     Money amount,
-  }) = PaymentReconciliationDetail;
+  }) = _PaymentReconciliationDetail;
+  factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
+      _$PaymentReconciliationDetailFromJson(json);
+}
 
-  const factory Payment.paymentReconciliationProcessNote({
+@freezed
+abstract class PaymentReconciliationProcessNote
+    with _$PaymentReconciliationProcessNote {
+  const factory PaymentReconciliationProcessNote({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     PaymentReconciliationProcessNoteType type,
     String text,
-  }) = PaymentReconciliationProcessNote;
-
-  factory Payment.fromJson(Map<String, dynamic> json) =>
-      _$PaymentFromJson(json);
+  }) = _PaymentReconciliationProcessNote;
+  factory PaymentReconciliationProcessNote.fromJson(
+          Map<String, dynamic> json) =>
+      _$PaymentReconciliationProcessNoteFromJson(json);
 }

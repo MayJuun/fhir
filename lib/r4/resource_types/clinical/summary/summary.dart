@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'summary.enums.dart';
 
-part 'summary.g.dart';
 part 'summary.freezed.dart';
+part 'summary.g.dart';
 
 @freezed
-abstract class Summary with _$Summary {
-  const factory Summary.clinicalImpression({
+abstract class ClinicalImpression with _$ClinicalImpression {
+  const factory ClinicalImpression({
     String resourceType,
     Id id,
     Meta meta,
@@ -38,26 +38,42 @@ abstract class Summary with _$Summary {
     List<Reference> prognosisReference,
     List<Reference> supportingInfo,
     List<Annotation> note,
-  }) = ClinicalImpression;
+  }) = _ClinicalImpression;
+  factory ClinicalImpression.fromJson(Map<String, dynamic> json) =>
+      _$ClinicalImpressionFromJson(json);
+}
 
-  const factory Summary.clinicalImpressionInvestigation({
+@freezed
+abstract class ClinicalImpressionInvestigation
+    with _$ClinicalImpressionInvestigation {
+  const factory ClinicalImpressionInvestigation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     List<Reference> item,
-  }) = ClinicalImpressionInvestigation;
+  }) = _ClinicalImpressionInvestigation;
+  factory ClinicalImpressionInvestigation.fromJson(Map<String, dynamic> json) =>
+      _$ClinicalImpressionInvestigationFromJson(json);
+}
 
-  const factory Summary.clinicalImpressionFinding({
+@freezed
+abstract class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
+  const factory ClinicalImpressionFinding({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept itemCodeableConcept,
     Reference itemReference,
     String basis,
-  }) = ClinicalImpressionFinding;
+  }) = _ClinicalImpressionFinding;
+  factory ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =>
+      _$ClinicalImpressionFindingFromJson(json);
+}
 
-  const factory Summary.allergyIntolerance({
+@freezed
+abstract class AllergyIntolerance with _$AllergyIntolerance {
+  const factory AllergyIntolerance({
     String resourceType,
     Id id,
     Meta meta,
@@ -86,9 +102,14 @@ abstract class Summary with _$Summary {
     FhirDateTime lastOccurrence,
     List<Annotation> note,
     List<AllergyIntoleranceReaction> reaction,
-  }) = AllergyIntolerance;
+  }) = _AllergyIntolerance;
+  factory AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
+      _$AllergyIntoleranceFromJson(json);
+}
 
-  const factory Summary.allergyIntoleranceReaction({
+@freezed
+abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
+  const factory AllergyIntoleranceReaction({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -98,9 +119,14 @@ abstract class Summary with _$Summary {
     AllergyIntoleranceReactionSeverity severity,
     CodeableConcept exposureRoute,
     List<Annotation> note,
-  }) = AllergyIntoleranceReaction;
+  }) = _AllergyIntoleranceReaction;
+  factory AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
+      _$AllergyIntoleranceReactionFromJson(json);
+}
 
-  const factory Summary.adverseEvent({
+@freezed
+abstract class AdverseEvent with _$AdverseEvent {
+  const factory AdverseEvent({
     String resourceType,
     Id id,
     Meta meta,
@@ -129,16 +155,26 @@ abstract class Summary with _$Summary {
     List<Reference> subjectMedicalHistory,
     List<Reference> referenceDocument,
     List<Reference> study,
-  }) = AdverseEvent;
+  }) = _AdverseEvent;
+  factory AdverseEvent.fromJson(Map<String, dynamic> json) =>
+      _$AdverseEventFromJson(json);
+}
 
-  const factory Summary.adverseEventSuspectEntity({
+@freezed
+abstract class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
+  const factory AdverseEventSuspectEntity({
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference instance,
     List<AdverseEventCausality> causality,
-  }) = AdverseEventSuspectEntity;
+  }) = _AdverseEventSuspectEntity;
+  factory AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =>
+      _$AdverseEventSuspectEntityFromJson(json);
+}
 
-  const factory Summary.adverseEventCausality({
+@freezed
+abstract class AdverseEventCausality with _$AdverseEventCausality {
+  const factory AdverseEventCausality({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -146,9 +182,14 @@ abstract class Summary with _$Summary {
     String productRelatedness,
     Reference author,
     CodeableConcept method,
-  }) = AdverseEventCausality;
+  }) = _AdverseEventCausality;
+  factory AdverseEventCausality.fromJson(Map<String, dynamic> json) =>
+      _$AdverseEventCausalityFromJson(json);
+}
 
-  const factory Summary.familyMemberHistory({
+@freezed
+abstract class FamilyMemberHistory with _$FamilyMemberHistory {
+  const factory FamilyMemberHistory({
     String resourceType,
     Id id,
     Meta meta,
@@ -182,9 +223,15 @@ abstract class Summary with _$Summary {
     List<CodeableConcept> reasonCode,
     List<Annotation> note,
     List<FamilyMemberHistoryCondition> condition,
-  }) = FamilyMemberHistory;
+  }) = _FamilyMemberHistory;
+  factory FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
+      _$FamilyMemberHistoryFromJson(json);
+}
 
-  const factory Summary.familyMemberHistoryCondition({
+@freezed
+abstract class FamilyMemberHistoryCondition
+    with _$FamilyMemberHistoryCondition {
+  const factory FamilyMemberHistoryCondition({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -196,9 +243,14 @@ abstract class Summary with _$Summary {
     Period onsetPeriod,
     String onsetString,
     List<Annotation> note,
-  }) = FamilyMemberHistoryCondition;
+  }) = _FamilyMemberHistoryCondition;
+  factory FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
+      _$FamilyMemberHistoryConditionFromJson(json);
+}
 
-  const factory Summary.detectedIssue({
+@freezed
+abstract class DetectedIssue with _$DetectedIssue {
+  const factory DetectedIssue({
     String resourceType,
     Id id,
     Meta meta,
@@ -220,25 +272,41 @@ abstract class Summary with _$Summary {
     String detail,
     FhirUri reference,
     List<DetectedIssueMitigation> mitigation,
-  }) = DetectedIssue;
-  const factory Summary.detectedIssueEvidence({
+  }) = _DetectedIssue;
+  factory DetectedIssue.fromJson(Map<String, dynamic> json) =>
+      _$DetectedIssueFromJson(json);
+}
+
+@freezed
+abstract class DetectedIssueEvidence with _$DetectedIssueEvidence {
+  const factory DetectedIssueEvidence({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> code,
     List<Reference> detail,
-  }) = DetectedIssueEvidence;
+  }) = _DetectedIssueEvidence;
+  factory DetectedIssueEvidence.fromJson(Map<String, dynamic> json) =>
+      _$DetectedIssueEvidenceFromJson(json);
+}
 
-  const factory Summary.detectedIssueMitigation({
+@freezed
+abstract class DetectedIssueMitigation with _$DetectedIssueMitigation {
+  const factory DetectedIssueMitigation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept action,
     FhirDateTime date,
     Reference author,
-  }) = DetectedIssueMitigation;
+  }) = _DetectedIssueMitigation;
+  factory DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
+      _$DetectedIssueMitigationFromJson(json);
+}
 
-  const factory Summary.condition({
+@freezed
+abstract class Condition with _$Condition {
+  const factory Condition({
     String resourceType,
     Id id,
     Meta meta,
@@ -271,26 +339,41 @@ abstract class Summary with _$Summary {
     List<ConditionStage> stage,
     List<ConditionEvidence> evidence,
     List<Annotation> note,
-  }) = Condition;
+  }) = _Condition;
+  factory Condition.fromJson(Map<String, dynamic> json) =>
+      _$ConditionFromJson(json);
+}
 
-  const factory Summary.conditionStage({
+@freezed
+abstract class ConditionStage with _$ConditionStage {
+  const factory ConditionStage({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept summary,
     List<Reference> assessment,
     CodeableConcept type,
-  }) = ConditionStage;
+  }) = _ConditionStage;
+  factory ConditionStage.fromJson(Map<String, dynamic> json) =>
+      _$ConditionStageFromJson(json);
+}
 
-  const factory Summary.conditionEvidence({
+@freezed
+abstract class ConditionEvidence with _$ConditionEvidence {
+  const factory ConditionEvidence({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> code,
     List<Reference> detail,
-  }) = ConditionEvidence;
+  }) = _ConditionEvidence;
+  factory ConditionEvidence.fromJson(Map<String, dynamic> json) =>
+      _$ConditionEvidenceFromJson(json);
+}
 
-  const factory Summary.procedure({
+@freezed
+abstract class Procedure with _$Procedure {
+  const factory Procedure({
     String resourceType,
     Id id,
     Meta meta,
@@ -332,25 +415,34 @@ abstract class Summary with _$Summary {
     List<ProcedureFocalDevice> focalDevice,
     List<Reference> usedReference,
     List<CodeableConcept> usedCode,
-  }) = Procedure;
+  }) = _Procedure;
+  factory Procedure.fromJson(Map<String, dynamic> json) =>
+      _$ProcedureFromJson(json);
+}
 
-  const factory Summary.procedurePerformer({
+@freezed
+abstract class ProcedurePerformer with _$ProcedurePerformer {
+  const factory ProcedurePerformer({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept function,
     Reference actor,
     Reference onBehalfOf,
-  }) = ProcedurePerformer;
+  }) = _ProcedurePerformer;
+  factory ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
+      _$ProcedurePerformerFromJson(json);
+}
 
-  const factory Summary.procedureFocalDevice({
+@freezed
+abstract class ProcedureFocalDevice with _$ProcedureFocalDevice {
+  const factory ProcedureFocalDevice({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept action,
     Reference manipulated,
-  }) = ProcedureFocalDevice;
-
-  factory Summary.fromJson(Map<String, dynamic> json) =>
-      _$SummaryFromJson(json);
+  }) = _ProcedureFocalDevice;
+  factory ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
+      _$ProcedureFocalDeviceFromJson(json);
 }

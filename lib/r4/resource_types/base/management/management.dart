@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'management.enums.dart';
 
-part 'management.g.dart';
 part 'management.freezed.dart';
+part 'management.g.dart';
 
 @freezed
-abstract class Management with _$Management {
-  const factory Management.library({
+abstract class Library with _$Library {
+  const factory Library({
     String resourceType,
     Id id,
     Meta meta,
@@ -50,9 +50,14 @@ abstract class Management with _$Management {
     List<ParameterDefinition> parameter,
     List<DataRequirement> dataRequirement,
     List<Attachment> content,
-  }) = Library;
+  }) = _Library;
+  factory Library.fromJson(Map<String, dynamic> json) =>
+      _$LibraryFromJson(json);
+}
 
-  const factory Management.lists({
+@freezed
+abstract class Lists with _$Lists {
+  const factory Lists({
     String resourceType,
     Id id,
     Meta meta,
@@ -75,9 +80,13 @@ abstract class Management with _$Management {
     List<Annotation> note,
     List<ListEntry> entry,
     CodeableConcept emptyReason,
-  }) = Lists;
+  }) = _Lists;
+  factory Lists.fromJson(Map<String, dynamic> json) => _$ListsFromJson(json);
+}
 
-  const factory Management.listEntry({
+@freezed
+abstract class ListEntry with _$ListEntry {
+  const factory ListEntry({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -85,9 +94,14 @@ abstract class Management with _$Management {
     bool deleted,
     FhirDateTime date,
     Reference item,
-  }) = ListEntry;
+  }) = _ListEntry;
+  factory ListEntry.fromJson(Map<String, dynamic> json) =>
+      _$ListEntryFromJson(json);
+}
 
-  const factory Management.episodeOfCare({
+@freezed
+abstract class EpisodeOfCare with _$EpisodeOfCare {
+  const factory EpisodeOfCare({
     String resourceType,
     Id id,
     Meta meta,
@@ -109,26 +123,41 @@ abstract class Management with _$Management {
     Reference careManager,
     List<Reference> team,
     List<Reference> account,
-  }) = EpisodeOfCare;
+  }) = _EpisodeOfCare;
+  factory EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
+      _$EpisodeOfCareFromJson(json);
+}
 
-  const factory Management.episodeOfCareStatusHistory({
+@freezed
+abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
+  const factory EpisodeOfCareStatusHistory({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     EpisodeOfCareStatusHistoryStatus status,
     Period period,
-  }) = EpisodeOfCareStatusHistory;
+  }) = _EpisodeOfCareStatusHistory;
+  factory EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
+      _$EpisodeOfCareStatusHistoryFromJson(json);
+}
 
-  const factory Management.episodeOfCareDiagnosis({
+@freezed
+abstract class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
+  const factory EpisodeOfCareDiagnosis({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference condition,
     CodeableConcept role,
     int rank,
-  }) = EpisodeOfCareDiagnosis;
+  }) = _EpisodeOfCareDiagnosis;
+  factory EpisodeOfCareDiagnosis.fromJson(Map<String, dynamic> json) =>
+      _$EpisodeOfCareDiagnosisFromJson(json);
+}
 
-  const factory Management.encounter({
+@freezed
+abstract class Encounter with _$Encounter {
+  const factory Encounter({
     String resourceType,
     Id id,
     Meta meta,
@@ -161,43 +190,68 @@ abstract class Management with _$Management {
     List<EncounterLocation> location,
     Reference serviceProvider,
     Reference partOf,
-  }) = Encounter;
+  }) = _Encounter;
+  factory Encounter.fromJson(Map<String, dynamic> json) =>
+      _$EncounterFromJson(json);
+}
 
-  const factory Management.encounterStatusHistory({
+@freezed
+abstract class EncounterStatusHistory with _$EncounterStatusHistory {
+  const factory EncounterStatusHistory({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     EncounterStatusHistoryStatus status,
     Period period,
-  }) = EncounterStatusHistory;
+  }) = _EncounterStatusHistory;
+  factory EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
+      _$EncounterStatusHistoryFromJson(json);
+}
 
-  const factory Management.encounterClassHistory({
+@freezed
+abstract class EncounterClassHistory with _$EncounterClassHistory {
+  const factory EncounterClassHistory({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     @JsonKey(name: 'class') Coding clas,
     Period period,
-  }) = EncounterClassHistory;
+  }) = _EncounterClassHistory;
+  factory EncounterClassHistory.fromJson(Map<String, dynamic> json) =>
+      _$EncounterClassHistoryFromJson(json);
+}
 
-  const factory Management.encounterParticipant({
+@freezed
+abstract class EncounterParticipant with _$EncounterParticipant {
+  const factory EncounterParticipant({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> type,
     Period period,
     Reference individual,
-  }) = EncounterParticipant;
+  }) = _EncounterParticipant;
+  factory EncounterParticipant.fromJson(Map<String, dynamic> json) =>
+      _$EncounterParticipantFromJson(json);
+}
 
-  const factory Management.encounterDiagnosis({
+@freezed
+abstract class EncounterDiagnosis with _$EncounterDiagnosis {
+  const factory EncounterDiagnosis({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference condition,
     CodeableConcept use,
     int rank,
-  }) = EncounterDiagnosis;
+  }) = _EncounterDiagnosis;
+  factory EncounterDiagnosis.fromJson(Map<String, dynamic> json) =>
+      _$EncounterDiagnosisFromJson(json);
+}
 
-  const factory Management.encounterHospitalization({
+@freezed
+abstract class EncounterHospitalization with _$EncounterHospitalization {
+  const factory EncounterHospitalization({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -210,9 +264,14 @@ abstract class Management with _$Management {
     List<CodeableConcept> specialArrangement,
     Reference destination,
     CodeableConcept dischargeDisposition,
-  }) = EncounterHospitalization;
+  }) = _EncounterHospitalization;
+  factory EncounterHospitalization.fromJson(Map<String, dynamic> json) =>
+      _$EncounterHospitalizationFromJson(json);
+}
 
-  const factory Management.encounterLocation({
+@freezed
+abstract class EncounterLocation with _$EncounterLocation {
+  const factory EncounterLocation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -220,9 +279,14 @@ abstract class Management with _$Management {
     EncounterLocationStatus status,
     CodeableConcept physicalType,
     Period period,
-  }) = EncounterLocation;
+  }) = _EncounterLocation;
+  factory EncounterLocation.fromJson(Map<String, dynamic> json) =>
+      _$EncounterLocationFromJson(json);
+}
 
-  const factory Management.flag({
+@freezed
+abstract class Flag with _$Flag {
+  const factory Flag({
     String resourceType,
     Id id,
     Meta meta,
@@ -240,8 +304,6 @@ abstract class Management with _$Management {
     Period period,
     Reference encounter,
     Reference author,
-  }) = Flag;
-
-  factory Management.fromJson(Map<String, dynamic> json) =>
-      _$ManagementFromJson(json);
+  }) = _Flag;
+  factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
 }

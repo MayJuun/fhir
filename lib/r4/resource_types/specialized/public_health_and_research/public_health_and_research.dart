@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'public_health_and_research.enums.dart';
 
-part 'public_health_and_research.g.dart';
 part 'public_health_and_research.freezed.dart';
+part 'public_health_and_research.g.dart';
 
 @freezed
-abstract class PublicHealthAndResearch with _$PublicHealthAndResearch {
-  const factory PublicHealthAndResearch.researchStudy({
+abstract class ResearchStudy with _$ResearchStudy {
+  const factory ResearchStudy({
     String resourceType,
     Id id,
     Meta meta,
@@ -40,26 +40,41 @@ abstract class PublicHealthAndResearch with _$PublicHealthAndResearch {
     List<Annotation> note,
     List<ResearchStudyArm> arm,
     List<ResearchStudyObjective> objective,
-  }) = ResearchStudy;
+  }) = _ResearchStudy;
+  factory ResearchStudy.fromJson(Map<String, dynamic> json) =>
+      _$ResearchStudyFromJson(json);
+}
 
-  const factory PublicHealthAndResearch.researchStudyArm({
+@freezed
+abstract class ResearchStudyArm with _$ResearchStudyArm {
+  const factory ResearchStudyArm({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     CodeableConcept type,
     String description,
-  }) = ResearchStudyArm;
+  }) = _ResearchStudyArm;
+  factory ResearchStudyArm.fromJson(Map<String, dynamic> json) =>
+      _$ResearchStudyArmFromJson(json);
+}
 
-  const factory PublicHealthAndResearch.researchStudyObjective({
+@freezed
+abstract class ResearchStudyObjective with _$ResearchStudyObjective {
+  const factory ResearchStudyObjective({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     CodeableConcept type,
-  }) = ResearchStudyObjective;
+  }) = _ResearchStudyObjective;
+  factory ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
+      _$ResearchStudyObjectiveFromJson(json);
+}
 
-  const factory PublicHealthAndResearch.researchSubject({
+@freezed
+abstract class ResearchSubject with _$ResearchSubject {
+  const factory ResearchSubject({
     String resourceType,
     Id id,
     Meta meta,
@@ -76,8 +91,7 @@ abstract class PublicHealthAndResearch with _$PublicHealthAndResearch {
     String assignedArm,
     String actualArm,
     Reference consent,
-  }) = ResearchSubject;
-
-  factory PublicHealthAndResearch.fromJson(Map<String, dynamic> json) =>
-      _$PublicHealthAndResearchFromJson(json);
+  }) = _ResearchSubject;
+  factory ResearchSubject.fromJson(Map<String, dynamic> json) =>
+      _$ResearchSubjectFromJson(json);
 }

@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'general.enums.dart';
 
-part 'general.g.dart';
 part 'general.freezed.dart';
+part 'general.g.dart';
 
-@freezed
-abstract class General with _$General {
-  const factory General.chargeItemDefinition({
+  @freezed
+abstract class ChargeItemDefinition with _$ChargeItemDefinition {
+const factory ChargeItemDefinition({
     String resourceType,
     Id id,
     Meta meta,
@@ -41,34 +41,46 @@ abstract class General with _$General {
     List<Reference> instance,
     List<ChargeItemDefinitionApplicability> applicability,
     List<ChargeItemDefinitionPropertyGroup> propertyGroup,
-  }) = ChargeItemDefinition;
+  }) = _ChargeItemDefinition;
+factory ChargeItemDefinition.fromJson(Map<String, dynamic> json) =>_$ChargeItemDefinitionFromJson(json);}
 
-  const factory General.chargeItemDefinitionApplicability({
+  @freezed
+abstract class ChargeItemDefinitionApplicability with _$ChargeItemDefinitionApplicability {
+const factory ChargeItemDefinitionApplicability({
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     String language,
     String expression,
-  }) = ChargeItemDefinitionApplicability;
+  }) = _ChargeItemDefinitionApplicability;
+factory ChargeItemDefinitionApplicability.fromJson(Map<String, dynamic> json) =>_$ChargeItemDefinitionApplicabilityFromJson(json);}
 
-  const factory General.chargeItemDefinitionPropertyGroup({
+  @freezed
+abstract class ChargeItemDefinitionPropertyGroup with _$ChargeItemDefinitionPropertyGroup {
+const factory ChargeItemDefinitionPropertyGroup({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<ChargeItemDefinitionApplicability> applicability,
     List<ChargeItemDefinitionPriceComponent> priceComponent,
-  }) = ChargeItemDefinitionPropertyGroup;
+  }) = _ChargeItemDefinitionPropertyGroup;
+factory ChargeItemDefinitionPropertyGroup.fromJson(Map<String, dynamic> json) =>_$ChargeItemDefinitionPropertyGroupFromJson(json);}
 
-  const factory General.chargeItemDefinitionPriceComponent({
+  @freezed
+abstract class ChargeItemDefinitionPriceComponent with _$ChargeItemDefinitionPriceComponent {
+const factory ChargeItemDefinitionPriceComponent({
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code type,
     CodeableConcept code,
     double factor,
     Money amount,
-  }) = ChargeItemDefinitionPriceComponent;
+  }) = _ChargeItemDefinitionPriceComponent;
+factory ChargeItemDefinitionPriceComponent.fromJson(Map<String, dynamic> json) =>_$ChargeItemDefinitionPriceComponentFromJson(json);}
 
-  const factory General.account({
+  @freezed
+abstract class Account with _$Account {
+const factory Account({
     String resourceType,
     Meta meta,
     FhirUri implicitRules,
@@ -87,26 +99,35 @@ abstract class General with _$General {
     Reference owner,
     String description,
     List<AccountGuarantor> guarantor,
-  }) = Account;
+  }) = _Account;
+factory Account.fromJson(Map<String, dynamic> json) =>_$AccountFromJson(json);}
 
-  const factory General.accountCoverage({
+  @freezed
+abstract class AccountCoverage with _$AccountCoverage {
+const factory AccountCoverage({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference coverage,
     int priority,
-  }) = AccountCoverage;
+  }) = _AccountCoverage;
+factory AccountCoverage.fromJson(Map<String, dynamic> json) =>_$AccountCoverageFromJson(json);}
 
-  const factory General.accountGuarantor({
+  @freezed
+abstract class AccountGuarantor with _$AccountGuarantor {
+const factory AccountGuarantor({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference party,
     bool onHold,
     Period period,
-  }) = AccountGuarantor;
+  }) = _AccountGuarantor;
+factory AccountGuarantor.fromJson(Map<String, dynamic> json) =>_$AccountGuarantorFromJson(json);}
 
-  const factory General.chargeItem({
+  @freezed
+abstract class ChargeItem with _$ChargeItem {
+const factory ChargeItem({
     String resourceType,
     Id id,
     Meta meta,
@@ -143,17 +164,23 @@ abstract class General with _$General {
     List<Reference> account,
     List<Annotation> note,
     List<Reference> supportingInformation,
-  }) = ChargeItem;
+  }) = _ChargeItem;
+factory ChargeItem.fromJson(Map<String, dynamic> json) =>_$ChargeItemFromJson(json);}
 
-  const factory General.chargeItemPerformer({
+  @freezed
+abstract class ChargeItemPerformer with _$ChargeItemPerformer {
+const factory ChargeItemPerformer({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept function,
     Reference actor,
-  }) = ChargeItemPerformer;
+  }) = _ChargeItemPerformer;
+factory ChargeItemPerformer.fromJson(Map<String, dynamic> json) =>_$ChargeItemPerformerFromJson(json);}
 
-  const factory General.insurancePlan({
+  @freezed
+abstract class InsurancePlan with _$InsurancePlan {
+const factory InsurancePlan({
     String resourceType,
     Id id,
     Meta meta,
@@ -176,9 +203,12 @@ abstract class General with _$General {
     List<Reference> network,
     List<InsurancePlanCoverage> coverage,
     List<InsurancePlanPlan> plan,
-  }) = InsurancePlan;
+  }) = _InsurancePlan;
+factory InsurancePlan.fromJson(Map<String, dynamic> json) =>_$InsurancePlanFromJson(json);}
 
-  const factory General.insurancePlanContact({
+  @freezed
+abstract class InsurancePlanContact with _$InsurancePlanContact {
+const factory InsurancePlanContact({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -186,35 +216,47 @@ abstract class General with _$General {
     HumanName name,
     List<ContactPoint> telecom,
     Address address,
-  }) = InsurancePlanContact;
+  }) = _InsurancePlanContact;
+factory InsurancePlanContact.fromJson(Map<String, dynamic> json) =>_$InsurancePlanContactFromJson(json);}
 
-  const factory General.insurancePlanCoverage({
+  @freezed
+abstract class InsurancePlanCoverage with _$InsurancePlanCoverage {
+const factory InsurancePlanCoverage({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     List<Reference> network,
     List<InsurancePlanBenefit> benefit,
-  }) = InsurancePlanCoverage;
+  }) = _InsurancePlanCoverage;
+factory InsurancePlanCoverage.fromJson(Map<String, dynamic> json) =>_$InsurancePlanCoverageFromJson(json);}
 
-  const factory General.insurancePlanBenefit({
+  @freezed
+abstract class InsurancePlanBenefit with _$InsurancePlanBenefit {
+const factory InsurancePlanBenefit({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     String requirement,
     List<InsurancePlanLimit> limit,
-  }) = InsurancePlanBenefit;
+  }) = _InsurancePlanBenefit;
+factory InsurancePlanBenefit.fromJson(Map<String, dynamic> json) =>_$InsurancePlanBenefitFromJson(json);}
 
-  const factory General.insurancePlanLimit({
+  @freezed
+abstract class InsurancePlanLimit with _$InsurancePlanLimit {
+const factory InsurancePlanLimit({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Quantity value,
     CodeableConcept code,
-  }) = InsurancePlanLimit;
+  }) = _InsurancePlanLimit;
+factory InsurancePlanLimit.fromJson(Map<String, dynamic> json) =>_$InsurancePlanLimitFromJson(json);}
 
-  const factory General.insurancePlanPlan({
+  @freezed
+abstract class InsurancePlanPlan with _$InsurancePlanPlan {
+const factory InsurancePlanPlan({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -223,32 +265,44 @@ abstract class General with _$General {
     List<Reference> coverageArea,
     List<InsurancePlanGeneralCost> generalCost,
     List<InsurancePlanSpecificCost> specificCost,
-  }) = InsurancePlanPlan;
+  }) = _InsurancePlanPlan;
+factory InsurancePlanPlan.fromJson(Map<String, dynamic> json) =>_$InsurancePlanPlanFromJson(json);}
 
-  const factory General.insurancePlanGeneralCost({
+  @freezed
+abstract class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
+const factory InsurancePlanGeneralCost({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     CodeableConcept type,
     int groupSize,
     Money cost,
     String comment,
-  }) = InsurancePlanGeneralCost;
+  }) = _InsurancePlanGeneralCost;
+factory InsurancePlanGeneralCost.fromJson(Map<String, dynamic> json) =>_$InsurancePlanGeneralCostFromJson(json);}
 
-  const factory General.insurancePlanSpecificCost({
+  @freezed
+abstract class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
+const factory InsurancePlanSpecificCost({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     CodeableConcept category,
     List<InsurancePlanBenefit1> benefit,
-  }) = InsurancePlanSpecificCost;
+  }) = _InsurancePlanSpecificCost;
+factory InsurancePlanSpecificCost.fromJson(Map<String, dynamic> json) =>_$InsurancePlanSpecificCostFromJson(json);}
 
-  const factory General.insurancePlanBenefit1({
+  @freezed
+abstract class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
+const factory InsurancePlanBenefit1({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
-  }) = InsurancePlanBenefit1;
+  }) = _InsurancePlanBenefit1;
+factory InsurancePlanBenefit1.fromJson(Map<String, dynamic> json) =>_$InsurancePlanBenefit1FromJson(json);}
 
-  const factory General.insurancePlanCost({
+  @freezed
+abstract class InsurancePlanCost with _$InsurancePlanCost {
+const factory InsurancePlanCost({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -256,9 +310,12 @@ abstract class General with _$General {
     CodeableConcept applicability,
     List<CodeableConcept> qualifiers,
     Quantity value,
-  }) = InsurancePlanCost;
+  }) = _InsurancePlanCost;
+factory InsurancePlanCost.fromJson(Map<String, dynamic> json) =>_$InsurancePlanCostFromJson(json);}
 
-  const factory General.explanationOfBenefit({
+  @freezed
+abstract class ExplanationOfBenefit with _$ExplanationOfBenefit {
+const factory ExplanationOfBenefit({
     String resourceType,
     Id id,
     Meta meta,
@@ -308,24 +365,33 @@ abstract class General with _$General {
     List<ExplanationOfBenefitProcessNote> processNote,
     Period benefitPeriod,
     List<ExplanationOfBenefitBenefitBalance> benefitBalance,
-  }) = ExplanationOfBenefit;
+  }) = _ExplanationOfBenefit;
+factory ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitFromJson(json);}
 
-  const factory General.explanationOfBenefitRelated({
+  @freezed
+abstract class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
+const factory ExplanationOfBenefitRelated({
     String id,
     List<FhirExtension> modifierExtension,
     Reference claim,
     CodeableConcept relationship,
     Identifier reference,
-  }) = ExplanationOfBenefitRelated;
+  }) = _ExplanationOfBenefitRelated;
+factory ExplanationOfBenefitRelated.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitRelatedFromJson(json);}
 
-  const factory General.explanationOfBenefitPayee({
+  @freezed
+abstract class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
+const factory ExplanationOfBenefitPayee({
     String id,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     Reference party,
-  }) = ExplanationOfBenefitPayee;
+  }) = _ExplanationOfBenefitPayee;
+factory ExplanationOfBenefitPayee.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitPayeeFromJson(json);}
 
-  const factory General.explanationOfBenefitCareTeam({
+  @freezed
+abstract class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
+const factory ExplanationOfBenefitCareTeam({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -334,9 +400,12 @@ abstract class General with _$General {
     bool responsible,
     CodeableConcept role,
     CodeableConcept qualification,
-  }) = ExplanationOfBenefitCareTeam;
+  }) = _ExplanationOfBenefitCareTeam;
+factory ExplanationOfBenefitCareTeam.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitCareTeamFromJson(json);}
 
-  const factory General.explanationOfBenefitSupportingInfo({
+  @freezed
+abstract class ExplanationOfBenefitSupportingInfo with _$ExplanationOfBenefitSupportingInfo {
+const factory ExplanationOfBenefitSupportingInfo({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -351,9 +420,12 @@ abstract class General with _$General {
     Attachment valueAttachment,
     Reference valueReference,
     Coding reason,
-  }) = ExplanationOfBenefitSupportingInfo;
+  }) = _ExplanationOfBenefitSupportingInfo;
+factory ExplanationOfBenefitSupportingInfo.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitSupportingInfoFromJson(json);}
 
-  const factory General.explanationOfBenefitDiagnosis({
+  @freezed
+abstract class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
+const factory ExplanationOfBenefitDiagnosis({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -363,9 +435,12 @@ abstract class General with _$General {
     List<CodeableConcept> type,
     CodeableConcept onAdmission,
     CodeableConcept packageCode,
-  }) = ExplanationOfBenefitDiagnosis;
+  }) = _ExplanationOfBenefitDiagnosis;
+factory ExplanationOfBenefitDiagnosis.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitDiagnosisFromJson(json);}
 
-  const factory General.explanationOfBenefitProcedure({
+  @freezed
+abstract class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
+const factory ExplanationOfBenefitProcedure({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -375,16 +450,20 @@ abstract class General with _$General {
     CodeableConcept procedureCodeableConcept,
     Reference procedureReference,
     List<Reference> udi,
-  }) = ExplanationOfBenefitProcedure;
+  }) = _ExplanationOfBenefitProcedure;
+factory ExplanationOfBenefitProcedure.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitProcedureFromJson(json);}
 
-  const factory General.explanationOfBenefitInsurance({
+  @freezed
+abstract class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
+const factory ExplanationOfBenefitInsurance({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool focal,
     Reference coverage,
     List<String> preAuthRef,
-  }) = ExplanationOfBenefitInsurance;
+  }) = _ExplanationOfBenefitInsurance;
+factory ExplanationOfBenefitInsurance.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitInsuranceFromJson(json);}
 
   const factory General.explanationOfBenefitAccident(
       {String id,
@@ -395,7 +474,9 @@ abstract class General with _$General {
       Address locationAddress,
       Reference locationRefe}) = ExplanationOfBenefitAccident;
 
-  const factory General.explanationOfBenefitItem({
+  @freezed
+abstract class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
+const factory ExplanationOfBenefitItem({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -425,9 +506,12 @@ abstract class General with _$General {
     List<int> noteNumber,
     List<ExplanationOfBenefitAdjudication> adjudication,
     List<ExplanationOfBenefitDetail> detail,
-  }) = ExplanationOfBenefitItem;
+  }) = _ExplanationOfBenefitItem;
+factory ExplanationOfBenefitItem.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitItemFromJson(json);}
 
-  const factory General.explanationOfBenefitAdjudication({
+  @freezed
+abstract class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
+const factory ExplanationOfBenefitAdjudication({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -435,9 +519,12 @@ abstract class General with _$General {
     CodeableConcept reason,
     Money amount,
     double value,
-  }) = ExplanationOfBenefitAdjudication;
+  }) = _ExplanationOfBenefitAdjudication;
+factory ExplanationOfBenefitAdjudication.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitAdjudicationFromJson(json);}
 
-  const factory General.explanationOfBenefitDetail({
+  @freezed
+abstract class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
+const factory ExplanationOfBenefitDetail({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -455,9 +542,12 @@ abstract class General with _$General {
     List<int> noteNumber,
     List<ExplanationOfBenefitAdjudication> adjudication,
     List<ExplanationOfBenefitSubDetail> subDetail,
-  }) = ExplanationOfBenefitDetail;
+  }) = _ExplanationOfBenefitDetail;
+factory ExplanationOfBenefitDetail.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitDetailFromJson(json);}
 
-  const factory General.explanationOfBenefitSubDetail({
+  @freezed
+abstract class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
+const factory ExplanationOfBenefitSubDetail({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -474,9 +564,12 @@ abstract class General with _$General {
     List<Reference> udi,
     List<int> noteNumber,
     List<ExplanationOfBenefitAdjudication> adjudication,
-  }) = ExplanationOfBenefitSubDetail;
+  }) = _ExplanationOfBenefitSubDetail;
+factory ExplanationOfBenefitSubDetail.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitSubDetailFromJson(json);}
 
-  const factory General.explanationOfBenefitAddItem({
+  @freezed
+abstract class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
+const factory ExplanationOfBenefitAddItem({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -501,9 +594,12 @@ abstract class General with _$General {
     List<int> noteNumber,
     List<ExplanationOfBenefitAdjudication> adjudication,
     List<ExplanationOfBenefitDetail1> detail,
-  }) = ExplanationOfBenefitAddItem;
+  }) = _ExplanationOfBenefitAddItem;
+factory ExplanationOfBenefitAddItem.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitAddItemFromJson(json);}
 
-  const factory General.explanationOfBenefitDetail1({
+  @freezed
+abstract class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
+const factory ExplanationOfBenefitDetail1({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -516,9 +612,12 @@ abstract class General with _$General {
     List<int> noteNumber,
     List<ExplanationOfBenefitAdjudication> adjudication,
     List<ExplanationOfBenefitSubDetail1> subDetail,
-  }) = ExplanationOfBenefitDetail1;
+  }) = _ExplanationOfBenefitDetail1;
+factory ExplanationOfBenefitDetail1.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitDetail1FromJson(json);}
 
-  const factory General.explanationOfBenefitSubDetail1({
+  @freezed
+abstract class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
+const factory ExplanationOfBenefitSubDetail1({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -530,17 +629,23 @@ abstract class General with _$General {
     Money net,
     List<int> noteNumber,
     List<ExplanationOfBenefitAdjudication> adjudication,
-  }) = ExplanationOfBenefitSubDetail1;
+  }) = _ExplanationOfBenefitSubDetail1;
+factory ExplanationOfBenefitSubDetail1.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitSubDetail1FromJson(json);}
 
-  const factory General.explanationOfBenefitTotal({
+  @freezed
+abstract class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
+const factory ExplanationOfBenefitTotal({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept category,
     Money amount,
-  }) = ExplanationOfBenefitTotal;
+  }) = _ExplanationOfBenefitTotal;
+factory ExplanationOfBenefitTotal.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitTotalFromJson(json);}
 
-  const factory General.explanationOfBenefitPayment({
+  @freezed
+abstract class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
+const factory ExplanationOfBenefitPayment({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -550,9 +655,12 @@ abstract class General with _$General {
     Date date,
     Money amount,
     Identifier identifier,
-  }) = ExplanationOfBenefitPayment;
+  }) = _ExplanationOfBenefitPayment;
+factory ExplanationOfBenefitPayment.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitPaymentFromJson(json);}
 
-  const factory General.explanationOfBenefitProcessNote({
+  @freezed
+abstract class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
+const factory ExplanationOfBenefitProcessNote({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -560,9 +668,12 @@ abstract class General with _$General {
     ExplanationOfBenefitProcessNote type,
     String text,
     CodeableConcept language,
-  }) = ExplanationOfBenefitProcessNote;
+  }) = _ExplanationOfBenefitProcessNote;
+factory ExplanationOfBenefitProcessNote.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitProcessNoteFromJson(json);}
 
-  const factory General.explanationOfBenefitBenefitBalance({
+  @freezed
+abstract class ExplanationOfBenefitBenefitBalance with _$ExplanationOfBenefitBenefitBalance {
+const factory ExplanationOfBenefitBenefitBalance({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -574,9 +685,12 @@ abstract class General with _$General {
     CodeableConcept unit,
     CodeableConcept term,
     List<ExplanationOfBenefitFinancial> financial,
-  }) = ExplanationOfBenefitBenefitBalance;
+  }) = _ExplanationOfBenefitBenefitBalance;
+factory ExplanationOfBenefitBenefitBalance.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitBenefitBalanceFromJson(json);}
 
-  const factory General.explanationOfBenefitFinancial({
+  @freezed
+abstract class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
+const factory ExplanationOfBenefitFinancial({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -586,9 +700,12 @@ abstract class General with _$General {
     Money allowedMoney,
     int usedUnsignedInt,
     Money usedMoney,
-  }) = ExplanationOfBenefitFinancial;
+  }) = _ExplanationOfBenefitFinancial;
+factory ExplanationOfBenefitFinancial.fromJson(Map<String, dynamic> json) =>_$ExplanationOfBenefitFinancialFromJson(json);}
 
-  const factory General.contract({
+  @freezed
+abstract class Contract with _$Contract {
+const factory Contract({
     String resourceType,
     Id id,
     Meta meta,
@@ -633,9 +750,12 @@ abstract class General with _$General {
     List<ContractRule> rule,
     Attachment legallyBindingAttachment,
     Reference legallyBindingReference,
-  }) = Contract;
+  }) = _Contract;
+factory Contract.fromJson(Map<String, dynamic> json) =>_$ContractFromJson(json);}
 
-  const factory General.contractContentDefinition({
+  @freezed
+abstract class ContractContentDefinition with _$ContractContentDefinition {
+const factory ContractContentDefinition({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -645,9 +765,12 @@ abstract class General with _$General {
     FhirDateTime publicationDate,
     Code publicationStatus,
     Markdown copyright,
-  }) = ContractContentDefinition;
+  }) = _ContractContentDefinition;
+factory ContractContentDefinition.fromJson(Map<String, dynamic> json) =>_$ContractContentDefinitionFromJson(json);}
 
-  const factory General.contractTerm({
+  @freezed
+abstract class ContractTerm with _$ContractTerm {
+const factory ContractTerm({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -664,9 +787,12 @@ abstract class General with _$General {
     List<ContractAsset> asset,
     List<ContractAction> action,
     List<ContractTerm> group,
-  }) = ContractTerm;
+  }) = _ContractTerm;
+factory ContractTerm.fromJson(Map<String, dynamic> json) =>_$ContractTermFromJson(json);}
 
-  const factory General.contractSecurityLabel({
+  @freezed
+abstract class ContractSecurityLabel with _$ContractSecurityLabel {
+const factory ContractSecurityLabel({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -674,9 +800,12 @@ abstract class General with _$General {
     Coding classification,
     List<Coding> category,
     List<Coding> control,
-  }) = ContractSecurityLabel;
+  }) = _ContractSecurityLabel;
+factory ContractSecurityLabel.fromJson(Map<String, dynamic> json) =>_$ContractSecurityLabelFromJson(json);}
 
-  const factory General.contractOffer({
+  @freezed
+abstract class ContractOffer with _$ContractOffer {
+const factory ContractOffer({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -690,17 +819,23 @@ abstract class General with _$General {
     String text,
     List<String> linkId,
     List<int> securityLabelNumber,
-  }) = ContractOffer;
+  }) = _ContractOffer;
+factory ContractOffer.fromJson(Map<String, dynamic> json) =>_$ContractOfferFromJson(json);}
 
-  const factory General.contractParty({
+  @freezed
+abstract class ContractParty with _$ContractParty {
+const factory ContractParty({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Reference> reference,
     CodeableConcept role,
-  }) = ContractParty;
+  }) = _ContractParty;
+factory ContractParty.fromJson(Map<String, dynamic> json) =>_$ContractPartyFromJson(json);}
 
-  const factory General.contractAnswer({
+  @freezed
+abstract class ContractAnswer with _$ContractAnswer {
+const factory ContractAnswer({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -716,9 +851,12 @@ abstract class General with _$General {
     Coding valueCoding,
     Quantity valueQuantity,
     Reference valueReference,
-  }) = ContractAnswer;
+  }) = _ContractAnswer;
+factory ContractAnswer.fromJson(Map<String, dynamic> json) =>_$ContractAnswerFromJson(json);}
 
-  const factory General.contractAsset({
+  @freezed
+abstract class ContractAsset with _$ContractAsset {
+const factory ContractAsset({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -737,18 +875,24 @@ abstract class General with _$General {
     List<ContractAnswer> answer,
     List<int> securityLabelNumber,
     List<ContractValuedItem> valuedItem,
-  }) = ContractAsset;
+  }) = _ContractAsset;
+factory ContractAsset.fromJson(Map<String, dynamic> json) =>_$ContractAssetFromJson(json);}
 
-  const factory General.contractContext({
+  @freezed
+abstract class ContractContext with _$ContractContext {
+const factory ContractContext({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference reference,
     List<CodeableConcept> code,
     String text,
-  }) = ContractContext;
+  }) = _ContractContext;
+factory ContractContext.fromJson(Map<String, dynamic> json) =>_$ContractContextFromJson(json);}
 
-  const factory General.contractValuedItem({
+  @freezed
+abstract class ContractValuedItem with _$ContractValuedItem {
+const factory ContractValuedItem({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -767,9 +911,12 @@ abstract class General with _$General {
     Reference recipient,
     List<String> linkId,
     List<int> securityLabelNumber,
-  }) = ContractValuedItem;
+  }) = _ContractValuedItem;
+factory ContractValuedItem.fromJson(Map<String, dynamic> json) =>_$ContractValuedItemFromJson(json);}
 
-  const factory General.contractAction({
+  @freezed
+abstract class ContractAction with _$ContractAction {
+const factory ContractAction({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -796,49 +943,63 @@ abstract class General with _$General {
     List<String> reasonLinkId,
     List<Annotation> note,
     List<int> securityLabelNumber,
-  }) = ContractAction;
+  }) = _ContractAction;
+factory ContractAction.fromJson(Map<String, dynamic> json) =>_$ContractActionFromJson(json);}
 
-  const factory General.contractSubject({
+  @freezed
+abstract class ContractSubject with _$ContractSubject {
+const factory ContractSubject({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<Reference> reference,
     CodeableConcept role,
-  }) = ContractSubject;
+  }) = _ContractSubject;
+factory ContractSubject.fromJson(Map<String, dynamic> json) =>_$ContractSubjectFromJson(json);}
 
-  const factory General.contractSigner({
+  @freezed
+abstract class ContractSigner with _$ContractSigner {
+const factory ContractSigner({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Coding type,
     Reference party,
     List<Signature> signature,
-  }) = ContractSigner;
+  }) = _ContractSigner;
+factory ContractSigner.fromJson(Map<String, dynamic> json) =>_$ContractSignerFromJson(json);}
 
-  const factory General.contractFriendly({
+  @freezed
+abstract class ContractFriendly with _$ContractFriendly {
+const factory ContractFriendly({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Attachment contentAttachment,
     Reference contentReference,
-  }) = ContractFriendly;
+  }) = _ContractFriendly;
+factory ContractFriendly.fromJson(Map<String, dynamic> json) =>_$ContractFriendlyFromJson(json);}
 
-  const factory General.contractLegal({
+  @freezed
+abstract class ContractLegal with _$ContractLegal {
+const factory ContractLegal({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Attachment contentAttachment,
     Reference contentReference,
-  }) = ContractLegal;
+  }) = _ContractLegal;
+factory ContractLegal.fromJson(Map<String, dynamic> json) =>_$ContractLegalFromJson(json);}
 
-  const factory General.contractRule({
+  @freezed
+abstract class ContractRule with _$ContractRule {
+const factory ContractRule({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Attachment contentAttachment,
     Reference contentReference,
-  }) = ContractRule;
+  }) = _ContractRule;
+factory ContractRule.fromJson(Map<String, dynamic> json) =>_$ContractRuleFromJson(json);}
 
-  factory General.fromJson(Map<String, dynamic> json) =>
-      _$GeneralFromJson(json);
-}
+  

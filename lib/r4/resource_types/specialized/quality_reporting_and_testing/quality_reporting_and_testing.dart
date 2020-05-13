@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'quality_reporting_and_testing.enums.dart';
 
-part 'quality_reporting_and_testing.g.dart';
 part 'quality_reporting_and_testing.freezed.dart';
+part 'quality_reporting_and_testing.g.dart';
 
 @freezed
-abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
-  const factory QualityReportingAndTesting.measureReport({
+abstract class MeasureReport with _$MeasureReport {
+  const factory MeasureReport({
     String resourceType,
     Id id,
     Meta meta,
@@ -29,9 +29,14 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
     CodeableConcept improvementNotation,
     List<MeasureReportGroup> group,
     List<Reference> evaluatedResource,
-  }) = MeasureReport;
+  }) = _MeasureReport;
+  factory MeasureReport.fromJson(Map<String, dynamic> json) =>
+      _$MeasureReportFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.measureReportGroup({
+@freezed
+abstract class MeasureReportGroup with _$MeasureReportGroup {
+  const factory MeasureReportGroup({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -39,26 +44,41 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
     List<MeasureReportPopulation> population,
     Quantity measureScore,
     List<MeasureReportStratifier> stratifier,
-  }) = MeasureReportGroup;
+  }) = _MeasureReportGroup;
+  factory MeasureReportGroup.fromJson(Map<String, dynamic> json) =>
+      _$MeasureReportGroupFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.measureReportPopulation({
+@freezed
+abstract class MeasureReportPopulation with _$MeasureReportPopulation {
+  const factory MeasureReportPopulation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     int count,
     Reference subjectResults,
-  }) = MeasureReportPopulation;
+  }) = _MeasureReportPopulation;
+  factory MeasureReportPopulation.fromJson(Map<String, dynamic> json) =>
+      _$MeasureReportPopulationFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.measureReportStratifier({
+@freezed
+abstract class MeasureReportStratifier with _$MeasureReportStratifier {
+  const factory MeasureReportStratifier({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> code,
     List<MeasureReportStratum> stratum,
-  }) = MeasureReportStratifier;
+  }) = _MeasureReportStratifier;
+  factory MeasureReportStratifier.fromJson(Map<String, dynamic> json) =>
+      _$MeasureReportStratifierFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.measureReportStratum({
+@freezed
+abstract class MeasureReportStratum with _$MeasureReportStratum {
+  const factory MeasureReportStratum({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -66,26 +86,41 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
     List<MeasureReportComponent> component,
     List<MeasureReportPopulation1> population,
     Quantity measureScore,
-  }) = MeasureReportStratum;
+  }) = _MeasureReportStratum;
+  factory MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
+      _$MeasureReportStratumFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.measureReportComponent({
+@freezed
+abstract class MeasureReportComponent with _$MeasureReportComponent {
+  const factory MeasureReportComponent({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     CodeableConcept value,
-  }) = MeasureReportComponent;
+  }) = _MeasureReportComponent;
+  factory MeasureReportComponent.fromJson(Map<String, dynamic> json) =>
+      _$MeasureReportComponentFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.measureReportPopulation1({
+@freezed
+abstract class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
+  const factory MeasureReportPopulation1({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     int count,
     Reference subjectResults,
-  }) = MeasureReportPopulation1;
+  }) = _MeasureReportPopulation1;
+  factory MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =>
+      _$MeasureReportPopulation1FromJson(json);
+}
 
-  const factory QualityReportingAndTesting.measure({
+@freezed
+abstract class Measure with _$Measure {
+  const factory Measure({
     String resourceType,
     Id id,
     Meta meta,
@@ -137,9 +172,14 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
     Markdown guidance,
     List<MeasureGroup> group,
     List<MeasureSupplementalData> supplementalData,
-  }) = Measure;
+  }) = _Measure;
+  factory Measure.fromJson(Map<String, dynamic> json) =>
+      _$MeasureFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.measureGroup({
+@freezed
+abstract class MeasureGroup with _$MeasureGroup {
+  const factory MeasureGroup({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -147,18 +187,28 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
     String description,
     List<MeasurePopulation> population,
     List<MeasureStratifier> stratifier,
-  }) = MeasureGroup;
+  }) = _MeasureGroup;
+  factory MeasureGroup.fromJson(Map<String, dynamic> json) =>
+      _$MeasureGroupFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.measurePopulation({
+@freezed
+abstract class MeasurePopulation with _$MeasurePopulation {
+  const factory MeasurePopulation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     String description,
     Expression criteria,
-  }) = MeasurePopulation;
+  }) = _MeasurePopulation;
+  factory MeasurePopulation.fromJson(Map<String, dynamic> json) =>
+      _$MeasurePopulationFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.measureStratifier({
+@freezed
+abstract class MeasureStratifier with _$MeasureStratifier {
+  const factory MeasureStratifier({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -166,18 +216,28 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
     String description,
     Expression criteria,
     List<MeasureComponent> component,
-  }) = MeasureStratifier;
+  }) = _MeasureStratifier;
+  factory MeasureStratifier.fromJson(Map<String, dynamic> json) =>
+      _$MeasureStratifierFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.measureComponent({
+@freezed
+abstract class MeasureComponent with _$MeasureComponent {
+  const factory MeasureComponent({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     String description,
     Expression criteria,
-  }) = MeasureComponent;
+  }) = _MeasureComponent;
+  factory MeasureComponent.fromJson(Map<String, dynamic> json) =>
+      _$MeasureComponentFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.measureSupplementalData({
+@freezed
+abstract class MeasureSupplementalData with _$MeasureSupplementalData {
+  const factory MeasureSupplementalData({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -185,9 +245,14 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
     List<CodeableConcept> usage,
     String description,
     Expression criteria,
-  }) = MeasureSupplementalData;
+  }) = _MeasureSupplementalData;
+  factory MeasureSupplementalData.fromJson(Map<String, dynamic> json) =>
+      _$MeasureSupplementalDataFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testScript({
+@freezed
+abstract class TestScript with _$TestScript {
+  const factory TestScript({
     String resourceType,
     Id id,
     Meta meta,
@@ -221,41 +286,66 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
     TestScriptSetup setup,
     List<TestScriptTest> test,
     TestScriptTeardown teardown,
-  }) = TestScript;
+  }) = _TestScript;
+  factory TestScript.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testScriptOrigin({
+@freezed
+abstract class TestScriptOrigin with _$TestScriptOrigin {
+  const factory TestScriptOrigin({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int index,
     Coding profile,
-  }) = TestScriptOrigin;
+  }) = _TestScriptOrigin;
+  factory TestScriptOrigin.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptOriginFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testScriptDestination({
+@freezed
+abstract class TestScriptDestination with _$TestScriptDestination {
+  const factory TestScriptDestination({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int index,
     Coding profile,
-  }) = TestScriptDestination;
+  }) = _TestScriptDestination;
+  factory TestScriptDestination.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptDestinationFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testScriptMetadata({
+@freezed
+abstract class TestScriptMetadata with _$TestScriptMetadata {
+  const factory TestScriptMetadata({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<TestScriptLink> link,
     List<TestScriptCapability> capability,
-  }) = TestScriptMetadata;
+  }) = _TestScriptMetadata;
+  factory TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptMetadataFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testScriptLink({
+@freezed
+abstract class TestScriptLink with _$TestScriptLink {
+  const factory TestScriptLink({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri url,
     String description,
-  }) = TestScriptLink;
+  }) = _TestScriptLink;
+  factory TestScriptLink.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptLinkFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testScriptCapability({
+@freezed
+abstract class TestScriptCapability with _$TestScriptCapability {
+  const factory TestScriptCapability({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -266,18 +356,28 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
     int destination,
     List<FhirUri> link,
     Canonical capabilities,
-  }) = TestScriptCapability;
+  }) = _TestScriptCapability;
+  factory TestScriptCapability.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptCapabilityFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testScriptFixture({
+@freezed
+abstract class TestScriptFixture with _$TestScriptFixture {
+  const factory TestScriptFixture({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool autocreate,
     bool autodelete,
     Reference resource,
-  }) = TestScriptFixture;
+  }) = _TestScriptFixture;
+  factory TestScriptFixture.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptFixtureFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testScriptVariable({
+@freezed
+abstract class TestScriptVariable with _$TestScriptVariable {
+  const factory TestScriptVariable({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -289,24 +389,39 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
     String hint,
     String path,
     Id sourceId,
-  }) = TestScriptVariable;
+  }) = _TestScriptVariable;
+  factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptVariableFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testScriptSetup({
+@freezed
+abstract class TestScriptSetup with _$TestScriptSetup {
+  const factory TestScriptSetup({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<TestScriptAction> action,
-  }) = TestScriptSetup;
+  }) = _TestScriptSetup;
+  factory TestScriptSetup.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptSetupFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testScriptAction({
+@freezed
+abstract class TestScriptAction with _$TestScriptAction {
+  const factory TestScriptAction({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     TestScriptOperation operation,
     @JsonKey(name: 'assert') TestScriptAssert asserts,
-  }) = TestScriptAction;
+  }) = _TestScriptAction;
+  factory TestScriptAction.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptActionFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testScriptOperation({
+@freezed
+abstract class TestScriptOperation with _$TestScriptOperation {
+  const factory TestScriptOperation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -327,17 +442,27 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
     Id sourceId,
     Id targetId,
     String url,
-  }) = TestScriptOperation;
+  }) = _TestScriptOperation;
+  factory TestScriptOperation.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptOperationFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testScriptRequestHeader({
+@freezed
+abstract class TestScriptRequestHeader with _$TestScriptRequestHeader {
+  const factory TestScriptRequestHeader({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String field,
     String value,
-  }) = TestScriptRequestHeader;
+  }) = _TestScriptRequestHeader;
+  factory TestScriptRequestHeader.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptRequestHeaderFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testScriptAssert({
+@freezed
+abstract class TestScriptAssert with _$TestScriptAssert {
+  const factory TestScriptAssert({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -363,40 +488,65 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
     Id validateProfileId,
     String value,
     bool warningOnly,
-  }) = TestScriptAssert;
+  }) = _TestScriptAssert;
+  factory TestScriptAssert.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptAssertFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testScriptTest({
+@freezed
+abstract class TestScriptTest with _$TestScriptTest {
+  const factory TestScriptTest({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     String description,
     List<TestScriptAction1> action,
-  }) = TestScriptTest;
+  }) = _TestScriptTest;
+  factory TestScriptTest.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptTestFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testScriptAction1({
+@freezed
+abstract class TestScriptAction1 with _$TestScriptAction1 {
+  const factory TestScriptAction1({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     TestScriptOperation operation,
     @JsonKey(name: 'assert') TestScriptAssert asserts,
-  }) = TestScriptAction1;
+  }) = _TestScriptAction1;
+  factory TestScriptAction1.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptAction1FromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testScriptTeardown({
+@freezed
+abstract class TestScriptTeardown with _$TestScriptTeardown {
+  const factory TestScriptTeardown({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<TestScriptAction2> action,
-  }) = TestScriptTeardown;
+  }) = _TestScriptTeardown;
+  factory TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptTeardownFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testScriptAction2({
+@freezed
+abstract class TestScriptAction2 with _$TestScriptAction2 {
+  const factory TestScriptAction2({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     TestScriptOperation operation,
-  }) = TestScriptAction2;
+  }) = _TestScriptAction2;
+  factory TestScriptAction2.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptAction2FromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testReport({
+@freezed
+abstract class TestReport with _$TestReport {
+  const factory TestReport({
     String resourceType,
     Id id,
     Meta meta,
@@ -418,81 +568,125 @@ abstract class QualityReportingAndTesting with _$QualityReportingAndTesting {
     TestReportSetup setup,
     List<TestReportTest> test,
     TestReportTeardown teardown,
-  }) = TestReport;
+  }) = _TestReport;
+  factory TestReport.fromJson(Map<String, dynamic> json) =>
+      _$TestReportFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testReportParticipant({
+@freezed
+abstract class TestReportParticipant with _$TestReportParticipant {
+  const factory TestReportParticipant({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     TestReportParticipantType type,
     FhirUri uri,
     String display,
-  }) = TestReportParticipant;
+  }) = _TestReportParticipant;
+  factory TestReportParticipant.fromJson(Map<String, dynamic> json) =>
+      _$TestReportParticipantFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testReportSetup({
+@freezed
+abstract class TestReportSetup with _$TestReportSetup {
+  const factory TestReportSetup({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<TestReportAction> action,
-  }) = TestReportSetup;
+  }) = _TestReportSetup;
+  factory TestReportSetup.fromJson(Map<String, dynamic> json) =>
+      _$TestReportSetupFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testReportAction({
+@freezed
+abstract class TestReportAction with _$TestReportAction {
+  const factory TestReportAction({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     TestReportOperation operation,
     @JsonKey(name: 'assert') TestReportAssert asserts,
-  }) = TestReportAction;
+  }) = _TestReportAction;
+  factory TestReportAction.fromJson(Map<String, dynamic> json) =>
+      _$TestReportActionFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testReportOperation({
+@freezed
+abstract class TestReportOperation with _$TestReportOperation {
+  const factory TestReportOperation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     TestReportOperationResult result,
     Markdown message,
     FhirUri detail,
-  }) = TestReportOperation;
+  }) = _TestReportOperation;
+  factory TestReportOperation.fromJson(Map<String, dynamic> json) =>
+      _$TestReportOperationFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testReportAssert({
+@freezed
+abstract class TestReportAssert with _$TestReportAssert {
+  const factory TestReportAssert({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     TestReportAssertResult result,
     Markdown message,
     String detail,
-  }) = TestReportAssert;
+  }) = _TestReportAssert;
+  factory TestReportAssert.fromJson(Map<String, dynamic> json) =>
+      _$TestReportAssertFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testReportTest({
+@freezed
+abstract class TestReportTest with _$TestReportTest {
+  const factory TestReportTest({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     String description,
     List<TestReportAction1> action,
-  }) = TestReportTest;
+  }) = _TestReportTest;
+  factory TestReportTest.fromJson(Map<String, dynamic> json) =>
+      _$TestReportTestFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testReportAction1({
+@freezed
+abstract class TestReportAction1 with _$TestReportAction1 {
+  const factory TestReportAction1({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     TestReportOperation operation,
     @JsonKey(name: 'assert') TestReportAssert asserts,
-  }) = TestReportAction1;
+  }) = _TestReportAction1;
+  factory TestReportAction1.fromJson(Map<String, dynamic> json) =>
+      _$TestReportAction1FromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testReportTeardown({
+@freezed
+abstract class TestReportTeardown with _$TestReportTeardown {
+  const factory TestReportTeardown({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<TestReportAction2> action,
-  }) = TestReportTeardown;
+  }) = _TestReportTeardown;
+  factory TestReportTeardown.fromJson(Map<String, dynamic> json) =>
+      _$TestReportTeardownFromJson(json);
+}
 
-  const factory QualityReportingAndTesting.testReportAction2({
+@freezed
+abstract class TestReportAction2 with _$TestReportAction2 {
+  const factory TestReportAction2({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     TestReportOperation operation,
-  }) = TestReportAction2;
-
-  factory QualityReportingAndTesting.fromJson(Map<String, dynamic> json) =>
-      _$QualityReportingAndTestingFromJson(json);
+  }) = _TestReportAction2;
+  factory TestReportAction2.fromJson(Map<String, dynamic> json) =>
+      _$TestReportAction2FromJson(json);
 }

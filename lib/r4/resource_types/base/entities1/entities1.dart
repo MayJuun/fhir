@@ -3,8 +3,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'entities1.enums.dart';
 
-part 'entities1.g.dart';
 part 'entities1.freezed.dart';
+part 'entities1.g.dart';
 
 abstract class HealthcareService with _$HealthcareService {
   const factory HealthcareService({

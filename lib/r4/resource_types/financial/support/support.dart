@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'support.enums.dart';
 
-part 'support.g.dart';
 part 'support.freezed.dart';
+part 'support.g.dart';
 
 @freezed
-abstract class Support with _$Support {
-  const factory Support.enrollmentRequest({
+abstract class EnrollmentRequest with _$EnrollmentRequest {
+  const factory EnrollmentRequest({
     String resourceType,
     Id id,
     Meta meta,
@@ -25,9 +25,14 @@ abstract class Support with _$Support {
     Reference provider,
     Reference candidate,
     Reference coverage,
-  }) = EnrollmentRequest;
+  }) = _EnrollmentRequest;
+  factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
+      _$EnrollmentRequestFromJson(json);
+}
 
-  const factory Support.enrollmentResponse({
+@freezed
+abstract class EnrollmentResponse with _$EnrollmentResponse {
+  const factory EnrollmentResponse({
     String resourceType,
     Meta meta,
     FhirUri implicitRules,
@@ -44,9 +49,14 @@ abstract class Support with _$Support {
     FhirDateTime created,
     Reference organization,
     Reference requestProvider,
-  }) = EnrollmentResponse;
+  }) = _EnrollmentResponse;
+  factory EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
+      _$EnrollmentResponseFromJson(json);
+}
 
-  const factory Support.coverageEligibilityResponse({
+@freezed
+abstract class CoverageEligibilityResponse with _$CoverageEligibilityResponse {
+  const factory CoverageEligibilityResponse({
     String resourceType,
     Id id,
     Meta meta,
@@ -71,18 +81,31 @@ abstract class Support with _$Support {
     String preAuthRef,
     CodeableConcept form,
     List<CoverageEligibilityResponseError> error,
-  }) = CoverageEligibilityResponse;
+  }) = _CoverageEligibilityResponse;
+  factory CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =>
+      _$CoverageEligibilityResponseFromJson(json);
+}
 
-  const factory Support.coverageEligibilityResponseInsurance({
+@freezed
+abstract class CoverageEligibilityResponseInsurance
+    with _$CoverageEligibilityResponseInsurance {
+  const factory CoverageEligibilityResponseInsurance({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference coverage,
     bool inforce,
     List<CoverageEligibilityResponseItem> item,
-  }) = CoverageEligibilityResponseInsurance;
+  }) = _CoverageEligibilityResponseInsurance;
+  factory CoverageEligibilityResponseInsurance.fromJson(
+          Map<String, dynamic> json) =>
+      _$CoverageEligibilityResponseInsuranceFromJson(json);
+}
 
-  const factory Support.coverageEligibilityResponseItem({
+@freezed
+abstract class CoverageEligibilityResponseItem
+    with _$CoverageEligibilityResponseItem {
+  const factory CoverageEligibilityResponseItem({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -100,9 +123,15 @@ abstract class Support with _$Support {
     bool authorizationRequired,
     List<CodeableConcept> authorizationSupporting,
     FhirUri authorizationUrl,
-  }) = CoverageEligibilityResponseItem;
+  }) = _CoverageEligibilityResponseItem;
+  factory CoverageEligibilityResponseItem.fromJson(Map<String, dynamic> json) =>
+      _$CoverageEligibilityResponseItemFromJson(json);
+}
 
-  const factory Support.coverageEligibilityResponseBenefit({
+@freezed
+abstract class CoverageEligibilityResponseBenefit
+    with _$CoverageEligibilityResponseBenefit {
+  const factory CoverageEligibilityResponseBenefit({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -113,16 +142,29 @@ abstract class Support with _$Support {
     int usedUnsignedInt,
     String usedString,
     Money usedMoney,
-  }) = CoverageEligibilityResponseBenefit;
+  }) = _CoverageEligibilityResponseBenefit;
+  factory CoverageEligibilityResponseBenefit.fromJson(
+          Map<String, dynamic> json) =>
+      _$CoverageEligibilityResponseBenefitFromJson(json);
+}
 
-  const factory Support.coverageEligibilityResponseError({
+@freezed
+abstract class CoverageEligibilityResponseError
+    with _$CoverageEligibilityResponseError {
+  const factory CoverageEligibilityResponseError({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
-  }) = CoverageEligibilityResponseError;
+  }) = _CoverageEligibilityResponseError;
+  factory CoverageEligibilityResponseError.fromJson(
+          Map<String, dynamic> json) =>
+      _$CoverageEligibilityResponseErrorFromJson(json);
+}
 
-  const factory Support.coverageEligibilityRequest({
+@freezed
+abstract class CoverageEligibilityRequest with _$CoverageEligibilityRequest {
+  const factory CoverageEligibilityRequest({
     String resourceType,
     Id id,
     Meta meta,
@@ -147,27 +189,47 @@ abstract class Support with _$Support {
     List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
     List<CoverageEligibilityRequestInsurance> insurance,
     List<CoverageEligibilityRequestItem> item,
-  }) = CoverageEligibilityRequest;
+  }) = _CoverageEligibilityRequest;
+  factory CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =>
+      _$CoverageEligibilityRequestFromJson(json);
+}
 
-  const factory Support.coverageEligibilityRequestSupportingInfo({
+@freezed
+abstract class CoverageEligibilityRequestSupportingInfo
+    with _$CoverageEligibilityRequestSupportingInfo {
+  const factory CoverageEligibilityRequestSupportingInfo({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int sequence,
     Reference information,
     bool appliesToAll,
-  }) = CoverageEligibilityRequestSupportingInfo;
+  }) = _CoverageEligibilityRequestSupportingInfo;
+  factory CoverageEligibilityRequestSupportingInfo.fromJson(
+          Map<String, dynamic> json) =>
+      _$CoverageEligibilityRequestSupportingInfoFromJson(json);
+}
 
-  const factory Support.coverageEligibilityRequestInsurance({
+@freezed
+abstract class CoverageEligibilityRequestInsurance
+    with _$CoverageEligibilityRequestInsurance {
+  const factory CoverageEligibilityRequestInsurance({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool focal,
     Reference coverage,
     String businessArrangement,
-  }) = CoverageEligibilityRequestInsurance;
+  }) = _CoverageEligibilityRequestInsurance;
+  factory CoverageEligibilityRequestInsurance.fromJson(
+          Map<String, dynamic> json) =>
+      _$CoverageEligibilityRequestInsuranceFromJson(json);
+}
 
-  const factory Support.coverageEligibilityRequestItem({
+@freezed
+abstract class CoverageEligibilityRequestItem
+    with _$CoverageEligibilityRequestItem {
+  const factory CoverageEligibilityRequestItem({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -181,17 +243,29 @@ abstract class Support with _$Support {
     Reference facility,
     List<CoverageEligibilityRequestDiagnosis> diagnosis,
     List<Reference> detail,
-  }) = CoverageEligibilityRequestItem;
+  }) = _CoverageEligibilityRequestItem;
+  factory CoverageEligibilityRequestItem.fromJson(Map<String, dynamic> json) =>
+      _$CoverageEligibilityRequestItemFromJson(json);
+}
 
-  const factory Support.coverageEligibilityRequestDiagnosis({
+@freezed
+abstract class CoverageEligibilityRequestDiagnosis
+    with _$CoverageEligibilityRequestDiagnosis {
+  const factory CoverageEligibilityRequestDiagnosis({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept diagnosisCodeableConcept,
     Reference diagnosisReference,
-  }) = CoverageEligibilityRequestDiagnosis;
+  }) = _CoverageEligibilityRequestDiagnosis;
+  factory CoverageEligibilityRequestDiagnosis.fromJson(
+          Map<String, dynamic> json) =>
+      _$CoverageEligibilityRequestDiagnosisFromJson(json);
+}
 
-  const factory Support.coverage({
+@freezed
+abstract class Coverage with _$Coverage {
+  const factory Coverage({
     String resourceType,
     Id id,
     Meta meta,
@@ -218,18 +292,28 @@ abstract class Support with _$Support {
     List<CoverageCostToBeneficiary> costToBeneficiary,
     bool subrogation,
     List<Reference> contract,
-  }) = Coverage;
+  }) = _Coverage;
+  factory Coverage.fromJson(Map<String, dynamic> json) =>
+      _$CoverageFromJson(json);
+}
 
-  const factory Support.coverageClass({
+@freezed
+abstract class CoverageClass with _$CoverageClass {
+  const factory CoverageClass({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     String value,
     String name,
-  }) = CoverageClass;
+  }) = _CoverageClass;
+  factory CoverageClass.fromJson(Map<String, dynamic> json) =>
+      _$CoverageClassFromJson(json);
+}
 
-  const factory Support.coverageCostToBeneficiary({
+@freezed
+abstract class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
+  const factory CoverageCostToBeneficiary({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -237,16 +321,20 @@ abstract class Support with _$Support {
     Quantity valueQuantity,
     Money valueMoney,
     List<CoverageException> exception,
-  }) = CoverageCostToBeneficiary;
+  }) = _CoverageCostToBeneficiary;
+  factory CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json) =>
+      _$CoverageCostToBeneficiaryFromJson(json);
+}
 
-  const factory Support.coverageException({
+@freezed
+abstract class CoverageException with _$CoverageException {
+  const factory CoverageException({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     Period period,
-  }) = CoverageException;
-
-  factory Support.fromJson(Map<String, dynamic> json) =>
-      _$SupportFromJson(json);
+  }) = _CoverageException;
+  factory CoverageException.fromJson(Map<String, dynamic> json) =>
+      _$CoverageExceptionFromJson(json);
 }

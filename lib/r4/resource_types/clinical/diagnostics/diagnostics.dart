@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'diagnostics.enums.dart';
 
-part 'diagnostics.g.dart';
 part 'diagnostics.freezed.dart';
+part 'diagnostics.g.dart';
 
 @freezed
-abstract class Diagnostics with _$Diagnostics {
-  const factory Diagnostics.imagingStudy({
+abstract class ImagingStudy with _$ImagingStudy {
+  const factory ImagingStudy({
     String resourceType,
     Id id,
     Meta meta,
@@ -38,9 +38,14 @@ abstract class Diagnostics with _$Diagnostics {
     List<Annotation> note,
     String description,
     List<ImagingStudySeries> series,
-  }) = ImagingStudy;
+  }) = _ImagingStudy;
+  factory ImagingStudy.fromJson(Map<String, dynamic> json) =>
+      _$ImagingStudyFromJson(json);
+}
 
-  const factory Diagnostics.imagingStudySeries({
+@freezed
+abstract class ImagingStudySeries with _$ImagingStudySeries {
+  const factory ImagingStudySeries({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -56,17 +61,27 @@ abstract class Diagnostics with _$Diagnostics {
     FhirDateTime started,
     List<ImagingStudyPerformer> performer,
     List<ImagingStudyInstance> instance,
-  }) = ImagingStudySeries;
+  }) = _ImagingStudySeries;
+  factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
+      _$ImagingStudySeriesFromJson(json);
+}
 
-  const factory Diagnostics.imagingStudyPerformer({
+@freezed
+abstract class ImagingStudyPerformer with _$ImagingStudyPerformer {
+  const factory ImagingStudyPerformer({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept function,
     Reference actor,
-  }) = ImagingStudyPerformer;
+  }) = _ImagingStudyPerformer;
+  factory ImagingStudyPerformer.fromJson(Map<String, dynamic> json) =>
+      _$ImagingStudyPerformerFromJson(json);
+}
 
-  const factory Diagnostics.imagingStudyInstance({
+@freezed
+abstract class ImagingStudyInstance with _$ImagingStudyInstance {
+  const factory ImagingStudyInstance({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -74,9 +89,14 @@ abstract class Diagnostics with _$Diagnostics {
     Coding sopClass,
     int number,
     String title,
-  }) = ImagingStudyInstance;
+  }) = _ImagingStudyInstance;
+  factory ImagingStudyInstance.fromJson(Map<String, dynamic> json) =>
+      _$ImagingStudyInstanceFromJson(json);
+}
 
-  const factory Diagnostics.specimen({
+@freezed
+abstract class Specimen with _$Specimen {
+  const factory Specimen({
     String resourceType,
     Id id,
     Meta meta,
@@ -99,9 +119,14 @@ abstract class Diagnostics with _$Diagnostics {
     List<SpecimenContainer> container,
     List<CodeableConcept> condition,
     List<Annotation> note,
-  }) = Specimen;
+  }) = _Specimen;
+  factory Specimen.fromJson(Map<String, dynamic> json) =>
+      _$SpecimenFromJson(json);
+}
 
-  const factory Diagnostics.specimenCollection({
+@freezed
+abstract class SpecimenCollection with _$SpecimenCollection {
+  const factory SpecimenCollection({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -114,9 +139,14 @@ abstract class Diagnostics with _$Diagnostics {
     CodeableConcept bodySite,
     CodeableConcept fastingStatusCodeableConcept,
     Duration fastingStatusDuration,
-  }) = SpecimenCollection;
+  }) = _SpecimenCollection;
+  factory SpecimenCollection.fromJson(Map<String, dynamic> json) =>
+      _$SpecimenCollectionFromJson(json);
+}
 
-  const factory Diagnostics.specimenProcessing({
+@freezed
+abstract class SpecimenProcessing with _$SpecimenProcessing {
+  const factory SpecimenProcessing({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -125,9 +155,14 @@ abstract class Diagnostics with _$Diagnostics {
     List<Reference> additive,
     FhirDateTime timeDateTime,
     Period timePeriod,
-  }) = SpecimenProcessing;
+  }) = _SpecimenProcessing;
+  factory SpecimenProcessing.fromJson(Map<String, dynamic> json) =>
+      _$SpecimenProcessingFromJson(json);
+}
 
-  const factory Diagnostics.specimenContainer({
+@freezed
+abstract class SpecimenContainer with _$SpecimenContainer {
+  const factory SpecimenContainer({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -138,9 +173,14 @@ abstract class Diagnostics with _$Diagnostics {
     Quantity specimenQuantity,
     CodeableConcept additiveCodeableConcept,
     Reference additiveReference,
-  }) = SpecimenContainer;
+  }) = _SpecimenContainer;
+  factory SpecimenContainer.fromJson(Map<String, dynamic> json) =>
+      _$SpecimenContainerFromJson(json);
+}
 
-  const factory Diagnostics.molecularSequence({
+@freezed
+abstract class MolecularSequence with _$MolecularSequence {
+  const factory MolecularSequence({
     String resourceType,
     Id id,
     Meta meta,
@@ -166,9 +206,15 @@ abstract class Diagnostics with _$Diagnostics {
     List<MolecularSequenceRepository> repository,
     List<Reference> pointer,
     List<MolecularSequenceStructureVariant> structureVariant,
-  }) = MolecularSequence;
+  }) = _MolecularSequence;
+  factory MolecularSequence.fromJson(Map<String, dynamic> json) =>
+      _$MolecularSequenceFromJson(json);
+}
 
-  const factory Diagnostics.molecularSequenceReferenceSeq({
+@freezed
+abstract class MolecularSequenceReferenceSeq
+    with _$MolecularSequenceReferenceSeq {
+  const factory MolecularSequenceReferenceSeq({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -181,9 +227,14 @@ abstract class Diagnostics with _$Diagnostics {
     MolecularSequenceReferenceSeqStrand strand,
     int windowStart,
     int windowEnd,
-  }) = MolecularSequenceReferenceSeq;
+  }) = _MolecularSequenceReferenceSeq;
+  factory MolecularSequenceReferenceSeq.fromJson(Map<String, dynamic> json) =>
+      _$MolecularSequenceReferenceSeqFromJson(json);
+}
 
-  const factory Diagnostics.molecularSequenceVariant({
+@freezed
+abstract class MolecularSequenceVariant with _$MolecularSequenceVariant {
+  const factory MolecularSequenceVariant({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -193,9 +244,14 @@ abstract class Diagnostics with _$Diagnostics {
     String referenceAllele,
     String cigar,
     Reference variantPointer,
-  }) = MolecularSequenceVariant;
+  }) = _MolecularSequenceVariant;
+  factory MolecularSequenceVariant.fromJson(Map<String, dynamic> json) =>
+      _$MolecularSequenceVariantFromJson(json);
+}
 
-  const factory Diagnostics.molecularSequenceQuality({
+@freezed
+abstract class MolecularSequenceQuality with _$MolecularSequenceQuality {
+  const factory MolecularSequenceQuality({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -214,9 +270,14 @@ abstract class Diagnostics with _$Diagnostics {
     double recall,
     double fScore,
     MolecularSequenceRoc roc,
-  }) = MolecularSequenceQuality;
+  }) = _MolecularSequenceQuality;
+  factory MolecularSequenceQuality.fromJson(Map<String, dynamic> json) =>
+      _$MolecularSequenceQualityFromJson(json);
+}
 
-  const factory Diagnostics.molecularSequenceRoc({
+@freezed
+abstract class MolecularSequenceRoc with _$MolecularSequenceRoc {
+  const factory MolecularSequenceRoc({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -227,9 +288,14 @@ abstract class Diagnostics with _$Diagnostics {
     List<double> precision,
     List<double> sensitivity,
     List<double> fMeasure,
-  }) = MolecularSequenceRoc;
+  }) = _MolecularSequenceRoc;
+  factory MolecularSequenceRoc.fromJson(Map<String, dynamic> json) =>
+      _$MolecularSequenceRocFromJson(json);
+}
 
-  const factory Diagnostics.molecularSequenceRepository({
+@freezed
+abstract class MolecularSequenceRepository with _$MolecularSequenceRepository {
+  const factory MolecularSequenceRepository({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -239,9 +305,15 @@ abstract class Diagnostics with _$Diagnostics {
     String datasetId,
     String variantsetId,
     String readsetId,
-  }) = MolecularSequenceRepository;
+  }) = _MolecularSequenceRepository;
+  factory MolecularSequenceRepository.fromJson(Map<String, dynamic> json) =>
+      _$MolecularSequenceRepositoryFromJson(json);
+}
 
-  const factory Diagnostics.molecularSequenceStructureVariant({
+@freezed
+abstract class MolecularSequenceStructureVariant
+    with _$MolecularSequenceStructureVariant {
+  const factory MolecularSequenceStructureVariant({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -250,25 +322,41 @@ abstract class Diagnostics with _$Diagnostics {
     int length,
     MolecularSequenceOuter outer,
     MolecularSequenceInner inner,
-  }) = MolecularSequenceStructureVariant;
+  }) = _MolecularSequenceStructureVariant;
+  factory MolecularSequenceStructureVariant.fromJson(
+          Map<String, dynamic> json) =>
+      _$MolecularSequenceStructureVariantFromJson(json);
+}
 
-  const factory Diagnostics.molecularSequenceOuter({
+@freezed
+abstract class MolecularSequenceOuter with _$MolecularSequenceOuter {
+  const factory MolecularSequenceOuter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int start,
     int end,
-  }) = MolecularSequenceOuter;
+  }) = _MolecularSequenceOuter;
+  factory MolecularSequenceOuter.fromJson(Map<String, dynamic> json) =>
+      _$MolecularSequenceOuterFromJson(json);
+}
 
-  const factory Diagnostics.molecularSequenceInner({
+@freezed
+abstract class MolecularSequenceInner with _$MolecularSequenceInner {
+  const factory MolecularSequenceInner({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int start,
     int end,
-  }) = MolecularSequenceInner;
+  }) = _MolecularSequenceInner;
+  factory MolecularSequenceInner.fromJson(Map<String, dynamic> json) =>
+      _$MolecularSequenceInnerFromJson(json);
+}
 
-  const factory Diagnostics.observation({
+@freezed
+abstract class Observation with _$Observation {
+  const factory Observation({
     String resourceType,
     Id id,
     Meta meta,
@@ -315,9 +403,14 @@ abstract class Diagnostics with _$Diagnostics {
     List<Reference> hasMember,
     List<Reference> derivedFrom,
     List<ObservationComponent> component,
-  }) = Observation;
+  }) = _Observation;
+  factory Observation.fromJson(Map<String, dynamic> json) =>
+      _$ObservationFromJson(json);
+}
 
-  const factory Diagnostics.observationReferenceRange({
+@freezed
+abstract class ObservationReferenceRange with _$ObservationReferenceRange {
+  const factory ObservationReferenceRange({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -327,9 +420,14 @@ abstract class Diagnostics with _$Diagnostics {
     List<CodeableConcept> appliesTo,
     Range age,
     String text,
-  }) = ObservationReferenceRange;
+  }) = _ObservationReferenceRange;
+  factory ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
+      _$ObservationReferenceRangeFromJson(json);
+}
 
-  const factory Diagnostics.observationComponent({
+@freezed
+abstract class ObservationComponent with _$ObservationComponent {
+  const factory ObservationComponent({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -348,9 +446,14 @@ abstract class Diagnostics with _$Diagnostics {
     CodeableConcept dataAbsentReason,
     List<CodeableConcept> interpretation,
     List<ObservationReferenceRange> referenceRange,
-  }) = ObservationComponent;
+  }) = _ObservationComponent;
+  factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
+      _$ObservationComponentFromJson(json);
+}
 
-  const factory Diagnostics.bodyStructure({
+@freezed
+abstract class BodyStructure with _$BodyStructure {
+  const factory BodyStructure({
     String resourceType,
     Id id,
     Meta meta,
@@ -368,9 +471,14 @@ abstract class Diagnostics with _$Diagnostics {
     String description,
     List<Attachment> image,
     Reference patient,
-  }) = BodyStructure;
+  }) = _BodyStructure;
+  factory BodyStructure.fromJson(Map<String, dynamic> json) =>
+      _$BodyStructureFromJson(json);
+}
 
-  const factory Diagnostics.questionnaireResponse({
+@freezed
+abstract class QuestionnaireResponse with _$QuestionnaireResponse {
+  const factory QuestionnaireResponse({
     String resourceType,
     Id id,
     Meta meta,
@@ -391,9 +499,14 @@ abstract class Diagnostics with _$Diagnostics {
     Reference author,
     Reference source,
     List<QuestionnaireResponseItem> item,
-  }) = QuestionnaireResponse;
+  }) = _QuestionnaireResponse;
+  factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
+      _$QuestionnaireResponseFromJson(json);
+}
 
-  const factory Diagnostics.questionnaireResponseItem({
+@freezed
+abstract class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
+  const factory QuestionnaireResponseItem({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -402,9 +515,14 @@ abstract class Diagnostics with _$Diagnostics {
     String text,
     List<QuestionnaireResponseAnswer> answer,
     List<QuestionnaireResponseItem> item,
-  }) = QuestionnaireResponseItem;
+  }) = _QuestionnaireResponseItem;
+  factory QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =>
+      _$QuestionnaireResponseItemFromJson(json);
+}
 
-  const factory Diagnostics.questionnaireResponseAnswer({
+@freezed
+abstract class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
+  const factory QuestionnaireResponseAnswer({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -421,9 +539,14 @@ abstract class Diagnostics with _$Diagnostics {
     Quantity valueQuantity,
     Reference valueReference,
     List<QuestionnaireResponseItem> item,
-  }) = QuestionnaireResponseAnswer;
+  }) = _QuestionnaireResponseAnswer;
+  factory QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =>
+      _$QuestionnaireResponseAnswerFromJson(json);
+}
 
-  const factory Diagnostics.diagnosticReport({
+@freezed
+abstract class DiagnosticReport with _$DiagnosticReport {
+  const factory DiagnosticReport({
     String resourceType,
     Id id,
     Meta meta,
@@ -452,17 +575,27 @@ abstract class Diagnostics with _$Diagnostics {
     String conclusion,
     List<CodeableConcept> conclusionCode,
     List<Attachment> presentedForm,
-  }) = DiagnosticReport;
+  }) = _DiagnosticReport;
+  factory DiagnosticReport.fromJson(Map<String, dynamic> json) =>
+      _$DiagnosticReportFromJson(json);
+}
 
-  const factory Diagnostics.diagnosticReportMedia({
+@freezed
+abstract class DiagnosticReportMedia with _$DiagnosticReportMedia {
+  const factory DiagnosticReportMedia({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String comment,
     Reference link,
-  }) = DiagnosticReportMedia;
+  }) = _DiagnosticReportMedia;
+  factory DiagnosticReportMedia.fromJson(Map<String, dynamic> json) =>
+      _$DiagnosticReportMediaFromJson(json);
+}
 
-  const factory Diagnostics.media({
+@freezed
+abstract class Media with _$Media {
+  const factory Media({
     String resourceType,
     Id id,
     Meta meta,
@@ -495,8 +628,6 @@ abstract class Diagnostics with _$Diagnostics {
     double duration,
     Attachment content,
     List<Annotation> note,
-  }) = Media;
-
-  factory Diagnostics.fromJson(Map<String, dynamic> json) =>
-      _$DiagnosticsFromJson(json);
+  }) = _Media;
+  factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
 }

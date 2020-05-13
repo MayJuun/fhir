@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'conformance.enums.dart';
 
-part 'conformance.g.dart';
 part 'conformance.freezed.dart';
+part 'conformance.g.dart';
 
 @freezed
-abstract class Conformance with _$Conformance {
-  const factory Conformance.messageDefinition({
+abstract class MessageDefinition with _$MessageDefinition {
+  const factory MessageDefinition({
     String resourceType,
     Id id,
     Meta meta,
@@ -43,9 +43,14 @@ abstract class Conformance with _$Conformance {
     MessageDefinitionResponseRequired responseRequired,
     List<MessageDefinitionAllowedResponse> allowedResponse,
     List<Canonical> graph,
-  }) = MessageDefinition;
+  }) = _MessageDefinition;
+  factory MessageDefinition.fromJson(Map<String, dynamic> json) =>
+      _$MessageDefinitionFromJson(json);
+}
 
-  const factory Conformance.messageDefinitionFocus({
+@freezed
+abstract class MessageDefinitionFocus with _$MessageDefinitionFocus {
+  const factory MessageDefinitionFocus({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -53,17 +58,29 @@ abstract class Conformance with _$Conformance {
     Canonical profile,
     int min,
     String max,
-  }) = MessageDefinitionFocus;
+  }) = _MessageDefinitionFocus;
+  factory MessageDefinitionFocus.fromJson(Map<String, dynamic> json) =>
+      _$MessageDefinitionFocusFromJson(json);
+}
 
-  const factory Conformance.messageDefinitionAllowedResponse({
+@freezed
+abstract class MessageDefinitionAllowedResponse
+    with _$MessageDefinitionAllowedResponse {
+  const factory MessageDefinitionAllowedResponse({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Canonical message,
     Markdown situation,
-  }) = MessageDefinitionAllowedResponse;
+  }) = _MessageDefinitionAllowedResponse;
+  factory MessageDefinitionAllowedResponse.fromJson(
+          Map<String, dynamic> json) =>
+      _$MessageDefinitionAllowedResponseFromJson(json);
+}
 
-  const factory Conformance.capabilityStatement({
+@freezed
+abstract class CapabilityStatement with _$CapabilityStatement {
+  const factory CapabilityStatement({
     String resourceType,
     Id id,
     Meta meta,
@@ -99,27 +116,44 @@ abstract class Conformance with _$Conformance {
     List<CapabilityStatementRest> rest,
     List<CapabilityStatementMessaging> messaging,
     List<CapabilityStatementDocument> document,
-  }) = CapabilityStatement;
+  }) = _CapabilityStatement;
+  factory CapabilityStatement.fromJson(Map<String, dynamic> json) =>
+      _$CapabilityStatementFromJson(json);
+}
 
-  const factory Conformance.capabilityStatementSoftware({
+@freezed
+abstract class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
+  const factory CapabilityStatementSoftware({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     String version,
     FhirDateTime releaseDate,
-  }) = CapabilityStatementSoftware;
+  }) = _CapabilityStatementSoftware;
+  factory CapabilityStatementSoftware.fromJson(Map<String, dynamic> json) =>
+      _$CapabilityStatementSoftwareFromJson(json);
+}
 
-  const factory Conformance.capabilityStatementImplementation({
+@freezed
+abstract class CapabilityStatementImplementation
+    with _$CapabilityStatementImplementation {
+  const factory CapabilityStatementImplementation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     FhirUrl url,
     Reference custodian,
-  }) = CapabilityStatementImplementation;
+  }) = _CapabilityStatementImplementation;
+  factory CapabilityStatementImplementation.fromJson(
+          Map<String, dynamic> json) =>
+      _$CapabilityStatementImplementationFromJson(json);
+}
 
-  const factory Conformance.capabilityStatementRest({
+@freezed
+abstract class CapabilityStatementRest with _$CapabilityStatementRest {
+  const factory CapabilityStatementRest({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -131,18 +165,28 @@ abstract class Conformance with _$Conformance {
     List<CapabilityStatementSearchParam> searchParam,
     List<CapabilityStatementOperation> operation,
     List<Canonical> compartment,
-  }) = CapabilityStatementRest;
+  }) = _CapabilityStatementRest;
+  factory CapabilityStatementRest.fromJson(Map<String, dynamic> json) =>
+      _$CapabilityStatementRestFromJson(json);
+}
 
-  const factory Conformance.capabilityStatementSecurity({
+@freezed
+abstract class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
+  const factory CapabilityStatementSecurity({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool cors,
     List<CodeableConcept> service,
     Markdown description,
-  }) = CapabilityStatementSecurity;
+  }) = _CapabilityStatementSecurity;
+  factory CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =>
+      _$CapabilityStatementSecurityFromJson(json);
+}
 
-  const factory Conformance.capabilityStatementResource({
+@freezed
+abstract class CapabilityStatementResource with _$CapabilityStatementResource {
+  const factory CapabilityStatementResource({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -163,17 +207,29 @@ abstract class Conformance with _$Conformance {
     List<String> searchRevInclude,
     List<CapabilityStatementSearchParam> searchParam,
     List<CapabilityStatementOperation> operation,
-  }) = CapabilityStatementResource;
+  }) = _CapabilityStatementResource;
+  factory CapabilityStatementResource.fromJson(Map<String, dynamic> json) =>
+      _$CapabilityStatementResourceFromJson(json);
+}
 
-  const factory Conformance.capabilityStatementInteraction({
+@freezed
+abstract class CapabilityStatementInteraction
+    with _$CapabilityStatementInteraction {
+  const factory CapabilityStatementInteraction({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CapabilityStatementInteractionCode code,
     Markdown documentation,
-  }) = CapabilityStatementInteraction;
+  }) = _CapabilityStatementInteraction;
+  factory CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =>
+      _$CapabilityStatementInteractionFromJson(json);
+}
 
-  const factory Conformance.capabilityStatementSearchParam({
+@freezed
+abstract class CapabilityStatementSearchParam
+    with _$CapabilityStatementSearchParam {
+  const factory CapabilityStatementSearchParam({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -181,26 +237,44 @@ abstract class Conformance with _$Conformance {
     Canonical definition,
     String type,
     Markdown documentation,
-  }) = CapabilityStatementSearchParam;
+  }) = _CapabilityStatementSearchParam;
+  factory CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =>
+      _$CapabilityStatementSearchParamFromJson(json);
+}
 
-  const factory Conformance.capabilityStatementOperation({
+@freezed
+abstract class CapabilityStatementOperation
+    with _$CapabilityStatementOperation {
+  const factory CapabilityStatementOperation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     Canonical definition,
     Markdown documentation,
-  }) = CapabilityStatementOperation;
+  }) = _CapabilityStatementOperation;
+  factory CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =>
+      _$CapabilityStatementOperationFromJson(json);
+}
 
-  const factory Conformance.capabilityStatementInteraction1({
+@freezed
+abstract class CapabilityStatementInteraction1
+    with _$CapabilityStatementInteraction1 {
+  const factory CapabilityStatementInteraction1({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String code,
     Markdown documentation,
-  }) = CapabilityStatementInteraction1;
+  }) = _CapabilityStatementInteraction1;
+  factory CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =>
+      _$CapabilityStatementInteraction1FromJson(json);
+}
 
-  const factory Conformance.capabilityStatementMessaging({
+@freezed
+abstract class CapabilityStatementMessaging
+    with _$CapabilityStatementMessaging {
+  const factory CapabilityStatementMessaging({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -208,34 +282,56 @@ abstract class Conformance with _$Conformance {
     int reliableCache,
     Markdown documentation,
     List<CapabilityStatementSupportedMessage> supportedMessage,
-  }) = CapabilityStatementMessaging;
+  }) = _CapabilityStatementMessaging;
+  factory CapabilityStatementMessaging.fromJson(Map<String, dynamic> json) =>
+      _$CapabilityStatementMessagingFromJson(json);
+}
 
-  const factory Conformance.capabilityStatementEndpoint({
+@freezed
+abstract class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
+  const factory CapabilityStatementEndpoint({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Coding protocol,
     FhirUrl address,
-  }) = CapabilityStatementEndpoint;
+  }) = _CapabilityStatementEndpoint;
+  factory CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json) =>
+      _$CapabilityStatementEndpointFromJson(json);
+}
 
-  const factory Conformance.capabilityStatementSupportedMessage({
+@freezed
+abstract class CapabilityStatementSupportedMessage
+    with _$CapabilityStatementSupportedMessage {
+  const factory CapabilityStatementSupportedMessage({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CapabilityStatementSupportedMessageMode mode,
     Canonical definition,
-  }) = CapabilityStatementSupportedMessage;
+  }) = _CapabilityStatementSupportedMessage;
+  factory CapabilityStatementSupportedMessage.fromJson(
+          Map<String, dynamic> json) =>
+      _$CapabilityStatementSupportedMessageFromJson(json);
+}
 
-  const factory Conformance.capabilityStatementDocument({
+@freezed
+abstract class CapabilityStatementDocument with _$CapabilityStatementDocument {
+  const factory CapabilityStatementDocument({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CapabilityStatementDocumentMode mode,
     Markdown documentation,
     Canonical profile,
-  }) = CapabilityStatementDocument;
+  }) = _CapabilityStatementDocument;
+  factory CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =>
+      _$CapabilityStatementDocumentFromJson(json);
+}
 
-  const factory Conformance.compartmentDefinition({
+@freezed
+abstract class CompartmentDefinition with _$CompartmentDefinition {
+  const factory CompartmentDefinition({
     String resourceType,
     Id id,
     Meta meta,
@@ -259,18 +355,29 @@ abstract class Conformance with _$Conformance {
     CompartmentDefinitionCode code,
     bool search,
     List<CompartmentDefinitionResource> resource,
-  }) = CompartmentDefinition;
+  }) = _CompartmentDefinition;
+  factory CompartmentDefinition.fromJson(Map<String, dynamic> json) =>
+      _$CompartmentDefinitionFromJson(json);
+}
 
-  const factory Conformance.compartmentDefinitionResource({
+@freezed
+abstract class CompartmentDefinitionResource
+    with _$CompartmentDefinitionResource {
+  const factory CompartmentDefinitionResource({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code code,
     List<String> param,
     String documentation,
-  }) = CompartmentDefinitionResource;
+  }) = _CompartmentDefinitionResource;
+  factory CompartmentDefinitionResource.fromJson(Map<String, dynamic> json) =>
+      _$CompartmentDefinitionResourceFromJson(json);
+}
 
-  const factory Conformance.operationDefinition({
+@freezed
+abstract class OperationDefinition with _$OperationDefinition {
+  const factory OperationDefinition({
     String resourceType,
     Id id,
     Meta meta,
@@ -306,9 +413,15 @@ abstract class Conformance with _$Conformance {
     Canonical outputProfile,
     List<OperationDefinitionParameter> parameter,
     List<OperationDefinitionOverload> overload,
-  }) = OperationDefinition;
+  }) = _OperationDefinition;
+  factory OperationDefinition.fromJson(Map<String, dynamic> json) =>
+      _$OperationDefinitionFromJson(json);
+}
 
-  const factory Conformance.operationDefinitionParameter({
+@freezed
+abstract class OperationDefinitionParameter
+    with _$OperationDefinitionParameter {
+  const factory OperationDefinitionParameter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -323,33 +436,55 @@ abstract class Conformance with _$Conformance {
     OperationDefinitionBinding binding,
     List<OperationDefinitionReferencedFrom> referencedFrom,
     List<OperationDefinitionParameter> part,
-  }) = OperationDefinitionParameter;
+  }) = _OperationDefinitionParameter;
+  factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
+      _$OperationDefinitionParameterFromJson(json);
+}
 
-  const factory Conformance.operationDefinitionBinding({
+@freezed
+abstract class OperationDefinitionBinding with _$OperationDefinitionBinding {
+  const factory OperationDefinitionBinding({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     OperationDefinitionBindingStrength strength,
     Canonical valueSet,
-  }) = OperationDefinitionBinding;
+  }) = _OperationDefinitionBinding;
+  factory OperationDefinitionBinding.fromJson(Map<String, dynamic> json) =>
+      _$OperationDefinitionBindingFromJson(json);
+}
 
-  const factory Conformance.operationDefinitionReferencedFrom({
+@freezed
+abstract class OperationDefinitionReferencedFrom
+    with _$OperationDefinitionReferencedFrom {
+  const factory OperationDefinitionReferencedFrom({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String source,
     String sourceId,
-  }) = OperationDefinitionReferencedFrom;
+  }) = _OperationDefinitionReferencedFrom;
+  factory OperationDefinitionReferencedFrom.fromJson(
+          Map<String, dynamic> json) =>
+      _$OperationDefinitionReferencedFromFromJson(json);
+}
 
-  const factory Conformance.operationDefinitionOverload({
+@freezed
+abstract class OperationDefinitionOverload with _$OperationDefinitionOverload {
+  const factory OperationDefinitionOverload({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<String> parameterName,
     String comment,
-  }) = OperationDefinitionOverload;
+  }) = _OperationDefinitionOverload;
+  factory OperationDefinitionOverload.fromJson(Map<String, dynamic> json) =>
+      _$OperationDefinitionOverloadFromJson(json);
+}
 
-  const factory Conformance.exampleScenario({
+@freezed
+abstract class ExampleScenario with _$ExampleScenario {
+  const factory ExampleScenario({
     String resourceType,
     Id id,
     Meta meta,
@@ -376,9 +511,14 @@ abstract class Conformance with _$Conformance {
     List<ExampleScenarioInstance> instance,
     List<ExampleScenarioProcess> process,
     List<Canonical> workflow,
-  }) = ExampleScenario;
+  }) = _ExampleScenario;
+  factory ExampleScenario.fromJson(Map<String, dynamic> json) =>
+      _$ExampleScenarioFromJson(json);
+}
 
-  const factory Conformance.exampleScenarioActor({
+@freezed
+abstract class ExampleScenarioActor with _$ExampleScenarioActor {
+  const factory ExampleScenarioActor({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -386,9 +526,14 @@ abstract class Conformance with _$Conformance {
     ExampleScenarioActorType type,
     String name,
     Markdown description,
-  }) = ExampleScenarioActor;
+  }) = _ExampleScenarioActor;
+  factory ExampleScenarioActor.fromJson(Map<String, dynamic> json) =>
+      _$ExampleScenarioActorFromJson(json);
+}
 
-  const factory Conformance.exampleScenarioInstance({
+@freezed
+abstract class ExampleScenarioInstance with _$ExampleScenarioInstance {
+  const factory ExampleScenarioInstance({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -398,25 +543,42 @@ abstract class Conformance with _$Conformance {
     Markdown description,
     List<ExampleScenarioVersion> version,
     List<ExampleScenarioContainedInstance> containedInstance,
-  }) = ExampleScenarioInstance;
+  }) = _ExampleScenarioInstance;
+  factory ExampleScenarioInstance.fromJson(Map<String, dynamic> json) =>
+      _$ExampleScenarioInstanceFromJson(json);
+}
 
-  const factory Conformance.exampleScenarioVersion({
+@freezed
+abstract class ExampleScenarioVersion with _$ExampleScenarioVersion {
+  const factory ExampleScenarioVersion({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String versionId,
     Markdown description,
-  }) = ExampleScenarioVersion;
+  }) = _ExampleScenarioVersion;
+  factory ExampleScenarioVersion.fromJson(Map<String, dynamic> json) =>
+      _$ExampleScenarioVersionFromJson(json);
+}
 
-  const factory Conformance.exampleScenarioContainedInstance({
+@freezed
+abstract class ExampleScenarioContainedInstance
+    with _$ExampleScenarioContainedInstance {
+  const factory ExampleScenarioContainedInstance({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String resourceId,
     String versionId,
-  }) = ExampleScenarioContainedInstance;
+  }) = _ExampleScenarioContainedInstance;
+  factory ExampleScenarioContainedInstance.fromJson(
+          Map<String, dynamic> json) =>
+      _$ExampleScenarioContainedInstanceFromJson(json);
+}
 
-  const factory Conformance.exampleScenarioProcess({
+@freezed
+abstract class ExampleScenarioProcess with _$ExampleScenarioProcess {
+  const factory ExampleScenarioProcess({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -425,9 +587,14 @@ abstract class Conformance with _$Conformance {
     Markdown preConditions,
     Markdown postConditions,
     List<ExampleScenarioStep> step,
-  }) = ExampleScenarioProcess;
+  }) = _ExampleScenarioProcess;
+  factory ExampleScenarioProcess.fromJson(Map<String, dynamic> json) =>
+      _$ExampleScenarioProcessFromJson(json);
+}
 
-  const factory Conformance.exampleScenarioStep({
+@freezed
+abstract class ExampleScenarioStep with _$ExampleScenarioStep {
+  const factory ExampleScenarioStep({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -435,9 +602,14 @@ abstract class Conformance with _$Conformance {
     bool pause,
     ExampleScenarioOperation operation,
     List<ExampleScenarioAlternative> alternative,
-  }) = ExampleScenarioStep;
+  }) = _ExampleScenarioStep;
+  factory ExampleScenarioStep.fromJson(Map<String, dynamic> json) =>
+      _$ExampleScenarioStepFromJson(json);
+}
 
-  const factory Conformance.exampleScenarioOperation({
+@freezed
+abstract class ExampleScenarioOperation with _$ExampleScenarioOperation {
+  const factory ExampleScenarioOperation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -451,18 +623,28 @@ abstract class Conformance with _$Conformance {
     bool receiverActive,
     ExampleScenarioContainedInstance request,
     ExampleScenarioContainedInstance response,
-  }) = ExampleScenarioOperation;
+  }) = _ExampleScenarioOperation;
+  factory ExampleScenarioOperation.fromJson(Map<String, dynamic> json) =>
+      _$ExampleScenarioOperationFromJson(json);
+}
 
-  const factory Conformance.exampleScenarioAlternative({
+@freezed
+abstract class ExampleScenarioAlternative with _$ExampleScenarioAlternative {
+  const factory ExampleScenarioAlternative({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String title,
     Markdown description,
     List<ExampleScenarioStep> step,
-  }) = ExampleScenarioAlternative;
+  }) = _ExampleScenarioAlternative;
+  factory ExampleScenarioAlternative.fromJson(Map<String, dynamic> json) =>
+      _$ExampleScenarioAlternativeFromJson(json);
+}
 
-  const factory Conformance.structureMap({
+@freezed
+abstract class StructureMap with _$StructureMap {
+  const factory StructureMap({
     String resourceType,
     Id id,
     Meta meta,
@@ -490,9 +672,14 @@ abstract class Conformance with _$Conformance {
     List<StructureMapStructure> structure,
     List<Canonical> import,
     List<StructureMapGroup> group,
-  }) = StructureMap;
+  }) = _StructureMap;
+  factory StructureMap.fromJson(Map<String, dynamic> json) =>
+      _$StructureMapFromJson(json);
+}
 
-  const factory Conformance.structureMapStructure({
+@freezed
+abstract class StructureMapStructure with _$StructureMapStructure {
+  const factory StructureMapStructure({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -500,9 +687,14 @@ abstract class Conformance with _$Conformance {
     StructureMapStructureMode mode,
     String alias,
     String documentation,
-  }) = StructureMapStructure;
+  }) = _StructureMapStructure;
+  factory StructureMapStructure.fromJson(Map<String, dynamic> json) =>
+      _$StructureMapStructureFromJson(json);
+}
 
-  const factory Conformance.structureMapGroup({
+@freezed
+abstract class StructureMapGroup with _$StructureMapGroup {
+  const factory StructureMapGroup({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -512,9 +704,14 @@ abstract class Conformance with _$Conformance {
     String documentation,
     List<StructureMapInput> input,
     List<StructureMapRule> rule,
-  }) = StructureMapGroup;
+  }) = _StructureMapGroup;
+  factory StructureMapGroup.fromJson(Map<String, dynamic> json) =>
+      _$StructureMapGroupFromJson(json);
+}
 
-  const factory Conformance.structureMapInput({
+@freezed
+abstract class StructureMapInput with _$StructureMapInput {
+  const factory StructureMapInput({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -522,9 +719,14 @@ abstract class Conformance with _$Conformance {
     String type,
     StructureMapInputMode mode,
     String documentation,
-  }) = StructureMapInput;
+  }) = _StructureMapInput;
+  factory StructureMapInput.fromJson(Map<String, dynamic> json) =>
+      _$StructureMapInputFromJson(json);
+}
 
-  const factory Conformance.structureMapRule({
+@freezed
+abstract class StructureMapRule with _$StructureMapRule {
+  const factory StructureMapRule({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -534,9 +736,14 @@ abstract class Conformance with _$Conformance {
     List<StructureMapRule> rule,
     List<StructureMapDependent> dependent,
     String documentation,
-  }) = StructureMapRule;
+  }) = _StructureMapRule;
+  factory StructureMapRule.fromJson(Map<String, dynamic> json) =>
+      _$StructureMapRuleFromJson(json);
+}
 
-  const factory Conformance.structureMapSource({
+@freezed
+abstract class StructureMapSource with _$StructureMapSource {
+  const factory StructureMapSource({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -600,9 +807,14 @@ abstract class Conformance with _$Conformance {
     String condition,
     String check,
     String logMessage,
-  }) = StructureMapSource;
+  }) = _StructureMapSource;
+  factory StructureMapSource.fromJson(Map<String, dynamic> json) =>
+      _$StructureMapSourceFromJson(json);
+}
 
-  const factory Conformance.structureMapTarget({
+@freezed
+abstract class StructureMapTarget with _$StructureMapTarget {
+  const factory StructureMapTarget({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -614,9 +826,14 @@ abstract class Conformance with _$Conformance {
     Id listRuleId,
     StructureMapTargetTransform transform,
     List<StructureMapParameter> parameter,
-  }) = StructureMapTarget;
+  }) = _StructureMapTarget;
+  factory StructureMapTarget.fromJson(Map<String, dynamic> json) =>
+      _$StructureMapTargetFromJson(json);
+}
 
-  const factory Conformance.structureMapParameter({
+@freezed
+abstract class StructureMapParameter with _$StructureMapParameter {
+  const factory StructureMapParameter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -625,17 +842,27 @@ abstract class Conformance with _$Conformance {
     bool valueBoolean,
     int valueInteger,
     double valueDecimal,
-  }) = StructureMapParameter;
+  }) = _StructureMapParameter;
+  factory StructureMapParameter.fromJson(Map<String, dynamic> json) =>
+      _$StructureMapParameterFromJson(json);
+}
 
-  const factory Conformance.structureMapDependent({
+@freezed
+abstract class StructureMapDependent with _$StructureMapDependent {
+  const factory StructureMapDependent({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Id name,
     List<String> variable,
-  }) = StructureMapDependent;
+  }) = _StructureMapDependent;
+  factory StructureMapDependent.fromJson(Map<String, dynamic> json) =>
+      _$StructureMapDependentFromJson(json);
+}
 
-  const factory Conformance.implementationGuide({
+@freezed
+abstract class ImplementationGuide with _$ImplementationGuide {
+  const factory ImplementationGuide({
     String resourceType,
     Id id,
     Meta meta,
@@ -665,26 +892,43 @@ abstract class Conformance with _$Conformance {
     List<ImplementationGuideGlobal> global,
     ImplementationGuideDefinition definition,
     ImplementationGuideManifest manifest,
-  }) = ImplementationGuide;
+  }) = _ImplementationGuide;
+  factory ImplementationGuide.fromJson(Map<String, dynamic> json) =>
+      _$ImplementationGuideFromJson(json);
+}
 
-  const factory Conformance.implementationGuideDependsOn({
+@freezed
+abstract class ImplementationGuideDependsOn
+    with _$ImplementationGuideDependsOn {
+  const factory ImplementationGuideDependsOn({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Canonical uri,
     Id packageId,
     String version,
-  }) = ImplementationGuideDependsOn;
+  }) = _ImplementationGuideDependsOn;
+  factory ImplementationGuideDependsOn.fromJson(Map<String, dynamic> json) =>
+      _$ImplementationGuideDependsOnFromJson(json);
+}
 
-  const factory Conformance.implementationGuideGlobal({
+@freezed
+abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
+  const factory ImplementationGuideGlobal({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code type,
     Canonical profile,
-  }) = ImplementationGuideGlobal;
+  }) = _ImplementationGuideGlobal;
+  factory ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
+      _$ImplementationGuideGlobalFromJson(json);
+}
 
-  const factory Conformance.implementationGuideDefinition({
+@freezed
+abstract class ImplementationGuideDefinition
+    with _$ImplementationGuideDefinition {
+  const factory ImplementationGuideDefinition({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -693,17 +937,27 @@ abstract class Conformance with _$Conformance {
     ImplementationGuidePage page,
     List<ImplementationGuideParameter> parameter,
     List<ImplementationGuideTemplate> template,
-  }) = ImplementationGuideDefinition;
+  }) = _ImplementationGuideDefinition;
+  factory ImplementationGuideDefinition.fromJson(Map<String, dynamic> json) =>
+      _$ImplementationGuideDefinitionFromJson(json);
+}
 
-  const factory Conformance.implementationGuideGrouping({
+@freezed
+abstract class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
+  const factory ImplementationGuideGrouping({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     String description,
-  }) = ImplementationGuideGrouping;
+  }) = _ImplementationGuideGrouping;
+  factory ImplementationGuideGrouping.fromJson(Map<String, dynamic> json) =>
+      _$ImplementationGuideGroupingFromJson(json);
+}
 
-  const factory Conformance.implementationGuideResource({
+@freezed
+abstract class ImplementationGuideResource with _$ImplementationGuideResource {
+  const factory ImplementationGuideResource({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -714,9 +968,14 @@ abstract class Conformance with _$Conformance {
     bool exampleBoolean,
     Canonical exampleCanonical,
     Id groupingId,
-  }) = ImplementationGuideResource;
+  }) = _ImplementationGuideResource;
+  factory ImplementationGuideResource.fromJson(Map<String, dynamic> json) =>
+      _$ImplementationGuideResourceFromJson(json);
+}
 
-  const factory Conformance.implementationGuidePage({
+@freezed
+abstract class ImplementationGuidePage with _$ImplementationGuidePage {
+  const factory ImplementationGuidePage({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -725,26 +984,42 @@ abstract class Conformance with _$Conformance {
     String title,
     ImplementationGuidePageGeneration generation,
     List<ImplementationGuidePage> page,
-  }) = ImplementationGuidePage;
+  }) = _ImplementationGuidePage;
+  factory ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
+      _$ImplementationGuidePageFromJson(json);
+}
 
-  const factory Conformance.implementationGuideParameter({
+@freezed
+abstract class ImplementationGuideParameter
+    with _$ImplementationGuideParameter {
+  const factory ImplementationGuideParameter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     ImplementationGuideParameterCode code,
     String value,
-  }) = ImplementationGuideParameter;
+  }) = _ImplementationGuideParameter;
+  factory ImplementationGuideParameter.fromJson(Map<String, dynamic> json) =>
+      _$ImplementationGuideParameterFromJson(json);
+}
 
-  const factory Conformance.implementationGuideTemplate({
+@freezed
+abstract class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
+  const factory ImplementationGuideTemplate({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code code,
     String source,
     String scope,
-  }) = ImplementationGuideTemplate;
+  }) = _ImplementationGuideTemplate;
+  factory ImplementationGuideTemplate.fromJson(Map<String, dynamic> json) =>
+      _$ImplementationGuideTemplateFromJson(json);
+}
 
-  const factory Conformance.implementationGuideManifest({
+@freezed
+abstract class ImplementationGuideManifest with _$ImplementationGuideManifest {
+  const factory ImplementationGuideManifest({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -753,9 +1028,15 @@ abstract class Conformance with _$Conformance {
     List<ImplementationGuidePage1> page,
     List<String> image,
     List<String> other,
-  }) = ImplementationGuideManifest;
+  }) = _ImplementationGuideManifest;
+  factory ImplementationGuideManifest.fromJson(Map<String, dynamic> json) =>
+      _$ImplementationGuideManifestFromJson(json);
+}
 
-  const factory Conformance.implementationGuideResource1({
+@freezed
+abstract class ImplementationGuideResource1
+    with _$ImplementationGuideResource1 {
+  const factory ImplementationGuideResource1({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -763,18 +1044,28 @@ abstract class Conformance with _$Conformance {
     bool exampleBoolean,
     Canonical exampleCanonical,
     FhirUrl relativePath,
-  }) = ImplementationGuideResource1;
+  }) = _ImplementationGuideResource1;
+  factory ImplementationGuideResource1.fromJson(Map<String, dynamic> json) =>
+      _$ImplementationGuideResource1FromJson(json);
+}
 
-  const factory Conformance.implementationGuidePage1({
+@freezed
+abstract class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
+  const factory ImplementationGuidePage1({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String name,
     String title,
     List<String> anchor,
-  }) = ImplementationGuidePage1;
+  }) = _ImplementationGuidePage1;
+  factory ImplementationGuidePage1.fromJson(Map<String, dynamic> json) =>
+      _$ImplementationGuidePage1FromJson(json);
+}
 
-  const factory Conformance.searchParameter({
+@freezed
+abstract class SearchParameter with _$SearchParameter {
+  const factory SearchParameter({
     String resourceType,
     Id id,
     Meta meta,
@@ -810,17 +1101,27 @@ abstract class Conformance with _$Conformance {
     List<String> modifier,
     List<String> chain,
     List<SearchParameterComponent> component,
-  }) = SearchParameter;
+  }) = _SearchParameter;
+  factory SearchParameter.fromJson(Map<String, dynamic> json) =>
+      _$SearchParameterFromJson(json);
+}
 
-  const factory Conformance.searchParameterComponent({
+@freezed
+abstract class SearchParameterComponent with _$SearchParameterComponent {
+  const factory SearchParameterComponent({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Canonical definition,
     String expression,
-  }) = SearchParameterComponent;
+  }) = _SearchParameterComponent;
+  factory SearchParameterComponent.fromJson(Map<String, dynamic> json) =>
+      _$SearchParameterComponentFromJson(json);
+}
 
-  const factory Conformance.graphDefinition({
+@freezed
+abstract class GraphDefinition with _$GraphDefinition {
+  const factory GraphDefinition({
     String resourceType,
     Id id,
     Meta meta,
@@ -845,9 +1146,14 @@ abstract class Conformance with _$Conformance {
     Code start,
     Canonical profile,
     List<GraphDefinitionLink> link,
-  }) = GraphDefinition;
+  }) = _GraphDefinition;
+  factory GraphDefinition.fromJson(Map<String, dynamic> json) =>
+      _$GraphDefinitionFromJson(json);
+}
 
-  const factory Conformance.graphDefinitionLink({
+@freezed
+abstract class GraphDefinitionLink with _$GraphDefinitionLink {
+  const factory GraphDefinitionLink({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -857,9 +1163,14 @@ abstract class Conformance with _$Conformance {
     String max,
     String description,
     List<GraphDefinitionTarget> target,
-  }) = GraphDefinitionLink;
+  }) = _GraphDefinitionLink;
+  factory GraphDefinitionLink.fromJson(Map<String, dynamic> json) =>
+      _$GraphDefinitionLinkFromJson(json);
+}
 
-  const factory Conformance.graphDefinitionTarget({
+@freezed
+abstract class GraphDefinitionTarget with _$GraphDefinitionTarget {
+  const factory GraphDefinitionTarget({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -868,9 +1179,14 @@ abstract class Conformance with _$Conformance {
     Canonical profile,
     List<GraphDefinitionCompartment> compartment,
     List<GraphDefinitionLink> link,
-  }) = GraphDefinitionTarget;
+  }) = _GraphDefinitionTarget;
+  factory GraphDefinitionTarget.fromJson(Map<String, dynamic> json) =>
+      _$GraphDefinitionTargetFromJson(json);
+}
 
-  const factory Conformance.graphDefinitionCompartment({
+@freezed
+abstract class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
+  const factory GraphDefinitionCompartment({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -879,9 +1195,14 @@ abstract class Conformance with _$Conformance {
     GraphDefinitionCompartmentRule rule,
     String expression,
     String description,
-  }) = GraphDefinitionCompartment;
+  }) = _GraphDefinitionCompartment;
+  factory GraphDefinitionCompartment.fromJson(Map<String, dynamic> json) =>
+      _$GraphDefinitionCompartmentFromJson(json);
+}
 
-  const factory Conformance.structureDefinition({
+@freezed
+abstract class StructureDefinition with _$StructureDefinition {
+  const factory StructureDefinition({
     String resourceType,
     Id id,
     Meta meta,
@@ -918,9 +1239,14 @@ abstract class Conformance with _$Conformance {
     StructureDefinitionDerivation derivation,
     StructureDefinitionSnapshot snapshot,
     StructureDefinitionDifferential differential,
-  }) = StructureDefinition;
+  }) = _StructureDefinition;
+  factory StructureDefinition.fromJson(Map<String, dynamic> json) =>
+      _$StructureDefinitionFromJson(json);
+}
 
-  const factory Conformance.structureDefinitionMapping({
+@freezed
+abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
+  const factory StructureDefinitionMapping({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -928,30 +1254,45 @@ abstract class Conformance with _$Conformance {
     FhirUri uri,
     String name,
     String comment,
-  }) = StructureDefinitionMapping;
+  }) = _StructureDefinitionMapping;
+  factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
+      _$StructureDefinitionMappingFromJson(json);
+}
 
-  const factory Conformance.structureDefinitionContext({
+@freezed
+abstract class StructureDefinitionContext with _$StructureDefinitionContext {
+  const factory StructureDefinitionContext({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     StructureDefinitionContextType type,
     String expression,
-  }) = StructureDefinitionContext;
+  }) = _StructureDefinitionContext;
+  factory StructureDefinitionContext.fromJson(Map<String, dynamic> json) =>
+      _$StructureDefinitionContextFromJson(json);
+}
 
-  const factory Conformance.structureDefinitionSnapshot({
+@freezed
+abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
+  const factory StructureDefinitionSnapshot({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<ElementDefinition> element,
-  }) = StructureDefinitionSnapshot;
+  }) = _StructureDefinitionSnapshot;
+  factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
+      _$StructureDefinitionSnapshotFromJson(json);
+}
 
-  const factory Conformance.structureDefinitionDifferential({
+@freezed
+abstract class StructureDefinitionDifferential
+    with _$StructureDefinitionDifferential {
+  const factory StructureDefinitionDifferential({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<ElementDefinition> element,
-  }) = StructureDefinitionDifferential;
-
-  factory Conformance.fromJson(Map<String, dynamic> json) =>
-      _$ConformanceFromJson(json);
+  }) = _StructureDefinitionDifferential;
+  factory StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =>
+      _$StructureDefinitionDifferentialFromJson(json);
 }

@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'billing.enums.dart';
 
-part 'billing.g.dart';
 part 'billing.freezed.dart';
+part 'billing.g.dart';
 
 @freezed
-abstract class Billing with _$Billing {
-  const factory Billing.claim({
+abstract class Claim with _$Claim {
+  const factory Claim({
     String resourceType,
     Id id,
     Meta meta,
@@ -45,26 +45,40 @@ abstract class Billing with _$Billing {
     ClaimAccident accident,
     List<ClaimItem> item,
     Money total,
-  }) = Claim;
+  }) = _Claim;
+  factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
+}
 
-  const factory Billing.claimRelated({
+@freezed
+abstract class ClaimRelated with _$ClaimRelated {
+  const factory ClaimRelated({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference claim,
     CodeableConcept relationship,
     Identifier reference,
-  }) = ClaimRelated;
+  }) = _ClaimRelated;
+  factory ClaimRelated.fromJson(Map<String, dynamic> json) =>
+      _$ClaimRelatedFromJson(json);
+}
 
-  const factory Billing.claimPayee({
+@freezed
+abstract class ClaimPayee with _$ClaimPayee {
+  const factory ClaimPayee({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept type,
     Reference party,
-  }) = ClaimPayee;
+  }) = _ClaimPayee;
+  factory ClaimPayee.fromJson(Map<String, dynamic> json) =>
+      _$ClaimPayeeFromJson(json);
+}
 
-  const factory Billing.claimCareTeam({
+@freezed
+abstract class ClaimCareTeam with _$ClaimCareTeam {
+  const factory ClaimCareTeam({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -73,9 +87,14 @@ abstract class Billing with _$Billing {
     bool responsible,
     CodeableConcept role,
     CodeableConcept qualification,
-  }) = ClaimCareTeam;
+  }) = _ClaimCareTeam;
+  factory ClaimCareTeam.fromJson(Map<String, dynamic> json) =>
+      _$ClaimCareTeamFromJson(json);
+}
 
-  const factory Billing.claimSupportingInfo({
+@freezed
+abstract class ClaimSupportingInfo with _$ClaimSupportingInfo {
+  const factory ClaimSupportingInfo({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -90,9 +109,14 @@ abstract class Billing with _$Billing {
     Attachment valueAttachment,
     Reference valueReference,
     CodeableConcept reason,
-  }) = ClaimSupportingInfo;
+  }) = _ClaimSupportingInfo;
+  factory ClaimSupportingInfo.fromJson(Map<String, dynamic> json) =>
+      _$ClaimSupportingInfoFromJson(json);
+}
 
-  const factory Billing.claimDiagnosis({
+@freezed
+abstract class ClaimDiagnosis with _$ClaimDiagnosis {
+  const factory ClaimDiagnosis({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -102,9 +126,14 @@ abstract class Billing with _$Billing {
     List<CodeableConcept> type,
     CodeableConcept onAdmission,
     CodeableConcept packageCode,
-  }) = ClaimDiagnosis;
+  }) = _ClaimDiagnosis;
+  factory ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
+      _$ClaimDiagnosisFromJson(json);
+}
 
-  const factory Billing.claimProcedure({
+@freezed
+abstract class ClaimProcedure with _$ClaimProcedure {
+  const factory ClaimProcedure({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -114,9 +143,14 @@ abstract class Billing with _$Billing {
     CodeableConcept procedureCodeableConcept,
     Reference procedureReference,
     List<Reference> udi,
-  }) = ClaimProcedure;
+  }) = _ClaimProcedure;
+  factory ClaimProcedure.fromJson(Map<String, dynamic> json) =>
+      _$ClaimProcedureFromJson(json);
+}
 
-  const factory Billing.claimInsurance({
+@freezed
+abstract class ClaimInsurance with _$ClaimInsurance {
+  const factory ClaimInsurance({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -127,9 +161,14 @@ abstract class Billing with _$Billing {
     String businessArrangement,
     List<String> preAuthRef,
     Reference claimResponse,
-  }) = ClaimInsurance;
+  }) = _ClaimInsurance;
+  factory ClaimInsurance.fromJson(Map<String, dynamic> json) =>
+      _$ClaimInsuranceFromJson(json);
+}
 
-  const factory Billing.claimAccident({
+@freezed
+abstract class ClaimAccident with _$ClaimAccident {
+  const factory ClaimAccident({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -137,9 +176,14 @@ abstract class Billing with _$Billing {
     CodeableConcept type,
     Address locationAddress,
     Reference locationReference,
-  }) = ClaimAccident;
+  }) = _ClaimAccident;
+  factory ClaimAccident.fromJson(Map<String, dynamic> json) =>
+      _$ClaimAccidentFromJson(json);
+}
 
-  const factory Billing.claimItem({
+@freezed
+abstract class ClaimItem with _$ClaimItem {
+  const factory ClaimItem({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -167,9 +211,14 @@ abstract class Billing with _$Billing {
     List<CodeableConcept> subSite,
     List<Reference> encounter,
     List<ClaimDetail> detail,
-  }) = ClaimItem;
+  }) = _ClaimItem;
+  factory ClaimItem.fromJson(Map<String, dynamic> json) =>
+      _$ClaimItemFromJson(json);
+}
 
-  const factory Billing.claimDetail({
+@freezed
+abstract class ClaimDetail with _$ClaimDetail {
+  const factory ClaimDetail({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -185,9 +234,14 @@ abstract class Billing with _$Billing {
     Money net,
     List<Reference> udi,
     List<ClaimSubDetail> subDetail,
-  }) = ClaimDetail;
+  }) = _ClaimDetail;
+  factory ClaimDetail.fromJson(Map<String, dynamic> json) =>
+      _$ClaimDetailFromJson(json);
+}
 
-  const factory Billing.claimSubDetail({
+@freezed
+abstract class ClaimSubDetail with _$ClaimSubDetail {
+  const factory ClaimSubDetail({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -202,9 +256,14 @@ abstract class Billing with _$Billing {
     double factor,
     Money net,
     List<Reference> udi,
-  }) = ClaimSubDetail;
+  }) = _ClaimSubDetail;
+  factory ClaimSubDetail.fromJson(Map<String, dynamic> json) =>
+      _$ClaimSubDetailFromJson(json);
+}
 
-  const factory Billing.invoice({
+@freezed
+abstract class Invoice with _$Invoice {
+  const factory Invoice({
     String resourceType,
     Id id,
     Meta meta,
@@ -230,17 +289,27 @@ abstract class Billing with _$Billing {
     Money totalGross,
     Markdown paymentTerms,
     List<Annotation> note,
-  }) = Invoice;
+  }) = _Invoice;
+  factory Invoice.fromJson(Map<String, dynamic> json) =>
+      _$InvoiceFromJson(json);
+}
 
-  const factory Billing.invoiceParticipant({
+@freezed
+abstract class InvoiceParticipant with _$InvoiceParticipant {
+  const factory InvoiceParticipant({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept role,
     Reference actor,
-  }) = InvoiceParticipant;
+  }) = _InvoiceParticipant;
+  factory InvoiceParticipant.fromJson(Map<String, dynamic> json) =>
+      _$InvoiceParticipantFromJson(json);
+}
 
-  const factory Billing.invoiceLineItem({
+@freezed
+abstract class InvoiceLineItem with _$InvoiceLineItem {
+  const factory InvoiceLineItem({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -248,9 +317,14 @@ abstract class Billing with _$Billing {
     Reference chargeItemReference,
     CodeableConcept chargeItemCodeableConcept,
     List<InvoicePriceComponent> priceComponent,
-  }) = InvoiceLineItem;
+  }) = _InvoiceLineItem;
+  factory InvoiceLineItem.fromJson(Map<String, dynamic> json) =>
+      _$InvoiceLineItemFromJson(json);
+}
 
-  const factory Billing.invoicePriceComponent({
+@freezed
+abstract class InvoicePriceComponent with _$InvoicePriceComponent {
+  const factory InvoicePriceComponent({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -258,9 +332,14 @@ abstract class Billing with _$Billing {
     CodeableConcept code,
     double factor,
     Money amount,
-  }) = InvoicePriceComponent;
+  }) = _InvoicePriceComponent;
+  factory InvoicePriceComponent.fromJson(Map<String, dynamic> json) =>
+      _$InvoicePriceComponentFromJson(json);
+}
 
-  const factory Billing.claimResponse({
+@freezed
+abstract class ClaimResponse with _$ClaimResponse {
+  const factory ClaimResponse({
     String resourceType,
     Id id,
     Meta meta,
@@ -297,9 +376,14 @@ abstract class Billing with _$Billing {
     List<Reference> communicationRequest,
     List<ClaimResponseInsurance> insurance,
     List<ClaimResponseError> error,
-  }) = ClaimResponse;
+  }) = _ClaimResponse;
+  factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseFromJson(json);
+}
 
-  const factory Billing.claimResponseItem({
+@freezed
+abstract class ClaimResponseItem with _$ClaimResponseItem {
+  const factory ClaimResponseItem({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -307,9 +391,14 @@ abstract class Billing with _$Billing {
     List<int> noteNumber,
     List<ClaimResponseAdjudication> adjudication,
     List<ClaimResponseDetail> detail,
-  }) = ClaimResponseItem;
+  }) = _ClaimResponseItem;
+  factory ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseItemFromJson(json);
+}
 
-  const factory Billing.claimResponseAdjudication({
+@freezed
+abstract class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
+  const factory ClaimResponseAdjudication({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -317,9 +406,14 @@ abstract class Billing with _$Billing {
     CodeableConcept reason,
     Money amount,
     double value,
-  }) = ClaimResponseAdjudication;
+  }) = _ClaimResponseAdjudication;
+  factory ClaimResponseAdjudication.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseAdjudicationFromJson(json);
+}
 
-  const factory Billing.claimResponseDetail({
+@freezed
+abstract class ClaimResponseDetail with _$ClaimResponseDetail {
+  const factory ClaimResponseDetail({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -327,18 +421,28 @@ abstract class Billing with _$Billing {
     List<int> noteNumber,
     List<ClaimResponseAdjudication> adjudication,
     List<ClaimResponseSubDetail> subDetail,
-  }) = ClaimResponseDetail;
+  }) = _ClaimResponseDetail;
+  factory ClaimResponseDetail.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseDetailFromJson(json);
+}
 
-  const factory Billing.claimResponseSubDetail({
+@freezed
+abstract class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
+  const factory ClaimResponseSubDetail({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int subDetailSequence,
     List<int> noteNumber,
     List<ClaimResponseAdjudication> adjudication,
-  }) = ClaimResponseSubDetail;
+  }) = _ClaimResponseSubDetail;
+  factory ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseSubDetailFromJson(json);
+}
 
-  const factory Billing.claimResponseAddItem({
+@freezed
+abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
+  const factory ClaimResponseAddItem({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -363,9 +467,14 @@ abstract class Billing with _$Billing {
     List<int> noteNumber,
     List<ClaimResponseAdjudication> adjudication,
     List<ClaimResponseDetail1> detail,
-  }) = ClaimResponseAddItem;
+  }) = _ClaimResponseAddItem;
+  factory ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseAddItemFromJson(json);
+}
 
-  const factory Billing.claimResponseDetail1({
+@freezed
+abstract class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
+  const factory ClaimResponseDetail1({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -378,9 +487,14 @@ abstract class Billing with _$Billing {
     List<int> noteNumber,
     List<ClaimResponseAdjudication> adjudication,
     List<ClaimResponseSubDetail1> subDetail,
-  }) = ClaimResponseDetail1;
+  }) = _ClaimResponseDetail1;
+  factory ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseDetail1FromJson(json);
+}
 
-  const factory Billing.claimResponseSubDetail1({
+@freezed
+abstract class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
+  const factory ClaimResponseSubDetail1({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -392,17 +506,27 @@ abstract class Billing with _$Billing {
     Money net,
     List<int> noteNumber,
     List<ClaimResponseAdjudication> adjudication,
-  }) = ClaimResponseSubDetail1;
+  }) = _ClaimResponseSubDetail1;
+  factory ClaimResponseSubDetail1.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseSubDetail1FromJson(json);
+}
 
-  const factory Billing.claimResponseTotal({
+@freezed
+abstract class ClaimResponseTotal with _$ClaimResponseTotal {
+  const factory ClaimResponseTotal({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept category,
     Money amount,
-  }) = ClaimResponseTotal;
+  }) = _ClaimResponseTotal;
+  factory ClaimResponseTotal.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseTotalFromJson(json);
+}
 
-  const factory Billing.claimResponsePayment({
+@freezed
+abstract class ClaimResponsePayment with _$ClaimResponsePayment {
+  const factory ClaimResponsePayment({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -412,9 +536,14 @@ abstract class Billing with _$Billing {
     Date date,
     Money amount,
     Identifier identifier,
-  }) = ClaimResponsePayment;
+  }) = _ClaimResponsePayment;
+  factory ClaimResponsePayment.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponsePaymentFromJson(json);
+}
 
-  const factory Billing.claimResponseProcessNote({
+@freezed
+abstract class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
+  const factory ClaimResponseProcessNote({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -422,9 +551,14 @@ abstract class Billing with _$Billing {
     ClaimResponseProcessNoteType type,
     String text,
     CodeableConcept language,
-  }) = ClaimResponseProcessNote;
+  }) = _ClaimResponseProcessNote;
+  factory ClaimResponseProcessNote.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseProcessNoteFromJson(json);
+}
 
-  const factory Billing.claimResponseInsurance({
+@freezed
+abstract class ClaimResponseInsurance with _$ClaimResponseInsurance {
+  const factory ClaimResponseInsurance({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -433,9 +567,14 @@ abstract class Billing with _$Billing {
     Reference coverage,
     String businessArrangement,
     Reference claimResponse,
-  }) = ClaimResponseInsurance;
+  }) = _ClaimResponseInsurance;
+  factory ClaimResponseInsurance.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseInsuranceFromJson(json);
+}
 
-  const factory Billing.claimResponseError({
+@freezed
+abstract class ClaimResponseError with _$ClaimResponseError {
+  const factory ClaimResponseError({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -443,8 +582,7 @@ abstract class Billing with _$Billing {
     int detailSequence,
     int subDetailSequence,
     CodeableConcept code,
-  }) = ClaimResponseError;
-
-  factory Billing.fromJson(Map<String, dynamic> json) =>
-      _$BillingFromJson(json);
+  }) = _ClaimResponseError;
+  factory ClaimResponseError.fromJson(Map<String, dynamic> json) =>
+      _$ClaimResponseErrorFromJson(json);
 }

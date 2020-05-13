@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'request_and_response.enums.dart';
 
-part 'request_and_response.g.dart';
 part 'request_and_response.freezed.dart';
+part 'request_and_response.g.dart';
 
 @freezed
-abstract class RequestAndResponse with _$RequestAndResponse {
-  const factory RequestAndResponse.deviceUseStatement({
+abstract class DeviceUseStatement with _$DeviceUseStatement {
+  const factory DeviceUseStatement({
     String resourceType,
     Id id,
     Meta meta,
@@ -33,9 +33,14 @@ abstract class RequestAndResponse with _$RequestAndResponse {
     List<Reference> reasonReference,
     CodeableConcept bodySite,
     List<Annotation> note,
-  }) = DeviceUseStatement;
+  }) = _DeviceUseStatement;
+  factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
+      _$DeviceUseStatementFromJson(json);
+}
 
-  const factory RequestAndResponse.supplyDelivery({
+@freezed
+abstract class SupplyDelivery with _$SupplyDelivery {
+  const factory SupplyDelivery({
     String resourceType,
     Id id,
     Meta meta,
@@ -58,18 +63,28 @@ abstract class RequestAndResponse with _$RequestAndResponse {
     Reference supplier,
     Reference destination,
     List<Reference> receiver,
-  }) = SupplyDelivery;
+  }) = _SupplyDelivery;
+  factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
+      _$SupplyDeliveryFromJson(json);
+}
 
-  const factory RequestAndResponse.supplyDeliverySuppliedItem({
+@freezed
+abstract class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
+  const factory SupplyDeliverySuppliedItem({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Quantity quantity,
     CodeableConcept itemCodeableConcept,
     Reference itemReference,
-  }) = SupplyDeliverySuppliedItem;
+  }) = _SupplyDeliverySuppliedItem;
+  factory SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =>
+      _$SupplyDeliverySuppliedItemFromJson(json);
+}
 
-  const factory RequestAndResponse.supplyRequest({
+@freezed
+abstract class SupplyRequest with _$SupplyRequest {
+  const factory SupplyRequest({
     String resourceType,
     Id id,
     Meta meta,
@@ -97,9 +112,14 @@ abstract class RequestAndResponse with _$RequestAndResponse {
     List<Reference> reasonReference,
     Reference deliverFrom,
     Reference deliverTo,
-  }) = SupplyRequest;
+  }) = _SupplyRequest;
+  factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
+      _$SupplyRequestFromJson(json);
+}
 
-  const factory RequestAndResponse.supplyRequestParameter({
+@freezed
+abstract class SupplyRequestParameter with _$SupplyRequestParameter {
+  const factory SupplyRequestParameter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -108,9 +128,14 @@ abstract class RequestAndResponse with _$RequestAndResponse {
     Quantity valueQuantity,
     Range valueRange,
     bool valueBoolean,
-  }) = SupplyRequestParameter;
+  }) = _SupplyRequestParameter;
+  factory SupplyRequestParameter.fromJson(Map<String, dynamic> json) =>
+      _$SupplyRequestParameterFromJson(json);
+}
 
-  const factory RequestAndResponse.guidanceResponse({
+@freezed
+abstract class GuidanceResponse with _$GuidanceResponse {
+  const factory GuidanceResponse({
     String resourceType,
     Id id,
     Meta meta,
@@ -137,9 +162,14 @@ abstract class RequestAndResponse with _$RequestAndResponse {
     Reference outputParameters,
     Reference result,
     List<DataRequirement> dataRequirement,
-  }) = GuidanceResponse;
+  }) = _GuidanceResponse;
+  factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
+      _$GuidanceResponseFromJson(json);
+}
 
-  const factory RequestAndResponse.deviceRequest({
+@freezed
+abstract class DeviceRequest with _$DeviceRequest {
+  const factory DeviceRequest({
     String resourceType,
     Id id,
     Meta meta,
@@ -176,9 +206,14 @@ abstract class RequestAndResponse with _$RequestAndResponse {
     List<Reference> supportingInfo,
     List<Annotation> note,
     List<Reference> relevantHistory,
-  }) = DeviceRequest;
+  }) = _DeviceRequest;
+  factory DeviceRequest.fromJson(Map<String, dynamic> json) =>
+      _$DeviceRequestFromJson(json);
+}
 
-  const factory RequestAndResponse.deviceRequestParameter({
+@freezed
+abstract class DeviceRequestParameter with _$DeviceRequestParameter {
+  const factory DeviceRequestParameter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -187,9 +222,14 @@ abstract class RequestAndResponse with _$RequestAndResponse {
     Quantity valueQuantity,
     Range valueRange,
     bool valueBoolean,
-  }) = DeviceRequestParameter;
+  }) = _DeviceRequestParameter;
+  factory DeviceRequestParameter.fromJson(Map<String, dynamic> json) =>
+      _$DeviceRequestParameterFromJson(json);
+}
 
-  const factory RequestAndResponse.communicationRequest({
+@freezed
+abstract class CommunicationRequest with _$CommunicationRequest {
+  const factory CommunicationRequest({
     String resourceType,
     Id id,
     Meta meta,
@@ -222,18 +262,28 @@ abstract class RequestAndResponse with _$RequestAndResponse {
     List<CodeableConcept> reasonCode,
     List<Reference> reasonReference,
     List<Annotation> note,
-  }) = CommunicationRequest;
+  }) = _CommunicationRequest;
+  factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
+      _$CommunicationRequestFromJson(json);
+}
 
-  const factory RequestAndResponse.communicationRequestPayload({
+@freezed
+abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
+  const factory CommunicationRequestPayload({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String contentString,
     Attachment contentAttachment,
     Reference contentReference,
-  }) = CommunicationRequestPayload;
+  }) = _CommunicationRequestPayload;
+  factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
+      _$CommunicationRequestPayloadFromJson(json);
+}
 
-  const factory RequestAndResponse.communication({
+@freezed
+abstract class Communication with _$Communication {
+  const factory Communication({
     String resourceType,
     Id id,
     Meta meta,
@@ -266,17 +316,21 @@ abstract class RequestAndResponse with _$RequestAndResponse {
     List<Reference> reasonReference,
     List<CommunicationPayload> payload,
     List<Annotation> note,
-  }) = Communication;
+  }) = _Communication;
+  factory Communication.fromJson(Map<String, dynamic> json) =>
+      _$CommunicationFromJson(json);
+}
 
-  const factory RequestAndResponse.communicationPayload({
+@freezed
+abstract class CommunicationPayload with _$CommunicationPayload {
+  const factory CommunicationPayload({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String contentString,
     Attachment contentAttachment,
     Reference contentReference,
-  }) = CommunicationPayload;
-
-  factory RequestAndResponse.fromJson(Map<String, dynamic> json) =>
-      _$RequestAndResponseFromJson(json);
+  }) = _CommunicationPayload;
+  factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
+      _$CommunicationPayloadFromJson(json);
 }

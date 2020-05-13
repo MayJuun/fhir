@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'individuals.enums.dart';
 
-part 'individuals.g.dart';
 part 'individuals.freezed.dart';
+part 'individuals.g.dart';
 
 @freezed
-abstract class Individuals with _$Individuals {
-  const factory Individuals.group({
+abstract class Group with _$Group {
+  const factory Group({
     String resourceType,
     Id id,
     Meta meta,
@@ -28,9 +28,13 @@ abstract class Individuals with _$Individuals {
     Reference managingEntity,
     List<GroupCharacteristic> characteristic,
     List<GroupMember> member,
-  }) = Group;
+  }) = _Group;
+  factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
+}
 
-  const factory Individuals.groupCharacteristic({
+@freezed
+abstract class GroupCharacteristic with _$GroupCharacteristic {
+  const factory GroupCharacteristic({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -42,18 +46,28 @@ abstract class Individuals with _$Individuals {
     Reference valueReference,
     bool exclude,
     Period period,
-  }) = GroupCharacteristic;
+  }) = _GroupCharacteristic;
+  factory GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
+      _$GroupCharacteristicFromJson(json);
+}
 
-  const factory Individuals.groupMember({
+@freezed
+abstract class GroupMember with _$GroupMember {
+  const factory GroupMember({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference entity,
     Period period,
     bool inactive,
-  }) = GroupMember;
+  }) = _GroupMember;
+  factory GroupMember.fromJson(Map<String, dynamic> json) =>
+      _$GroupMemberFromJson(json);
+}
 
-  const factory Individuals.patient({
+@freezed
+abstract class Patient with _$Patient {
+  const factory Patient({
     String resourceType,
     Id id,
     Meta meta,
@@ -81,9 +95,14 @@ abstract class Individuals with _$Individuals {
     List<Reference> generalPractitioner,
     Reference managingOrganization,
     List<PatientLink> link,
-  }) = Patient;
+  }) = _Patient;
+  factory Patient.fromJson(Map<String, dynamic> json) =>
+      _$PatientFromJson(json);
+}
 
-  const factory Individuals.patientContact({
+@freezed
+abstract class PatientContact with _$PatientContact {
+  const factory PatientContact({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -94,25 +113,40 @@ abstract class Individuals with _$Individuals {
     PatientContactGender gender,
     Reference organization,
     Period period,
-  }) = PatientContact;
+  }) = _PatientContact;
+  factory PatientContact.fromJson(Map<String, dynamic> json) =>
+      _$PatientContactFromJson(json);
+}
 
-  const factory Individuals.patientCommunication({
+@freezed
+abstract class PatientCommunication with _$PatientCommunication {
+  const factory PatientCommunication({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept language,
     bool preferred,
-  }) = PatientCommunication;
+  }) = _PatientCommunication;
+  factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
+      _$PatientCommunicationFromJson(json);
+}
 
-  const factory Individuals.patientLink({
+@freezed
+abstract class PatientLink with _$PatientLink {
+  const factory PatientLink({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference other,
     PatientLinkType type,
-  }) = PatientLink;
+  }) = _PatientLink;
+  factory PatientLink.fromJson(Map<String, dynamic> json) =>
+      _$PatientLinkFromJson(json);
+}
 
-  const factory Individuals.practitionerRole({
+@freezed
+abstract class PractitionerRole with _$PractitionerRole {
+  const factory PractitionerRole({
     String resourceType,
     Id id,
     Meta meta,
@@ -136,9 +170,15 @@ abstract class Individuals with _$Individuals {
     List<PractitionerRoleNotAvailable> notAvailable,
     String availabilityExceptions,
     List<Reference> endpoint,
-  }) = PractitionerRole;
+  }) = _PractitionerRole;
+  factory PractitionerRole.fromJson(Map<String, dynamic> json) =>
+      _$PractitionerRoleFromJson(json);
+}
 
-  const factory Individuals.practitionerRoleAvailableTime({
+@freezed
+abstract class PractitionerRoleAvailableTime
+    with _$PractitionerRoleAvailableTime {
+  const factory PractitionerRoleAvailableTime({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -146,17 +186,28 @@ abstract class Individuals with _$Individuals {
     bool allDay,
     Time availableStartTime,
     Time availableEndTime,
-  }) = PractitionerRoleAvailableTime;
+  }) = _PractitionerRoleAvailableTime;
+  factory PractitionerRoleAvailableTime.fromJson(Map<String, dynamic> json) =>
+      _$PractitionerRoleAvailableTimeFromJson(json);
+}
 
-  const factory Individuals.practitionerRoleNotAvailable({
+@freezed
+abstract class PractitionerRoleNotAvailable
+    with _$PractitionerRoleNotAvailable {
+  const factory PractitionerRoleNotAvailable({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     Period during,
-  }) = PractitionerRoleNotAvailable;
+  }) = _PractitionerRoleNotAvailable;
+  factory PractitionerRoleNotAvailable.fromJson(Map<String, dynamic> json) =>
+      _$PractitionerRoleNotAvailableFromJson(json);
+}
 
-  const factory Individuals.person({
+@freezed
+abstract class Person with _$Person {
+  const factory Person({
     @Default('Person') String resourceType,
     Id id,
     Meta meta,
@@ -176,17 +227,26 @@ abstract class Individuals with _$Individuals {
     Reference managingOrganization,
     bool active,
     List<PersonLink> link,
-  }) = Person;
+  }) = _Person;
+  factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
+}
 
-  const factory Individuals.personLink({
+@freezed
+abstract class PersonLink with _$PersonLink {
+  const factory PersonLink({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference target,
     PersonLinkAssurance assurance,
-  }) = PersonLink;
+  }) = _PersonLink;
+  factory PersonLink.fromJson(Map<String, dynamic> json) =>
+      _$PersonLinkFromJson(json);
+}
 
-  const factory Individuals.practitioner({
+@freezed
+abstract class Practitioner with _$Practitioner {
+  const factory Practitioner({
     String resourceType,
     Id id,
     Meta meta,
@@ -206,9 +266,14 @@ abstract class Individuals with _$Individuals {
     List<Attachment> photo,
     List<PractitionerQualification> qualification,
     List<CodeableConcept> communication,
-  }) = Practitioner;
+  }) = _Practitioner;
+  factory Practitioner.fromJson(Map<String, dynamic> json) =>
+      _$PractitionerFromJson(json);
+}
 
-  const factory Individuals.practitionerQualification({
+@freezed
+abstract class PractitionerQualification with _$PractitionerQualification {
+  const factory PractitionerQualification({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -216,9 +281,14 @@ abstract class Individuals with _$Individuals {
     CodeableConcept code,
     Period period,
     Reference issuer,
-  }) = PractitionerQualification;
+  }) = _PractitionerQualification;
+  factory PractitionerQualification.fromJson(Map<String, dynamic> json) =>
+      _$PractitionerQualificationFromJson(json);
+}
 
-  const factory Individuals.relatedPerson({
+@freezed
+abstract class RelatedPerson with _$RelatedPerson {
+  const factory RelatedPerson({
     String resourceType,
     Id id,
     Meta meta,
@@ -240,16 +310,20 @@ abstract class Individuals with _$Individuals {
     List<Attachment> photo,
     Period period,
     List<RelatedPersonCommunication> communication,
-  }) = RelatedPerson;
+  }) = _RelatedPerson;
+  factory RelatedPerson.fromJson(Map<String, dynamic> json) =>
+      _$RelatedPersonFromJson(json);
+}
 
-  const factory Individuals.relatedPersonCommunication({
+@freezed
+abstract class RelatedPersonCommunication with _$RelatedPersonCommunication {
+  const factory RelatedPersonCommunication({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept language,
     bool preferred,
-  }) = RelatedPersonCommunication;
-
-  factory Individuals.fromJson(Map<String, dynamic> json) =>
-      _$IndividualsFromJson(json);
+  }) = _RelatedPersonCommunication;
+  factory RelatedPersonCommunication.fromJson(Map<String, dynamic> json) =>
+      _$RelatedPersonCommunicationFromJson(json);
 }

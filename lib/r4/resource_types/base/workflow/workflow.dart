@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'workflow.enums.dart';
 
-part 'workflow.g.dart';
 part 'workflow.freezed.dart';
+part 'workflow.g.dart';
 
 @freezed
-abstract class Workflow with _$Workflow {
-  const factory Workflow.schedule({
+abstract class Schedule with _$Schedule {
+  const factory Schedule({
     String resourceType,
     Id id,
     Meta meta,
@@ -26,9 +26,14 @@ abstract class Workflow with _$Workflow {
     List<Reference> actor,
     Period planningHorizon,
     String comment,
-  }) = Schedule;
+  }) = _Schedule;
+  factory Schedule.fromJson(Map<String, dynamic> json) =>
+      _$ScheduleFromJson(json);
+}
 
-  const factory Workflow.slot({
+@freezed
+abstract class Slot with _$Slot {
+  const factory Slot({
     String resourceType,
     Id id,
     Meta meta,
@@ -49,9 +54,13 @@ abstract class Workflow with _$Workflow {
     Instant end,
     bool overbooked,
     String comment,
-  }) = Slot;
+  }) = _Slot;
+  factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
+}
 
-  const factory Workflow.task({
+@freezed
+abstract class Task with _$Task {
+  const factory Task({
     String resourceType,
     Id id,
     Meta meta,
@@ -92,18 +101,27 @@ abstract class Workflow with _$Workflow {
     TaskRestriction restriction,
     List<TaskInput> input,
     List<TaskOutput> output,
-  }) = Task;
+  }) = _Task;
+  factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
+}
 
-  const factory Workflow.taskRestriction({
+@freezed
+abstract class TaskRestriction with _$TaskRestriction {
+  const factory TaskRestriction({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     int repetitions,
     Period period,
     List<Reference> recipient,
-  }) = TaskRestriction;
+  }) = _TaskRestriction;
+  factory TaskRestriction.fromJson(Map<String, dynamic> json) =>
+      _$TaskRestrictionFromJson(json);
+}
 
-  const factory Workflow.taskInput({
+@freezed
+abstract class TaskInput with _$TaskInput {
+  const factory TaskInput({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -158,9 +176,14 @@ abstract class Workflow with _$Workflow {
     UsageContext valueUsageContext,
     Dosage valueDosage,
     Meta valueMeta,
-  }) = TaskInput;
+  }) = _TaskInput;
+  factory TaskInput.fromJson(Map<String, dynamic> json) =>
+      _$TaskInputFromJson(json);
+}
 
-  const factory Workflow.taskOutput({
+@freezed
+abstract class TaskOutput with _$TaskOutput {
+  const factory TaskOutput({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -215,9 +238,14 @@ abstract class Workflow with _$Workflow {
     UsageContext valueUsageContext,
     Dosage valueDosage,
     Meta valueMeta,
-  }) = TaskOutput;
+  }) = _TaskOutput;
+  factory TaskOutput.fromJson(Map<String, dynamic> json) =>
+      _$TaskOutputFromJson(json);
+}
 
-  const factory Workflow.appointment({
+@freezed
+abstract class Appointment with _$Appointment {
+  const factory Appointment({
     String resourceType,
     Id id,
     Meta meta,
@@ -249,9 +277,14 @@ abstract class Workflow with _$Workflow {
     List<Reference> basedOn,
     List<AppointmentParticipant> participant,
     List<Period> requestedPeriod,
-  }) = Appointment;
+  }) = _Appointment;
+  factory Appointment.fromJson(Map<String, dynamic> json) =>
+      _$AppointmentFromJson(json);
+}
 
-  const factory Workflow.appointmentParticipant({
+@freezed
+abstract class AppointmentParticipant with _$AppointmentParticipant {
+  const factory AppointmentParticipant({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -260,9 +293,14 @@ abstract class Workflow with _$Workflow {
     @JsonKey(name: 'required') AppointmentParticipantRequired require,
     AppointmentParticipantStatus status,
     Period period,
-  }) = AppointmentParticipant;
+  }) = _AppointmentParticipant;
+  factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
+      _$AppointmentParticipantFromJson(json);
+}
 
-  const factory Workflow.appointmentResponse({
+@freezed
+abstract class AppointmentResponse with _$AppointmentResponse {
+  const factory AppointmentResponse({
     String resourceType,
     Id id,
     Meta meta,
@@ -280,9 +318,14 @@ abstract class Workflow with _$Workflow {
     Reference actor,
     Code participantStatus,
     String comment,
-  }) = AppointmentResponse;
+  }) = _AppointmentResponse;
+  factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
+      _$AppointmentResponseFromJson(json);
+}
 
-  const factory Workflow.verificationResult({
+@freezed
+abstract class VerificationResult with _$VerificationResult {
+  const factory VerificationResult({
     String resourceType,
     Id id,
     Meta meta,
@@ -306,9 +349,15 @@ abstract class Workflow with _$Workflow {
     List<VerificationResultPrimarySource> primarySource,
     VerificationResultAttestation attestation,
     List<VerificationResultValidator> validator,
-  }) = VerificationResult;
+  }) = _VerificationResult;
+  factory VerificationResult.fromJson(Map<String, dynamic> json) =>
+      _$VerificationResultFromJson(json);
+}
 
-  const factory Workflow.verificationResultPrimarySource({
+@freezed
+abstract class VerificationResultPrimarySource
+    with _$VerificationResultPrimarySource {
+  const factory VerificationResultPrimarySource({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -319,9 +368,15 @@ abstract class Workflow with _$Workflow {
     FhirDateTime validationDate,
     CodeableConcept canPushUpdates,
     List<CodeableConcept> pushTypeAvailable,
-  }) = VerificationResultPrimarySource;
+  }) = _VerificationResultPrimarySource;
+  factory VerificationResultPrimarySource.fromJson(Map<String, dynamic> json) =>
+      _$VerificationResultPrimarySourceFromJson(json);
+}
 
-  const factory Workflow.verificationResultAttestation({
+@freezed
+abstract class VerificationResultAttestation
+    with _$VerificationResultAttestation {
+  const factory VerificationResultAttestation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -333,17 +388,21 @@ abstract class Workflow with _$Workflow {
     String proxyIdentityCertificate,
     Signature proxySignature,
     Signature sourceSignature,
-  }) = VerificationResultAttestation;
+  }) = _VerificationResultAttestation;
+  factory VerificationResultAttestation.fromJson(Map<String, dynamic> json) =>
+      _$VerificationResultAttestationFromJson(json);
+}
 
-  const factory Workflow.verificationResultValidator({
+@freezed
+abstract class VerificationResultValidator with _$VerificationResultValidator {
+  const factory VerificationResultValidator({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Reference organization,
     String identityCertificate,
     Signature attestationSignature,
-  }) = VerificationResultValidator;
-
-  factory Workflow.fromJson(Map<String, dynamic> json) =>
-      _$WorkflowFromJson(json);
+  }) = _VerificationResultValidator;
+  factory VerificationResultValidator.fromJson(Map<String, dynamic> json) =>
+      _$VerificationResultValidatorFromJson(json);
 }

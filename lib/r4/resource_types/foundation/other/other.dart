@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'other.enums.dart';
 
-part 'other.g.dart';
 part 'other.freezed.dart';
+part 'other.g.dart';
 
 @freezed
-abstract class Other with _$Other {
-  const factory Other.operationOutcome({
+abstract class OperationOutcome with _$OperationOutcome {
+  const factory OperationOutcome({
     String resourceType,
     Id id,
     Meta meta,
@@ -19,9 +19,14 @@ abstract class Other with _$Other {
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<OperationOutcomeIssue> issue,
-  }) = OperationOutcome;
+  }) = _OperationOutcome;
+  factory OperationOutcome.fromJson(Map<String, dynamic> json) =>
+      _$OperationOutcomeFromJson(json);
+}
 
-  const factory Other.operationOutcomeIssue({
+@freezed
+abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
+  const factory OperationOutcomeIssue({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -31,9 +36,14 @@ abstract class Other with _$Other {
     String diagnostics,
     List<String> location,
     List<String> expression,
-  }) = OperationOutcomeIssue;
+  }) = _OperationOutcomeIssue;
+  factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
+      _$OperationOutcomeIssueFromJson(json);
+}
 
-  const factory Other.messageHeader({
+@freezed
+abstract class MessageHeader with _$MessageHeader {
+  const factory MessageHeader({
     String resourceType,
     Id id,
     Meta meta,
@@ -55,9 +65,14 @@ abstract class Other with _$Other {
     MessageHeaderResponse response,
     List<Reference> focus,
     Canonical definition,
-  }) = MessageHeader;
+  }) = _MessageHeader;
+  factory MessageHeader.fromJson(Map<String, dynamic> json) =>
+      _$MessageHeaderFromJson(json);
+}
 
-  const factory Other.messageHeaderDestination({
+@freezed
+abstract class MessageHeaderDestination with _$MessageHeaderDestination {
+  const factory MessageHeaderDestination({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -65,9 +80,14 @@ abstract class Other with _$Other {
     Reference target,
     FhirUrl endpoint,
     Reference receiver,
-  }) = MessageHeaderDestination;
+  }) = _MessageHeaderDestination;
+  factory MessageHeaderDestination.fromJson(Map<String, dynamic> json) =>
+      _$MessageHeaderDestinationFromJson(json);
+}
 
-  const factory Other.messageHeaderSource({
+@freezed
+abstract class MessageHeaderSource with _$MessageHeaderSource {
+  const factory MessageHeaderSource({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -76,27 +96,42 @@ abstract class Other with _$Other {
     String version,
     ContactPoint contact,
     FhirUrl endpoint,
-  }) = MessageHeaderSource;
+  }) = _MessageHeaderSource;
+  factory MessageHeaderSource.fromJson(Map<String, dynamic> json) =>
+      _$MessageHeaderSourceFromJson(json);
+}
 
-  const factory Other.messageHeaderResponse({
+@freezed
+abstract class MessageHeaderResponse with _$MessageHeaderResponse {
+  const factory MessageHeaderResponse({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Id identifier,
     MessageHeaderResponseCode code,
     Reference details,
-  }) = MessageHeaderResponse;
+  }) = _MessageHeaderResponse;
+  factory MessageHeaderResponse.fromJson(Map<String, dynamic> json) =>
+      _$MessageHeaderResponseFromJson(json);
+}
 
-  const factory Other.parameters({
+@freezed
+abstract class Parameters with _$Parameters {
+  const factory Parameters({
     String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
     Code language,
     List<ParametersParameter> parameter,
-  }) = Parameters;
+  }) = _Parameters;
+  factory Parameters.fromJson(Map<String, dynamic> json) =>
+      _$ParametersFromJson(json);
+}
 
-  const factory Other.parametersParameter({
+@freezed
+abstract class ParametersParameter with _$ParametersParameter {
+  const factory ParametersParameter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -153,9 +188,14 @@ abstract class Other with _$Other {
     Meta valueMeta,
     dynamic resource,
     List<ParametersParameter> part,
-  }) = ParametersParameter;
+  }) = _ParametersParameter;
+  factory ParametersParameter.fromJson(Map<String, dynamic> json) =>
+      _$ParametersParameterFromJson(json);
+}
 
-  const factory Other.binary({
+@freezed
+abstract class Binary with _$Binary {
+  const factory Binary({
     String resourceType,
     Id id,
     Meta meta,
@@ -164,9 +204,13 @@ abstract class Other with _$Other {
     Code contentType,
     Reference securityContext,
     Base64Binary data,
-  }) = Binary;
+  }) = _Binary;
+  factory Binary.fromJson(Map<String, dynamic> json) => _$BinaryFromJson(json);
+}
 
-  const factory Other.subscription({
+@freezed
+abstract class Subscription with _$Subscription {
+  const factory Subscription({
     String resourceType,
     Id id,
     Meta meta,
@@ -183,9 +227,14 @@ abstract class Other with _$Other {
     String criteria,
     String error,
     SubscriptionChannel channel,
-  }) = Subscription;
+  }) = _Subscription;
+  factory Subscription.fromJson(Map<String, dynamic> json) =>
+      _$SubscriptionFromJson(json);
+}
 
-  const factory Other.subscriptionChannel({
+@freezed
+abstract class SubscriptionChannel with _$SubscriptionChannel {
+  const factory SubscriptionChannel({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -193,9 +242,14 @@ abstract class Other with _$Other {
     FhirUrl endpoint,
     Code payload,
     List<String> header,
-  }) = SubscriptionChannel;
+  }) = _SubscriptionChannel;
+  factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
+      _$SubscriptionChannelFromJson(json);
+}
 
-  const factory Other.linkage({
+@freezed
+abstract class Linkage with _$Linkage {
+  const factory Linkage({
     String resourceType,
     Id id,
     Meta meta,
@@ -208,17 +262,27 @@ abstract class Other with _$Other {
     bool active,
     Reference author,
     List<LinkageItem> item,
-  }) = Linkage;
+  }) = _Linkage;
+  factory Linkage.fromJson(Map<String, dynamic> json) =>
+      _$LinkageFromJson(json);
+}
 
-  const factory Other.linkageItem({
+@freezed
+abstract class LinkageItem with _$LinkageItem {
+  const factory LinkageItem({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     LinkageItemType type,
     Reference resource,
-  }) = LinkageItem;
+  }) = _LinkageItem;
+  factory LinkageItem.fromJson(Map<String, dynamic> json) =>
+      _$LinkageItemFromJson(json);
+}
 
-  const factory Other.bundle({
+@freezed
+abstract class Bundle with _$Bundle {
+  const factory Bundle({
     String resourceType,
     Id id,
     Meta meta,
@@ -231,17 +295,26 @@ abstract class Other with _$Other {
     List<BundleLink> link,
     List<BundleEntry> entry,
     Signature signature,
-  }) = Bundle;
+  }) = _Bundle;
+  factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
+}
 
-  const factory Other.bundleLink({
+@freezed
+abstract class BundleLink with _$BundleLink {
+  const factory BundleLink({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String relation,
     FhirUri url,
-  }) = BundleLink;
+  }) = _BundleLink;
+  factory BundleLink.fromJson(Map<String, dynamic> json) =>
+      _$BundleLinkFromJson(json);
+}
 
-  const factory Other.bundleEntry({
+@freezed
+abstract class BundleEntry with _$BundleEntry {
+  const factory BundleEntry({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -251,17 +324,27 @@ abstract class Other with _$Other {
     BundleSearch search,
     BundleRequest request,
     BundleResponse response,
-  }) = BundleEntry;
+  }) = _BundleEntry;
+  factory BundleEntry.fromJson(Map<String, dynamic> json) =>
+      _$BundleEntryFromJson(json);
+}
 
-  const factory Other.bundleSearch({
+@freezed
+abstract class BundleSearch with _$BundleSearch {
+  const factory BundleSearch({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     BundleSearchMode mode,
     double score,
-  }) = BundleSearch;
+  }) = _BundleSearch;
+  factory BundleSearch.fromJson(Map<String, dynamic> json) =>
+      _$BundleSearchFromJson(json);
+}
 
-  const factory Other.bundleRequest({
+@freezed
+abstract class BundleRequest with _$BundleRequest {
+  const factory BundleRequest({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -271,9 +354,14 @@ abstract class Other with _$Other {
     Instant ifModifiedSince,
     String ifMatch,
     String ifNoneExist,
-  }) = BundleRequest;
+  }) = _BundleRequest;
+  factory BundleRequest.fromJson(Map<String, dynamic> json) =>
+      _$BundleRequestFromJson(json);
+}
 
-  const factory Other.bundleResponse({
+@freezed
+abstract class BundleResponse with _$BundleResponse {
+  const factory BundleResponse({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -282,9 +370,14 @@ abstract class Other with _$Other {
     String etag,
     Instant lastModified,
     dynamic outcome,
-  }) = BundleResponse;
+  }) = _BundleResponse;
+  factory BundleResponse.fromJson(Map<String, dynamic> json) =>
+      _$BundleResponseFromJson(json);
+}
 
-  const factory Other.basic({
+@freezed
+abstract class Basic with _$Basic {
+  const factory Basic({
     String resourceType,
     Id id,
     Meta meta,
@@ -299,7 +392,6 @@ abstract class Other with _$Other {
     Reference subject,
     Date created,
     Reference author,
-  }) = Basic;
-
-  factory Other.fromJson(Map<String, dynamic> json) => _$OtherFromJson(json);
+  }) = _Basic;
+  factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
 }

@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'care_provision.enums.dart';
 
-part 'care_provision.g.dart';
 part 'care_provision.freezed.dart';
+part 'care_provision.g.dart';
 
 @freezed
-abstract class CareProvision with _$CareProvision {
-  const factory CareProvision.visionPrescription({
+abstract class VisionPrescription with _$VisionPrescription {
+  const factory VisionPrescription({
     String resourceType,
     Id id,
     Meta meta,
@@ -26,9 +26,15 @@ abstract class CareProvision with _$CareProvision {
     FhirDateTime dateWritten,
     Reference prescriber,
     List<VisionPrescriptionLensSpecification> lensSpecification,
-  }) = VisionPrescription;
+  }) = _VisionPrescription;
+  factory VisionPrescription.fromJson(Map<String, dynamic> json) =>
+      _$VisionPrescriptionFromJson(json);
+}
 
-  const factory CareProvision.visionPrescriptionLensSpecification({
+@freezed
+abstract class VisionPrescriptionLensSpecification
+    with _$VisionPrescriptionLensSpecification {
+  const factory VisionPrescriptionLensSpecification({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -46,17 +52,28 @@ abstract class CareProvision with _$CareProvision {
     String color,
     String brand,
     List<Annotation> note,
-  }) = VisionPrescriptionLensSpecification;
+  }) = _VisionPrescriptionLensSpecification;
+  factory VisionPrescriptionLensSpecification.fromJson(
+          Map<String, dynamic> json) =>
+      _$VisionPrescriptionLensSpecificationFromJson(json);
+}
 
-  const factory CareProvision.visionPrescriptionPrism({
+@freezed
+abstract class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
+  const factory VisionPrescriptionPrism({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     double amount,
     VisionPrescriptionPrismBase base,
-  }) = VisionPrescriptionPrism;
+  }) = _VisionPrescriptionPrism;
+  factory VisionPrescriptionPrism.fromJson(Map<String, dynamic> json) =>
+      _$VisionPrescriptionPrismFromJson(json);
+}
 
-  const factory CareProvision.riskAssessment({
+@freezed
+abstract class RiskAssessment with _$RiskAssessment {
+  const factory RiskAssessment({
     String resourceType,
     Id id,
     Meta meta,
@@ -84,9 +101,14 @@ abstract class CareProvision with _$CareProvision {
     List<RiskAssessmentPrediction> prediction,
     String mitigation,
     List<Annotation> note,
-  }) = RiskAssessment;
+  }) = _RiskAssessment;
+  factory RiskAssessment.fromJson(Map<String, dynamic> json) =>
+      _$RiskAssessmentFromJson(json);
+}
 
-  const factory CareProvision.riskAssessmentPrediction({
+@freezed
+abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
+  const factory RiskAssessmentPrediction({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -97,8 +119,14 @@ abstract class CareProvision with _$CareProvision {
     Period whenPeriod,
     Range whenRange,
     String rationale,
-  }) = RiskAssessmentPrediction;
-  const factory CareProvision.serviceRequest({
+  }) = _RiskAssessmentPrediction;
+  factory RiskAssessmentPrediction.fromJson(Map<String, dynamic> json) =>
+      _$RiskAssessmentPredictionFromJson(json);
+}
+
+@freezed
+abstract class ServiceRequest with _$ServiceRequest {
+  const factory ServiceRequest({
     String resourceType,
     Id id,
     Meta meta,
@@ -146,9 +174,14 @@ abstract class CareProvision with _$CareProvision {
     List<Annotation> note,
     String patientInstruction,
     List<Reference> relevantHistory,
-  }) = ServiceRequest;
+  }) = _ServiceRequest;
+  factory ServiceRequest.fromJson(Map<String, dynamic> json) =>
+      _$ServiceRequestFromJson(json);
+}
 
-  const factory CareProvision.goal({
+@freezed
+abstract class Goal with _$Goal {
+  const factory Goal({
     String resourceType,
     Id id,
     Meta meta,
@@ -174,9 +207,13 @@ abstract class CareProvision with _$CareProvision {
     List<Annotation> note,
     List<CodeableConcept> outcomeCode,
     List<Reference> outcomeReference,
-  }) = Goal;
+  }) = _Goal;
+  factory Goal.fromJson(Map<String, dynamic> json) => _$GoalFromJson(json);
+}
 
-  const factory CareProvision.goalTarget({
+@freezed
+abstract class GoalTarget with _$GoalTarget {
+  const factory GoalTarget({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -190,9 +227,14 @@ abstract class CareProvision with _$CareProvision {
     Ratio detailRatio,
     Date dueDate,
     Duration dueDuration,
-  }) = GoalTarget;
+  }) = _GoalTarget;
+  factory GoalTarget.fromJson(Map<String, dynamic> json) =>
+      _$GoalTargetFromJson(json);
+}
 
-  const factory CareProvision.nutritionOrder({
+@freezed
+abstract class NutritionOrder with _$NutritionOrder {
+  const factory NutritionOrder({
     String resourceType,
     Id id,
     Meta meta,
@@ -218,9 +260,14 @@ abstract class CareProvision with _$CareProvision {
     List<NutritionOrderSupplement> supplement,
     NutritionOrderEnteralFormula enteralFormula,
     List<Annotation> note,
-  }) = NutritionOrder;
+  }) = _NutritionOrder;
+  factory NutritionOrder.fromJson(Map<String, dynamic> json) =>
+      _$NutritionOrderFromJson(json);
+}
 
-  const factory CareProvision.nutritionOrderOralDiet({
+@freezed
+abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
+  const factory NutritionOrderOralDiet({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -230,25 +277,40 @@ abstract class CareProvision with _$CareProvision {
     List<NutritionOrderTexture> texture,
     List<CodeableConcept> fluidConsistencyType,
     String instruction,
-  }) = NutritionOrderOralDiet;
+  }) = _NutritionOrderOralDiet;
+  factory NutritionOrderOralDiet.fromJson(Map<String, dynamic> json) =>
+      _$NutritionOrderOralDietFromJson(json);
+}
 
-  const factory CareProvision.nutritionOrderNutrient({
+@freezed
+abstract class NutritionOrderNutrient with _$NutritionOrderNutrient {
+  const factory NutritionOrderNutrient({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept modifier,
     Quantity amount,
-  }) = NutritionOrderNutrient;
+  }) = _NutritionOrderNutrient;
+  factory NutritionOrderNutrient.fromJson(Map<String, dynamic> json) =>
+      _$NutritionOrderNutrientFromJson(json);
+}
 
-  const factory CareProvision.nutritionOrderTexture({
+@freezed
+abstract class NutritionOrderTexture with _$NutritionOrderTexture {
+  const factory NutritionOrderTexture({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept modifier,
     CodeableConcept foodType,
-  }) = NutritionOrderTexture;
+  }) = _NutritionOrderTexture;
+  factory NutritionOrderTexture.fromJson(Map<String, dynamic> json) =>
+      _$NutritionOrderTextureFromJson(json);
+}
 
-  const factory CareProvision.nutritionOrderSupplement({
+@freezed
+abstract class NutritionOrderSupplement with _$NutritionOrderSupplement {
+  const factory NutritionOrderSupplement({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     CodeableConcept type,
@@ -256,9 +318,15 @@ abstract class CareProvision with _$CareProvision {
     List<Timing> schedule,
     Quantity quantity,
     String instruction,
-  }) = NutritionOrderSupplement;
+  }) = _NutritionOrderSupplement;
+  factory NutritionOrderSupplement.fromJson(Map<String, dynamic> json) =>
+      _$NutritionOrderSupplementFromJson(json);
+}
 
-  const factory CareProvision.nutritionOrderEnteralFormula({
+@freezed
+abstract class NutritionOrderEnteralFormula
+    with _$NutritionOrderEnteralFormula {
+  const factory NutritionOrderEnteralFormula({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -270,9 +338,15 @@ abstract class CareProvision with _$CareProvision {
     CodeableConcept routeofAdministration,
     List<NutritionOrderAdministration> administration,
     Quantity maxVolumeToDeliver,
-  }) = NutritionOrderEnteralFormula;
+  }) = _NutritionOrderEnteralFormula;
+  factory NutritionOrderEnteralFormula.fromJson(Map<String, dynamic> json) =>
+      _$NutritionOrderEnteralFormulaFromJson(json);
+}
 
-  const factory CareProvision.nutritionOrderAdministration({
+@freezed
+abstract class NutritionOrderAdministration
+    with _$NutritionOrderAdministration {
+  const factory NutritionOrderAdministration({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -280,9 +354,14 @@ abstract class CareProvision with _$CareProvision {
     Quantity quantity,
     Quantity rateQuantity,
     Ratio rateRatio,
-  }) = NutritionOrderAdministration;
+  }) = _NutritionOrderAdministration;
+  factory NutritionOrderAdministration.fromJson(Map<String, dynamic> json) =>
+      _$NutritionOrderAdministrationFromJson(json);
+}
 
-  const factory CareProvision.carePlan({
+@freezed
+abstract class CarePlan with _$CarePlan {
+  const factory CarePlan({
     String resourceType,
     Id id,
     Meta meta,
@@ -313,9 +392,14 @@ abstract class CareProvision with _$CareProvision {
     List<Reference> goal,
     List<CarePlanActivity> activity,
     List<Annotation> note,
-  }) = CarePlan;
+  }) = _CarePlan;
+  factory CarePlan.fromJson(Map<String, dynamic> json) =>
+      _$CarePlanFromJson(json);
+}
 
-  const factory CareProvision.carePlanActivity({
+@freezed
+abstract class CarePlanActivity with _$CarePlanActivity {
+  const factory CarePlanActivity({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -323,9 +407,14 @@ abstract class CareProvision with _$CareProvision {
     List<Annotation> progress,
     Reference reference,
     CarePlanDetail detail,
-  }) = CarePlanActivity;
+  }) = _CarePlanActivity;
+  factory CarePlanActivity.fromJson(Map<String, dynamic> json) =>
+      _$CarePlanActivityFromJson(json);
+}
 
-  const factory CareProvision.carePlanDetail({
+@freezed
+abstract class CarePlanDetail with _$CarePlanDetail {
+  const factory CarePlanDetail({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Code kind,
@@ -348,9 +437,14 @@ abstract class CareProvision with _$CareProvision {
     Quantity dailyAmount,
     Quantity quantity,
     String description,
-  }) = CarePlanDetail;
+  }) = _CarePlanDetail;
+  factory CarePlanDetail.fromJson(Map<String, dynamic> json) =>
+      _$CarePlanDetailFromJson(json);
+}
 
-  const factory CareProvision.careTeam({
+@freezed
+abstract class CareTeam with _$CareTeam {
+  const factory CareTeam({
     String resourceType,
     Id id,
     Meta meta,
@@ -373,9 +467,14 @@ abstract class CareProvision with _$CareProvision {
     List<Reference> managingOrganization,
     List<ContactPoint> telecom,
     List<Annotation> note,
-  }) = CareTeam;
+  }) = _CareTeam;
+  factory CareTeam.fromJson(Map<String, dynamic> json) =>
+      _$CareTeamFromJson(json);
+}
 
-  const factory CareProvision.careTeamParticipant({
+@freezed
+abstract class CareTeamParticipant with _$CareTeamParticipant {
+  const factory CareTeamParticipant({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -383,9 +482,14 @@ abstract class CareProvision with _$CareProvision {
     Reference member,
     Reference onBehalfOf,
     Period period,
-  }) = CareTeamParticipant;
+  }) = _CareTeamParticipant;
+  factory CareTeamParticipant.fromJson(Map<String, dynamic> json) =>
+      _$CareTeamParticipantFromJson(json);
+}
 
-  const factory CareProvision.requestGroup({
+@freezed
+abstract class RequestGroup with _$RequestGroup {
+  const factory RequestGroup({
     String resourceType,
     Id id,
     Meta meta,
@@ -413,9 +517,14 @@ abstract class CareProvision with _$CareProvision {
     List<Reference> reasonReference,
     List<Annotation> note,
     List<RequestGroupAction> action,
-  }) = RequestGroup;
+  }) = _RequestGroup;
+  factory RequestGroup.fromJson(Map<String, dynamic> json) =>
+      _$RequestGroupFromJson(json);
+}
 
-  const factory CareProvision.requestGroupAction({
+@freezed
+abstract class RequestGroupAction with _$RequestGroupAction {
+  const factory RequestGroupAction({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -443,17 +552,27 @@ abstract class CareProvision with _$CareProvision {
     Code cardinalityBehavior,
     Reference resource,
     List<RequestGroupAction> action,
-  }) = RequestGroupAction;
+  }) = _RequestGroupAction;
+  factory RequestGroupAction.fromJson(Map<String, dynamic> json) =>
+      _$RequestGroupActionFromJson(json);
+}
 
-  const factory CareProvision.requestGroupCondition({
+@freezed
+abstract class RequestGroupCondition with _$RequestGroupCondition {
+  const factory RequestGroupCondition({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code kind,
     Expression expression,
-  }) = RequestGroupCondition;
+  }) = _RequestGroupCondition;
+  factory RequestGroupCondition.fromJson(Map<String, dynamic> json) =>
+      _$RequestGroupConditionFromJson(json);
+}
 
-  const factory CareProvision.requestGroupRelatedAction({
+@freezed
+abstract class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
+  const factory RequestGroupRelatedAction({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -461,8 +580,7 @@ abstract class CareProvision with _$CareProvision {
     Code relationship,
     Duration offsetDuration,
     Range offsetRange,
-  }) = RequestGroupRelatedAction;
-
-  factory CareProvision.fromJson(Map<String, dynamic> json) =>
-      _$CareProvisionFromJson(json);
+  }) = _RequestGroupRelatedAction;
+  factory RequestGroupRelatedAction.fromJson(Map<String, dynamic> json) =>
+      _$RequestGroupRelatedActionFromJson(json);
 }

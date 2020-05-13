@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'documents.enums.dart';
 
-part 'documents.g.dart';
 part 'documents.freezed.dart';
+part 'documents.g.dart';
 
 @freezed
-abstract class Documents with _$Documents {
-  const factory Documents.catalogEntry({
+abstract class CatalogEntry with _$CatalogEntry {
+  const factory CatalogEntry({
     String resourceType,
     Id id,
     Meta meta,
@@ -31,17 +31,27 @@ abstract class Documents with _$Documents {
     List<CodeableConcept> additionalCharacteristic,
     List<CodeableConcept> additionalClassification,
     List<CatalogEntryRelatedEntry> relatedEntry,
-  }) = CatalogEntry;
+  }) = _CatalogEntry;
+  factory CatalogEntry.fromJson(Map<String, dynamic> json) =>
+      _$CatalogEntryFromJson(json);
+}
 
-  const factory Documents.catalogEntryRelatedEntry({
+@freezed
+abstract class CatalogEntryRelatedEntry with _$CatalogEntryRelatedEntry {
+  const factory CatalogEntryRelatedEntry({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CatalogEntryRelatedEntryRelationtype relationtype,
     Reference item,
-  }) = CatalogEntryRelatedEntry;
+  }) = _CatalogEntryRelatedEntry;
+  factory CatalogEntryRelatedEntry.fromJson(Map<String, dynamic> json) =>
+      _$CatalogEntryRelatedEntryFromJson(json);
+}
 
-  const factory Documents.composition({
+@freezed
+abstract class Composition with _$Composition {
+  const factory Composition({
     String resourceType,
     Id id,
     Meta meta,
@@ -66,36 +76,56 @@ abstract class Documents with _$Documents {
     List<CompositionRelatesTo> relatesTo,
     List<CompositionEvent> event,
     List<CompositionSection> section,
-  }) = Composition;
+  }) = _Composition;
+  factory Composition.fromJson(Map<String, dynamic> json) =>
+      _$CompositionFromJson(json);
+}
 
-  const factory Documents.compositionAttester({
+@freezed
+abstract class CompositionAttester with _$CompositionAttester {
+  const factory CompositionAttester({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CompositionAttesterMode mode,
     FhirDateTime time,
     Reference party,
-  }) = CompositionAttester;
+  }) = _CompositionAttester;
+  factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
+      _$CompositionAttesterFromJson(json);
+}
 
-  const factory Documents.compositionRelatesTo({
+@freezed
+abstract class CompositionRelatesTo with _$CompositionRelatesTo {
+  const factory CompositionRelatesTo({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Code code,
     Identifier targetIdentifier,
     Reference targetReference,
-  }) = CompositionRelatesTo;
+  }) = _CompositionRelatesTo;
+  factory CompositionRelatesTo.fromJson(Map<String, dynamic> json) =>
+      _$CompositionRelatesToFromJson(json);
+}
 
-  const factory Documents.compositionEvent({
+@freezed
+abstract class CompositionEvent with _$CompositionEvent {
+  const factory CompositionEvent({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<CodeableConcept> code,
     Period period,
     List<Reference> detail,
-  }) = CompositionEvent;
+  }) = _CompositionEvent;
+  factory CompositionEvent.fromJson(Map<String, dynamic> json) =>
+      _$CompositionEventFromJson(json);
+}
 
-  const factory Documents.compositionSection({
+@freezed
+abstract class CompositionSection with _$CompositionSection {
+  const factory CompositionSection({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -108,9 +138,14 @@ abstract class Documents with _$Documents {
     CodeableConcept orderedBy,
     CodeableConcept emptyReason,
     List<CompositionSection> section,
-  }) = CompositionSection;
+  }) = _CompositionSection;
+  factory CompositionSection.fromJson(Map<String, dynamic> json) =>
+      _$CompositionSectionFromJson(json);
+}
 
-  const factory Documents.documentManifest({
+@freezed
+abstract class DocumentManifest with _$DocumentManifest {
+  const factory DocumentManifest({
     String resourceType,
     Id id,
     Meta meta,
@@ -131,17 +166,27 @@ abstract class Documents with _$Documents {
     FhirUri source,
     List<Reference> content,
     List<DocumentManifestRelated> related,
-  }) = DocumentManifest;
+  }) = _DocumentManifest;
+  factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
+      _$DocumentManifestFromJson(json);
+}
 
-  const factory Documents.documentManifestRelated({
+@freezed
+abstract class DocumentManifestRelated with _$DocumentManifestRelated {
+  const factory DocumentManifestRelated({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Identifier identifier,
     Reference ref,
-  }) = DocumentManifestRelated;
+  }) = _DocumentManifestRelated;
+  factory DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
+      _$DocumentManifestRelatedFromJson(json);
+}
 
-  const factory Documents.documentReference({
+@freezed
+abstract class DocumentReference with _$DocumentReference {
+  const factory DocumentReference({
     String resourceType,
     Id id,
     Meta meta,
@@ -166,23 +211,39 @@ abstract class Documents with _$Documents {
     List<CodeableConcept> securityLabel,
     List<DocumentReferenceContent> content,
     DocumentReferenceContext context,
-  }) = DocumentReference;
-  const factory Documents.documentReferenceRelatesTo({
+  }) = _DocumentReference;
+  factory DocumentReference.fromJson(Map<String, dynamic> json) =>
+      _$DocumentReferenceFromJson(json);
+}
+
+@freezed
+abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
+  const factory DocumentReferenceRelatesTo({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     DocumentReferenceRelatesToCode code,
     Reference target,
-  }) = DocumentReferenceRelatesTo;
+  }) = _DocumentReferenceRelatesTo;
+  factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
+      _$DocumentReferenceRelatesToFromJson(json);
+}
 
-  const factory Documents.documentReferenceContent({
+@freezed
+abstract class DocumentReferenceContent with _$DocumentReferenceContent {
+  const factory DocumentReferenceContent({
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     Attachment attachment,
     Coding format,
-  }) = DocumentReferenceContent;
+  }) = _DocumentReferenceContent;
+  factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
+      _$DocumentReferenceContentFromJson(json);
+}
 
-  const factory Documents.documentReferenceContext({
+@freezed
+abstract class DocumentReferenceContext with _$DocumentReferenceContext {
+  const factory DocumentReferenceContext({
     String id,
     List<FhirExtension> modifierExtension,
     List<Reference> encounter,
@@ -192,8 +253,7 @@ abstract class Documents with _$Documents {
     CodeableConcept practiceSetting,
     Reference sourcePatientInfo,
     List<Reference> related,
-  }) = DocumentReferenceContext;
-
-  factory Documents.fromJson(Map<String, dynamic> json) =>
-      _$DocumentsFromJson(json);
+  }) = _DocumentReferenceContext;
+  factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
+      _$DocumentReferenceContextFromJson(json);
 }

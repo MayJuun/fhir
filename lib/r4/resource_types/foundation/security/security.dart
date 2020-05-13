@@ -3,12 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../../fhir_r4.dart';
 import 'security.enums.dart';
 
-part 'security.g.dart';
 part 'security.freezed.dart';
+part 'security.g.dart';
 
 @freezed
-abstract class Security with _$Security {
-  const factory Security.auditEvent({
+abstract class AuditEvent with _$AuditEvent {
+  const factory AuditEvent({
     String resourceType,
     Id id,
     Meta meta,
@@ -29,9 +29,14 @@ abstract class Security with _$Security {
     List<AuditEventAgent> agent,
     AuditEventSource source,
     List<AuditEventEntity> entity,
-  }) = AuditEvent;
+  }) = _AuditEvent;
+  factory AuditEvent.fromJson(Map<String, dynamic> json) =>
+      _$AuditEventFromJson(json);
+}
 
-  const factory Security.auditEventAgent({
+@freezed
+abstract class AuditEventAgent with _$AuditEventAgent {
+  const factory AuditEventAgent({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -46,26 +51,41 @@ abstract class Security with _$Security {
     Coding media,
     AuditEventNetwork network,
     List<CodeableConcept> purposeOfUse,
-  }) = AuditEventAgent;
+  }) = _AuditEventAgent;
+  factory AuditEventAgent.fromJson(Map<String, dynamic> json) =>
+      _$AuditEventAgentFromJson(json);
+}
 
-  const factory Security.auditEventNetwork({
+@freezed
+abstract class AuditEventNetwork with _$AuditEventNetwork {
+  const factory AuditEventNetwork({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String address,
     AuditEventNetworkType type,
-  }) = AuditEventNetwork;
+  }) = _AuditEventNetwork;
+  factory AuditEventNetwork.fromJson(Map<String, dynamic> json) =>
+      _$AuditEventNetworkFromJson(json);
+}
 
-  const factory Security.auditEventSource({
+@freezed
+abstract class AuditEventSource with _$AuditEventSource {
+  const factory AuditEventSource({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String site,
     Reference observer,
     List<Coding> type,
-  }) = AuditEventSource;
+  }) = _AuditEventSource;
+  factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
+      _$AuditEventSourceFromJson(json);
+}
 
-  const factory Security.auditEventEntity({
+@freezed
+abstract class AuditEventEntity with _$AuditEventEntity {
+  const factory AuditEventEntity({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -78,18 +98,28 @@ abstract class Security with _$Security {
     String description,
     Base64Binary query,
     List<AuditEventDetail> detail,
-  }) = AuditEventEntity;
+  }) = _AuditEventEntity;
+  factory AuditEventEntity.fromJson(Map<String, dynamic> json) =>
+      _$AuditEventEntityFromJson(json);
+}
 
-  const factory Security.auditEventDetail({
+@freezed
+abstract class AuditEventDetail with _$AuditEventDetail {
+  const factory AuditEventDetail({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String type,
     Markdown valueString,
     Base64Binary valueBase64Binary,
-  }) = AuditEventDetail;
+  }) = _AuditEventDetail;
+  factory AuditEventDetail.fromJson(Map<String, dynamic> json) =>
+      _$AuditEventDetailFromJson(json);
+}
 
-  const factory Security.consent({
+@freezed
+abstract class Consent with _$Consent {
+  const factory Consent({
     String resourceType,
     Id id,
     Meta meta,
@@ -113,26 +143,41 @@ abstract class Security with _$Security {
     CodeableConcept policyRule,
     List<ConsentVerification> verification,
     ConsentProvision provision,
-  }) = Consent;
+  }) = _Consent;
+  factory Consent.fromJson(Map<String, dynamic> json) =>
+      _$ConsentFromJson(json);
+}
 
-  const factory Security.consentPolicy({
+@freezed
+abstract class ConsentPolicy with _$ConsentPolicy {
+  const factory ConsentPolicy({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     FhirUri authority,
     FhirUri uri,
-  }) = ConsentPolicy;
+  }) = _ConsentPolicy;
+  factory ConsentPolicy.fromJson(Map<String, dynamic> json) =>
+      _$ConsentPolicyFromJson(json);
+}
 
-  const factory Security.consentVerification({
+@freezed
+abstract class ConsentVerification with _$ConsentVerification {
+  const factory ConsentVerification({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     bool verified,
     Reference verifiedWith,
     FhirDateTime verificationDate,
-  }) = ConsentVerification;
+  }) = _ConsentVerification;
+  factory ConsentVerification.fromJson(Map<String, dynamic> json) =>
+      _$ConsentVerificationFromJson(json);
+}
 
-  const factory Security.consentProvision({
+@freezed
+abstract class ConsentProvision with _$ConsentProvision {
+  const factory ConsentProvision({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -147,25 +192,40 @@ abstract class Security with _$Security {
     Period dataPeriod,
     List<ConsentData> data,
     List<ConsentProvision> provision,
-  }) = ConsentProvision;
+  }) = _ConsentProvision;
+  factory ConsentProvision.fromJson(Map<String, dynamic> json) =>
+      _$ConsentProvisionFromJson(json);
+}
 
-  const factory Security.consentActor({
+@freezed
+abstract class ConsentActor with _$ConsentActor {
+  const factory ConsentActor({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept role,
     Reference reference,
-  }) = ConsentActor;
+  }) = _ConsentActor;
+  factory ConsentActor.fromJson(Map<String, dynamic> json) =>
+      _$ConsentActorFromJson(json);
+}
 
-  const factory Security.consentData({
+@freezed
+abstract class ConsentData with _$ConsentData {
+  const factory ConsentData({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     ConsentDataMeaning meaning,
     Reference reference,
-  }) = ConsentData;
+  }) = _ConsentData;
+  factory ConsentData.fromJson(Map<String, dynamic> json) =>
+      _$ConsentDataFromJson(json);
+}
 
-  const factory Security.provenance({
+@freezed
+abstract class Provenance with _$Provenance {
+  const factory Provenance({
     String resourceType,
     Id id,
     Meta meta,
@@ -186,9 +246,14 @@ abstract class Security with _$Security {
     List<ProvenanceAgent> agent,
     List<ProvenanceEntity> entity,
     List<Signature> signature,
-  }) = Provenance;
+  }) = _Provenance;
+  factory Provenance.fromJson(Map<String, dynamic> json) =>
+      _$ProvenanceFromJson(json);
+}
 
-  const factory Security.provenanceAgent({
+@freezed
+abstract class ProvenanceAgent with _$ProvenanceAgent {
+  const factory ProvenanceAgent({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -196,17 +261,21 @@ abstract class Security with _$Security {
     List<CodeableConcept> role,
     Reference who,
     Reference onBehalfOf,
-  }) = ProvenanceAgent;
+  }) = _ProvenanceAgent;
+  factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
+      _$ProvenanceAgentFromJson(json);
+}
 
-  const factory Security.provenanceEntity({
+@freezed
+abstract class ProvenanceEntity with _$ProvenanceEntity {
+  const factory ProvenanceEntity({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     ProvenanceEntityRole role,
     Reference what,
     List<ProvenanceAgent> agent,
-  }) = ProvenanceEntity;
-
-  factory Security.fromJson(Map<String, dynamic> json) =>
-      _$SecurityFromJson(json);
+  }) = _ProvenanceEntity;
+  factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
+      _$ProvenanceEntityFromJson(json);
 }
