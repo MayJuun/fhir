@@ -1,19 +1,15 @@
-import 'package:fhir/primitiveTypes/base64binary.dart';
-import 'package:fhir/primitiveTypes/instant.dart';
-import 'package:fhir/primitiveTypes/oid.dart';
-import 'package:fhir/primitiveTypes/time.dart';
-import 'package:fhir/primitiveTypes/uuid.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-import '../../fhir_r4.dart';
 import 'special_types.enums.dart';
+import '../../fhir_r4.dart';
 
-part 'special_types.g.dart';
 part 'special_types.freezed.dart';
+part 'special_types.g.dart';
 
 @freezed
-abstract class SpecialTypes with _$SpecialTypes {
-  const factory SpecialTypes.dosage({
+abstract class Dosage with _$Dosage {
+  const factory Dosage({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -31,9 +27,13 @@ abstract class SpecialTypes with _$SpecialTypes {
     Ratio maxDosePerPeriod,
     Quantity maxDosePerAdministration,
     Quantity maxDosePerLifetime,
-  }) = Dosage;
+  }) = _Dosage;
+  factory Dosage.fromJson(Map<String, dynamic> json) => _$DosageFromJson(json);
+}
 
-  const factory SpecialTypes.dosageDoseAndRate({
+@freezed
+abstract class DosageDoseAndRate with _$DosageDoseAndRate {
+  const factory DosageDoseAndRate({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -43,9 +43,14 @@ abstract class SpecialTypes with _$SpecialTypes {
     Ratio rateRatio,
     Range rateRange,
     Quantity rateQuantity,
-  }) = DosageDoseAndRate;
+  }) = _DosageDoseAndRate;
+  factory DosageDoseAndRate.fromJson(Map<String, dynamic> json) =>
+      _$DosageDoseAndRateFromJson(json);
+}
 
-  const factory SpecialTypes.elementDefinition({
+@freezed
+abstract class ElementDefinition with _$ElementDefinition {
+  const factory ElementDefinition({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -246,9 +251,14 @@ abstract class SpecialTypes with _$SpecialTypes {
     bool isSummary,
     ElementDefinitionBinding binding,
     List<ElementDefinitionMapping> mapping,
-  }) = ElementDefinition;
+  }) = _ElementDefinition;
+  factory ElementDefinition.fromJson(Map<String, dynamic> json) =>
+      _$ElementDefinitionFromJson(json);
+}
 
-  const factory SpecialTypes.elementDefinitionSlicing({
+@freezed
+abstract class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
+  const factory ElementDefinitionSlicing({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -256,26 +266,42 @@ abstract class SpecialTypes with _$SpecialTypes {
     String description,
     bool ordered,
     ElementDefinitionSlicingRules rules,
-  }) = ElementDefinitionSlicing;
+  }) = _ElementDefinitionSlicing;
+  factory ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
+      _$ElementDefinitionSlicingFromJson(json);
+}
 
-  const factory SpecialTypes.elementDefinitionDiscriminator({
+@freezed
+abstract class ElementDefinitionDiscriminator
+    with _$ElementDefinitionDiscriminator {
+  const factory ElementDefinitionDiscriminator({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     ElementDefinitionDiscriminatorType type,
     String path,
-  }) = ElementDefinitionDiscriminator;
+  }) = _ElementDefinitionDiscriminator;
+  factory ElementDefinitionDiscriminator.fromJson(Map<String, dynamic> json) =>
+      _$ElementDefinitionDiscriminatorFromJson(json);
+}
 
-  const factory SpecialTypes.elementDefinitionBase({
+@freezed
+abstract class ElementDefinitionBase with _$ElementDefinitionBase {
+  const factory ElementDefinitionBase({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String path,
     int min,
     String max,
-  }) = ElementDefinitionBase;
+  }) = _ElementDefinitionBase;
+  factory ElementDefinitionBase.fromJson(Map<String, dynamic> json) =>
+      _$ElementDefinitionBaseFromJson(json);
+}
 
-  const factory SpecialTypes.elementDefinitionType({
+@freezed
+abstract class ElementDefinitionType with _$ElementDefinitionType {
+  const factory ElementDefinitionType({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -284,9 +310,14 @@ abstract class SpecialTypes with _$SpecialTypes {
     List<Canonical> targetProfile,
     List<ElementDefinitionTypeAggregation> aggregation,
     ElementDefinitionTypeVersioning versioning,
-  }) = ElementDefinitionType;
+  }) = _ElementDefinitionType;
+  factory ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
+      _$ElementDefinitionTypeFromJson(json);
+}
 
-  const factory SpecialTypes.elementDefinitionExample({
+@freezed
+abstract class ElementDefinitionExample with _$ElementDefinitionExample {
+  const factory ElementDefinitionExample({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -341,9 +372,14 @@ abstract class SpecialTypes with _$SpecialTypes {
     UsageContext valueUsageContext,
     Dosage valueDosage,
     Meta valueMeta,
-  }) = ElementDefinitionExample;
+  }) = _ElementDefinitionExample;
+  factory ElementDefinitionExample.fromJson(Map<String, dynamic> json) =>
+      _$ElementDefinitionExampleFromJson(json);
+}
 
-  const factory SpecialTypes.elementDefinitionConstraint({
+@freezed
+abstract class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
+  const factory ElementDefinitionConstraint({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -354,18 +390,28 @@ abstract class SpecialTypes with _$SpecialTypes {
     String expression,
     String xpath,
     Canonical source,
-  }) = ElementDefinitionConstraint;
+  }) = _ElementDefinitionConstraint;
+  factory ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =>
+      _$ElementDefinitionConstraintFromJson(json);
+}
 
-  const factory SpecialTypes.elementDefinitionBinding({
+@freezed
+abstract class ElementDefinitionBinding with _$ElementDefinitionBinding {
+  const factory ElementDefinitionBinding({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     ElementDefinitionBindingStrength strength,
     String description,
     Canonical valueSet,
-  }) = ElementDefinitionBinding;
+  }) = _ElementDefinitionBinding;
+  factory ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
+      _$ElementDefinitionBindingFromJson(json);
+}
 
-  const factory SpecialTypes.elementDefinitionMapping({
+@freezed
+abstract class ElementDefinitionMapping with _$ElementDefinitionMapping {
+  const factory ElementDefinitionMapping({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -373,9 +419,14 @@ abstract class SpecialTypes with _$SpecialTypes {
     Code language,
     @JsonKey(name: 'map') String elementMap,
     String comment,
-  }) = ElementDefinitionMapping;
+  }) = _ElementDefinitionMapping;
+  factory ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
+      _$ElementDefinitionMappingFromJson(json);
+}
 
-  const factory SpecialTypes.fhirExtension({
+@freezed
+abstract class FhirExtension with _$FhirExtension {
+  const factory FhirExtension({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     FhirUri url,
@@ -429,9 +480,14 @@ abstract class SpecialTypes with _$SpecialTypes {
     UsageContext valueUsageContext,
     Dosage valueDosage,
     Meta valueMeta,
-  }) = FhirExtension;
+  }) = _FhirExtension;
+  factory FhirExtension.fromJson(Map<String, dynamic> json) =>
+      _$FhirExtensionFromJson(json);
+}
 
-  const factory SpecialTypes.meta({
+@freezed
+abstract class Meta with _$Meta {
+  const factory Meta({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Id versionId,
@@ -440,24 +496,32 @@ abstract class SpecialTypes with _$SpecialTypes {
     List<Canonical> profile,
     List<Coding> security,
     List<Coding> tag,
-  }) = Meta;
+  }) = _Meta;
+  factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
+}
 
-  const factory SpecialTypes.narrative({
+@freezed
+abstract class Narrative with _$Narrative {
+  const factory Narrative({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     NarrativeStatus status,
     String div,
-  }) = Narrative;
+  }) = _Narrative;
+  factory Narrative.fromJson(Map<String, dynamic> json) =>
+      _$NarrativeFromJson(json);
+}
 
-  const factory SpecialTypes.reference({
+@freezed
+abstract class Reference with _$Reference {
+  const factory Reference({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     String reference,
     FhirUri type,
     Identifier identifier,
     String display,
-  }) = Reference;
-
-  factory SpecialTypes.fromJson(Map<String, dynamic> json) =>
-      _$SpecialTypesFromJson(json);
+  }) = _Reference;
+  factory Reference.fromJson(Map<String, dynamic> json) =>
+      _$ReferenceFromJson(json);
 }

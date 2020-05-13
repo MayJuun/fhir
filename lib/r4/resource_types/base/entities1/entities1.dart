@@ -6,9 +6,8 @@ import 'entities1.enums.dart';
 part 'entities1.g.dart';
 part 'entities1.freezed.dart';
 
-@freezed
-abstract class Entities1 with _$Entities1 {
-  const factory Entities1.healthcareService({
+abstract class HealthcareService with _$HealthcareService {
+  const factory HealthcareService({
     @Default('HealthcareService') String resourceType,
     Id id,
     Meta meta,
@@ -42,17 +41,29 @@ abstract class Entities1 with _$Entities1 {
     List<HealthcareServiceNotAvailable> notAvailable,
     String availabilityExceptions,
     List<Reference> endpoint,
-  }) = HealthcareService;
+  }) = _HealthcareService;
+  factory HealthcareService.fromJson(Map<String, dynamic> json) =>
+      _$HealthcareServiceFromJson(json);
+}
 
-  const factory Entities1.healthcareServiceEligibility({
+@freezed
+abstract class HealthcareServiceEligibility
+    with _$HealthcareServiceEligibility {
+  const factory HealthcareServiceEligibility({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     CodeableConcept code,
     Markdown comment,
-  }) = HealthcareServiceEligibility;
+  }) = _HealthcareServiceEligibility;
+  factory HealthcareServiceEligibility.fromJson(Map<String, dynamic> json) =>
+      _$HealthcareServiceEligibilityFromJson(json);
+}
 
-  const factory Entities1.healthcareServiceAvailableTime({
+@freezed
+abstract class HealthcareServiceAvailableTime
+    with _$HealthcareServiceAvailableTime {
+  const factory HealthcareServiceAvailableTime({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -60,17 +71,28 @@ abstract class Entities1 with _$Entities1 {
     bool allDay,
     Time availableStartTime,
     Time availableEndTime,
-  }) = HealthcareServiceAvailableTime;
+  }) = _HealthcareServiceAvailableTime;
+  factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
+      _$HealthcareServiceAvailableTimeFromJson(json);
+}
 
-  const factory Entities1.healthcareServiceNotAvailable({
+@freezed
+abstract class HealthcareServiceNotAvailable
+    with _$HealthcareServiceNotAvailable {
+  const factory HealthcareServiceNotAvailable({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String description,
     Period during,
-  }) = HealthcareServiceNotAvailable;
+  }) = _HealthcareServiceNotAvailable;
+  factory HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =>
+      _$HealthcareServiceNotAvailableFromJson(json);
+}
 
-  const factory Entities1.location({
+@freezed
+abstract class Location with _$Location {
+  const factory Location({
     @Default('Location') String resourceType,
     Id id,
     Meta meta,
@@ -97,18 +119,28 @@ abstract class Entities1 with _$Entities1 {
     List<LocationHoursOfOperation> hoursOfOperation,
     String availabilityExceptions,
     List<Reference> endpoint,
-  }) = Location;
+  }) = _Location;
+  factory Location.fromJson(Map<String, dynamic> json) =>
+      _$LocationFromJson(json);
+}
 
-  const factory Entities1.locationPosition({
+@freezed
+abstract class LocationPosition with _$LocationPosition {
+  const factory LocationPosition({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     double longitude,
     double latitude,
     double altitude,
-  }) = LocationPosition;
+  }) = _LocationPosition;
+  factory LocationPosition.fromJson(Map<String, dynamic> json) =>
+      _$LocationPositionFromJson(json);
+}
 
-  const factory Entities1.locationHoursOfOperation({
+@freezed
+abstract class LocationHoursOfOperation with _$LocationHoursOfOperation {
+  const factory LocationHoursOfOperation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -116,9 +148,14 @@ abstract class Entities1 with _$Entities1 {
     bool allDay,
     Time openingTime,
     Time closingTime,
-  }) = LocationHoursOfOperation;
+  }) = _LocationHoursOfOperation;
+  factory LocationHoursOfOperation.fromJson(Map<String, dynamic> json) =>
+      _$LocationHoursOfOperationFromJson(json);
+}
 
-  const factory Entities1.organizationAffiliation({
+@freezed
+abstract class OrganizationAffiliation with _$OrganizationAffiliation {
+  const factory OrganizationAffiliation({
     @Default('OrganizationAffiliation') String resourceType,
     Id id,
     Meta meta,
@@ -140,9 +177,14 @@ abstract class Entities1 with _$Entities1 {
     List<Reference> healthcareService,
     List<ContactPoint> telecom,
     List<Reference> endpoint,
-  }) = OrganizationAffiliation;
+  }) = _OrganizationAffiliation;
+  factory OrganizationAffiliation.fromJson(Map<String, dynamic> json) =>
+      _$OrganizationAffiliationFromJson(json);
+}
 
-  const factory Entities1.organization({
+@freezed
+abstract class Organization with _$Organization {
+  const factory Organization({
     @Default('Organization') String resourceType,
     Id id,
     Meta meta,
@@ -162,9 +204,14 @@ abstract class Entities1 with _$Entities1 {
     Reference partOf,
     List<OrganizationContact> contact,
     List<Reference> endpoint,
-  }) = Organization;
+  }) = _Organization;
+  factory Organization.fromJson(Map<String, dynamic> json) =>
+      _$OrganizationFromJson(json);
+}
 
-  const factory Entities1.organizationContact({
+@freezed
+abstract class OrganizationContact with _$OrganizationContact {
+  const factory OrganizationContact({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -172,9 +219,14 @@ abstract class Entities1 with _$Entities1 {
     HumanName name,
     List<ContactPoint> telecom,
     Address address,
-  }) = OrganizationContact;
+  }) = _OrganizationContact;
+  factory OrganizationContact.fromJson(Map<String, dynamic> json) =>
+      _$OrganizationContactFromJson(json);
+}
 
-  const factory Entities1.endpoint({
+@freezed
+abstract class Endpoint with _$Endpoint {
+  const factory Endpoint({
     @Default('Endpoint') String resourceType,
     Id id,
     Meta meta,
@@ -195,8 +247,7 @@ abstract class Entities1 with _$Entities1 {
     List<Code> payloadMimeType,
     FhirUrl address,
     List<String> header,
-  }) = Endpoint;
-
-  factory Entities1.fromJson(Map<String, dynamic> json) =>
-      _$Entities1FromJson(json);
+  }) = _Endpoint;
+  factory Endpoint.fromJson(Map<String, dynamic> json) =>
+      _$EndpointFromJson(json);
 }

@@ -1,29 +1,40 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
-import '../../fhir_r4.dart';
 import 'metadata_types.enums.dart';
+import '../../fhir_r4.dart';
 
-part 'metadata_types.g.dart';
 part 'metadata_types.freezed.dart';
+part 'metadata_types.g.dart';
 
 @freezed
-abstract class MetadataTypes with _$MetadataTypes {
-  const factory MetadataTypes.contactDetail({
+abstract class ContactDetail with _$ContactDetail {
+  const factory ContactDetail({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     String name,
     List<ContactPoint> telecom,
-  }) = ContactDetail;
+  }) = _ContactDetail;
+  factory ContactDetail.fromJson(Map<String, dynamic> json) =>
+      _$ContactDetailFromJson(json);
+}
 
-  const factory MetadataTypes.contributor({
+@freezed
+abstract class Contributor with _$Contributor {
+  const factory Contributor({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     ContributorType type,
     String name,
     List<ContactDetail> contact,
-  }) = Contributor;
+  }) = _Contributor;
+  factory Contributor.fromJson(Map<String, dynamic> json) =>
+      _$ContributorFromJson(json);
+}
 
-  const factory MetadataTypes.dataRequirement({
+@freezed
+abstract class DataRequirement with _$DataRequirement {
+  const factory DataRequirement({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Code type,
@@ -35,9 +46,14 @@ abstract class MetadataTypes with _$MetadataTypes {
     List<DataRequirementDateFilter> dateFilter,
     int limit,
     List<DataRequirementSort> sort,
-  }) = DataRequirement;
+  }) = _DataRequirement;
+  factory DataRequirement.fromJson(Map<String, dynamic> json) =>
+      _$DataRequirementFromJson(json);
+}
 
-  const factory MetadataTypes.dataRequirementCodeFilter({
+@freezed
+abstract class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
+  const factory DataRequirementCodeFilter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -45,9 +61,14 @@ abstract class MetadataTypes with _$MetadataTypes {
     String searchParam,
     Canonical valueSet,
     List<Coding> code,
-  }) = DataRequirementCodeFilter;
+  }) = _DataRequirementCodeFilter;
+  factory DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =>
+      _$DataRequirementCodeFilterFromJson(json);
+}
 
-  const factory MetadataTypes.dataRequirementDateFilter({
+@freezed
+abstract class DataRequirementDateFilter with _$DataRequirementDateFilter {
+  const factory DataRequirementDateFilter({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -56,17 +77,27 @@ abstract class MetadataTypes with _$MetadataTypes {
     FhirDateTime valueDateTime,
     Period valuePeriod,
     Duration valueDuration,
-  }) = DataRequirementDateFilter;
+  }) = _DataRequirementDateFilter;
+  factory DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =>
+      _$DataRequirementDateFilterFromJson(json);
+}
 
-  const factory MetadataTypes.dataRequirementSort({
+@freezed
+abstract class DataRequirementSort with _$DataRequirementSort {
+  const factory DataRequirementSort({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     String path,
     DataRequirementSortDirection direction,
-  }) = DataRequirementSort;
+  }) = _DataRequirementSort;
+  factory DataRequirementSort.fromJson(Map<String, dynamic> json) =>
+      _$DataRequirementSortFromJson(json);
+}
 
-  const factory MetadataTypes.expression({
+@freezed
+abstract class Expression with _$Expression {
+  const factory Expression({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     String description,
@@ -74,9 +105,14 @@ abstract class MetadataTypes with _$MetadataTypes {
     ExpressionLanguage language,
     String expression,
     FhirUri reference,
-  }) = Expression;
+  }) = _Expression;
+  factory Expression.fromJson(Map<String, dynamic> json) =>
+      _$ExpressionFromJson(json);
+}
 
-  const factory MetadataTypes.parameterDefinition({
+@freezed
+abstract class ParameterDefinition with _$ParameterDefinition {
+  const factory ParameterDefinition({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Code name,
@@ -86,9 +122,14 @@ abstract class MetadataTypes with _$MetadataTypes {
     String documentation,
     Code type,
     Canonical profile,
-  }) = ParameterDefinition;
+  }) = _ParameterDefinition;
+  factory ParameterDefinition.fromJson(Map<String, dynamic> json) =>
+      _$ParameterDefinitionFromJson(json);
+}
 
-  const factory MetadataTypes.relatedArtifact({
+@freezed
+abstract class RelatedArtifact with _$RelatedArtifact {
+  const factory RelatedArtifact({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     RelatedArtifactType type,
@@ -98,9 +139,14 @@ abstract class MetadataTypes with _$MetadataTypes {
     FhirUrl url,
     Attachment document,
     Canonical resource,
-  }) = RelatedArtifact;
+  }) = _RelatedArtifact;
+  factory RelatedArtifact.fromJson(Map<String, dynamic> json) =>
+      _$RelatedArtifactFromJson(json);
+}
 
-  const factory MetadataTypes.triggerDefinition({
+@freezed
+abstract class TriggerDefinition with _$TriggerDefinition {
+  const factory TriggerDefinition({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     TriggerDefinitionType type,
@@ -111,9 +157,14 @@ abstract class MetadataTypes with _$MetadataTypes {
     FhirDateTime timingDateTime,
     List<DataRequirement> data,
     Expression condition,
-  }) = TriggerDefinition;
+  }) = _TriggerDefinition;
+  factory TriggerDefinition.fromJson(Map<String, dynamic> json) =>
+      _$TriggerDefinitionFromJson(json);
+}
 
-  const factory MetadataTypes.usageContext({
+@freezed
+abstract class UsageContext with _$UsageContext {
+  const factory UsageContext({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Coding code,
@@ -121,8 +172,7 @@ abstract class MetadataTypes with _$MetadataTypes {
     Quantity valueQuantity,
     Range valueRange,
     Reference valueReference,
-  }) = UsageContext;
-
-  factory MetadataTypes.fromJson(Map<String, dynamic> json) =>
-      _$MetadataTypesFromJson(json);
+  }) = _UsageContext;
+  factory UsageContext.fromJson(Map<String, dynamic> json) =>
+      _$UsageContextFromJson(json);
 }

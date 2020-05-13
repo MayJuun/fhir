@@ -3,13 +3,14 @@ import './typeLists.dart';
 
 void main() async {
   var baseFile =
-      await File('./lib/r4/metadata_types/metadata_types.dart').readAsString();
-  var exp = RegExp(r'(?<=const\sfactory\sMetadataTypes\.).*(?=\(\{)');
+      await File('./lib/r4/resource_types/base/entities2/entities2.dart')
+          .readAsString();
+  var exp = RegExp(r'(?<=const\sfactory\sEntities2\.).*(?=\(\{)');
   for (var match in exp.allMatches(baseFile)) {
     var matchName = match.group(0)[0].toUpperCase() +
         match.group(0).substring(1, match.group(0).length);
     baseFile = baseFile.replaceFirst(
-        'const factory MetadataTypes.${match.group(0)}',
+        'const factory Entities2.${match.group(0)}',
         '@freezed\n'
             'abstract class $matchName with _\$$matchName {\n'
             'const factory $matchName');
@@ -19,10 +20,10 @@ void main() async {
         '= _$matchName;\nfactory $matchName.fromJson(Map<String, dynamic> json) =>'
             '_\$${matchName}FromJson(json);}');
   }
-  baseFile = baseFile.replaceFirst(
-      '''factory MetadataTypes.fromJson(Map<String, dynamic> json) =>
-      _\$MetadataTypesFromJson(json);\n}''', '');
-  await File('./lib/r4/metadata_types/metadata_types.dart')
+  baseFile = baseFile
+      .replaceFirst('''factory Entities2.fromJson(Map<String, dynamic> json) =>
+      _\$Entities2FromJson(json);\n}''', '');
+  await File('./lib/r4/resource_types/base/entities1/entities1.dart')
       .writeAsString(baseFile);
 }
 

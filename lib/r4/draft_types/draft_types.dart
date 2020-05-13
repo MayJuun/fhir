@@ -1,9 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+// import 'package:flutter/foundation.dart';
 
 import '../../fhir_r4.dart';
-
-// If included, Flutter devtool will be able to read these objects
-// import 'package:flutter/foundation.dart';
 
 part 'draft_types.freezed.dart';
 part 'draft_types.g.dart';
