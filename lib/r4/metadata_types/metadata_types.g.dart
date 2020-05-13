@@ -11,7 +11,10 @@ _$ContactDetail _$_$ContactDetailFromJson(Map<String, dynamic> json) {
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     name: json['name'] as String,
-    telecom: json['telecom'] as List,
+    telecom: (json['telecom'] as List)
+        ?.map((e) =>
+            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -132,7 +135,10 @@ _$DataRequirementCodeFilter _$_$DataRequirementCodeFilterFromJson(
     valueSet: json['valueSet'] == null
         ? null
         : Canonical.fromJson(json['valueSet'] as String),
-    code: json['code'] as List,
+    code: (json['code'] as List)
+        ?.map((e) =>
+            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 

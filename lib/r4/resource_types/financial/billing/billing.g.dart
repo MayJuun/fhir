@@ -25,7 +25,10 @@ _$Claim _$_$ClaimFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status:
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     type: json['type'] == null
@@ -322,7 +325,11 @@ _$ClaimDiagnosis _$_$ClaimDiagnosisFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(
             json['diagnosisReference'] as Map<String, dynamic>),
-    type: json['type'] as List,
+    type: (json['type'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     onAdmission: json['onAdmission'] == null
         ? null
         : CodeableConcept.fromJson(json['onAdmission'] as Map<String, dynamic>),
@@ -351,7 +358,11 @@ _$ClaimProcedure _$_$ClaimProcedureFromJson(Map<String, dynamic> json) {
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
     sequence: json['sequence'] as int,
-    type: json['type'] as List,
+    type: (json['type'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     date: json['date'] == null
         ? null
         : FhirDateTime.fromJson(json['date'] as String),
@@ -468,8 +479,16 @@ _$ClaimItem _$_$ClaimItemFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['productOrService'] as Map<String, dynamic>),
-    modifier: json['modifier'] as List,
-    programCode: json['programCode'] as List,
+    modifier: (json['modifier'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    programCode: (json['programCode'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     servicedDate: json['servicedDate'] == null
         ? null
         : Date.fromJson(json['servicedDate'] as String),
@@ -500,7 +519,11 @@ _$ClaimItem _$_$ClaimItemFromJson(Map<String, dynamic> json) {
     bodySite: json['bodySite'] == null
         ? null
         : CodeableConcept.fromJson(json['bodySite'] as Map<String, dynamic>),
-    subSite: json['subSite'] as List,
+    subSite: (json['subSite'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     encounter: json['encounter'] as List,
     detail: json['detail'] as List,
   );
@@ -553,8 +576,16 @@ _$ClaimDetail _$_$ClaimDetailFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['productOrService'] as Map<String, dynamic>),
-    modifier: json['modifier'] as List,
-    programCode: json['programCode'] as List,
+    modifier: (json['modifier'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    programCode: (json['programCode'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     quantity: json['quantity'] == null
         ? null
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
@@ -605,8 +636,16 @@ _$ClaimSubDetail _$_$ClaimSubDetailFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['productOrService'] as Map<String, dynamic>),
-    modifier: json['modifier'] as List,
-    programCode: json['programCode'] as List,
+    modifier: (json['modifier'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    programCode: (json['programCode'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     quantity: json['quantity'] == null
         ? null
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
@@ -658,7 +697,10 @@ _$Invoice _$_$InvoiceFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status: _$enumDecodeNullable(_$InvoiceStatusEnumMap, json['status']),
     cancelledReason: json['cancelledReason'] as String,
     type: json['type'] == null
@@ -691,7 +733,10 @@ _$Invoice _$_$InvoiceFromJson(Map<String, dynamic> json) {
     paymentTerms: json['paymentTerms'] == null
         ? null
         : Markdown.fromJson(json['paymentTerms'] as String),
-    note: json['note'] as List,
+    note: (json['note'] as List)
+        ?.map((e) =>
+            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -844,7 +889,10 @@ _$ClaimResponse _$_$ClaimResponseFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status:
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     type: json['type'] == null
@@ -1065,8 +1113,16 @@ _$ClaimResponseAddItem _$_$ClaimResponseAddItemFromJson(
         ? null
         : CodeableConcept.fromJson(
             json['productOrService'] as Map<String, dynamic>),
-    modifier: json['modifier'] as List,
-    programCode: json['programCode'] as List,
+    modifier: (json['modifier'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    programCode: (json['programCode'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     servicedDate: json['servicedDate'] == null
         ? null
         : Date.fromJson(json['servicedDate'] as String),
@@ -1096,7 +1152,11 @@ _$ClaimResponseAddItem _$_$ClaimResponseAddItemFromJson(
     bodySite: json['bodySite'] == null
         ? null
         : CodeableConcept.fromJson(json['bodySite'] as Map<String, dynamic>),
-    subSite: json['subSite'] as List,
+    subSite: (json['subSite'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     noteNumber: (json['noteNumber'] as List)?.map((e) => e as int)?.toList(),
     adjudication: json['adjudication'] as List,
     detail: json['detail'] as List,
@@ -1142,7 +1202,11 @@ _$ClaimResponseDetail1 _$_$ClaimResponseDetail1FromJson(
         ? null
         : CodeableConcept.fromJson(
             json['productOrService'] as Map<String, dynamic>),
-    modifier: json['modifier'] as List,
+    modifier: (json['modifier'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     quantity: json['quantity'] == null
         ? null
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
@@ -1186,7 +1250,11 @@ _$ClaimResponseSubDetail1 _$_$ClaimResponseSubDetail1FromJson(
         ? null
         : CodeableConcept.fromJson(
             json['productOrService'] as Map<String, dynamic>),
-    modifier: json['modifier'] as List,
+    modifier: (json['modifier'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     quantity: json['quantity'] == null
         ? null
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),

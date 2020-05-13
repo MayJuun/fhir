@@ -61,7 +61,7 @@ class _$SupportTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       FhirDateTime created,
       Reference insurer,
@@ -97,7 +97,7 @@ class _$SupportTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       Reference request,
       EnrollmentResponseOutcome outcome,
@@ -134,7 +134,7 @@ class _$SupportTearOff {
       Narrative text,
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       List<String> purpose,
       Reference patient,
@@ -201,7 +201,7 @@ class _$SupportTearOff {
       List<dynamic> modifierExtension,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
+      List<CodeableConcept> modifier,
       Reference provider,
       bool excluded,
       String name,
@@ -211,7 +211,7 @@ class _$SupportTearOff {
       CodeableConcept term,
       List<dynamic> benefit,
       bool authorizationRequired,
-      List<dynamic> authorizationSupporting,
+      List<CodeableConcept> authorizationSupporting,
       FhirUri authorizationUrl}) {
     return CoverageEligibilityResponseItem(
       id: id,
@@ -282,7 +282,7 @@ class _$SupportTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       CodeableConcept priority,
       List<String> purpose,
@@ -367,7 +367,7 @@ class _$SupportTearOff {
       List<int> supportingInfoSequence,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
+      List<CodeableConcept> modifier,
       Reference provider,
       Quantity quantity,
       Money unitPrice,
@@ -416,7 +416,7 @@ class _$SupportTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       CodeableConcept type,
       Reference policyHolder,
@@ -535,7 +535,7 @@ mixin _$Support {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -552,7 +552,7 @@ mixin _$Support {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -570,7 +570,7 @@ mixin _$Support {
             Narrative text,
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -601,7 +601,7 @@ mixin _$Support {
             List<dynamic> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -611,7 +611,7 @@ mixin _$Support {
             CodeableConcept term,
             List<dynamic> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
@@ -642,7 +642,7 @@ mixin _$Support {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -681,7 +681,7 @@ mixin _$Support {
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
@@ -706,7 +706,7 @@ mixin _$Support {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -760,7 +760,7 @@ mixin _$Support {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -776,7 +776,7 @@ mixin _$Support {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -793,7 +793,7 @@ mixin _$Support {
         Narrative text,
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -822,7 +822,7 @@ mixin _$Support {
         List<dynamic> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -832,7 +832,7 @@ mixin _$Support {
         CodeableConcept term,
         List<dynamic> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
@@ -860,7 +860,7 @@ mixin _$Support {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -896,7 +896,7 @@ mixin _$Support {
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
@@ -919,7 +919,7 @@ mixin _$Support {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -1068,7 +1068,7 @@ abstract class $EnrollmentRequestCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       FhirDateTime created,
       Reference insurer,
@@ -1126,7 +1126,7 @@ class _$EnrollmentRequestCopyWithImpl<$Res> extends _$SupportCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
       created: created == freezed ? _value.created : created as FhirDateTime,
       insurer: insurer == freezed ? _value.insurer : insurer as Reference,
@@ -1181,7 +1181,7 @@ class _$EnrollmentRequest implements EnrollmentRequest {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Code status;
   @override
@@ -1288,7 +1288,7 @@ class _$EnrollmentRequest implements EnrollmentRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -1305,7 +1305,7 @@ class _$EnrollmentRequest implements EnrollmentRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -1323,7 +1323,7 @@ class _$EnrollmentRequest implements EnrollmentRequest {
             Narrative text,
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -1354,7 +1354,7 @@ class _$EnrollmentRequest implements EnrollmentRequest {
             List<dynamic> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -1364,7 +1364,7 @@ class _$EnrollmentRequest implements EnrollmentRequest {
             CodeableConcept term,
             List<dynamic> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
@@ -1395,7 +1395,7 @@ class _$EnrollmentRequest implements EnrollmentRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -1434,7 +1434,7 @@ class _$EnrollmentRequest implements EnrollmentRequest {
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
@@ -1459,7 +1459,7 @@ class _$EnrollmentRequest implements EnrollmentRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -1549,7 +1549,7 @@ class _$EnrollmentRequest implements EnrollmentRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -1565,7 +1565,7 @@ class _$EnrollmentRequest implements EnrollmentRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -1582,7 +1582,7 @@ class _$EnrollmentRequest implements EnrollmentRequest {
         Narrative text,
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -1611,7 +1611,7 @@ class _$EnrollmentRequest implements EnrollmentRequest {
         List<dynamic> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -1621,7 +1621,7 @@ class _$EnrollmentRequest implements EnrollmentRequest {
         CodeableConcept term,
         List<dynamic> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
@@ -1649,7 +1649,7 @@ class _$EnrollmentRequest implements EnrollmentRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -1685,7 +1685,7 @@ class _$EnrollmentRequest implements EnrollmentRequest {
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
@@ -1708,7 +1708,7 @@ class _$EnrollmentRequest implements EnrollmentRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -1881,7 +1881,7 @@ abstract class EnrollmentRequest implements Support {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       FhirDateTime created,
       Reference insurer,
@@ -1903,7 +1903,7 @@ abstract class EnrollmentRequest implements Support {
   @JsonKey(name: 'extension')
   List<dynamic> get fhirExtension;
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   Code get status;
   FhirDateTime get created;
   Reference get insurer;
@@ -1929,7 +1929,7 @@ abstract class $EnrollmentResponseCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       Reference request,
       EnrollmentResponseOutcome outcome,
@@ -1987,7 +1987,7 @@ class _$EnrollmentResponseCopyWithImpl<$Res> extends _$SupportCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
       request: request == freezed ? _value.request : request as Reference,
       outcome: outcome == freezed
@@ -2047,7 +2047,7 @@ class _$EnrollmentResponse implements EnrollmentResponse {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Code status;
   @override
@@ -2157,7 +2157,7 @@ class _$EnrollmentResponse implements EnrollmentResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -2174,7 +2174,7 @@ class _$EnrollmentResponse implements EnrollmentResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -2192,7 +2192,7 @@ class _$EnrollmentResponse implements EnrollmentResponse {
             Narrative text,
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -2223,7 +2223,7 @@ class _$EnrollmentResponse implements EnrollmentResponse {
             List<dynamic> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -2233,7 +2233,7 @@ class _$EnrollmentResponse implements EnrollmentResponse {
             CodeableConcept term,
             List<dynamic> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
@@ -2264,7 +2264,7 @@ class _$EnrollmentResponse implements EnrollmentResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -2303,7 +2303,7 @@ class _$EnrollmentResponse implements EnrollmentResponse {
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
@@ -2328,7 +2328,7 @@ class _$EnrollmentResponse implements EnrollmentResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -2418,7 +2418,7 @@ class _$EnrollmentResponse implements EnrollmentResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -2434,7 +2434,7 @@ class _$EnrollmentResponse implements EnrollmentResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -2451,7 +2451,7 @@ class _$EnrollmentResponse implements EnrollmentResponse {
         Narrative text,
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -2480,7 +2480,7 @@ class _$EnrollmentResponse implements EnrollmentResponse {
         List<dynamic> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -2490,7 +2490,7 @@ class _$EnrollmentResponse implements EnrollmentResponse {
         CodeableConcept term,
         List<dynamic> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
@@ -2518,7 +2518,7 @@ class _$EnrollmentResponse implements EnrollmentResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -2554,7 +2554,7 @@ class _$EnrollmentResponse implements EnrollmentResponse {
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
@@ -2577,7 +2577,7 @@ class _$EnrollmentResponse implements EnrollmentResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -2749,7 +2749,7 @@ abstract class EnrollmentResponse implements Support {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       Reference request,
       EnrollmentResponseOutcome outcome,
@@ -2771,7 +2771,7 @@ abstract class EnrollmentResponse implements Support {
   @JsonKey(name: 'extension')
   List<dynamic> get fhirExtension;
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   Code get status;
   Reference get request;
   EnrollmentResponseOutcome get outcome;
@@ -2799,7 +2799,7 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res>
       Narrative text,
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       List<String> purpose,
       Reference patient,
@@ -2815,6 +2815,9 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res>
       String preAuthRef,
       CodeableConcept form,
       List<dynamic> error});
+
+  $PeriodCopyWith<$Res> get servicedPeriod;
+  $CodeableConceptCopyWith<$Res> get form;
 }
 
 class _$CoverageEligibilityResponseCopyWithImpl<$Res>
@@ -2873,7 +2876,7 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res>
           : fhirExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
       purpose: purpose == freezed ? _value.purpose : purpose as List<String>,
       patient: patient == freezed ? _value.patient : patient as Reference,
@@ -2899,6 +2902,26 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res>
       form: form == freezed ? _value.form : form as CodeableConcept,
       error: error == freezed ? _value.error : error as List<dynamic>,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get servicedPeriod {
+    if (_value.servicedPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.servicedPeriod, (value) {
+      return _then(_value.copyWith(servicedPeriod: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get form {
+    if (_value.form == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.form, (value) {
+      return _then(_value.copyWith(form: value));
+    });
   }
 }
 
@@ -2951,7 +2974,7 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
   @JsonKey(name: 'extension')
   final List<dynamic> fhirExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Code status;
   @override
@@ -3107,7 +3130,7 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -3124,7 +3147,7 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -3142,7 +3165,7 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
             Narrative text,
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -3173,7 +3196,7 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
             List<dynamic> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -3183,7 +3206,7 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
             CodeableConcept term,
             List<dynamic> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
@@ -3214,7 +3237,7 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -3253,7 +3276,7 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
@@ -3278,7 +3301,7 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -3376,7 +3399,7 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -3392,7 +3415,7 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -3409,7 +3432,7 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
         Narrative text,
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -3438,7 +3461,7 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
         List<dynamic> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -3448,7 +3471,7 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
         CodeableConcept term,
         List<dynamic> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
@@ -3476,7 +3499,7 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -3512,7 +3535,7 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
@@ -3535,7 +3558,7 @@ class _$CoverageEligibilityResponse implements CoverageEligibilityResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -3715,7 +3738,7 @@ abstract class CoverageEligibilityResponse implements Support {
       Narrative text,
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       List<String> purpose,
       Reference patient,
@@ -3745,7 +3768,7 @@ abstract class CoverageEligibilityResponse implements Support {
   @override
   @JsonKey(name: 'extension')
   List<dynamic> get fhirExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   Code get status;
   List<String> get purpose;
   Reference get patient;
@@ -3904,7 +3927,7 @@ class _$CoverageEligibilityResponseInsurance
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -3921,7 +3944,7 @@ class _$CoverageEligibilityResponseInsurance
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -3939,7 +3962,7 @@ class _$CoverageEligibilityResponseInsurance
             Narrative text,
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -3970,7 +3993,7 @@ class _$CoverageEligibilityResponseInsurance
             List<dynamic> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -3980,7 +4003,7 @@ class _$CoverageEligibilityResponseInsurance
             CodeableConcept term,
             List<dynamic> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
@@ -4011,7 +4034,7 @@ class _$CoverageEligibilityResponseInsurance
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -4050,7 +4073,7 @@ class _$CoverageEligibilityResponseInsurance
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
@@ -4075,7 +4098,7 @@ class _$CoverageEligibilityResponseInsurance
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -4150,7 +4173,7 @@ class _$CoverageEligibilityResponseInsurance
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -4166,7 +4189,7 @@ class _$CoverageEligibilityResponseInsurance
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -4183,7 +4206,7 @@ class _$CoverageEligibilityResponseInsurance
         Narrative text,
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -4212,7 +4235,7 @@ class _$CoverageEligibilityResponseInsurance
         List<dynamic> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -4222,7 +4245,7 @@ class _$CoverageEligibilityResponseInsurance
         CodeableConcept term,
         List<dynamic> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
@@ -4250,7 +4273,7 @@ class _$CoverageEligibilityResponseInsurance
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -4286,7 +4309,7 @@ class _$CoverageEligibilityResponseInsurance
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
@@ -4309,7 +4332,7 @@ class _$CoverageEligibilityResponseInsurance
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -4495,7 +4518,7 @@ abstract class $CoverageEligibilityResponseItemCopyWith<$Res>
       List<dynamic> modifierExtension,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
+      List<CodeableConcept> modifier,
       Reference provider,
       bool excluded,
       String name,
@@ -4505,8 +4528,14 @@ abstract class $CoverageEligibilityResponseItemCopyWith<$Res>
       CodeableConcept term,
       List<dynamic> benefit,
       bool authorizationRequired,
-      List<dynamic> authorizationSupporting,
+      List<CodeableConcept> authorizationSupporting,
       FhirUri authorizationUrl});
+
+  $CodeableConceptCopyWith<$Res> get category;
+  $CodeableConceptCopyWith<$Res> get productOrService;
+  $CodeableConceptCopyWith<$Res> get network;
+  $CodeableConceptCopyWith<$Res> get unit;
+  $CodeableConceptCopyWith<$Res> get term;
 }
 
 class _$CoverageEligibilityResponseItemCopyWithImpl<$Res>
@@ -4554,8 +4583,9 @@ class _$CoverageEligibilityResponseItemCopyWithImpl<$Res>
       productOrService: productOrService == freezed
           ? _value.productOrService
           : productOrService as CodeableConcept,
-      modifier:
-          modifier == freezed ? _value.modifier : modifier as List<dynamic>,
+      modifier: modifier == freezed
+          ? _value.modifier
+          : modifier as List<CodeableConcept>,
       provider: provider == freezed ? _value.provider : provider as Reference,
       excluded: excluded == freezed ? _value.excluded : excluded as bool,
       name: name == freezed ? _value.name : name as String,
@@ -4570,11 +4600,61 @@ class _$CoverageEligibilityResponseItemCopyWithImpl<$Res>
           : authorizationRequired as bool,
       authorizationSupporting: authorizationSupporting == freezed
           ? _value.authorizationSupporting
-          : authorizationSupporting as List<dynamic>,
+          : authorizationSupporting as List<CodeableConcept>,
       authorizationUrl: authorizationUrl == freezed
           ? _value.authorizationUrl
           : authorizationUrl as FhirUri,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get category {
+    if (_value.category == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
+      return _then(_value.copyWith(category: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get productOrService {
+    if (_value.productOrService == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.productOrService, (value) {
+      return _then(_value.copyWith(productOrService: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get network {
+    if (_value.network == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.network, (value) {
+      return _then(_value.copyWith(network: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get unit {
+    if (_value.unit == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.unit, (value) {
+      return _then(_value.copyWith(unit: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get term {
+    if (_value.term == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.term, (value) {
+      return _then(_value.copyWith(term: value));
+    });
   }
 }
 
@@ -4616,7 +4696,7 @@ class _$CoverageEligibilityResponseItem
   @override
   final CodeableConcept productOrService;
   @override
-  final List<dynamic> modifier;
+  final List<CodeableConcept> modifier;
   @override
   final Reference provider;
   @override
@@ -4636,7 +4716,7 @@ class _$CoverageEligibilityResponseItem
   @override
   final bool authorizationRequired;
   @override
-  final List<dynamic> authorizationSupporting;
+  final List<CodeableConcept> authorizationSupporting;
   @override
   final FhirUri authorizationUrl;
 
@@ -4739,7 +4819,7 @@ class _$CoverageEligibilityResponseItem
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -4756,7 +4836,7 @@ class _$CoverageEligibilityResponseItem
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -4774,7 +4854,7 @@ class _$CoverageEligibilityResponseItem
             Narrative text,
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -4805,7 +4885,7 @@ class _$CoverageEligibilityResponseItem
             List<dynamic> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -4815,7 +4895,7 @@ class _$CoverageEligibilityResponseItem
             CodeableConcept term,
             List<dynamic> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
@@ -4846,7 +4926,7 @@ class _$CoverageEligibilityResponseItem
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -4885,7 +4965,7 @@ class _$CoverageEligibilityResponseItem
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
@@ -4910,7 +4990,7 @@ class _$CoverageEligibilityResponseItem
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -5001,7 +5081,7 @@ class _$CoverageEligibilityResponseItem
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -5017,7 +5097,7 @@ class _$CoverageEligibilityResponseItem
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -5034,7 +5114,7 @@ class _$CoverageEligibilityResponseItem
         Narrative text,
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -5063,7 +5143,7 @@ class _$CoverageEligibilityResponseItem
         List<dynamic> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -5073,7 +5153,7 @@ class _$CoverageEligibilityResponseItem
         CodeableConcept term,
         List<dynamic> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
@@ -5101,7 +5181,7 @@ class _$CoverageEligibilityResponseItem
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -5137,7 +5217,7 @@ class _$CoverageEligibilityResponseItem
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
@@ -5160,7 +5240,7 @@ class _$CoverageEligibilityResponseItem
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -5330,7 +5410,7 @@ abstract class CoverageEligibilityResponseItem implements Support {
       List<dynamic> modifierExtension,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
+      List<CodeableConcept> modifier,
       Reference provider,
       bool excluded,
       String name,
@@ -5340,7 +5420,7 @@ abstract class CoverageEligibilityResponseItem implements Support {
       CodeableConcept term,
       List<dynamic> benefit,
       bool authorizationRequired,
-      List<dynamic> authorizationSupporting,
+      List<CodeableConcept> authorizationSupporting,
       FhirUri authorizationUrl}) = _$CoverageEligibilityResponseItem;
 
   factory CoverageEligibilityResponseItem.fromJson(Map<String, dynamic> json) =
@@ -5353,7 +5433,7 @@ abstract class CoverageEligibilityResponseItem implements Support {
   List<dynamic> get modifierExtension;
   CodeableConcept get category;
   CodeableConcept get productOrService;
-  List<dynamic> get modifier;
+  List<CodeableConcept> get modifier;
   Reference get provider;
   bool get excluded;
   String get name;
@@ -5363,7 +5443,7 @@ abstract class CoverageEligibilityResponseItem implements Support {
   CodeableConcept get term;
   List<dynamic> get benefit;
   bool get authorizationRequired;
-  List<dynamic> get authorizationSupporting;
+  List<CodeableConcept> get authorizationSupporting;
   FhirUri get authorizationUrl;
   @override
   $CoverageEligibilityResponseItemCopyWith<CoverageEligibilityResponseItem>
@@ -5388,6 +5468,10 @@ abstract class $CoverageEligibilityResponseBenefitCopyWith<$Res>
       int usedUnsignedInt,
       String usedString,
       Money usedMoney});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $MoneyCopyWith<$Res> get allowedMoney;
+  $MoneyCopyWith<$Res> get usedMoney;
 }
 
 class _$CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
@@ -5439,6 +5523,36 @@ class _$CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
           usedString == freezed ? _value.usedString : usedString as String,
       usedMoney: usedMoney == freezed ? _value.usedMoney : usedMoney as Money,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get allowedMoney {
+    if (_value.allowedMoney == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.allowedMoney, (value) {
+      return _then(_value.copyWith(allowedMoney: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get usedMoney {
+    if (_value.usedMoney == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.usedMoney, (value) {
+      return _then(_value.copyWith(usedMoney: value));
+    });
   }
 }
 
@@ -5556,7 +5670,7 @@ class _$CoverageEligibilityResponseBenefit
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -5573,7 +5687,7 @@ class _$CoverageEligibilityResponseBenefit
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -5591,7 +5705,7 @@ class _$CoverageEligibilityResponseBenefit
             Narrative text,
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -5622,7 +5736,7 @@ class _$CoverageEligibilityResponseBenefit
             List<dynamic> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -5632,7 +5746,7 @@ class _$CoverageEligibilityResponseBenefit
             CodeableConcept term,
             List<dynamic> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
@@ -5663,7 +5777,7 @@ class _$CoverageEligibilityResponseBenefit
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -5702,7 +5816,7 @@ class _$CoverageEligibilityResponseBenefit
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
@@ -5727,7 +5841,7 @@ class _$CoverageEligibilityResponseBenefit
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -5811,7 +5925,7 @@ class _$CoverageEligibilityResponseBenefit
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -5827,7 +5941,7 @@ class _$CoverageEligibilityResponseBenefit
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -5844,7 +5958,7 @@ class _$CoverageEligibilityResponseBenefit
         Narrative text,
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -5873,7 +5987,7 @@ class _$CoverageEligibilityResponseBenefit
         List<dynamic> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -5883,7 +5997,7 @@ class _$CoverageEligibilityResponseBenefit
         CodeableConcept term,
         List<dynamic> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
@@ -5911,7 +6025,7 @@ class _$CoverageEligibilityResponseBenefit
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -5947,7 +6061,7 @@ class _$CoverageEligibilityResponseBenefit
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
@@ -5970,7 +6084,7 @@ class _$CoverageEligibilityResponseBenefit
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -6172,6 +6286,8 @@ abstract class $CoverageEligibilityResponseErrorCopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept code});
+
+  $CodeableConceptCopyWith<$Res> get code;
 }
 
 class _$CoverageEligibilityResponseErrorCopyWithImpl<$Res>
@@ -6203,6 +6319,16 @@ class _$CoverageEligibilityResponseErrorCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       code: code == freezed ? _value.code : code as CodeableConcept,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
   }
 }
 
@@ -6277,7 +6403,7 @@ class _$CoverageEligibilityResponseError
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -6294,7 +6420,7 @@ class _$CoverageEligibilityResponseError
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -6312,7 +6438,7 @@ class _$CoverageEligibilityResponseError
             Narrative text,
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -6343,7 +6469,7 @@ class _$CoverageEligibilityResponseError
             List<dynamic> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -6353,7 +6479,7 @@ class _$CoverageEligibilityResponseError
             CodeableConcept term,
             List<dynamic> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
@@ -6384,7 +6510,7 @@ class _$CoverageEligibilityResponseError
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -6423,7 +6549,7 @@ class _$CoverageEligibilityResponseError
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
@@ -6448,7 +6574,7 @@ class _$CoverageEligibilityResponseError
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -6523,7 +6649,7 @@ class _$CoverageEligibilityResponseError
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -6539,7 +6665,7 @@ class _$CoverageEligibilityResponseError
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -6556,7 +6682,7 @@ class _$CoverageEligibilityResponseError
         Narrative text,
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -6585,7 +6711,7 @@ class _$CoverageEligibilityResponseError
         List<dynamic> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -6595,7 +6721,7 @@ class _$CoverageEligibilityResponseError
         CodeableConcept term,
         List<dynamic> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
@@ -6623,7 +6749,7 @@ class _$CoverageEligibilityResponseError
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -6659,7 +6785,7 @@ class _$CoverageEligibilityResponseError
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
@@ -6682,7 +6808,7 @@ class _$CoverageEligibilityResponseError
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -6866,7 +6992,7 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       CodeableConcept priority,
       List<String> purpose,
@@ -6881,6 +7007,9 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res>
       List<dynamic> supportingInfo,
       List<dynamic> insurance,
       List<dynamic> item});
+
+  $CodeableConceptCopyWith<$Res> get priority;
+  $PeriodCopyWith<$Res> get servicedPeriod;
 }
 
 class _$CoverageEligibilityRequestCopyWithImpl<$Res>
@@ -6942,7 +7071,7 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
       priority:
           priority == freezed ? _value.priority : priority as CodeableConcept,
@@ -6965,6 +7094,26 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res>
           insurance == freezed ? _value.insurance : insurance as List<dynamic>,
       item: item == freezed ? _value.item : item as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get priority {
+    if (_value.priority == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.priority, (value) {
+      return _then(_value.copyWith(priority: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get servicedPeriod {
+    if (_value.servicedPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.servicedPeriod, (value) {
+      return _then(_value.copyWith(servicedPeriod: value));
+    });
   }
 }
 
@@ -7019,7 +7168,7 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Code status;
   @override
@@ -7175,7 +7324,7 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -7192,7 +7341,7 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -7210,7 +7359,7 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
             Narrative text,
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -7241,7 +7390,7 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
             List<dynamic> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -7251,7 +7400,7 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
             CodeableConcept term,
             List<dynamic> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
@@ -7282,7 +7431,7 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -7321,7 +7470,7 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
@@ -7346,7 +7495,7 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -7444,7 +7593,7 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -7460,7 +7609,7 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -7477,7 +7626,7 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
         Narrative text,
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -7506,7 +7655,7 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
         List<dynamic> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -7516,7 +7665,7 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
         CodeableConcept term,
         List<dynamic> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
@@ -7544,7 +7693,7 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -7580,7 +7729,7 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
@@ -7603,7 +7752,7 @@ class _$CoverageEligibilityRequest implements CoverageEligibilityRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -7784,7 +7933,7 @@ abstract class CoverageEligibilityRequest implements Support {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       CodeableConcept priority,
       List<String> purpose,
@@ -7814,7 +7963,7 @@ abstract class CoverageEligibilityRequest implements Support {
   @JsonKey(name: 'extension')
   List<dynamic> get fhirExtension;
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   Code get status;
   CodeableConcept get priority;
   List<String> get purpose;
@@ -7976,7 +8125,7 @@ class _$CoverageEligibilityRequestSupportingInfo
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -7993,7 +8142,7 @@ class _$CoverageEligibilityRequestSupportingInfo
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -8011,7 +8160,7 @@ class _$CoverageEligibilityRequestSupportingInfo
             Narrative text,
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -8042,7 +8191,7 @@ class _$CoverageEligibilityRequestSupportingInfo
             List<dynamic> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -8052,7 +8201,7 @@ class _$CoverageEligibilityRequestSupportingInfo
             CodeableConcept term,
             List<dynamic> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
@@ -8083,7 +8232,7 @@ class _$CoverageEligibilityRequestSupportingInfo
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -8122,7 +8271,7 @@ class _$CoverageEligibilityRequestSupportingInfo
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
@@ -8147,7 +8296,7 @@ class _$CoverageEligibilityRequestSupportingInfo
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -8222,7 +8371,7 @@ class _$CoverageEligibilityRequestSupportingInfo
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -8238,7 +8387,7 @@ class _$CoverageEligibilityRequestSupportingInfo
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -8255,7 +8404,7 @@ class _$CoverageEligibilityRequestSupportingInfo
         Narrative text,
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -8284,7 +8433,7 @@ class _$CoverageEligibilityRequestSupportingInfo
         List<dynamic> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -8294,7 +8443,7 @@ class _$CoverageEligibilityRequestSupportingInfo
         CodeableConcept term,
         List<dynamic> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
@@ -8322,7 +8471,7 @@ class _$CoverageEligibilityRequestSupportingInfo
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -8358,7 +8507,7 @@ class _$CoverageEligibilityRequestSupportingInfo
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
@@ -8381,7 +8530,7 @@ class _$CoverageEligibilityRequestSupportingInfo
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -8694,7 +8843,7 @@ class _$CoverageEligibilityRequestInsurance
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -8711,7 +8860,7 @@ class _$CoverageEligibilityRequestInsurance
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -8729,7 +8878,7 @@ class _$CoverageEligibilityRequestInsurance
             Narrative text,
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -8760,7 +8909,7 @@ class _$CoverageEligibilityRequestInsurance
             List<dynamic> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -8770,7 +8919,7 @@ class _$CoverageEligibilityRequestInsurance
             CodeableConcept term,
             List<dynamic> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
@@ -8801,7 +8950,7 @@ class _$CoverageEligibilityRequestInsurance
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -8840,7 +8989,7 @@ class _$CoverageEligibilityRequestInsurance
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
@@ -8865,7 +9014,7 @@ class _$CoverageEligibilityRequestInsurance
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -8940,7 +9089,7 @@ class _$CoverageEligibilityRequestInsurance
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -8956,7 +9105,7 @@ class _$CoverageEligibilityRequestInsurance
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -8973,7 +9122,7 @@ class _$CoverageEligibilityRequestInsurance
         Narrative text,
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -9002,7 +9151,7 @@ class _$CoverageEligibilityRequestInsurance
         List<dynamic> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -9012,7 +9161,7 @@ class _$CoverageEligibilityRequestInsurance
         CodeableConcept term,
         List<dynamic> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
@@ -9040,7 +9189,7 @@ class _$CoverageEligibilityRequestInsurance
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -9076,7 +9225,7 @@ class _$CoverageEligibilityRequestInsurance
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
@@ -9099,7 +9248,7 @@ class _$CoverageEligibilityRequestInsurance
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -9286,13 +9435,18 @@ abstract class $CoverageEligibilityRequestItemCopyWith<$Res>
       List<int> supportingInfoSequence,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
+      List<CodeableConcept> modifier,
       Reference provider,
       Quantity quantity,
       Money unitPrice,
       Reference facility,
       List<dynamic> diagnosis,
       List<dynamic> detail});
+
+  $CodeableConceptCopyWith<$Res> get category;
+  $CodeableConceptCopyWith<$Res> get productOrService;
+  $QuantityCopyWith<$Res> get quantity;
+  $MoneyCopyWith<$Res> get unitPrice;
 }
 
 class _$CoverageEligibilityRequestItemCopyWithImpl<$Res>
@@ -9339,8 +9493,9 @@ class _$CoverageEligibilityRequestItemCopyWithImpl<$Res>
       productOrService: productOrService == freezed
           ? _value.productOrService
           : productOrService as CodeableConcept,
-      modifier:
-          modifier == freezed ? _value.modifier : modifier as List<dynamic>,
+      modifier: modifier == freezed
+          ? _value.modifier
+          : modifier as List<CodeableConcept>,
       provider: provider == freezed ? _value.provider : provider as Reference,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money,
@@ -9349,6 +9504,46 @@ class _$CoverageEligibilityRequestItemCopyWithImpl<$Res>
           diagnosis == freezed ? _value.diagnosis : diagnosis as List<dynamic>,
       detail: detail == freezed ? _value.detail : detail as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get category {
+    if (_value.category == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
+      return _then(_value.copyWith(category: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get productOrService {
+    if (_value.productOrService == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.productOrService, (value) {
+      return _then(_value.copyWith(productOrService: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get unitPrice {
+    if (_value.unitPrice == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.unitPrice, (value) {
+      return _then(_value.copyWith(unitPrice: value));
+    });
   }
 }
 
@@ -9388,7 +9583,7 @@ class _$CoverageEligibilityRequestItem
   @override
   final CodeableConcept productOrService;
   @override
-  final List<dynamic> modifier;
+  final List<CodeableConcept> modifier;
   @override
   final Reference provider;
   @override
@@ -9486,7 +9681,7 @@ class _$CoverageEligibilityRequestItem
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -9503,7 +9698,7 @@ class _$CoverageEligibilityRequestItem
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -9521,7 +9716,7 @@ class _$CoverageEligibilityRequestItem
             Narrative text,
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -9552,7 +9747,7 @@ class _$CoverageEligibilityRequestItem
             List<dynamic> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -9562,7 +9757,7 @@ class _$CoverageEligibilityRequestItem
             CodeableConcept term,
             List<dynamic> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
@@ -9593,7 +9788,7 @@ class _$CoverageEligibilityRequestItem
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -9632,7 +9827,7 @@ class _$CoverageEligibilityRequestItem
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
@@ -9657,7 +9852,7 @@ class _$CoverageEligibilityRequestItem
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -9744,7 +9939,7 @@ class _$CoverageEligibilityRequestItem
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -9760,7 +9955,7 @@ class _$CoverageEligibilityRequestItem
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -9777,7 +9972,7 @@ class _$CoverageEligibilityRequestItem
         Narrative text,
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -9806,7 +10001,7 @@ class _$CoverageEligibilityRequestItem
         List<dynamic> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -9816,7 +10011,7 @@ class _$CoverageEligibilityRequestItem
         CodeableConcept term,
         List<dynamic> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
@@ -9844,7 +10039,7 @@ class _$CoverageEligibilityRequestItem
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -9880,7 +10075,7 @@ class _$CoverageEligibilityRequestItem
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
@@ -9903,7 +10098,7 @@ class _$CoverageEligibilityRequestItem
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -10070,7 +10265,7 @@ abstract class CoverageEligibilityRequestItem implements Support {
       List<int> supportingInfoSequence,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
+      List<CodeableConcept> modifier,
       Reference provider,
       Quantity quantity,
       Money unitPrice,
@@ -10089,7 +10284,7 @@ abstract class CoverageEligibilityRequestItem implements Support {
   List<int> get supportingInfoSequence;
   CodeableConcept get category;
   CodeableConcept get productOrService;
-  List<dynamic> get modifier;
+  List<CodeableConcept> get modifier;
   Reference get provider;
   Quantity get quantity;
   Money get unitPrice;
@@ -10114,6 +10309,8 @@ abstract class $CoverageEligibilityRequestDiagnosisCopyWith<$Res>
       List<dynamic> modifierExtension,
       CodeableConcept diagnosisCodeableConcept,
       Reference diagnosisReference});
+
+  $CodeableConceptCopyWith<$Res> get diagnosisCodeableConcept;
 }
 
 class _$CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res>
@@ -10151,6 +10348,17 @@ class _$CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res>
           ? _value.diagnosisReference
           : diagnosisReference as Reference,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get diagnosisCodeableConcept {
+    if (_value.diagnosisCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.diagnosisCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(diagnosisCodeableConcept: value));
+    });
   }
 }
 
@@ -10236,7 +10444,7 @@ class _$CoverageEligibilityRequestDiagnosis
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -10253,7 +10461,7 @@ class _$CoverageEligibilityRequestDiagnosis
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -10271,7 +10479,7 @@ class _$CoverageEligibilityRequestDiagnosis
             Narrative text,
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -10302,7 +10510,7 @@ class _$CoverageEligibilityRequestDiagnosis
             List<dynamic> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -10312,7 +10520,7 @@ class _$CoverageEligibilityRequestDiagnosis
             CodeableConcept term,
             List<dynamic> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
@@ -10343,7 +10551,7 @@ class _$CoverageEligibilityRequestDiagnosis
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -10382,7 +10590,7 @@ class _$CoverageEligibilityRequestDiagnosis
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
@@ -10407,7 +10615,7 @@ class _$CoverageEligibilityRequestDiagnosis
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -10482,7 +10690,7 @@ class _$CoverageEligibilityRequestDiagnosis
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -10498,7 +10706,7 @@ class _$CoverageEligibilityRequestDiagnosis
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -10515,7 +10723,7 @@ class _$CoverageEligibilityRequestDiagnosis
         Narrative text,
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -10544,7 +10752,7 @@ class _$CoverageEligibilityRequestDiagnosis
         List<dynamic> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -10554,7 +10762,7 @@ class _$CoverageEligibilityRequestDiagnosis
         CodeableConcept term,
         List<dynamic> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
@@ -10582,7 +10790,7 @@ class _$CoverageEligibilityRequestDiagnosis
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -10618,7 +10826,7 @@ class _$CoverageEligibilityRequestDiagnosis
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
@@ -10641,7 +10849,7 @@ class _$CoverageEligibilityRequestDiagnosis
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -10826,7 +11034,7 @@ abstract class $CoverageCopyWith<$Res> implements $SupportCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       CodeableConcept type,
       Reference policyHolder,
@@ -10843,6 +11051,10 @@ abstract class $CoverageCopyWith<$Res> implements $SupportCopyWith<$Res> {
       List<dynamic> costToBeneficiary,
       bool subrogation,
       List<dynamic> contract});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $CodeableConceptCopyWith<$Res> get relationship;
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$CoverageCopyWithImpl<$Res> extends _$SupportCopyWithImpl<$Res>
@@ -10903,7 +11115,7 @@ class _$CoverageCopyWithImpl<$Res> extends _$SupportCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
       type: type == freezed ? _value.type : type as CodeableConcept,
       policyHolder: policyHolder == freezed
@@ -10934,6 +11146,36 @@ class _$CoverageCopyWithImpl<$Res> extends _$SupportCopyWithImpl<$Res>
       contract:
           contract == freezed ? _value.contract : contract as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get relationship {
+    if (_value.relationship == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.relationship, (value) {
+      return _then(_value.copyWith(relationship: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
   }
 }
 
@@ -10990,7 +11232,7 @@ class _$Coverage implements Coverage {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Code status;
   @override
@@ -11153,7 +11395,7 @@ class _$Coverage implements Coverage {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -11170,7 +11412,7 @@ class _$Coverage implements Coverage {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -11188,7 +11430,7 @@ class _$Coverage implements Coverage {
             Narrative text,
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -11219,7 +11461,7 @@ class _$Coverage implements Coverage {
             List<dynamic> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -11229,7 +11471,7 @@ class _$Coverage implements Coverage {
             CodeableConcept term,
             List<dynamic> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
@@ -11260,7 +11502,7 @@ class _$Coverage implements Coverage {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -11299,7 +11541,7 @@ class _$Coverage implements Coverage {
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
@@ -11324,7 +11566,7 @@ class _$Coverage implements Coverage {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -11424,7 +11666,7 @@ class _$Coverage implements Coverage {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -11440,7 +11682,7 @@ class _$Coverage implements Coverage {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -11457,7 +11699,7 @@ class _$Coverage implements Coverage {
         Narrative text,
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -11486,7 +11728,7 @@ class _$Coverage implements Coverage {
         List<dynamic> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -11496,7 +11738,7 @@ class _$Coverage implements Coverage {
         CodeableConcept term,
         List<dynamic> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
@@ -11524,7 +11766,7 @@ class _$Coverage implements Coverage {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -11560,7 +11802,7 @@ class _$Coverage implements Coverage {
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
@@ -11583,7 +11825,7 @@ class _$Coverage implements Coverage {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -11765,7 +12007,7 @@ abstract class Coverage implements Support {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       CodeableConcept type,
       Reference policyHolder,
@@ -11796,7 +12038,7 @@ abstract class Coverage implements Support {
   @JsonKey(name: 'extension')
   List<dynamic> get fhirExtension;
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   Code get status;
   CodeableConcept get type;
   Reference get policyHolder;
@@ -11830,6 +12072,8 @@ abstract class $CoverageClassCopyWith<$Res> implements $SupportCopyWith<$Res> {
       CodeableConcept type,
       String value,
       String name});
+
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 class _$CoverageClassCopyWithImpl<$Res> extends _$SupportCopyWithImpl<$Res>
@@ -11862,6 +12106,16 @@ class _$CoverageClassCopyWithImpl<$Res> extends _$SupportCopyWithImpl<$Res>
       value: value == freezed ? _value.value : value as String,
       name: name == freezed ? _value.name : name as String,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
   }
 }
 
@@ -11945,7 +12199,7 @@ class _$CoverageClass implements CoverageClass {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -11962,7 +12216,7 @@ class _$CoverageClass implements CoverageClass {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -11980,7 +12234,7 @@ class _$CoverageClass implements CoverageClass {
             Narrative text,
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -12011,7 +12265,7 @@ class _$CoverageClass implements CoverageClass {
             List<dynamic> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -12021,7 +12275,7 @@ class _$CoverageClass implements CoverageClass {
             CodeableConcept term,
             List<dynamic> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
@@ -12052,7 +12306,7 @@ class _$CoverageClass implements CoverageClass {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -12091,7 +12345,7 @@ class _$CoverageClass implements CoverageClass {
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
@@ -12116,7 +12370,7 @@ class _$CoverageClass implements CoverageClass {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -12191,7 +12445,7 @@ class _$CoverageClass implements CoverageClass {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -12207,7 +12461,7 @@ class _$CoverageClass implements CoverageClass {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -12224,7 +12478,7 @@ class _$CoverageClass implements CoverageClass {
         Narrative text,
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -12253,7 +12507,7 @@ class _$CoverageClass implements CoverageClass {
         List<dynamic> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -12263,7 +12517,7 @@ class _$CoverageClass implements CoverageClass {
         CodeableConcept term,
         List<dynamic> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
@@ -12291,7 +12545,7 @@ class _$CoverageClass implements CoverageClass {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -12327,7 +12581,7 @@ class _$CoverageClass implements CoverageClass {
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
@@ -12350,7 +12604,7 @@ class _$CoverageClass implements CoverageClass {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -12534,6 +12788,10 @@ abstract class $CoverageCostToBeneficiaryCopyWith<$Res>
       Quantity valueQuantity,
       Money valueMoney,
       List<dynamic> exception});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $QuantityCopyWith<$Res> get valueQuantity;
+  $MoneyCopyWith<$Res> get valueMoney;
 }
 
 class _$CoverageCostToBeneficiaryCopyWithImpl<$Res>
@@ -12574,6 +12832,36 @@ class _$CoverageCostToBeneficiaryCopyWithImpl<$Res>
       exception:
           exception == freezed ? _value.exception : exception as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get valueMoney {
+    if (_value.valueMoney == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.valueMoney, (value) {
+      return _then(_value.copyWith(valueMoney: value));
+    });
   }
 }
 
@@ -12667,7 +12955,7 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -12684,7 +12972,7 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -12702,7 +12990,7 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
             Narrative text,
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -12733,7 +13021,7 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
             List<dynamic> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -12743,7 +13031,7 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
             CodeableConcept term,
             List<dynamic> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
@@ -12774,7 +13062,7 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -12813,7 +13101,7 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
@@ -12838,7 +13126,7 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -12913,7 +13201,7 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -12929,7 +13217,7 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -12946,7 +13234,7 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
         Narrative text,
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -12975,7 +13263,7 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
         List<dynamic> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -12985,7 +13273,7 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
         CodeableConcept term,
         List<dynamic> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
@@ -13013,7 +13301,7 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -13049,7 +13337,7 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
@@ -13072,7 +13360,7 @@ class _$CoverageCostToBeneficiary implements CoverageCostToBeneficiary {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,
@@ -13257,6 +13545,9 @@ abstract class $CoverageExceptionCopyWith<$Res>
       List<dynamic> modifierExtension,
       CodeableConcept type,
       Period period});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$CoverageExceptionCopyWithImpl<$Res> extends _$SupportCopyWithImpl<$Res>
@@ -13287,6 +13578,26 @@ class _$CoverageExceptionCopyWithImpl<$Res> extends _$SupportCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as CodeableConcept,
       period: period == freezed ? _value.period : period as Period,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
   }
 }
 
@@ -13364,7 +13675,7 @@ class _$CoverageException implements CoverageException {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference insurer,
@@ -13381,7 +13692,7 @@ class _$CoverageException implements CoverageException {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             EnrollmentResponseOutcome outcome,
@@ -13399,7 +13710,7 @@ class _$CoverageException implements CoverageException {
             Narrative text,
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             List<String> purpose,
             Reference patient,
@@ -13430,7 +13741,7 @@ class _$CoverageException implements CoverageException {
             List<dynamic> modifierExtension,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             bool excluded,
             String name,
@@ -13440,7 +13751,7 @@ class _$CoverageException implements CoverageException {
             CodeableConcept term,
             List<dynamic> benefit,
             bool authorizationRequired,
-            List<dynamic> authorizationSupporting,
+            List<CodeableConcept> authorizationSupporting,
             FhirUri authorizationUrl),
     @required
         Result coverageEligibilityResponseBenefit(
@@ -13471,7 +13782,7 @@ class _$CoverageException implements CoverageException {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept priority,
             List<String> purpose,
@@ -13510,7 +13821,7 @@ class _$CoverageException implements CoverageException {
             List<int> supportingInfoSequence,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Reference provider,
             Quantity quantity,
             Money unitPrice,
@@ -13535,7 +13846,7 @@ class _$CoverageException implements CoverageException {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             Reference policyHolder,
@@ -13610,7 +13921,7 @@ class _$CoverageException implements CoverageException {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference insurer,
@@ -13626,7 +13937,7 @@ class _$CoverageException implements CoverageException {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         EnrollmentResponseOutcome outcome,
@@ -13643,7 +13954,7 @@ class _$CoverageException implements CoverageException {
         Narrative text,
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         List<String> purpose,
         Reference patient,
@@ -13672,7 +13983,7 @@ class _$CoverageException implements CoverageException {
         List<dynamic> modifierExtension,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         bool excluded,
         String name,
@@ -13682,7 +13993,7 @@ class _$CoverageException implements CoverageException {
         CodeableConcept term,
         List<dynamic> benefit,
         bool authorizationRequired,
-        List<dynamic> authorizationSupporting,
+        List<CodeableConcept> authorizationSupporting,
         FhirUri authorizationUrl),
     Result coverageEligibilityResponseBenefit(
         String id,
@@ -13710,7 +14021,7 @@ class _$CoverageException implements CoverageException {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept priority,
         List<String> purpose,
@@ -13746,7 +14057,7 @@ class _$CoverageException implements CoverageException {
         List<int> supportingInfoSequence,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Reference provider,
         Quantity quantity,
         Money unitPrice,
@@ -13769,7 +14080,7 @@ class _$CoverageException implements CoverageException {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         Reference policyHolder,

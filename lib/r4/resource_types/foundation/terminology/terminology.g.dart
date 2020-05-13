@@ -26,7 +26,10 @@ _$CodeSystem _$_$CodeSystemFromJson(Map<String, dynamic> json) {
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
@@ -40,7 +43,11 @@ _$CodeSystem _$_$CodeSystemFromJson(Map<String, dynamic> json) {
     description: json['description'] == null
         ? null
         : Markdown.fromJson(json['description'] as String),
-    jurisdiction: json['jurisdiction'] as List,
+    jurisdiction: (json['jurisdiction'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     purpose: json['purpose'] == null
         ? null
         : Markdown.fromJson(json['purpose'] as String),
@@ -335,7 +342,10 @@ _$ValueSet _$_$ValueSetFromJson(Map<String, dynamic> json) {
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     name: json['name'] as String,
     title: json['title'] as String,
     status: _$enumDecodeNullable(_$ValueSetStatusEnumMap, json['status']),
@@ -348,7 +358,11 @@ _$ValueSet _$_$ValueSetFromJson(Map<String, dynamic> json) {
     description: json['description'] == null
         ? null
         : Markdown.fromJson(json['description'] as String),
-    jurisdiction: json['jurisdiction'] as List,
+    jurisdiction: (json['jurisdiction'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     immutable: json['immutable'] as bool,
     purpose: json['purpose'] == null
         ? null
@@ -668,7 +682,11 @@ _$TerminologyCapabilities _$_$TerminologyCapabilitiesFromJson(
         ? null
         : Markdown.fromJson(json['description'] as String),
     useContext: json['useContext'] as List,
-    jurisdiction: json['jurisdiction'] as List,
+    jurisdiction: (json['jurisdiction'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     purpose: json['purpose'] == null
         ? null
         : Markdown.fromJson(json['purpose'] as String),
@@ -1023,7 +1041,11 @@ _$NamingSystem _$_$NamingSystemFromJson(Map<String, dynamic> json) {
         ? null
         : Markdown.fromJson(json['description'] as String),
     useContext: json['useContext'] as List,
-    jurisdiction: json['jurisdiction'] as List,
+    jurisdiction: (json['jurisdiction'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     usage: json['usage'] as String,
     uniqueId: json['uniqueId'] as List,
   );
@@ -1143,7 +1165,11 @@ _$ConceptMap _$_$ConceptMapFromJson(Map<String, dynamic> json) {
         ? null
         : Markdown.fromJson(json['description'] as String),
     useContext: json['useContext'] as List,
-    jurisdiction: json['jurisdiction'] as List,
+    jurisdiction: (json['jurisdiction'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     purpose: json['purpose'] == null
         ? null
         : Markdown.fromJson(json['purpose'] as String),

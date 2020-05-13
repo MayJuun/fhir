@@ -8,8 +8,8 @@ part 'general_types.g.dart';
 part 'general_types.freezed.dart';
 
 @freezed
-abstract class GeneralTypes with _$GeneralTypes {
-  const factory GeneralTypes.address({
+abstract class Address with _$Address {
+  const factory Address({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse use,
@@ -22,9 +22,14 @@ abstract class GeneralTypes with _$GeneralTypes {
     String postalCode,
     String country,
     Period period,
-  }) = Address;
+  }) = _Address;
+  factory Address.fromJson(Map<String, dynamic> json) =>
+      _$AddressFromJson(json);
+}
 
-  const factory GeneralTypes.age({
+@freezed
+abstract class Age with _$Age {
+  const factory Age({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     double value,
@@ -32,18 +37,27 @@ abstract class GeneralTypes with _$GeneralTypes {
     String unit,
     FhirUri system,
     Code code,
-  }) = Age;
+  }) = _Age;
+  factory Age.fromJson(Map<String, dynamic> json) => _$AgeFromJson(json);
+}
 
-  const factory GeneralTypes.annotation({
+@freezed
+abstract class Annotation with _$Annotation {
+  const factory Annotation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Reference authorReference,
     String authorString,
     FhirDateTime time,
     Markdown text,
-  }) = Annotation;
+  }) = _Annotation;
+  factory Annotation.fromJson(Map<String, dynamic> json) =>
+      _$AnnotationFromJson(json);
+}
 
-  const factory GeneralTypes.attachment({
+@freezed
+abstract class Attachment with _$Attachment {
+  const factory Attachment({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Code contentType,
@@ -54,16 +68,26 @@ abstract class GeneralTypes with _$GeneralTypes {
     Base64Binary hash,
     String title,
     FhirDateTime creation,
-  }) = Attachment;
+  }) = _Attachment;
+  factory Attachment.fromJson(Map<String, dynamic> json) =>
+      _$AttachmentFromJson(json);
+}
 
-  const factory GeneralTypes.codeableConcept({
+@freezed
+abstract class CodeableConcept with _$CodeableConcept {
+  const factory CodeableConcept({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<Coding> coding,
     String text,
-  }) = CodeableConcept;
+  }) = _CodeableConcept;
+  factory CodeableConcept.fromJson(Map<String, dynamic> json) =>
+      _$CodeableConceptFromJson(json);
+}
 
-  const factory GeneralTypes.coding({
+@freezed
+abstract class Coding with _$Coding {
+  const factory Coding({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     FhirUri system,
@@ -71,9 +95,13 @@ abstract class GeneralTypes with _$GeneralTypes {
     Code code,
     String display,
     bool userSelected,
-  }) = Coding;
+  }) = _Coding;
+  factory Coding.fromJson(Map<String, dynamic> json) => _$CodingFromJson(json);
+}
 
-  const factory GeneralTypes.contactPoint({
+@freezed
+abstract class ContactPoint with _$ContactPoint {
+  const factory ContactPoint({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     ContactPointSystem system,
@@ -81,9 +109,14 @@ abstract class GeneralTypes with _$GeneralTypes {
     ContactPointUse use,
     int rank,
     Period period,
-  }) = ContactPoint;
+  }) = _ContactPoint;
+  factory ContactPoint.fromJson(Map<String, dynamic> json) =>
+      _$ContactPointFromJson(json);
+}
 
-  const factory GeneralTypes.count({
+@freezed
+abstract class Count with _$Count {
+  const factory Count({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     double value,
@@ -91,9 +124,13 @@ abstract class GeneralTypes with _$GeneralTypes {
     String unit,
     FhirUri system,
     Code code,
-  }) = Count;
+  }) = _Count;
+  factory Count.fromJson(Map<String, dynamic> json) => _$CountFromJson(json);
+}
 
-  const factory GeneralTypes.distance({
+@freezed
+abstract class Distance with _$Distance {
+  const factory Distance({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     double value,
@@ -101,9 +138,14 @@ abstract class GeneralTypes with _$GeneralTypes {
     String unit,
     FhirUri system,
     Code code,
-  }) = Distance;
+  }) = _Distance;
+  factory Distance.fromJson(Map<String, dynamic> json) =>
+      _$DistanceFromJson(json);
+}
 
-  const factory GeneralTypes.duration({
+@freezed
+abstract class Duration with _$Duration {
+  const factory Duration({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     double value,
@@ -111,9 +153,14 @@ abstract class GeneralTypes with _$GeneralTypes {
     String unit,
     FhirUri system,
     Code code,
-  }) = Duration;
+  }) = _Duration;
+  factory Duration.fromJson(Map<String, dynamic> json) =>
+      _$DurationFromJson(json);
+}
 
-  const factory GeneralTypes.humanName({
+@freezed
+abstract class HumanName with _$HumanName {
+  const factory HumanName({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     HumanNameUse use,
@@ -123,9 +170,14 @@ abstract class GeneralTypes with _$GeneralTypes {
     List<String> prefix,
     List<String> suffix,
     Period period,
-  }) = HumanName;
+  }) = _HumanName;
+  factory HumanName.fromJson(Map<String, dynamic> json) =>
+      _$HumanNameFromJson(json);
+}
 
-  const factory GeneralTypes.identifier({
+@freezed
+abstract class Identifier with _$Identifier {
+  const factory Identifier({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     IdentifierUse use,
@@ -134,23 +186,36 @@ abstract class GeneralTypes with _$GeneralTypes {
     String value,
     Period period,
     Reference assigner,
-  }) = Identifier;
+  }) = _Identifier;
+  factory Identifier.fromJson(Map<String, dynamic> json) =>
+      _$IdentifierFromJson(json);
+}
 
-  const factory GeneralTypes.money({
+@freezed
+abstract class Money with _$Money {
+  const factory Money({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     double value,
     Code currency,
-  }) = Money;
+  }) = _Money;
+  factory Money.fromJson(Map<String, dynamic> json) => _$MoneyFromJson(json);
+}
 
-  const factory GeneralTypes.period({
+@freezed
+abstract class Period with _$Period {
+  const factory Period({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     FhirDateTime start,
     FhirDateTime end,
-  }) = Period;
+  }) = _Period;
+  factory Period.fromJson(Map<String, dynamic> json) => _$PeriodFromJson(json);
+}
 
-  const factory GeneralTypes.quantity({
+@freezed
+abstract class Quantity with _$Quantity {
+  const factory Quantity({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     double value,
@@ -158,23 +223,36 @@ abstract class GeneralTypes with _$GeneralTypes {
     String unit,
     FhirUri system,
     Code code,
-  }) = Quantity;
+  }) = _Quantity;
+  factory Quantity.fromJson(Map<String, dynamic> json) =>
+      _$QuantityFromJson(json);
+}
 
-  const factory GeneralTypes.range({
+@freezed
+abstract class Range with _$Range {
+  const factory Range({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Quantity low,
     Quantity high,
-  }) = Range;
+  }) = _Range;
+  factory Range.fromJson(Map<String, dynamic> json) => _$RangeFromJson(json);
+}
 
-  const factory GeneralTypes.ratio({
+@freezed
+abstract class Ratio with _$Ratio {
+  const factory Ratio({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Quantity numerator,
     Quantity denominator,
-  }) = Ratio;
+  }) = _Ratio;
+  factory Ratio.fromJson(Map<String, dynamic> json) => _$RatioFromJson(json);
+}
 
-  const factory GeneralTypes.sampledData({
+@freezed
+abstract class SampledData with _$SampledData {
+  const factory SampledData({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     Quantity origin,
@@ -184,9 +262,14 @@ abstract class GeneralTypes with _$GeneralTypes {
     double upperLimit,
     int dimensions,
     String data,
-  }) = SampledData;
+  }) = _SampledData;
+  factory SampledData.fromJson(Map<String, dynamic> json) =>
+      _$SampledDataFromJson(json);
+}
 
-  const factory GeneralTypes.signature({
+@freezed
+abstract class Signature with _$Signature {
+  const factory Signature({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<Coding> type,
@@ -197,18 +280,27 @@ abstract class GeneralTypes with _$GeneralTypes {
     Code targetFormat,
     Code sigFormat,
     Base64Binary data,
-  }) = Signature;
+  }) = _Signature;
+  factory Signature.fromJson(Map<String, dynamic> json) =>
+      _$SignatureFromJson(json);
+}
 
-  const factory GeneralTypes.timing({
+@freezed
+abstract class Timing with _$Timing {
+  const factory Timing({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
     List<DateTime> event,
     TimingRepeat repeat,
     CodeableConcept code,
-  }) = Timing;
+  }) = _Timing;
+  factory Timing.fromJson(Map<String, dynamic> json) => _$TimingFromJson(json);
+}
 
-  const factory GeneralTypes.timingRepeat({
+@freezed
+abstract class TimingRepeat with _$TimingRepeat {
+  const factory TimingRepeat({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> fhirExtension,
     List<FhirExtension> modifierExtension,
@@ -230,8 +322,7 @@ abstract class GeneralTypes with _$GeneralTypes {
     //todo: does this need an unknownEnumValue key?
     @JsonKey(name: 'when') List<TimingRepeatWhen> timingRepeatWhenList,
     int offset,
-  }) = TimingRepeat;
-
-  factory GeneralTypes.fromJson(Map<String, dynamic> json) =>
-      _$GeneralTypesFromJson(json);
+  }) = _TimingRepeat;
+  factory TimingRepeat.fromJson(Map<String, dynamic> json) =>
+      _$TimingRepeatFromJson(json);
 }

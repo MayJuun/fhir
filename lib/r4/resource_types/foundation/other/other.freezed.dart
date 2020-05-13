@@ -377,7 +377,7 @@ class _$OtherTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       SubscriptionStatus status,
-      List<dynamic> contact,
+      List<ContactPoint> contact,
       Instant end,
       String reason,
       String criteria,
@@ -602,7 +602,7 @@ class _$OtherTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       CodeableConcept code,
       Reference subject,
       Date created,
@@ -788,7 +788,7 @@ mixin _$Other {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -895,7 +895,7 @@ mixin _$Other {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -1049,7 +1049,7 @@ mixin _$Other {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -1146,7 +1146,7 @@ mixin _$Other {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -1532,7 +1532,7 @@ class _$OperationOutcome implements OperationOutcome {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -1639,7 +1639,7 @@ class _$OperationOutcome implements OperationOutcome {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -1818,7 +1818,7 @@ class _$OperationOutcome implements OperationOutcome {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -1915,7 +1915,7 @@ class _$OperationOutcome implements OperationOutcome {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -2060,6 +2060,8 @@ abstract class $OperationOutcomeIssueCopyWith<$Res> {
       String diagnostics,
       List<String> location,
       List<String> expression});
+
+  $CodeableConceptCopyWith<$Res> get details;
 }
 
 class _$OperationOutcomeIssueCopyWithImpl<$Res>
@@ -2105,6 +2107,16 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
           ? _value.expression
           : expression as List<String>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get details {
+    if (_value.details == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.details, (value) {
+      return _then(_value.copyWith(details: value));
+    });
   }
 }
 
@@ -2357,7 +2369,7 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -2464,7 +2476,7 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -2643,7 +2655,7 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -2740,7 +2752,7 @@ class _$OperationOutcomeIssue implements OperationOutcomeIssue {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -2895,6 +2907,9 @@ abstract class $MessageHeaderCopyWith<$Res> {
       MessageHeaderResponse response,
       List<dynamic> focus,
       Canonical definition});
+
+  $CodingCopyWith<$Res> get eventCoding;
+  $CodeableConceptCopyWith<$Res> get reason;
 }
 
 class _$MessageHeaderCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
@@ -2970,6 +2985,26 @@ class _$MessageHeaderCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
       definition:
           definition == freezed ? _value.definition : definition as Canonical,
     ));
+  }
+
+  @override
+  $CodingCopyWith<$Res> get eventCoding {
+    if (_value.eventCoding == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.eventCoding, (value) {
+      return _then(_value.copyWith(eventCoding: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get reason {
+    if (_value.reason == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.reason, (value) {
+      return _then(_value.copyWith(reason: value));
+    });
   }
 }
 
@@ -3299,7 +3334,7 @@ class _$MessageHeader implements MessageHeader {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -3406,7 +3441,7 @@ class _$MessageHeader implements MessageHeader {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -3605,7 +3640,7 @@ class _$MessageHeader implements MessageHeader {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -3702,7 +3737,7 @@ class _$MessageHeader implements MessageHeader {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -4159,7 +4194,7 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -4266,7 +4301,7 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -4445,7 +4480,7 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -4542,7 +4577,7 @@ class _$MessageHeaderDestination implements MessageHeaderDestination {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -4680,6 +4715,8 @@ abstract class $MessageHeaderSourceCopyWith<$Res> {
       String version,
       ContactPoint contact,
       FhirUrl endpoint});
+
+  $ContactPointCopyWith<$Res> get contact;
 }
 
 class _$MessageHeaderSourceCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
@@ -4716,6 +4753,16 @@ class _$MessageHeaderSourceCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
       contact: contact == freezed ? _value.contact : contact as ContactPoint,
       endpoint: endpoint == freezed ? _value.endpoint : endpoint as FhirUrl,
     ));
+  }
+
+  @override
+  $ContactPointCopyWith<$Res> get contact {
+    if (_value.contact == null) {
+      return null;
+    }
+    return $ContactPointCopyWith<$Res>(_value.contact, (value) {
+      return _then(_value.copyWith(contact: value));
+    });
   }
 }
 
@@ -4960,7 +5007,7 @@ class _$MessageHeaderSource implements MessageHeaderSource {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -5067,7 +5114,7 @@ class _$MessageHeaderSource implements MessageHeaderSource {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -5246,7 +5293,7 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -5343,7 +5390,7 @@ class _$MessageHeaderSource implements MessageHeaderSource {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -5744,7 +5791,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -5851,7 +5898,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -6030,7 +6077,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -6127,7 +6174,7 @@ class _$MessageHeaderResponse implements MessageHeaderResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -6522,7 +6569,7 @@ class _$Parameters implements Parameters {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -6629,7 +6676,7 @@ class _$Parameters implements Parameters {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -6808,7 +6855,7 @@ class _$Parameters implements Parameters {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -6905,7 +6952,7 @@ class _$Parameters implements Parameters {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -7087,6 +7134,27 @@ abstract class $ParametersParameterCopyWith<$Res> {
       Meta valueMeta,
       dynamic resource,
       List<dynamic> part});
+
+  $AddressCopyWith<$Res> get valueAddress;
+  $AgeCopyWith<$Res> get valueAge;
+  $AnnotationCopyWith<$Res> get valueAnnotation;
+  $AttachmentCopyWith<$Res> get valueAttachment;
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  $CodingCopyWith<$Res> get valueCoding;
+  $ContactPointCopyWith<$Res> get valueContactPoint;
+  $CountCopyWith<$Res> get valueCount;
+  $DistanceCopyWith<$Res> get valueDistance;
+  $DurationCopyWith<$Res> get valueDuration;
+  $HumanNameCopyWith<$Res> get valueHumanName;
+  $IdentifierCopyWith<$Res> get valueIdentifier;
+  $MoneyCopyWith<$Res> get valueMoney;
+  $PeriodCopyWith<$Res> get valuePeriod;
+  $QuantityCopyWith<$Res> get valueQuantity;
+  $RangeCopyWith<$Res> get valueRange;
+  $RatioCopyWith<$Res> get valueRatio;
+  $SampledDataCopyWith<$Res> get valueSampledData;
+  $SignatureCopyWith<$Res> get valueSignature;
+  $TimingCopyWith<$Res> get valueTiming;
 }
 
 class _$ParametersParameterCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
@@ -7288,6 +7356,206 @@ class _$ParametersParameterCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
       resource: resource == freezed ? _value.resource : resource as dynamic,
       part: part == freezed ? _value.part : part as List<dynamic>,
     ));
+  }
+
+  @override
+  $AddressCopyWith<$Res> get valueAddress {
+    if (_value.valueAddress == null) {
+      return null;
+    }
+    return $AddressCopyWith<$Res>(_value.valueAddress, (value) {
+      return _then(_value.copyWith(valueAddress: value));
+    });
+  }
+
+  @override
+  $AgeCopyWith<$Res> get valueAge {
+    if (_value.valueAge == null) {
+      return null;
+    }
+    return $AgeCopyWith<$Res>(_value.valueAge, (value) {
+      return _then(_value.copyWith(valueAge: value));
+    });
+  }
+
+  @override
+  $AnnotationCopyWith<$Res> get valueAnnotation {
+    if (_value.valueAnnotation == null) {
+      return null;
+    }
+    return $AnnotationCopyWith<$Res>(_value.valueAnnotation, (value) {
+      return _then(_value.copyWith(valueAnnotation: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get valueAttachment {
+    if (_value.valueAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.valueAttachment, (value) {
+      return _then(_value.copyWith(valueAttachment: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept, (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get valueCoding {
+    if (_value.valueCoding == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.valueCoding, (value) {
+      return _then(_value.copyWith(valueCoding: value));
+    });
+  }
+
+  @override
+  $ContactPointCopyWith<$Res> get valueContactPoint {
+    if (_value.valueContactPoint == null) {
+      return null;
+    }
+    return $ContactPointCopyWith<$Res>(_value.valueContactPoint, (value) {
+      return _then(_value.copyWith(valueContactPoint: value));
+    });
+  }
+
+  @override
+  $CountCopyWith<$Res> get valueCount {
+    if (_value.valueCount == null) {
+      return null;
+    }
+    return $CountCopyWith<$Res>(_value.valueCount, (value) {
+      return _then(_value.copyWith(valueCount: value));
+    });
+  }
+
+  @override
+  $DistanceCopyWith<$Res> get valueDistance {
+    if (_value.valueDistance == null) {
+      return null;
+    }
+    return $DistanceCopyWith<$Res>(_value.valueDistance, (value) {
+      return _then(_value.copyWith(valueDistance: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get valueDuration {
+    if (_value.valueDuration == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.valueDuration, (value) {
+      return _then(_value.copyWith(valueDuration: value));
+    });
+  }
+
+  @override
+  $HumanNameCopyWith<$Res> get valueHumanName {
+    if (_value.valueHumanName == null) {
+      return null;
+    }
+    return $HumanNameCopyWith<$Res>(_value.valueHumanName, (value) {
+      return _then(_value.copyWith(valueHumanName: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get valueIdentifier {
+    if (_value.valueIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.valueIdentifier, (value) {
+      return _then(_value.copyWith(valueIdentifier: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get valueMoney {
+    if (_value.valueMoney == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.valueMoney, (value) {
+      return _then(_value.copyWith(valueMoney: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get valuePeriod {
+    if (_value.valuePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.valuePeriod, (value) {
+      return _then(_value.copyWith(valuePeriod: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.valueRange, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get valueRatio {
+    if (_value.valueRatio == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.valueRatio, (value) {
+      return _then(_value.copyWith(valueRatio: value));
+    });
+  }
+
+  @override
+  $SampledDataCopyWith<$Res> get valueSampledData {
+    if (_value.valueSampledData == null) {
+      return null;
+    }
+    return $SampledDataCopyWith<$Res>(_value.valueSampledData, (value) {
+      return _then(_value.copyWith(valueSampledData: value));
+    });
+  }
+
+  @override
+  $SignatureCopyWith<$Res> get valueSignature {
+    if (_value.valueSignature == null) {
+      return null;
+    }
+    return $SignatureCopyWith<$Res>(_value.valueSignature, (value) {
+      return _then(_value.copyWith(valueSignature: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get valueTiming {
+    if (_value.valueTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.valueTiming, (value) {
+      return _then(_value.copyWith(valueTiming: value));
+    });
   }
 }
 
@@ -7801,7 +8069,7 @@ class _$ParametersParameter implements ParametersParameter {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -7908,7 +8176,7 @@ class _$ParametersParameter implements ParametersParameter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -8142,7 +8410,7 @@ class _$ParametersParameter implements ParametersParameter {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -8239,7 +8507,7 @@ class _$ParametersParameter implements ParametersParameter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -8809,7 +9077,7 @@ class _$Binary implements Binary {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -8916,7 +9184,7 @@ class _$Binary implements Binary {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -9095,7 +9363,7 @@ class _$Binary implements Binary {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -9192,7 +9460,7 @@ class _$Binary implements Binary {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -9331,7 +9599,7 @@ abstract class $SubscriptionCopyWith<$Res> {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       SubscriptionStatus status,
-      List<dynamic> contact,
+      List<ContactPoint> contact,
       Instant end,
       String reason,
       String criteria,
@@ -9387,7 +9655,8 @@ class _$SubscriptionCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
       status: status == freezed ? _value.status : status as SubscriptionStatus,
-      contact: contact == freezed ? _value.contact : contact as List<dynamic>,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactPoint>,
       end: end == freezed ? _value.end : end as Instant,
       reason: reason == freezed ? _value.reason : reason as String,
       criteria: criteria == freezed ? _value.criteria : criteria as String,
@@ -9443,7 +9712,7 @@ class _$Subscription implements Subscription {
   @override
   final SubscriptionStatus status;
   @override
-  final List<dynamic> contact;
+  final List<ContactPoint> contact;
   @override
   final Instant end;
   @override
@@ -9689,7 +9958,7 @@ class _$Subscription implements Subscription {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -9796,7 +10065,7 @@ class _$Subscription implements Subscription {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -9990,7 +10259,7 @@ class _$Subscription implements Subscription {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -10087,7 +10356,7 @@ class _$Subscription implements Subscription {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -10214,7 +10483,7 @@ abstract class Subscription implements Other {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       SubscriptionStatus status,
-      List<dynamic> contact,
+      List<ContactPoint> contact,
       Instant end,
       String reason,
       String criteria,
@@ -10235,7 +10504,7 @@ abstract class Subscription implements Other {
   List<dynamic> get fhirExtension;
   List<dynamic> get modifierExtension;
   SubscriptionStatus get status;
-  List<dynamic> get contact;
+  List<ContactPoint> get contact;
   Instant get end;
   String get reason;
   String get criteria;
@@ -10526,7 +10795,7 @@ class _$SubscriptionChannel implements SubscriptionChannel {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -10633,7 +10902,7 @@ class _$SubscriptionChannel implements SubscriptionChannel {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -10812,7 +11081,7 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -10909,7 +11178,7 @@ class _$SubscriptionChannel implements SubscriptionChannel {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -11366,7 +11635,7 @@ class _$Linkage implements Linkage {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -11473,7 +11742,7 @@ class _$Linkage implements Linkage {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -11652,7 +11921,7 @@ class _$Linkage implements Linkage {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -11749,7 +12018,7 @@ class _$Linkage implements Linkage {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -12145,7 +12414,7 @@ class _$LinkageItem implements LinkageItem {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -12252,7 +12521,7 @@ class _$LinkageItem implements LinkageItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -12430,7 +12699,7 @@ class _$LinkageItem implements LinkageItem {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -12527,7 +12796,7 @@ class _$LinkageItem implements LinkageItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -12662,6 +12931,9 @@ abstract class $BundleCopyWith<$Res> {
       List<dynamic> link,
       List<dynamic> entry,
       Signature signature});
+
+  $IdentifierCopyWith<$Res> get identifier;
+  $SignatureCopyWith<$Res> get signature;
 }
 
 class _$BundleCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
@@ -12707,6 +12979,26 @@ class _$BundleCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
       signature:
           signature == freezed ? _value.signature : signature as Signature,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $SignatureCopyWith<$Res> get signature {
+    if (_value.signature == null) {
+      return null;
+    }
+    return $SignatureCopyWith<$Res>(_value.signature, (value) {
+      return _then(_value.copyWith(signature: value));
+    });
   }
 }
 
@@ -12974,7 +13266,7 @@ class _$Bundle implements Bundle {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -13081,7 +13373,7 @@ class _$Bundle implements Bundle {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -13260,7 +13552,7 @@ class _$Bundle implements Bundle {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -13357,7 +13649,7 @@ class _$Bundle implements Bundle {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -13751,7 +14043,7 @@ class _$BundleLink implements BundleLink {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -13858,7 +14150,7 @@ class _$BundleLink implements BundleLink {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -14036,7 +14328,7 @@ class _$BundleLink implements BundleLink {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -14133,7 +14425,7 @@ class _$BundleLink implements BundleLink {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -14555,7 +14847,7 @@ class _$BundleEntry implements BundleEntry {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -14662,7 +14954,7 @@ class _$BundleEntry implements BundleEntry {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -14841,7 +15133,7 @@ class _$BundleEntry implements BundleEntry {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -14938,7 +15230,7 @@ class _$BundleEntry implements BundleEntry {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -15328,7 +15620,7 @@ class _$BundleSearch implements BundleSearch {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -15435,7 +15727,7 @@ class _$BundleSearch implements BundleSearch {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -15613,7 +15905,7 @@ class _$BundleSearch implements BundleSearch {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -15710,7 +16002,7 @@ class _$BundleSearch implements BundleSearch {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -16135,7 +16427,7 @@ class _$BundleRequest implements BundleRequest {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -16242,7 +16534,7 @@ class _$BundleRequest implements BundleRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -16421,7 +16713,7 @@ class _$BundleRequest implements BundleRequest {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -16518,7 +16810,7 @@ class _$BundleRequest implements BundleRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -16939,7 +17231,7 @@ class _$BundleResponse implements BundleResponse {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -17046,7 +17338,7 @@ class _$BundleResponse implements BundleResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -17225,7 +17517,7 @@ class _$BundleResponse implements BundleResponse {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -17322,7 +17614,7 @@ class _$BundleResponse implements BundleResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -17461,11 +17753,13 @@ abstract class $BasicCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       CodeableConcept code,
       Reference subject,
       Date created,
       Reference author});
+
+  $CodeableConceptCopyWith<$Res> get code;
 }
 
 class _$BasicCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
@@ -17514,12 +17808,22 @@ class _$BasicCopyWithImpl<$Res> extends _$OtherCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
       created: created == freezed ? _value.created : created as Date,
       author: author == freezed ? _value.author : author as Reference,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
   }
 }
 
@@ -17564,7 +17868,7 @@ class _$Basic implements Basic {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final CodeableConcept code;
   @override
@@ -17803,7 +18107,7 @@ class _$Basic implements Basic {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             SubscriptionStatus status,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Instant end,
             String reason,
             String criteria,
@@ -17910,7 +18214,7 @@ class _$Basic implements Basic {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept code,
             Reference subject,
             Date created,
@@ -18102,7 +18406,7 @@ class _$Basic implements Basic {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         SubscriptionStatus status,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Instant end,
         String reason,
         String criteria,
@@ -18199,7 +18503,7 @@ class _$Basic implements Basic {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept code,
         Reference subject,
         Date created,
@@ -18323,7 +18627,7 @@ abstract class Basic implements Other {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       CodeableConcept code,
       Reference subject,
       Date created,
@@ -18341,7 +18645,7 @@ abstract class Basic implements Other {
   @JsonKey(name: 'extension')
   List<dynamic> get fhirExtension;
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   CodeableConcept get code;
   Reference get subject;
   Date get created;

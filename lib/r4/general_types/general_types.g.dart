@@ -6,8 +6,8 @@ part of 'general_types.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$Address _$_$AddressFromJson(Map<String, dynamic> json) {
-  return _$Address(
+_$_Address _$_$_AddressFromJson(Map<String, dynamic> json) {
+  return _$_Address(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     use: _$enumDecodeNullable(_$AddressUseEnumMap, json['use'],
@@ -27,7 +27,8 @@ _$Address _$_$AddressFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$AddressToJson(_$Address instance) => <String, dynamic>{
+Map<String, dynamic> _$_$_AddressToJson(_$_Address instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
       'use': _$AddressUseEnumMap[instance.use],
@@ -90,8 +91,8 @@ const _$AddressTypeEnumMap = {
   AddressType.unknown: 'unknown',
 };
 
-_$Age _$_$AgeFromJson(Map<String, dynamic> json) {
-  return _$Age(
+_$_Age _$_$_AgeFromJson(Map<String, dynamic> json) {
+  return _$_Age(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     value: (json['value'] as num)?.toDouble(),
@@ -105,7 +106,7 @@ _$Age _$_$AgeFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$AgeToJson(_$Age instance) => <String, dynamic>{
+Map<String, dynamic> _$_$_AgeToJson(_$_Age instance) => <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
       'value': instance.value,
@@ -123,8 +124,8 @@ const _$ComparatorEnumMap = {
   Comparator.unknown: 'unknown',
 };
 
-_$Annotation _$_$AnnotationFromJson(Map<String, dynamic> json) {
-  return _$Annotation(
+_$_Annotation _$_$_AnnotationFromJson(Map<String, dynamic> json) {
+  return _$_Annotation(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     authorReference: json['authorReference'] == null
@@ -139,7 +140,7 @@ _$Annotation _$_$AnnotationFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$AnnotationToJson(_$Annotation instance) =>
+Map<String, dynamic> _$_$_AnnotationToJson(_$_Annotation instance) =>
     <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
@@ -149,8 +150,8 @@ Map<String, dynamic> _$_$AnnotationToJson(_$Annotation instance) =>
       'text': instance.text,
     };
 
-_$Attachment _$_$AttachmentFromJson(Map<String, dynamic> json) {
-  return _$Attachment(
+_$_Attachment _$_$_AttachmentFromJson(Map<String, dynamic> json) {
+  return _$_Attachment(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     contentType: json['contentType'] == null
@@ -174,7 +175,7 @@ _$Attachment _$_$AttachmentFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$AttachmentToJson(_$Attachment instance) =>
+Map<String, dynamic> _$_$_AttachmentToJson(_$_Attachment instance) =>
     <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
@@ -188,16 +189,19 @@ Map<String, dynamic> _$_$AttachmentToJson(_$Attachment instance) =>
       'creation': instance.creation,
     };
 
-_$CodeableConcept _$_$CodeableConceptFromJson(Map<String, dynamic> json) {
-  return _$CodeableConcept(
+_$_CodeableConcept _$_$_CodeableConceptFromJson(Map<String, dynamic> json) {
+  return _$_CodeableConcept(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
-    coding: json['coding'] as List,
+    coding: (json['coding'] as List)
+        ?.map((e) =>
+            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     text: json['text'] as String,
   );
 }
 
-Map<String, dynamic> _$_$CodeableConceptToJson(_$CodeableConcept instance) =>
+Map<String, dynamic> _$_$_CodeableConceptToJson(_$_CodeableConcept instance) =>
     <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
@@ -205,8 +209,8 @@ Map<String, dynamic> _$_$CodeableConceptToJson(_$CodeableConcept instance) =>
       'text': instance.text,
     };
 
-_$Coding _$_$CodingFromJson(Map<String, dynamic> json) {
-  return _$Coding(
+_$_Coding _$_$_CodingFromJson(Map<String, dynamic> json) {
+  return _$_Coding(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     system: json['system'] == null
@@ -219,7 +223,7 @@ _$Coding _$_$CodingFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$CodingToJson(_$Coding instance) => <String, dynamic>{
+Map<String, dynamic> _$_$_CodingToJson(_$_Coding instance) => <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
       'system': instance.system,
@@ -229,8 +233,8 @@ Map<String, dynamic> _$_$CodingToJson(_$Coding instance) => <String, dynamic>{
       'userSelected': instance.userSelected,
     };
 
-_$ContactPoint _$_$ContactPointFromJson(Map<String, dynamic> json) {
-  return _$ContactPoint(
+_$_ContactPoint _$_$_ContactPointFromJson(Map<String, dynamic> json) {
+  return _$_ContactPoint(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     system: _$enumDecodeNullable(_$ContactPointSystemEnumMap, json['system']),
@@ -243,7 +247,7 @@ _$ContactPoint _$_$ContactPointFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$ContactPointToJson(_$ContactPoint instance) =>
+Map<String, dynamic> _$_$_ContactPointToJson(_$_ContactPoint instance) =>
     <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
@@ -274,8 +278,8 @@ const _$ContactPointUseEnumMap = {
   ContactPointUse.unknown: 'unknown',
 };
 
-_$Count _$_$CountFromJson(Map<String, dynamic> json) {
-  return _$Count(
+_$_Count _$_$_CountFromJson(Map<String, dynamic> json) {
+  return _$_Count(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     value: (json['value'] as num)?.toDouble(),
@@ -288,7 +292,7 @@ _$Count _$_$CountFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$CountToJson(_$Count instance) => <String, dynamic>{
+Map<String, dynamic> _$_$_CountToJson(_$_Count instance) => <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
       'value': instance.value,
@@ -298,8 +302,8 @@ Map<String, dynamic> _$_$CountToJson(_$Count instance) => <String, dynamic>{
       'code': instance.code,
     };
 
-_$Distance _$_$DistanceFromJson(Map<String, dynamic> json) {
-  return _$Distance(
+_$_Distance _$_$_DistanceFromJson(Map<String, dynamic> json) {
+  return _$_Distance(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     value: (json['value'] as num)?.toDouble(),
@@ -312,7 +316,7 @@ _$Distance _$_$DistanceFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$DistanceToJson(_$Distance instance) =>
+Map<String, dynamic> _$_$_DistanceToJson(_$_Distance instance) =>
     <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
@@ -323,8 +327,8 @@ Map<String, dynamic> _$_$DistanceToJson(_$Distance instance) =>
       'code': instance.code,
     };
 
-_$Duration _$_$DurationFromJson(Map<String, dynamic> json) {
-  return _$Duration(
+_$_Duration _$_$_DurationFromJson(Map<String, dynamic> json) {
+  return _$_Duration(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     value: (json['value'] as num)?.toDouble(),
@@ -337,7 +341,7 @@ _$Duration _$_$DurationFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$DurationToJson(_$Duration instance) =>
+Map<String, dynamic> _$_$_DurationToJson(_$_Duration instance) =>
     <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
@@ -348,8 +352,8 @@ Map<String, dynamic> _$_$DurationToJson(_$Duration instance) =>
       'code': instance.code,
     };
 
-_$HumanName _$_$HumanNameFromJson(Map<String, dynamic> json) {
-  return _$HumanName(
+_$_HumanName _$_$_HumanNameFromJson(Map<String, dynamic> json) {
+  return _$_HumanName(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     use: _$enumDecodeNullable(_$HumanNameUseEnumMap, json['use']),
@@ -364,7 +368,7 @@ _$HumanName _$_$HumanNameFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$HumanNameToJson(_$HumanName instance) =>
+Map<String, dynamic> _$_$_HumanNameToJson(_$_HumanName instance) =>
     <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
@@ -388,8 +392,8 @@ const _$HumanNameUseEnumMap = {
   HumanNameUse.unknown: 'unknown',
 };
 
-_$Identifier _$_$IdentifierFromJson(Map<String, dynamic> json) {
-  return _$Identifier(
+_$_Identifier _$_$_IdentifierFromJson(Map<String, dynamic> json) {
+  return _$_Identifier(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     use: _$enumDecodeNullable(_$IdentifierUseEnumMap, json['use']),
@@ -409,7 +413,7 @@ _$Identifier _$_$IdentifierFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$IdentifierToJson(_$Identifier instance) =>
+Map<String, dynamic> _$_$_IdentifierToJson(_$_Identifier instance) =>
     <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
@@ -429,8 +433,8 @@ const _$IdentifierUseEnumMap = {
   IdentifierUse.old: 'old',
 };
 
-_$Money _$_$MoneyFromJson(Map<String, dynamic> json) {
-  return _$Money(
+_$_Money _$_$_MoneyFromJson(Map<String, dynamic> json) {
+  return _$_Money(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     value: (json['value'] as num)?.toDouble(),
@@ -440,15 +444,15 @@ _$Money _$_$MoneyFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$MoneyToJson(_$Money instance) => <String, dynamic>{
+Map<String, dynamic> _$_$_MoneyToJson(_$_Money instance) => <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
       'value': instance.value,
       'currency': instance.currency,
     };
 
-_$Period _$_$PeriodFromJson(Map<String, dynamic> json) {
-  return _$Period(
+_$_Period _$_$_PeriodFromJson(Map<String, dynamic> json) {
+  return _$_Period(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     start: json['start'] == null
@@ -460,15 +464,15 @@ _$Period _$_$PeriodFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$PeriodToJson(_$Period instance) => <String, dynamic>{
+Map<String, dynamic> _$_$_PeriodToJson(_$_Period instance) => <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
       'start': instance.start,
       'end': instance.end,
     };
 
-_$Quantity _$_$QuantityFromJson(Map<String, dynamic> json) {
-  return _$Quantity(
+_$_Quantity _$_$_QuantityFromJson(Map<String, dynamic> json) {
+  return _$_Quantity(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     value: (json['value'] as num)?.toDouble(),
@@ -481,7 +485,7 @@ _$Quantity _$_$QuantityFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$QuantityToJson(_$Quantity instance) =>
+Map<String, dynamic> _$_$_QuantityToJson(_$_Quantity instance) =>
     <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
@@ -492,8 +496,8 @@ Map<String, dynamic> _$_$QuantityToJson(_$Quantity instance) =>
       'code': instance.code,
     };
 
-_$Range _$_$RangeFromJson(Map<String, dynamic> json) {
-  return _$Range(
+_$_Range _$_$_RangeFromJson(Map<String, dynamic> json) {
+  return _$_Range(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     low: json['low'] == null
@@ -505,15 +509,15 @@ _$Range _$_$RangeFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$RangeToJson(_$Range instance) => <String, dynamic>{
+Map<String, dynamic> _$_$_RangeToJson(_$_Range instance) => <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
       'low': instance.low,
       'high': instance.high,
     };
 
-_$Ratio _$_$RatioFromJson(Map<String, dynamic> json) {
-  return _$Ratio(
+_$_Ratio _$_$_RatioFromJson(Map<String, dynamic> json) {
+  return _$_Ratio(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     numerator: json['numerator'] == null
@@ -525,15 +529,15 @@ _$Ratio _$_$RatioFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$RatioToJson(_$Ratio instance) => <String, dynamic>{
+Map<String, dynamic> _$_$_RatioToJson(_$_Ratio instance) => <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
       'numerator': instance.numerator,
       'denominator': instance.denominator,
     };
 
-_$SampledData _$_$SampledDataFromJson(Map<String, dynamic> json) {
-  return _$SampledData(
+_$_SampledData _$_$_SampledDataFromJson(Map<String, dynamic> json) {
+  return _$_SampledData(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     origin: json['origin'] == null
@@ -548,7 +552,7 @@ _$SampledData _$_$SampledDataFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$SampledDataToJson(_$SampledData instance) =>
+Map<String, dynamic> _$_$_SampledDataToJson(_$_SampledData instance) =>
     <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
@@ -561,11 +565,14 @@ Map<String, dynamic> _$_$SampledDataToJson(_$SampledData instance) =>
       'data': instance.data,
     };
 
-_$Signature _$_$SignatureFromJson(Map<String, dynamic> json) {
-  return _$Signature(
+_$_Signature _$_$_SignatureFromJson(Map<String, dynamic> json) {
+  return _$_Signature(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
-    type: json['type'] as List,
+    type: (json['type'] as List)
+        ?.map((e) =>
+            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     whenInstant:
         json['when'] == null ? null : Instant.fromJson(json['when'] as String),
     who: json['who'] == null
@@ -586,7 +593,7 @@ _$Signature _$_$SignatureFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$SignatureToJson(_$Signature instance) =>
+Map<String, dynamic> _$_$_SignatureToJson(_$_Signature instance) =>
     <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
@@ -599,8 +606,8 @@ Map<String, dynamic> _$_$SignatureToJson(_$Signature instance) =>
       'data': instance.data,
     };
 
-_$Timing _$_$TimingFromJson(Map<String, dynamic> json) {
-  return _$Timing(
+_$_Timing _$_$_TimingFromJson(Map<String, dynamic> json) {
+  return _$_Timing(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
@@ -616,7 +623,7 @@ _$Timing _$_$TimingFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$TimingToJson(_$Timing instance) => <String, dynamic>{
+Map<String, dynamic> _$_$_TimingToJson(_$_Timing instance) => <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,
       'modifierExtension': instance.modifierExtension,
@@ -625,8 +632,8 @@ Map<String, dynamic> _$_$TimingToJson(_$Timing instance) => <String, dynamic>{
       'code': instance.code,
     };
 
-_$TimingRepeat _$_$TimingRepeatFromJson(Map<String, dynamic> json) {
-  return _$TimingRepeat(
+_$_TimingRepeat _$_$_TimingRepeatFromJson(Map<String, dynamic> json) {
+  return _$_TimingRepeat(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
@@ -664,7 +671,7 @@ _$TimingRepeat _$_$TimingRepeatFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$TimingRepeatToJson(_$TimingRepeat instance) =>
+Map<String, dynamic> _$_$_TimingRepeatToJson(_$_TimingRepeat instance) =>
     <String, dynamic>{
       'id': instance.id,
       'extension': instance.fhirExtension,

@@ -25,9 +25,15 @@ _$ImagingStudy _$_$ImagingStudyFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status: _$enumDecodeNullable(_$ImagingStudyStatusEnumMap, json['status']),
-    modality: json['modality'] as List,
+    modality: (json['modality'] as List)
+        ?.map((e) =>
+            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
@@ -49,13 +55,24 @@ _$ImagingStudy _$_$ImagingStudyFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(
             json['procedureReference'] as Map<String, dynamic>),
-    procedureCode: json['procedureCode'] as List,
+    procedureCode: (json['procedureCode'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     location: json['location'] == null
         ? null
         : Reference.fromJson(json['location'] as Map<String, dynamic>),
-    reasonCode: json['reasonCode'] as List,
+    reasonCode: (json['reasonCode'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     reasonReference: json['reasonReference'] as List,
-    note: json['note'] as List,
+    note: (json['note'] as List)
+        ?.map((e) =>
+            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     description: json['description'] as String,
     series: json['series'] as List,
   );
@@ -253,7 +270,10 @@ _$Specimen _$_$SpecimenFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     accessionIdentifier: json['accessionIdentifier'] == null
         ? null
         : Identifier.fromJson(
@@ -276,8 +296,15 @@ _$Specimen _$_$SpecimenFromJson(Map<String, dynamic> json) {
             json['collection'] as Map<String, dynamic>),
     processing: json['processing'] as List,
     container: json['container'] as List,
-    condition: json['condition'] as List,
-    note: json['note'] as List,
+    condition: (json['condition'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    note: (json['note'] as List)
+        ?.map((e) =>
+            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -406,7 +433,10 @@ _$SpecimenContainer _$_$SpecimenContainerFromJson(Map<String, dynamic> json) {
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     description: json['description'] as String,
     type: json['type'] == null
         ? null
@@ -461,7 +491,10 @@ _$MolecularSequence _$_$MolecularSequenceFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     type: _$enumDecodeNullable(_$MolecularSequenceTypeEnumMap, json['type']),
     coordinateSystem: json['coordinateSystem'] as int,
     patient: json['patient'] == null
@@ -854,11 +887,18 @@ _$Observation _$_$ObservationFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     basedOn: json['basedOn'] as List,
     partOf: json['partOf'] as List,
     status: _$enumDecodeNullable(_$ObservationStatusEnumMap, json['status']),
-    category: json['category'] as List,
+    category: (json['category'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -918,8 +958,15 @@ _$Observation _$_$ObservationFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['dataAbsentReason'] as Map<String, dynamic>),
-    interpretation: json['interpretation'] as List,
-    note: json['note'] as List,
+    interpretation: (json['interpretation'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    note: (json['note'] as List)
+        ?.map((e) =>
+            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     bodySite: json['bodySite'] == null
         ? null
         : CodeableConcept.fromJson(json['bodySite'] as Map<String, dynamic>),
@@ -1015,7 +1062,11 @@ _$ObservationReferenceRange _$_$ObservationReferenceRangeFromJson(
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    appliesTo: json['appliesTo'] as List,
+    appliesTo: (json['appliesTo'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     age: json['age'] == null
         ? null
         : Range.fromJson(json['age'] as Map<String, dynamic>),
@@ -1079,7 +1130,11 @@ _$ObservationComponent _$_$ObservationComponentFromJson(
         ? null
         : CodeableConcept.fromJson(
             json['dataAbsentReason'] as Map<String, dynamic>),
-    interpretation: json['interpretation'] as List,
+    interpretation: (json['interpretation'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     referenceRange: json['referenceRange'] as List,
   );
 }
@@ -1126,7 +1181,10 @@ _$BodyStructure _$_$BodyStructureFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     active: json['active'] as bool,
     morphology: json['morphology'] == null
         ? null
@@ -1134,9 +1192,16 @@ _$BodyStructure _$_$BodyStructureFromJson(Map<String, dynamic> json) {
     location: json['location'] == null
         ? null
         : CodeableConcept.fromJson(json['location'] as Map<String, dynamic>),
-    locationQualifier: json['locationQualifier'] as List,
+    locationQualifier: (json['locationQualifier'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     description: json['description'] as String,
-    image: json['image'] as List,
+    image: (json['image'] as List)
+        ?.map((e) =>
+            e == null ? null : Attachment.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -1354,11 +1419,18 @@ _$DiagnosticReport _$_$DiagnosticReportFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     basedOn: json['basedOn'] as List,
     status:
         _$enumDecodeNullable(_$DiagnosticReportStatusEnumMap, json['status']),
-    category: json['category'] as List,
+    category: (json['category'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -1384,8 +1456,15 @@ _$DiagnosticReport _$_$DiagnosticReportFromJson(Map<String, dynamic> json) {
     imagingStudy: json['imagingStudy'] as List,
     media: json['media'] as List,
     conclusion: json['conclusion'] as String,
-    conclusionCode: json['conclusionCode'] as List,
-    presentedForm: json['presentedForm'] as List,
+    conclusionCode: (json['conclusionCode'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    presentedForm: (json['presentedForm'] as List)
+        ?.map((e) =>
+            e == null ? null : Attachment.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -1476,7 +1555,10 @@ _$Media _$_$MediaFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     basedOn: json['basedOn'] as List,
     partOf: json['partOf'] as List,
     status:
@@ -1508,7 +1590,11 @@ _$Media _$_$MediaFromJson(Map<String, dynamic> json) {
     operator: json['operator'] == null
         ? null
         : Reference.fromJson(json['operator'] as Map<String, dynamic>),
-    reasonCode: json['reasonCode'] as List,
+    reasonCode: (json['reasonCode'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     bodySite: json['bodySite'] == null
         ? null
         : CodeableConcept.fromJson(json['bodySite'] as Map<String, dynamic>),
@@ -1523,7 +1609,10 @@ _$Media _$_$MediaFromJson(Map<String, dynamic> json) {
     content: json['content'] == null
         ? null
         : Attachment.fromJson(json['content'] as Map<String, dynamic>),
-    note: json['note'] as List,
+    note: (json['note'] as List)
+        ?.map((e) =>
+            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 

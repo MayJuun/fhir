@@ -26,7 +26,10 @@ _$Library _$_$LibraryFromJson(Map<String, dynamic> json) {
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
@@ -52,7 +55,11 @@ _$Library _$_$LibraryFromJson(Map<String, dynamic> json) {
         ? null
         : Markdown.fromJson(json['description'] as String),
     useContext: json['useContext'] as List,
-    jurisdiction: json['jurisdiction'] as List,
+    jurisdiction: (json['jurisdiction'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     purpose: json['purpose'] == null
         ? null
         : Markdown.fromJson(json['purpose'] as String),
@@ -69,7 +76,11 @@ _$Library _$_$LibraryFromJson(Map<String, dynamic> json) {
     effectivePeriod: json['effectivePeriod'] == null
         ? null
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    topic: json['topic'] as List,
+    topic: (json['topic'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     author: json['author'] as List,
     editor: json['editor'] as List,
     reviewer: json['reviewer'] as List,
@@ -77,7 +88,10 @@ _$Library _$_$LibraryFromJson(Map<String, dynamic> json) {
     relatedArtifact: json['relatedArtifact'] as List,
     parameter: json['parameter'] as List,
     dataRequirement: json['dataRequirement'] as List,
-    content: json['content'] as List,
+    content: (json['content'] as List)
+        ?.map((e) =>
+            e == null ? null : Attachment.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -183,7 +197,10 @@ _$Lists _$_$ListsFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status: _$enumDecodeNullable(_$ListStatusEnumMap, json['status']),
     mode: _$enumDecodeNullable(_$ListModeEnumMap, json['mode']),
     title: json['title'] as String,
@@ -205,7 +222,10 @@ _$Lists _$_$ListsFromJson(Map<String, dynamic> json) {
     orderedBy: json['orderedBy'] == null
         ? null
         : CodeableConcept.fromJson(json['orderedBy'] as Map<String, dynamic>),
-    note: json['note'] as List,
+    note: (json['note'] as List)
+        ?.map((e) =>
+            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     entry: json['entry'] as List,
     emptyReason: json['emptyReason'] == null
         ? null
@@ -300,10 +320,17 @@ _$EpisodeOfCare _$_$EpisodeOfCareFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status: _$enumDecodeNullable(_$EpisodeOfCareStatusEnumMap, json['status']),
     statusHistory: json['statusHistory'] as List,
-    type: json['type'] as List,
+    type: (json['type'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     diagnosis: json['diagnosis'] as List,
     patient: json['patient'] == null
         ? null
@@ -441,14 +468,21 @@ _$Encounter _$_$EncounterFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status: _$enumDecodeNullable(_$EncounterStatusEnumMap, json['status']),
     statusHistory: json['statusHistory'] as List,
     clas: json['class'] == null
         ? null
         : Coding.fromJson(json['class'] as Map<String, dynamic>),
     classHistory: json['classHistory'] as List,
-    type: json['type'] as List,
+    type: (json['type'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     serviceType: json['serviceType'] == null
         ? null
         : CodeableConcept.fromJson(json['serviceType'] as Map<String, dynamic>),
@@ -468,7 +502,11 @@ _$Encounter _$_$EncounterFromJson(Map<String, dynamic> json) {
     length: json['length'] == null
         ? null
         : Duration.fromJson(json['length'] as Map<String, dynamic>),
-    reasonCode: json['reasonCode'] as List,
+    reasonCode: (json['reasonCode'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     reasonReference: json['reasonReference'] as List,
     diagnosis: json['diagnosis'] as List,
     account: json['account'] as List,
@@ -601,7 +639,11 @@ _$EncounterParticipant _$_$EncounterParticipantFromJson(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    type: json['type'] as List,
+    type: (json['type'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -667,9 +709,21 @@ _$EncounterHospitalization _$_$EncounterHospitalizationFromJson(
     reAdmission: json['reAdmission'] == null
         ? null
         : CodeableConcept.fromJson(json['reAdmission'] as Map<String, dynamic>),
-    dietPreference: json['dietPreference'] as List,
-    specialCourtesy: json['specialCourtesy'] as List,
-    specialArrangement: json['specialArrangement'] as List,
+    dietPreference: (json['dietPreference'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    specialCourtesy: (json['specialCourtesy'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    specialArrangement: (json['specialArrangement'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     destination: json['destination'] == null
         ? null
         : Reference.fromJson(json['destination'] as Map<String, dynamic>),
@@ -756,9 +810,16 @@ _$Flag _$_$FlagFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status: _$enumDecodeNullable(_$FlagStatusEnumMap, json['status']),
-    category: json['category'] as List,
+    category: (json['category'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),

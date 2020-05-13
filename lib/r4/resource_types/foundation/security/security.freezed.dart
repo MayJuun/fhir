@@ -60,13 +60,13 @@ class _$SecurityTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       Coding type,
-      List<dynamic> subtype,
+      List<Coding> subtype,
       AuditEventAction action,
       Period period,
       Instant recorded,
       AuditEventOutcome outcome,
       String outcomeDesc,
-      List<dynamic> purposeOfEvent,
+      List<CodeableConcept> purposeOfEvent,
       List<dynamic> agent,
       AuditEventSource source,
       List<dynamic> entity}) {
@@ -99,7 +99,7 @@ class _$SecurityTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept type,
-      List<dynamic> role,
+      List<CodeableConcept> role,
       Reference who,
       String altId,
       String name,
@@ -108,7 +108,7 @@ class _$SecurityTearOff {
       List<FhirUri> policy,
       Coding media,
       AuditEventNetwork network,
-      List<dynamic> purposeOfUse}) {
+      List<CodeableConcept> purposeOfUse}) {
     return AuditEventAgent(
       id: id,
       fhirExtension: fhirExtension,
@@ -148,7 +148,7 @@ class _$SecurityTearOff {
       List<dynamic> modifierExtension,
       String site,
       Reference observer,
-      List<dynamic> type}) {
+      List<Coding> type}) {
     return AuditEventSource(
       id: id,
       fhirExtension: fhirExtension,
@@ -167,7 +167,7 @@ class _$SecurityTearOff {
       Coding type,
       Coding role,
       Coding lifecycle,
-      List<dynamic> securityLabel,
+      List<Coding> securityLabel,
       String name,
       String description,
       Base64Binary query,
@@ -215,10 +215,10 @@ class _$SecurityTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       ConsentStatus status,
       CodeableConcept scope,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Reference patient,
       FhirDateTime dateTime,
       List<dynamic> performer,
@@ -295,11 +295,11 @@ class _$SecurityTearOff {
       ConsentProvisionType type,
       Period period,
       List<dynamic> actor,
-      List<dynamic> action,
-      List<dynamic> securityLabel,
-      List<dynamic> purpose,
-      @JsonKey(name: 'class') List<dynamic> clas,
-      List<dynamic> code,
+      List<CodeableConcept> action,
+      List<Coding> securityLabel,
+      List<Coding> purpose,
+      @JsonKey(name: 'class') List<Coding> clas,
+      List<CodeableConcept> code,
       Period dataPeriod,
       List<dynamic> data,
       List<dynamic> provision}) {
@@ -367,11 +367,11 @@ class _$SecurityTearOff {
       Instant recorded,
       List<FhirUri> policy,
       Reference location,
-      List<dynamic> reason,
+      List<CodeableConcept> reason,
       CodeableConcept activity,
       List<dynamic> agent,
       List<dynamic> entity,
-      List<dynamic> signature}) {
+      List<Signature> signature}) {
     return Provenance(
       resourceType: resourceType,
       id: id,
@@ -401,7 +401,7 @@ class _$SecurityTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept type,
-      List<dynamic> role,
+      List<CodeableConcept> role,
       Reference who,
       Reference onBehalfOf}) {
     return ProvenanceAgent(
@@ -455,13 +455,13 @@ mixin _$Security {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
+            List<CodeableConcept> purposeOfEvent,
             List<dynamic> agent,
             AuditEventSource source,
             List<dynamic> entity),
@@ -471,7 +471,7 @@ mixin _$Security {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -480,7 +480,7 @@ mixin _$Security {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
@@ -495,7 +495,7 @@ mixin _$Security {
             List<dynamic> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
@@ -505,7 +505,7 @@ mixin _$Security {
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
@@ -529,10 +529,10 @@ mixin _$Security {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
             List<dynamic> performer,
@@ -566,11 +566,11 @@ mixin _$Security {
             ConsentProvisionType type,
             Period period,
             List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            @JsonKey(name: 'class') List<dynamic> clas,
-            List<dynamic> code,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            @JsonKey(name: 'class') List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
             List<dynamic> data,
             List<dynamic> provision),
@@ -605,18 +605,18 @@ mixin _$Security {
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
             List<dynamic> agent,
             List<dynamic> entity,
-            List<dynamic> signature),
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
@@ -641,13 +641,13 @@ mixin _$Security {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
+        List<CodeableConcept> purposeOfEvent,
         List<dynamic> agent,
         AuditEventSource source,
         List<dynamic> entity),
@@ -656,7 +656,7 @@ mixin _$Security {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -665,7 +665,7 @@ mixin _$Security {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -678,7 +678,7 @@ mixin _$Security {
         List<dynamic> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -687,7 +687,7 @@ mixin _$Security {
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
@@ -709,10 +709,10 @@ mixin _$Security {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
         List<dynamic> performer,
@@ -743,11 +743,11 @@ mixin _$Security {
         ConsentProvisionType type,
         Period period,
         List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        @JsonKey(name: 'class') List<dynamic> clas,
-        List<dynamic> code,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        @JsonKey(name: 'class') List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
         List<dynamic> data,
         List<dynamic> provision),
@@ -779,17 +779,17 @@ mixin _$Security {
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
         List<dynamic> agent,
         List<dynamic> entity,
-        List<dynamic> signature),
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
@@ -889,16 +889,19 @@ abstract class $AuditEventCopyWith<$Res> implements $SecurityCopyWith<$Res> {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       Coding type,
-      List<dynamic> subtype,
+      List<Coding> subtype,
       AuditEventAction action,
       Period period,
       Instant recorded,
       AuditEventOutcome outcome,
       String outcomeDesc,
-      List<dynamic> purposeOfEvent,
+      List<CodeableConcept> purposeOfEvent,
       List<dynamic> agent,
       AuditEventSource source,
       List<dynamic> entity});
+
+  $CodingCopyWith<$Res> get type;
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$AuditEventCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -952,7 +955,7 @@ class _$AuditEventCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
       type: type == freezed ? _value.type : type as Coding,
-      subtype: subtype == freezed ? _value.subtype : subtype as List<dynamic>,
+      subtype: subtype == freezed ? _value.subtype : subtype as List<Coding>,
       action: action == freezed ? _value.action : action as AuditEventAction,
       period: period == freezed ? _value.period : period as Period,
       recorded: recorded == freezed ? _value.recorded : recorded as Instant,
@@ -962,11 +965,31 @@ class _$AuditEventCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
           outcomeDesc == freezed ? _value.outcomeDesc : outcomeDesc as String,
       purposeOfEvent: purposeOfEvent == freezed
           ? _value.purposeOfEvent
-          : purposeOfEvent as List<dynamic>,
+          : purposeOfEvent as List<CodeableConcept>,
       agent: agent == freezed ? _value.agent : agent as List<dynamic>,
       source: source == freezed ? _value.source : source as AuditEventSource,
       entity: entity == freezed ? _value.entity : entity as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodingCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
   }
 }
 
@@ -1019,7 +1042,7 @@ class _$AuditEvent implements AuditEvent {
   @override
   final Coding type;
   @override
-  final List<dynamic> subtype;
+  final List<Coding> subtype;
   @override
   final AuditEventAction action;
   @override
@@ -1031,7 +1054,7 @@ class _$AuditEvent implements AuditEvent {
   @override
   final String outcomeDesc;
   @override
-  final List<dynamic> purposeOfEvent;
+  final List<CodeableConcept> purposeOfEvent;
   @override
   final List<dynamic> agent;
   @override
@@ -1144,13 +1167,13 @@ class _$AuditEvent implements AuditEvent {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
+            List<CodeableConcept> purposeOfEvent,
             List<dynamic> agent,
             AuditEventSource source,
             List<dynamic> entity),
@@ -1160,7 +1183,7 @@ class _$AuditEvent implements AuditEvent {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -1169,7 +1192,7 @@ class _$AuditEvent implements AuditEvent {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
@@ -1184,7 +1207,7 @@ class _$AuditEvent implements AuditEvent {
             List<dynamic> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
@@ -1194,7 +1217,7 @@ class _$AuditEvent implements AuditEvent {
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
@@ -1218,10 +1241,10 @@ class _$AuditEvent implements AuditEvent {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
             List<dynamic> performer,
@@ -1255,11 +1278,11 @@ class _$AuditEvent implements AuditEvent {
             ConsentProvisionType type,
             Period period,
             List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            @JsonKey(name: 'class') List<dynamic> clas,
-            List<dynamic> code,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            @JsonKey(name: 'class') List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
             List<dynamic> data,
             List<dynamic> provision),
@@ -1294,18 +1317,18 @@ class _$AuditEvent implements AuditEvent {
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
             List<dynamic> agent,
             List<dynamic> entity,
-            List<dynamic> signature),
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
@@ -1369,13 +1392,13 @@ class _$AuditEvent implements AuditEvent {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
+        List<CodeableConcept> purposeOfEvent,
         List<dynamic> agent,
         AuditEventSource source,
         List<dynamic> entity),
@@ -1384,7 +1407,7 @@ class _$AuditEvent implements AuditEvent {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -1393,7 +1416,7 @@ class _$AuditEvent implements AuditEvent {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -1406,7 +1429,7 @@ class _$AuditEvent implements AuditEvent {
         List<dynamic> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -1415,7 +1438,7 @@ class _$AuditEvent implements AuditEvent {
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
@@ -1437,10 +1460,10 @@ class _$AuditEvent implements AuditEvent {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
         List<dynamic> performer,
@@ -1471,11 +1494,11 @@ class _$AuditEvent implements AuditEvent {
         ConsentProvisionType type,
         Period period,
         List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        @JsonKey(name: 'class') List<dynamic> clas,
-        List<dynamic> code,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        @JsonKey(name: 'class') List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
         List<dynamic> data,
         List<dynamic> provision),
@@ -1507,17 +1530,17 @@ class _$AuditEvent implements AuditEvent {
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
         List<dynamic> agent,
         List<dynamic> entity,
-        List<dynamic> signature),
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
@@ -1638,13 +1661,13 @@ abstract class AuditEvent implements Security {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       Coding type,
-      List<dynamic> subtype,
+      List<Coding> subtype,
       AuditEventAction action,
       Period period,
       Instant recorded,
       AuditEventOutcome outcome,
       String outcomeDesc,
-      List<dynamic> purposeOfEvent,
+      List<CodeableConcept> purposeOfEvent,
       List<dynamic> agent,
       AuditEventSource source,
       List<dynamic> entity}) = _$AuditEvent;
@@ -1665,13 +1688,13 @@ abstract class AuditEvent implements Security {
   @override
   List<dynamic> get modifierExtension;
   Coding get type;
-  List<dynamic> get subtype;
+  List<Coding> get subtype;
   AuditEventAction get action;
   Period get period;
   Instant get recorded;
   AuditEventOutcome get outcome;
   String get outcomeDesc;
-  List<dynamic> get purposeOfEvent;
+  List<CodeableConcept> get purposeOfEvent;
   List<dynamic> get agent;
   AuditEventSource get source;
   List<dynamic> get entity;
@@ -1690,7 +1713,7 @@ abstract class $AuditEventAgentCopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept type,
-      List<dynamic> role,
+      List<CodeableConcept> role,
       Reference who,
       String altId,
       String name,
@@ -1699,7 +1722,10 @@ abstract class $AuditEventAgentCopyWith<$Res>
       List<FhirUri> policy,
       Coding media,
       AuditEventNetwork network,
-      List<dynamic> purposeOfUse});
+      List<CodeableConcept> purposeOfUse});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $CodingCopyWith<$Res> get media;
 }
 
 class _$AuditEventAgentCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -1737,7 +1763,7 @@ class _$AuditEventAgentCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      role: role == freezed ? _value.role : role as List<dynamic>,
+      role: role == freezed ? _value.role : role as List<CodeableConcept>,
       who: who == freezed ? _value.who : who as Reference,
       altId: altId == freezed ? _value.altId : altId as String,
       name: name == freezed ? _value.name : name as String,
@@ -1749,8 +1775,28 @@ class _$AuditEventAgentCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
           network == freezed ? _value.network : network as AuditEventNetwork,
       purposeOfUse: purposeOfUse == freezed
           ? _value.purposeOfUse
-          : purposeOfUse as List<dynamic>,
+          : purposeOfUse as List<CodeableConcept>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get media {
+    if (_value.media == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.media, (value) {
+      return _then(_value.copyWith(media: value));
+    });
   }
 }
 
@@ -1785,7 +1831,7 @@ class _$AuditEventAgent implements AuditEventAgent {
   @override
   final CodeableConcept type;
   @override
-  final List<dynamic> role;
+  final List<CodeableConcept> role;
   @override
   final Reference who;
   @override
@@ -1803,7 +1849,7 @@ class _$AuditEventAgent implements AuditEventAgent {
   @override
   final AuditEventNetwork network;
   @override
-  final List<dynamic> purposeOfUse;
+  final List<CodeableConcept> purposeOfUse;
 
   @override
   String toString() {
@@ -1887,13 +1933,13 @@ class _$AuditEventAgent implements AuditEventAgent {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
+            List<CodeableConcept> purposeOfEvent,
             List<dynamic> agent,
             AuditEventSource source,
             List<dynamic> entity),
@@ -1903,7 +1949,7 @@ class _$AuditEventAgent implements AuditEventAgent {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -1912,7 +1958,7 @@ class _$AuditEventAgent implements AuditEventAgent {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
@@ -1927,7 +1973,7 @@ class _$AuditEventAgent implements AuditEventAgent {
             List<dynamic> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
@@ -1937,7 +1983,7 @@ class _$AuditEventAgent implements AuditEventAgent {
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
@@ -1961,10 +2007,10 @@ class _$AuditEventAgent implements AuditEventAgent {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
             List<dynamic> performer,
@@ -1998,11 +2044,11 @@ class _$AuditEventAgent implements AuditEventAgent {
             ConsentProvisionType type,
             Period period,
             List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            @JsonKey(name: 'class') List<dynamic> clas,
-            List<dynamic> code,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            @JsonKey(name: 'class') List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
             List<dynamic> data,
             List<dynamic> provision),
@@ -2037,18 +2083,18 @@ class _$AuditEventAgent implements AuditEventAgent {
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
             List<dynamic> agent,
             List<dynamic> entity,
-            List<dynamic> signature),
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
@@ -2106,13 +2152,13 @@ class _$AuditEventAgent implements AuditEventAgent {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
+        List<CodeableConcept> purposeOfEvent,
         List<dynamic> agent,
         AuditEventSource source,
         List<dynamic> entity),
@@ -2121,7 +2167,7 @@ class _$AuditEventAgent implements AuditEventAgent {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -2130,7 +2176,7 @@ class _$AuditEventAgent implements AuditEventAgent {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -2143,7 +2189,7 @@ class _$AuditEventAgent implements AuditEventAgent {
         List<dynamic> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -2152,7 +2198,7 @@ class _$AuditEventAgent implements AuditEventAgent {
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
@@ -2174,10 +2220,10 @@ class _$AuditEventAgent implements AuditEventAgent {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
         List<dynamic> performer,
@@ -2208,11 +2254,11 @@ class _$AuditEventAgent implements AuditEventAgent {
         ConsentProvisionType type,
         Period period,
         List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        @JsonKey(name: 'class') List<dynamic> clas,
-        List<dynamic> code,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        @JsonKey(name: 'class') List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
         List<dynamic> data,
         List<dynamic> provision),
@@ -2244,17 +2290,17 @@ class _$AuditEventAgent implements AuditEventAgent {
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
         List<dynamic> agent,
         List<dynamic> entity,
-        List<dynamic> signature),
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
@@ -2363,7 +2409,7 @@ abstract class AuditEventAgent implements Security {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept type,
-      List<dynamic> role,
+      List<CodeableConcept> role,
       Reference who,
       String altId,
       String name,
@@ -2372,7 +2418,7 @@ abstract class AuditEventAgent implements Security {
       List<FhirUri> policy,
       Coding media,
       AuditEventNetwork network,
-      List<dynamic> purposeOfUse}) = _$AuditEventAgent;
+      List<CodeableConcept> purposeOfUse}) = _$AuditEventAgent;
 
   factory AuditEventAgent.fromJson(Map<String, dynamic> json) =
       _$AuditEventAgent.fromJson;
@@ -2384,7 +2430,7 @@ abstract class AuditEventAgent implements Security {
   @override
   List<dynamic> get modifierExtension;
   CodeableConcept get type;
-  List<dynamic> get role;
+  List<CodeableConcept> get role;
   Reference get who;
   String get altId;
   String get name;
@@ -2393,7 +2439,7 @@ abstract class AuditEventAgent implements Security {
   List<FhirUri> get policy;
   Coding get media;
   AuditEventNetwork get network;
-  List<dynamic> get purposeOfUse;
+  List<CodeableConcept> get purposeOfUse;
   @override
   $AuditEventAgentCopyWith<AuditEventAgent> get copyWith;
 }
@@ -2519,13 +2565,13 @@ class _$AuditEventNetwork implements AuditEventNetwork {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
+            List<CodeableConcept> purposeOfEvent,
             List<dynamic> agent,
             AuditEventSource source,
             List<dynamic> entity),
@@ -2535,7 +2581,7 @@ class _$AuditEventNetwork implements AuditEventNetwork {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -2544,7 +2590,7 @@ class _$AuditEventNetwork implements AuditEventNetwork {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
@@ -2559,7 +2605,7 @@ class _$AuditEventNetwork implements AuditEventNetwork {
             List<dynamic> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
@@ -2569,7 +2615,7 @@ class _$AuditEventNetwork implements AuditEventNetwork {
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
@@ -2593,10 +2639,10 @@ class _$AuditEventNetwork implements AuditEventNetwork {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
             List<dynamic> performer,
@@ -2630,11 +2676,11 @@ class _$AuditEventNetwork implements AuditEventNetwork {
             ConsentProvisionType type,
             Period period,
             List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            @JsonKey(name: 'class') List<dynamic> clas,
-            List<dynamic> code,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            @JsonKey(name: 'class') List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
             List<dynamic> data,
             List<dynamic> provision),
@@ -2669,18 +2715,18 @@ class _$AuditEventNetwork implements AuditEventNetwork {
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
             List<dynamic> agent,
             List<dynamic> entity,
-            List<dynamic> signature),
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
@@ -2725,13 +2771,13 @@ class _$AuditEventNetwork implements AuditEventNetwork {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
+        List<CodeableConcept> purposeOfEvent,
         List<dynamic> agent,
         AuditEventSource source,
         List<dynamic> entity),
@@ -2740,7 +2786,7 @@ class _$AuditEventNetwork implements AuditEventNetwork {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -2749,7 +2795,7 @@ class _$AuditEventNetwork implements AuditEventNetwork {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -2762,7 +2808,7 @@ class _$AuditEventNetwork implements AuditEventNetwork {
         List<dynamic> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -2771,7 +2817,7 @@ class _$AuditEventNetwork implements AuditEventNetwork {
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
@@ -2793,10 +2839,10 @@ class _$AuditEventNetwork implements AuditEventNetwork {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
         List<dynamic> performer,
@@ -2827,11 +2873,11 @@ class _$AuditEventNetwork implements AuditEventNetwork {
         ConsentProvisionType type,
         Period period,
         List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        @JsonKey(name: 'class') List<dynamic> clas,
-        List<dynamic> code,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        @JsonKey(name: 'class') List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
         List<dynamic> data,
         List<dynamic> provision),
@@ -2863,17 +2909,17 @@ class _$AuditEventNetwork implements AuditEventNetwork {
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
         List<dynamic> agent,
         List<dynamic> entity,
-        List<dynamic> signature),
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
@@ -2999,7 +3045,7 @@ abstract class $AuditEventSourceCopyWith<$Res>
       List<dynamic> modifierExtension,
       String site,
       Reference observer,
-      List<dynamic> type});
+      List<Coding> type});
 }
 
 class _$AuditEventSourceCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -3030,7 +3076,7 @@ class _$AuditEventSourceCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       site: site == freezed ? _value.site : site as String,
       observer: observer == freezed ? _value.observer : observer as Reference,
-      type: type == freezed ? _value.type : type as List<dynamic>,
+      type: type == freezed ? _value.type : type as List<Coding>,
     ));
   }
 }
@@ -3060,7 +3106,7 @@ class _$AuditEventSource implements AuditEventSource {
   @override
   final Reference observer;
   @override
-  final List<dynamic> type;
+  final List<Coding> type;
 
   @override
   String toString() {
@@ -3117,13 +3163,13 @@ class _$AuditEventSource implements AuditEventSource {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
+            List<CodeableConcept> purposeOfEvent,
             List<dynamic> agent,
             AuditEventSource source,
             List<dynamic> entity),
@@ -3133,7 +3179,7 @@ class _$AuditEventSource implements AuditEventSource {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -3142,7 +3188,7 @@ class _$AuditEventSource implements AuditEventSource {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
@@ -3157,7 +3203,7 @@ class _$AuditEventSource implements AuditEventSource {
             List<dynamic> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
@@ -3167,7 +3213,7 @@ class _$AuditEventSource implements AuditEventSource {
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
@@ -3191,10 +3237,10 @@ class _$AuditEventSource implements AuditEventSource {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
             List<dynamic> performer,
@@ -3228,11 +3274,11 @@ class _$AuditEventSource implements AuditEventSource {
             ConsentProvisionType type,
             Period period,
             List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            @JsonKey(name: 'class') List<dynamic> clas,
-            List<dynamic> code,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            @JsonKey(name: 'class') List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
             List<dynamic> data,
             List<dynamic> provision),
@@ -3267,18 +3313,18 @@ class _$AuditEventSource implements AuditEventSource {
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
             List<dynamic> agent,
             List<dynamic> entity,
-            List<dynamic> signature),
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
@@ -3323,13 +3369,13 @@ class _$AuditEventSource implements AuditEventSource {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
+        List<CodeableConcept> purposeOfEvent,
         List<dynamic> agent,
         AuditEventSource source,
         List<dynamic> entity),
@@ -3338,7 +3384,7 @@ class _$AuditEventSource implements AuditEventSource {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -3347,7 +3393,7 @@ class _$AuditEventSource implements AuditEventSource {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -3360,7 +3406,7 @@ class _$AuditEventSource implements AuditEventSource {
         List<dynamic> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -3369,7 +3415,7 @@ class _$AuditEventSource implements AuditEventSource {
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
@@ -3391,10 +3437,10 @@ class _$AuditEventSource implements AuditEventSource {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
         List<dynamic> performer,
@@ -3425,11 +3471,11 @@ class _$AuditEventSource implements AuditEventSource {
         ConsentProvisionType type,
         Period period,
         List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        @JsonKey(name: 'class') List<dynamic> clas,
-        List<dynamic> code,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        @JsonKey(name: 'class') List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
         List<dynamic> data,
         List<dynamic> provision),
@@ -3461,17 +3507,17 @@ class _$AuditEventSource implements AuditEventSource {
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
         List<dynamic> agent,
         List<dynamic> entity,
-        List<dynamic> signature),
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
@@ -3569,7 +3615,7 @@ abstract class AuditEventSource implements Security {
       List<dynamic> modifierExtension,
       String site,
       Reference observer,
-      List<dynamic> type}) = _$AuditEventSource;
+      List<Coding> type}) = _$AuditEventSource;
 
   factory AuditEventSource.fromJson(Map<String, dynamic> json) =
       _$AuditEventSource.fromJson;
@@ -3582,7 +3628,7 @@ abstract class AuditEventSource implements Security {
   List<dynamic> get modifierExtension;
   String get site;
   Reference get observer;
-  List<dynamic> get type;
+  List<Coding> get type;
   @override
   $AuditEventSourceCopyWith<AuditEventSource> get copyWith;
 }
@@ -3601,11 +3647,15 @@ abstract class $AuditEventEntityCopyWith<$Res>
       Coding type,
       Coding role,
       Coding lifecycle,
-      List<dynamic> securityLabel,
+      List<Coding> securityLabel,
       String name,
       String description,
       Base64Binary query,
       List<dynamic> detail});
+
+  $CodingCopyWith<$Res> get type;
+  $CodingCopyWith<$Res> get role;
+  $CodingCopyWith<$Res> get lifecycle;
 }
 
 class _$AuditEventEntityCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -3646,13 +3696,43 @@ class _$AuditEventEntityCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
       lifecycle: lifecycle == freezed ? _value.lifecycle : lifecycle as Coding,
       securityLabel: securityLabel == freezed
           ? _value.securityLabel
-          : securityLabel as List<dynamic>,
+          : securityLabel as List<Coding>,
       name: name == freezed ? _value.name : name as String,
       description:
           description == freezed ? _value.description : description as String,
       query: query == freezed ? _value.query : query as Base64Binary,
       detail: detail == freezed ? _value.detail : detail as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodingCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get role {
+    if (_value.role == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.role, (value) {
+      return _then(_value.copyWith(role: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get lifecycle {
+    if (_value.lifecycle == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.lifecycle, (value) {
+      return _then(_value.copyWith(lifecycle: value));
+    });
   }
 }
 
@@ -3691,7 +3771,7 @@ class _$AuditEventEntity implements AuditEventEntity {
   @override
   final Coding lifecycle;
   @override
-  final List<dynamic> securityLabel;
+  final List<Coding> securityLabel;
   @override
   final String name;
   @override
@@ -3776,13 +3856,13 @@ class _$AuditEventEntity implements AuditEventEntity {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
+            List<CodeableConcept> purposeOfEvent,
             List<dynamic> agent,
             AuditEventSource source,
             List<dynamic> entity),
@@ -3792,7 +3872,7 @@ class _$AuditEventEntity implements AuditEventEntity {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -3801,7 +3881,7 @@ class _$AuditEventEntity implements AuditEventEntity {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
@@ -3816,7 +3896,7 @@ class _$AuditEventEntity implements AuditEventEntity {
             List<dynamic> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
@@ -3826,7 +3906,7 @@ class _$AuditEventEntity implements AuditEventEntity {
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
@@ -3850,10 +3930,10 @@ class _$AuditEventEntity implements AuditEventEntity {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
             List<dynamic> performer,
@@ -3887,11 +3967,11 @@ class _$AuditEventEntity implements AuditEventEntity {
             ConsentProvisionType type,
             Period period,
             List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            @JsonKey(name: 'class') List<dynamic> clas,
-            List<dynamic> code,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            @JsonKey(name: 'class') List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
             List<dynamic> data,
             List<dynamic> provision),
@@ -3926,18 +4006,18 @@ class _$AuditEventEntity implements AuditEventEntity {
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
             List<dynamic> agent,
             List<dynamic> entity,
-            List<dynamic> signature),
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
@@ -3982,13 +4062,13 @@ class _$AuditEventEntity implements AuditEventEntity {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
+        List<CodeableConcept> purposeOfEvent,
         List<dynamic> agent,
         AuditEventSource source,
         List<dynamic> entity),
@@ -3997,7 +4077,7 @@ class _$AuditEventEntity implements AuditEventEntity {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -4006,7 +4086,7 @@ class _$AuditEventEntity implements AuditEventEntity {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -4019,7 +4099,7 @@ class _$AuditEventEntity implements AuditEventEntity {
         List<dynamic> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -4028,7 +4108,7 @@ class _$AuditEventEntity implements AuditEventEntity {
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
@@ -4050,10 +4130,10 @@ class _$AuditEventEntity implements AuditEventEntity {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
         List<dynamic> performer,
@@ -4084,11 +4164,11 @@ class _$AuditEventEntity implements AuditEventEntity {
         ConsentProvisionType type,
         Period period,
         List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        @JsonKey(name: 'class') List<dynamic> clas,
-        List<dynamic> code,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        @JsonKey(name: 'class') List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
         List<dynamic> data,
         List<dynamic> provision),
@@ -4120,17 +4200,17 @@ class _$AuditEventEntity implements AuditEventEntity {
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
         List<dynamic> agent,
         List<dynamic> entity,
-        List<dynamic> signature),
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
@@ -4230,7 +4310,7 @@ abstract class AuditEventEntity implements Security {
       Coding type,
       Coding role,
       Coding lifecycle,
-      List<dynamic> securityLabel,
+      List<Coding> securityLabel,
       String name,
       String description,
       Base64Binary query,
@@ -4249,7 +4329,7 @@ abstract class AuditEventEntity implements Security {
   Coding get type;
   Coding get role;
   Coding get lifecycle;
-  List<dynamic> get securityLabel;
+  List<Coding> get securityLabel;
   String get name;
   String get description;
   Base64Binary get query;
@@ -4392,13 +4472,13 @@ class _$AuditEventDetail implements AuditEventDetail {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
+            List<CodeableConcept> purposeOfEvent,
             List<dynamic> agent,
             AuditEventSource source,
             List<dynamic> entity),
@@ -4408,7 +4488,7 @@ class _$AuditEventDetail implements AuditEventDetail {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -4417,7 +4497,7 @@ class _$AuditEventDetail implements AuditEventDetail {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
@@ -4432,7 +4512,7 @@ class _$AuditEventDetail implements AuditEventDetail {
             List<dynamic> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
@@ -4442,7 +4522,7 @@ class _$AuditEventDetail implements AuditEventDetail {
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
@@ -4466,10 +4546,10 @@ class _$AuditEventDetail implements AuditEventDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
             List<dynamic> performer,
@@ -4503,11 +4583,11 @@ class _$AuditEventDetail implements AuditEventDetail {
             ConsentProvisionType type,
             Period period,
             List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            @JsonKey(name: 'class') List<dynamic> clas,
-            List<dynamic> code,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            @JsonKey(name: 'class') List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
             List<dynamic> data,
             List<dynamic> provision),
@@ -4542,18 +4622,18 @@ class _$AuditEventDetail implements AuditEventDetail {
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
             List<dynamic> agent,
             List<dynamic> entity,
-            List<dynamic> signature),
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
@@ -4598,13 +4678,13 @@ class _$AuditEventDetail implements AuditEventDetail {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
+        List<CodeableConcept> purposeOfEvent,
         List<dynamic> agent,
         AuditEventSource source,
         List<dynamic> entity),
@@ -4613,7 +4693,7 @@ class _$AuditEventDetail implements AuditEventDetail {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -4622,7 +4702,7 @@ class _$AuditEventDetail implements AuditEventDetail {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -4635,7 +4715,7 @@ class _$AuditEventDetail implements AuditEventDetail {
         List<dynamic> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -4644,7 +4724,7 @@ class _$AuditEventDetail implements AuditEventDetail {
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
@@ -4666,10 +4746,10 @@ class _$AuditEventDetail implements AuditEventDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
         List<dynamic> performer,
@@ -4700,11 +4780,11 @@ class _$AuditEventDetail implements AuditEventDetail {
         ConsentProvisionType type,
         Period period,
         List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        @JsonKey(name: 'class') List<dynamic> clas,
-        List<dynamic> code,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        @JsonKey(name: 'class') List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
         List<dynamic> data,
         List<dynamic> provision),
@@ -4736,17 +4816,17 @@ class _$AuditEventDetail implements AuditEventDetail {
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
         List<dynamic> agent,
         List<dynamic> entity,
-        List<dynamic> signature),
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
@@ -4876,10 +4956,10 @@ abstract class $ConsentCopyWith<$Res> implements $SecurityCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       ConsentStatus status,
       CodeableConcept scope,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Reference patient,
       FhirDateTime dateTime,
       List<dynamic> performer,
@@ -4890,6 +4970,10 @@ abstract class $ConsentCopyWith<$Res> implements $SecurityCopyWith<$Res> {
       CodeableConcept policyRule,
       List<dynamic> verification,
       ConsentProvision provision});
+
+  $CodeableConceptCopyWith<$Res> get scope;
+  $AttachmentCopyWith<$Res> get sourceAttachment;
+  $CodeableConceptCopyWith<$Res> get policyRule;
 }
 
 class _$ConsentCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -4947,11 +5031,12 @@ class _$ConsentCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as ConsentStatus,
       scope: scope == freezed ? _value.scope : scope as CodeableConcept,
-      category:
-          category == freezed ? _value.category : category as List<dynamic>,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
       patient: patient == freezed ? _value.patient : patient as Reference,
       dateTime:
           dateTime == freezed ? _value.dateTime : dateTime as FhirDateTime,
@@ -4977,6 +5062,36 @@ class _$ConsentCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
           ? _value.provision
           : provision as ConsentProvision,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get scope {
+    if (_value.scope == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.scope, (value) {
+      return _then(_value.copyWith(scope: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get sourceAttachment {
+    if (_value.sourceAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.sourceAttachment, (value) {
+      return _then(_value.copyWith(sourceAttachment: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get policyRule {
+    if (_value.policyRule == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.policyRule, (value) {
+      return _then(_value.copyWith(policyRule: value));
+    });
   }
 }
 
@@ -5030,13 +5145,13 @@ class _$Consent implements Consent {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final ConsentStatus status;
   @override
   final CodeableConcept scope;
   @override
-  final List<dynamic> category;
+  final List<CodeableConcept> category;
   @override
   final Reference patient;
   @override
@@ -5178,13 +5293,13 @@ class _$Consent implements Consent {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
+            List<CodeableConcept> purposeOfEvent,
             List<dynamic> agent,
             AuditEventSource source,
             List<dynamic> entity),
@@ -5194,7 +5309,7 @@ class _$Consent implements Consent {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -5203,7 +5318,7 @@ class _$Consent implements Consent {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
@@ -5218,7 +5333,7 @@ class _$Consent implements Consent {
             List<dynamic> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
@@ -5228,7 +5343,7 @@ class _$Consent implements Consent {
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
@@ -5252,10 +5367,10 @@ class _$Consent implements Consent {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
             List<dynamic> performer,
@@ -5289,11 +5404,11 @@ class _$Consent implements Consent {
             ConsentProvisionType type,
             Period period,
             List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            @JsonKey(name: 'class') List<dynamic> clas,
-            List<dynamic> code,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            @JsonKey(name: 'class') List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
             List<dynamic> data,
             List<dynamic> provision),
@@ -5328,18 +5443,18 @@ class _$Consent implements Consent {
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
             List<dynamic> agent,
             List<dynamic> entity,
-            List<dynamic> signature),
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
@@ -5406,13 +5521,13 @@ class _$Consent implements Consent {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
+        List<CodeableConcept> purposeOfEvent,
         List<dynamic> agent,
         AuditEventSource source,
         List<dynamic> entity),
@@ -5421,7 +5536,7 @@ class _$Consent implements Consent {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -5430,7 +5545,7 @@ class _$Consent implements Consent {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -5443,7 +5558,7 @@ class _$Consent implements Consent {
         List<dynamic> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -5452,7 +5567,7 @@ class _$Consent implements Consent {
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
@@ -5474,10 +5589,10 @@ class _$Consent implements Consent {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
         List<dynamic> performer,
@@ -5508,11 +5623,11 @@ class _$Consent implements Consent {
         ConsentProvisionType type,
         Period period,
         List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        @JsonKey(name: 'class') List<dynamic> clas,
-        List<dynamic> code,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        @JsonKey(name: 'class') List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
         List<dynamic> data,
         List<dynamic> provision),
@@ -5544,17 +5659,17 @@ class _$Consent implements Consent {
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
         List<dynamic> agent,
         List<dynamic> entity,
-        List<dynamic> signature),
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
@@ -5677,10 +5792,10 @@ abstract class Consent implements Security {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       ConsentStatus status,
       CodeableConcept scope,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Reference patient,
       FhirDateTime dateTime,
       List<dynamic> performer,
@@ -5706,10 +5821,10 @@ abstract class Consent implements Security {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   ConsentStatus get status;
   CodeableConcept get scope;
-  List<dynamic> get category;
+  List<CodeableConcept> get category;
   Reference get patient;
   FhirDateTime get dateTime;
   List<dynamic> get performer;
@@ -5844,13 +5959,13 @@ class _$ConsentPolicy implements ConsentPolicy {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
+            List<CodeableConcept> purposeOfEvent,
             List<dynamic> agent,
             AuditEventSource source,
             List<dynamic> entity),
@@ -5860,7 +5975,7 @@ class _$ConsentPolicy implements ConsentPolicy {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -5869,7 +5984,7 @@ class _$ConsentPolicy implements ConsentPolicy {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
@@ -5884,7 +5999,7 @@ class _$ConsentPolicy implements ConsentPolicy {
             List<dynamic> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
@@ -5894,7 +6009,7 @@ class _$ConsentPolicy implements ConsentPolicy {
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
@@ -5918,10 +6033,10 @@ class _$ConsentPolicy implements ConsentPolicy {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
             List<dynamic> performer,
@@ -5955,11 +6070,11 @@ class _$ConsentPolicy implements ConsentPolicy {
             ConsentProvisionType type,
             Period period,
             List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            @JsonKey(name: 'class') List<dynamic> clas,
-            List<dynamic> code,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            @JsonKey(name: 'class') List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
             List<dynamic> data,
             List<dynamic> provision),
@@ -5994,18 +6109,18 @@ class _$ConsentPolicy implements ConsentPolicy {
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
             List<dynamic> agent,
             List<dynamic> entity,
-            List<dynamic> signature),
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
@@ -6049,13 +6164,13 @@ class _$ConsentPolicy implements ConsentPolicy {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
+        List<CodeableConcept> purposeOfEvent,
         List<dynamic> agent,
         AuditEventSource source,
         List<dynamic> entity),
@@ -6064,7 +6179,7 @@ class _$ConsentPolicy implements ConsentPolicy {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -6073,7 +6188,7 @@ class _$ConsentPolicy implements ConsentPolicy {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -6086,7 +6201,7 @@ class _$ConsentPolicy implements ConsentPolicy {
         List<dynamic> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -6095,7 +6210,7 @@ class _$ConsentPolicy implements ConsentPolicy {
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
@@ -6117,10 +6232,10 @@ class _$ConsentPolicy implements ConsentPolicy {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
         List<dynamic> performer,
@@ -6151,11 +6266,11 @@ class _$ConsentPolicy implements ConsentPolicy {
         ConsentProvisionType type,
         Period period,
         List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        @JsonKey(name: 'class') List<dynamic> clas,
-        List<dynamic> code,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        @JsonKey(name: 'class') List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
         List<dynamic> data,
         List<dynamic> provision),
@@ -6187,17 +6302,17 @@ class _$ConsentPolicy implements ConsentPolicy {
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
         List<dynamic> agent,
         List<dynamic> entity,
-        List<dynamic> signature),
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
@@ -6447,13 +6562,13 @@ class _$ConsentVerification implements ConsentVerification {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
+            List<CodeableConcept> purposeOfEvent,
             List<dynamic> agent,
             AuditEventSource source,
             List<dynamic> entity),
@@ -6463,7 +6578,7 @@ class _$ConsentVerification implements ConsentVerification {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -6472,7 +6587,7 @@ class _$ConsentVerification implements ConsentVerification {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
@@ -6487,7 +6602,7 @@ class _$ConsentVerification implements ConsentVerification {
             List<dynamic> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
@@ -6497,7 +6612,7 @@ class _$ConsentVerification implements ConsentVerification {
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
@@ -6521,10 +6636,10 @@ class _$ConsentVerification implements ConsentVerification {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
             List<dynamic> performer,
@@ -6558,11 +6673,11 @@ class _$ConsentVerification implements ConsentVerification {
             ConsentProvisionType type,
             Period period,
             List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            @JsonKey(name: 'class') List<dynamic> clas,
-            List<dynamic> code,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            @JsonKey(name: 'class') List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
             List<dynamic> data,
             List<dynamic> provision),
@@ -6597,18 +6712,18 @@ class _$ConsentVerification implements ConsentVerification {
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
             List<dynamic> agent,
             List<dynamic> entity,
-            List<dynamic> signature),
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
@@ -6653,13 +6768,13 @@ class _$ConsentVerification implements ConsentVerification {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
+        List<CodeableConcept> purposeOfEvent,
         List<dynamic> agent,
         AuditEventSource source,
         List<dynamic> entity),
@@ -6668,7 +6783,7 @@ class _$ConsentVerification implements ConsentVerification {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -6677,7 +6792,7 @@ class _$ConsentVerification implements ConsentVerification {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -6690,7 +6805,7 @@ class _$ConsentVerification implements ConsentVerification {
         List<dynamic> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -6699,7 +6814,7 @@ class _$ConsentVerification implements ConsentVerification {
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
@@ -6721,10 +6836,10 @@ class _$ConsentVerification implements ConsentVerification {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
         List<dynamic> performer,
@@ -6755,11 +6870,11 @@ class _$ConsentVerification implements ConsentVerification {
         ConsentProvisionType type,
         Period period,
         List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        @JsonKey(name: 'class') List<dynamic> clas,
-        List<dynamic> code,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        @JsonKey(name: 'class') List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
         List<dynamic> data,
         List<dynamic> provision),
@@ -6791,17 +6906,17 @@ class _$ConsentVerification implements ConsentVerification {
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
         List<dynamic> agent,
         List<dynamic> entity,
-        List<dynamic> signature),
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
@@ -6930,14 +7045,17 @@ abstract class $ConsentProvisionCopyWith<$Res>
       ConsentProvisionType type,
       Period period,
       List<dynamic> actor,
-      List<dynamic> action,
-      List<dynamic> securityLabel,
-      List<dynamic> purpose,
-      @JsonKey(name: 'class') List<dynamic> clas,
-      List<dynamic> code,
+      List<CodeableConcept> action,
+      List<Coding> securityLabel,
+      List<Coding> purpose,
+      @JsonKey(name: 'class') List<Coding> clas,
+      List<CodeableConcept> code,
       Period dataPeriod,
       List<dynamic> data,
       List<dynamic> provision});
+
+  $PeriodCopyWith<$Res> get period;
+  $PeriodCopyWith<$Res> get dataPeriod;
 }
 
 class _$ConsentProvisionCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -6977,19 +7095,40 @@ class _$ConsentProvisionCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as ConsentProvisionType,
       period: period == freezed ? _value.period : period as Period,
       actor: actor == freezed ? _value.actor : actor as List<dynamic>,
-      action: action == freezed ? _value.action : action as List<dynamic>,
+      action:
+          action == freezed ? _value.action : action as List<CodeableConcept>,
       securityLabel: securityLabel == freezed
           ? _value.securityLabel
-          : securityLabel as List<dynamic>,
-      purpose: purpose == freezed ? _value.purpose : purpose as List<dynamic>,
-      clas: clas == freezed ? _value.clas : clas as List<dynamic>,
-      code: code == freezed ? _value.code : code as List<dynamic>,
+          : securityLabel as List<Coding>,
+      purpose: purpose == freezed ? _value.purpose : purpose as List<Coding>,
+      clas: clas == freezed ? _value.clas : clas as List<Coding>,
+      code: code == freezed ? _value.code : code as List<CodeableConcept>,
       dataPeriod:
           dataPeriod == freezed ? _value.dataPeriod : dataPeriod as Period,
       data: data == freezed ? _value.data : data as List<dynamic>,
       provision:
           provision == freezed ? _value.provision : provision as List<dynamic>,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get dataPeriod {
+    if (_value.dataPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.dataPeriod, (value) {
+      return _then(_value.copyWith(dataPeriod: value));
+    });
   }
 }
 
@@ -7028,16 +7167,16 @@ class _$ConsentProvision implements ConsentProvision {
   @override
   final List<dynamic> actor;
   @override
-  final List<dynamic> action;
+  final List<CodeableConcept> action;
   @override
-  final List<dynamic> securityLabel;
+  final List<Coding> securityLabel;
   @override
-  final List<dynamic> purpose;
+  final List<Coding> purpose;
   @override
   @JsonKey(name: 'class')
-  final List<dynamic> clas;
+  final List<Coding> clas;
   @override
-  final List<dynamic> code;
+  final List<CodeableConcept> code;
   @override
   final Period dataPeriod;
   @override
@@ -7127,13 +7266,13 @@ class _$ConsentProvision implements ConsentProvision {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
+            List<CodeableConcept> purposeOfEvent,
             List<dynamic> agent,
             AuditEventSource source,
             List<dynamic> entity),
@@ -7143,7 +7282,7 @@ class _$ConsentProvision implements ConsentProvision {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -7152,7 +7291,7 @@ class _$ConsentProvision implements ConsentProvision {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
@@ -7167,7 +7306,7 @@ class _$ConsentProvision implements ConsentProvision {
             List<dynamic> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
@@ -7177,7 +7316,7 @@ class _$ConsentProvision implements ConsentProvision {
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
@@ -7201,10 +7340,10 @@ class _$ConsentProvision implements ConsentProvision {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
             List<dynamic> performer,
@@ -7238,11 +7377,11 @@ class _$ConsentProvision implements ConsentProvision {
             ConsentProvisionType type,
             Period period,
             List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            @JsonKey(name: 'class') List<dynamic> clas,
-            List<dynamic> code,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            @JsonKey(name: 'class') List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
             List<dynamic> data,
             List<dynamic> provision),
@@ -7277,18 +7416,18 @@ class _$ConsentProvision implements ConsentProvision {
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
             List<dynamic> agent,
             List<dynamic> entity,
-            List<dynamic> signature),
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
@@ -7346,13 +7485,13 @@ class _$ConsentProvision implements ConsentProvision {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
+        List<CodeableConcept> purposeOfEvent,
         List<dynamic> agent,
         AuditEventSource source,
         List<dynamic> entity),
@@ -7361,7 +7500,7 @@ class _$ConsentProvision implements ConsentProvision {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -7370,7 +7509,7 @@ class _$ConsentProvision implements ConsentProvision {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -7383,7 +7522,7 @@ class _$ConsentProvision implements ConsentProvision {
         List<dynamic> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -7392,7 +7531,7 @@ class _$ConsentProvision implements ConsentProvision {
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
@@ -7414,10 +7553,10 @@ class _$ConsentProvision implements ConsentProvision {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
         List<dynamic> performer,
@@ -7448,11 +7587,11 @@ class _$ConsentProvision implements ConsentProvision {
         ConsentProvisionType type,
         Period period,
         List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        @JsonKey(name: 'class') List<dynamic> clas,
-        List<dynamic> code,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        @JsonKey(name: 'class') List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
         List<dynamic> data,
         List<dynamic> provision),
@@ -7484,17 +7623,17 @@ class _$ConsentProvision implements ConsentProvision {
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
         List<dynamic> agent,
         List<dynamic> entity,
-        List<dynamic> signature),
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
@@ -7606,11 +7745,11 @@ abstract class ConsentProvision implements Security {
       ConsentProvisionType type,
       Period period,
       List<dynamic> actor,
-      List<dynamic> action,
-      List<dynamic> securityLabel,
-      List<dynamic> purpose,
-      @JsonKey(name: 'class') List<dynamic> clas,
-      List<dynamic> code,
+      List<CodeableConcept> action,
+      List<Coding> securityLabel,
+      List<Coding> purpose,
+      @JsonKey(name: 'class') List<Coding> clas,
+      List<CodeableConcept> code,
       Period dataPeriod,
       List<dynamic> data,
       List<dynamic> provision}) = _$ConsentProvision;
@@ -7627,12 +7766,12 @@ abstract class ConsentProvision implements Security {
   ConsentProvisionType get type;
   Period get period;
   List<dynamic> get actor;
-  List<dynamic> get action;
-  List<dynamic> get securityLabel;
-  List<dynamic> get purpose;
+  List<CodeableConcept> get action;
+  List<Coding> get securityLabel;
+  List<Coding> get purpose;
   @JsonKey(name: 'class')
-  List<dynamic> get clas;
-  List<dynamic> get code;
+  List<Coding> get clas;
+  List<CodeableConcept> get code;
   Period get dataPeriod;
   List<dynamic> get data;
   List<dynamic> get provision;
@@ -7651,6 +7790,8 @@ abstract class $ConsentActorCopyWith<$Res> implements $SecurityCopyWith<$Res> {
       List<dynamic> modifierExtension,
       CodeableConcept role,
       Reference reference});
+
+  $CodeableConceptCopyWith<$Res> get role;
 }
 
 class _$ConsentActorCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -7682,6 +7823,16 @@ class _$ConsentActorCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
       reference:
           reference == freezed ? _value.reference : reference as Reference,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get role {
+    if (_value.role == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
+      return _then(_value.copyWith(role: value));
+    });
   }
 }
 
@@ -7761,13 +7912,13 @@ class _$ConsentActor implements ConsentActor {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
+            List<CodeableConcept> purposeOfEvent,
             List<dynamic> agent,
             AuditEventSource source,
             List<dynamic> entity),
@@ -7777,7 +7928,7 @@ class _$ConsentActor implements ConsentActor {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -7786,7 +7937,7 @@ class _$ConsentActor implements ConsentActor {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
@@ -7801,7 +7952,7 @@ class _$ConsentActor implements ConsentActor {
             List<dynamic> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
@@ -7811,7 +7962,7 @@ class _$ConsentActor implements ConsentActor {
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
@@ -7835,10 +7986,10 @@ class _$ConsentActor implements ConsentActor {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
             List<dynamic> performer,
@@ -7872,11 +8023,11 @@ class _$ConsentActor implements ConsentActor {
             ConsentProvisionType type,
             Period period,
             List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            @JsonKey(name: 'class') List<dynamic> clas,
-            List<dynamic> code,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            @JsonKey(name: 'class') List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
             List<dynamic> data,
             List<dynamic> provision),
@@ -7911,18 +8062,18 @@ class _$ConsentActor implements ConsentActor {
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
             List<dynamic> agent,
             List<dynamic> entity,
-            List<dynamic> signature),
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
@@ -7966,13 +8117,13 @@ class _$ConsentActor implements ConsentActor {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
+        List<CodeableConcept> purposeOfEvent,
         List<dynamic> agent,
         AuditEventSource source,
         List<dynamic> entity),
@@ -7981,7 +8132,7 @@ class _$ConsentActor implements ConsentActor {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -7990,7 +8141,7 @@ class _$ConsentActor implements ConsentActor {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -8003,7 +8154,7 @@ class _$ConsentActor implements ConsentActor {
         List<dynamic> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -8012,7 +8163,7 @@ class _$ConsentActor implements ConsentActor {
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
@@ -8034,10 +8185,10 @@ class _$ConsentActor implements ConsentActor {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
         List<dynamic> performer,
@@ -8068,11 +8219,11 @@ class _$ConsentActor implements ConsentActor {
         ConsentProvisionType type,
         Period period,
         List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        @JsonKey(name: 'class') List<dynamic> clas,
-        List<dynamic> code,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        @JsonKey(name: 'class') List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
         List<dynamic> data,
         List<dynamic> provision),
@@ -8104,17 +8255,17 @@ class _$ConsentActor implements ConsentActor {
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
         List<dynamic> agent,
         List<dynamic> entity,
-        List<dynamic> signature),
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
@@ -8350,13 +8501,13 @@ class _$ConsentData implements ConsentData {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
+            List<CodeableConcept> purposeOfEvent,
             List<dynamic> agent,
             AuditEventSource source,
             List<dynamic> entity),
@@ -8366,7 +8517,7 @@ class _$ConsentData implements ConsentData {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -8375,7 +8526,7 @@ class _$ConsentData implements ConsentData {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
@@ -8390,7 +8541,7 @@ class _$ConsentData implements ConsentData {
             List<dynamic> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
@@ -8400,7 +8551,7 @@ class _$ConsentData implements ConsentData {
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
@@ -8424,10 +8575,10 @@ class _$ConsentData implements ConsentData {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
             List<dynamic> performer,
@@ -8461,11 +8612,11 @@ class _$ConsentData implements ConsentData {
             ConsentProvisionType type,
             Period period,
             List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            @JsonKey(name: 'class') List<dynamic> clas,
-            List<dynamic> code,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            @JsonKey(name: 'class') List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
             List<dynamic> data,
             List<dynamic> provision),
@@ -8500,18 +8651,18 @@ class _$ConsentData implements ConsentData {
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
             List<dynamic> agent,
             List<dynamic> entity,
-            List<dynamic> signature),
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
@@ -8556,13 +8707,13 @@ class _$ConsentData implements ConsentData {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
+        List<CodeableConcept> purposeOfEvent,
         List<dynamic> agent,
         AuditEventSource source,
         List<dynamic> entity),
@@ -8571,7 +8722,7 @@ class _$ConsentData implements ConsentData {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -8580,7 +8731,7 @@ class _$ConsentData implements ConsentData {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -8593,7 +8744,7 @@ class _$ConsentData implements ConsentData {
         List<dynamic> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -8602,7 +8753,7 @@ class _$ConsentData implements ConsentData {
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
@@ -8624,10 +8775,10 @@ class _$ConsentData implements ConsentData {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
         List<dynamic> performer,
@@ -8658,11 +8809,11 @@ class _$ConsentData implements ConsentData {
         ConsentProvisionType type,
         Period period,
         List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        @JsonKey(name: 'class') List<dynamic> clas,
-        List<dynamic> code,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        @JsonKey(name: 'class') List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
         List<dynamic> data,
         List<dynamic> provision),
@@ -8694,17 +8845,17 @@ class _$ConsentData implements ConsentData {
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
         List<dynamic> agent,
         List<dynamic> entity,
-        List<dynamic> signature),
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
@@ -8838,11 +8989,14 @@ abstract class $ProvenanceCopyWith<$Res> implements $SecurityCopyWith<$Res> {
       Instant recorded,
       List<FhirUri> policy,
       Reference location,
-      List<dynamic> reason,
+      List<CodeableConcept> reason,
       CodeableConcept activity,
       List<dynamic> agent,
       List<dynamic> entity,
-      List<dynamic> signature});
+      List<Signature> signature});
+
+  $PeriodCopyWith<$Res> get occurredPeriod;
+  $CodeableConceptCopyWith<$Res> get activity;
 }
 
 class _$ProvenanceCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -8905,14 +9059,36 @@ class _$ProvenanceCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
       recorded: recorded == freezed ? _value.recorded : recorded as Instant,
       policy: policy == freezed ? _value.policy : policy as List<FhirUri>,
       location: location == freezed ? _value.location : location as Reference,
-      reason: reason == freezed ? _value.reason : reason as List<dynamic>,
+      reason:
+          reason == freezed ? _value.reason : reason as List<CodeableConcept>,
       activity:
           activity == freezed ? _value.activity : activity as CodeableConcept,
       agent: agent == freezed ? _value.agent : agent as List<dynamic>,
       entity: entity == freezed ? _value.entity : entity as List<dynamic>,
-      signature:
-          signature == freezed ? _value.signature : signature as List<dynamic>,
+      signature: signature == freezed
+          ? _value.signature
+          : signature as List<Signature>,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get occurredPeriod {
+    if (_value.occurredPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.occurredPeriod, (value) {
+      return _then(_value.copyWith(occurredPeriod: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get activity {
+    if (_value.activity == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.activity, (value) {
+      return _then(_value.copyWith(activity: value));
+    });
   }
 }
 
@@ -8975,7 +9151,7 @@ class _$Provenance implements Provenance {
   @override
   final Reference location;
   @override
-  final List<dynamic> reason;
+  final List<CodeableConcept> reason;
   @override
   final CodeableConcept activity;
   @override
@@ -8983,7 +9159,7 @@ class _$Provenance implements Provenance {
   @override
   final List<dynamic> entity;
   @override
-  final List<dynamic> signature;
+  final List<Signature> signature;
 
   @override
   String toString() {
@@ -9091,13 +9267,13 @@ class _$Provenance implements Provenance {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
+            List<CodeableConcept> purposeOfEvent,
             List<dynamic> agent,
             AuditEventSource source,
             List<dynamic> entity),
@@ -9107,7 +9283,7 @@ class _$Provenance implements Provenance {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -9116,7 +9292,7 @@ class _$Provenance implements Provenance {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
@@ -9131,7 +9307,7 @@ class _$Provenance implements Provenance {
             List<dynamic> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
@@ -9141,7 +9317,7 @@ class _$Provenance implements Provenance {
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
@@ -9165,10 +9341,10 @@ class _$Provenance implements Provenance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
             List<dynamic> performer,
@@ -9202,11 +9378,11 @@ class _$Provenance implements Provenance {
             ConsentProvisionType type,
             Period period,
             List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            @JsonKey(name: 'class') List<dynamic> clas,
-            List<dynamic> code,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            @JsonKey(name: 'class') List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
             List<dynamic> data,
             List<dynamic> provision),
@@ -9241,18 +9417,18 @@ class _$Provenance implements Provenance {
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
             List<dynamic> agent,
             List<dynamic> entity,
-            List<dynamic> signature),
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
@@ -9316,13 +9492,13 @@ class _$Provenance implements Provenance {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
+        List<CodeableConcept> purposeOfEvent,
         List<dynamic> agent,
         AuditEventSource source,
         List<dynamic> entity),
@@ -9331,7 +9507,7 @@ class _$Provenance implements Provenance {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -9340,7 +9516,7 @@ class _$Provenance implements Provenance {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -9353,7 +9529,7 @@ class _$Provenance implements Provenance {
         List<dynamic> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -9362,7 +9538,7 @@ class _$Provenance implements Provenance {
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
@@ -9384,10 +9560,10 @@ class _$Provenance implements Provenance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
         List<dynamic> performer,
@@ -9418,11 +9594,11 @@ class _$Provenance implements Provenance {
         ConsentProvisionType type,
         Period period,
         List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        @JsonKey(name: 'class') List<dynamic> clas,
-        List<dynamic> code,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        @JsonKey(name: 'class') List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
         List<dynamic> data,
         List<dynamic> provision),
@@ -9454,17 +9630,17 @@ class _$Provenance implements Provenance {
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
         List<dynamic> agent,
         List<dynamic> entity,
-        List<dynamic> signature),
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
@@ -9590,11 +9766,11 @@ abstract class Provenance implements Security {
       Instant recorded,
       List<FhirUri> policy,
       Reference location,
-      List<dynamic> reason,
+      List<CodeableConcept> reason,
       CodeableConcept activity,
       List<dynamic> agent,
       List<dynamic> entity,
-      List<dynamic> signature}) = _$Provenance;
+      List<Signature> signature}) = _$Provenance;
 
   factory Provenance.fromJson(Map<String, dynamic> json) =
       _$Provenance.fromJson;
@@ -9617,11 +9793,11 @@ abstract class Provenance implements Security {
   Instant get recorded;
   List<FhirUri> get policy;
   Reference get location;
-  List<dynamic> get reason;
+  List<CodeableConcept> get reason;
   CodeableConcept get activity;
   List<dynamic> get agent;
   List<dynamic> get entity;
-  List<dynamic> get signature;
+  List<Signature> get signature;
   @override
   $ProvenanceCopyWith<Provenance> get copyWith;
 }
@@ -9637,9 +9813,11 @@ abstract class $ProvenanceAgentCopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept type,
-      List<dynamic> role,
+      List<CodeableConcept> role,
       Reference who,
       Reference onBehalfOf});
+
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 class _$ProvenanceAgentCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
@@ -9670,11 +9848,21 @@ class _$ProvenanceAgentCopyWithImpl<$Res> extends _$SecurityCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      role: role == freezed ? _value.role : role as List<dynamic>,
+      role: role == freezed ? _value.role : role as List<CodeableConcept>,
       who: who == freezed ? _value.who : who as Reference,
       onBehalfOf:
           onBehalfOf == freezed ? _value.onBehalfOf : onBehalfOf as Reference,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
   }
 }
 
@@ -9702,7 +9890,7 @@ class _$ProvenanceAgent implements ProvenanceAgent {
   @override
   final CodeableConcept type;
   @override
-  final List<dynamic> role;
+  final List<CodeableConcept> role;
   @override
   final Reference who;
   @override
@@ -9766,13 +9954,13 @@ class _$ProvenanceAgent implements ProvenanceAgent {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
+            List<CodeableConcept> purposeOfEvent,
             List<dynamic> agent,
             AuditEventSource source,
             List<dynamic> entity),
@@ -9782,7 +9970,7 @@ class _$ProvenanceAgent implements ProvenanceAgent {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -9791,7 +9979,7 @@ class _$ProvenanceAgent implements ProvenanceAgent {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
@@ -9806,7 +9994,7 @@ class _$ProvenanceAgent implements ProvenanceAgent {
             List<dynamic> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
@@ -9816,7 +10004,7 @@ class _$ProvenanceAgent implements ProvenanceAgent {
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
@@ -9840,10 +10028,10 @@ class _$ProvenanceAgent implements ProvenanceAgent {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
             List<dynamic> performer,
@@ -9877,11 +10065,11 @@ class _$ProvenanceAgent implements ProvenanceAgent {
             ConsentProvisionType type,
             Period period,
             List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            @JsonKey(name: 'class') List<dynamic> clas,
-            List<dynamic> code,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            @JsonKey(name: 'class') List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
             List<dynamic> data,
             List<dynamic> provision),
@@ -9916,18 +10104,18 @@ class _$ProvenanceAgent implements ProvenanceAgent {
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
             List<dynamic> agent,
             List<dynamic> entity,
-            List<dynamic> signature),
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
@@ -9972,13 +10160,13 @@ class _$ProvenanceAgent implements ProvenanceAgent {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
+        List<CodeableConcept> purposeOfEvent,
         List<dynamic> agent,
         AuditEventSource source,
         List<dynamic> entity),
@@ -9987,7 +10175,7 @@ class _$ProvenanceAgent implements ProvenanceAgent {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -9996,7 +10184,7 @@ class _$ProvenanceAgent implements ProvenanceAgent {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -10009,7 +10197,7 @@ class _$ProvenanceAgent implements ProvenanceAgent {
         List<dynamic> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -10018,7 +10206,7 @@ class _$ProvenanceAgent implements ProvenanceAgent {
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
@@ -10040,10 +10228,10 @@ class _$ProvenanceAgent implements ProvenanceAgent {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
         List<dynamic> performer,
@@ -10074,11 +10262,11 @@ class _$ProvenanceAgent implements ProvenanceAgent {
         ConsentProvisionType type,
         Period period,
         List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        @JsonKey(name: 'class') List<dynamic> clas,
-        List<dynamic> code,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        @JsonKey(name: 'class') List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
         List<dynamic> data,
         List<dynamic> provision),
@@ -10110,17 +10298,17 @@ class _$ProvenanceAgent implements ProvenanceAgent {
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
         List<dynamic> agent,
         List<dynamic> entity,
-        List<dynamic> signature),
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(
@@ -10216,7 +10404,7 @@ abstract class ProvenanceAgent implements Security {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept type,
-      List<dynamic> role,
+      List<CodeableConcept> role,
       Reference who,
       Reference onBehalfOf}) = _$ProvenanceAgent;
 
@@ -10230,7 +10418,7 @@ abstract class ProvenanceAgent implements Security {
   @override
   List<dynamic> get modifierExtension;
   CodeableConcept get type;
-  List<dynamic> get role;
+  List<CodeableConcept> get role;
   Reference get who;
   Reference get onBehalfOf;
   @override
@@ -10366,13 +10554,13 @@ class _$ProvenanceEntity implements ProvenanceEntity {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Coding type,
-            List<dynamic> subtype,
+            List<Coding> subtype,
             AuditEventAction action,
             Period period,
             Instant recorded,
             AuditEventOutcome outcome,
             String outcomeDesc,
-            List<dynamic> purposeOfEvent,
+            List<CodeableConcept> purposeOfEvent,
             List<dynamic> agent,
             AuditEventSource source,
             List<dynamic> entity),
@@ -10382,7 +10570,7 @@ class _$ProvenanceEntity implements ProvenanceEntity {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             String altId,
             String name,
@@ -10391,7 +10579,7 @@ class _$ProvenanceEntity implements ProvenanceEntity {
             List<FhirUri> policy,
             Coding media,
             AuditEventNetwork network,
-            List<dynamic> purposeOfUse),
+            List<CodeableConcept> purposeOfUse),
     @required
         Result auditEventNetwork(
             String id,
@@ -10406,7 +10594,7 @@ class _$ProvenanceEntity implements ProvenanceEntity {
             List<dynamic> modifierExtension,
             String site,
             Reference observer,
-            List<dynamic> type),
+            List<Coding> type),
     @required
         Result auditEventEntity(
             String id,
@@ -10416,7 +10604,7 @@ class _$ProvenanceEntity implements ProvenanceEntity {
             Coding type,
             Coding role,
             Coding lifecycle,
-            List<dynamic> securityLabel,
+            List<Coding> securityLabel,
             String name,
             String description,
             Base64Binary query,
@@ -10440,10 +10628,10 @@ class _$ProvenanceEntity implements ProvenanceEntity {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ConsentStatus status,
             CodeableConcept scope,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference patient,
             FhirDateTime dateTime,
             List<dynamic> performer,
@@ -10477,11 +10665,11 @@ class _$ProvenanceEntity implements ProvenanceEntity {
             ConsentProvisionType type,
             Period period,
             List<dynamic> actor,
-            List<dynamic> action,
-            List<dynamic> securityLabel,
-            List<dynamic> purpose,
-            @JsonKey(name: 'class') List<dynamic> clas,
-            List<dynamic> code,
+            List<CodeableConcept> action,
+            List<Coding> securityLabel,
+            List<Coding> purpose,
+            @JsonKey(name: 'class') List<Coding> clas,
+            List<CodeableConcept> code,
             Period dataPeriod,
             List<dynamic> data,
             List<dynamic> provision),
@@ -10516,18 +10704,18 @@ class _$ProvenanceEntity implements ProvenanceEntity {
             Instant recorded,
             List<FhirUri> policy,
             Reference location,
-            List<dynamic> reason,
+            List<CodeableConcept> reason,
             CodeableConcept activity,
             List<dynamic> agent,
             List<dynamic> entity,
-            List<dynamic> signature),
+            List<Signature> signature),
     @required
         Result provenanceAgent(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference who,
             Reference onBehalfOf),
     @required
@@ -10572,13 +10760,13 @@ class _$ProvenanceEntity implements ProvenanceEntity {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Coding type,
-        List<dynamic> subtype,
+        List<Coding> subtype,
         AuditEventAction action,
         Period period,
         Instant recorded,
         AuditEventOutcome outcome,
         String outcomeDesc,
-        List<dynamic> purposeOfEvent,
+        List<CodeableConcept> purposeOfEvent,
         List<dynamic> agent,
         AuditEventSource source,
         List<dynamic> entity),
@@ -10587,7 +10775,7 @@ class _$ProvenanceEntity implements ProvenanceEntity {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         String altId,
         String name,
@@ -10596,7 +10784,7 @@ class _$ProvenanceEntity implements ProvenanceEntity {
         List<FhirUri> policy,
         Coding media,
         AuditEventNetwork network,
-        List<dynamic> purposeOfUse),
+        List<CodeableConcept> purposeOfUse),
     Result auditEventNetwork(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -10609,7 +10797,7 @@ class _$ProvenanceEntity implements ProvenanceEntity {
         List<dynamic> modifierExtension,
         String site,
         Reference observer,
-        List<dynamic> type),
+        List<Coding> type),
     Result auditEventEntity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -10618,7 +10806,7 @@ class _$ProvenanceEntity implements ProvenanceEntity {
         Coding type,
         Coding role,
         Coding lifecycle,
-        List<dynamic> securityLabel,
+        List<Coding> securityLabel,
         String name,
         String description,
         Base64Binary query,
@@ -10640,10 +10828,10 @@ class _$ProvenanceEntity implements ProvenanceEntity {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ConsentStatus status,
         CodeableConcept scope,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference patient,
         FhirDateTime dateTime,
         List<dynamic> performer,
@@ -10674,11 +10862,11 @@ class _$ProvenanceEntity implements ProvenanceEntity {
         ConsentProvisionType type,
         Period period,
         List<dynamic> actor,
-        List<dynamic> action,
-        List<dynamic> securityLabel,
-        List<dynamic> purpose,
-        @JsonKey(name: 'class') List<dynamic> clas,
-        List<dynamic> code,
+        List<CodeableConcept> action,
+        List<Coding> securityLabel,
+        List<Coding> purpose,
+        @JsonKey(name: 'class') List<Coding> clas,
+        List<CodeableConcept> code,
         Period dataPeriod,
         List<dynamic> data,
         List<dynamic> provision),
@@ -10710,17 +10898,17 @@ class _$ProvenanceEntity implements ProvenanceEntity {
         Instant recorded,
         List<FhirUri> policy,
         Reference location,
-        List<dynamic> reason,
+        List<CodeableConcept> reason,
         CodeableConcept activity,
         List<dynamic> agent,
         List<dynamic> entity,
-        List<dynamic> signature),
+        List<Signature> signature),
     Result provenanceAgent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference who,
         Reference onBehalfOf),
     Result provenanceEntity(

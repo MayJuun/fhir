@@ -68,6 +68,11 @@ abstract class $MarketingStatusCopyWith<$Res> {
       CodeableConcept status,
       Period dateRange,
       FhirDateTime restoreDate});
+
+  $CodeableConceptCopyWith<$Res> get country;
+  $CodeableConceptCopyWith<$Res> get jurisdiction;
+  $CodeableConceptCopyWith<$Res> get status;
+  $PeriodCopyWith<$Res> get dateRange;
 }
 
 class _$MarketingStatusCopyWithImpl<$Res>
@@ -108,6 +113,46 @@ class _$MarketingStatusCopyWithImpl<$Res>
           : restoreDate as FhirDateTime,
     ));
   }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get country {
+    if (_value.country == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.country, (value) {
+      return _then(_value.copyWith(country: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get jurisdiction {
+    if (_value.jurisdiction == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.jurisdiction, (value) {
+      return _then(_value.copyWith(jurisdiction: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get status {
+    if (_value.status == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.status, (value) {
+      return _then(_value.copyWith(status: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get dateRange {
+    if (_value.dateRange == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.dateRange, (value) {
+      return _then(_value.copyWith(dateRange: value));
+    });
+  }
 }
 
 abstract class _$MarketingStatusCopyWith<$Res>
@@ -125,6 +170,15 @@ abstract class _$MarketingStatusCopyWith<$Res>
       CodeableConcept status,
       Period dateRange,
       FhirDateTime restoreDate});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get country;
+  @override
+  $CodeableConceptCopyWith<$Res> get jurisdiction;
+  @override
+  $CodeableConceptCopyWith<$Res> get status;
+  @override
+  $PeriodCopyWith<$Res> get dateRange;
 }
 
 class __$MarketingStatusCopyWithImpl<$Res>
@@ -352,6 +406,12 @@ abstract class $PopulationCopyWith<$Res> {
       CodeableConcept gender,
       CodeableConcept race,
       CodeableConcept physiologicalCondition});
+
+  $RangeCopyWith<$Res> get ageRange;
+  $CodeableConceptCopyWith<$Res> get ageCodeableConcept;
+  $CodeableConceptCopyWith<$Res> get gender;
+  $CodeableConceptCopyWith<$Res> get race;
+  $CodeableConceptCopyWith<$Res> get physiologicalCondition;
 }
 
 class _$PopulationCopyWithImpl<$Res> implements $PopulationCopyWith<$Res> {
@@ -391,6 +451,57 @@ class _$PopulationCopyWithImpl<$Res> implements $PopulationCopyWith<$Res> {
           : physiologicalCondition as CodeableConcept,
     ));
   }
+
+  @override
+  $RangeCopyWith<$Res> get ageRange {
+    if (_value.ageRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.ageRange, (value) {
+      return _then(_value.copyWith(ageRange: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get ageCodeableConcept {
+    if (_value.ageCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.ageCodeableConcept, (value) {
+      return _then(_value.copyWith(ageCodeableConcept: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get gender {
+    if (_value.gender == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.gender, (value) {
+      return _then(_value.copyWith(gender: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get race {
+    if (_value.race == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.race, (value) {
+      return _then(_value.copyWith(race: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get physiologicalCondition {
+    if (_value.physiologicalCondition == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.physiologicalCondition,
+        (value) {
+      return _then(_value.copyWith(physiologicalCondition: value));
+    });
+  }
 }
 
 abstract class _$PopulationCopyWith<$Res> implements $PopulationCopyWith<$Res> {
@@ -407,6 +518,17 @@ abstract class _$PopulationCopyWith<$Res> implements $PopulationCopyWith<$Res> {
       CodeableConcept gender,
       CodeableConcept race,
       CodeableConcept physiologicalCondition});
+
+  @override
+  $RangeCopyWith<$Res> get ageRange;
+  @override
+  $CodeableConceptCopyWith<$Res> get ageCodeableConcept;
+  @override
+  $CodeableConceptCopyWith<$Res> get gender;
+  @override
+  $CodeableConceptCopyWith<$Res> get race;
+  @override
+  $CodeableConceptCopyWith<$Res> get physiologicalCondition;
 }
 
 class __$PopulationCopyWithImpl<$Res> extends _$PopulationCopyWithImpl<$Res>
@@ -592,7 +714,7 @@ class _$ProdCharacteristicTearOff {
       String shape,
       List<String> color,
       List<String> imprint,
-      List<dynamic> image,
+      List<Attachment> image,
       CodeableConcept scoring}) {
     return _ProdCharacteristic(
       id: id,
@@ -630,7 +752,7 @@ mixin _$ProdCharacteristic {
   String get shape;
   List<String> get color;
   List<String> get imprint;
-  List<dynamic> get image;
+  List<Attachment> get image;
   CodeableConcept get scoring;
 
   Map<String, dynamic> toJson();
@@ -654,8 +776,16 @@ abstract class $ProdCharacteristicCopyWith<$Res> {
       String shape,
       List<String> color,
       List<String> imprint,
-      List<dynamic> image,
+      List<Attachment> image,
       CodeableConcept scoring});
+
+  $QuantityCopyWith<$Res> get height;
+  $QuantityCopyWith<$Res> get width;
+  $QuantityCopyWith<$Res> get depth;
+  $QuantityCopyWith<$Res> get weight;
+  $QuantityCopyWith<$Res> get nominalVolume;
+  $QuantityCopyWith<$Res> get externalDiameter;
+  $CodeableConceptCopyWith<$Res> get scoring;
 }
 
 class _$ProdCharacteristicCopyWithImpl<$Res>
@@ -704,9 +834,79 @@ class _$ProdCharacteristicCopyWithImpl<$Res>
       shape: shape == freezed ? _value.shape : shape as String,
       color: color == freezed ? _value.color : color as List<String>,
       imprint: imprint == freezed ? _value.imprint : imprint as List<String>,
-      image: image == freezed ? _value.image : image as List<dynamic>,
+      image: image == freezed ? _value.image : image as List<Attachment>,
       scoring: scoring == freezed ? _value.scoring : scoring as CodeableConcept,
     ));
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get height {
+    if (_value.height == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.height, (value) {
+      return _then(_value.copyWith(height: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get width {
+    if (_value.width == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.width, (value) {
+      return _then(_value.copyWith(width: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get depth {
+    if (_value.depth == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.depth, (value) {
+      return _then(_value.copyWith(depth: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get weight {
+    if (_value.weight == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.weight, (value) {
+      return _then(_value.copyWith(weight: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get nominalVolume {
+    if (_value.nominalVolume == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.nominalVolume, (value) {
+      return _then(_value.copyWith(nominalVolume: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get externalDiameter {
+    if (_value.externalDiameter == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.externalDiameter, (value) {
+      return _then(_value.copyWith(externalDiameter: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get scoring {
+    if (_value.scoring == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.scoring, (value) {
+      return _then(_value.copyWith(scoring: value));
+    });
   }
 }
 
@@ -729,8 +929,23 @@ abstract class _$ProdCharacteristicCopyWith<$Res>
       String shape,
       List<String> color,
       List<String> imprint,
-      List<dynamic> image,
+      List<Attachment> image,
       CodeableConcept scoring});
+
+  @override
+  $QuantityCopyWith<$Res> get height;
+  @override
+  $QuantityCopyWith<$Res> get width;
+  @override
+  $QuantityCopyWith<$Res> get depth;
+  @override
+  $QuantityCopyWith<$Res> get weight;
+  @override
+  $QuantityCopyWith<$Res> get nominalVolume;
+  @override
+  $QuantityCopyWith<$Res> get externalDiameter;
+  @override
+  $CodeableConceptCopyWith<$Res> get scoring;
 }
 
 class __$ProdCharacteristicCopyWithImpl<$Res>
@@ -781,7 +996,7 @@ class __$ProdCharacteristicCopyWithImpl<$Res>
       shape: shape == freezed ? _value.shape : shape as String,
       color: color == freezed ? _value.color : color as List<String>,
       imprint: imprint == freezed ? _value.imprint : imprint as List<String>,
-      image: image == freezed ? _value.image : image as List<dynamic>,
+      image: image == freezed ? _value.image : image as List<Attachment>,
       scoring: scoring == freezed ? _value.scoring : scoring as CodeableConcept,
     ));
   }
@@ -834,7 +1049,7 @@ class _$_ProdCharacteristic implements _ProdCharacteristic {
   @override
   final List<String> imprint;
   @override
-  final List<dynamic> image;
+  final List<Attachment> image;
   @override
   final CodeableConcept scoring;
 
@@ -924,7 +1139,7 @@ abstract class _ProdCharacteristic implements ProdCharacteristic {
       String shape,
       List<String> color,
       List<String> imprint,
-      List<dynamic> image,
+      List<Attachment> image,
       CodeableConcept scoring}) = _$_ProdCharacteristic;
 
   factory _ProdCharacteristic.fromJson(Map<String, dynamic> json) =
@@ -956,7 +1171,7 @@ abstract class _ProdCharacteristic implements ProdCharacteristic {
   @override
   List<String> get imprint;
   @override
-  List<dynamic> get image;
+  List<Attachment> get image;
   @override
   CodeableConcept get scoring;
   @override
@@ -977,7 +1192,7 @@ class _$ProductShelfLifeTearOff {
       Identifier identifier,
       CodeableConcept type,
       Quantity period,
-      List<dynamic> specialPrecautionsForStorage}) {
+      List<CodeableConcept> specialPrecautionsForStorage}) {
     return _ProductShelfLife(
       id: id,
       fhirExtension: fhirExtension,
@@ -1001,7 +1216,7 @@ mixin _$ProductShelfLife {
   Identifier get identifier;
   CodeableConcept get type;
   Quantity get period;
-  List<dynamic> get specialPrecautionsForStorage;
+  List<CodeableConcept> get specialPrecautionsForStorage;
 
   Map<String, dynamic> toJson();
   $ProductShelfLifeCopyWith<ProductShelfLife> get copyWith;
@@ -1018,7 +1233,11 @@ abstract class $ProductShelfLifeCopyWith<$Res> {
       Identifier identifier,
       CodeableConcept type,
       Quantity period,
-      List<dynamic> specialPrecautionsForStorage});
+      List<CodeableConcept> specialPrecautionsForStorage});
+
+  $IdentifierCopyWith<$Res> get identifier;
+  $CodeableConceptCopyWith<$Res> get type;
+  $QuantityCopyWith<$Res> get period;
 }
 
 class _$ProductShelfLifeCopyWithImpl<$Res>
@@ -1053,8 +1272,38 @@ class _$ProductShelfLifeCopyWithImpl<$Res>
       period: period == freezed ? _value.period : period as Quantity,
       specialPrecautionsForStorage: specialPrecautionsForStorage == freezed
           ? _value.specialPrecautionsForStorage
-          : specialPrecautionsForStorage as List<dynamic>,
+          : specialPrecautionsForStorage as List<CodeableConcept>,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
   }
 }
 
@@ -1071,7 +1320,14 @@ abstract class _$ProductShelfLifeCopyWith<$Res>
       Identifier identifier,
       CodeableConcept type,
       Quantity period,
-      List<dynamic> specialPrecautionsForStorage});
+      List<CodeableConcept> specialPrecautionsForStorage});
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier;
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $QuantityCopyWith<$Res> get period;
 }
 
 class __$ProductShelfLifeCopyWithImpl<$Res>
@@ -1108,7 +1364,7 @@ class __$ProductShelfLifeCopyWithImpl<$Res>
       period: period == freezed ? _value.period : period as Quantity,
       specialPrecautionsForStorage: specialPrecautionsForStorage == freezed
           ? _value.specialPrecautionsForStorage
-          : specialPrecautionsForStorage as List<dynamic>,
+          : specialPrecautionsForStorage as List<CodeableConcept>,
     ));
   }
 }
@@ -1141,7 +1397,7 @@ class _$_ProductShelfLife implements _ProductShelfLife {
   @override
   final Quantity period;
   @override
-  final List<dynamic> specialPrecautionsForStorage;
+  final List<CodeableConcept> specialPrecautionsForStorage;
 
   @override
   String toString() {
@@ -1197,13 +1453,14 @@ class _$_ProductShelfLife implements _ProductShelfLife {
 
 abstract class _ProductShelfLife implements ProductShelfLife {
   factory _ProductShelfLife(
-      {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
-      Identifier identifier,
-      CodeableConcept type,
-      Quantity period,
-      List<dynamic> specialPrecautionsForStorage}) = _$_ProductShelfLife;
+          {String id,
+          @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+          List<dynamic> modifierExtension,
+          Identifier identifier,
+          CodeableConcept type,
+          Quantity period,
+          List<CodeableConcept> specialPrecautionsForStorage}) =
+      _$_ProductShelfLife;
 
   factory _ProductShelfLife.fromJson(Map<String, dynamic> json) =
       _$_ProductShelfLife.fromJson;
@@ -1222,7 +1479,7 @@ abstract class _ProductShelfLife implements ProductShelfLife {
   @override
   Quantity get period;
   @override
-  List<dynamic> get specialPrecautionsForStorage;
+  List<CodeableConcept> get specialPrecautionsForStorage;
   @override
   _$ProductShelfLifeCopyWith<_ProductShelfLife> get copyWith;
 }
@@ -1292,6 +1549,9 @@ abstract class $SubstanceAmountCopyWith<$Res> {
       String amountText,
       SubstanceAmountReferenceRange referenceRange});
 
+  $QuantityCopyWith<$Res> get amountQuantity;
+  $RangeCopyWith<$Res> get amountRange;
+  $CodeableConceptCopyWith<$Res> get amountType;
   $SubstanceAmountReferenceRangeCopyWith<$Res> get referenceRange;
 }
 
@@ -1343,6 +1603,36 @@ class _$SubstanceAmountCopyWithImpl<$Res>
   }
 
   @override
+  $QuantityCopyWith<$Res> get amountQuantity {
+    if (_value.amountQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.amountQuantity, (value) {
+      return _then(_value.copyWith(amountQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get amountRange {
+    if (_value.amountRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.amountRange, (value) {
+      return _then(_value.copyWith(amountRange: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get amountType {
+    if (_value.amountType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.amountType, (value) {
+      return _then(_value.copyWith(amountType: value));
+    });
+  }
+
+  @override
   $SubstanceAmountReferenceRangeCopyWith<$Res> get referenceRange {
     if (_value.referenceRange == null) {
       return null;
@@ -1371,6 +1661,12 @@ abstract class _$SubstanceAmountCopyWith<$Res>
       String amountText,
       SubstanceAmountReferenceRange referenceRange});
 
+  @override
+  $QuantityCopyWith<$Res> get amountQuantity;
+  @override
+  $RangeCopyWith<$Res> get amountRange;
+  @override
+  $CodeableConceptCopyWith<$Res> get amountType;
   @override
   $SubstanceAmountReferenceRangeCopyWith<$Res> get referenceRange;
 }
@@ -1610,6 +1906,9 @@ abstract class $SubstanceAmountReferenceRangeCopyWith<$Res> {
       List<dynamic> modifierExtension,
       Quantity lowLimit,
       Quantity highLimit});
+
+  $QuantityCopyWith<$Res> get lowLimit;
+  $QuantityCopyWith<$Res> get highLimit;
 }
 
 class _$SubstanceAmountReferenceRangeCopyWithImpl<$Res>
@@ -1641,6 +1940,26 @@ class _$SubstanceAmountReferenceRangeCopyWithImpl<$Res>
           highLimit == freezed ? _value.highLimit : highLimit as Quantity,
     ));
   }
+
+  @override
+  $QuantityCopyWith<$Res> get lowLimit {
+    if (_value.lowLimit == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.lowLimit, (value) {
+      return _then(_value.copyWith(lowLimit: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get highLimit {
+    if (_value.highLimit == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.highLimit, (value) {
+      return _then(_value.copyWith(highLimit: value));
+    });
+  }
 }
 
 abstract class _$SubstanceAmountReferenceRangeCopyWith<$Res>
@@ -1656,6 +1975,11 @@ abstract class _$SubstanceAmountReferenceRangeCopyWith<$Res>
       List<dynamic> modifierExtension,
       Quantity lowLimit,
       Quantity highLimit});
+
+  @override
+  $QuantityCopyWith<$Res> get lowLimit;
+  @override
+  $QuantityCopyWith<$Res> get highLimit;
 }
 
 class __$SubstanceAmountReferenceRangeCopyWithImpl<$Res>

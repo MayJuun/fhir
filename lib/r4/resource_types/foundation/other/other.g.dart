@@ -630,7 +630,10 @@ _$Subscription _$_$SubscriptionFromJson(Map<String, dynamic> json) {
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
     status: _$enumDecodeNullable(_$SubscriptionStatusEnumMap, json['status']),
-    contact: json['contact'] as List,
+    contact: (json['contact'] as List)
+        ?.map((e) =>
+            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     end: json['end'] == null ? null : Instant.fromJson(json['end'] as String),
     reason: json['reason'] as String,
     criteria: json['criteria'] as String,
@@ -1001,7 +1004,10 @@ _$Basic _$_$BasicFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),

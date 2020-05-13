@@ -38,26 +38,26 @@ class _$PublicHealthAndResearchTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String title,
       List<dynamic> protocol,
       List<dynamic> partOf,
       ResearchStudyStatus status,
       CodeableConcept primaryPurposeType,
       CodeableConcept phase,
-      List<dynamic> focus,
-      List<dynamic> condition,
+      List<CodeableConcept> focus,
+      List<CodeableConcept> condition,
       List<dynamic> contact,
       List<dynamic> relatedArtifact,
-      List<dynamic> keyword,
-      List<dynamic> location,
+      List<CodeableConcept> keyword,
+      List<CodeableConcept> location,
       Markdown description,
       List<dynamic> enrollment,
       Reference sponsor,
       Reference principalInvestigator,
       List<dynamic> site,
       CodeableConcept reasonStopped,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> arm,
       List<dynamic> objective}) {
     return ResearchStudy(
@@ -136,7 +136,7 @@ class _$PublicHealthAndResearchTearOff {
       Narrative text,
       List<dynamic> contained,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       ResearchSubjectStatus status,
       Period period,
       Reference study,
@@ -184,26 +184,26 @@ mixin _$PublicHealthAndResearch {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String title,
             List<dynamic> protocol,
             List<dynamic> partOf,
             ResearchStudyStatus status,
             CodeableConcept primaryPurposeType,
             CodeableConcept phase,
-            List<dynamic> focus,
-            List<dynamic> condition,
+            List<CodeableConcept> focus,
+            List<CodeableConcept> condition,
             List<dynamic> contact,
             List<dynamic> relatedArtifact,
-            List<dynamic> keyword,
-            List<dynamic> location,
+            List<CodeableConcept> keyword,
+            List<CodeableConcept> location,
             Markdown description,
             List<dynamic> enrollment,
             Reference sponsor,
             Reference principalInvestigator,
             List<dynamic> site,
             CodeableConcept reasonStopped,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> arm,
             List<dynamic> objective),
     @required
@@ -231,7 +231,7 @@ mixin _$PublicHealthAndResearch {
             Narrative text,
             List<dynamic> contained,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ResearchSubjectStatus status,
             Period period,
             Reference study,
@@ -252,26 +252,26 @@ mixin _$PublicHealthAndResearch {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String title,
         List<dynamic> protocol,
         List<dynamic> partOf,
         ResearchStudyStatus status,
         CodeableConcept primaryPurposeType,
         CodeableConcept phase,
-        List<dynamic> focus,
-        List<dynamic> condition,
+        List<CodeableConcept> focus,
+        List<CodeableConcept> condition,
         List<dynamic> contact,
         List<dynamic> relatedArtifact,
-        List<dynamic> keyword,
-        List<dynamic> location,
+        List<CodeableConcept> keyword,
+        List<CodeableConcept> location,
         Markdown description,
         List<dynamic> enrollment,
         Reference sponsor,
         Reference principalInvestigator,
         List<dynamic> site,
         CodeableConcept reasonStopped,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> arm,
         List<dynamic> objective),
     Result researchStudyArm(
@@ -296,7 +296,7 @@ mixin _$PublicHealthAndResearch {
         Narrative text,
         List<dynamic> contained,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ResearchSubjectStatus status,
         Period period,
         Reference study,
@@ -368,28 +368,32 @@ abstract class $ResearchStudyCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String title,
       List<dynamic> protocol,
       List<dynamic> partOf,
       ResearchStudyStatus status,
       CodeableConcept primaryPurposeType,
       CodeableConcept phase,
-      List<dynamic> focus,
-      List<dynamic> condition,
+      List<CodeableConcept> focus,
+      List<CodeableConcept> condition,
       List<dynamic> contact,
       List<dynamic> relatedArtifact,
-      List<dynamic> keyword,
-      List<dynamic> location,
+      List<CodeableConcept> keyword,
+      List<CodeableConcept> location,
       Markdown description,
       List<dynamic> enrollment,
       Reference sponsor,
       Reference principalInvestigator,
       List<dynamic> site,
       CodeableConcept reasonStopped,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> arm,
       List<dynamic> objective});
+
+  $CodeableConceptCopyWith<$Res> get primaryPurposeType;
+  $CodeableConceptCopyWith<$Res> get phase;
+  $CodeableConceptCopyWith<$Res> get reasonStopped;
 }
 
 class _$ResearchStudyCopyWithImpl<$Res>
@@ -457,7 +461,7 @@ class _$ResearchStudyCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       title: title == freezed ? _value.title : title as String,
       protocol:
           protocol == freezed ? _value.protocol : protocol as List<dynamic>,
@@ -467,16 +471,20 @@ class _$ResearchStudyCopyWithImpl<$Res>
           ? _value.primaryPurposeType
           : primaryPurposeType as CodeableConcept,
       phase: phase == freezed ? _value.phase : phase as CodeableConcept,
-      focus: focus == freezed ? _value.focus : focus as List<dynamic>,
-      condition:
-          condition == freezed ? _value.condition : condition as List<dynamic>,
+      focus: focus == freezed ? _value.focus : focus as List<CodeableConcept>,
+      condition: condition == freezed
+          ? _value.condition
+          : condition as List<CodeableConcept>,
       contact: contact == freezed ? _value.contact : contact as List<dynamic>,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
           : relatedArtifact as List<dynamic>,
-      keyword: keyword == freezed ? _value.keyword : keyword as List<dynamic>,
-      location:
-          location == freezed ? _value.location : location as List<dynamic>,
+      keyword: keyword == freezed
+          ? _value.keyword
+          : keyword as List<CodeableConcept>,
+      location: location == freezed
+          ? _value.location
+          : location as List<CodeableConcept>,
       description:
           description == freezed ? _value.description : description as Markdown,
       enrollment: enrollment == freezed
@@ -490,11 +498,41 @@ class _$ResearchStudyCopyWithImpl<$Res>
       reasonStopped: reasonStopped == freezed
           ? _value.reasonStopped
           : reasonStopped as CodeableConcept,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
       arm: arm == freezed ? _value.arm : arm as List<dynamic>,
       objective:
           objective == freezed ? _value.objective : objective as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get primaryPurposeType {
+    if (_value.primaryPurposeType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.primaryPurposeType, (value) {
+      return _then(_value.copyWith(primaryPurposeType: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get phase {
+    if (_value.phase == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.phase, (value) {
+      return _then(_value.copyWith(phase: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get reasonStopped {
+    if (_value.reasonStopped == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.reasonStopped, (value) {
+      return _then(_value.copyWith(reasonStopped: value));
+    });
   }
 }
 
@@ -556,7 +594,7 @@ class _$ResearchStudy implements ResearchStudy {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final String title;
   @override
@@ -570,17 +608,17 @@ class _$ResearchStudy implements ResearchStudy {
   @override
   final CodeableConcept phase;
   @override
-  final List<dynamic> focus;
+  final List<CodeableConcept> focus;
   @override
-  final List<dynamic> condition;
+  final List<CodeableConcept> condition;
   @override
   final List<dynamic> contact;
   @override
   final List<dynamic> relatedArtifact;
   @override
-  final List<dynamic> keyword;
+  final List<CodeableConcept> keyword;
   @override
-  final List<dynamic> location;
+  final List<CodeableConcept> location;
   @override
   final Markdown description;
   @override
@@ -594,7 +632,7 @@ class _$ResearchStudy implements ResearchStudy {
   @override
   final CodeableConcept reasonStopped;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
   @override
   final List<dynamic> arm;
   @override
@@ -738,26 +776,26 @@ class _$ResearchStudy implements ResearchStudy {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String title,
             List<dynamic> protocol,
             List<dynamic> partOf,
             ResearchStudyStatus status,
             CodeableConcept primaryPurposeType,
             CodeableConcept phase,
-            List<dynamic> focus,
-            List<dynamic> condition,
+            List<CodeableConcept> focus,
+            List<CodeableConcept> condition,
             List<dynamic> contact,
             List<dynamic> relatedArtifact,
-            List<dynamic> keyword,
-            List<dynamic> location,
+            List<CodeableConcept> keyword,
+            List<CodeableConcept> location,
             Markdown description,
             List<dynamic> enrollment,
             Reference sponsor,
             Reference principalInvestigator,
             List<dynamic> site,
             CodeableConcept reasonStopped,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> arm,
             List<dynamic> objective),
     @required
@@ -785,7 +823,7 @@ class _$ResearchStudy implements ResearchStudy {
             Narrative text,
             List<dynamic> contained,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ResearchSubjectStatus status,
             Period period,
             Reference study,
@@ -845,26 +883,26 @@ class _$ResearchStudy implements ResearchStudy {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String title,
         List<dynamic> protocol,
         List<dynamic> partOf,
         ResearchStudyStatus status,
         CodeableConcept primaryPurposeType,
         CodeableConcept phase,
-        List<dynamic> focus,
-        List<dynamic> condition,
+        List<CodeableConcept> focus,
+        List<CodeableConcept> condition,
         List<dynamic> contact,
         List<dynamic> relatedArtifact,
-        List<dynamic> keyword,
-        List<dynamic> location,
+        List<CodeableConcept> keyword,
+        List<CodeableConcept> location,
         Markdown description,
         List<dynamic> enrollment,
         Reference sponsor,
         Reference principalInvestigator,
         List<dynamic> site,
         CodeableConcept reasonStopped,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> arm,
         List<dynamic> objective),
     Result researchStudyArm(
@@ -889,7 +927,7 @@ class _$ResearchStudy implements ResearchStudy {
         Narrative text,
         List<dynamic> contained,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ResearchSubjectStatus status,
         Period period,
         Reference study,
@@ -985,26 +1023,26 @@ abstract class ResearchStudy implements PublicHealthAndResearch {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String title,
       List<dynamic> protocol,
       List<dynamic> partOf,
       ResearchStudyStatus status,
       CodeableConcept primaryPurposeType,
       CodeableConcept phase,
-      List<dynamic> focus,
-      List<dynamic> condition,
+      List<CodeableConcept> focus,
+      List<CodeableConcept> condition,
       List<dynamic> contact,
       List<dynamic> relatedArtifact,
-      List<dynamic> keyword,
-      List<dynamic> location,
+      List<CodeableConcept> keyword,
+      List<CodeableConcept> location,
       Markdown description,
       List<dynamic> enrollment,
       Reference sponsor,
       Reference principalInvestigator,
       List<dynamic> site,
       CodeableConcept reasonStopped,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> arm,
       List<dynamic> objective}) = _$ResearchStudy;
 
@@ -1022,26 +1060,26 @@ abstract class ResearchStudy implements PublicHealthAndResearch {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   String get title;
   List<dynamic> get protocol;
   List<dynamic> get partOf;
   ResearchStudyStatus get status;
   CodeableConcept get primaryPurposeType;
   CodeableConcept get phase;
-  List<dynamic> get focus;
-  List<dynamic> get condition;
+  List<CodeableConcept> get focus;
+  List<CodeableConcept> get condition;
   List<dynamic> get contact;
   List<dynamic> get relatedArtifact;
-  List<dynamic> get keyword;
-  List<dynamic> get location;
+  List<CodeableConcept> get keyword;
+  List<CodeableConcept> get location;
   Markdown get description;
   List<dynamic> get enrollment;
   Reference get sponsor;
   Reference get principalInvestigator;
   List<dynamic> get site;
   CodeableConcept get reasonStopped;
-  List<dynamic> get note;
+  List<Annotation> get note;
   List<dynamic> get arm;
   List<dynamic> get objective;
   @override
@@ -1061,6 +1099,8 @@ abstract class $ResearchStudyArmCopyWith<$Res>
       String name,
       CodeableConcept type,
       String description});
+
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 class _$ResearchStudyArmCopyWithImpl<$Res>
@@ -1095,6 +1135,16 @@ class _$ResearchStudyArmCopyWithImpl<$Res>
       description:
           description == freezed ? _value.description : description as String,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
   }
 }
 
@@ -1179,26 +1229,26 @@ class _$ResearchStudyArm implements ResearchStudyArm {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String title,
             List<dynamic> protocol,
             List<dynamic> partOf,
             ResearchStudyStatus status,
             CodeableConcept primaryPurposeType,
             CodeableConcept phase,
-            List<dynamic> focus,
-            List<dynamic> condition,
+            List<CodeableConcept> focus,
+            List<CodeableConcept> condition,
             List<dynamic> contact,
             List<dynamic> relatedArtifact,
-            List<dynamic> keyword,
-            List<dynamic> location,
+            List<CodeableConcept> keyword,
+            List<CodeableConcept> location,
             Markdown description,
             List<dynamic> enrollment,
             Reference sponsor,
             Reference principalInvestigator,
             List<dynamic> site,
             CodeableConcept reasonStopped,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> arm,
             List<dynamic> objective),
     @required
@@ -1226,7 +1276,7 @@ class _$ResearchStudyArm implements ResearchStudyArm {
             Narrative text,
             List<dynamic> contained,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ResearchSubjectStatus status,
             Period period,
             Reference study,
@@ -1256,26 +1306,26 @@ class _$ResearchStudyArm implements ResearchStudyArm {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String title,
         List<dynamic> protocol,
         List<dynamic> partOf,
         ResearchStudyStatus status,
         CodeableConcept primaryPurposeType,
         CodeableConcept phase,
-        List<dynamic> focus,
-        List<dynamic> condition,
+        List<CodeableConcept> focus,
+        List<CodeableConcept> condition,
         List<dynamic> contact,
         List<dynamic> relatedArtifact,
-        List<dynamic> keyword,
-        List<dynamic> location,
+        List<CodeableConcept> keyword,
+        List<CodeableConcept> location,
         Markdown description,
         List<dynamic> enrollment,
         Reference sponsor,
         Reference principalInvestigator,
         List<dynamic> site,
         CodeableConcept reasonStopped,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> arm,
         List<dynamic> objective),
     Result researchStudyArm(
@@ -1300,7 +1350,7 @@ class _$ResearchStudyArm implements ResearchStudyArm {
         Narrative text,
         List<dynamic> contained,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ResearchSubjectStatus status,
         Period period,
         Reference study,
@@ -1392,6 +1442,8 @@ abstract class $ResearchStudyObjectiveCopyWith<$Res>
       List<dynamic> modifierExtension,
       String name,
       CodeableConcept type});
+
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 class _$ResearchStudyObjectiveCopyWithImpl<$Res>
@@ -1423,6 +1475,16 @@ class _$ResearchStudyObjectiveCopyWithImpl<$Res>
       name: name == freezed ? _value.name : name as String,
       type: type == freezed ? _value.type : type as CodeableConcept,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
   }
 }
 
@@ -1501,26 +1563,26 @@ class _$ResearchStudyObjective implements ResearchStudyObjective {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String title,
             List<dynamic> protocol,
             List<dynamic> partOf,
             ResearchStudyStatus status,
             CodeableConcept primaryPurposeType,
             CodeableConcept phase,
-            List<dynamic> focus,
-            List<dynamic> condition,
+            List<CodeableConcept> focus,
+            List<CodeableConcept> condition,
             List<dynamic> contact,
             List<dynamic> relatedArtifact,
-            List<dynamic> keyword,
-            List<dynamic> location,
+            List<CodeableConcept> keyword,
+            List<CodeableConcept> location,
             Markdown description,
             List<dynamic> enrollment,
             Reference sponsor,
             Reference principalInvestigator,
             List<dynamic> site,
             CodeableConcept reasonStopped,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> arm,
             List<dynamic> objective),
     @required
@@ -1548,7 +1610,7 @@ class _$ResearchStudyObjective implements ResearchStudyObjective {
             Narrative text,
             List<dynamic> contained,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ResearchSubjectStatus status,
             Period period,
             Reference study,
@@ -1578,26 +1640,26 @@ class _$ResearchStudyObjective implements ResearchStudyObjective {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String title,
         List<dynamic> protocol,
         List<dynamic> partOf,
         ResearchStudyStatus status,
         CodeableConcept primaryPurposeType,
         CodeableConcept phase,
-        List<dynamic> focus,
-        List<dynamic> condition,
+        List<CodeableConcept> focus,
+        List<CodeableConcept> condition,
         List<dynamic> contact,
         List<dynamic> relatedArtifact,
-        List<dynamic> keyword,
-        List<dynamic> location,
+        List<CodeableConcept> keyword,
+        List<CodeableConcept> location,
         Markdown description,
         List<dynamic> enrollment,
         Reference sponsor,
         Reference principalInvestigator,
         List<dynamic> site,
         CodeableConcept reasonStopped,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> arm,
         List<dynamic> objective),
     Result researchStudyArm(
@@ -1622,7 +1684,7 @@ class _$ResearchStudyObjective implements ResearchStudyObjective {
         Narrative text,
         List<dynamic> contained,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ResearchSubjectStatus status,
         Period period,
         Reference study,
@@ -1715,7 +1777,7 @@ abstract class $ResearchSubjectCopyWith<$Res>
       Narrative text,
       List<dynamic> contained,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       ResearchSubjectStatus status,
       Period period,
       Reference study,
@@ -1723,6 +1785,8 @@ abstract class $ResearchSubjectCopyWith<$Res>
       String assignedArm,
       String actualArm,
       Reference consent});
+
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$ResearchSubjectCopyWithImpl<$Res>
@@ -1772,7 +1836,7 @@ class _$ResearchSubjectCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status:
           status == freezed ? _value.status : status as ResearchSubjectStatus,
       period: period == freezed ? _value.period : period as Period,
@@ -1784,6 +1848,16 @@ class _$ResearchSubjectCopyWithImpl<$Res>
       actualArm: actualArm == freezed ? _value.actualArm : actualArm as String,
       consent: consent == freezed ? _value.consent : consent as Reference,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
   }
 }
 
@@ -1827,7 +1901,7 @@ class _$ResearchSubject implements ResearchSubject {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final ResearchSubjectStatus status;
   @override
@@ -1933,26 +2007,26 @@ class _$ResearchSubject implements ResearchSubject {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String title,
             List<dynamic> protocol,
             List<dynamic> partOf,
             ResearchStudyStatus status,
             CodeableConcept primaryPurposeType,
             CodeableConcept phase,
-            List<dynamic> focus,
-            List<dynamic> condition,
+            List<CodeableConcept> focus,
+            List<CodeableConcept> condition,
             List<dynamic> contact,
             List<dynamic> relatedArtifact,
-            List<dynamic> keyword,
-            List<dynamic> location,
+            List<CodeableConcept> keyword,
+            List<CodeableConcept> location,
             Markdown description,
             List<dynamic> enrollment,
             Reference sponsor,
             Reference principalInvestigator,
             List<dynamic> site,
             CodeableConcept reasonStopped,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> arm,
             List<dynamic> objective),
     @required
@@ -1980,7 +2054,7 @@ class _$ResearchSubject implements ResearchSubject {
             Narrative text,
             List<dynamic> contained,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ResearchSubjectStatus status,
             Period period,
             Reference study,
@@ -2025,26 +2099,26 @@ class _$ResearchSubject implements ResearchSubject {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String title,
         List<dynamic> protocol,
         List<dynamic> partOf,
         ResearchStudyStatus status,
         CodeableConcept primaryPurposeType,
         CodeableConcept phase,
-        List<dynamic> focus,
-        List<dynamic> condition,
+        List<CodeableConcept> focus,
+        List<CodeableConcept> condition,
         List<dynamic> contact,
         List<dynamic> relatedArtifact,
-        List<dynamic> keyword,
-        List<dynamic> location,
+        List<CodeableConcept> keyword,
+        List<CodeableConcept> location,
         Markdown description,
         List<dynamic> enrollment,
         Reference sponsor,
         Reference principalInvestigator,
         List<dynamic> site,
         CodeableConcept reasonStopped,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> arm,
         List<dynamic> objective),
     Result researchStudyArm(
@@ -2069,7 +2143,7 @@ class _$ResearchSubject implements ResearchSubject {
         Narrative text,
         List<dynamic> contained,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ResearchSubjectStatus status,
         Period period,
         Reference study,
@@ -2149,7 +2223,7 @@ abstract class ResearchSubject implements PublicHealthAndResearch {
       Narrative text,
       List<dynamic> contained,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       ResearchSubjectStatus status,
       Period period,
       Reference study,
@@ -2170,7 +2244,7 @@ abstract class ResearchSubject implements PublicHealthAndResearch {
   List<dynamic> get contained;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   ResearchSubjectStatus get status;
   Period get period;
   Reference get study;

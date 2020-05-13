@@ -110,7 +110,7 @@ class _$QualityReportingAndTestingTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       MeasureReportStatus status,
       MeasureReportType type,
       Canonical measure,
@@ -185,7 +185,7 @@ class _$QualityReportingAndTestingTearOff {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> code,
+      List<CodeableConcept> code,
       List<dynamic> stratum}) {
     return MeasureReportStratifier(
       id: id,
@@ -258,7 +258,7 @@ class _$QualityReportingAndTestingTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -272,14 +272,14 @@ class _$QualityReportingAndTestingTearOff {
       List<dynamic> contact,
       Markdown description,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown purpose,
       String usage,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -289,7 +289,7 @@ class _$QualityReportingAndTestingTearOff {
       Markdown disclaimer,
       CodeableConcept scoring,
       CodeableConcept compositeScoring,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       String riskAdjustment,
       String rateAggregation,
       Markdown rationale,
@@ -431,7 +431,7 @@ class _$QualityReportingAndTestingTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept code,
-      List<dynamic> usage,
+      List<CodeableConcept> usage,
       String description,
       Expression criteria}) {
     return MeasureSupplementalData(
@@ -467,7 +467,7 @@ class _$QualityReportingAndTestingTearOff {
       List<dynamic> contact,
       Markdown description,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown purpose,
       Markdown copyright,
       List<dynamic> origin,
@@ -1052,7 +1052,7 @@ mixin _$QualityReportingAndTesting {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -1085,7 +1085,7 @@ mixin _$QualityReportingAndTesting {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -1123,7 +1123,7 @@ mixin _$QualityReportingAndTesting {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -1137,14 +1137,14 @@ mixin _$QualityReportingAndTesting {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -1154,7 +1154,7 @@ mixin _$QualityReportingAndTesting {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -1204,7 +1204,7 @@ mixin _$QualityReportingAndTesting {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -1230,7 +1230,7 @@ mixin _$QualityReportingAndTesting {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -1499,7 +1499,7 @@ mixin _$QualityReportingAndTesting {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -1529,7 +1529,7 @@ mixin _$QualityReportingAndTesting {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -1563,7 +1563,7 @@ mixin _$QualityReportingAndTesting {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -1577,14 +1577,14 @@ mixin _$QualityReportingAndTesting {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -1594,7 +1594,7 @@ mixin _$QualityReportingAndTesting {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -1639,7 +1639,7 @@ mixin _$QualityReportingAndTesting {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -1664,7 +1664,7 @@ mixin _$QualityReportingAndTesting {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -2036,7 +2036,7 @@ abstract class $MeasureReportCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       MeasureReportStatus status,
       MeasureReportType type,
       Canonical measure,
@@ -2047,6 +2047,9 @@ abstract class $MeasureReportCopyWith<$Res>
       CodeableConcept improvementNotation,
       List<dynamic> group,
       List<dynamic> evaluatedResource});
+
+  $PeriodCopyWith<$Res> get period;
+  $CodeableConceptCopyWith<$Res> get improvementNotation;
 }
 
 class _$MeasureReportCopyWithImpl<$Res>
@@ -2103,7 +2106,7 @@ class _$MeasureReportCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as MeasureReportStatus,
       type: type == freezed ? _value.type : type as MeasureReportType,
       measure: measure == freezed ? _value.measure : measure as Canonical,
@@ -2119,6 +2122,26 @@ class _$MeasureReportCopyWithImpl<$Res>
           ? _value.evaluatedResource
           : evaluatedResource as List<dynamic>,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get improvementNotation {
+    if (_value.improvementNotation == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.improvementNotation, (value) {
+      return _then(_value.copyWith(improvementNotation: value));
+    });
   }
 }
 
@@ -2169,7 +2192,7 @@ class _$MeasureReport implements MeasureReport {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final MeasureReportStatus status;
   @override
@@ -2296,7 +2319,7 @@ class _$MeasureReport implements MeasureReport {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -2329,7 +2352,7 @@ class _$MeasureReport implements MeasureReport {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -2367,7 +2390,7 @@ class _$MeasureReport implements MeasureReport {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -2381,14 +2404,14 @@ class _$MeasureReport implements MeasureReport {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -2398,7 +2421,7 @@ class _$MeasureReport implements MeasureReport {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -2448,7 +2471,7 @@ class _$MeasureReport implements MeasureReport {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -2474,7 +2497,7 @@ class _$MeasureReport implements MeasureReport {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -2807,7 +2830,7 @@ class _$MeasureReport implements MeasureReport {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -2837,7 +2860,7 @@ class _$MeasureReport implements MeasureReport {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -2871,7 +2894,7 @@ class _$MeasureReport implements MeasureReport {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -2885,14 +2908,14 @@ class _$MeasureReport implements MeasureReport {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -2902,7 +2925,7 @@ class _$MeasureReport implements MeasureReport {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -2947,7 +2970,7 @@ class _$MeasureReport implements MeasureReport {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -2972,7 +2995,7 @@ class _$MeasureReport implements MeasureReport {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -3387,7 +3410,7 @@ abstract class MeasureReport implements QualityReportingAndTesting {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       MeasureReportStatus status,
       MeasureReportType type,
       Canonical measure,
@@ -3414,7 +3437,7 @@ abstract class MeasureReport implements QualityReportingAndTesting {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   MeasureReportStatus get status;
   MeasureReportType get type;
   Canonical get measure;
@@ -3443,6 +3466,9 @@ abstract class $MeasureReportGroupCopyWith<$Res>
       List<dynamic> population,
       Quantity measureScore,
       List<dynamic> stratifier});
+
+  $CodeableConceptCopyWith<$Res> get code;
+  $QuantityCopyWith<$Res> get measureScore;
 }
 
 class _$MeasureReportGroupCopyWithImpl<$Res>
@@ -3484,6 +3510,26 @@ class _$MeasureReportGroupCopyWithImpl<$Res>
           ? _value.stratifier
           : stratifier as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get measureScore {
+    if (_value.measureScore == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.measureScore, (value) {
+      return _then(_value.copyWith(measureScore: value));
+    });
   }
 }
 
@@ -3576,7 +3622,7 @@ class _$MeasureReportGroup implements MeasureReportGroup {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -3609,7 +3655,7 @@ class _$MeasureReportGroup implements MeasureReportGroup {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -3647,7 +3693,7 @@ class _$MeasureReportGroup implements MeasureReportGroup {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -3661,14 +3707,14 @@ class _$MeasureReportGroup implements MeasureReportGroup {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -3678,7 +3724,7 @@ class _$MeasureReportGroup implements MeasureReportGroup {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -3728,7 +3774,7 @@ class _$MeasureReportGroup implements MeasureReportGroup {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -3754,7 +3800,7 @@ class _$MeasureReportGroup implements MeasureReportGroup {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -4068,7 +4114,7 @@ class _$MeasureReportGroup implements MeasureReportGroup {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -4098,7 +4144,7 @@ class _$MeasureReportGroup implements MeasureReportGroup {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -4132,7 +4178,7 @@ class _$MeasureReportGroup implements MeasureReportGroup {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -4146,14 +4192,14 @@ class _$MeasureReportGroup implements MeasureReportGroup {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -4163,7 +4209,7 @@ class _$MeasureReportGroup implements MeasureReportGroup {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -4208,7 +4254,7 @@ class _$MeasureReportGroup implements MeasureReportGroup {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -4233,7 +4279,7 @@ class _$MeasureReportGroup implements MeasureReportGroup {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -4659,6 +4705,8 @@ abstract class $MeasureReportPopulationCopyWith<$Res>
       CodeableConcept code,
       int count,
       Reference subjectResults});
+
+  $CodeableConceptCopyWith<$Res> get code;
 }
 
 class _$MeasureReportPopulationCopyWithImpl<$Res>
@@ -4694,6 +4742,16 @@ class _$MeasureReportPopulationCopyWithImpl<$Res>
           ? _value.subjectResults
           : subjectResults as Reference,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
   }
 }
 
@@ -4779,7 +4837,7 @@ class _$MeasureReportPopulation implements MeasureReportPopulation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -4812,7 +4870,7 @@ class _$MeasureReportPopulation implements MeasureReportPopulation {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -4850,7 +4908,7 @@ class _$MeasureReportPopulation implements MeasureReportPopulation {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -4864,14 +4922,14 @@ class _$MeasureReportPopulation implements MeasureReportPopulation {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -4881,7 +4939,7 @@ class _$MeasureReportPopulation implements MeasureReportPopulation {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -4931,7 +4989,7 @@ class _$MeasureReportPopulation implements MeasureReportPopulation {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -4957,7 +5015,7 @@ class _$MeasureReportPopulation implements MeasureReportPopulation {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -5271,7 +5329,7 @@ class _$MeasureReportPopulation implements MeasureReportPopulation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -5301,7 +5359,7 @@ class _$MeasureReportPopulation implements MeasureReportPopulation {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -5335,7 +5393,7 @@ class _$MeasureReportPopulation implements MeasureReportPopulation {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -5349,14 +5407,14 @@ class _$MeasureReportPopulation implements MeasureReportPopulation {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -5366,7 +5424,7 @@ class _$MeasureReportPopulation implements MeasureReportPopulation {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -5411,7 +5469,7 @@ class _$MeasureReportPopulation implements MeasureReportPopulation {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -5436,7 +5494,7 @@ class _$MeasureReportPopulation implements MeasureReportPopulation {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -5857,7 +5915,7 @@ abstract class $MeasureReportStratifierCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> code,
+      List<CodeableConcept> code,
       List<dynamic> stratum});
 }
 
@@ -5887,7 +5945,7 @@ class _$MeasureReportStratifierCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
-      code: code == freezed ? _value.code : code as List<dynamic>,
+      code: code == freezed ? _value.code : code as List<CodeableConcept>,
       stratum: stratum == freezed ? _value.stratum : stratum as List<dynamic>,
     ));
   }
@@ -5913,7 +5971,7 @@ class _$MeasureReportStratifier implements MeasureReportStratifier {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> code;
+  final List<CodeableConcept> code;
   @override
   final List<dynamic> stratum;
 
@@ -5968,7 +6026,7 @@ class _$MeasureReportStratifier implements MeasureReportStratifier {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -6001,7 +6059,7 @@ class _$MeasureReportStratifier implements MeasureReportStratifier {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -6039,7 +6097,7 @@ class _$MeasureReportStratifier implements MeasureReportStratifier {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -6053,14 +6111,14 @@ class _$MeasureReportStratifier implements MeasureReportStratifier {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -6070,7 +6128,7 @@ class _$MeasureReportStratifier implements MeasureReportStratifier {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -6120,7 +6178,7 @@ class _$MeasureReportStratifier implements MeasureReportStratifier {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -6146,7 +6204,7 @@ class _$MeasureReportStratifier implements MeasureReportStratifier {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -6460,7 +6518,7 @@ class _$MeasureReportStratifier implements MeasureReportStratifier {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -6490,7 +6548,7 @@ class _$MeasureReportStratifier implements MeasureReportStratifier {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -6524,7 +6582,7 @@ class _$MeasureReportStratifier implements MeasureReportStratifier {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -6538,14 +6596,14 @@ class _$MeasureReportStratifier implements MeasureReportStratifier {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -6555,7 +6613,7 @@ class _$MeasureReportStratifier implements MeasureReportStratifier {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -6600,7 +6658,7 @@ class _$MeasureReportStratifier implements MeasureReportStratifier {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -6625,7 +6683,7 @@ class _$MeasureReportStratifier implements MeasureReportStratifier {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -7016,7 +7074,7 @@ abstract class MeasureReportStratifier implements QualityReportingAndTesting {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> code,
+      List<CodeableConcept> code,
       List<dynamic> stratum}) = _$MeasureReportStratifier;
 
   factory MeasureReportStratifier.fromJson(Map<String, dynamic> json) =
@@ -7028,7 +7086,7 @@ abstract class MeasureReportStratifier implements QualityReportingAndTesting {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get code;
+  List<CodeableConcept> get code;
   List<dynamic> get stratum;
   @override
   $MeasureReportStratifierCopyWith<MeasureReportStratifier> get copyWith;
@@ -7048,6 +7106,9 @@ abstract class $MeasureReportStratumCopyWith<$Res>
       List<dynamic> component,
       List<dynamic> population,
       Quantity measureScore});
+
+  $CodeableConceptCopyWith<$Res> get value;
+  $QuantityCopyWith<$Res> get measureScore;
 }
 
 class _$MeasureReportStratumCopyWithImpl<$Res>
@@ -7088,6 +7149,26 @@ class _$MeasureReportStratumCopyWithImpl<$Res>
           ? _value.measureScore
           : measureScore as Quantity,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get value {
+    if (_value.value == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.value, (value) {
+      return _then(_value.copyWith(value: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get measureScore {
+    if (_value.measureScore == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.measureScore, (value) {
+      return _then(_value.copyWith(measureScore: value));
+    });
   }
 }
 
@@ -7181,7 +7262,7 @@ class _$MeasureReportStratum implements MeasureReportStratum {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -7214,7 +7295,7 @@ class _$MeasureReportStratum implements MeasureReportStratum {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -7252,7 +7333,7 @@ class _$MeasureReportStratum implements MeasureReportStratum {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -7266,14 +7347,14 @@ class _$MeasureReportStratum implements MeasureReportStratum {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -7283,7 +7364,7 @@ class _$MeasureReportStratum implements MeasureReportStratum {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -7333,7 +7414,7 @@ class _$MeasureReportStratum implements MeasureReportStratum {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -7359,7 +7440,7 @@ class _$MeasureReportStratum implements MeasureReportStratum {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -7673,7 +7754,7 @@ class _$MeasureReportStratum implements MeasureReportStratum {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -7703,7 +7784,7 @@ class _$MeasureReportStratum implements MeasureReportStratum {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -7737,7 +7818,7 @@ class _$MeasureReportStratum implements MeasureReportStratum {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -7751,14 +7832,14 @@ class _$MeasureReportStratum implements MeasureReportStratum {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -7768,7 +7849,7 @@ class _$MeasureReportStratum implements MeasureReportStratum {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -7813,7 +7894,7 @@ class _$MeasureReportStratum implements MeasureReportStratum {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -7838,7 +7919,7 @@ class _$MeasureReportStratum implements MeasureReportStratum {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -8263,6 +8344,9 @@ abstract class $MeasureReportComponentCopyWith<$Res>
       List<dynamic> modifierExtension,
       CodeableConcept code,
       CodeableConcept value});
+
+  $CodeableConceptCopyWith<$Res> get code;
+  $CodeableConceptCopyWith<$Res> get value;
 }
 
 class _$MeasureReportComponentCopyWithImpl<$Res>
@@ -8294,6 +8378,26 @@ class _$MeasureReportComponentCopyWithImpl<$Res>
       code: code == freezed ? _value.code : code as CodeableConcept,
       value: value == freezed ? _value.value : value as CodeableConcept,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get value {
+    if (_value.value == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.value, (value) {
+      return _then(_value.copyWith(value: value));
+    });
   }
 }
 
@@ -8372,7 +8476,7 @@ class _$MeasureReportComponent implements MeasureReportComponent {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -8405,7 +8509,7 @@ class _$MeasureReportComponent implements MeasureReportComponent {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -8443,7 +8547,7 @@ class _$MeasureReportComponent implements MeasureReportComponent {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -8457,14 +8561,14 @@ class _$MeasureReportComponent implements MeasureReportComponent {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -8474,7 +8578,7 @@ class _$MeasureReportComponent implements MeasureReportComponent {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -8524,7 +8628,7 @@ class _$MeasureReportComponent implements MeasureReportComponent {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -8550,7 +8654,7 @@ class _$MeasureReportComponent implements MeasureReportComponent {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -8864,7 +8968,7 @@ class _$MeasureReportComponent implements MeasureReportComponent {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -8894,7 +8998,7 @@ class _$MeasureReportComponent implements MeasureReportComponent {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -8928,7 +9032,7 @@ class _$MeasureReportComponent implements MeasureReportComponent {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -8942,14 +9046,14 @@ class _$MeasureReportComponent implements MeasureReportComponent {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -8959,7 +9063,7 @@ class _$MeasureReportComponent implements MeasureReportComponent {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -9004,7 +9108,7 @@ class _$MeasureReportComponent implements MeasureReportComponent {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -9029,7 +9133,7 @@ class _$MeasureReportComponent implements MeasureReportComponent {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -9451,6 +9555,8 @@ abstract class $MeasureReportPopulation1CopyWith<$Res>
       CodeableConcept code,
       int count,
       Reference subjectResults});
+
+  $CodeableConceptCopyWith<$Res> get code;
 }
 
 class _$MeasureReportPopulation1CopyWithImpl<$Res>
@@ -9487,6 +9593,16 @@ class _$MeasureReportPopulation1CopyWithImpl<$Res>
           ? _value.subjectResults
           : subjectResults as Reference,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
   }
 }
 
@@ -9572,7 +9688,7 @@ class _$MeasureReportPopulation1 implements MeasureReportPopulation1 {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -9605,7 +9721,7 @@ class _$MeasureReportPopulation1 implements MeasureReportPopulation1 {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -9643,7 +9759,7 @@ class _$MeasureReportPopulation1 implements MeasureReportPopulation1 {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -9657,14 +9773,14 @@ class _$MeasureReportPopulation1 implements MeasureReportPopulation1 {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -9674,7 +9790,7 @@ class _$MeasureReportPopulation1 implements MeasureReportPopulation1 {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -9724,7 +9840,7 @@ class _$MeasureReportPopulation1 implements MeasureReportPopulation1 {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -9750,7 +9866,7 @@ class _$MeasureReportPopulation1 implements MeasureReportPopulation1 {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -10064,7 +10180,7 @@ class _$MeasureReportPopulation1 implements MeasureReportPopulation1 {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -10094,7 +10210,7 @@ class _$MeasureReportPopulation1 implements MeasureReportPopulation1 {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -10128,7 +10244,7 @@ class _$MeasureReportPopulation1 implements MeasureReportPopulation1 {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -10142,14 +10258,14 @@ class _$MeasureReportPopulation1 implements MeasureReportPopulation1 {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -10159,7 +10275,7 @@ class _$MeasureReportPopulation1 implements MeasureReportPopulation1 {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -10204,7 +10320,7 @@ class _$MeasureReportPopulation1 implements MeasureReportPopulation1 {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -10229,7 +10345,7 @@ class _$MeasureReportPopulation1 implements MeasureReportPopulation1 {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -10656,7 +10772,7 @@ abstract class $MeasureCopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -10670,14 +10786,14 @@ abstract class $MeasureCopyWith<$Res>
       List<dynamic> contact,
       Markdown description,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown purpose,
       String usage,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -10687,7 +10803,7 @@ abstract class $MeasureCopyWith<$Res>
       Markdown disclaimer,
       CodeableConcept scoring,
       CodeableConcept compositeScoring,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       String riskAdjustment,
       String rateAggregation,
       Markdown rationale,
@@ -10697,6 +10813,12 @@ abstract class $MeasureCopyWith<$Res>
       Markdown guidance,
       List<dynamic> group,
       List<dynamic> supplementalData});
+
+  $CodeableConceptCopyWith<$Res> get subjectCodeableConcept;
+  $PeriodCopyWith<$Res> get effectivePeriod;
+  $CodeableConceptCopyWith<$Res> get scoring;
+  $CodeableConceptCopyWith<$Res> get compositeScoring;
+  $CodeableConceptCopyWith<$Res> get improvementNotation;
 }
 
 class _$MeasureCopyWithImpl<$Res>
@@ -10784,7 +10906,7 @@ class _$MeasureCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as FhirUri,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
@@ -10808,7 +10930,7 @@ class _$MeasureCopyWithImpl<$Res>
           : useContext as List<dynamic>,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<dynamic>,
+          : jurisdiction as List<CodeableConcept>,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown,
       usage: usage == freezed ? _value.usage : usage as String,
       copyright:
@@ -10821,7 +10943,7 @@ class _$MeasureCopyWithImpl<$Res>
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
-      topic: topic == freezed ? _value.topic : topic as List<dynamic>,
+      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept>,
       author: author == freezed ? _value.author : author as List<dynamic>,
       editor: editor == freezed ? _value.editor : editor as List<dynamic>,
       reviewer:
@@ -10838,7 +10960,7 @@ class _$MeasureCopyWithImpl<$Res>
       compositeScoring: compositeScoring == freezed
           ? _value.compositeScoring
           : compositeScoring as CodeableConcept,
-      type: type == freezed ? _value.type : type as List<dynamic>,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>,
       riskAdjustment: riskAdjustment == freezed
           ? _value.riskAdjustment
           : riskAdjustment as String,
@@ -10863,6 +10985,57 @@ class _$MeasureCopyWithImpl<$Res>
           ? _value.supplementalData
           : supplementalData as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get subjectCodeableConcept {
+    if (_value.subjectCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.subjectCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(subjectCodeableConcept: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get effectivePeriod {
+    if (_value.effectivePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
+      return _then(_value.copyWith(effectivePeriod: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get scoring {
+    if (_value.scoring == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.scoring, (value) {
+      return _then(_value.copyWith(scoring: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get compositeScoring {
+    if (_value.compositeScoring == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.compositeScoring, (value) {
+      return _then(_value.copyWith(compositeScoring: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get improvementNotation {
+    if (_value.improvementNotation == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.improvementNotation, (value) {
+      return _then(_value.copyWith(improvementNotation: value));
+    });
   }
 }
 
@@ -10946,7 +11119,7 @@ class _$Measure implements Measure {
   @override
   final FhirUri url;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final String version;
   @override
@@ -10974,7 +11147,7 @@ class _$Measure implements Measure {
   @override
   final List<dynamic> useContext;
   @override
-  final List<dynamic> jurisdiction;
+  final List<CodeableConcept> jurisdiction;
   @override
   final Markdown purpose;
   @override
@@ -10988,7 +11161,7 @@ class _$Measure implements Measure {
   @override
   final Period effectivePeriod;
   @override
-  final List<dynamic> topic;
+  final List<CodeableConcept> topic;
   @override
   final List<dynamic> author;
   @override
@@ -11008,7 +11181,7 @@ class _$Measure implements Measure {
   @override
   final CodeableConcept compositeScoring;
   @override
-  final List<dynamic> type;
+  final List<CodeableConcept> type;
   @override
   final String riskAdjustment;
   @override
@@ -11205,7 +11378,7 @@ class _$Measure implements Measure {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -11238,7 +11411,7 @@ class _$Measure implements Measure {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -11276,7 +11449,7 @@ class _$Measure implements Measure {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -11290,14 +11463,14 @@ class _$Measure implements Measure {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -11307,7 +11480,7 @@ class _$Measure implements Measure {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -11357,7 +11530,7 @@ class _$Measure implements Measure {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -11383,7 +11556,7 @@ class _$Measure implements Measure {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -11747,7 +11920,7 @@ class _$Measure implements Measure {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -11777,7 +11950,7 @@ class _$Measure implements Measure {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -11811,7 +11984,7 @@ class _$Measure implements Measure {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -11825,14 +11998,14 @@ class _$Measure implements Measure {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -11842,7 +12015,7 @@ class _$Measure implements Measure {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -11887,7 +12060,7 @@ class _$Measure implements Measure {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -11912,7 +12085,7 @@ class _$Measure implements Measure {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -12359,7 +12532,7 @@ abstract class Measure implements QualityReportingAndTesting {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -12373,14 +12546,14 @@ abstract class Measure implements QualityReportingAndTesting {
       List<dynamic> contact,
       Markdown description,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown purpose,
       String usage,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -12390,7 +12563,7 @@ abstract class Measure implements QualityReportingAndTesting {
       Markdown disclaimer,
       CodeableConcept scoring,
       CodeableConcept compositeScoring,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       String riskAdjustment,
       String rateAggregation,
       Markdown rationale,
@@ -12416,7 +12589,7 @@ abstract class Measure implements QualityReportingAndTesting {
   @override
   List<dynamic> get modifierExtension;
   FhirUri get url;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   String get version;
   String get name;
   String get title;
@@ -12430,14 +12603,14 @@ abstract class Measure implements QualityReportingAndTesting {
   List<dynamic> get contact;
   Markdown get description;
   List<dynamic> get useContext;
-  List<dynamic> get jurisdiction;
+  List<CodeableConcept> get jurisdiction;
   Markdown get purpose;
   String get usage;
   Markdown get copyright;
   Date get approvalDate;
   Date get lastReviewDate;
   Period get effectivePeriod;
-  List<dynamic> get topic;
+  List<CodeableConcept> get topic;
   List<dynamic> get author;
   List<dynamic> get editor;
   List<dynamic> get reviewer;
@@ -12447,7 +12620,7 @@ abstract class Measure implements QualityReportingAndTesting {
   Markdown get disclaimer;
   CodeableConcept get scoring;
   CodeableConcept get compositeScoring;
-  List<dynamic> get type;
+  List<CodeableConcept> get type;
   String get riskAdjustment;
   String get rateAggregation;
   Markdown get rationale;
@@ -12475,6 +12648,8 @@ abstract class $MeasureGroupCopyWith<$Res>
       String description,
       List<dynamic> population,
       List<dynamic> stratifier});
+
+  $CodeableConceptCopyWith<$Res> get code;
 }
 
 class _$MeasureGroupCopyWithImpl<$Res>
@@ -12515,6 +12690,16 @@ class _$MeasureGroupCopyWithImpl<$Res>
           ? _value.stratifier
           : stratifier as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
   }
 }
 
@@ -12607,7 +12792,7 @@ class _$MeasureGroup implements MeasureGroup {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -12640,7 +12825,7 @@ class _$MeasureGroup implements MeasureGroup {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -12678,7 +12863,7 @@ class _$MeasureGroup implements MeasureGroup {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -12692,14 +12877,14 @@ class _$MeasureGroup implements MeasureGroup {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -12709,7 +12894,7 @@ class _$MeasureGroup implements MeasureGroup {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -12759,7 +12944,7 @@ class _$MeasureGroup implements MeasureGroup {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -12785,7 +12970,7 @@ class _$MeasureGroup implements MeasureGroup {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -13099,7 +13284,7 @@ class _$MeasureGroup implements MeasureGroup {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -13129,7 +13314,7 @@ class _$MeasureGroup implements MeasureGroup {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -13163,7 +13348,7 @@ class _$MeasureGroup implements MeasureGroup {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -13177,14 +13362,14 @@ class _$MeasureGroup implements MeasureGroup {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -13194,7 +13379,7 @@ class _$MeasureGroup implements MeasureGroup {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -13239,7 +13424,7 @@ class _$MeasureGroup implements MeasureGroup {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -13264,7 +13449,7 @@ class _$MeasureGroup implements MeasureGroup {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -13689,6 +13874,8 @@ abstract class $MeasurePopulationCopyWith<$Res>
       CodeableConcept code,
       String description,
       Expression criteria});
+
+  $CodeableConceptCopyWith<$Res> get code;
 }
 
 class _$MeasurePopulationCopyWithImpl<$Res>
@@ -13723,6 +13910,16 @@ class _$MeasurePopulationCopyWithImpl<$Res>
           description == freezed ? _value.description : description as String,
       criteria: criteria == freezed ? _value.criteria : criteria as Expression,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
   }
 }
 
@@ -13808,7 +14005,7 @@ class _$MeasurePopulation implements MeasurePopulation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -13841,7 +14038,7 @@ class _$MeasurePopulation implements MeasurePopulation {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -13879,7 +14076,7 @@ class _$MeasurePopulation implements MeasurePopulation {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -13893,14 +14090,14 @@ class _$MeasurePopulation implements MeasurePopulation {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -13910,7 +14107,7 @@ class _$MeasurePopulation implements MeasurePopulation {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -13960,7 +14157,7 @@ class _$MeasurePopulation implements MeasurePopulation {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -13986,7 +14183,7 @@ class _$MeasurePopulation implements MeasurePopulation {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -14300,7 +14497,7 @@ class _$MeasurePopulation implements MeasurePopulation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -14330,7 +14527,7 @@ class _$MeasurePopulation implements MeasurePopulation {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -14364,7 +14561,7 @@ class _$MeasurePopulation implements MeasurePopulation {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -14378,14 +14575,14 @@ class _$MeasurePopulation implements MeasurePopulation {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -14395,7 +14592,7 @@ class _$MeasurePopulation implements MeasurePopulation {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -14440,7 +14637,7 @@ class _$MeasurePopulation implements MeasurePopulation {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -14465,7 +14662,7 @@ class _$MeasurePopulation implements MeasurePopulation {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -14890,6 +15087,8 @@ abstract class $MeasureStratifierCopyWith<$Res>
       String description,
       Expression criteria,
       List<dynamic> component});
+
+  $CodeableConceptCopyWith<$Res> get code;
 }
 
 class _$MeasureStratifierCopyWithImpl<$Res>
@@ -14927,6 +15126,16 @@ class _$MeasureStratifierCopyWithImpl<$Res>
       component:
           component == freezed ? _value.component : component as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
   }
 }
 
@@ -15019,7 +15228,7 @@ class _$MeasureStratifier implements MeasureStratifier {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -15052,7 +15261,7 @@ class _$MeasureStratifier implements MeasureStratifier {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -15090,7 +15299,7 @@ class _$MeasureStratifier implements MeasureStratifier {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -15104,14 +15313,14 @@ class _$MeasureStratifier implements MeasureStratifier {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -15121,7 +15330,7 @@ class _$MeasureStratifier implements MeasureStratifier {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -15171,7 +15380,7 @@ class _$MeasureStratifier implements MeasureStratifier {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -15197,7 +15406,7 @@ class _$MeasureStratifier implements MeasureStratifier {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -15511,7 +15720,7 @@ class _$MeasureStratifier implements MeasureStratifier {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -15541,7 +15750,7 @@ class _$MeasureStratifier implements MeasureStratifier {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -15575,7 +15784,7 @@ class _$MeasureStratifier implements MeasureStratifier {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -15589,14 +15798,14 @@ class _$MeasureStratifier implements MeasureStratifier {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -15606,7 +15815,7 @@ class _$MeasureStratifier implements MeasureStratifier {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -15651,7 +15860,7 @@ class _$MeasureStratifier implements MeasureStratifier {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -15676,7 +15885,7 @@ class _$MeasureStratifier implements MeasureStratifier {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -16102,6 +16311,8 @@ abstract class $MeasureComponentCopyWith<$Res>
       CodeableConcept code,
       String description,
       Expression criteria});
+
+  $CodeableConceptCopyWith<$Res> get code;
 }
 
 class _$MeasureComponentCopyWithImpl<$Res>
@@ -16136,6 +16347,16 @@ class _$MeasureComponentCopyWithImpl<$Res>
           description == freezed ? _value.description : description as String,
       criteria: criteria == freezed ? _value.criteria : criteria as Expression,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
   }
 }
 
@@ -16221,7 +16442,7 @@ class _$MeasureComponent implements MeasureComponent {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -16254,7 +16475,7 @@ class _$MeasureComponent implements MeasureComponent {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -16292,7 +16513,7 @@ class _$MeasureComponent implements MeasureComponent {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -16306,14 +16527,14 @@ class _$MeasureComponent implements MeasureComponent {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -16323,7 +16544,7 @@ class _$MeasureComponent implements MeasureComponent {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -16373,7 +16594,7 @@ class _$MeasureComponent implements MeasureComponent {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -16399,7 +16620,7 @@ class _$MeasureComponent implements MeasureComponent {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -16713,7 +16934,7 @@ class _$MeasureComponent implements MeasureComponent {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -16743,7 +16964,7 @@ class _$MeasureComponent implements MeasureComponent {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -16777,7 +16998,7 @@ class _$MeasureComponent implements MeasureComponent {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -16791,14 +17012,14 @@ class _$MeasureComponent implements MeasureComponent {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -16808,7 +17029,7 @@ class _$MeasureComponent implements MeasureComponent {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -16853,7 +17074,7 @@ class _$MeasureComponent implements MeasureComponent {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -16878,7 +17099,7 @@ class _$MeasureComponent implements MeasureComponent {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -17300,9 +17521,11 @@ abstract class $MeasureSupplementalDataCopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept code,
-      List<dynamic> usage,
+      List<CodeableConcept> usage,
       String description,
       Expression criteria});
+
+  $CodeableConceptCopyWith<$Res> get code;
 }
 
 class _$MeasureSupplementalDataCopyWithImpl<$Res>
@@ -17334,11 +17557,21 @@ class _$MeasureSupplementalDataCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
       code: code == freezed ? _value.code : code as CodeableConcept,
-      usage: usage == freezed ? _value.usage : usage as List<dynamic>,
+      usage: usage == freezed ? _value.usage : usage as List<CodeableConcept>,
       description:
           description == freezed ? _value.description : description as String,
       criteria: criteria == freezed ? _value.criteria : criteria as Expression,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
   }
 }
 
@@ -17366,7 +17599,7 @@ class _$MeasureSupplementalData implements MeasureSupplementalData {
   @override
   final CodeableConcept code;
   @override
-  final List<dynamic> usage;
+  final List<CodeableConcept> usage;
   @override
   final String description;
   @override
@@ -17431,7 +17664,7 @@ class _$MeasureSupplementalData implements MeasureSupplementalData {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -17464,7 +17697,7 @@ class _$MeasureSupplementalData implements MeasureSupplementalData {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -17502,7 +17735,7 @@ class _$MeasureSupplementalData implements MeasureSupplementalData {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -17516,14 +17749,14 @@ class _$MeasureSupplementalData implements MeasureSupplementalData {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -17533,7 +17766,7 @@ class _$MeasureSupplementalData implements MeasureSupplementalData {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -17583,7 +17816,7 @@ class _$MeasureSupplementalData implements MeasureSupplementalData {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -17609,7 +17842,7 @@ class _$MeasureSupplementalData implements MeasureSupplementalData {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -17923,7 +18156,7 @@ class _$MeasureSupplementalData implements MeasureSupplementalData {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -17953,7 +18186,7 @@ class _$MeasureSupplementalData implements MeasureSupplementalData {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -17987,7 +18220,7 @@ class _$MeasureSupplementalData implements MeasureSupplementalData {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -18001,14 +18234,14 @@ class _$MeasureSupplementalData implements MeasureSupplementalData {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -18018,7 +18251,7 @@ class _$MeasureSupplementalData implements MeasureSupplementalData {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -18063,7 +18296,7 @@ class _$MeasureSupplementalData implements MeasureSupplementalData {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -18088,7 +18321,7 @@ class _$MeasureSupplementalData implements MeasureSupplementalData {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -18480,7 +18713,7 @@ abstract class MeasureSupplementalData implements QualityReportingAndTesting {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept code,
-      List<dynamic> usage,
+      List<CodeableConcept> usage,
       String description,
       Expression criteria}) = _$MeasureSupplementalData;
 
@@ -18494,7 +18727,7 @@ abstract class MeasureSupplementalData implements QualityReportingAndTesting {
   @override
   List<dynamic> get modifierExtension;
   CodeableConcept get code;
-  List<dynamic> get usage;
+  List<CodeableConcept> get usage;
   String get description;
   Expression get criteria;
   @override
@@ -18529,7 +18762,7 @@ abstract class $TestScriptCopyWith<$Res>
       List<dynamic> contact,
       Markdown description,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown purpose,
       Markdown copyright,
       List<dynamic> origin,
@@ -18541,6 +18774,8 @@ abstract class $TestScriptCopyWith<$Res>
       TestScriptSetup setup,
       List<dynamic> test,
       TestScriptTeardown teardown});
+
+  $IdentifierCopyWith<$Res> get identifier;
 }
 
 class _$TestScriptCopyWithImpl<$Res>
@@ -18626,7 +18861,7 @@ class _$TestScriptCopyWithImpl<$Res>
           : useContext as List<dynamic>,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<dynamic>,
+          : jurisdiction as List<CodeableConcept>,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown,
       copyright:
           copyright == freezed ? _value.copyright : copyright as Markdown,
@@ -18647,6 +18882,16 @@ class _$TestScriptCopyWithImpl<$Res>
           ? _value.teardown
           : teardown as TestScriptTeardown,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
   }
 }
 
@@ -18734,7 +18979,7 @@ class _$TestScript implements TestScript {
   @override
   final List<dynamic> useContext;
   @override
-  final List<dynamic> jurisdiction;
+  final List<CodeableConcept> jurisdiction;
   @override
   final Markdown purpose;
   @override
@@ -18900,7 +19145,7 @@ class _$TestScript implements TestScript {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -18933,7 +19178,7 @@ class _$TestScript implements TestScript {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -18971,7 +19216,7 @@ class _$TestScript implements TestScript {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -18985,14 +19230,14 @@ class _$TestScript implements TestScript {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -19002,7 +19247,7 @@ class _$TestScript implements TestScript {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -19052,7 +19297,7 @@ class _$TestScript implements TestScript {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -19078,7 +19323,7 @@ class _$TestScript implements TestScript {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -19424,7 +19669,7 @@ class _$TestScript implements TestScript {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -19454,7 +19699,7 @@ class _$TestScript implements TestScript {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -19488,7 +19733,7 @@ class _$TestScript implements TestScript {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -19502,14 +19747,14 @@ class _$TestScript implements TestScript {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -19519,7 +19764,7 @@ class _$TestScript implements TestScript {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -19564,7 +19809,7 @@ class _$TestScript implements TestScript {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -19589,7 +19834,7 @@ class _$TestScript implements TestScript {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -20029,7 +20274,7 @@ abstract class TestScript implements QualityReportingAndTesting {
       List<dynamic> contact,
       Markdown description,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown purpose,
       Markdown copyright,
       List<dynamic> origin,
@@ -20069,7 +20314,7 @@ abstract class TestScript implements QualityReportingAndTesting {
   List<dynamic> get contact;
   Markdown get description;
   List<dynamic> get useContext;
-  List<dynamic> get jurisdiction;
+  List<CodeableConcept> get jurisdiction;
   Markdown get purpose;
   Markdown get copyright;
   List<dynamic> get origin;
@@ -20097,6 +20342,8 @@ abstract class $TestScriptOriginCopyWith<$Res>
       List<dynamic> modifierExtension,
       int index,
       Coding profile});
+
+  $CodingCopyWith<$Res> get profile;
 }
 
 class _$TestScriptOriginCopyWithImpl<$Res>
@@ -20128,6 +20375,16 @@ class _$TestScriptOriginCopyWithImpl<$Res>
       index: index == freezed ? _value.index : index as int,
       profile: profile == freezed ? _value.profile : profile as Coding,
     ));
+  }
+
+  @override
+  $CodingCopyWith<$Res> get profile {
+    if (_value.profile == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.profile, (value) {
+      return _then(_value.copyWith(profile: value));
+    });
   }
 }
 
@@ -20205,7 +20462,7 @@ class _$TestScriptOrigin implements TestScriptOrigin {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -20238,7 +20495,7 @@ class _$TestScriptOrigin implements TestScriptOrigin {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -20276,7 +20533,7 @@ class _$TestScriptOrigin implements TestScriptOrigin {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -20290,14 +20547,14 @@ class _$TestScriptOrigin implements TestScriptOrigin {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -20307,7 +20564,7 @@ class _$TestScriptOrigin implements TestScriptOrigin {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -20357,7 +20614,7 @@ class _$TestScriptOrigin implements TestScriptOrigin {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -20383,7 +20640,7 @@ class _$TestScriptOrigin implements TestScriptOrigin {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -20697,7 +20954,7 @@ class _$TestScriptOrigin implements TestScriptOrigin {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -20727,7 +20984,7 @@ class _$TestScriptOrigin implements TestScriptOrigin {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -20761,7 +21018,7 @@ class _$TestScriptOrigin implements TestScriptOrigin {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -20775,14 +21032,14 @@ class _$TestScriptOrigin implements TestScriptOrigin {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -20792,7 +21049,7 @@ class _$TestScriptOrigin implements TestScriptOrigin {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -20837,7 +21094,7 @@ class _$TestScriptOrigin implements TestScriptOrigin {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -20862,7 +21119,7 @@ class _$TestScriptOrigin implements TestScriptOrigin {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -21283,6 +21540,8 @@ abstract class $TestScriptDestinationCopyWith<$Res>
       List<dynamic> modifierExtension,
       int index,
       Coding profile});
+
+  $CodingCopyWith<$Res> get profile;
 }
 
 class _$TestScriptDestinationCopyWithImpl<$Res>
@@ -21314,6 +21573,16 @@ class _$TestScriptDestinationCopyWithImpl<$Res>
       index: index == freezed ? _value.index : index as int,
       profile: profile == freezed ? _value.profile : profile as Coding,
     ));
+  }
+
+  @override
+  $CodingCopyWith<$Res> get profile {
+    if (_value.profile == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.profile, (value) {
+      return _then(_value.copyWith(profile: value));
+    });
   }
 }
 
@@ -21392,7 +21661,7 @@ class _$TestScriptDestination implements TestScriptDestination {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -21425,7 +21694,7 @@ class _$TestScriptDestination implements TestScriptDestination {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -21463,7 +21732,7 @@ class _$TestScriptDestination implements TestScriptDestination {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -21477,14 +21746,14 @@ class _$TestScriptDestination implements TestScriptDestination {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -21494,7 +21763,7 @@ class _$TestScriptDestination implements TestScriptDestination {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -21544,7 +21813,7 @@ class _$TestScriptDestination implements TestScriptDestination {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -21570,7 +21839,7 @@ class _$TestScriptDestination implements TestScriptDestination {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -21884,7 +22153,7 @@ class _$TestScriptDestination implements TestScriptDestination {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -21914,7 +22183,7 @@ class _$TestScriptDestination implements TestScriptDestination {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -21948,7 +22217,7 @@ class _$TestScriptDestination implements TestScriptDestination {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -21962,14 +22231,14 @@ class _$TestScriptDestination implements TestScriptDestination {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -21979,7 +22248,7 @@ class _$TestScriptDestination implements TestScriptDestination {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -22024,7 +22293,7 @@ class _$TestScriptDestination implements TestScriptDestination {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -22049,7 +22318,7 @@ class _$TestScriptDestination implements TestScriptDestination {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -22581,7 +22850,7 @@ class _$TestScriptMetadata implements TestScriptMetadata {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -22614,7 +22883,7 @@ class _$TestScriptMetadata implements TestScriptMetadata {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -22652,7 +22921,7 @@ class _$TestScriptMetadata implements TestScriptMetadata {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -22666,14 +22935,14 @@ class _$TestScriptMetadata implements TestScriptMetadata {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -22683,7 +22952,7 @@ class _$TestScriptMetadata implements TestScriptMetadata {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -22733,7 +23002,7 @@ class _$TestScriptMetadata implements TestScriptMetadata {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -22759,7 +23028,7 @@ class _$TestScriptMetadata implements TestScriptMetadata {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -23073,7 +23342,7 @@ class _$TestScriptMetadata implements TestScriptMetadata {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -23103,7 +23372,7 @@ class _$TestScriptMetadata implements TestScriptMetadata {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -23137,7 +23406,7 @@ class _$TestScriptMetadata implements TestScriptMetadata {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -23151,14 +23420,14 @@ class _$TestScriptMetadata implements TestScriptMetadata {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -23168,7 +23437,7 @@ class _$TestScriptMetadata implements TestScriptMetadata {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -23213,7 +23482,7 @@ class _$TestScriptMetadata implements TestScriptMetadata {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -23238,7 +23507,7 @@ class _$TestScriptMetadata implements TestScriptMetadata {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -23769,7 +24038,7 @@ class _$TestScriptLink implements TestScriptLink {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -23802,7 +24071,7 @@ class _$TestScriptLink implements TestScriptLink {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -23840,7 +24109,7 @@ class _$TestScriptLink implements TestScriptLink {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -23854,14 +24123,14 @@ class _$TestScriptLink implements TestScriptLink {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -23871,7 +24140,7 @@ class _$TestScriptLink implements TestScriptLink {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -23921,7 +24190,7 @@ class _$TestScriptLink implements TestScriptLink {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -23947,7 +24216,7 @@ class _$TestScriptLink implements TestScriptLink {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -24261,7 +24530,7 @@ class _$TestScriptLink implements TestScriptLink {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -24291,7 +24560,7 @@ class _$TestScriptLink implements TestScriptLink {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -24325,7 +24594,7 @@ class _$TestScriptLink implements TestScriptLink {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -24339,14 +24608,14 @@ class _$TestScriptLink implements TestScriptLink {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -24356,7 +24625,7 @@ class _$TestScriptLink implements TestScriptLink {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -24401,7 +24670,7 @@ class _$TestScriptLink implements TestScriptLink {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -24426,7 +24695,7 @@ class _$TestScriptLink implements TestScriptLink {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -25010,7 +25279,7 @@ class _$TestScriptCapability implements TestScriptCapability {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -25043,7 +25312,7 @@ class _$TestScriptCapability implements TestScriptCapability {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -25081,7 +25350,7 @@ class _$TestScriptCapability implements TestScriptCapability {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -25095,14 +25364,14 @@ class _$TestScriptCapability implements TestScriptCapability {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -25112,7 +25381,7 @@ class _$TestScriptCapability implements TestScriptCapability {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -25162,7 +25431,7 @@ class _$TestScriptCapability implements TestScriptCapability {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -25188,7 +25457,7 @@ class _$TestScriptCapability implements TestScriptCapability {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -25502,7 +25771,7 @@ class _$TestScriptCapability implements TestScriptCapability {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -25532,7 +25801,7 @@ class _$TestScriptCapability implements TestScriptCapability {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -25566,7 +25835,7 @@ class _$TestScriptCapability implements TestScriptCapability {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -25580,14 +25849,14 @@ class _$TestScriptCapability implements TestScriptCapability {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -25597,7 +25866,7 @@ class _$TestScriptCapability implements TestScriptCapability {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -25642,7 +25911,7 @@ class _$TestScriptCapability implements TestScriptCapability {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -25667,7 +25936,7 @@ class _$TestScriptCapability implements TestScriptCapability {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -26221,7 +26490,7 @@ class _$TestScriptFixture implements TestScriptFixture {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -26254,7 +26523,7 @@ class _$TestScriptFixture implements TestScriptFixture {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -26292,7 +26561,7 @@ class _$TestScriptFixture implements TestScriptFixture {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -26306,14 +26575,14 @@ class _$TestScriptFixture implements TestScriptFixture {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -26323,7 +26592,7 @@ class _$TestScriptFixture implements TestScriptFixture {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -26373,7 +26642,7 @@ class _$TestScriptFixture implements TestScriptFixture {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -26399,7 +26668,7 @@ class _$TestScriptFixture implements TestScriptFixture {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -26713,7 +26982,7 @@ class _$TestScriptFixture implements TestScriptFixture {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -26743,7 +27012,7 @@ class _$TestScriptFixture implements TestScriptFixture {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -26777,7 +27046,7 @@ class _$TestScriptFixture implements TestScriptFixture {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -26791,14 +27060,14 @@ class _$TestScriptFixture implements TestScriptFixture {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -26808,7 +27077,7 @@ class _$TestScriptFixture implements TestScriptFixture {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -26853,7 +27122,7 @@ class _$TestScriptFixture implements TestScriptFixture {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -26878,7 +27147,7 @@ class _$TestScriptFixture implements TestScriptFixture {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -27473,7 +27742,7 @@ class _$TestScriptVariable implements TestScriptVariable {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -27506,7 +27775,7 @@ class _$TestScriptVariable implements TestScriptVariable {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -27544,7 +27813,7 @@ class _$TestScriptVariable implements TestScriptVariable {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -27558,14 +27827,14 @@ class _$TestScriptVariable implements TestScriptVariable {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -27575,7 +27844,7 @@ class _$TestScriptVariable implements TestScriptVariable {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -27625,7 +27894,7 @@ class _$TestScriptVariable implements TestScriptVariable {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -27651,7 +27920,7 @@ class _$TestScriptVariable implements TestScriptVariable {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -27975,7 +28244,7 @@ class _$TestScriptVariable implements TestScriptVariable {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -28005,7 +28274,7 @@ class _$TestScriptVariable implements TestScriptVariable {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -28039,7 +28308,7 @@ class _$TestScriptVariable implements TestScriptVariable {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -28053,14 +28322,14 @@ class _$TestScriptVariable implements TestScriptVariable {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -28070,7 +28339,7 @@ class _$TestScriptVariable implements TestScriptVariable {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -28115,7 +28384,7 @@ class _$TestScriptVariable implements TestScriptVariable {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -28140,7 +28409,7 @@ class _$TestScriptVariable implements TestScriptVariable {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -28682,7 +28951,7 @@ class _$TestScriptSetup implements TestScriptSetup {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -28715,7 +28984,7 @@ class _$TestScriptSetup implements TestScriptSetup {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -28753,7 +29022,7 @@ class _$TestScriptSetup implements TestScriptSetup {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -28767,14 +29036,14 @@ class _$TestScriptSetup implements TestScriptSetup {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -28784,7 +29053,7 @@ class _$TestScriptSetup implements TestScriptSetup {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -28834,7 +29103,7 @@ class _$TestScriptSetup implements TestScriptSetup {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -28860,7 +29129,7 @@ class _$TestScriptSetup implements TestScriptSetup {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -29173,7 +29442,7 @@ class _$TestScriptSetup implements TestScriptSetup {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -29203,7 +29472,7 @@ class _$TestScriptSetup implements TestScriptSetup {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -29237,7 +29506,7 @@ class _$TestScriptSetup implements TestScriptSetup {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -29251,14 +29520,14 @@ class _$TestScriptSetup implements TestScriptSetup {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -29268,7 +29537,7 @@ class _$TestScriptSetup implements TestScriptSetup {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -29313,7 +29582,7 @@ class _$TestScriptSetup implements TestScriptSetup {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -29338,7 +29607,7 @@ class _$TestScriptSetup implements TestScriptSetup {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -29868,7 +30137,7 @@ class _$TestScriptAction implements TestScriptAction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -29901,7 +30170,7 @@ class _$TestScriptAction implements TestScriptAction {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -29939,7 +30208,7 @@ class _$TestScriptAction implements TestScriptAction {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -29953,14 +30222,14 @@ class _$TestScriptAction implements TestScriptAction {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -29970,7 +30239,7 @@ class _$TestScriptAction implements TestScriptAction {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -30020,7 +30289,7 @@ class _$TestScriptAction implements TestScriptAction {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -30046,7 +30315,7 @@ class _$TestScriptAction implements TestScriptAction {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -30360,7 +30629,7 @@ class _$TestScriptAction implements TestScriptAction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -30390,7 +30659,7 @@ class _$TestScriptAction implements TestScriptAction {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -30424,7 +30693,7 @@ class _$TestScriptAction implements TestScriptAction {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -30438,14 +30707,14 @@ class _$TestScriptAction implements TestScriptAction {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -30455,7 +30724,7 @@ class _$TestScriptAction implements TestScriptAction {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -30500,7 +30769,7 @@ class _$TestScriptAction implements TestScriptAction {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -30525,7 +30794,7 @@ class _$TestScriptAction implements TestScriptAction {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -30962,6 +31231,8 @@ abstract class $TestScriptOperationCopyWith<$Res>
       Id sourceId,
       Id targetId,
       String url});
+
+  $CodingCopyWith<$Res> get type;
 }
 
 class _$TestScriptOperationCopyWithImpl<$Res>
@@ -31032,6 +31303,16 @@ class _$TestScriptOperationCopyWithImpl<$Res>
       targetId: targetId == freezed ? _value.targetId : targetId as Id,
       url: url == freezed ? _value.url : url as String,
     ));
+  }
+
+  @override
+  $CodingCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
   }
 }
 
@@ -31209,7 +31490,7 @@ class _$TestScriptOperation implements TestScriptOperation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -31242,7 +31523,7 @@ class _$TestScriptOperation implements TestScriptOperation {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -31280,7 +31561,7 @@ class _$TestScriptOperation implements TestScriptOperation {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -31294,14 +31575,14 @@ class _$TestScriptOperation implements TestScriptOperation {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -31311,7 +31592,7 @@ class _$TestScriptOperation implements TestScriptOperation {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -31361,7 +31642,7 @@ class _$TestScriptOperation implements TestScriptOperation {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -31387,7 +31668,7 @@ class _$TestScriptOperation implements TestScriptOperation {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -31720,7 +32001,7 @@ class _$TestScriptOperation implements TestScriptOperation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -31750,7 +32031,7 @@ class _$TestScriptOperation implements TestScriptOperation {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -31784,7 +32065,7 @@ class _$TestScriptOperation implements TestScriptOperation {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -31798,14 +32079,14 @@ class _$TestScriptOperation implements TestScriptOperation {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -31815,7 +32096,7 @@ class _$TestScriptOperation implements TestScriptOperation {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -31860,7 +32141,7 @@ class _$TestScriptOperation implements TestScriptOperation {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -31885,7 +32166,7 @@ class _$TestScriptOperation implements TestScriptOperation {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -32464,7 +32745,7 @@ class _$TestScriptRequestHeader implements TestScriptRequestHeader {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -32497,7 +32778,7 @@ class _$TestScriptRequestHeader implements TestScriptRequestHeader {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -32535,7 +32816,7 @@ class _$TestScriptRequestHeader implements TestScriptRequestHeader {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -32549,14 +32830,14 @@ class _$TestScriptRequestHeader implements TestScriptRequestHeader {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -32566,7 +32847,7 @@ class _$TestScriptRequestHeader implements TestScriptRequestHeader {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -32616,7 +32897,7 @@ class _$TestScriptRequestHeader implements TestScriptRequestHeader {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -32642,7 +32923,7 @@ class _$TestScriptRequestHeader implements TestScriptRequestHeader {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -32956,7 +33237,7 @@ class _$TestScriptRequestHeader implements TestScriptRequestHeader {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -32986,7 +33267,7 @@ class _$TestScriptRequestHeader implements TestScriptRequestHeader {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -33020,7 +33301,7 @@ class _$TestScriptRequestHeader implements TestScriptRequestHeader {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -33034,14 +33315,14 @@ class _$TestScriptRequestHeader implements TestScriptRequestHeader {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -33051,7 +33332,7 @@ class _$TestScriptRequestHeader implements TestScriptRequestHeader {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -33096,7 +33377,7 @@ class _$TestScriptRequestHeader implements TestScriptRequestHeader {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -33121,7 +33402,7 @@ class _$TestScriptRequestHeader implements TestScriptRequestHeader {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -33865,7 +34146,7 @@ class _$TestScriptAssert implements TestScriptAssert {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -33898,7 +34179,7 @@ class _$TestScriptAssert implements TestScriptAssert {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -33936,7 +34217,7 @@ class _$TestScriptAssert implements TestScriptAssert {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -33950,14 +34231,14 @@ class _$TestScriptAssert implements TestScriptAssert {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -33967,7 +34248,7 @@ class _$TestScriptAssert implements TestScriptAssert {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -34017,7 +34298,7 @@ class _$TestScriptAssert implements TestScriptAssert {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -34043,7 +34324,7 @@ class _$TestScriptAssert implements TestScriptAssert {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -34381,7 +34662,7 @@ class _$TestScriptAssert implements TestScriptAssert {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -34411,7 +34692,7 @@ class _$TestScriptAssert implements TestScriptAssert {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -34445,7 +34726,7 @@ class _$TestScriptAssert implements TestScriptAssert {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -34459,14 +34740,14 @@ class _$TestScriptAssert implements TestScriptAssert {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -34476,7 +34757,7 @@ class _$TestScriptAssert implements TestScriptAssert {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -34521,7 +34802,7 @@ class _$TestScriptAssert implements TestScriptAssert {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -34546,7 +34827,7 @@ class _$TestScriptAssert implements TestScriptAssert {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -35150,7 +35431,7 @@ class _$TestScriptTest implements TestScriptTest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -35183,7 +35464,7 @@ class _$TestScriptTest implements TestScriptTest {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -35221,7 +35502,7 @@ class _$TestScriptTest implements TestScriptTest {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -35235,14 +35516,14 @@ class _$TestScriptTest implements TestScriptTest {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -35252,7 +35533,7 @@ class _$TestScriptTest implements TestScriptTest {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -35302,7 +35583,7 @@ class _$TestScriptTest implements TestScriptTest {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -35328,7 +35609,7 @@ class _$TestScriptTest implements TestScriptTest {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -35642,7 +35923,7 @@ class _$TestScriptTest implements TestScriptTest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -35672,7 +35953,7 @@ class _$TestScriptTest implements TestScriptTest {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -35706,7 +35987,7 @@ class _$TestScriptTest implements TestScriptTest {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -35720,14 +36001,14 @@ class _$TestScriptTest implements TestScriptTest {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -35737,7 +36018,7 @@ class _$TestScriptTest implements TestScriptTest {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -35782,7 +36063,7 @@ class _$TestScriptTest implements TestScriptTest {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -35807,7 +36088,7 @@ class _$TestScriptTest implements TestScriptTest {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -36342,7 +36623,7 @@ class _$TestScriptAction1 implements TestScriptAction1 {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -36375,7 +36656,7 @@ class _$TestScriptAction1 implements TestScriptAction1 {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -36413,7 +36694,7 @@ class _$TestScriptAction1 implements TestScriptAction1 {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -36427,14 +36708,14 @@ class _$TestScriptAction1 implements TestScriptAction1 {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -36444,7 +36725,7 @@ class _$TestScriptAction1 implements TestScriptAction1 {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -36494,7 +36775,7 @@ class _$TestScriptAction1 implements TestScriptAction1 {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -36520,7 +36801,7 @@ class _$TestScriptAction1 implements TestScriptAction1 {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -36834,7 +37115,7 @@ class _$TestScriptAction1 implements TestScriptAction1 {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -36864,7 +37145,7 @@ class _$TestScriptAction1 implements TestScriptAction1 {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -36898,7 +37179,7 @@ class _$TestScriptAction1 implements TestScriptAction1 {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -36912,14 +37193,14 @@ class _$TestScriptAction1 implements TestScriptAction1 {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -36929,7 +37210,7 @@ class _$TestScriptAction1 implements TestScriptAction1 {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -36974,7 +37255,7 @@ class _$TestScriptAction1 implements TestScriptAction1 {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -36999,7 +37280,7 @@ class _$TestScriptAction1 implements TestScriptAction1 {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -37520,7 +37801,7 @@ class _$TestScriptTeardown implements TestScriptTeardown {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -37553,7 +37834,7 @@ class _$TestScriptTeardown implements TestScriptTeardown {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -37591,7 +37872,7 @@ class _$TestScriptTeardown implements TestScriptTeardown {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -37605,14 +37886,14 @@ class _$TestScriptTeardown implements TestScriptTeardown {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -37622,7 +37903,7 @@ class _$TestScriptTeardown implements TestScriptTeardown {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -37672,7 +37953,7 @@ class _$TestScriptTeardown implements TestScriptTeardown {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -37698,7 +37979,7 @@ class _$TestScriptTeardown implements TestScriptTeardown {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -38011,7 +38292,7 @@ class _$TestScriptTeardown implements TestScriptTeardown {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -38041,7 +38322,7 @@ class _$TestScriptTeardown implements TestScriptTeardown {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -38075,7 +38356,7 @@ class _$TestScriptTeardown implements TestScriptTeardown {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -38089,14 +38370,14 @@ class _$TestScriptTeardown implements TestScriptTeardown {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -38106,7 +38387,7 @@ class _$TestScriptTeardown implements TestScriptTeardown {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -38151,7 +38432,7 @@ class _$TestScriptTeardown implements TestScriptTeardown {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -38176,7 +38457,7 @@ class _$TestScriptTeardown implements TestScriptTeardown {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -38696,7 +38977,7 @@ class _$TestScriptAction2 implements TestScriptAction2 {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -38729,7 +39010,7 @@ class _$TestScriptAction2 implements TestScriptAction2 {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -38767,7 +39048,7 @@ class _$TestScriptAction2 implements TestScriptAction2 {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -38781,14 +39062,14 @@ class _$TestScriptAction2 implements TestScriptAction2 {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -38798,7 +39079,7 @@ class _$TestScriptAction2 implements TestScriptAction2 {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -38848,7 +39129,7 @@ class _$TestScriptAction2 implements TestScriptAction2 {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -38874,7 +39155,7 @@ class _$TestScriptAction2 implements TestScriptAction2 {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -39187,7 +39468,7 @@ class _$TestScriptAction2 implements TestScriptAction2 {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -39217,7 +39498,7 @@ class _$TestScriptAction2 implements TestScriptAction2 {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -39251,7 +39532,7 @@ class _$TestScriptAction2 implements TestScriptAction2 {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -39265,14 +39546,14 @@ class _$TestScriptAction2 implements TestScriptAction2 {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -39282,7 +39563,7 @@ class _$TestScriptAction2 implements TestScriptAction2 {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -39327,7 +39608,7 @@ class _$TestScriptAction2 implements TestScriptAction2 {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -39352,7 +39633,7 @@ class _$TestScriptAction2 implements TestScriptAction2 {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -39786,6 +40067,8 @@ abstract class $TestReportCopyWith<$Res>
       TestReportSetup setup,
       List<dynamic> test,
       TestReportTeardown teardown});
+
+  $IdentifierCopyWith<$Res> get identifier;
 }
 
 class _$TestReportCopyWithImpl<$Res>
@@ -39859,6 +40142,16 @@ class _$TestReportCopyWithImpl<$Res>
           ? _value.teardown
           : teardown as TestReportTeardown,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
   }
 }
 
@@ -40040,7 +40333,7 @@ class _$TestReport implements TestReport {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -40073,7 +40366,7 @@ class _$TestReport implements TestReport {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -40111,7 +40404,7 @@ class _$TestReport implements TestReport {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -40125,14 +40418,14 @@ class _$TestReport implements TestReport {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -40142,7 +40435,7 @@ class _$TestReport implements TestReport {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -40192,7 +40485,7 @@ class _$TestReport implements TestReport {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -40218,7 +40511,7 @@ class _$TestReport implements TestReport {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -40552,7 +40845,7 @@ class _$TestReport implements TestReport {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -40582,7 +40875,7 @@ class _$TestReport implements TestReport {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -40616,7 +40909,7 @@ class _$TestReport implements TestReport {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -40630,14 +40923,14 @@ class _$TestReport implements TestReport {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -40647,7 +40940,7 @@ class _$TestReport implements TestReport {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -40692,7 +40985,7 @@ class _$TestReport implements TestReport {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -40717,7 +41010,7 @@ class _$TestReport implements TestReport {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -41307,7 +41600,7 @@ class _$TestReportParticipant implements TestReportParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -41340,7 +41633,7 @@ class _$TestReportParticipant implements TestReportParticipant {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -41378,7 +41671,7 @@ class _$TestReportParticipant implements TestReportParticipant {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -41392,14 +41685,14 @@ class _$TestReportParticipant implements TestReportParticipant {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -41409,7 +41702,7 @@ class _$TestReportParticipant implements TestReportParticipant {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -41459,7 +41752,7 @@ class _$TestReportParticipant implements TestReportParticipant {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -41485,7 +41778,7 @@ class _$TestReportParticipant implements TestReportParticipant {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -41799,7 +42092,7 @@ class _$TestReportParticipant implements TestReportParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -41829,7 +42122,7 @@ class _$TestReportParticipant implements TestReportParticipant {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -41863,7 +42156,7 @@ class _$TestReportParticipant implements TestReportParticipant {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -41877,14 +42170,14 @@ class _$TestReportParticipant implements TestReportParticipant {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -41894,7 +42187,7 @@ class _$TestReportParticipant implements TestReportParticipant {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -41939,7 +42232,7 @@ class _$TestReportParticipant implements TestReportParticipant {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -41964,7 +42257,7 @@ class _$TestReportParticipant implements TestReportParticipant {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -42486,7 +42779,7 @@ class _$TestReportSetup implements TestReportSetup {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -42519,7 +42812,7 @@ class _$TestReportSetup implements TestReportSetup {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -42557,7 +42850,7 @@ class _$TestReportSetup implements TestReportSetup {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -42571,14 +42864,14 @@ class _$TestReportSetup implements TestReportSetup {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -42588,7 +42881,7 @@ class _$TestReportSetup implements TestReportSetup {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -42638,7 +42931,7 @@ class _$TestReportSetup implements TestReportSetup {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -42664,7 +42957,7 @@ class _$TestReportSetup implements TestReportSetup {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -42977,7 +43270,7 @@ class _$TestReportSetup implements TestReportSetup {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -43007,7 +43300,7 @@ class _$TestReportSetup implements TestReportSetup {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -43041,7 +43334,7 @@ class _$TestReportSetup implements TestReportSetup {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -43055,14 +43348,14 @@ class _$TestReportSetup implements TestReportSetup {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -43072,7 +43365,7 @@ class _$TestReportSetup implements TestReportSetup {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -43117,7 +43410,7 @@ class _$TestReportSetup implements TestReportSetup {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -43142,7 +43435,7 @@ class _$TestReportSetup implements TestReportSetup {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -43672,7 +43965,7 @@ class _$TestReportAction implements TestReportAction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -43705,7 +43998,7 @@ class _$TestReportAction implements TestReportAction {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -43743,7 +44036,7 @@ class _$TestReportAction implements TestReportAction {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -43757,14 +44050,14 @@ class _$TestReportAction implements TestReportAction {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -43774,7 +44067,7 @@ class _$TestReportAction implements TestReportAction {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -43824,7 +44117,7 @@ class _$TestReportAction implements TestReportAction {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -43850,7 +44143,7 @@ class _$TestReportAction implements TestReportAction {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -44164,7 +44457,7 @@ class _$TestReportAction implements TestReportAction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -44194,7 +44487,7 @@ class _$TestReportAction implements TestReportAction {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -44228,7 +44521,7 @@ class _$TestReportAction implements TestReportAction {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -44242,14 +44535,14 @@ class _$TestReportAction implements TestReportAction {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -44259,7 +44552,7 @@ class _$TestReportAction implements TestReportAction {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -44304,7 +44597,7 @@ class _$TestReportAction implements TestReportAction {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -44329,7 +44622,7 @@ class _$TestReportAction implements TestReportAction {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -44871,7 +45164,7 @@ class _$TestReportOperation implements TestReportOperation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -44904,7 +45197,7 @@ class _$TestReportOperation implements TestReportOperation {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -44942,7 +45235,7 @@ class _$TestReportOperation implements TestReportOperation {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -44956,14 +45249,14 @@ class _$TestReportOperation implements TestReportOperation {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -44973,7 +45266,7 @@ class _$TestReportOperation implements TestReportOperation {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -45023,7 +45316,7 @@ class _$TestReportOperation implements TestReportOperation {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -45049,7 +45342,7 @@ class _$TestReportOperation implements TestReportOperation {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -45363,7 +45656,7 @@ class _$TestReportOperation implements TestReportOperation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -45393,7 +45686,7 @@ class _$TestReportOperation implements TestReportOperation {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -45427,7 +45720,7 @@ class _$TestReportOperation implements TestReportOperation {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -45441,14 +45734,14 @@ class _$TestReportOperation implements TestReportOperation {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -45458,7 +45751,7 @@ class _$TestReportOperation implements TestReportOperation {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -45503,7 +45796,7 @@ class _$TestReportOperation implements TestReportOperation {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -45528,7 +45821,7 @@ class _$TestReportOperation implements TestReportOperation {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -46070,7 +46363,7 @@ class _$TestReportAssert implements TestReportAssert {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -46103,7 +46396,7 @@ class _$TestReportAssert implements TestReportAssert {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -46141,7 +46434,7 @@ class _$TestReportAssert implements TestReportAssert {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -46155,14 +46448,14 @@ class _$TestReportAssert implements TestReportAssert {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -46172,7 +46465,7 @@ class _$TestReportAssert implements TestReportAssert {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -46222,7 +46515,7 @@ class _$TestReportAssert implements TestReportAssert {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -46248,7 +46541,7 @@ class _$TestReportAssert implements TestReportAssert {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -46562,7 +46855,7 @@ class _$TestReportAssert implements TestReportAssert {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -46592,7 +46885,7 @@ class _$TestReportAssert implements TestReportAssert {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -46626,7 +46919,7 @@ class _$TestReportAssert implements TestReportAssert {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -46640,14 +46933,14 @@ class _$TestReportAssert implements TestReportAssert {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -46657,7 +46950,7 @@ class _$TestReportAssert implements TestReportAssert {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -46702,7 +46995,7 @@ class _$TestReportAssert implements TestReportAssert {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -46727,7 +47020,7 @@ class _$TestReportAssert implements TestReportAssert {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -47269,7 +47562,7 @@ class _$TestReportTest implements TestReportTest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -47302,7 +47595,7 @@ class _$TestReportTest implements TestReportTest {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -47340,7 +47633,7 @@ class _$TestReportTest implements TestReportTest {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -47354,14 +47647,14 @@ class _$TestReportTest implements TestReportTest {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -47371,7 +47664,7 @@ class _$TestReportTest implements TestReportTest {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -47421,7 +47714,7 @@ class _$TestReportTest implements TestReportTest {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -47447,7 +47740,7 @@ class _$TestReportTest implements TestReportTest {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -47761,7 +48054,7 @@ class _$TestReportTest implements TestReportTest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -47791,7 +48084,7 @@ class _$TestReportTest implements TestReportTest {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -47825,7 +48118,7 @@ class _$TestReportTest implements TestReportTest {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -47839,14 +48132,14 @@ class _$TestReportTest implements TestReportTest {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -47856,7 +48149,7 @@ class _$TestReportTest implements TestReportTest {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -47901,7 +48194,7 @@ class _$TestReportTest implements TestReportTest {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -47926,7 +48219,7 @@ class _$TestReportTest implements TestReportTest {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -48461,7 +48754,7 @@ class _$TestReportAction1 implements TestReportAction1 {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -48494,7 +48787,7 @@ class _$TestReportAction1 implements TestReportAction1 {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -48532,7 +48825,7 @@ class _$TestReportAction1 implements TestReportAction1 {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -48546,14 +48839,14 @@ class _$TestReportAction1 implements TestReportAction1 {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -48563,7 +48856,7 @@ class _$TestReportAction1 implements TestReportAction1 {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -48613,7 +48906,7 @@ class _$TestReportAction1 implements TestReportAction1 {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -48639,7 +48932,7 @@ class _$TestReportAction1 implements TestReportAction1 {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -48953,7 +49246,7 @@ class _$TestReportAction1 implements TestReportAction1 {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -48983,7 +49276,7 @@ class _$TestReportAction1 implements TestReportAction1 {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -49017,7 +49310,7 @@ class _$TestReportAction1 implements TestReportAction1 {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -49031,14 +49324,14 @@ class _$TestReportAction1 implements TestReportAction1 {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -49048,7 +49341,7 @@ class _$TestReportAction1 implements TestReportAction1 {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -49093,7 +49386,7 @@ class _$TestReportAction1 implements TestReportAction1 {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -49118,7 +49411,7 @@ class _$TestReportAction1 implements TestReportAction1 {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -49639,7 +49932,7 @@ class _$TestReportTeardown implements TestReportTeardown {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -49672,7 +49965,7 @@ class _$TestReportTeardown implements TestReportTeardown {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -49710,7 +50003,7 @@ class _$TestReportTeardown implements TestReportTeardown {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -49724,14 +50017,14 @@ class _$TestReportTeardown implements TestReportTeardown {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -49741,7 +50034,7 @@ class _$TestReportTeardown implements TestReportTeardown {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -49791,7 +50084,7 @@ class _$TestReportTeardown implements TestReportTeardown {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -49817,7 +50110,7 @@ class _$TestReportTeardown implements TestReportTeardown {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -50130,7 +50423,7 @@ class _$TestReportTeardown implements TestReportTeardown {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -50160,7 +50453,7 @@ class _$TestReportTeardown implements TestReportTeardown {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -50194,7 +50487,7 @@ class _$TestReportTeardown implements TestReportTeardown {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -50208,14 +50501,14 @@ class _$TestReportTeardown implements TestReportTeardown {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -50225,7 +50518,7 @@ class _$TestReportTeardown implements TestReportTeardown {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -50270,7 +50563,7 @@ class _$TestReportTeardown implements TestReportTeardown {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -50295,7 +50588,7 @@ class _$TestReportTeardown implements TestReportTeardown {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,
@@ -50815,7 +51108,7 @@ class _$TestReportAction2 implements TestReportAction2 {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MeasureReportStatus status,
             MeasureReportType type,
             Canonical measure,
@@ -50848,7 +51141,7 @@ class _$TestReportAction2 implements TestReportAction2 {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> stratum),
     @required
         Result measureReportStratum(
@@ -50886,7 +51179,7 @@ class _$TestReportAction2 implements TestReportAction2 {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -50900,14 +51193,14 @@ class _$TestReportAction2 implements TestReportAction2 {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -50917,7 +51210,7 @@ class _$TestReportAction2 implements TestReportAction2 {
             Markdown disclaimer,
             CodeableConcept scoring,
             CodeableConcept compositeScoring,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             String riskAdjustment,
             String rateAggregation,
             Markdown rationale,
@@ -50967,7 +51260,7 @@ class _$TestReportAction2 implements TestReportAction2 {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept code,
-            List<dynamic> usage,
+            List<CodeableConcept> usage,
             String description,
             Expression criteria),
     @required
@@ -50993,7 +51286,7 @@ class _$TestReportAction2 implements TestReportAction2 {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             Markdown copyright,
             List<dynamic> origin,
@@ -51306,7 +51599,7 @@ class _$TestReportAction2 implements TestReportAction2 {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MeasureReportStatus status,
         MeasureReportType type,
         Canonical measure,
@@ -51336,7 +51629,7 @@ class _$TestReportAction2 implements TestReportAction2 {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> stratum),
     Result measureReportStratum(
         String id,
@@ -51370,7 +51663,7 @@ class _$TestReportAction2 implements TestReportAction2 {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -51384,14 +51677,14 @@ class _$TestReportAction2 implements TestReportAction2 {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -51401,7 +51694,7 @@ class _$TestReportAction2 implements TestReportAction2 {
         Markdown disclaimer,
         CodeableConcept scoring,
         CodeableConcept compositeScoring,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         String riskAdjustment,
         String rateAggregation,
         Markdown rationale,
@@ -51446,7 +51739,7 @@ class _$TestReportAction2 implements TestReportAction2 {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept code,
-        List<dynamic> usage,
+        List<CodeableConcept> usage,
         String description,
         Expression criteria),
     Result testScript(
@@ -51471,7 +51764,7 @@ class _$TestReportAction2 implements TestReportAction2 {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         Markdown copyright,
         List<dynamic> origin,

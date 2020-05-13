@@ -25,7 +25,10 @@ _$MeasureReport _$_$MeasureReportFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status: _$enumDecodeNullable(_$MeasureReportStatusEnumMap, json['status']),
     type: _$enumDecodeNullable(_$MeasureReportTypeEnumMap, json['type']),
     measure: json['measure'] == null
@@ -184,7 +187,11 @@ _$MeasureReportStratifier _$_$MeasureReportStratifierFromJson(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    code: json['code'] as List,
+    code: (json['code'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     stratum: json['stratum'] as List,
   );
 }
@@ -300,7 +307,10 @@ _$Measure _$_$MeasureFromJson(Map<String, dynamic> json) {
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
@@ -323,7 +333,11 @@ _$Measure _$_$MeasureFromJson(Map<String, dynamic> json) {
         ? null
         : Markdown.fromJson(json['description'] as String),
     useContext: json['useContext'] as List,
-    jurisdiction: json['jurisdiction'] as List,
+    jurisdiction: (json['jurisdiction'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     purpose: json['purpose'] == null
         ? null
         : Markdown.fromJson(json['purpose'] as String),
@@ -340,7 +354,11 @@ _$Measure _$_$MeasureFromJson(Map<String, dynamic> json) {
     effectivePeriod: json['effectivePeriod'] == null
         ? null
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    topic: json['topic'] as List,
+    topic: (json['topic'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     author: json['author'] as List,
     editor: json['editor'] as List,
     reviewer: json['reviewer'] as List,
@@ -359,7 +377,11 @@ _$Measure _$_$MeasureFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['compositeScoring'] as Map<String, dynamic>),
-    type: json['type'] as List,
+    type: (json['type'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     riskAdjustment: json['riskAdjustment'] as String,
     rateAggregation: json['rateAggregation'] as String,
     rationale: json['rationale'] == null
@@ -559,7 +581,11 @@ _$MeasureSupplementalData _$_$MeasureSupplementalDataFromJson(
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-    usage: json['usage'] as List,
+    usage: (json['usage'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     description: json['description'] as String,
     criteria: json['criteria'] == null
         ? null
@@ -616,7 +642,11 @@ _$TestScript _$_$TestScriptFromJson(Map<String, dynamic> json) {
         ? null
         : Markdown.fromJson(json['description'] as String),
     useContext: json['useContext'] as List,
-    jurisdiction: json['jurisdiction'] as List,
+    jurisdiction: (json['jurisdiction'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     purpose: json['purpose'] == null
         ? null
         : Markdown.fromJson(json['purpose'] as String),

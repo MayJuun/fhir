@@ -25,9 +25,16 @@ _$Substance _$_$SubstanceFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status: _$enumDecodeNullable(_$SubstanceStatusEnumMap, json['status']),
-    category: json['category'] as List,
+    category: (json['category'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -175,7 +182,10 @@ _$BiologicallyDerivedProduct _$_$BiologicallyDerivedProductFromJson(
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     productCategory: _$enumDecodeNullable(
         _$BiologicallyDerivedProductCategoryEnumMap, json['productCategory']),
     productCode: json['productCode'] == null
@@ -392,13 +402,20 @@ _$Device _$_$DeviceFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     definition: json['definition'] == null
         ? null
         : Reference.fromJson(json['definition'] as Map<String, dynamic>),
     udiCarrier: json['udiCarrier'] as List,
     status: _$enumDecodeNullable(_$DeviceStatusEnumMap, json['status']),
-    statusReason: json['statusReason'] as List,
+    statusReason: (json['statusReason'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     distinctIdentifier: json['distinctIdentifier'] as String,
     manufacturer: json['manufacturer'] as String,
     manufactureDate: json['manufactureDate'] == null
@@ -424,13 +441,23 @@ _$Device _$_$DeviceFromJson(Map<String, dynamic> json) {
     owner: json['owner'] == null
         ? null
         : Reference.fromJson(json['owner'] as Map<String, dynamic>),
-    contact: json['contact'] as List,
+    contact: (json['contact'] as List)
+        ?.map((e) =>
+            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     location: json['location'] == null
         ? null
         : Reference.fromJson(json['location'] as Map<String, dynamic>),
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
-    note: json['note'] as List,
-    safety: json['safety'] as List,
+    note: (json['note'] as List)
+        ?.map((e) =>
+            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    safety: (json['safety'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     parent: json['parent'] == null
         ? null
         : Reference.fromJson(json['parent'] as Map<String, dynamic>),
@@ -610,8 +637,15 @@ _$DeviceProperty _$_$DevicePropertyFromJson(Map<String, dynamic> json) {
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    valueQuantity: json['valueQuantity'] as List,
-    valueCode: json['valueCode'] as List,
+    valueQuantity: (json['valueQuantity'] as List)
+        ?.map((e) =>
+            e == null ? null : Quantity.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    valueCode: (json['valueCode'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -644,7 +678,10 @@ _$DeviceMetric _$_$DeviceMetricFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),

@@ -25,7 +25,10 @@ _$Group _$_$GroupFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     active: json['active'] as bool,
     type: _$enumDecodeNullable(_$GroupTypeEnumMap, json['type']),
     actual: json['actual'] as bool,
@@ -196,10 +199,19 @@ _$Patient _$_$PatientFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     active: json['active'] as bool,
-    name: json['name'] as List,
-    telecom: json['telecom'] as List,
+    name: (json['name'] as List)
+        ?.map((e) =>
+            e == null ? null : HumanName.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    telecom: (json['telecom'] as List)
+        ?.map((e) =>
+            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     gender: _$enumDecodeNullable(_$PatientGenderEnumMap, json['gender']),
     birthDate: json['birthDate'] == null
         ? null
@@ -208,14 +220,20 @@ _$Patient _$_$PatientFromJson(Map<String, dynamic> json) {
     deceasedDateTime: json['deceasedDateTime'] == null
         ? null
         : FhirDateTime.fromJson(json['deceasedDateTime'] as String),
-    address: json['address'] as List,
+    address: (json['address'] as List)
+        ?.map((e) =>
+            e == null ? null : Address.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     maritalStatus: json['maritalStatus'] == null
         ? null
         : CodeableConcept.fromJson(
             json['maritalStatus'] as Map<String, dynamic>),
     multipleBirthBoolean: json['multipleBirthBoolean'] as bool,
     multipleBirthInteger: json['multipleBirthInteger'] as int,
-    photo: json['photo'] as List,
+    photo: (json['photo'] as List)
+        ?.map((e) =>
+            e == null ? null : Attachment.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     contact: json['contact'] as List,
     communication: json['communication'] as List,
     generalPractitioner: json['generalPractitioner'] as List,
@@ -269,11 +287,18 @@ _$PatientContact _$_$PatientContactFromJson(Map<String, dynamic> json) {
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    relationship: json['relationship'] as List,
+    relationship: (json['relationship'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     name: json['name'] == null
         ? null
         : HumanName.fromJson(json['name'] as Map<String, dynamic>),
-    telecom: json['telecom'] as List,
+    telecom: (json['telecom'] as List)
+        ?.map((e) =>
+            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     address: json['address'] == null
         ? null
         : Address.fromJson(json['address'] as Map<String, dynamic>),
@@ -379,7 +404,10 @@ _$PractitionerRole _$_$PractitionerRoleFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     active: json['active'] as bool,
     period: json['period'] == null
         ? null
@@ -390,11 +418,22 @@ _$PractitionerRole _$_$PractitionerRoleFromJson(Map<String, dynamic> json) {
     organization: json['organization'] == null
         ? null
         : Reference.fromJson(json['organization'] as Map<String, dynamic>),
-    code: json['code'] as List,
-    specialty: json['specialty'] as List,
+    code: (json['code'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    specialty: (json['specialty'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     location: json['location'] as List,
     healthcareService: json['healthcareService'] as List,
-    telecom: json['telecom'] as List,
+    telecom: (json['telecom'] as List)
+        ?.map((e) =>
+            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     availableTime: json['availableTime'] as List,
     notAvailable: json['notAvailable'] as List,
     availabilityExceptions: json['availabilityExceptions'] as String,
@@ -502,14 +541,26 @@ _$Person _$_$PersonFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
-    name: json['name'] as List,
-    telecom: json['telecom'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    name: (json['name'] as List)
+        ?.map((e) =>
+            e == null ? null : HumanName.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    telecom: (json['telecom'] as List)
+        ?.map((e) =>
+            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     gender: _$enumDecodeNullable(_$PersonGenderEnumMap, json['gender']),
     birthDate: json['birthDate'] == null
         ? null
         : Date.fromJson(json['birthDate'] as String),
-    address: json['address'] as List,
+    address: (json['address'] as List)
+        ?.map((e) =>
+            e == null ? null : Address.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     photo: json['photo'] == null
         ? null
         : Attachment.fromJson(json['photo'] as Map<String, dynamic>),
@@ -600,18 +651,37 @@ _$Practitioner _$_$PractitionerFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     active: json['active'] as bool,
-    name: json['name'] as List,
-    telecom: json['telecom'] as List,
-    address: json['address'] as List,
+    name: (json['name'] as List)
+        ?.map((e) =>
+            e == null ? null : HumanName.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    telecom: (json['telecom'] as List)
+        ?.map((e) =>
+            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    address: (json['address'] as List)
+        ?.map((e) =>
+            e == null ? null : Address.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     gender: _$enumDecodeNullable(_$PractitionerGenderEnumMap, json['gender']),
     birthDate: json['birthDate'] == null
         ? null
         : Date.fromJson(json['birthDate'] as String),
-    photo: json['photo'] as List,
+    photo: (json['photo'] as List)
+        ?.map((e) =>
+            e == null ? null : Attachment.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     qualification: json['qualification'] as List,
-    communication: json['communication'] as List,
+    communication: (json['communication'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -651,7 +721,10 @@ _$PractitionerQualification _$_$PractitionerQualificationFromJson(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -695,20 +768,39 @@ _$RelatedPerson _$_$RelatedPersonFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     active: json['active'] as bool,
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
-    relationship: json['relationship'] as List,
-    name: json['name'] as List,
-    telecom: json['telecom'] as List,
+    relationship: (json['relationship'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    name: (json['name'] as List)
+        ?.map((e) =>
+            e == null ? null : HumanName.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    telecom: (json['telecom'] as List)
+        ?.map((e) =>
+            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     gender: _$enumDecodeNullable(_$RelatedPersonGenderEnumMap, json['gender']),
     birthDate: json['birthDate'] == null
         ? null
         : Date.fromJson(json['birthDate'] as String),
-    address: json['address'] as List,
-    photo: json['photo'] as List,
+    address: (json['address'] as List)
+        ?.map((e) =>
+            e == null ? null : Address.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    photo: (json['photo'] as List)
+        ?.map((e) =>
+            e == null ? null : Attachment.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),

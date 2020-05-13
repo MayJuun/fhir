@@ -25,7 +25,10 @@ _$EnrollmentRequest _$_$EnrollmentRequestFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status:
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     created: json['created'] == null
@@ -85,7 +88,10 @@ _$EnrollmentResponse _$_$EnrollmentResponseFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status:
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     request: json['request'] == null
@@ -186,7 +192,10 @@ _$CoverageEligibilityResponse _$_$CoverageEligibilityResponseFromJson(
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status:
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     purpose: (json['purpose'] as List)?.map((e) => e as String)?.toList(),
@@ -299,7 +308,11 @@ _$CoverageEligibilityResponseItem _$_$CoverageEligibilityResponseItemFromJson(
         ? null
         : CodeableConcept.fromJson(
             json['productOrService'] as Map<String, dynamic>),
-    modifier: json['modifier'] as List,
+    modifier: (json['modifier'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     provider: json['provider'] == null
         ? null
         : Reference.fromJson(json['provider'] as Map<String, dynamic>),
@@ -317,7 +330,11 @@ _$CoverageEligibilityResponseItem _$_$CoverageEligibilityResponseItemFromJson(
         : CodeableConcept.fromJson(json['term'] as Map<String, dynamic>),
     benefit: json['benefit'] as List,
     authorizationRequired: json['authorizationRequired'] as bool,
-    authorizationSupporting: json['authorizationSupporting'] as List,
+    authorizationSupporting: (json['authorizationSupporting'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     authorizationUrl: json['authorizationUrl'] == null
         ? null
         : FhirUri.fromJson(json['authorizationUrl'] as String),
@@ -424,7 +441,10 @@ _$CoverageEligibilityRequest _$_$CoverageEligibilityRequestFromJson(
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status:
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     priority: json['priority'] == null
@@ -557,7 +577,11 @@ _$CoverageEligibilityRequestItem _$_$CoverageEligibilityRequestItemFromJson(
         ? null
         : CodeableConcept.fromJson(
             json['productOrService'] as Map<String, dynamic>),
-    modifier: json['modifier'] as List,
+    modifier: (json['modifier'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     provider: json['provider'] == null
         ? null
         : Reference.fromJson(json['provider'] as Map<String, dynamic>),
@@ -639,7 +663,10 @@ _$Coverage _$_$CoverageFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status:
         json['status'] == null ? null : Code.fromJson(json['status'] as String),
     type: json['type'] == null

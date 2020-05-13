@@ -55,7 +55,7 @@ class _$SpecialTypesTearOff {
       List<dynamic> modifierExtension,
       int sequence,
       String text,
-      List<dynamic> additionalInstruction,
+      List<CodeableConcept> additionalInstruction,
       String patientInstruction,
       Timing timing,
       bool asNeededBoolean,
@@ -120,7 +120,7 @@ class _$SpecialTypesTearOff {
       String sliceName,
       bool sliceIsConstraining,
       String label,
-      List<dynamic> code,
+      List<Coding> code,
       ElementDefinitionSlicing slicing,
       String short,
       Markdown definition,
@@ -880,8 +880,8 @@ class _$SpecialTypesTearOff {
       Instant lastUpdated,
       Uri source,
       List<Canonical> profile,
-      List<dynamic> security,
-      List<dynamic> tag}) {
+      List<Coding> security,
+      List<Coding> tag}) {
     return Meta(
       id: id,
       fhirExtension: fhirExtension,
@@ -942,7 +942,7 @@ mixin _$SpecialTypes {
             List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<dynamic> additionalInstruction,
+            List<CodeableConcept> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -975,7 +975,7 @@ mixin _$SpecialTypes {
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<dynamic> code,
+            List<Coding> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -1349,8 +1349,8 @@ mixin _$SpecialTypes {
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<dynamic> security,
-            List<dynamic> tag),
+            List<Coding> security,
+            List<Coding> tag),
     @required
         Result narrative(
             String id,
@@ -1374,7 +1374,7 @@ mixin _$SpecialTypes {
         List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<dynamic> additionalInstruction,
+        List<CodeableConcept> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -1405,7 +1405,7 @@ mixin _$SpecialTypes {
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<dynamic> code,
+        List<Coding> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -1769,8 +1769,8 @@ mixin _$SpecialTypes {
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<dynamic> security,
-        List<dynamic> tag),
+        List<Coding> security,
+        List<Coding> tag),
     Result narrative(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -1868,7 +1868,7 @@ abstract class $DosageCopyWith<$Res> implements $SpecialTypesCopyWith<$Res> {
       List<dynamic> modifierExtension,
       int sequence,
       String text,
-      List<dynamic> additionalInstruction,
+      List<CodeableConcept> additionalInstruction,
       String patientInstruction,
       Timing timing,
       bool asNeededBoolean,
@@ -1880,6 +1880,15 @@ abstract class $DosageCopyWith<$Res> implements $SpecialTypesCopyWith<$Res> {
       Ratio maxDosePerPeriod,
       Quantity maxDosePerAdministration,
       Quantity maxDosePerLifetime});
+
+  $TimingCopyWith<$Res> get timing;
+  $CodeableConceptCopyWith<$Res> get asNeededCodeableConcept;
+  $CodeableConceptCopyWith<$Res> get site;
+  $CodeableConceptCopyWith<$Res> get route;
+  $CodeableConceptCopyWith<$Res> get method;
+  $RatioCopyWith<$Res> get maxDosePerPeriod;
+  $QuantityCopyWith<$Res> get maxDosePerAdministration;
+  $QuantityCopyWith<$Res> get maxDosePerLifetime;
 }
 
 class _$DosageCopyWithImpl<$Res> extends _$SpecialTypesCopyWithImpl<$Res>
@@ -1922,7 +1931,7 @@ class _$DosageCopyWithImpl<$Res> extends _$SpecialTypesCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as String,
       additionalInstruction: additionalInstruction == freezed
           ? _value.additionalInstruction
-          : additionalInstruction as List<dynamic>,
+          : additionalInstruction as List<CodeableConcept>,
       patientInstruction: patientInstruction == freezed
           ? _value.patientInstruction
           : patientInstruction as String,
@@ -1949,6 +1958,87 @@ class _$DosageCopyWithImpl<$Res> extends _$SpecialTypesCopyWithImpl<$Res>
           ? _value.maxDosePerLifetime
           : maxDosePerLifetime as Quantity,
     ));
+  }
+
+  @override
+  $TimingCopyWith<$Res> get timing {
+    if (_value.timing == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.timing, (value) {
+      return _then(_value.copyWith(timing: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get asNeededCodeableConcept {
+    if (_value.asNeededCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.asNeededCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(asNeededCodeableConcept: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get site {
+    if (_value.site == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.site, (value) {
+      return _then(_value.copyWith(site: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get route {
+    if (_value.route == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.route, (value) {
+      return _then(_value.copyWith(route: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get method {
+    if (_value.method == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.method, (value) {
+      return _then(_value.copyWith(method: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get maxDosePerPeriod {
+    if (_value.maxDosePerPeriod == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.maxDosePerPeriod, (value) {
+      return _then(_value.copyWith(maxDosePerPeriod: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get maxDosePerAdministration {
+    if (_value.maxDosePerAdministration == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.maxDosePerAdministration, (value) {
+      return _then(_value.copyWith(maxDosePerAdministration: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get maxDosePerLifetime {
+    if (_value.maxDosePerLifetime == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.maxDosePerLifetime, (value) {
+      return _then(_value.copyWith(maxDosePerLifetime: value));
+    });
   }
 }
 
@@ -1988,7 +2078,7 @@ class _$Dosage implements Dosage {
   @override
   final String text;
   @override
-  final List<dynamic> additionalInstruction;
+  final List<CodeableConcept> additionalInstruction;
   @override
   final String patientInstruction;
   @override
@@ -2106,7 +2196,7 @@ class _$Dosage implements Dosage {
             List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<dynamic> additionalInstruction,
+            List<CodeableConcept> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -2139,7 +2229,7 @@ class _$Dosage implements Dosage {
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<dynamic> code,
+            List<Coding> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -2513,8 +2603,8 @@ class _$Dosage implements Dosage {
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<dynamic> security,
-            List<dynamic> tag),
+            List<Coding> security,
+            List<Coding> tag),
     @required
         Result narrative(
             String id,
@@ -2574,7 +2664,7 @@ class _$Dosage implements Dosage {
         List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<dynamic> additionalInstruction,
+        List<CodeableConcept> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -2605,7 +2695,7 @@ class _$Dosage implements Dosage {
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<dynamic> code,
+        List<Coding> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -2969,8 +3059,8 @@ class _$Dosage implements Dosage {
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<dynamic> security,
-        List<dynamic> tag),
+        List<Coding> security,
+        List<Coding> tag),
     Result narrative(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -3089,7 +3179,7 @@ abstract class Dosage implements SpecialTypes {
       List<dynamic> modifierExtension,
       int sequence,
       String text,
-      List<dynamic> additionalInstruction,
+      List<CodeableConcept> additionalInstruction,
       String patientInstruction,
       Timing timing,
       bool asNeededBoolean,
@@ -3112,7 +3202,7 @@ abstract class Dosage implements SpecialTypes {
   List<dynamic> get modifierExtension;
   int get sequence;
   String get text;
-  List<dynamic> get additionalInstruction;
+  List<CodeableConcept> get additionalInstruction;
   String get patientInstruction;
   Timing get timing;
   bool get asNeededBoolean;
@@ -3144,6 +3234,13 @@ abstract class $DosageDoseAndRateCopyWith<$Res>
       Ratio rateRatio,
       Range rateRange,
       Quantity rateQuantity});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $RangeCopyWith<$Res> get doseRange;
+  $QuantityCopyWith<$Res> get doseQuantity;
+  $RatioCopyWith<$Res> get rateRatio;
+  $RangeCopyWith<$Res> get rateRange;
+  $QuantityCopyWith<$Res> get rateQuantity;
 }
 
 class _$DosageDoseAndRateCopyWithImpl<$Res>
@@ -3187,6 +3284,66 @@ class _$DosageDoseAndRateCopyWithImpl<$Res>
           ? _value.rateQuantity
           : rateQuantity as Quantity,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get doseRange {
+    if (_value.doseRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.doseRange, (value) {
+      return _then(_value.copyWith(doseRange: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get doseQuantity {
+    if (_value.doseQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.doseQuantity, (value) {
+      return _then(_value.copyWith(doseQuantity: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get rateRatio {
+    if (_value.rateRatio == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.rateRatio, (value) {
+      return _then(_value.copyWith(rateRatio: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get rateRange {
+    if (_value.rateRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.rateRange, (value) {
+      return _then(_value.copyWith(rateRange: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get rateQuantity {
+    if (_value.rateQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.rateQuantity, (value) {
+      return _then(_value.copyWith(rateQuantity: value));
+    });
   }
 }
 
@@ -3289,7 +3446,7 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
             List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<dynamic> additionalInstruction,
+            List<CodeableConcept> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -3322,7 +3479,7 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<dynamic> code,
+            List<Coding> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -3696,8 +3853,8 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<dynamic> security,
-            List<dynamic> tag),
+            List<Coding> security,
+            List<Coding> tag),
     @required
         Result narrative(
             String id,
@@ -3741,7 +3898,7 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
         List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<dynamic> additionalInstruction,
+        List<CodeableConcept> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -3772,7 +3929,7 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<dynamic> code,
+        List<Coding> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -4136,8 +4293,8 @@ class _$DosageDoseAndRate implements DosageDoseAndRate {
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<dynamic> security,
-        List<dynamic> tag),
+        List<Coding> security,
+        List<Coding> tag),
     Result narrative(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -4280,7 +4437,7 @@ abstract class $ElementDefinitionCopyWith<$Res>
       String sliceName,
       bool sliceIsConstraining,
       String label,
-      List<dynamic> code,
+      List<Coding> code,
       ElementDefinitionSlicing slicing,
       String short,
       Markdown definition,
@@ -4472,6 +4629,69 @@ abstract class $ElementDefinitionCopyWith<$Res>
       bool isSummary,
       ElementDefinitionBinding binding,
       List<dynamic> mapping});
+
+  $AddressCopyWith<$Res> get defaultValueAddress;
+  $AgeCopyWith<$Res> get defaultValueAge;
+  $AnnotationCopyWith<$Res> get defaultValueAnnotation;
+  $AttachmentCopyWith<$Res> get defaultValueAttachment;
+  $CodeableConceptCopyWith<$Res> get defaultValueCodeableConcept;
+  $CodingCopyWith<$Res> get defaultValueCoding;
+  $ContactPointCopyWith<$Res> get defaultValueContactPoint;
+  $CountCopyWith<$Res> get defaultValueCount;
+  $DistanceCopyWith<$Res> get defaultValueDistance;
+  $DurationCopyWith<$Res> get defaultValueDuration;
+  $HumanNameCopyWith<$Res> get defaultValueHumanName;
+  $IdentifierCopyWith<$Res> get defaultValueIdentifier;
+  $MoneyCopyWith<$Res> get defaultValueMoney;
+  $PeriodCopyWith<$Res> get defaultValuePeriod;
+  $QuantityCopyWith<$Res> get defaultValueQuantity;
+  $RangeCopyWith<$Res> get defaultValueRange;
+  $RatioCopyWith<$Res> get defaultValueRatio;
+  $SampledDataCopyWith<$Res> get defaultValueSampledData;
+  $SignatureCopyWith<$Res> get defaultValueSignature;
+  $TimingCopyWith<$Res> get defaultValueTiming;
+  $AddressCopyWith<$Res> get fixedAddress;
+  $AgeCopyWith<$Res> get fixedAge;
+  $AnnotationCopyWith<$Res> get fixedAnnotation;
+  $AttachmentCopyWith<$Res> get fixedAttachment;
+  $CodeableConceptCopyWith<$Res> get fixedCodeableConcept;
+  $CodingCopyWith<$Res> get fixedCoding;
+  $ContactPointCopyWith<$Res> get fixedContactPoint;
+  $CountCopyWith<$Res> get fixedCount;
+  $DistanceCopyWith<$Res> get fixedDistance;
+  $DurationCopyWith<$Res> get fixedDuration;
+  $HumanNameCopyWith<$Res> get fixedHumanName;
+  $IdentifierCopyWith<$Res> get fixedIdentifier;
+  $MoneyCopyWith<$Res> get fixedMoney;
+  $PeriodCopyWith<$Res> get fixedPeriod;
+  $QuantityCopyWith<$Res> get fixedQuantity;
+  $RangeCopyWith<$Res> get fixedRange;
+  $RatioCopyWith<$Res> get fixedRatio;
+  $SampledDataCopyWith<$Res> get fixedSampledData;
+  $SignatureCopyWith<$Res> get fixedSignature;
+  $TimingCopyWith<$Res> get fixedTiming;
+  $AddressCopyWith<$Res> get patternAddress;
+  $AgeCopyWith<$Res> get patternAge;
+  $AnnotationCopyWith<$Res> get patternAnnotation;
+  $AttachmentCopyWith<$Res> get patternAttachment;
+  $CodeableConceptCopyWith<$Res> get patternCodeableConcept;
+  $CodingCopyWith<$Res> get patternCoding;
+  $ContactPointCopyWith<$Res> get patternContactPoint;
+  $CountCopyWith<$Res> get patternCount;
+  $DistanceCopyWith<$Res> get patternDistance;
+  $DurationCopyWith<$Res> get patternDuration;
+  $HumanNameCopyWith<$Res> get patternHumanName;
+  $IdentifierCopyWith<$Res> get patternIdentifier;
+  $MoneyCopyWith<$Res> get patternMoney;
+  $PeriodCopyWith<$Res> get patternPeriod;
+  $QuantityCopyWith<$Res> get patternQuantity;
+  $RangeCopyWith<$Res> get patternRange;
+  $RatioCopyWith<$Res> get patternRatio;
+  $SampledDataCopyWith<$Res> get patternSampledData;
+  $SignatureCopyWith<$Res> get patternSignature;
+  $TimingCopyWith<$Res> get patternTiming;
+  $QuantityCopyWith<$Res> get minValueQuantity;
+  $QuantityCopyWith<$Res> get maxValueQuantity;
 }
 
 class _$ElementDefinitionCopyWithImpl<$Res>
@@ -4704,7 +4924,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.sliceIsConstraining
           : sliceIsConstraining as bool,
       label: label == freezed ? _value.label : label as String,
-      code: code == freezed ? _value.code : code as List<dynamic>,
+      code: code == freezed ? _value.code : code as List<Coding>,
       slicing: slicing == freezed
           ? _value.slicing
           : slicing as ElementDefinitionSlicing,
@@ -5204,6 +5424,629 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       mapping: mapping == freezed ? _value.mapping : mapping as List<dynamic>,
     ));
   }
+
+  @override
+  $AddressCopyWith<$Res> get defaultValueAddress {
+    if (_value.defaultValueAddress == null) {
+      return null;
+    }
+    return $AddressCopyWith<$Res>(_value.defaultValueAddress, (value) {
+      return _then(_value.copyWith(defaultValueAddress: value));
+    });
+  }
+
+  @override
+  $AgeCopyWith<$Res> get defaultValueAge {
+    if (_value.defaultValueAge == null) {
+      return null;
+    }
+    return $AgeCopyWith<$Res>(_value.defaultValueAge, (value) {
+      return _then(_value.copyWith(defaultValueAge: value));
+    });
+  }
+
+  @override
+  $AnnotationCopyWith<$Res> get defaultValueAnnotation {
+    if (_value.defaultValueAnnotation == null) {
+      return null;
+    }
+    return $AnnotationCopyWith<$Res>(_value.defaultValueAnnotation, (value) {
+      return _then(_value.copyWith(defaultValueAnnotation: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get defaultValueAttachment {
+    if (_value.defaultValueAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.defaultValueAttachment, (value) {
+      return _then(_value.copyWith(defaultValueAttachment: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get defaultValueCodeableConcept {
+    if (_value.defaultValueCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.defaultValueCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(defaultValueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get defaultValueCoding {
+    if (_value.defaultValueCoding == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.defaultValueCoding, (value) {
+      return _then(_value.copyWith(defaultValueCoding: value));
+    });
+  }
+
+  @override
+  $ContactPointCopyWith<$Res> get defaultValueContactPoint {
+    if (_value.defaultValueContactPoint == null) {
+      return null;
+    }
+    return $ContactPointCopyWith<$Res>(_value.defaultValueContactPoint,
+        (value) {
+      return _then(_value.copyWith(defaultValueContactPoint: value));
+    });
+  }
+
+  @override
+  $CountCopyWith<$Res> get defaultValueCount {
+    if (_value.defaultValueCount == null) {
+      return null;
+    }
+    return $CountCopyWith<$Res>(_value.defaultValueCount, (value) {
+      return _then(_value.copyWith(defaultValueCount: value));
+    });
+  }
+
+  @override
+  $DistanceCopyWith<$Res> get defaultValueDistance {
+    if (_value.defaultValueDistance == null) {
+      return null;
+    }
+    return $DistanceCopyWith<$Res>(_value.defaultValueDistance, (value) {
+      return _then(_value.copyWith(defaultValueDistance: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get defaultValueDuration {
+    if (_value.defaultValueDuration == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.defaultValueDuration, (value) {
+      return _then(_value.copyWith(defaultValueDuration: value));
+    });
+  }
+
+  @override
+  $HumanNameCopyWith<$Res> get defaultValueHumanName {
+    if (_value.defaultValueHumanName == null) {
+      return null;
+    }
+    return $HumanNameCopyWith<$Res>(_value.defaultValueHumanName, (value) {
+      return _then(_value.copyWith(defaultValueHumanName: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get defaultValueIdentifier {
+    if (_value.defaultValueIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.defaultValueIdentifier, (value) {
+      return _then(_value.copyWith(defaultValueIdentifier: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get defaultValueMoney {
+    if (_value.defaultValueMoney == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.defaultValueMoney, (value) {
+      return _then(_value.copyWith(defaultValueMoney: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get defaultValuePeriod {
+    if (_value.defaultValuePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.defaultValuePeriod, (value) {
+      return _then(_value.copyWith(defaultValuePeriod: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get defaultValueQuantity {
+    if (_value.defaultValueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.defaultValueQuantity, (value) {
+      return _then(_value.copyWith(defaultValueQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get defaultValueRange {
+    if (_value.defaultValueRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.defaultValueRange, (value) {
+      return _then(_value.copyWith(defaultValueRange: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get defaultValueRatio {
+    if (_value.defaultValueRatio == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.defaultValueRatio, (value) {
+      return _then(_value.copyWith(defaultValueRatio: value));
+    });
+  }
+
+  @override
+  $SampledDataCopyWith<$Res> get defaultValueSampledData {
+    if (_value.defaultValueSampledData == null) {
+      return null;
+    }
+    return $SampledDataCopyWith<$Res>(_value.defaultValueSampledData, (value) {
+      return _then(_value.copyWith(defaultValueSampledData: value));
+    });
+  }
+
+  @override
+  $SignatureCopyWith<$Res> get defaultValueSignature {
+    if (_value.defaultValueSignature == null) {
+      return null;
+    }
+    return $SignatureCopyWith<$Res>(_value.defaultValueSignature, (value) {
+      return _then(_value.copyWith(defaultValueSignature: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get defaultValueTiming {
+    if (_value.defaultValueTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.defaultValueTiming, (value) {
+      return _then(_value.copyWith(defaultValueTiming: value));
+    });
+  }
+
+  @override
+  $AddressCopyWith<$Res> get fixedAddress {
+    if (_value.fixedAddress == null) {
+      return null;
+    }
+    return $AddressCopyWith<$Res>(_value.fixedAddress, (value) {
+      return _then(_value.copyWith(fixedAddress: value));
+    });
+  }
+
+  @override
+  $AgeCopyWith<$Res> get fixedAge {
+    if (_value.fixedAge == null) {
+      return null;
+    }
+    return $AgeCopyWith<$Res>(_value.fixedAge, (value) {
+      return _then(_value.copyWith(fixedAge: value));
+    });
+  }
+
+  @override
+  $AnnotationCopyWith<$Res> get fixedAnnotation {
+    if (_value.fixedAnnotation == null) {
+      return null;
+    }
+    return $AnnotationCopyWith<$Res>(_value.fixedAnnotation, (value) {
+      return _then(_value.copyWith(fixedAnnotation: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get fixedAttachment {
+    if (_value.fixedAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.fixedAttachment, (value) {
+      return _then(_value.copyWith(fixedAttachment: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get fixedCodeableConcept {
+    if (_value.fixedCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.fixedCodeableConcept, (value) {
+      return _then(_value.copyWith(fixedCodeableConcept: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get fixedCoding {
+    if (_value.fixedCoding == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.fixedCoding, (value) {
+      return _then(_value.copyWith(fixedCoding: value));
+    });
+  }
+
+  @override
+  $ContactPointCopyWith<$Res> get fixedContactPoint {
+    if (_value.fixedContactPoint == null) {
+      return null;
+    }
+    return $ContactPointCopyWith<$Res>(_value.fixedContactPoint, (value) {
+      return _then(_value.copyWith(fixedContactPoint: value));
+    });
+  }
+
+  @override
+  $CountCopyWith<$Res> get fixedCount {
+    if (_value.fixedCount == null) {
+      return null;
+    }
+    return $CountCopyWith<$Res>(_value.fixedCount, (value) {
+      return _then(_value.copyWith(fixedCount: value));
+    });
+  }
+
+  @override
+  $DistanceCopyWith<$Res> get fixedDistance {
+    if (_value.fixedDistance == null) {
+      return null;
+    }
+    return $DistanceCopyWith<$Res>(_value.fixedDistance, (value) {
+      return _then(_value.copyWith(fixedDistance: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get fixedDuration {
+    if (_value.fixedDuration == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.fixedDuration, (value) {
+      return _then(_value.copyWith(fixedDuration: value));
+    });
+  }
+
+  @override
+  $HumanNameCopyWith<$Res> get fixedHumanName {
+    if (_value.fixedHumanName == null) {
+      return null;
+    }
+    return $HumanNameCopyWith<$Res>(_value.fixedHumanName, (value) {
+      return _then(_value.copyWith(fixedHumanName: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get fixedIdentifier {
+    if (_value.fixedIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.fixedIdentifier, (value) {
+      return _then(_value.copyWith(fixedIdentifier: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get fixedMoney {
+    if (_value.fixedMoney == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.fixedMoney, (value) {
+      return _then(_value.copyWith(fixedMoney: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get fixedPeriod {
+    if (_value.fixedPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.fixedPeriod, (value) {
+      return _then(_value.copyWith(fixedPeriod: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get fixedQuantity {
+    if (_value.fixedQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.fixedQuantity, (value) {
+      return _then(_value.copyWith(fixedQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get fixedRange {
+    if (_value.fixedRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.fixedRange, (value) {
+      return _then(_value.copyWith(fixedRange: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get fixedRatio {
+    if (_value.fixedRatio == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.fixedRatio, (value) {
+      return _then(_value.copyWith(fixedRatio: value));
+    });
+  }
+
+  @override
+  $SampledDataCopyWith<$Res> get fixedSampledData {
+    if (_value.fixedSampledData == null) {
+      return null;
+    }
+    return $SampledDataCopyWith<$Res>(_value.fixedSampledData, (value) {
+      return _then(_value.copyWith(fixedSampledData: value));
+    });
+  }
+
+  @override
+  $SignatureCopyWith<$Res> get fixedSignature {
+    if (_value.fixedSignature == null) {
+      return null;
+    }
+    return $SignatureCopyWith<$Res>(_value.fixedSignature, (value) {
+      return _then(_value.copyWith(fixedSignature: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get fixedTiming {
+    if (_value.fixedTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.fixedTiming, (value) {
+      return _then(_value.copyWith(fixedTiming: value));
+    });
+  }
+
+  @override
+  $AddressCopyWith<$Res> get patternAddress {
+    if (_value.patternAddress == null) {
+      return null;
+    }
+    return $AddressCopyWith<$Res>(_value.patternAddress, (value) {
+      return _then(_value.copyWith(patternAddress: value));
+    });
+  }
+
+  @override
+  $AgeCopyWith<$Res> get patternAge {
+    if (_value.patternAge == null) {
+      return null;
+    }
+    return $AgeCopyWith<$Res>(_value.patternAge, (value) {
+      return _then(_value.copyWith(patternAge: value));
+    });
+  }
+
+  @override
+  $AnnotationCopyWith<$Res> get patternAnnotation {
+    if (_value.patternAnnotation == null) {
+      return null;
+    }
+    return $AnnotationCopyWith<$Res>(_value.patternAnnotation, (value) {
+      return _then(_value.copyWith(patternAnnotation: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get patternAttachment {
+    if (_value.patternAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.patternAttachment, (value) {
+      return _then(_value.copyWith(patternAttachment: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get patternCodeableConcept {
+    if (_value.patternCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.patternCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(patternCodeableConcept: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get patternCoding {
+    if (_value.patternCoding == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.patternCoding, (value) {
+      return _then(_value.copyWith(patternCoding: value));
+    });
+  }
+
+  @override
+  $ContactPointCopyWith<$Res> get patternContactPoint {
+    if (_value.patternContactPoint == null) {
+      return null;
+    }
+    return $ContactPointCopyWith<$Res>(_value.patternContactPoint, (value) {
+      return _then(_value.copyWith(patternContactPoint: value));
+    });
+  }
+
+  @override
+  $CountCopyWith<$Res> get patternCount {
+    if (_value.patternCount == null) {
+      return null;
+    }
+    return $CountCopyWith<$Res>(_value.patternCount, (value) {
+      return _then(_value.copyWith(patternCount: value));
+    });
+  }
+
+  @override
+  $DistanceCopyWith<$Res> get patternDistance {
+    if (_value.patternDistance == null) {
+      return null;
+    }
+    return $DistanceCopyWith<$Res>(_value.patternDistance, (value) {
+      return _then(_value.copyWith(patternDistance: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get patternDuration {
+    if (_value.patternDuration == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.patternDuration, (value) {
+      return _then(_value.copyWith(patternDuration: value));
+    });
+  }
+
+  @override
+  $HumanNameCopyWith<$Res> get patternHumanName {
+    if (_value.patternHumanName == null) {
+      return null;
+    }
+    return $HumanNameCopyWith<$Res>(_value.patternHumanName, (value) {
+      return _then(_value.copyWith(patternHumanName: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get patternIdentifier {
+    if (_value.patternIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.patternIdentifier, (value) {
+      return _then(_value.copyWith(patternIdentifier: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get patternMoney {
+    if (_value.patternMoney == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.patternMoney, (value) {
+      return _then(_value.copyWith(patternMoney: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get patternPeriod {
+    if (_value.patternPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.patternPeriod, (value) {
+      return _then(_value.copyWith(patternPeriod: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get patternQuantity {
+    if (_value.patternQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.patternQuantity, (value) {
+      return _then(_value.copyWith(patternQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get patternRange {
+    if (_value.patternRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.patternRange, (value) {
+      return _then(_value.copyWith(patternRange: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get patternRatio {
+    if (_value.patternRatio == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.patternRatio, (value) {
+      return _then(_value.copyWith(patternRatio: value));
+    });
+  }
+
+  @override
+  $SampledDataCopyWith<$Res> get patternSampledData {
+    if (_value.patternSampledData == null) {
+      return null;
+    }
+    return $SampledDataCopyWith<$Res>(_value.patternSampledData, (value) {
+      return _then(_value.copyWith(patternSampledData: value));
+    });
+  }
+
+  @override
+  $SignatureCopyWith<$Res> get patternSignature {
+    if (_value.patternSignature == null) {
+      return null;
+    }
+    return $SignatureCopyWith<$Res>(_value.patternSignature, (value) {
+      return _then(_value.copyWith(patternSignature: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get patternTiming {
+    if (_value.patternTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.patternTiming, (value) {
+      return _then(_value.copyWith(patternTiming: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get minValueQuantity {
+    if (_value.minValueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.minValueQuantity, (value) {
+      return _then(_value.copyWith(minValueQuantity: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get maxValueQuantity {
+    if (_value.maxValueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.maxValueQuantity, (value) {
+      return _then(_value.copyWith(maxValueQuantity: value));
+    });
+  }
 }
 
 @JsonSerializable()
@@ -5431,7 +6274,7 @@ class _$ElementDefinition implements ElementDefinition {
   @override
   final String label;
   @override
-  final List<dynamic> code;
+  final List<Coding> code;
   @override
   final ElementDefinitionSlicing slicing;
   @override
@@ -6285,7 +7128,7 @@ class _$ElementDefinition implements ElementDefinition {
             List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<dynamic> additionalInstruction,
+            List<CodeableConcept> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -6318,7 +7161,7 @@ class _$ElementDefinition implements ElementDefinition {
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<dynamic> code,
+            List<Coding> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -6692,8 +7535,8 @@ class _$ElementDefinition implements ElementDefinition {
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<dynamic> security,
-            List<dynamic> tag),
+            List<Coding> security,
+            List<Coding> tag),
     @required
         Result narrative(
             String id,
@@ -6936,7 +7779,7 @@ class _$ElementDefinition implements ElementDefinition {
         List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<dynamic> additionalInstruction,
+        List<CodeableConcept> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -6967,7 +7810,7 @@ class _$ElementDefinition implements ElementDefinition {
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<dynamic> code,
+        List<Coding> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -7331,8 +8174,8 @@ class _$ElementDefinition implements ElementDefinition {
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<dynamic> security,
-        List<dynamic> tag),
+        List<Coding> security,
+        List<Coding> tag),
     Result narrative(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -7638,7 +8481,7 @@ abstract class ElementDefinition implements SpecialTypes {
       String sliceName,
       bool sliceIsConstraining,
       String label,
-      List<dynamic> code,
+      List<Coding> code,
       ElementDefinitionSlicing slicing,
       String short,
       Markdown definition,
@@ -7845,7 +8688,7 @@ abstract class ElementDefinition implements SpecialTypes {
   String get sliceName;
   bool get sliceIsConstraining;
   String get label;
-  List<dynamic> get code;
+  List<Coding> get code;
   ElementDefinitionSlicing get slicing;
   String get short;
   Markdown get definition;
@@ -8185,7 +9028,7 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
             List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<dynamic> additionalInstruction,
+            List<CodeableConcept> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -8218,7 +9061,7 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<dynamic> code,
+            List<Coding> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -8592,8 +9435,8 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<dynamic> security,
-            List<dynamic> tag),
+            List<Coding> security,
+            List<Coding> tag),
     @required
         Result narrative(
             String id,
@@ -8637,7 +9480,7 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
         List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<dynamic> additionalInstruction,
+        List<CodeableConcept> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -8668,7 +9511,7 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<dynamic> code,
+        List<Coding> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -9032,8 +9875,8 @@ class _$ElementDefinitionSlicing implements ElementDefinitionSlicing {
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<dynamic> security,
-        List<dynamic> tag),
+        List<Coding> security,
+        List<Coding> tag),
     Result narrative(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -9281,7 +10124,7 @@ class _$ElementDefinitionDiscriminator
             List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<dynamic> additionalInstruction,
+            List<CodeableConcept> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -9314,7 +10157,7 @@ class _$ElementDefinitionDiscriminator
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<dynamic> code,
+            List<Coding> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -9688,8 +10531,8 @@ class _$ElementDefinitionDiscriminator
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<dynamic> security,
-            List<dynamic> tag),
+            List<Coding> security,
+            List<Coding> tag),
     @required
         Result narrative(
             String id,
@@ -9733,7 +10576,7 @@ class _$ElementDefinitionDiscriminator
         List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<dynamic> additionalInstruction,
+        List<CodeableConcept> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -9764,7 +10607,7 @@ class _$ElementDefinitionDiscriminator
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<dynamic> code,
+        List<Coding> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -10128,8 +10971,8 @@ class _$ElementDefinitionDiscriminator
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<dynamic> security,
-        List<dynamic> tag),
+        List<Coding> security,
+        List<Coding> tag),
     Result narrative(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -10376,7 +11219,7 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
             List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<dynamic> additionalInstruction,
+            List<CodeableConcept> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -10409,7 +11252,7 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<dynamic> code,
+            List<Coding> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -10783,8 +11626,8 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<dynamic> security,
-            List<dynamic> tag),
+            List<Coding> security,
+            List<Coding> tag),
     @required
         Result narrative(
             String id,
@@ -10828,7 +11671,7 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
         List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<dynamic> additionalInstruction,
+        List<CodeableConcept> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -10859,7 +11702,7 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<dynamic> code,
+        List<Coding> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -11223,8 +12066,8 @@ class _$ElementDefinitionBase implements ElementDefinitionBase {
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<dynamic> security,
-        List<dynamic> tag),
+        List<Coding> security,
+        List<Coding> tag),
     Result narrative(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -11500,7 +12343,7 @@ class _$ElementDefinitionType implements ElementDefinitionType {
             List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<dynamic> additionalInstruction,
+            List<CodeableConcept> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -11533,7 +12376,7 @@ class _$ElementDefinitionType implements ElementDefinitionType {
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<dynamic> code,
+            List<Coding> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -11907,8 +12750,8 @@ class _$ElementDefinitionType implements ElementDefinitionType {
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<dynamic> security,
-            List<dynamic> tag),
+            List<Coding> security,
+            List<Coding> tag),
     @required
         Result narrative(
             String id,
@@ -11952,7 +12795,7 @@ class _$ElementDefinitionType implements ElementDefinitionType {
         List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<dynamic> additionalInstruction,
+        List<CodeableConcept> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -11983,7 +12826,7 @@ class _$ElementDefinitionType implements ElementDefinitionType {
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<dynamic> code,
+        List<Coding> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -12347,8 +13190,8 @@ class _$ElementDefinitionType implements ElementDefinitionType {
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<dynamic> security,
-        List<dynamic> tag),
+        List<Coding> security,
+        List<Coding> tag),
     Result narrative(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -12535,6 +13378,27 @@ abstract class $ElementDefinitionExampleCopyWith<$Res>
       UsageContext valueUsageContext,
       Dosage valueDosage,
       Meta valueMeta});
+
+  $AddressCopyWith<$Res> get valueAddress;
+  $AgeCopyWith<$Res> get valueAge;
+  $AnnotationCopyWith<$Res> get valueAnnotation;
+  $AttachmentCopyWith<$Res> get valueAttachment;
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  $CodingCopyWith<$Res> get valueCoding;
+  $ContactPointCopyWith<$Res> get valueContactPoint;
+  $CountCopyWith<$Res> get valueCount;
+  $DistanceCopyWith<$Res> get valueDistance;
+  $DurationCopyWith<$Res> get valueDuration;
+  $HumanNameCopyWith<$Res> get valueHumanName;
+  $IdentifierCopyWith<$Res> get valueIdentifier;
+  $MoneyCopyWith<$Res> get valueMoney;
+  $PeriodCopyWith<$Res> get valuePeriod;
+  $QuantityCopyWith<$Res> get valueQuantity;
+  $RangeCopyWith<$Res> get valueRange;
+  $RatioCopyWith<$Res> get valueRatio;
+  $SampledDataCopyWith<$Res> get valueSampledData;
+  $SignatureCopyWith<$Res> get valueSignature;
+  $TimingCopyWith<$Res> get valueTiming;
 }
 
 class _$ElementDefinitionExampleCopyWithImpl<$Res>
@@ -12734,6 +13598,206 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res>
           valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage,
       valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta,
     ));
+  }
+
+  @override
+  $AddressCopyWith<$Res> get valueAddress {
+    if (_value.valueAddress == null) {
+      return null;
+    }
+    return $AddressCopyWith<$Res>(_value.valueAddress, (value) {
+      return _then(_value.copyWith(valueAddress: value));
+    });
+  }
+
+  @override
+  $AgeCopyWith<$Res> get valueAge {
+    if (_value.valueAge == null) {
+      return null;
+    }
+    return $AgeCopyWith<$Res>(_value.valueAge, (value) {
+      return _then(_value.copyWith(valueAge: value));
+    });
+  }
+
+  @override
+  $AnnotationCopyWith<$Res> get valueAnnotation {
+    if (_value.valueAnnotation == null) {
+      return null;
+    }
+    return $AnnotationCopyWith<$Res>(_value.valueAnnotation, (value) {
+      return _then(_value.copyWith(valueAnnotation: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get valueAttachment {
+    if (_value.valueAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.valueAttachment, (value) {
+      return _then(_value.copyWith(valueAttachment: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept, (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get valueCoding {
+    if (_value.valueCoding == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.valueCoding, (value) {
+      return _then(_value.copyWith(valueCoding: value));
+    });
+  }
+
+  @override
+  $ContactPointCopyWith<$Res> get valueContactPoint {
+    if (_value.valueContactPoint == null) {
+      return null;
+    }
+    return $ContactPointCopyWith<$Res>(_value.valueContactPoint, (value) {
+      return _then(_value.copyWith(valueContactPoint: value));
+    });
+  }
+
+  @override
+  $CountCopyWith<$Res> get valueCount {
+    if (_value.valueCount == null) {
+      return null;
+    }
+    return $CountCopyWith<$Res>(_value.valueCount, (value) {
+      return _then(_value.copyWith(valueCount: value));
+    });
+  }
+
+  @override
+  $DistanceCopyWith<$Res> get valueDistance {
+    if (_value.valueDistance == null) {
+      return null;
+    }
+    return $DistanceCopyWith<$Res>(_value.valueDistance, (value) {
+      return _then(_value.copyWith(valueDistance: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get valueDuration {
+    if (_value.valueDuration == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.valueDuration, (value) {
+      return _then(_value.copyWith(valueDuration: value));
+    });
+  }
+
+  @override
+  $HumanNameCopyWith<$Res> get valueHumanName {
+    if (_value.valueHumanName == null) {
+      return null;
+    }
+    return $HumanNameCopyWith<$Res>(_value.valueHumanName, (value) {
+      return _then(_value.copyWith(valueHumanName: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get valueIdentifier {
+    if (_value.valueIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.valueIdentifier, (value) {
+      return _then(_value.copyWith(valueIdentifier: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get valueMoney {
+    if (_value.valueMoney == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.valueMoney, (value) {
+      return _then(_value.copyWith(valueMoney: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get valuePeriod {
+    if (_value.valuePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.valuePeriod, (value) {
+      return _then(_value.copyWith(valuePeriod: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.valueRange, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get valueRatio {
+    if (_value.valueRatio == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.valueRatio, (value) {
+      return _then(_value.copyWith(valueRatio: value));
+    });
+  }
+
+  @override
+  $SampledDataCopyWith<$Res> get valueSampledData {
+    if (_value.valueSampledData == null) {
+      return null;
+    }
+    return $SampledDataCopyWith<$Res>(_value.valueSampledData, (value) {
+      return _then(_value.copyWith(valueSampledData: value));
+    });
+  }
+
+  @override
+  $SignatureCopyWith<$Res> get valueSignature {
+    if (_value.valueSignature == null) {
+      return null;
+    }
+    return $SignatureCopyWith<$Res>(_value.valueSignature, (value) {
+      return _then(_value.copyWith(valueSignature: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get valueTiming {
+    if (_value.valueTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.valueTiming, (value) {
+      return _then(_value.copyWith(valueTiming: value));
+    });
   }
 }
 
@@ -13089,7 +14153,7 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
             List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<dynamic> additionalInstruction,
+            List<CodeableConcept> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -13122,7 +14186,7 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<dynamic> code,
+            List<Coding> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -13496,8 +14560,8 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<dynamic> security,
-            List<dynamic> tag),
+            List<Coding> security,
+            List<Coding> tag),
     @required
         Result narrative(
             String id,
@@ -13594,7 +14658,7 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
         List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<dynamic> additionalInstruction,
+        List<CodeableConcept> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -13625,7 +14689,7 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<dynamic> code,
+        List<Coding> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -13989,8 +15053,8 @@ class _$ElementDefinitionExample implements ElementDefinitionExample {
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<dynamic> security,
-        List<dynamic> tag),
+        List<Coding> security,
+        List<Coding> tag),
     Result narrative(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -14433,7 +15497,7 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
             List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<dynamic> additionalInstruction,
+            List<CodeableConcept> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -14466,7 +15530,7 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<dynamic> code,
+            List<Coding> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -14840,8 +15904,8 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<dynamic> security,
-            List<dynamic> tag),
+            List<Coding> security,
+            List<Coding> tag),
     @required
         Result narrative(
             String id,
@@ -14894,7 +15958,7 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
         List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<dynamic> additionalInstruction,
+        List<CodeableConcept> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -14925,7 +15989,7 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<dynamic> code,
+        List<Coding> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -15289,8 +16353,8 @@ class _$ElementDefinitionConstraint implements ElementDefinitionConstraint {
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<dynamic> security,
-        List<dynamic> tag),
+        List<Coding> security,
+        List<Coding> tag),
     Result narrative(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -15563,7 +16627,7 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
             List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<dynamic> additionalInstruction,
+            List<CodeableConcept> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -15596,7 +16660,7 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<dynamic> code,
+            List<Coding> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -15970,8 +17034,8 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<dynamic> security,
-            List<dynamic> tag),
+            List<Coding> security,
+            List<Coding> tag),
     @required
         Result narrative(
             String id,
@@ -16015,7 +17079,7 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
         List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<dynamic> additionalInstruction,
+        List<CodeableConcept> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -16046,7 +17110,7 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<dynamic> code,
+        List<Coding> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -16410,8 +17474,8 @@ class _$ElementDefinitionBinding implements ElementDefinitionBinding {
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<dynamic> security,
-        List<dynamic> tag),
+        List<Coding> security,
+        List<Coding> tag),
     Result narrative(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -16674,7 +17738,7 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
             List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<dynamic> additionalInstruction,
+            List<CodeableConcept> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -16707,7 +17771,7 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<dynamic> code,
+            List<Coding> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -17081,8 +18145,8 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<dynamic> security,
-            List<dynamic> tag),
+            List<Coding> security,
+            List<Coding> tag),
     @required
         Result narrative(
             String id,
@@ -17126,7 +18190,7 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
         List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<dynamic> additionalInstruction,
+        List<CodeableConcept> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -17157,7 +18221,7 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<dynamic> code,
+        List<Coding> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -17521,8 +18585,8 @@ class _$ElementDefinitionMapping implements ElementDefinitionMapping {
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<dynamic> security,
-        List<dynamic> tag),
+        List<Coding> security,
+        List<Coding> tag),
     Result narrative(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -17707,6 +18771,27 @@ abstract class $FhirExtensionCopyWith<$Res>
       UsageContext valueUsageContext,
       Dosage valueDosage,
       Meta valueMeta});
+
+  $AddressCopyWith<$Res> get valueAddress;
+  $AgeCopyWith<$Res> get valueAge;
+  $AnnotationCopyWith<$Res> get valueAnnotation;
+  $AttachmentCopyWith<$Res> get valueAttachment;
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  $CodingCopyWith<$Res> get valueCoding;
+  $ContactPointCopyWith<$Res> get valueContactPoint;
+  $CountCopyWith<$Res> get valueCount;
+  $DistanceCopyWith<$Res> get valueDistance;
+  $DurationCopyWith<$Res> get valueDuration;
+  $HumanNameCopyWith<$Res> get valueHumanName;
+  $IdentifierCopyWith<$Res> get valueIdentifier;
+  $MoneyCopyWith<$Res> get valueMoney;
+  $PeriodCopyWith<$Res> get valuePeriod;
+  $QuantityCopyWith<$Res> get valueQuantity;
+  $RangeCopyWith<$Res> get valueRange;
+  $RatioCopyWith<$Res> get valueRatio;
+  $SampledDataCopyWith<$Res> get valueSampledData;
+  $SignatureCopyWith<$Res> get valueSignature;
+  $TimingCopyWith<$Res> get valueTiming;
 }
 
 class _$FhirExtensionCopyWithImpl<$Res> extends _$SpecialTypesCopyWithImpl<$Res>
@@ -17900,6 +18985,206 @@ class _$FhirExtensionCopyWithImpl<$Res> extends _$SpecialTypesCopyWithImpl<$Res>
           valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage,
       valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta,
     ));
+  }
+
+  @override
+  $AddressCopyWith<$Res> get valueAddress {
+    if (_value.valueAddress == null) {
+      return null;
+    }
+    return $AddressCopyWith<$Res>(_value.valueAddress, (value) {
+      return _then(_value.copyWith(valueAddress: value));
+    });
+  }
+
+  @override
+  $AgeCopyWith<$Res> get valueAge {
+    if (_value.valueAge == null) {
+      return null;
+    }
+    return $AgeCopyWith<$Res>(_value.valueAge, (value) {
+      return _then(_value.copyWith(valueAge: value));
+    });
+  }
+
+  @override
+  $AnnotationCopyWith<$Res> get valueAnnotation {
+    if (_value.valueAnnotation == null) {
+      return null;
+    }
+    return $AnnotationCopyWith<$Res>(_value.valueAnnotation, (value) {
+      return _then(_value.copyWith(valueAnnotation: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get valueAttachment {
+    if (_value.valueAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.valueAttachment, (value) {
+      return _then(_value.copyWith(valueAttachment: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept, (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get valueCoding {
+    if (_value.valueCoding == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.valueCoding, (value) {
+      return _then(_value.copyWith(valueCoding: value));
+    });
+  }
+
+  @override
+  $ContactPointCopyWith<$Res> get valueContactPoint {
+    if (_value.valueContactPoint == null) {
+      return null;
+    }
+    return $ContactPointCopyWith<$Res>(_value.valueContactPoint, (value) {
+      return _then(_value.copyWith(valueContactPoint: value));
+    });
+  }
+
+  @override
+  $CountCopyWith<$Res> get valueCount {
+    if (_value.valueCount == null) {
+      return null;
+    }
+    return $CountCopyWith<$Res>(_value.valueCount, (value) {
+      return _then(_value.copyWith(valueCount: value));
+    });
+  }
+
+  @override
+  $DistanceCopyWith<$Res> get valueDistance {
+    if (_value.valueDistance == null) {
+      return null;
+    }
+    return $DistanceCopyWith<$Res>(_value.valueDistance, (value) {
+      return _then(_value.copyWith(valueDistance: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get valueDuration {
+    if (_value.valueDuration == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.valueDuration, (value) {
+      return _then(_value.copyWith(valueDuration: value));
+    });
+  }
+
+  @override
+  $HumanNameCopyWith<$Res> get valueHumanName {
+    if (_value.valueHumanName == null) {
+      return null;
+    }
+    return $HumanNameCopyWith<$Res>(_value.valueHumanName, (value) {
+      return _then(_value.copyWith(valueHumanName: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get valueIdentifier {
+    if (_value.valueIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.valueIdentifier, (value) {
+      return _then(_value.copyWith(valueIdentifier: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get valueMoney {
+    if (_value.valueMoney == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.valueMoney, (value) {
+      return _then(_value.copyWith(valueMoney: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get valuePeriod {
+    if (_value.valuePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.valuePeriod, (value) {
+      return _then(_value.copyWith(valuePeriod: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.valueRange, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get valueRatio {
+    if (_value.valueRatio == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.valueRatio, (value) {
+      return _then(_value.copyWith(valueRatio: value));
+    });
+  }
+
+  @override
+  $SampledDataCopyWith<$Res> get valueSampledData {
+    if (_value.valueSampledData == null) {
+      return null;
+    }
+    return $SampledDataCopyWith<$Res>(_value.valueSampledData, (value) {
+      return _then(_value.copyWith(valueSampledData: value));
+    });
+  }
+
+  @override
+  $SignatureCopyWith<$Res> get valueSignature {
+    if (_value.valueSignature == null) {
+      return null;
+    }
+    return $SignatureCopyWith<$Res>(_value.valueSignature, (value) {
+      return _then(_value.copyWith(valueSignature: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get valueTiming {
+    if (_value.valueTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.valueTiming, (value) {
+      return _then(_value.copyWith(valueTiming: value));
+    });
   }
 }
 
@@ -18249,7 +19534,7 @@ class _$FhirExtension implements FhirExtension {
             List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<dynamic> additionalInstruction,
+            List<CodeableConcept> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -18282,7 +19567,7 @@ class _$FhirExtension implements FhirExtension {
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<dynamic> code,
+            List<Coding> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -18656,8 +19941,8 @@ class _$FhirExtension implements FhirExtension {
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<dynamic> security,
-            List<dynamic> tag),
+            List<Coding> security,
+            List<Coding> tag),
     @required
         Result narrative(
             String id,
@@ -18753,7 +20038,7 @@ class _$FhirExtension implements FhirExtension {
         List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<dynamic> additionalInstruction,
+        List<CodeableConcept> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -18784,7 +20069,7 @@ class _$FhirExtension implements FhirExtension {
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<dynamic> code,
+        List<Coding> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -19148,8 +20433,8 @@ class _$FhirExtension implements FhirExtension {
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<dynamic> security,
-        List<dynamic> tag),
+        List<Coding> security,
+        List<Coding> tag),
     Result narrative(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -19427,8 +20712,8 @@ abstract class $MetaCopyWith<$Res> implements $SpecialTypesCopyWith<$Res> {
       Instant lastUpdated,
       Uri source,
       List<Canonical> profile,
-      List<dynamic> security,
-      List<dynamic> tag});
+      List<Coding> security,
+      List<Coding> tag});
 }
 
 class _$MetaCopyWithImpl<$Res> extends _$SpecialTypesCopyWithImpl<$Res>
@@ -19461,8 +20746,8 @@ class _$MetaCopyWithImpl<$Res> extends _$SpecialTypesCopyWithImpl<$Res>
       source: source == freezed ? _value.source : source as Uri,
       profile: profile == freezed ? _value.profile : profile as List<Canonical>,
       security:
-          security == freezed ? _value.security : security as List<dynamic>,
-      tag: tag == freezed ? _value.tag : tag as List<dynamic>,
+          security == freezed ? _value.security : security as List<Coding>,
+      tag: tag == freezed ? _value.tag : tag as List<Coding>,
     ));
   }
 }
@@ -19495,9 +20780,9 @@ class _$Meta implements Meta {
   @override
   final List<Canonical> profile;
   @override
-  final List<dynamic> security;
+  final List<Coding> security;
   @override
-  final List<dynamic> tag;
+  final List<Coding> tag;
 
   @override
   String toString() {
@@ -19557,7 +20842,7 @@ class _$Meta implements Meta {
             List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<dynamic> additionalInstruction,
+            List<CodeableConcept> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -19590,7 +20875,7 @@ class _$Meta implements Meta {
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<dynamic> code,
+            List<Coding> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -19964,8 +21249,8 @@ class _$Meta implements Meta {
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<dynamic> security,
-            List<dynamic> tag),
+            List<Coding> security,
+            List<Coding> tag),
     @required
         Result narrative(
             String id,
@@ -20009,7 +21294,7 @@ class _$Meta implements Meta {
         List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<dynamic> additionalInstruction,
+        List<CodeableConcept> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -20040,7 +21325,7 @@ class _$Meta implements Meta {
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<dynamic> code,
+        List<Coding> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -20404,8 +21689,8 @@ class _$Meta implements Meta {
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<dynamic> security,
-        List<dynamic> tag),
+        List<Coding> security,
+        List<Coding> tag),
     Result narrative(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -20509,8 +21794,8 @@ abstract class Meta implements SpecialTypes {
       Instant lastUpdated,
       Uri source,
       List<Canonical> profile,
-      List<dynamic> security,
-      List<dynamic> tag}) = _$Meta;
+      List<Coding> security,
+      List<Coding> tag}) = _$Meta;
 
   factory Meta.fromJson(Map<String, dynamic> json) = _$Meta.fromJson;
 
@@ -20523,8 +21808,8 @@ abstract class Meta implements SpecialTypes {
   Instant get lastUpdated;
   Uri get source;
   List<Canonical> get profile;
-  List<dynamic> get security;
-  List<dynamic> get tag;
+  List<Coding> get security;
+  List<Coding> get tag;
   @override
   $MetaCopyWith<Meta> get copyWith;
 }
@@ -20629,7 +21914,7 @@ class _$Narrative implements Narrative {
             List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<dynamic> additionalInstruction,
+            List<CodeableConcept> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -20662,7 +21947,7 @@ class _$Narrative implements Narrative {
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<dynamic> code,
+            List<Coding> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -21036,8 +22321,8 @@ class _$Narrative implements Narrative {
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<dynamic> security,
-            List<dynamic> tag),
+            List<Coding> security,
+            List<Coding> tag),
     @required
         Result narrative(
             String id,
@@ -21080,7 +22365,7 @@ class _$Narrative implements Narrative {
         List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<dynamic> additionalInstruction,
+        List<CodeableConcept> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -21111,7 +22396,7 @@ class _$Narrative implements Narrative {
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<dynamic> code,
+        List<Coding> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -21475,8 +22760,8 @@ class _$Narrative implements Narrative {
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<dynamic> security,
-        List<dynamic> tag),
+        List<Coding> security,
+        List<Coding> tag),
     Result narrative(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -21602,6 +22887,8 @@ abstract class $ReferenceCopyWith<$Res> implements $SpecialTypesCopyWith<$Res> {
       FhirUri type,
       Identifier identifier,
       String display});
+
+  $IdentifierCopyWith<$Res> get identifier;
 }
 
 class _$ReferenceCopyWithImpl<$Res> extends _$SpecialTypesCopyWithImpl<$Res>
@@ -21632,6 +22919,16 @@ class _$ReferenceCopyWithImpl<$Res> extends _$SpecialTypesCopyWithImpl<$Res>
           identifier == freezed ? _value.identifier : identifier as Identifier,
       display: display == freezed ? _value.display : display as String,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
   }
 }
 
@@ -21712,7 +23009,7 @@ class _$Reference implements Reference {
             List<dynamic> modifierExtension,
             int sequence,
             String text,
-            List<dynamic> additionalInstruction,
+            List<CodeableConcept> additionalInstruction,
             String patientInstruction,
             Timing timing,
             bool asNeededBoolean,
@@ -21745,7 +23042,7 @@ class _$Reference implements Reference {
             String sliceName,
             bool sliceIsConstraining,
             String label,
-            List<dynamic> code,
+            List<Coding> code,
             ElementDefinitionSlicing slicing,
             String short,
             Markdown definition,
@@ -22119,8 +23416,8 @@ class _$Reference implements Reference {
             Instant lastUpdated,
             Uri source,
             List<Canonical> profile,
-            List<dynamic> security,
-            List<dynamic> tag),
+            List<Coding> security,
+            List<Coding> tag),
     @required
         Result narrative(
             String id,
@@ -22164,7 +23461,7 @@ class _$Reference implements Reference {
         List<dynamic> modifierExtension,
         int sequence,
         String text,
-        List<dynamic> additionalInstruction,
+        List<CodeableConcept> additionalInstruction,
         String patientInstruction,
         Timing timing,
         bool asNeededBoolean,
@@ -22195,7 +23492,7 @@ class _$Reference implements Reference {
         String sliceName,
         bool sliceIsConstraining,
         String label,
-        List<dynamic> code,
+        List<Coding> code,
         ElementDefinitionSlicing slicing,
         String short,
         Markdown definition,
@@ -22559,8 +23856,8 @@ class _$Reference implements Reference {
         Instant lastUpdated,
         Uri source,
         List<Canonical> profile,
-        List<dynamic> security,
-        List<dynamic> tag),
+        List<Coding> security,
+        List<Coding> tag),
     Result narrative(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,

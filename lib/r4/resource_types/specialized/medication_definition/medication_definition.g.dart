@@ -209,7 +209,11 @@ _$SubstanceReferenceInformationClassification
         ? null
         : CodeableConcept.fromJson(
             json['classification'] as Map<String, dynamic>),
-    subtype: json['subtype'] as List,
+    subtype: (json['subtype'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     source: json['source'] as List,
   );
 }
@@ -653,9 +657,21 @@ _$SubstanceSpecificationName _$_$SubstanceSpecificationNameFromJson(
         ? null
         : CodeableConcept.fromJson(json['status'] as Map<String, dynamic>),
     preferred: json['preferred'] as bool,
-    language: json['language'] as List,
-    domain: json['domain'] as List,
-    jurisdiction: json['jurisdiction'] as List,
+    language: (json['language'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    domain: (json['domain'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    jurisdiction: (json['jurisdiction'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     synonym: json['synonym'] as List,
     translation: json['translation'] as List,
     official: json['official'] as List,
@@ -806,7 +822,11 @@ _$MedicinalProductManufactured _$_$MedicinalProductManufacturedFromJson(
         ? null
         : ProdCharacteristic.fromJson(
             json['physicalCharacteristics'] as Map<String, dynamic>),
-    otherCharacteristics: json['otherCharacteristics'] as List,
+    otherCharacteristics: (json['otherCharacteristics'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -859,7 +879,11 @@ _$MedicinalProductContraindication _$_$MedicinalProductContraindicationFromJson(
         ? null
         : CodeableConcept.fromJson(
             json['diseaseStatus'] as Map<String, dynamic>),
-    comorbidity: json['comorbidity'] as List,
+    comorbidity: (json['comorbidity'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     therapeuticIndication: json['therapeuticIndication'] as List,
     otherTherapy: json['otherTherapy'] as List,
     population: (json['population'] as List)
@@ -1031,7 +1055,11 @@ _$MedicinalProductIngredientStrength
         ? null
         : Ratio.fromJson(json['concentrationLowLimit'] as Map<String, dynamic>),
     measurementPoint: json['measurementPoint'] as String,
-    country: json['country'] as List,
+    country: (json['country'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     referenceStrength: json['referenceStrength'] as List,
   );
 }
@@ -1068,7 +1096,11 @@ _$MedicinalProductIngredientReferenceStrength
         ? null
         : Ratio.fromJson(json['strengthLowLimit'] as Map<String, dynamic>),
     measurementPoint: json['measurementPoint'] as String,
-    country: json['country'] as List,
+    country: (json['country'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -1144,11 +1176,18 @@ _$SubstanceSourceMaterial _$_$SubstanceSourceMaterialFromJson(
         ? null
         : Identifier.fromJson(json['organismId'] as Map<String, dynamic>),
     organismName: json['organismName'] as String,
-    parentSubstanceId: json['parentSubstanceId'] as List,
+    parentSubstanceId: (json['parentSubstanceId'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     parentSubstanceName: (json['parentSubstanceName'] as List)
         ?.map((e) => e as String)
         ?.toList(),
-    countryOfOrigin: json['countryOfOrigin'] as List,
+    countryOfOrigin: (json['countryOfOrigin'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     geographicalLocation: (json['geographicalLocation'] as List)
         ?.map((e) => e as String)
         ?.toList(),
@@ -1456,7 +1495,10 @@ _$MedicinalProduct _$_$MedicinalProductFromJson(Map<String, dynamic> json) {
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -1482,7 +1524,11 @@ _$MedicinalProduct _$_$MedicinalProductFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['paediatricUseIndicator'] as Map<String, dynamic>),
-    productClassification: json['productClassification'] as List,
+    productClassification: (json['productClassification'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     marketingStatus: (json['marketingStatus'] as List)
         ?.map((e) => e == null
             ? null
@@ -1495,7 +1541,10 @@ _$MedicinalProduct _$_$MedicinalProductFromJson(Map<String, dynamic> json) {
     contact: json['contact'] as List,
     clinicalTrial: json['clinicalTrial'] as List,
     name: json['name'] as List,
-    crossReference: json['crossReference'] as List,
+    crossReference: (json['crossReference'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     manufacturingBusinessOperation:
         json['manufacturingBusinessOperation'] as List,
     specialDesignation: json['specialDesignation'] as List,
@@ -1660,7 +1709,10 @@ _$MedicinalProductSpecialDesignation
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -1723,7 +1775,10 @@ _$MedicinalProductPackaged _$_$MedicinalProductPackagedFromJson(
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     subject: json['subject'] as List,
     description: json['description'] as String,
     legalStatusOfSupply: json['legalStatusOfSupply'] == null
@@ -1801,15 +1856,26 @@ _$MedicinalProductPackagedPackageItem
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     quantity: json['quantity'] == null
         ? null
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
-    material: json['material'] as List,
-    alternateMaterial: json['alternateMaterial'] as List,
+    material: (json['material'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    alternateMaterial: (json['alternateMaterial'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     device: json['device'] as List,
     manufacturedItem: json['manufacturedItem'] as List,
     packageItem: json['packageItem'] as List,
@@ -1817,7 +1883,11 @@ _$MedicinalProductPackagedPackageItem
         ? null
         : ProdCharacteristic.fromJson(
             json['physicalCharacteristics'] as Map<String, dynamic>),
-    otherCharacteristics: json['otherCharacteristics'] as List,
+    otherCharacteristics: (json['otherCharacteristics'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     shelfLifeStorage: (json['shelfLifeStorage'] as List)
         ?.map((e) => e == null
             ? null
@@ -2012,7 +2082,10 @@ _$MedicinalProductPharmaceutical _$_$MedicinalProductPharmaceuticalFromJson(
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     administrableDoseForm: json['administrableDoseForm'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -2198,7 +2271,11 @@ _$SubstancePolymer _$_$SubstancePolymerFromJson(Map<String, dynamic> json) {
     geometry: json['geometry'] == null
         ? null
         : CodeableConcept.fromJson(json['geometry'] as Map<String, dynamic>),
-    copolymerConnectivity: json['copolymerConnectivity'] as List,
+    copolymerConnectivity: (json['copolymerConnectivity'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     modification:
         (json['modification'] as List)?.map((e) => e as String)?.toList(),
     monomerSet: json['monomerSet'] as List,
@@ -2413,12 +2490,23 @@ _$MedicinalProductAuthorization _$_$MedicinalProductAuthorizationFromJson(
     contained: json['contained'] as List,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-    country: json['country'] as List,
-    jurisdiction: json['jurisdiction'] as List,
+    country: (json['country'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    jurisdiction: (json['jurisdiction'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status: json['status'] == null
         ? null
         : CodeableConcept.fromJson(json['status'] as Map<String, dynamic>),
@@ -2495,11 +2583,18 @@ _$MedicinalProductAuthorizationJurisdictionalAuthorization
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     country: json['country'] == null
         ? null
         : CodeableConcept.fromJson(json['country'] as Map<String, dynamic>),
-    jurisdiction: json['jurisdiction'] as List,
+    jurisdiction: (json['jurisdiction'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     legalStatusOfSupply: json['legalStatusOfSupply'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -2678,7 +2773,11 @@ _$MedicinalProductIndication _$_$MedicinalProductIndicationFromJson(
         ? null
         : CodeableConcept.fromJson(
             json['diseaseStatus'] as Map<String, dynamic>),
-    comorbidity: json['comorbidity'] as List,
+    comorbidity: (json['comorbidity'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     intendedEffect: json['intendedEffect'] == null
         ? null
         : CodeableConcept.fromJson(

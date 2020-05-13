@@ -106,7 +106,10 @@ _$_ProdCharacteristic _$_$_ProdCharacteristicFromJson(
     shape: json['shape'] as String,
     color: (json['color'] as List)?.map((e) => e as String)?.toList(),
     imprint: (json['imprint'] as List)?.map((e) => e as String)?.toList(),
-    image: json['image'] as List,
+    image: (json['image'] as List)
+        ?.map((e) =>
+            e == null ? null : Attachment.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     scoring: json['scoring'] == null
         ? null
         : CodeableConcept.fromJson(json['scoring'] as Map<String, dynamic>),
@@ -146,7 +149,11 @@ _$_ProductShelfLife _$_$_ProductShelfLifeFromJson(Map<String, dynamic> json) {
     period: json['period'] == null
         ? null
         : Quantity.fromJson(json['period'] as Map<String, dynamic>),
-    specialPrecautionsForStorage: json['specialPrecautionsForStorage'] as List,
+    specialPrecautionsForStorage: (json['specialPrecautionsForStorage'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 

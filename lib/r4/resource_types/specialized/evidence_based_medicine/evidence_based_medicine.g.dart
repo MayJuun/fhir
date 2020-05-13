@@ -27,7 +27,10 @@ _$RiskEvidenceSynthesis _$_$RiskEvidenceSynthesisFromJson(
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
@@ -41,9 +44,16 @@ _$RiskEvidenceSynthesis _$_$RiskEvidenceSynthesisFromJson(
     description: json['description'] == null
         ? null
         : Markdown.fromJson(json['description'] as String),
-    note: json['note'] as List,
+    note: (json['note'] as List)
+        ?.map((e) =>
+            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     useContext: json['useContext'] as List,
-    jurisdiction: json['jurisdiction'] as List,
+    jurisdiction: (json['jurisdiction'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     copyright: json['copyright'] == null
         ? null
         : Markdown.fromJson(json['copyright'] as String),
@@ -56,7 +66,11 @@ _$RiskEvidenceSynthesis _$_$RiskEvidenceSynthesisFromJson(
     effectivePeriod: json['effectivePeriod'] == null
         ? null
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    topic: json['topic'] as List,
+    topic: (json['topic'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     author: json['author'] as List,
     editor: json['editor'] as List,
     reviewer: json['reviewer'] as List,
@@ -267,8 +281,15 @@ _$RiskEvidenceSynthesisCertainty _$_$RiskEvidenceSynthesisCertaintyFromJson(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    rating: json['rating'] as List,
-    note: json['note'] as List,
+    rating: (json['rating'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    note: (json['note'] as List)
+        ?.map((e) =>
+            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     certaintySubcomponent: json['certaintySubcomponent'] as List,
   );
 }
@@ -294,8 +315,15 @@ _$RiskEvidenceSynthesisCertaintySubcomponent
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    rating: json['rating'] as List,
-    note: json['note'] as List,
+    rating: (json['rating'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    note: (json['note'] as List)
+        ?.map((e) =>
+            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
@@ -330,7 +358,10 @@ _$EvidenceVariable _$_$EvidenceVariableFromJson(Map<String, dynamic> json) {
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
@@ -346,9 +377,16 @@ _$EvidenceVariable _$_$EvidenceVariableFromJson(Map<String, dynamic> json) {
     description: json['description'] == null
         ? null
         : Markdown.fromJson(json['description'] as String),
-    note: json['note'] as List,
+    note: (json['note'] as List)
+        ?.map((e) =>
+            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     useContext: json['useContext'] as List,
-    jurisdiction: json['jurisdiction'] as List,
+    jurisdiction: (json['jurisdiction'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     copyright: json['copyright'] == null
         ? null
         : Markdown.fromJson(json['copyright'] as String),
@@ -361,7 +399,11 @@ _$EvidenceVariable _$_$EvidenceVariableFromJson(Map<String, dynamic> json) {
     effectivePeriod: json['effectivePeriod'] == null
         ? null
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    topic: json['topic'] as List,
+    topic: (json['topic'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     author: json['author'] as List,
     editor: json['editor'] as List,
     reviewer: json['reviewer'] as List,
@@ -536,7 +578,10 @@ _$Evidence _$_$EvidenceFromJson(Map<String, dynamic> json) {
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
@@ -551,9 +596,16 @@ _$Evidence _$_$EvidenceFromJson(Map<String, dynamic> json) {
     description: json['description'] == null
         ? null
         : Markdown.fromJson(json['description'] as String),
-    note: json['note'] as List,
+    note: (json['note'] as List)
+        ?.map((e) =>
+            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     useContext: json['useContext'] as List,
-    jurisdiction: json['jurisdiction'] as List,
+    jurisdiction: (json['jurisdiction'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     copyright: json['copyright'] == null
         ? null
         : Markdown.fromJson(json['copyright'] as String),
@@ -566,7 +618,11 @@ _$Evidence _$_$EvidenceFromJson(Map<String, dynamic> json) {
     effectivePeriod: json['effectivePeriod'] == null
         ? null
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    topic: json['topic'] as List,
+    topic: (json['topic'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     author: json['author'] as List,
     editor: json['editor'] as List,
     reviewer: json['reviewer'] as List,
@@ -650,7 +706,10 @@ _$ResearchElementDefinition _$_$ResearchElementDefinitionFromJson(
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
@@ -676,7 +735,11 @@ _$ResearchElementDefinition _$_$ResearchElementDefinitionFromJson(
         : Markdown.fromJson(json['description'] as String),
     comment: (json['comment'] as List)?.map((e) => e as String)?.toList(),
     useContext: json['useContext'] as List,
-    jurisdiction: json['jurisdiction'] as List,
+    jurisdiction: (json['jurisdiction'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     purpose: json['purpose'] == null
         ? null
         : Markdown.fromJson(json['purpose'] as String),
@@ -693,7 +756,11 @@ _$ResearchElementDefinition _$_$ResearchElementDefinitionFromJson(
     effectivePeriod: json['effectivePeriod'] == null
         ? null
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    topic: json['topic'] as List,
+    topic: (json['topic'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     author: json['author'] as List,
     editor: json['editor'] as List,
     reviewer: json['reviewer'] as List,
@@ -944,7 +1011,10 @@ _$ResearchDefinition _$_$ResearchDefinitionFromJson(Map<String, dynamic> json) {
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
@@ -970,7 +1040,11 @@ _$ResearchDefinition _$_$ResearchDefinitionFromJson(Map<String, dynamic> json) {
         : Markdown.fromJson(json['description'] as String),
     comment: (json['comment'] as List)?.map((e) => e as String)?.toList(),
     useContext: json['useContext'] as List,
-    jurisdiction: json['jurisdiction'] as List,
+    jurisdiction: (json['jurisdiction'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     purpose: json['purpose'] == null
         ? null
         : Markdown.fromJson(json['purpose'] as String),
@@ -987,7 +1061,11 @@ _$ResearchDefinition _$_$ResearchDefinitionFromJson(Map<String, dynamic> json) {
     effectivePeriod: json['effectivePeriod'] == null
         ? null
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    topic: json['topic'] as List,
+    topic: (json['topic'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     author: json['author'] as List,
     editor: json['editor'] as List,
     reviewer: json['reviewer'] as List,
@@ -1089,7 +1167,10 @@ _$EffectEvidenceSynthesis _$_$EffectEvidenceSynthesisFromJson(
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
-    identifier: json['identifier'] as List,
+    identifier: (json['identifier'] as List)
+        ?.map((e) =>
+            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     version: json['version'] as String,
     name: json['name'] as String,
     title: json['title'] as String,
@@ -1103,9 +1184,16 @@ _$EffectEvidenceSynthesis _$_$EffectEvidenceSynthesisFromJson(
     description: json['description'] == null
         ? null
         : Markdown.fromJson(json['description'] as String),
-    note: json['note'] as List,
+    note: (json['note'] as List)
+        ?.map((e) =>
+            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     useContext: json['useContext'] as List,
-    jurisdiction: json['jurisdiction'] as List,
+    jurisdiction: (json['jurisdiction'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     copyright: json['copyright'] == null
         ? null
         : Markdown.fromJson(json['copyright'] as String),
@@ -1118,7 +1206,11 @@ _$EffectEvidenceSynthesis _$_$EffectEvidenceSynthesisFromJson(
     effectivePeriod: json['effectivePeriod'] == null
         ? null
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    topic: json['topic'] as List,
+    topic: (json['topic'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     author: json['author'] as List,
     editor: json['editor'] as List,
     reviewer: json['reviewer'] as List,
@@ -1344,8 +1436,15 @@ _$EffectEvidenceSynthesisCertainty _$_$EffectEvidenceSynthesisCertaintyFromJson(
     id: json['id'] as String,
     fhirExtension: json['extension'] as List,
     modifierExtension: json['modifierExtension'] as List,
-    rating: json['rating'] as List,
-    note: json['note'] as List,
+    rating: (json['rating'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    note: (json['note'] as List)
+        ?.map((e) =>
+            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     certaintySubcomponent: json['certaintySubcomponent'] as List,
   );
 }
@@ -1371,8 +1470,15 @@ _$EffectEvidenceSynthesisCertaintySubcomponent
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    rating: json['rating'] as List,
-    note: json['note'] as List,
+    rating: (json['rating'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    note: (json['note'] as List)
+        ?.map((e) =>
+            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 

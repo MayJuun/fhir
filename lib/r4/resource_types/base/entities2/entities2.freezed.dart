@@ -61,9 +61,9 @@ class _$Entities2TearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       SubstanceStatus status,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       CodeableConcept code,
       String description,
       List<dynamic> instance,
@@ -132,7 +132,7 @@ class _$Entities2TearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       BiologicallyDerivedProductCategory productCategory,
       CodeableConcept productCode,
       BiologicallyDerivedProductStatus status,
@@ -253,11 +253,11 @@ class _$Entities2TearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Reference definition,
       List<dynamic> udiCarrier,
       DeviceStatus status,
-      List<dynamic> statusReason,
+      List<CodeableConcept> statusReason,
       String distinctIdentifier,
       String manufacturer,
       FhirDateTime manufactureDate,
@@ -273,11 +273,11 @@ class _$Entities2TearOff {
       List<dynamic> property,
       Reference patient,
       Reference owner,
-      List<dynamic> contact,
+      List<ContactPoint> contact,
       Reference location,
       FhirUri url,
-      List<dynamic> note,
-      List<dynamic> safety,
+      List<Annotation> note,
+      List<CodeableConcept> safety,
       Reference parent}) {
     return Device(
       resourceType: resourceType,
@@ -393,8 +393,8 @@ class _$Entities2TearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept type,
-      List<dynamic> valueQuantity,
-      List<dynamic> valueCode}) {
+      List<Quantity> valueQuantity,
+      List<CodeableConcept> valueCode}) {
     return DeviceProperty(
       id: id,
       fhirExtension: fhirExtension,
@@ -415,7 +415,7 @@ class _$Entities2TearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       CodeableConcept type,
       CodeableConcept unit,
       Reference source,
@@ -487,9 +487,9 @@ mixin _$Entities2 {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SubstanceStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -521,7 +521,7 @@ mixin _$Entities2 {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
@@ -579,11 +579,11 @@ mixin _$Entities2 {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<dynamic> statusReason,
+            List<CodeableConcept> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -599,11 +599,11 @@ mixin _$Entities2 {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Reference location,
             FhirUri url,
-            List<dynamic> note,
-            List<dynamic> safety,
+            List<Annotation> note,
+            List<CodeableConcept> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
@@ -644,8 +644,8 @@ mixin _$Entities2 {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> valueQuantity,
-            List<dynamic> valueCode),
+            List<Quantity> valueQuantity,
+            List<CodeableConcept> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -657,7 +657,7 @@ mixin _$Entities2 {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -688,9 +688,9 @@ mixin _$Entities2 {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SubstanceStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
@@ -719,7 +719,7 @@ mixin _$Entities2 {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
@@ -772,11 +772,11 @@ mixin _$Entities2 {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<dynamic> statusReason,
+        List<CodeableConcept> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -792,11 +792,11 @@ mixin _$Entities2 {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Reference location,
         FhirUri url,
-        List<dynamic> note,
-        List<dynamic> safety,
+        List<Annotation> note,
+        List<CodeableConcept> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
@@ -832,8 +832,8 @@ mixin _$Entities2 {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> valueQuantity,
-        List<dynamic> valueCode),
+        List<Quantity> valueQuantity,
+        List<CodeableConcept> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -844,7 +844,7 @@ mixin _$Entities2 {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -964,13 +964,15 @@ abstract class $SubstanceCopyWith<$Res> implements $Entities2CopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       SubstanceStatus status,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       CodeableConcept code,
       String description,
       List<dynamic> instance,
       List<dynamic> ingredient});
+
+  $CodeableConceptCopyWith<$Res> get code;
 }
 
 class _$SubstanceCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
@@ -1021,10 +1023,11 @@ class _$SubstanceCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as SubstanceStatus,
-      category:
-          category == freezed ? _value.category : category as List<dynamic>,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       description:
           description == freezed ? _value.description : description as String,
@@ -1034,6 +1037,16 @@ class _$SubstanceCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
           ? _value.ingredient
           : ingredient as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
   }
 }
 
@@ -1080,11 +1093,11 @@ class _$Substance implements Substance {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final SubstanceStatus status;
   @override
-  final List<dynamic> category;
+  final List<CodeableConcept> category;
   @override
   final CodeableConcept code;
   @override
@@ -1186,9 +1199,9 @@ class _$Substance implements Substance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SubstanceStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -1220,7 +1233,7 @@ class _$Substance implements Substance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
@@ -1278,11 +1291,11 @@ class _$Substance implements Substance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<dynamic> statusReason,
+            List<CodeableConcept> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -1298,11 +1311,11 @@ class _$Substance implements Substance {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Reference location,
             FhirUri url,
-            List<dynamic> note,
-            List<dynamic> safety,
+            List<Annotation> note,
+            List<CodeableConcept> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
@@ -1343,8 +1356,8 @@ class _$Substance implements Substance {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> valueQuantity,
-            List<dynamic> valueCode),
+            List<Quantity> valueQuantity,
+            List<CodeableConcept> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -1356,7 +1369,7 @@ class _$Substance implements Substance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -1423,9 +1436,9 @@ class _$Substance implements Substance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SubstanceStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
@@ -1454,7 +1467,7 @@ class _$Substance implements Substance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
@@ -1507,11 +1520,11 @@ class _$Substance implements Substance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<dynamic> statusReason,
+        List<CodeableConcept> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -1527,11 +1540,11 @@ class _$Substance implements Substance {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Reference location,
         FhirUri url,
-        List<dynamic> note,
-        List<dynamic> safety,
+        List<Annotation> note,
+        List<CodeableConcept> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
@@ -1567,8 +1580,8 @@ class _$Substance implements Substance {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> valueQuantity,
-        List<dynamic> valueCode),
+        List<Quantity> valueQuantity,
+        List<CodeableConcept> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -1579,7 +1592,7 @@ class _$Substance implements Substance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -1718,9 +1731,9 @@ abstract class Substance implements Entities2 {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       SubstanceStatus status,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       CodeableConcept code,
       String description,
       List<dynamic> instance,
@@ -1740,9 +1753,9 @@ abstract class Substance implements Entities2 {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   SubstanceStatus get status;
-  List<dynamic> get category;
+  List<CodeableConcept> get category;
   CodeableConcept get code;
   String get description;
   List<dynamic> get instance;
@@ -1764,6 +1777,9 @@ abstract class $SubstanceInstanceCopyWith<$Res>
       Identifier identifier,
       FhirDateTime expiry,
       Quantity quantity});
+
+  $IdentifierCopyWith<$Res> get identifier;
+  $QuantityCopyWith<$Res> get quantity;
 }
 
 class _$SubstanceInstanceCopyWithImpl<$Res>
@@ -1798,6 +1814,26 @@ class _$SubstanceInstanceCopyWithImpl<$Res>
       expiry: expiry == freezed ? _value.expiry : expiry as FhirDateTime,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
   }
 }
 
@@ -1883,9 +1919,9 @@ class _$SubstanceInstance implements SubstanceInstance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SubstanceStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -1917,7 +1953,7 @@ class _$SubstanceInstance implements SubstanceInstance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
@@ -1975,11 +2011,11 @@ class _$SubstanceInstance implements SubstanceInstance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<dynamic> statusReason,
+            List<CodeableConcept> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -1995,11 +2031,11 @@ class _$SubstanceInstance implements SubstanceInstance {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Reference location,
             FhirUri url,
-            List<dynamic> note,
-            List<dynamic> safety,
+            List<Annotation> note,
+            List<CodeableConcept> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
@@ -2040,8 +2076,8 @@ class _$SubstanceInstance implements SubstanceInstance {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> valueQuantity,
-            List<dynamic> valueCode),
+            List<Quantity> valueQuantity,
+            List<CodeableConcept> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -2053,7 +2089,7 @@ class _$SubstanceInstance implements SubstanceInstance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -2105,9 +2141,9 @@ class _$SubstanceInstance implements SubstanceInstance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SubstanceStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
@@ -2136,7 +2172,7 @@ class _$SubstanceInstance implements SubstanceInstance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
@@ -2189,11 +2225,11 @@ class _$SubstanceInstance implements SubstanceInstance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<dynamic> statusReason,
+        List<CodeableConcept> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -2209,11 +2245,11 @@ class _$SubstanceInstance implements SubstanceInstance {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Reference location,
         FhirUri url,
-        List<dynamic> note,
-        List<dynamic> safety,
+        List<Annotation> note,
+        List<CodeableConcept> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
@@ -2249,8 +2285,8 @@ class _$SubstanceInstance implements SubstanceInstance {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> valueQuantity,
-        List<dynamic> valueCode),
+        List<Quantity> valueQuantity,
+        List<CodeableConcept> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -2261,7 +2297,7 @@ class _$SubstanceInstance implements SubstanceInstance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -2413,6 +2449,9 @@ abstract class $SubstanceIngredientCopyWith<$Res>
       Ratio quantity,
       CodeableConcept substanceCodeableConcept,
       Reference substanceReference});
+
+  $RatioCopyWith<$Res> get quantity;
+  $CodeableConceptCopyWith<$Res> get substanceCodeableConcept;
 }
 
 class _$SubstanceIngredientCopyWithImpl<$Res>
@@ -2450,6 +2489,27 @@ class _$SubstanceIngredientCopyWithImpl<$Res>
           ? _value.substanceReference
           : substanceReference as Reference,
     ));
+  }
+
+  @override
+  $RatioCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get substanceCodeableConcept {
+    if (_value.substanceCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.substanceCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(substanceCodeableConcept: value));
+    });
   }
 }
 
@@ -2538,9 +2598,9 @@ class _$SubstanceIngredient implements SubstanceIngredient {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SubstanceStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -2572,7 +2632,7 @@ class _$SubstanceIngredient implements SubstanceIngredient {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
@@ -2630,11 +2690,11 @@ class _$SubstanceIngredient implements SubstanceIngredient {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<dynamic> statusReason,
+            List<CodeableConcept> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -2650,11 +2710,11 @@ class _$SubstanceIngredient implements SubstanceIngredient {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Reference location,
             FhirUri url,
-            List<dynamic> note,
-            List<dynamic> safety,
+            List<Annotation> note,
+            List<CodeableConcept> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
@@ -2695,8 +2755,8 @@ class _$SubstanceIngredient implements SubstanceIngredient {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> valueQuantity,
-            List<dynamic> valueCode),
+            List<Quantity> valueQuantity,
+            List<CodeableConcept> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -2708,7 +2768,7 @@ class _$SubstanceIngredient implements SubstanceIngredient {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -2760,9 +2820,9 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SubstanceStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
@@ -2791,7 +2851,7 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
@@ -2844,11 +2904,11 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<dynamic> statusReason,
+        List<CodeableConcept> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -2864,11 +2924,11 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Reference location,
         FhirUri url,
-        List<dynamic> note,
-        List<dynamic> safety,
+        List<Annotation> note,
+        List<CodeableConcept> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
@@ -2904,8 +2964,8 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> valueQuantity,
-        List<dynamic> valueCode),
+        List<Quantity> valueQuantity,
+        List<CodeableConcept> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -2916,7 +2976,7 @@ class _$SubstanceIngredient implements SubstanceIngredient {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -3071,7 +3131,7 @@ abstract class $BiologicallyDerivedProductCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       BiologicallyDerivedProductCategory productCategory,
       CodeableConcept productCode,
       BiologicallyDerivedProductStatus status,
@@ -3082,6 +3142,8 @@ abstract class $BiologicallyDerivedProductCopyWith<$Res>
       List<dynamic> processing,
       BiologicallyDerivedProductManipulation manipulation,
       List<dynamic> storage});
+
+  $CodeableConceptCopyWith<$Res> get productCode;
 }
 
 class _$BiologicallyDerivedProductCopyWithImpl<$Res>
@@ -3139,7 +3201,7 @@ class _$BiologicallyDerivedProductCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       productCategory: productCategory == freezed
           ? _value.productCategory
           : productCategory as BiologicallyDerivedProductCategory,
@@ -3163,6 +3225,16 @@ class _$BiologicallyDerivedProductCopyWithImpl<$Res>
           : manipulation as BiologicallyDerivedProductManipulation,
       storage: storage == freezed ? _value.storage : storage as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get productCode {
+    if (_value.productCode == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.productCode, (value) {
+      return _then(_value.copyWith(productCode: value));
+    });
   }
 }
 
@@ -3213,7 +3285,7 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final BiologicallyDerivedProductCategory productCategory;
   @override
@@ -3344,9 +3416,9 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SubstanceStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -3378,7 +3450,7 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
@@ -3436,11 +3508,11 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<dynamic> statusReason,
+            List<CodeableConcept> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -3456,11 +3528,11 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Reference location,
             FhirUri url,
-            List<dynamic> note,
-            List<dynamic> safety,
+            List<Annotation> note,
+            List<CodeableConcept> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
@@ -3501,8 +3573,8 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> valueQuantity,
-            List<dynamic> valueCode),
+            List<Quantity> valueQuantity,
+            List<CodeableConcept> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -3514,7 +3586,7 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -3585,9 +3657,9 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SubstanceStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
@@ -3616,7 +3688,7 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
@@ -3669,11 +3741,11 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<dynamic> statusReason,
+        List<CodeableConcept> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -3689,11 +3761,11 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Reference location,
         FhirUri url,
-        List<dynamic> note,
-        List<dynamic> safety,
+        List<Annotation> note,
+        List<CodeableConcept> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
@@ -3729,8 +3801,8 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> valueQuantity,
-        List<dynamic> valueCode),
+        List<Quantity> valueQuantity,
+        List<CodeableConcept> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -3741,7 +3813,7 @@ class _$BiologicallyDerivedProduct implements BiologicallyDerivedProduct {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -3885,7 +3957,7 @@ abstract class BiologicallyDerivedProduct implements Entities2 {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       BiologicallyDerivedProductCategory productCategory,
       CodeableConcept productCode,
       BiologicallyDerivedProductStatus status,
@@ -3912,7 +3984,7 @@ abstract class BiologicallyDerivedProduct implements Entities2 {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   BiologicallyDerivedProductCategory get productCategory;
   CodeableConcept get productCode;
   BiologicallyDerivedProductStatus get status;
@@ -3942,6 +4014,8 @@ abstract class $BiologicallyDerivedProductCollectionCopyWith<$Res>
       Reference source,
       FhirDateTime collectedDateTime,
       Period collectedPeriod});
+
+  $PeriodCopyWith<$Res> get collectedPeriod;
 }
 
 class _$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
@@ -3984,6 +4058,16 @@ class _$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
           ? _value.collectedPeriod
           : collectedPeriod as Period,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get collectedPeriod {
+    if (_value.collectedPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.collectedPeriod, (value) {
+      return _then(_value.copyWith(collectedPeriod: value));
+    });
   }
 }
 
@@ -4080,9 +4164,9 @@ class _$BiologicallyDerivedProductCollection
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SubstanceStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -4114,7 +4198,7 @@ class _$BiologicallyDerivedProductCollection
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
@@ -4172,11 +4256,11 @@ class _$BiologicallyDerivedProductCollection
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<dynamic> statusReason,
+            List<CodeableConcept> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -4192,11 +4276,11 @@ class _$BiologicallyDerivedProductCollection
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Reference location,
             FhirUri url,
-            List<dynamic> note,
-            List<dynamic> safety,
+            List<Annotation> note,
+            List<CodeableConcept> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
@@ -4237,8 +4321,8 @@ class _$BiologicallyDerivedProductCollection
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> valueQuantity,
-            List<dynamic> valueCode),
+            List<Quantity> valueQuantity,
+            List<CodeableConcept> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -4250,7 +4334,7 @@ class _$BiologicallyDerivedProductCollection
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -4308,9 +4392,9 @@ class _$BiologicallyDerivedProductCollection
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SubstanceStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
@@ -4339,7 +4423,7 @@ class _$BiologicallyDerivedProductCollection
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
@@ -4392,11 +4476,11 @@ class _$BiologicallyDerivedProductCollection
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<dynamic> statusReason,
+        List<CodeableConcept> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -4412,11 +4496,11 @@ class _$BiologicallyDerivedProductCollection
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Reference location,
         FhirUri url,
-        List<dynamic> note,
-        List<dynamic> safety,
+        List<Annotation> note,
+        List<CodeableConcept> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
@@ -4452,8 +4536,8 @@ class _$BiologicallyDerivedProductCollection
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> valueQuantity,
-        List<dynamic> valueCode),
+        List<Quantity> valueQuantity,
+        List<CodeableConcept> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -4464,7 +4548,7 @@ class _$BiologicallyDerivedProductCollection
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -4629,6 +4713,9 @@ abstract class $BiologicallyDerivedProductProcessingCopyWith<$Res>
       Reference additive,
       FhirDateTime timeDateTime,
       Period timePeriod});
+
+  $CodeableConceptCopyWith<$Res> get procedure;
+  $PeriodCopyWith<$Res> get timePeriod;
 }
 
 class _$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
@@ -4674,6 +4761,26 @@ class _$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
       timePeriod:
           timePeriod == freezed ? _value.timePeriod : timePeriod as Period,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get procedure {
+    if (_value.procedure == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.procedure, (value) {
+      return _then(_value.copyWith(procedure: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get timePeriod {
+    if (_value.timePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.timePeriod, (value) {
+      return _then(_value.copyWith(timePeriod: value));
+    });
   }
 }
 
@@ -4778,9 +4885,9 @@ class _$BiologicallyDerivedProductProcessing
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SubstanceStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -4812,7 +4919,7 @@ class _$BiologicallyDerivedProductProcessing
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
@@ -4870,11 +4977,11 @@ class _$BiologicallyDerivedProductProcessing
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<dynamic> statusReason,
+            List<CodeableConcept> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -4890,11 +4997,11 @@ class _$BiologicallyDerivedProductProcessing
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Reference location,
             FhirUri url,
-            List<dynamic> note,
-            List<dynamic> safety,
+            List<Annotation> note,
+            List<CodeableConcept> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
@@ -4935,8 +5042,8 @@ class _$BiologicallyDerivedProductProcessing
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> valueQuantity,
-            List<dynamic> valueCode),
+            List<Quantity> valueQuantity,
+            List<CodeableConcept> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -4948,7 +5055,7 @@ class _$BiologicallyDerivedProductProcessing
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -5007,9 +5114,9 @@ class _$BiologicallyDerivedProductProcessing
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SubstanceStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
@@ -5038,7 +5145,7 @@ class _$BiologicallyDerivedProductProcessing
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
@@ -5091,11 +5198,11 @@ class _$BiologicallyDerivedProductProcessing
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<dynamic> statusReason,
+        List<CodeableConcept> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -5111,11 +5218,11 @@ class _$BiologicallyDerivedProductProcessing
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Reference location,
         FhirUri url,
-        List<dynamic> note,
-        List<dynamic> safety,
+        List<Annotation> note,
+        List<CodeableConcept> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
@@ -5151,8 +5258,8 @@ class _$BiologicallyDerivedProductProcessing
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> valueQuantity,
-        List<dynamic> valueCode),
+        List<Quantity> valueQuantity,
+        List<CodeableConcept> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -5163,7 +5270,7 @@ class _$BiologicallyDerivedProductProcessing
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -5329,6 +5436,8 @@ abstract class $BiologicallyDerivedProductManipulationCopyWith<$Res>
       String description,
       FhirDateTime timeDateTime,
       Period timePeriod});
+
+  $PeriodCopyWith<$Res> get timePeriod;
 }
 
 class _$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
@@ -5369,6 +5478,16 @@ class _$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
       timePeriod:
           timePeriod == freezed ? _value.timePeriod : timePeriod as Period,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get timePeriod {
+    if (_value.timePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.timePeriod, (value) {
+      return _then(_value.copyWith(timePeriod: value));
+    });
   }
 }
 
@@ -5459,9 +5578,9 @@ class _$BiologicallyDerivedProductManipulation
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SubstanceStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -5493,7 +5612,7 @@ class _$BiologicallyDerivedProductManipulation
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
@@ -5551,11 +5670,11 @@ class _$BiologicallyDerivedProductManipulation
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<dynamic> statusReason,
+            List<CodeableConcept> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -5571,11 +5690,11 @@ class _$BiologicallyDerivedProductManipulation
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Reference location,
             FhirUri url,
-            List<dynamic> note,
-            List<dynamic> safety,
+            List<Annotation> note,
+            List<CodeableConcept> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
@@ -5616,8 +5735,8 @@ class _$BiologicallyDerivedProductManipulation
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> valueQuantity,
-            List<dynamic> valueCode),
+            List<Quantity> valueQuantity,
+            List<CodeableConcept> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -5629,7 +5748,7 @@ class _$BiologicallyDerivedProductManipulation
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -5681,9 +5800,9 @@ class _$BiologicallyDerivedProductManipulation
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SubstanceStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
@@ -5712,7 +5831,7 @@ class _$BiologicallyDerivedProductManipulation
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
@@ -5765,11 +5884,11 @@ class _$BiologicallyDerivedProductManipulation
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<dynamic> statusReason,
+        List<CodeableConcept> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -5785,11 +5904,11 @@ class _$BiologicallyDerivedProductManipulation
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Reference location,
         FhirUri url,
-        List<dynamic> note,
-        List<dynamic> safety,
+        List<Annotation> note,
+        List<CodeableConcept> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
@@ -5825,8 +5944,8 @@ class _$BiologicallyDerivedProductManipulation
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> valueQuantity,
-        List<dynamic> valueCode),
+        List<Quantity> valueQuantity,
+        List<CodeableConcept> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -5837,7 +5956,7 @@ class _$BiologicallyDerivedProductManipulation
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -5993,6 +6112,8 @@ abstract class $BiologicallyDerivedProductStorageCopyWith<$Res>
       double temperature,
       BiologicallyDerivedProductStorageScale scale,
       Period duration});
+
+  $PeriodCopyWith<$Res> get duration;
 }
 
 class _$BiologicallyDerivedProductStorageCopyWithImpl<$Res>
@@ -6034,6 +6155,16 @@ class _$BiologicallyDerivedProductStorageCopyWithImpl<$Res>
           : scale as BiologicallyDerivedProductStorageScale,
       duration: duration == freezed ? _value.duration : duration as Period,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get duration {
+    if (_value.duration == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.duration, (value) {
+      return _then(_value.copyWith(duration: value));
+    });
   }
 }
 
@@ -6129,9 +6260,9 @@ class _$BiologicallyDerivedProductStorage
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SubstanceStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -6163,7 +6294,7 @@ class _$BiologicallyDerivedProductStorage
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
@@ -6221,11 +6352,11 @@ class _$BiologicallyDerivedProductStorage
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<dynamic> statusReason,
+            List<CodeableConcept> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -6241,11 +6372,11 @@ class _$BiologicallyDerivedProductStorage
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Reference location,
             FhirUri url,
-            List<dynamic> note,
-            List<dynamic> safety,
+            List<Annotation> note,
+            List<CodeableConcept> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
@@ -6286,8 +6417,8 @@ class _$BiologicallyDerivedProductStorage
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> valueQuantity,
-            List<dynamic> valueCode),
+            List<Quantity> valueQuantity,
+            List<CodeableConcept> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -6299,7 +6430,7 @@ class _$BiologicallyDerivedProductStorage
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -6351,9 +6482,9 @@ class _$BiologicallyDerivedProductStorage
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SubstanceStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
@@ -6382,7 +6513,7 @@ class _$BiologicallyDerivedProductStorage
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
@@ -6435,11 +6566,11 @@ class _$BiologicallyDerivedProductStorage
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<dynamic> statusReason,
+        List<CodeableConcept> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -6455,11 +6586,11 @@ class _$BiologicallyDerivedProductStorage
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Reference location,
         FhirUri url,
-        List<dynamic> note,
-        List<dynamic> safety,
+        List<Annotation> note,
+        List<CodeableConcept> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
@@ -6495,8 +6626,8 @@ class _$BiologicallyDerivedProductStorage
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> valueQuantity,
-        List<dynamic> valueCode),
+        List<Quantity> valueQuantity,
+        List<CodeableConcept> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -6507,7 +6638,7 @@ class _$BiologicallyDerivedProductStorage
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -6663,11 +6794,11 @@ abstract class $DeviceCopyWith<$Res> implements $Entities2CopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Reference definition,
       List<dynamic> udiCarrier,
       DeviceStatus status,
-      List<dynamic> statusReason,
+      List<CodeableConcept> statusReason,
       String distinctIdentifier,
       String manufacturer,
       FhirDateTime manufactureDate,
@@ -6683,12 +6814,14 @@ abstract class $DeviceCopyWith<$Res> implements $Entities2CopyWith<$Res> {
       List<dynamic> property,
       Reference patient,
       Reference owner,
-      List<dynamic> contact,
+      List<ContactPoint> contact,
       Reference location,
       FhirUri url,
-      List<dynamic> note,
-      List<dynamic> safety,
+      List<Annotation> note,
+      List<CodeableConcept> safety,
       Reference parent});
+
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 class _$DeviceCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
@@ -6758,7 +6891,7 @@ class _$DeviceCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       definition:
           definition == freezed ? _value.definition : definition as Reference,
       udiCarrier: udiCarrier == freezed
@@ -6767,7 +6900,7 @@ class _$DeviceCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
       status: status == freezed ? _value.status : status as DeviceStatus,
       statusReason: statusReason == freezed
           ? _value.statusReason
-          : statusReason as List<dynamic>,
+          : statusReason as List<CodeableConcept>,
       distinctIdentifier: distinctIdentifier == freezed
           ? _value.distinctIdentifier
           : distinctIdentifier as String,
@@ -6800,13 +6933,25 @@ class _$DeviceCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
           property == freezed ? _value.property : property as List<dynamic>,
       patient: patient == freezed ? _value.patient : patient as Reference,
       owner: owner == freezed ? _value.owner : owner as Reference,
-      contact: contact == freezed ? _value.contact : contact as List<dynamic>,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactPoint>,
       location: location == freezed ? _value.location : location as Reference,
       url: url == freezed ? _value.url : url as FhirUri,
-      note: note == freezed ? _value.note : note as List<dynamic>,
-      safety: safety == freezed ? _value.safety : safety as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
+      safety:
+          safety == freezed ? _value.safety : safety as List<CodeableConcept>,
       parent: parent == freezed ? _value.parent : parent as Reference,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
   }
 }
 
@@ -6872,7 +7017,7 @@ class _$Device implements Device {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Reference definition;
   @override
@@ -6880,7 +7025,7 @@ class _$Device implements Device {
   @override
   final DeviceStatus status;
   @override
-  final List<dynamic> statusReason;
+  final List<CodeableConcept> statusReason;
   @override
   final String distinctIdentifier;
   @override
@@ -6912,15 +7057,15 @@ class _$Device implements Device {
   @override
   final Reference owner;
   @override
-  final List<dynamic> contact;
+  final List<ContactPoint> contact;
   @override
   final Reference location;
   @override
   final FhirUri url;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
   @override
-  final List<dynamic> safety;
+  final List<CodeableConcept> safety;
   @override
   final Reference parent;
 
@@ -7070,9 +7215,9 @@ class _$Device implements Device {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SubstanceStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -7104,7 +7249,7 @@ class _$Device implements Device {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
@@ -7162,11 +7307,11 @@ class _$Device implements Device {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<dynamic> statusReason,
+            List<CodeableConcept> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -7182,11 +7327,11 @@ class _$Device implements Device {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Reference location,
             FhirUri url,
-            List<dynamic> note,
-            List<dynamic> safety,
+            List<Annotation> note,
+            List<CodeableConcept> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
@@ -7227,8 +7372,8 @@ class _$Device implements Device {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> valueQuantity,
-            List<dynamic> valueCode),
+            List<Quantity> valueQuantity,
+            List<CodeableConcept> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -7240,7 +7385,7 @@ class _$Device implements Device {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -7326,9 +7471,9 @@ class _$Device implements Device {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SubstanceStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
@@ -7357,7 +7502,7 @@ class _$Device implements Device {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
@@ -7410,11 +7555,11 @@ class _$Device implements Device {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<dynamic> statusReason,
+        List<CodeableConcept> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -7430,11 +7575,11 @@ class _$Device implements Device {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Reference location,
         FhirUri url,
-        List<dynamic> note,
-        List<dynamic> safety,
+        List<Annotation> note,
+        List<CodeableConcept> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
@@ -7470,8 +7615,8 @@ class _$Device implements Device {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> valueQuantity,
-        List<dynamic> valueCode),
+        List<Quantity> valueQuantity,
+        List<CodeableConcept> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -7482,7 +7627,7 @@ class _$Device implements Device {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -7640,11 +7785,11 @@ abstract class Device implements Entities2 {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Reference definition,
       List<dynamic> udiCarrier,
       DeviceStatus status,
-      List<dynamic> statusReason,
+      List<CodeableConcept> statusReason,
       String distinctIdentifier,
       String manufacturer,
       FhirDateTime manufactureDate,
@@ -7660,11 +7805,11 @@ abstract class Device implements Entities2 {
       List<dynamic> property,
       Reference patient,
       Reference owner,
-      List<dynamic> contact,
+      List<ContactPoint> contact,
       Reference location,
       FhirUri url,
-      List<dynamic> note,
-      List<dynamic> safety,
+      List<Annotation> note,
+      List<CodeableConcept> safety,
       Reference parent}) = _$Device;
 
   factory Device.fromJson(Map<String, dynamic> json) = _$Device.fromJson;
@@ -7681,11 +7826,11 @@ abstract class Device implements Entities2 {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   Reference get definition;
   List<dynamic> get udiCarrier;
   DeviceStatus get status;
-  List<dynamic> get statusReason;
+  List<CodeableConcept> get statusReason;
   String get distinctIdentifier;
   String get manufacturer;
   FhirDateTime get manufactureDate;
@@ -7701,11 +7846,11 @@ abstract class Device implements Entities2 {
   List<dynamic> get property;
   Reference get patient;
   Reference get owner;
-  List<dynamic> get contact;
+  List<ContactPoint> get contact;
   Reference get location;
   FhirUri get url;
-  List<dynamic> get note;
-  List<dynamic> get safety;
+  List<Annotation> get note;
+  List<CodeableConcept> get safety;
   Reference get parent;
   @override
   $DeviceCopyWith<Device> get copyWith;
@@ -7880,9 +8025,9 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SubstanceStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -7914,7 +8059,7 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
@@ -7972,11 +8117,11 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<dynamic> statusReason,
+            List<CodeableConcept> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -7992,11 +8137,11 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Reference location,
             FhirUri url,
-            List<dynamic> note,
-            List<dynamic> safety,
+            List<Annotation> note,
+            List<CodeableConcept> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
@@ -8037,8 +8182,8 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> valueQuantity,
-            List<dynamic> valueCode),
+            List<Quantity> valueQuantity,
+            List<CodeableConcept> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -8050,7 +8195,7 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -8110,9 +8255,9 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SubstanceStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
@@ -8141,7 +8286,7 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
@@ -8194,11 +8339,11 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<dynamic> statusReason,
+        List<CodeableConcept> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -8214,11 +8359,11 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Reference location,
         FhirUri url,
-        List<dynamic> note,
-        List<dynamic> safety,
+        List<Annotation> note,
+        List<CodeableConcept> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
@@ -8254,8 +8399,8 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> valueQuantity,
-        List<dynamic> valueCode),
+        List<Quantity> valueQuantity,
+        List<CodeableConcept> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -8266,7 +8411,7 @@ class _$DeviceUdiCarrier implements DeviceUdiCarrier {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -8538,9 +8683,9 @@ class _$DeviceDeviceName implements DeviceDeviceName {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SubstanceStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -8572,7 +8717,7 @@ class _$DeviceDeviceName implements DeviceDeviceName {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
@@ -8630,11 +8775,11 @@ class _$DeviceDeviceName implements DeviceDeviceName {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<dynamic> statusReason,
+            List<CodeableConcept> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -8650,11 +8795,11 @@ class _$DeviceDeviceName implements DeviceDeviceName {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Reference location,
             FhirUri url,
-            List<dynamic> note,
-            List<dynamic> safety,
+            List<Annotation> note,
+            List<CodeableConcept> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
@@ -8695,8 +8840,8 @@ class _$DeviceDeviceName implements DeviceDeviceName {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> valueQuantity,
-            List<dynamic> valueCode),
+            List<Quantity> valueQuantity,
+            List<CodeableConcept> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -8708,7 +8853,7 @@ class _$DeviceDeviceName implements DeviceDeviceName {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -8759,9 +8904,9 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SubstanceStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
@@ -8790,7 +8935,7 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
@@ -8843,11 +8988,11 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<dynamic> statusReason,
+        List<CodeableConcept> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -8863,11 +9008,11 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Reference location,
         FhirUri url,
-        List<dynamic> note,
-        List<dynamic> safety,
+        List<Annotation> note,
+        List<CodeableConcept> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
@@ -8903,8 +9048,8 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> valueQuantity,
-        List<dynamic> valueCode),
+        List<Quantity> valueQuantity,
+        List<CodeableConcept> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -8915,7 +9060,7 @@ class _$DeviceDeviceName implements DeviceDeviceName {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -9063,6 +9208,8 @@ abstract class $DeviceSpecializationCopyWith<$Res>
       List<dynamic> modifierExtension,
       CodeableConcept systemType,
       String version});
+
+  $CodeableConceptCopyWith<$Res> get systemType;
 }
 
 class _$DeviceSpecializationCopyWithImpl<$Res>
@@ -9096,6 +9243,16 @@ class _$DeviceSpecializationCopyWithImpl<$Res>
           : systemType as CodeableConcept,
       version: version == freezed ? _value.version : version as String,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get systemType {
+    if (_value.systemType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.systemType, (value) {
+      return _then(_value.copyWith(systemType: value));
+    });
   }
 }
 
@@ -9175,9 +9332,9 @@ class _$DeviceSpecialization implements DeviceSpecialization {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SubstanceStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -9209,7 +9366,7 @@ class _$DeviceSpecialization implements DeviceSpecialization {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
@@ -9267,11 +9424,11 @@ class _$DeviceSpecialization implements DeviceSpecialization {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<dynamic> statusReason,
+            List<CodeableConcept> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -9287,11 +9444,11 @@ class _$DeviceSpecialization implements DeviceSpecialization {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Reference location,
             FhirUri url,
-            List<dynamic> note,
-            List<dynamic> safety,
+            List<Annotation> note,
+            List<CodeableConcept> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
@@ -9332,8 +9489,8 @@ class _$DeviceSpecialization implements DeviceSpecialization {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> valueQuantity,
-            List<dynamic> valueCode),
+            List<Quantity> valueQuantity,
+            List<CodeableConcept> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -9345,7 +9502,7 @@ class _$DeviceSpecialization implements DeviceSpecialization {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -9397,9 +9554,9 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SubstanceStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
@@ -9428,7 +9585,7 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
@@ -9481,11 +9638,11 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<dynamic> statusReason,
+        List<CodeableConcept> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -9501,11 +9658,11 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Reference location,
         FhirUri url,
-        List<dynamic> note,
-        List<dynamic> safety,
+        List<Annotation> note,
+        List<CodeableConcept> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
@@ -9541,8 +9698,8 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> valueQuantity,
-        List<dynamic> valueCode),
+        List<Quantity> valueQuantity,
+        List<CodeableConcept> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -9553,7 +9710,7 @@ class _$DeviceSpecialization implements DeviceSpecialization {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -9703,6 +9860,9 @@ abstract class $DeviceVersionCopyWith<$Res>
       CodeableConcept type,
       Identifier component,
       String value});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $IdentifierCopyWith<$Res> get component;
 }
 
 class _$DeviceVersionCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
@@ -9736,6 +9896,26 @@ class _$DeviceVersionCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
           component == freezed ? _value.component : component as Identifier,
       value: value == freezed ? _value.value : value as String,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get component {
+    if (_value.component == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.component, (value) {
+      return _then(_value.copyWith(component: value));
+    });
   }
 }
 
@@ -9820,9 +10000,9 @@ class _$DeviceVersion implements DeviceVersion {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SubstanceStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -9854,7 +10034,7 @@ class _$DeviceVersion implements DeviceVersion {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
@@ -9912,11 +10092,11 @@ class _$DeviceVersion implements DeviceVersion {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<dynamic> statusReason,
+            List<CodeableConcept> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -9932,11 +10112,11 @@ class _$DeviceVersion implements DeviceVersion {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Reference location,
             FhirUri url,
-            List<dynamic> note,
-            List<dynamic> safety,
+            List<Annotation> note,
+            List<CodeableConcept> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
@@ -9977,8 +10157,8 @@ class _$DeviceVersion implements DeviceVersion {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> valueQuantity,
-            List<dynamic> valueCode),
+            List<Quantity> valueQuantity,
+            List<CodeableConcept> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -9990,7 +10170,7 @@ class _$DeviceVersion implements DeviceVersion {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -10042,9 +10222,9 @@ class _$DeviceVersion implements DeviceVersion {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SubstanceStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
@@ -10073,7 +10253,7 @@ class _$DeviceVersion implements DeviceVersion {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
@@ -10126,11 +10306,11 @@ class _$DeviceVersion implements DeviceVersion {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<dynamic> statusReason,
+        List<CodeableConcept> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -10146,11 +10326,11 @@ class _$DeviceVersion implements DeviceVersion {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Reference location,
         FhirUri url,
-        List<dynamic> note,
-        List<dynamic> safety,
+        List<Annotation> note,
+        List<CodeableConcept> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
@@ -10186,8 +10366,8 @@ class _$DeviceVersion implements DeviceVersion {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> valueQuantity,
-        List<dynamic> valueCode),
+        List<Quantity> valueQuantity,
+        List<CodeableConcept> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -10198,7 +10378,7 @@ class _$DeviceVersion implements DeviceVersion {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -10347,8 +10527,10 @@ abstract class $DevicePropertyCopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept type,
-      List<dynamic> valueQuantity,
-      List<dynamic> valueCode});
+      List<Quantity> valueQuantity,
+      List<CodeableConcept> valueCode});
+
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 class _$DevicePropertyCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
@@ -10380,10 +10562,21 @@ class _$DevicePropertyCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as CodeableConcept,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as List<dynamic>,
-      valueCode:
-          valueCode == freezed ? _value.valueCode : valueCode as List<dynamic>,
+          : valueQuantity as List<Quantity>,
+      valueCode: valueCode == freezed
+          ? _value.valueCode
+          : valueCode as List<CodeableConcept>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
   }
 }
 
@@ -10410,9 +10603,9 @@ class _$DeviceProperty implements DeviceProperty {
   @override
   final CodeableConcept type;
   @override
-  final List<dynamic> valueQuantity;
+  final List<Quantity> valueQuantity;
   @override
-  final List<dynamic> valueCode;
+  final List<CodeableConcept> valueCode;
 
   @override
   String toString() {
@@ -10469,9 +10662,9 @@ class _$DeviceProperty implements DeviceProperty {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SubstanceStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -10503,7 +10696,7 @@ class _$DeviceProperty implements DeviceProperty {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
@@ -10561,11 +10754,11 @@ class _$DeviceProperty implements DeviceProperty {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<dynamic> statusReason,
+            List<CodeableConcept> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -10581,11 +10774,11 @@ class _$DeviceProperty implements DeviceProperty {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Reference location,
             FhirUri url,
-            List<dynamic> note,
-            List<dynamic> safety,
+            List<Annotation> note,
+            List<CodeableConcept> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
@@ -10626,8 +10819,8 @@ class _$DeviceProperty implements DeviceProperty {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> valueQuantity,
-            List<dynamic> valueCode),
+            List<Quantity> valueQuantity,
+            List<CodeableConcept> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -10639,7 +10832,7 @@ class _$DeviceProperty implements DeviceProperty {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -10691,9 +10884,9 @@ class _$DeviceProperty implements DeviceProperty {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SubstanceStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
@@ -10722,7 +10915,7 @@ class _$DeviceProperty implements DeviceProperty {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
@@ -10775,11 +10968,11 @@ class _$DeviceProperty implements DeviceProperty {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<dynamic> statusReason,
+        List<CodeableConcept> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -10795,11 +10988,11 @@ class _$DeviceProperty implements DeviceProperty {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Reference location,
         FhirUri url,
-        List<dynamic> note,
-        List<dynamic> safety,
+        List<Annotation> note,
+        List<CodeableConcept> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
@@ -10835,8 +11028,8 @@ class _$DeviceProperty implements DeviceProperty {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> valueQuantity,
-        List<dynamic> valueCode),
+        List<Quantity> valueQuantity,
+        List<CodeableConcept> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -10847,7 +11040,7 @@ class _$DeviceProperty implements DeviceProperty {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -10966,8 +11159,8 @@ abstract class DeviceProperty implements Entities2 {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept type,
-      List<dynamic> valueQuantity,
-      List<dynamic> valueCode}) = _$DeviceProperty;
+      List<Quantity> valueQuantity,
+      List<CodeableConcept> valueCode}) = _$DeviceProperty;
 
   factory DeviceProperty.fromJson(Map<String, dynamic> json) =
       _$DeviceProperty.fromJson;
@@ -10979,8 +11172,8 @@ abstract class DeviceProperty implements Entities2 {
   @override
   List<dynamic> get modifierExtension;
   CodeableConcept get type;
-  List<dynamic> get valueQuantity;
-  List<dynamic> get valueCode;
+  List<Quantity> get valueQuantity;
+  List<CodeableConcept> get valueCode;
   @override
   $DevicePropertyCopyWith<DeviceProperty> get copyWith;
 }
@@ -11000,7 +11193,7 @@ abstract class $DeviceMetricCopyWith<$Res> implements $Entities2CopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       CodeableConcept type,
       CodeableConcept unit,
       Reference source,
@@ -11010,6 +11203,10 @@ abstract class $DeviceMetricCopyWith<$Res> implements $Entities2CopyWith<$Res> {
       DeviceMetricCategory category,
       Timing measurementPeriod,
       List<dynamic> calibration});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $CodeableConceptCopyWith<$Res> get unit;
+  $TimingCopyWith<$Res> get measurementPeriod;
 }
 
 class _$DeviceMetricCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
@@ -11064,7 +11261,7 @@ class _$DeviceMetricCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       type: type == freezed ? _value.type : type as CodeableConcept,
       unit: unit == freezed ? _value.unit : unit as CodeableConcept,
       source: source == freezed ? _value.source : source as Reference,
@@ -11083,6 +11280,36 @@ class _$DeviceMetricCopyWithImpl<$Res> extends _$Entities2CopyWithImpl<$Res>
           ? _value.calibration
           : calibration as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get unit {
+    if (_value.unit == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.unit, (value) {
+      return _then(_value.copyWith(unit: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get measurementPeriod {
+    if (_value.measurementPeriod == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.measurementPeriod, (value) {
+      return _then(_value.copyWith(measurementPeriod: value));
+    });
   }
 }
 
@@ -11132,7 +11359,7 @@ class _$DeviceMetric implements DeviceMetric {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final CodeableConcept type;
   @override
@@ -11253,9 +11480,9 @@ class _$DeviceMetric implements DeviceMetric {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SubstanceStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -11287,7 +11514,7 @@ class _$DeviceMetric implements DeviceMetric {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
@@ -11345,11 +11572,11 @@ class _$DeviceMetric implements DeviceMetric {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<dynamic> statusReason,
+            List<CodeableConcept> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -11365,11 +11592,11 @@ class _$DeviceMetric implements DeviceMetric {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Reference location,
             FhirUri url,
-            List<dynamic> note,
-            List<dynamic> safety,
+            List<Annotation> note,
+            List<CodeableConcept> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
@@ -11410,8 +11637,8 @@ class _$DeviceMetric implements DeviceMetric {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> valueQuantity,
-            List<dynamic> valueCode),
+            List<Quantity> valueQuantity,
+            List<CodeableConcept> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -11423,7 +11650,7 @@ class _$DeviceMetric implements DeviceMetric {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -11493,9 +11720,9 @@ class _$DeviceMetric implements DeviceMetric {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SubstanceStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
@@ -11524,7 +11751,7 @@ class _$DeviceMetric implements DeviceMetric {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
@@ -11577,11 +11804,11 @@ class _$DeviceMetric implements DeviceMetric {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<dynamic> statusReason,
+        List<CodeableConcept> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -11597,11 +11824,11 @@ class _$DeviceMetric implements DeviceMetric {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Reference location,
         FhirUri url,
-        List<dynamic> note,
-        List<dynamic> safety,
+        List<Annotation> note,
+        List<CodeableConcept> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
@@ -11637,8 +11864,8 @@ class _$DeviceMetric implements DeviceMetric {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> valueQuantity,
-        List<dynamic> valueCode),
+        List<Quantity> valueQuantity,
+        List<CodeableConcept> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -11649,7 +11876,7 @@ class _$DeviceMetric implements DeviceMetric {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,
@@ -11791,7 +12018,7 @@ abstract class DeviceMetric implements Entities2 {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       CodeableConcept type,
       CodeableConcept unit,
       Reference source,
@@ -11817,7 +12044,7 @@ abstract class DeviceMetric implements Entities2 {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   CodeableConcept get type;
   CodeableConcept get unit;
   Reference get source;
@@ -11963,9 +12190,9 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SubstanceStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             String description,
             List<dynamic> instance,
@@ -11997,7 +12224,7 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             BiologicallyDerivedProductCategory productCategory,
             CodeableConcept productCode,
             BiologicallyDerivedProductStatus status,
@@ -12055,11 +12282,11 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference definition,
             List<dynamic> udiCarrier,
             DeviceStatus status,
-            List<dynamic> statusReason,
+            List<CodeableConcept> statusReason,
             String distinctIdentifier,
             String manufacturer,
             FhirDateTime manufactureDate,
@@ -12075,11 +12302,11 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
             List<dynamic> property,
             Reference patient,
             Reference owner,
-            List<dynamic> contact,
+            List<ContactPoint> contact,
             Reference location,
             FhirUri url,
-            List<dynamic> note,
-            List<dynamic> safety,
+            List<Annotation> note,
+            List<CodeableConcept> safety,
             Reference parent),
     @required
         Result deviceUdiCarrier(
@@ -12120,8 +12347,8 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> valueQuantity,
-            List<dynamic> valueCode),
+            List<Quantity> valueQuantity,
+            List<CodeableConcept> valueCode),
     @required
         Result deviceMetric(
             String resourceType,
@@ -12133,7 +12360,7 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             CodeableConcept unit,
             Reference source,
@@ -12185,9 +12412,9 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SubstanceStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         String description,
         List<dynamic> instance,
@@ -12216,7 +12443,7 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         BiologicallyDerivedProductCategory productCategory,
         CodeableConcept productCode,
         BiologicallyDerivedProductStatus status,
@@ -12269,11 +12496,11 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference definition,
         List<dynamic> udiCarrier,
         DeviceStatus status,
-        List<dynamic> statusReason,
+        List<CodeableConcept> statusReason,
         String distinctIdentifier,
         String manufacturer,
         FhirDateTime manufactureDate,
@@ -12289,11 +12516,11 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         List<dynamic> property,
         Reference patient,
         Reference owner,
-        List<dynamic> contact,
+        List<ContactPoint> contact,
         Reference location,
         FhirUri url,
-        List<dynamic> note,
-        List<dynamic> safety,
+        List<Annotation> note,
+        List<CodeableConcept> safety,
         Reference parent),
     Result deviceUdiCarrier(
         String id,
@@ -12329,8 +12556,8 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> valueQuantity,
-        List<dynamic> valueCode),
+        List<Quantity> valueQuantity,
+        List<CodeableConcept> valueCode),
     Result deviceMetric(
         String resourceType,
         Id id,
@@ -12341,7 +12568,7 @@ class _$DeviceMetricCalibration implements DeviceMetricCalibration {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         CodeableConcept unit,
         Reference source,

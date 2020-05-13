@@ -83,9 +83,9 @@ class _$DiagnosticsTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       ImagingStudyStatus status,
-      List<dynamic> modality,
+      List<Coding> modality,
       Reference subject,
       Reference encounter,
       FhirDateTime started,
@@ -96,11 +96,11 @@ class _$DiagnosticsTearOff {
       int numberOfSeries,
       int numberOfInstances,
       Reference procedureReference,
-      List<dynamic> procedureCode,
+      List<CodeableConcept> procedureCode,
       Reference location,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
-      List<dynamic> note,
+      List<Annotation> note,
       String description,
       List<dynamic> series}) {
     return ImagingStudy(
@@ -215,7 +215,7 @@ class _$DiagnosticsTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Identifier accessionIdentifier,
       SpecimenStatus status,
       CodeableConcept type,
@@ -226,8 +226,8 @@ class _$DiagnosticsTearOff {
       SpecimenCollection collection,
       List<dynamic> processing,
       List<dynamic> container,
-      List<dynamic> condition,
-      List<dynamic> note}) {
+      List<CodeableConcept> condition,
+      List<Annotation> note}) {
     return Specimen(
       resourceType: resourceType,
       id: id,
@@ -308,7 +308,7 @@ class _$DiagnosticsTearOff {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String description,
       CodeableConcept type,
       Quantity capacity,
@@ -339,7 +339,7 @@ class _$DiagnosticsTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       MolecularSequenceType type,
       int coordinateSystem,
       Reference patient,
@@ -586,11 +586,11 @@ class _$DiagnosticsTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<dynamic> basedOn,
       List<dynamic> partOf,
       ObservationStatus status,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
       List<dynamic> focus,
@@ -613,8 +613,8 @@ class _$DiagnosticsTearOff {
       FhirDateTime valueDateTime,
       Period valuePeriod,
       CodeableConcept dataAbsentReason,
-      List<dynamic> interpretation,
-      List<dynamic> note,
+      List<CodeableConcept> interpretation,
+      List<Annotation> note,
       CodeableConcept bodySite,
       CodeableConcept method,
       Reference specimen,
@@ -680,7 +680,7 @@ class _$DiagnosticsTearOff {
       Quantity low,
       Quantity high,
       CodeableConcept type,
-      List<dynamic> appliesTo,
+      List<CodeableConcept> appliesTo,
       Range age,
       String text}) {
     return ObservationReferenceRange(
@@ -713,7 +713,7 @@ class _$DiagnosticsTearOff {
       FhirDateTime valueDateTime,
       Period valuePeriod,
       CodeableConcept dataAbsentReason,
-      List<dynamic> interpretation,
+      List<CodeableConcept> interpretation,
       List<dynamic> referenceRange}) {
     return ObservationComponent(
       id: id,
@@ -747,13 +747,13 @@ class _$DiagnosticsTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       bool active,
       CodeableConcept morphology,
       CodeableConcept location,
-      List<dynamic> locationQualifier,
+      List<CodeableConcept> locationQualifier,
       String description,
-      List<dynamic> image,
+      List<Attachment> image,
       Reference patient}) {
     return BodyStructure(
       resourceType: resourceType,
@@ -889,10 +889,10 @@ class _$DiagnosticsTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<dynamic> basedOn,
       DiagnosticReportStatus status,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
       Reference encounter,
@@ -906,8 +906,8 @@ class _$DiagnosticsTearOff {
       List<dynamic> imagingStudy,
       List<dynamic> media,
       String conclusion,
-      List<dynamic> conclusionCode,
-      List<dynamic> presentedForm}) {
+      List<CodeableConcept> conclusionCode,
+      List<Attachment> presentedForm}) {
     return DiagnosticReport(
       resourceType: resourceType,
       id: id,
@@ -965,7 +965,7 @@ class _$DiagnosticsTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<dynamic> basedOn,
       List<dynamic> partOf,
       Code status,
@@ -978,7 +978,7 @@ class _$DiagnosticsTearOff {
       Period createdPeriod,
       Instant issued,
       Reference operator,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       CodeableConcept bodySite,
       String deviceName,
       Reference device,
@@ -987,7 +987,7 @@ class _$DiagnosticsTearOff {
       int frames,
       double duration,
       Attachment content,
-      List<dynamic> note}) {
+      List<Annotation> note}) {
     return Media(
       resourceType: resourceType,
       id: id,
@@ -1046,9 +1046,9 @@ mixin _$Diagnostics {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -1059,11 +1059,11 @@ mixin _$Diagnostics {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -1110,7 +1110,7 @@ mixin _$Diagnostics {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -1121,8 +1121,8 @@ mixin _$Diagnostics {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -1152,7 +1152,7 @@ mixin _$Diagnostics {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -1170,7 +1170,7 @@ mixin _$Diagnostics {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -1289,11 +1289,11 @@ mixin _$Diagnostics {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -1316,8 +1316,8 @@ mixin _$Diagnostics {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -1334,7 +1334,7 @@ mixin _$Diagnostics {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -1355,7 +1355,7 @@ mixin _$Diagnostics {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -1368,13 +1368,13 @@ mixin _$Diagnostics {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -1437,10 +1437,10 @@ mixin _$Diagnostics {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -1454,8 +1454,8 @@ mixin _$Diagnostics {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -1474,7 +1474,7 @@ mixin _$Diagnostics {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -1487,7 +1487,7 @@ mixin _$Diagnostics {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -1496,7 +1496,7 @@ mixin _$Diagnostics {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
@@ -1510,9 +1510,9 @@ mixin _$Diagnostics {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -1523,11 +1523,11 @@ mixin _$Diagnostics {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -1570,7 +1570,7 @@ mixin _$Diagnostics {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -1581,8 +1581,8 @@ mixin _$Diagnostics {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -1609,7 +1609,7 @@ mixin _$Diagnostics {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -1626,7 +1626,7 @@ mixin _$Diagnostics {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -1736,11 +1736,11 @@ mixin _$Diagnostics {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -1763,8 +1763,8 @@ mixin _$Diagnostics {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -1780,7 +1780,7 @@ mixin _$Diagnostics {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -1800,7 +1800,7 @@ mixin _$Diagnostics {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -1812,13 +1812,13 @@ mixin _$Diagnostics {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -1877,10 +1877,10 @@ mixin _$Diagnostics {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -1894,8 +1894,8 @@ mixin _$Diagnostics {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -1912,7 +1912,7 @@ mixin _$Diagnostics {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -1925,7 +1925,7 @@ mixin _$Diagnostics {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -1934,7 +1934,7 @@ mixin _$Diagnostics {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -2057,9 +2057,9 @@ abstract class $ImagingStudyCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       ImagingStudyStatus status,
-      List<dynamic> modality,
+      List<Coding> modality,
       Reference subject,
       Reference encounter,
       FhirDateTime started,
@@ -2070,11 +2070,11 @@ abstract class $ImagingStudyCopyWith<$Res>
       int numberOfSeries,
       int numberOfInstances,
       Reference procedureReference,
-      List<dynamic> procedureCode,
+      List<CodeableConcept> procedureCode,
       Reference location,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
-      List<dynamic> note,
+      List<Annotation> note,
       String description,
       List<dynamic> series});
 }
@@ -2141,10 +2141,10 @@ class _$ImagingStudyCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as ImagingStudyStatus,
       modality:
-          modality == freezed ? _value.modality : modality as List<dynamic>,
+          modality == freezed ? _value.modality : modality as List<Coding>,
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
@@ -2167,15 +2167,15 @@ class _$ImagingStudyCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
           : procedureReference as Reference,
       procedureCode: procedureCode == freezed
           ? _value.procedureCode
-          : procedureCode as List<dynamic>,
+          : procedureCode as List<CodeableConcept>,
       location: location == freezed ? _value.location : location as Reference,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<dynamic>,
+          : reasonCode as List<CodeableConcept>,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
           : reasonReference as List<dynamic>,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
       description:
           description == freezed ? _value.description : description as String,
       series: series == freezed ? _value.series : series as List<dynamic>,
@@ -2239,11 +2239,11 @@ class _$ImagingStudy implements ImagingStudy {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final ImagingStudyStatus status;
   @override
-  final List<dynamic> modality;
+  final List<Coding> modality;
   @override
   final Reference subject;
   @override
@@ -2265,15 +2265,15 @@ class _$ImagingStudy implements ImagingStudy {
   @override
   final Reference procedureReference;
   @override
-  final List<dynamic> procedureCode;
+  final List<CodeableConcept> procedureCode;
   @override
   final Reference location;
   @override
-  final List<dynamic> reasonCode;
+  final List<CodeableConcept> reasonCode;
   @override
   final List<dynamic> reasonReference;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
   @override
   final String description;
   @override
@@ -2413,9 +2413,9 @@ class _$ImagingStudy implements ImagingStudy {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -2426,11 +2426,11 @@ class _$ImagingStudy implements ImagingStudy {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -2477,7 +2477,7 @@ class _$ImagingStudy implements ImagingStudy {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -2488,8 +2488,8 @@ class _$ImagingStudy implements ImagingStudy {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -2519,7 +2519,7 @@ class _$ImagingStudy implements ImagingStudy {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -2537,7 +2537,7 @@ class _$ImagingStudy implements ImagingStudy {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -2656,11 +2656,11 @@ class _$ImagingStudy implements ImagingStudy {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -2683,8 +2683,8 @@ class _$ImagingStudy implements ImagingStudy {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -2701,7 +2701,7 @@ class _$ImagingStudy implements ImagingStudy {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -2722,7 +2722,7 @@ class _$ImagingStudy implements ImagingStudy {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -2735,13 +2735,13 @@ class _$ImagingStudy implements ImagingStudy {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -2804,10 +2804,10 @@ class _$ImagingStudy implements ImagingStudy {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -2821,8 +2821,8 @@ class _$ImagingStudy implements ImagingStudy {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -2841,7 +2841,7 @@ class _$ImagingStudy implements ImagingStudy {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -2854,7 +2854,7 @@ class _$ImagingStudy implements ImagingStudy {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -2863,7 +2863,7 @@ class _$ImagingStudy implements ImagingStudy {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -2937,9 +2937,9 @@ class _$ImagingStudy implements ImagingStudy {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -2950,11 +2950,11 @@ class _$ImagingStudy implements ImagingStudy {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -2997,7 +2997,7 @@ class _$ImagingStudy implements ImagingStudy {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -3008,8 +3008,8 @@ class _$ImagingStudy implements ImagingStudy {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -3036,7 +3036,7 @@ class _$ImagingStudy implements ImagingStudy {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -3053,7 +3053,7 @@ class _$ImagingStudy implements ImagingStudy {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -3163,11 +3163,11 @@ class _$ImagingStudy implements ImagingStudy {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -3190,8 +3190,8 @@ class _$ImagingStudy implements ImagingStudy {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -3207,7 +3207,7 @@ class _$ImagingStudy implements ImagingStudy {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -3227,7 +3227,7 @@ class _$ImagingStudy implements ImagingStudy {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -3239,13 +3239,13 @@ class _$ImagingStudy implements ImagingStudy {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -3304,10 +3304,10 @@ class _$ImagingStudy implements ImagingStudy {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -3321,8 +3321,8 @@ class _$ImagingStudy implements ImagingStudy {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -3339,7 +3339,7 @@ class _$ImagingStudy implements ImagingStudy {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -3352,7 +3352,7 @@ class _$ImagingStudy implements ImagingStudy {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -3361,7 +3361,7 @@ class _$ImagingStudy implements ImagingStudy {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3524,9 +3524,9 @@ abstract class ImagingStudy implements Diagnostics {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       ImagingStudyStatus status,
-      List<dynamic> modality,
+      List<Coding> modality,
       Reference subject,
       Reference encounter,
       FhirDateTime started,
@@ -3537,11 +3537,11 @@ abstract class ImagingStudy implements Diagnostics {
       int numberOfSeries,
       int numberOfInstances,
       Reference procedureReference,
-      List<dynamic> procedureCode,
+      List<CodeableConcept> procedureCode,
       Reference location,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
-      List<dynamic> note,
+      List<Annotation> note,
       String description,
       List<dynamic> series}) = _$ImagingStudy;
 
@@ -3560,9 +3560,9 @@ abstract class ImagingStudy implements Diagnostics {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   ImagingStudyStatus get status;
-  List<dynamic> get modality;
+  List<Coding> get modality;
   Reference get subject;
   Reference get encounter;
   FhirDateTime get started;
@@ -3573,11 +3573,11 @@ abstract class ImagingStudy implements Diagnostics {
   int get numberOfSeries;
   int get numberOfInstances;
   Reference get procedureReference;
-  List<dynamic> get procedureCode;
+  List<CodeableConcept> get procedureCode;
   Reference get location;
-  List<dynamic> get reasonCode;
+  List<CodeableConcept> get reasonCode;
   List<dynamic> get reasonReference;
-  List<dynamic> get note;
+  List<Annotation> get note;
   String get description;
   List<dynamic> get series;
   @override
@@ -3606,6 +3606,10 @@ abstract class $ImagingStudySeriesCopyWith<$Res>
       FhirDateTime started,
       List<dynamic> performer,
       List<dynamic> instance});
+
+  $CodingCopyWith<$Res> get modality;
+  $CodingCopyWith<$Res> get bodySite;
+  $CodingCopyWith<$Res> get laterality;
 }
 
 class _$ImagingStudySeriesCopyWithImpl<$Res>
@@ -3665,6 +3669,36 @@ class _$ImagingStudySeriesCopyWithImpl<$Res>
       instance:
           instance == freezed ? _value.instance : instance as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodingCopyWith<$Res> get modality {
+    if (_value.modality == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.modality, (value) {
+      return _then(_value.copyWith(modality: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get bodySite {
+    if (_value.bodySite == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.bodySite, (value) {
+      return _then(_value.copyWith(bodySite: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get laterality {
+    if (_value.laterality == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.laterality, (value) {
+      return _then(_value.copyWith(laterality: value));
+    });
   }
 }
 
@@ -3812,9 +3846,9 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -3825,11 +3859,11 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -3876,7 +3910,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -3887,8 +3921,8 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -3918,7 +3952,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -3936,7 +3970,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -4055,11 +4089,11 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -4082,8 +4116,8 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -4100,7 +4134,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -4121,7 +4155,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -4134,13 +4168,13 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -4203,10 +4237,10 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -4220,8 +4254,8 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -4240,7 +4274,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -4253,7 +4287,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -4262,7 +4296,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -4322,9 +4356,9 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -4335,11 +4369,11 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -4382,7 +4416,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -4393,8 +4427,8 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -4421,7 +4455,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -4438,7 +4472,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -4548,11 +4582,11 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -4575,8 +4609,8 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -4592,7 +4626,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -4612,7 +4646,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -4624,13 +4658,13 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -4689,10 +4723,10 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -4706,8 +4740,8 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -4724,7 +4758,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -4737,7 +4771,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -4746,7 +4780,7 @@ class _$ImagingStudySeries implements ImagingStudySeries {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4940,6 +4974,8 @@ abstract class $ImagingStudyPerformerCopyWith<$Res>
       List<dynamic> modifierExtension,
       CodeableConcept function,
       Reference actor});
+
+  $CodeableConceptCopyWith<$Res> get function;
 }
 
 class _$ImagingStudyPerformerCopyWithImpl<$Res>
@@ -4972,6 +5008,16 @@ class _$ImagingStudyPerformerCopyWithImpl<$Res>
           function == freezed ? _value.function : function as CodeableConcept,
       actor: actor == freezed ? _value.actor : actor as Reference,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get function {
+    if (_value.function == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.function, (value) {
+      return _then(_value.copyWith(function: value));
+    });
   }
 }
 
@@ -5051,9 +5097,9 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -5064,11 +5110,11 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -5115,7 +5161,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -5126,8 +5172,8 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -5157,7 +5203,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -5175,7 +5221,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -5294,11 +5340,11 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -5321,8 +5367,8 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -5339,7 +5385,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -5360,7 +5406,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -5373,13 +5419,13 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -5442,10 +5488,10 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -5459,8 +5505,8 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -5479,7 +5525,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -5492,7 +5538,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -5501,7 +5547,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -5547,9 +5593,9 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -5560,11 +5606,11 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -5607,7 +5653,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -5618,8 +5664,8 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -5646,7 +5692,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -5663,7 +5709,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -5773,11 +5819,11 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -5800,8 +5846,8 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -5817,7 +5863,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -5837,7 +5883,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -5849,13 +5895,13 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -5914,10 +5960,10 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -5931,8 +5977,8 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -5949,7 +5995,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -5962,7 +6008,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -5971,7 +6017,7 @@ class _$ImagingStudyPerformer implements ImagingStudyPerformer {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6133,6 +6179,8 @@ abstract class $ImagingStudyInstanceCopyWith<$Res>
       Coding sopClass,
       int number,
       String title});
+
+  $CodingCopyWith<$Res> get sopClass;
 }
 
 class _$ImagingStudyInstanceCopyWithImpl<$Res>
@@ -6168,6 +6216,16 @@ class _$ImagingStudyInstanceCopyWithImpl<$Res>
       number: number == freezed ? _value.number : number as int,
       title: title == freezed ? _value.title : title as String,
     ));
+  }
+
+  @override
+  $CodingCopyWith<$Res> get sopClass {
+    if (_value.sopClass == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.sopClass, (value) {
+      return _then(_value.copyWith(sopClass: value));
+    });
   }
 }
 
@@ -6259,9 +6317,9 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -6272,11 +6330,11 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -6323,7 +6381,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -6334,8 +6392,8 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -6365,7 +6423,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -6383,7 +6441,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -6502,11 +6560,11 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -6529,8 +6587,8 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -6547,7 +6605,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -6568,7 +6626,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -6581,13 +6639,13 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -6650,10 +6708,10 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -6667,8 +6725,8 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -6687,7 +6745,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -6700,7 +6758,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -6709,7 +6767,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -6755,9 +6813,9 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -6768,11 +6826,11 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -6815,7 +6873,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -6826,8 +6884,8 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -6854,7 +6912,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -6871,7 +6929,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -6981,11 +7039,11 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -7008,8 +7066,8 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -7025,7 +7083,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -7045,7 +7103,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -7057,13 +7115,13 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -7122,10 +7180,10 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -7139,8 +7197,8 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -7157,7 +7215,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -7170,7 +7228,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -7179,7 +7237,7 @@ class _$ImagingStudyInstance implements ImagingStudyInstance {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7345,7 +7403,7 @@ abstract class $SpecimenCopyWith<$Res> implements $DiagnosticsCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Identifier accessionIdentifier,
       SpecimenStatus status,
       CodeableConcept type,
@@ -7356,8 +7414,11 @@ abstract class $SpecimenCopyWith<$Res> implements $DiagnosticsCopyWith<$Res> {
       SpecimenCollection collection,
       List<dynamic> processing,
       List<dynamic> container,
-      List<dynamic> condition,
-      List<dynamic> note});
+      List<CodeableConcept> condition,
+      List<Annotation> note});
+
+  $IdentifierCopyWith<$Res> get accessionIdentifier;
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 class _$SpecimenCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
@@ -7414,7 +7475,7 @@ class _$SpecimenCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       accessionIdentifier: accessionIdentifier == freezed
           ? _value.accessionIdentifier
           : accessionIdentifier as Identifier,
@@ -7434,10 +7495,31 @@ class _$SpecimenCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
           : processing as List<dynamic>,
       container:
           container == freezed ? _value.container : container as List<dynamic>,
-      condition:
-          condition == freezed ? _value.condition : condition as List<dynamic>,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      condition: condition == freezed
+          ? _value.condition
+          : condition as List<CodeableConcept>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get accessionIdentifier {
+    if (_value.accessionIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.accessionIdentifier, (value) {
+      return _then(_value.copyWith(accessionIdentifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
   }
 }
 
@@ -7490,7 +7572,7 @@ class _$Specimen implements Specimen {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Identifier accessionIdentifier;
   @override
@@ -7512,9 +7594,9 @@ class _$Specimen implements Specimen {
   @override
   final List<dynamic> container;
   @override
-  final List<dynamic> condition;
+  final List<CodeableConcept> condition;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
 
   @override
   String toString() {
@@ -7630,9 +7712,9 @@ class _$Specimen implements Specimen {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -7643,11 +7725,11 @@ class _$Specimen implements Specimen {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -7694,7 +7776,7 @@ class _$Specimen implements Specimen {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -7705,8 +7787,8 @@ class _$Specimen implements Specimen {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -7736,7 +7818,7 @@ class _$Specimen implements Specimen {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -7754,7 +7836,7 @@ class _$Specimen implements Specimen {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -7873,11 +7955,11 @@ class _$Specimen implements Specimen {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -7900,8 +7982,8 @@ class _$Specimen implements Specimen {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -7918,7 +8000,7 @@ class _$Specimen implements Specimen {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -7939,7 +8021,7 @@ class _$Specimen implements Specimen {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -7952,13 +8034,13 @@ class _$Specimen implements Specimen {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -8021,10 +8103,10 @@ class _$Specimen implements Specimen {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -8038,8 +8120,8 @@ class _$Specimen implements Specimen {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -8058,7 +8140,7 @@ class _$Specimen implements Specimen {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -8071,7 +8153,7 @@ class _$Specimen implements Specimen {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -8080,7 +8162,7 @@ class _$Specimen implements Specimen {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -8147,9 +8229,9 @@ class _$Specimen implements Specimen {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -8160,11 +8242,11 @@ class _$Specimen implements Specimen {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -8207,7 +8289,7 @@ class _$Specimen implements Specimen {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -8218,8 +8300,8 @@ class _$Specimen implements Specimen {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -8246,7 +8328,7 @@ class _$Specimen implements Specimen {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -8263,7 +8345,7 @@ class _$Specimen implements Specimen {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -8373,11 +8455,11 @@ class _$Specimen implements Specimen {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -8400,8 +8482,8 @@ class _$Specimen implements Specimen {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -8417,7 +8499,7 @@ class _$Specimen implements Specimen {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -8437,7 +8519,7 @@ class _$Specimen implements Specimen {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -8449,13 +8531,13 @@ class _$Specimen implements Specimen {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -8514,10 +8596,10 @@ class _$Specimen implements Specimen {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -8531,8 +8613,8 @@ class _$Specimen implements Specimen {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -8549,7 +8631,7 @@ class _$Specimen implements Specimen {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -8562,7 +8644,7 @@ class _$Specimen implements Specimen {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -8571,7 +8653,7 @@ class _$Specimen implements Specimen {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8727,7 +8809,7 @@ abstract class Specimen implements Diagnostics {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Identifier accessionIdentifier,
       SpecimenStatus status,
       CodeableConcept type,
@@ -8738,8 +8820,8 @@ abstract class Specimen implements Diagnostics {
       SpecimenCollection collection,
       List<dynamic> processing,
       List<dynamic> container,
-      List<dynamic> condition,
-      List<dynamic> note}) = _$Specimen;
+      List<CodeableConcept> condition,
+      List<Annotation> note}) = _$Specimen;
 
   factory Specimen.fromJson(Map<String, dynamic> json) = _$Specimen.fromJson;
 
@@ -8755,7 +8837,7 @@ abstract class Specimen implements Diagnostics {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   Identifier get accessionIdentifier;
   SpecimenStatus get status;
   CodeableConcept get type;
@@ -8766,8 +8848,8 @@ abstract class Specimen implements Diagnostics {
   SpecimenCollection get collection;
   List<dynamic> get processing;
   List<dynamic> get container;
-  List<dynamic> get condition;
-  List<dynamic> get note;
+  List<CodeableConcept> get condition;
+  List<Annotation> get note;
   @override
   $SpecimenCopyWith<Specimen> get copyWith;
 }
@@ -8791,6 +8873,14 @@ abstract class $SpecimenCollectionCopyWith<$Res>
       CodeableConcept bodySite,
       CodeableConcept fastingStatusCodeableConcept,
       Duration fastingStatusDuration});
+
+  $PeriodCopyWith<$Res> get collectedPeriod;
+  $DurationCopyWith<$Res> get duration;
+  $QuantityCopyWith<$Res> get quantity;
+  $CodeableConceptCopyWith<$Res> get method;
+  $CodeableConceptCopyWith<$Res> get bodySite;
+  $CodeableConceptCopyWith<$Res> get fastingStatusCodeableConcept;
+  $DurationCopyWith<$Res> get fastingStatusDuration;
 }
 
 class _$SpecimenCollectionCopyWithImpl<$Res>
@@ -8846,6 +8936,77 @@ class _$SpecimenCollectionCopyWithImpl<$Res>
           ? _value.fastingStatusDuration
           : fastingStatusDuration as Duration,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get collectedPeriod {
+    if (_value.collectedPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.collectedPeriod, (value) {
+      return _then(_value.copyWith(collectedPeriod: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get duration {
+    if (_value.duration == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.duration, (value) {
+      return _then(_value.copyWith(duration: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get method {
+    if (_value.method == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.method, (value) {
+      return _then(_value.copyWith(method: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get bodySite {
+    if (_value.bodySite == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.bodySite, (value) {
+      return _then(_value.copyWith(bodySite: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get fastingStatusCodeableConcept {
+    if (_value.fastingStatusCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.fastingStatusCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(fastingStatusCodeableConcept: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get fastingStatusDuration {
+    if (_value.fastingStatusDuration == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.fastingStatusDuration, (value) {
+      return _then(_value.copyWith(fastingStatusDuration: value));
+    });
   }
 }
 
@@ -8975,9 +9136,9 @@ class _$SpecimenCollection implements SpecimenCollection {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -8988,11 +9149,11 @@ class _$SpecimenCollection implements SpecimenCollection {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -9039,7 +9200,7 @@ class _$SpecimenCollection implements SpecimenCollection {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -9050,8 +9211,8 @@ class _$SpecimenCollection implements SpecimenCollection {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -9081,7 +9242,7 @@ class _$SpecimenCollection implements SpecimenCollection {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -9099,7 +9260,7 @@ class _$SpecimenCollection implements SpecimenCollection {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -9218,11 +9379,11 @@ class _$SpecimenCollection implements SpecimenCollection {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -9245,8 +9406,8 @@ class _$SpecimenCollection implements SpecimenCollection {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -9263,7 +9424,7 @@ class _$SpecimenCollection implements SpecimenCollection {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -9284,7 +9445,7 @@ class _$SpecimenCollection implements SpecimenCollection {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -9297,13 +9458,13 @@ class _$SpecimenCollection implements SpecimenCollection {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -9366,10 +9527,10 @@ class _$SpecimenCollection implements SpecimenCollection {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -9383,8 +9544,8 @@ class _$SpecimenCollection implements SpecimenCollection {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -9403,7 +9564,7 @@ class _$SpecimenCollection implements SpecimenCollection {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -9416,7 +9577,7 @@ class _$SpecimenCollection implements SpecimenCollection {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -9425,7 +9586,7 @@ class _$SpecimenCollection implements SpecimenCollection {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -9482,9 +9643,9 @@ class _$SpecimenCollection implements SpecimenCollection {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -9495,11 +9656,11 @@ class _$SpecimenCollection implements SpecimenCollection {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -9542,7 +9703,7 @@ class _$SpecimenCollection implements SpecimenCollection {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -9553,8 +9714,8 @@ class _$SpecimenCollection implements SpecimenCollection {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -9581,7 +9742,7 @@ class _$SpecimenCollection implements SpecimenCollection {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -9598,7 +9759,7 @@ class _$SpecimenCollection implements SpecimenCollection {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -9708,11 +9869,11 @@ class _$SpecimenCollection implements SpecimenCollection {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -9735,8 +9896,8 @@ class _$SpecimenCollection implements SpecimenCollection {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -9752,7 +9913,7 @@ class _$SpecimenCollection implements SpecimenCollection {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -9772,7 +9933,7 @@ class _$SpecimenCollection implements SpecimenCollection {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -9784,13 +9945,13 @@ class _$SpecimenCollection implements SpecimenCollection {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -9849,10 +10010,10 @@ class _$SpecimenCollection implements SpecimenCollection {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -9866,8 +10027,8 @@ class _$SpecimenCollection implements SpecimenCollection {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -9884,7 +10045,7 @@ class _$SpecimenCollection implements SpecimenCollection {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -9897,7 +10058,7 @@ class _$SpecimenCollection implements SpecimenCollection {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -9906,7 +10067,7 @@ class _$SpecimenCollection implements SpecimenCollection {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -10094,6 +10255,9 @@ abstract class $SpecimenProcessingCopyWith<$Res>
       List<dynamic> additive,
       FhirDateTime timeDateTime,
       Period timePeriod});
+
+  $CodeableConceptCopyWith<$Res> get procedure;
+  $PeriodCopyWith<$Res> get timePeriod;
 }
 
 class _$SpecimenProcessingCopyWithImpl<$Res>
@@ -10138,6 +10302,26 @@ class _$SpecimenProcessingCopyWithImpl<$Res>
       timePeriod:
           timePeriod == freezed ? _value.timePeriod : timePeriod as Period,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get procedure {
+    if (_value.procedure == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.procedure, (value) {
+      return _then(_value.copyWith(procedure: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get timePeriod {
+    if (_value.timePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.timePeriod, (value) {
+      return _then(_value.copyWith(timePeriod: value));
+    });
   }
 }
 
@@ -10238,9 +10422,9 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -10251,11 +10435,11 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -10302,7 +10486,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -10313,8 +10497,8 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -10344,7 +10528,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -10362,7 +10546,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -10481,11 +10665,11 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -10508,8 +10692,8 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -10526,7 +10710,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -10547,7 +10731,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -10560,13 +10744,13 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -10629,10 +10813,10 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -10646,8 +10830,8 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -10666,7 +10850,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -10679,7 +10863,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -10688,7 +10872,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -10734,9 +10918,9 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -10747,11 +10931,11 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -10794,7 +10978,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -10805,8 +10989,8 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -10833,7 +11017,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -10850,7 +11034,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -10960,11 +11144,11 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -10987,8 +11171,8 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -11004,7 +11188,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -11024,7 +11208,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -11036,13 +11220,13 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -11101,10 +11285,10 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -11118,8 +11302,8 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -11136,7 +11320,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -11149,7 +11333,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -11158,7 +11342,7 @@ class _$SpecimenProcessing implements SpecimenProcessing {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -11322,13 +11506,18 @@ abstract class $SpecimenContainerCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String description,
       CodeableConcept type,
       Quantity capacity,
       Quantity specimenQuantity,
       CodeableConcept additiveCodeableConcept,
       Reference additiveReference});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $QuantityCopyWith<$Res> get capacity;
+  $QuantityCopyWith<$Res> get specimenQuantity;
+  $CodeableConceptCopyWith<$Res> get additiveCodeableConcept;
 }
 
 class _$SpecimenContainerCopyWithImpl<$Res>
@@ -11364,7 +11553,7 @@ class _$SpecimenContainerCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       description:
           description == freezed ? _value.description : description as String,
       type: type == freezed ? _value.type : type as CodeableConcept,
@@ -11379,6 +11568,47 @@ class _$SpecimenContainerCopyWithImpl<$Res>
           ? _value.additiveReference
           : additiveReference as Reference,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get capacity {
+    if (_value.capacity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.capacity, (value) {
+      return _then(_value.copyWith(capacity: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get specimenQuantity {
+    if (_value.specimenQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.specimenQuantity, (value) {
+      return _then(_value.copyWith(specimenQuantity: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get additiveCodeableConcept {
+    if (_value.additiveCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.additiveCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(additiveCodeableConcept: value));
+    });
   }
 }
 
@@ -11407,7 +11637,7 @@ class _$SpecimenContainer implements SpecimenContainer {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final String description;
   @override
@@ -11493,9 +11723,9 @@ class _$SpecimenContainer implements SpecimenContainer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -11506,11 +11736,11 @@ class _$SpecimenContainer implements SpecimenContainer {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -11557,7 +11787,7 @@ class _$SpecimenContainer implements SpecimenContainer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -11568,8 +11798,8 @@ class _$SpecimenContainer implements SpecimenContainer {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -11599,7 +11829,7 @@ class _$SpecimenContainer implements SpecimenContainer {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -11617,7 +11847,7 @@ class _$SpecimenContainer implements SpecimenContainer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -11736,11 +11966,11 @@ class _$SpecimenContainer implements SpecimenContainer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -11763,8 +11993,8 @@ class _$SpecimenContainer implements SpecimenContainer {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -11781,7 +12011,7 @@ class _$SpecimenContainer implements SpecimenContainer {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -11802,7 +12032,7 @@ class _$SpecimenContainer implements SpecimenContainer {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -11815,13 +12045,13 @@ class _$SpecimenContainer implements SpecimenContainer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -11884,10 +12114,10 @@ class _$SpecimenContainer implements SpecimenContainer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -11901,8 +12131,8 @@ class _$SpecimenContainer implements SpecimenContainer {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -11921,7 +12151,7 @@ class _$SpecimenContainer implements SpecimenContainer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -11934,7 +12164,7 @@ class _$SpecimenContainer implements SpecimenContainer {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -11943,7 +12173,7 @@ class _$SpecimenContainer implements SpecimenContainer {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -11998,9 +12228,9 @@ class _$SpecimenContainer implements SpecimenContainer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -12011,11 +12241,11 @@ class _$SpecimenContainer implements SpecimenContainer {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -12058,7 +12288,7 @@ class _$SpecimenContainer implements SpecimenContainer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -12069,8 +12299,8 @@ class _$SpecimenContainer implements SpecimenContainer {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -12097,7 +12327,7 @@ class _$SpecimenContainer implements SpecimenContainer {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -12114,7 +12344,7 @@ class _$SpecimenContainer implements SpecimenContainer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -12224,11 +12454,11 @@ class _$SpecimenContainer implements SpecimenContainer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -12251,8 +12481,8 @@ class _$SpecimenContainer implements SpecimenContainer {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -12268,7 +12498,7 @@ class _$SpecimenContainer implements SpecimenContainer {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -12288,7 +12518,7 @@ class _$SpecimenContainer implements SpecimenContainer {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -12300,13 +12530,13 @@ class _$SpecimenContainer implements SpecimenContainer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -12365,10 +12595,10 @@ class _$SpecimenContainer implements SpecimenContainer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -12382,8 +12612,8 @@ class _$SpecimenContainer implements SpecimenContainer {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -12400,7 +12630,7 @@ class _$SpecimenContainer implements SpecimenContainer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -12413,7 +12643,7 @@ class _$SpecimenContainer implements SpecimenContainer {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -12422,7 +12652,7 @@ class _$SpecimenContainer implements SpecimenContainer {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -12561,7 +12791,7 @@ abstract class SpecimenContainer implements Diagnostics {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String description,
       CodeableConcept type,
       Quantity capacity,
@@ -12578,7 +12808,7 @@ abstract class SpecimenContainer implements Diagnostics {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   String get description;
   CodeableConcept get type;
   Quantity get capacity;
@@ -12605,7 +12835,7 @@ abstract class $MolecularSequenceCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       MolecularSequenceType type,
       int coordinateSystem,
       Reference patient,
@@ -12621,6 +12851,8 @@ abstract class $MolecularSequenceCopyWith<$Res>
       List<dynamic> repository,
       List<dynamic> pointer,
       List<dynamic> structureVariant});
+
+  $QuantityCopyWith<$Res> get quantity;
 }
 
 class _$MolecularSequenceCopyWithImpl<$Res>
@@ -12682,7 +12914,7 @@ class _$MolecularSequenceCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       type: type == freezed ? _value.type : type as MolecularSequenceType,
       coordinateSystem: coordinateSystem == freezed
           ? _value.coordinateSystem
@@ -12710,6 +12942,16 @@ class _$MolecularSequenceCopyWithImpl<$Res>
           ? _value.structureVariant
           : structureVariant as List<dynamic>,
     ));
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
   }
 }
 
@@ -12765,7 +13007,7 @@ class _$MolecularSequence implements MolecularSequence {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final MolecularSequenceType type;
   @override
@@ -12923,9 +13165,9 @@ class _$MolecularSequence implements MolecularSequence {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -12936,11 +13178,11 @@ class _$MolecularSequence implements MolecularSequence {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -12987,7 +13229,7 @@ class _$MolecularSequence implements MolecularSequence {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -12998,8 +13240,8 @@ class _$MolecularSequence implements MolecularSequence {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -13029,7 +13271,7 @@ class _$MolecularSequence implements MolecularSequence {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -13047,7 +13289,7 @@ class _$MolecularSequence implements MolecularSequence {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -13166,11 +13408,11 @@ class _$MolecularSequence implements MolecularSequence {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -13193,8 +13435,8 @@ class _$MolecularSequence implements MolecularSequence {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -13211,7 +13453,7 @@ class _$MolecularSequence implements MolecularSequence {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -13232,7 +13474,7 @@ class _$MolecularSequence implements MolecularSequence {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -13245,13 +13487,13 @@ class _$MolecularSequence implements MolecularSequence {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -13314,10 +13556,10 @@ class _$MolecularSequence implements MolecularSequence {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -13331,8 +13573,8 @@ class _$MolecularSequence implements MolecularSequence {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -13351,7 +13593,7 @@ class _$MolecularSequence implements MolecularSequence {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -13364,7 +13606,7 @@ class _$MolecularSequence implements MolecularSequence {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -13373,7 +13615,7 @@ class _$MolecularSequence implements MolecularSequence {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -13443,9 +13685,9 @@ class _$MolecularSequence implements MolecularSequence {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -13456,11 +13698,11 @@ class _$MolecularSequence implements MolecularSequence {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -13503,7 +13745,7 @@ class _$MolecularSequence implements MolecularSequence {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -13514,8 +13756,8 @@ class _$MolecularSequence implements MolecularSequence {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -13542,7 +13784,7 @@ class _$MolecularSequence implements MolecularSequence {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -13559,7 +13801,7 @@ class _$MolecularSequence implements MolecularSequence {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -13669,11 +13911,11 @@ class _$MolecularSequence implements MolecularSequence {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -13696,8 +13938,8 @@ class _$MolecularSequence implements MolecularSequence {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -13713,7 +13955,7 @@ class _$MolecularSequence implements MolecularSequence {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -13733,7 +13975,7 @@ class _$MolecularSequence implements MolecularSequence {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -13745,13 +13987,13 @@ class _$MolecularSequence implements MolecularSequence {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -13810,10 +14052,10 @@ class _$MolecularSequence implements MolecularSequence {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -13827,8 +14069,8 @@ class _$MolecularSequence implements MolecularSequence {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -13845,7 +14087,7 @@ class _$MolecularSequence implements MolecularSequence {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -13858,7 +14100,7 @@ class _$MolecularSequence implements MolecularSequence {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -13867,7 +14109,7 @@ class _$MolecularSequence implements MolecularSequence {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -14027,7 +14269,7 @@ abstract class MolecularSequence implements Diagnostics {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       MolecularSequenceType type,
       int coordinateSystem,
       Reference patient,
@@ -14059,7 +14301,7 @@ abstract class MolecularSequence implements Diagnostics {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   MolecularSequenceType get type;
   int get coordinateSystem;
   Reference get patient;
@@ -14099,6 +14341,9 @@ abstract class $MolecularSequenceReferenceSeqCopyWith<$Res>
       MolecularSequenceReferenceSeqStrand strand,
       int windowStart,
       int windowEnd});
+
+  $CodeableConceptCopyWith<$Res> get chromosome;
+  $CodeableConceptCopyWith<$Res> get referenceSeqId;
 }
 
 class _$MolecularSequenceReferenceSeqCopyWithImpl<$Res>
@@ -14160,6 +14405,26 @@ class _$MolecularSequenceReferenceSeqCopyWithImpl<$Res>
           windowStart == freezed ? _value.windowStart : windowStart as int,
       windowEnd: windowEnd == freezed ? _value.windowEnd : windowEnd as int,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get chromosome {
+    if (_value.chromosome == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.chromosome, (value) {
+      return _then(_value.copyWith(chromosome: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get referenceSeqId {
+    if (_value.referenceSeqId == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.referenceSeqId, (value) {
+      return _then(_value.copyWith(referenceSeqId: value));
+    });
   }
 }
 
@@ -14288,9 +14553,9 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -14301,11 +14566,11 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -14352,7 +14617,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -14363,8 +14628,8 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -14394,7 +14659,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -14412,7 +14677,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -14531,11 +14796,11 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -14558,8 +14823,8 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -14576,7 +14841,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -14597,7 +14862,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -14610,13 +14875,13 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -14679,10 +14944,10 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -14696,8 +14961,8 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -14716,7 +14981,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -14729,7 +14994,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -14738,7 +15003,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -14795,9 +15060,9 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -14808,11 +15073,11 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -14855,7 +15120,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -14866,8 +15131,8 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -14894,7 +15159,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -14911,7 +15176,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -15021,11 +15286,11 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -15048,8 +15313,8 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -15065,7 +15330,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -15085,7 +15350,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -15097,13 +15362,13 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -15162,10 +15427,10 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -15179,8 +15444,8 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -15197,7 +15462,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -15210,7 +15475,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -15219,7 +15484,7 @@ class _$MolecularSequenceReferenceSeq implements MolecularSequenceReferenceSeq {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -15560,9 +15825,9 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -15573,11 +15838,11 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -15624,7 +15889,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -15635,8 +15900,8 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -15666,7 +15931,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -15684,7 +15949,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -15803,11 +16068,11 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -15830,8 +16095,8 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -15848,7 +16113,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -15869,7 +16134,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -15882,13 +16147,13 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -15951,10 +16216,10 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -15968,8 +16233,8 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -15988,7 +16253,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -16001,7 +16266,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -16010,7 +16275,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -16056,9 +16321,9 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -16069,11 +16334,11 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -16116,7 +16381,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -16127,8 +16392,8 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -16155,7 +16420,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -16172,7 +16437,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -16282,11 +16547,11 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -16309,8 +16574,8 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -16326,7 +16591,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -16346,7 +16611,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -16358,13 +16623,13 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -16423,10 +16688,10 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -16440,8 +16705,8 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -16458,7 +16723,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -16471,7 +16736,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -16480,7 +16745,7 @@ class _$MolecularSequenceVariant implements MolecularSequenceVariant {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -16661,6 +16926,10 @@ abstract class $MolecularSequenceQualityCopyWith<$Res>
       double recall,
       double fScore,
       MolecularSequenceRoc roc});
+
+  $CodeableConceptCopyWith<$Res> get standardSequence;
+  $QuantityCopyWith<$Res> get score;
+  $CodeableConceptCopyWith<$Res> get method;
 }
 
 class _$MolecularSequenceQualityCopyWithImpl<$Res>
@@ -16722,6 +16991,36 @@ class _$MolecularSequenceQualityCopyWithImpl<$Res>
       fScore: fScore == freezed ? _value.fScore : fScore as double,
       roc: roc == freezed ? _value.roc : roc as MolecularSequenceRoc,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get standardSequence {
+    if (_value.standardSequence == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.standardSequence, (value) {
+      return _then(_value.copyWith(standardSequence: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get score {
+    if (_value.score == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.score, (value) {
+      return _then(_value.copyWith(score: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get method {
+    if (_value.method == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.method, (value) {
+      return _then(_value.copyWith(method: value));
+    });
   }
 }
 
@@ -16884,9 +17183,9 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -16897,11 +17196,11 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -16948,7 +17247,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -16959,8 +17258,8 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -16990,7 +17289,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -17008,7 +17307,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -17127,11 +17426,11 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -17154,8 +17453,8 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -17172,7 +17471,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -17193,7 +17492,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -17206,13 +17505,13 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -17275,10 +17574,10 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -17292,8 +17591,8 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -17312,7 +17611,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -17325,7 +17624,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -17334,7 +17633,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -17397,9 +17696,9 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -17410,11 +17709,11 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -17457,7 +17756,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -17468,8 +17767,8 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -17496,7 +17795,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -17513,7 +17812,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -17623,11 +17922,11 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -17650,8 +17949,8 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -17667,7 +17966,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -17687,7 +17986,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -17699,13 +17998,13 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -17764,10 +18063,10 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -17781,8 +18080,8 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -17799,7 +18098,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -17812,7 +18111,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -17821,7 +18120,7 @@ class _$MolecularSequenceQuality implements MolecularSequenceQuality {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -18185,9 +18484,9 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -18198,11 +18497,11 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -18249,7 +18548,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -18260,8 +18559,8 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -18291,7 +18590,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -18309,7 +18608,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -18428,11 +18727,11 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -18455,8 +18754,8 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -18473,7 +18772,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -18494,7 +18793,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -18507,13 +18806,13 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -18576,10 +18875,10 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -18593,8 +18892,8 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -18613,7 +18912,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -18626,7 +18925,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -18635,7 +18934,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -18681,9 +18980,9 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -18694,11 +18993,11 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -18741,7 +19040,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -18752,8 +19051,8 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -18780,7 +19079,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -18797,7 +19096,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -18907,11 +19206,11 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -18934,8 +19233,8 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -18951,7 +19250,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -18971,7 +19270,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -18983,13 +19282,13 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -19048,10 +19347,10 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -19065,8 +19364,8 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -19083,7 +19382,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -19096,7 +19395,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -19105,7 +19404,7 @@ class _$MolecularSequenceRoc implements MolecularSequenceRoc {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -19429,9 +19728,9 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -19442,11 +19741,11 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -19493,7 +19792,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -19504,8 +19803,8 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -19535,7 +19834,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -19553,7 +19852,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -19672,11 +19971,11 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -19699,8 +19998,8 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -19717,7 +20016,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -19738,7 +20037,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -19751,13 +20050,13 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -19820,10 +20119,10 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -19837,8 +20136,8 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -19857,7 +20156,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -19870,7 +20169,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -19879,7 +20178,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -19925,9 +20224,9 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -19938,11 +20237,11 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -19985,7 +20284,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -19996,8 +20295,8 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -20024,7 +20323,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -20041,7 +20340,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -20151,11 +20450,11 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -20178,8 +20477,8 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -20195,7 +20494,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -20215,7 +20514,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -20227,13 +20526,13 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -20292,10 +20591,10 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -20309,8 +20608,8 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -20327,7 +20626,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -20340,7 +20639,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -20349,7 +20648,7 @@ class _$MolecularSequenceRepository implements MolecularSequenceRepository {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -20522,6 +20821,8 @@ abstract class $MolecularSequenceStructureVariantCopyWith<$Res>
       int length,
       MolecularSequenceOuter outer,
       MolecularSequenceInner inner});
+
+  $CodeableConceptCopyWith<$Res> get variantType;
 }
 
 class _$MolecularSequenceStructureVariantCopyWithImpl<$Res>
@@ -20563,6 +20864,16 @@ class _$MolecularSequenceStructureVariantCopyWithImpl<$Res>
       outer: outer == freezed ? _value.outer : outer as MolecularSequenceOuter,
       inner: inner == freezed ? _value.inner : inner as MolecularSequenceInner,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get variantType {
+    if (_value.variantType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.variantType, (value) {
+      return _then(_value.copyWith(variantType: value));
+    });
   }
 }
 
@@ -20662,9 +20973,9 @@ class _$MolecularSequenceStructureVariant
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -20675,11 +20986,11 @@ class _$MolecularSequenceStructureVariant
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -20726,7 +21037,7 @@ class _$MolecularSequenceStructureVariant
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -20737,8 +21048,8 @@ class _$MolecularSequenceStructureVariant
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -20768,7 +21079,7 @@ class _$MolecularSequenceStructureVariant
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -20786,7 +21097,7 @@ class _$MolecularSequenceStructureVariant
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -20905,11 +21216,11 @@ class _$MolecularSequenceStructureVariant
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -20932,8 +21243,8 @@ class _$MolecularSequenceStructureVariant
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -20950,7 +21261,7 @@ class _$MolecularSequenceStructureVariant
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -20971,7 +21282,7 @@ class _$MolecularSequenceStructureVariant
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -20984,13 +21295,13 @@ class _$MolecularSequenceStructureVariant
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -21053,10 +21364,10 @@ class _$MolecularSequenceStructureVariant
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -21070,8 +21381,8 @@ class _$MolecularSequenceStructureVariant
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -21090,7 +21401,7 @@ class _$MolecularSequenceStructureVariant
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -21103,7 +21414,7 @@ class _$MolecularSequenceStructureVariant
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -21112,7 +21423,7 @@ class _$MolecularSequenceStructureVariant
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -21158,9 +21469,9 @@ class _$MolecularSequenceStructureVariant
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -21171,11 +21482,11 @@ class _$MolecularSequenceStructureVariant
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -21218,7 +21529,7 @@ class _$MolecularSequenceStructureVariant
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -21229,8 +21540,8 @@ class _$MolecularSequenceStructureVariant
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -21257,7 +21568,7 @@ class _$MolecularSequenceStructureVariant
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -21274,7 +21585,7 @@ class _$MolecularSequenceStructureVariant
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -21384,11 +21695,11 @@ class _$MolecularSequenceStructureVariant
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -21411,8 +21722,8 @@ class _$MolecularSequenceStructureVariant
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -21428,7 +21739,7 @@ class _$MolecularSequenceStructureVariant
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -21448,7 +21759,7 @@ class _$MolecularSequenceStructureVariant
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -21460,13 +21771,13 @@ class _$MolecularSequenceStructureVariant
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -21525,10 +21836,10 @@ class _$MolecularSequenceStructureVariant
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -21542,8 +21853,8 @@ class _$MolecularSequenceStructureVariant
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -21560,7 +21871,7 @@ class _$MolecularSequenceStructureVariant
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -21573,7 +21884,7 @@ class _$MolecularSequenceStructureVariant
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -21582,7 +21893,7 @@ class _$MolecularSequenceStructureVariant
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -21858,9 +22169,9 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -21871,11 +22182,11 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -21922,7 +22233,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -21933,8 +22244,8 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -21964,7 +22275,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -21982,7 +22293,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -22101,11 +22412,11 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -22128,8 +22439,8 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -22146,7 +22457,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -22167,7 +22478,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -22180,13 +22491,13 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -22249,10 +22560,10 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -22266,8 +22577,8 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -22286,7 +22597,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -22299,7 +22610,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -22308,7 +22619,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -22354,9 +22665,9 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -22367,11 +22678,11 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -22414,7 +22725,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -22425,8 +22736,8 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -22453,7 +22764,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -22470,7 +22781,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -22580,11 +22891,11 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -22607,8 +22918,8 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -22624,7 +22935,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -22644,7 +22955,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -22656,13 +22967,13 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -22721,10 +23032,10 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -22738,8 +23049,8 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -22756,7 +23067,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -22769,7 +23080,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -22778,7 +23089,7 @@ class _$MolecularSequenceOuter implements MolecularSequenceOuter {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -23047,9 +23358,9 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -23060,11 +23371,11 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -23111,7 +23422,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -23122,8 +23433,8 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -23153,7 +23464,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -23171,7 +23482,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -23290,11 +23601,11 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -23317,8 +23628,8 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -23335,7 +23646,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -23356,7 +23667,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -23369,13 +23680,13 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -23438,10 +23749,10 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -23455,8 +23766,8 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -23475,7 +23786,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -23488,7 +23799,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -23497,7 +23808,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -23543,9 +23854,9 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -23556,11 +23867,11 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -23603,7 +23914,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -23614,8 +23925,8 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -23642,7 +23953,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -23659,7 +23970,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -23769,11 +24080,11 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -23796,8 +24107,8 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -23813,7 +24124,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -23833,7 +24144,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -23845,13 +24156,13 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -23910,10 +24221,10 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -23927,8 +24238,8 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -23945,7 +24256,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -23958,7 +24269,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -23967,7 +24278,7 @@ class _$MolecularSequenceInner implements MolecularSequenceInner {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -24131,11 +24442,11 @@ abstract class $ObservationCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<dynamic> basedOn,
       List<dynamic> partOf,
       ObservationStatus status,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
       List<dynamic> focus,
@@ -24158,8 +24469,8 @@ abstract class $ObservationCopyWith<$Res>
       FhirDateTime valueDateTime,
       Period valuePeriod,
       CodeableConcept dataAbsentReason,
-      List<dynamic> interpretation,
-      List<dynamic> note,
+      List<CodeableConcept> interpretation,
+      List<Annotation> note,
       CodeableConcept bodySite,
       CodeableConcept method,
       Reference specimen,
@@ -24168,6 +24479,19 @@ abstract class $ObservationCopyWith<$Res>
       List<dynamic> hasMember,
       List<dynamic> derivedFrom,
       List<dynamic> component});
+
+  $CodeableConceptCopyWith<$Res> get code;
+  $PeriodCopyWith<$Res> get effectivePeriod;
+  $TimingCopyWith<$Res> get effectiveTiming;
+  $QuantityCopyWith<$Res> get valueQuantity;
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  $RangeCopyWith<$Res> get valueRange;
+  $RatioCopyWith<$Res> get valueRatio;
+  $SampledDataCopyWith<$Res> get valueSampledData;
+  $PeriodCopyWith<$Res> get valuePeriod;
+  $CodeableConceptCopyWith<$Res> get dataAbsentReason;
+  $CodeableConceptCopyWith<$Res> get bodySite;
+  $CodeableConceptCopyWith<$Res> get method;
 }
 
 class _$ObservationCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
@@ -24249,12 +24573,13 @@ class _$ObservationCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<dynamic>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<dynamic>,
       status: status == freezed ? _value.status : status as ObservationStatus,
-      category:
-          category == freezed ? _value.category : category as List<dynamic>,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
       focus: focus == freezed ? _value.focus : focus as List<dynamic>,
@@ -24305,8 +24630,8 @@ class _$ObservationCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
           : dataAbsentReason as CodeableConcept,
       interpretation: interpretation == freezed
           ? _value.interpretation
-          : interpretation as List<dynamic>,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+          : interpretation as List<CodeableConcept>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
       bodySite:
           bodySite == freezed ? _value.bodySite : bodySite as CodeableConcept,
       method: method == freezed ? _value.method : method as CodeableConcept,
@@ -24323,6 +24648,126 @@ class _$ObservationCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
       component:
           component == freezed ? _value.component : component as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get effectivePeriod {
+    if (_value.effectivePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
+      return _then(_value.copyWith(effectivePeriod: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get effectiveTiming {
+    if (_value.effectiveTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.effectiveTiming, (value) {
+      return _then(_value.copyWith(effectiveTiming: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept, (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.valueRange, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get valueRatio {
+    if (_value.valueRatio == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.valueRatio, (value) {
+      return _then(_value.copyWith(valueRatio: value));
+    });
+  }
+
+  @override
+  $SampledDataCopyWith<$Res> get valueSampledData {
+    if (_value.valueSampledData == null) {
+      return null;
+    }
+    return $SampledDataCopyWith<$Res>(_value.valueSampledData, (value) {
+      return _then(_value.copyWith(valueSampledData: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get valuePeriod {
+    if (_value.valuePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.valuePeriod, (value) {
+      return _then(_value.copyWith(valuePeriod: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get dataAbsentReason {
+    if (_value.dataAbsentReason == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.dataAbsentReason, (value) {
+      return _then(_value.copyWith(dataAbsentReason: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get bodySite {
+    if (_value.bodySite == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.bodySite, (value) {
+      return _then(_value.copyWith(bodySite: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get method {
+    if (_value.method == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.method, (value) {
+      return _then(_value.copyWith(method: value));
+    });
   }
 }
 
@@ -24399,7 +24844,7 @@ class _$Observation implements Observation {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final List<dynamic> basedOn;
   @override
@@ -24407,7 +24852,7 @@ class _$Observation implements Observation {
   @override
   final ObservationStatus status;
   @override
-  final List<dynamic> category;
+  final List<CodeableConcept> category;
   @override
   final CodeableConcept code;
   @override
@@ -24453,9 +24898,9 @@ class _$Observation implements Observation {
   @override
   final CodeableConcept dataAbsentReason;
   @override
-  final List<dynamic> interpretation;
+  final List<CodeableConcept> interpretation;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
   @override
   final CodeableConcept bodySite;
   @override
@@ -24641,9 +25086,9 @@ class _$Observation implements Observation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -24654,11 +25099,11 @@ class _$Observation implements Observation {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -24705,7 +25150,7 @@ class _$Observation implements Observation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -24716,8 +25161,8 @@ class _$Observation implements Observation {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -24747,7 +25192,7 @@ class _$Observation implements Observation {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -24765,7 +25210,7 @@ class _$Observation implements Observation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -24884,11 +25329,11 @@ class _$Observation implements Observation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -24911,8 +25356,8 @@ class _$Observation implements Observation {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -24929,7 +25374,7 @@ class _$Observation implements Observation {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -24950,7 +25395,7 @@ class _$Observation implements Observation {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -24963,13 +25408,13 @@ class _$Observation implements Observation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -25032,10 +25477,10 @@ class _$Observation implements Observation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -25049,8 +25494,8 @@ class _$Observation implements Observation {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -25069,7 +25514,7 @@ class _$Observation implements Observation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -25082,7 +25527,7 @@ class _$Observation implements Observation {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -25091,7 +25536,7 @@ class _$Observation implements Observation {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -25182,9 +25627,9 @@ class _$Observation implements Observation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -25195,11 +25640,11 @@ class _$Observation implements Observation {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -25242,7 +25687,7 @@ class _$Observation implements Observation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -25253,8 +25698,8 @@ class _$Observation implements Observation {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -25281,7 +25726,7 @@ class _$Observation implements Observation {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -25298,7 +25743,7 @@ class _$Observation implements Observation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -25408,11 +25853,11 @@ class _$Observation implements Observation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -25435,8 +25880,8 @@ class _$Observation implements Observation {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -25452,7 +25897,7 @@ class _$Observation implements Observation {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -25472,7 +25917,7 @@ class _$Observation implements Observation {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -25484,13 +25929,13 @@ class _$Observation implements Observation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -25549,10 +25994,10 @@ class _$Observation implements Observation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -25566,8 +26011,8 @@ class _$Observation implements Observation {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -25584,7 +26029,7 @@ class _$Observation implements Observation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -25597,7 +26042,7 @@ class _$Observation implements Observation {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -25606,7 +26051,7 @@ class _$Observation implements Observation {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -25786,11 +26231,11 @@ abstract class Observation implements Diagnostics {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<dynamic> basedOn,
       List<dynamic> partOf,
       ObservationStatus status,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
       List<dynamic> focus,
@@ -25813,8 +26258,8 @@ abstract class Observation implements Diagnostics {
       FhirDateTime valueDateTime,
       Period valuePeriod,
       CodeableConcept dataAbsentReason,
-      List<dynamic> interpretation,
-      List<dynamic> note,
+      List<CodeableConcept> interpretation,
+      List<Annotation> note,
       CodeableConcept bodySite,
       CodeableConcept method,
       Reference specimen,
@@ -25839,11 +26284,11 @@ abstract class Observation implements Diagnostics {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   List<dynamic> get basedOn;
   List<dynamic> get partOf;
   ObservationStatus get status;
-  List<dynamic> get category;
+  List<CodeableConcept> get category;
   CodeableConcept get code;
   Reference get subject;
   List<dynamic> get focus;
@@ -25866,8 +26311,8 @@ abstract class Observation implements Diagnostics {
   FhirDateTime get valueDateTime;
   Period get valuePeriod;
   CodeableConcept get dataAbsentReason;
-  List<dynamic> get interpretation;
-  List<dynamic> get note;
+  List<CodeableConcept> get interpretation;
+  List<Annotation> get note;
   CodeableConcept get bodySite;
   CodeableConcept get method;
   Reference get specimen;
@@ -25893,9 +26338,14 @@ abstract class $ObservationReferenceRangeCopyWith<$Res>
       Quantity low,
       Quantity high,
       CodeableConcept type,
-      List<dynamic> appliesTo,
+      List<CodeableConcept> appliesTo,
       Range age,
       String text});
+
+  $QuantityCopyWith<$Res> get low;
+  $QuantityCopyWith<$Res> get high;
+  $CodeableConceptCopyWith<$Res> get type;
+  $RangeCopyWith<$Res> get age;
 }
 
 class _$ObservationReferenceRangeCopyWithImpl<$Res>
@@ -25932,11 +26382,52 @@ class _$ObservationReferenceRangeCopyWithImpl<$Res>
       low: low == freezed ? _value.low : low as Quantity,
       high: high == freezed ? _value.high : high as Quantity,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      appliesTo:
-          appliesTo == freezed ? _value.appliesTo : appliesTo as List<dynamic>,
+      appliesTo: appliesTo == freezed
+          ? _value.appliesTo
+          : appliesTo as List<CodeableConcept>,
       age: age == freezed ? _value.age : age as Range,
       text: text == freezed ? _value.text : text as String,
     ));
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get low {
+    if (_value.low == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.low, (value) {
+      return _then(_value.copyWith(low: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get high {
+    if (_value.high == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.high, (value) {
+      return _then(_value.copyWith(high: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get age {
+    if (_value.age == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.age, (value) {
+      return _then(_value.copyWith(age: value));
+    });
   }
 }
 
@@ -25970,7 +26461,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
   @override
   final CodeableConcept type;
   @override
-  final List<dynamic> appliesTo;
+  final List<CodeableConcept> appliesTo;
   @override
   final Range age;
   @override
@@ -26040,9 +26531,9 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -26053,11 +26544,11 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -26104,7 +26595,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -26115,8 +26606,8 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -26146,7 +26637,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -26164,7 +26655,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -26283,11 +26774,11 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -26310,8 +26801,8 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -26328,7 +26819,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -26349,7 +26840,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -26362,13 +26853,13 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -26431,10 +26922,10 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -26448,8 +26939,8 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -26468,7 +26959,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -26481,7 +26972,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -26490,7 +26981,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -26536,9 +27027,9 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -26549,11 +27040,11 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -26596,7 +27087,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -26607,8 +27098,8 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -26635,7 +27126,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -26652,7 +27143,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -26762,11 +27253,11 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -26789,8 +27280,8 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -26806,7 +27297,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -26826,7 +27317,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -26838,13 +27329,13 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -26903,10 +27394,10 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -26920,8 +27411,8 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -26938,7 +27429,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -26951,7 +27442,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -26960,7 +27451,7 @@ class _$ObservationReferenceRange implements ObservationReferenceRange {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -27093,7 +27584,7 @@ abstract class ObservationReferenceRange implements Diagnostics {
       Quantity low,
       Quantity high,
       CodeableConcept type,
-      List<dynamic> appliesTo,
+      List<CodeableConcept> appliesTo,
       Range age,
       String text}) = _$ObservationReferenceRange;
 
@@ -27109,7 +27600,7 @@ abstract class ObservationReferenceRange implements Diagnostics {
   Quantity get low;
   Quantity get high;
   CodeableConcept get type;
-  List<dynamic> get appliesTo;
+  List<CodeableConcept> get appliesTo;
   Range get age;
   String get text;
   @override
@@ -27139,8 +27630,17 @@ abstract class $ObservationComponentCopyWith<$Res>
       FhirDateTime valueDateTime,
       Period valuePeriod,
       CodeableConcept dataAbsentReason,
-      List<dynamic> interpretation,
+      List<CodeableConcept> interpretation,
       List<dynamic> referenceRange});
+
+  $CodeableConceptCopyWith<$Res> get code;
+  $QuantityCopyWith<$Res> get valueQuantity;
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  $RangeCopyWith<$Res> get valueRange;
+  $RatioCopyWith<$Res> get valueRatio;
+  $SampledDataCopyWith<$Res> get valueSampledData;
+  $PeriodCopyWith<$Res> get valuePeriod;
+  $CodeableConceptCopyWith<$Res> get dataAbsentReason;
 }
 
 class _$ObservationComponentCopyWithImpl<$Res>
@@ -27213,11 +27713,91 @@ class _$ObservationComponentCopyWithImpl<$Res>
           : dataAbsentReason as CodeableConcept,
       interpretation: interpretation == freezed
           ? _value.interpretation
-          : interpretation as List<dynamic>,
+          : interpretation as List<CodeableConcept>,
       referenceRange: referenceRange == freezed
           ? _value.referenceRange
           : referenceRange as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept, (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.valueRange, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get valueRatio {
+    if (_value.valueRatio == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.valueRatio, (value) {
+      return _then(_value.copyWith(valueRatio: value));
+    });
+  }
+
+  @override
+  $SampledDataCopyWith<$Res> get valueSampledData {
+    if (_value.valueSampledData == null) {
+      return null;
+    }
+    return $SampledDataCopyWith<$Res>(_value.valueSampledData, (value) {
+      return _then(_value.copyWith(valueSampledData: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get valuePeriod {
+    if (_value.valuePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.valuePeriod, (value) {
+      return _then(_value.copyWith(valuePeriod: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get dataAbsentReason {
+    if (_value.dataAbsentReason == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.dataAbsentReason, (value) {
+      return _then(_value.copyWith(dataAbsentReason: value));
+    });
   }
 }
 
@@ -27280,7 +27860,7 @@ class _$ObservationComponent implements ObservationComponent {
   @override
   final CodeableConcept dataAbsentReason;
   @override
-  final List<dynamic> interpretation;
+  final List<CodeableConcept> interpretation;
   @override
   final List<dynamic> referenceRange;
 
@@ -27388,9 +27968,9 @@ class _$ObservationComponent implements ObservationComponent {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -27401,11 +27981,11 @@ class _$ObservationComponent implements ObservationComponent {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -27452,7 +28032,7 @@ class _$ObservationComponent implements ObservationComponent {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -27463,8 +28043,8 @@ class _$ObservationComponent implements ObservationComponent {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -27494,7 +28074,7 @@ class _$ObservationComponent implements ObservationComponent {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -27512,7 +28092,7 @@ class _$ObservationComponent implements ObservationComponent {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -27631,11 +28211,11 @@ class _$ObservationComponent implements ObservationComponent {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -27658,8 +28238,8 @@ class _$ObservationComponent implements ObservationComponent {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -27676,7 +28256,7 @@ class _$ObservationComponent implements ObservationComponent {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -27697,7 +28277,7 @@ class _$ObservationComponent implements ObservationComponent {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -27710,13 +28290,13 @@ class _$ObservationComponent implements ObservationComponent {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -27779,10 +28359,10 @@ class _$ObservationComponent implements ObservationComponent {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -27796,8 +28376,8 @@ class _$ObservationComponent implements ObservationComponent {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -27816,7 +28396,7 @@ class _$ObservationComponent implements ObservationComponent {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -27829,7 +28409,7 @@ class _$ObservationComponent implements ObservationComponent {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -27838,7 +28418,7 @@ class _$ObservationComponent implements ObservationComponent {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -27901,9 +28481,9 @@ class _$ObservationComponent implements ObservationComponent {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -27914,11 +28494,11 @@ class _$ObservationComponent implements ObservationComponent {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -27961,7 +28541,7 @@ class _$ObservationComponent implements ObservationComponent {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -27972,8 +28552,8 @@ class _$ObservationComponent implements ObservationComponent {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -28000,7 +28580,7 @@ class _$ObservationComponent implements ObservationComponent {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -28017,7 +28597,7 @@ class _$ObservationComponent implements ObservationComponent {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -28127,11 +28707,11 @@ class _$ObservationComponent implements ObservationComponent {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -28154,8 +28734,8 @@ class _$ObservationComponent implements ObservationComponent {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -28171,7 +28751,7 @@ class _$ObservationComponent implements ObservationComponent {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -28191,7 +28771,7 @@ class _$ObservationComponent implements ObservationComponent {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -28203,13 +28783,13 @@ class _$ObservationComponent implements ObservationComponent {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -28268,10 +28848,10 @@ class _$ObservationComponent implements ObservationComponent {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -28285,8 +28865,8 @@ class _$ObservationComponent implements ObservationComponent {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -28303,7 +28883,7 @@ class _$ObservationComponent implements ObservationComponent {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -28316,7 +28896,7 @@ class _$ObservationComponent implements ObservationComponent {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -28325,7 +28905,7 @@ class _$ObservationComponent implements ObservationComponent {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -28485,7 +29065,7 @@ abstract class ObservationComponent implements Diagnostics {
       FhirDateTime valueDateTime,
       Period valuePeriod,
       CodeableConcept dataAbsentReason,
-      List<dynamic> interpretation,
+      List<CodeableConcept> interpretation,
       List<dynamic> referenceRange}) = _$ObservationComponent;
 
   factory ObservationComponent.fromJson(Map<String, dynamic> json) =
@@ -28510,7 +29090,7 @@ abstract class ObservationComponent implements Diagnostics {
   FhirDateTime get valueDateTime;
   Period get valuePeriod;
   CodeableConcept get dataAbsentReason;
-  List<dynamic> get interpretation;
+  List<CodeableConcept> get interpretation;
   List<dynamic> get referenceRange;
   @override
   $ObservationComponentCopyWith<ObservationComponent> get copyWith;
@@ -28532,14 +29112,17 @@ abstract class $BodyStructureCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       bool active,
       CodeableConcept morphology,
       CodeableConcept location,
-      List<dynamic> locationQualifier,
+      List<CodeableConcept> locationQualifier,
       String description,
-      List<dynamic> image,
+      List<Attachment> image,
       Reference patient});
+
+  $CodeableConceptCopyWith<$Res> get morphology;
+  $CodeableConceptCopyWith<$Res> get location;
 }
 
 class _$BodyStructureCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
@@ -28592,7 +29175,7 @@ class _$BodyStructureCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       active: active == freezed ? _value.active : active as bool,
       morphology: morphology == freezed
           ? _value.morphology
@@ -28601,12 +29184,32 @@ class _$BodyStructureCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
           location == freezed ? _value.location : location as CodeableConcept,
       locationQualifier: locationQualifier == freezed
           ? _value.locationQualifier
-          : locationQualifier as List<dynamic>,
+          : locationQualifier as List<CodeableConcept>,
       description:
           description == freezed ? _value.description : description as String,
-      image: image == freezed ? _value.image : image as List<dynamic>,
+      image: image == freezed ? _value.image : image as List<Attachment>,
       patient: patient == freezed ? _value.patient : patient as Reference,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get morphology {
+    if (_value.morphology == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.morphology, (value) {
+      return _then(_value.copyWith(morphology: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get location {
+    if (_value.location == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.location, (value) {
+      return _then(_value.copyWith(location: value));
+    });
   }
 }
 
@@ -28654,7 +29257,7 @@ class _$BodyStructure implements BodyStructure {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final bool active;
   @override
@@ -28662,11 +29265,11 @@ class _$BodyStructure implements BodyStructure {
   @override
   final CodeableConcept location;
   @override
-  final List<dynamic> locationQualifier;
+  final List<CodeableConcept> locationQualifier;
   @override
   final String description;
   @override
-  final List<dynamic> image;
+  final List<Attachment> image;
   @override
   final Reference patient;
 
@@ -28765,9 +29368,9 @@ class _$BodyStructure implements BodyStructure {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -28778,11 +29381,11 @@ class _$BodyStructure implements BodyStructure {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -28829,7 +29432,7 @@ class _$BodyStructure implements BodyStructure {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -28840,8 +29443,8 @@ class _$BodyStructure implements BodyStructure {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -28871,7 +29474,7 @@ class _$BodyStructure implements BodyStructure {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -28889,7 +29492,7 @@ class _$BodyStructure implements BodyStructure {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -29008,11 +29611,11 @@ class _$BodyStructure implements BodyStructure {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -29035,8 +29638,8 @@ class _$BodyStructure implements BodyStructure {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -29053,7 +29656,7 @@ class _$BodyStructure implements BodyStructure {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -29074,7 +29677,7 @@ class _$BodyStructure implements BodyStructure {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -29087,13 +29690,13 @@ class _$BodyStructure implements BodyStructure {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -29156,10 +29759,10 @@ class _$BodyStructure implements BodyStructure {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -29173,8 +29776,8 @@ class _$BodyStructure implements BodyStructure {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -29193,7 +29796,7 @@ class _$BodyStructure implements BodyStructure {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -29206,7 +29809,7 @@ class _$BodyStructure implements BodyStructure {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -29215,7 +29818,7 @@ class _$BodyStructure implements BodyStructure {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -29277,9 +29880,9 @@ class _$BodyStructure implements BodyStructure {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -29290,11 +29893,11 @@ class _$BodyStructure implements BodyStructure {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -29337,7 +29940,7 @@ class _$BodyStructure implements BodyStructure {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -29348,8 +29951,8 @@ class _$BodyStructure implements BodyStructure {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -29376,7 +29979,7 @@ class _$BodyStructure implements BodyStructure {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -29393,7 +29996,7 @@ class _$BodyStructure implements BodyStructure {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -29503,11 +30106,11 @@ class _$BodyStructure implements BodyStructure {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -29530,8 +30133,8 @@ class _$BodyStructure implements BodyStructure {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -29547,7 +30150,7 @@ class _$BodyStructure implements BodyStructure {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -29567,7 +30170,7 @@ class _$BodyStructure implements BodyStructure {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -29579,13 +30182,13 @@ class _$BodyStructure implements BodyStructure {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -29644,10 +30247,10 @@ class _$BodyStructure implements BodyStructure {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -29661,8 +30264,8 @@ class _$BodyStructure implements BodyStructure {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -29679,7 +30282,7 @@ class _$BodyStructure implements BodyStructure {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -29692,7 +30295,7 @@ class _$BodyStructure implements BodyStructure {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -29701,7 +30304,7 @@ class _$BodyStructure implements BodyStructure {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -29852,13 +30455,13 @@ abstract class BodyStructure implements Diagnostics {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       bool active,
       CodeableConcept morphology,
       CodeableConcept location,
-      List<dynamic> locationQualifier,
+      List<CodeableConcept> locationQualifier,
       String description,
-      List<dynamic> image,
+      List<Attachment> image,
       Reference patient}) = _$BodyStructure;
 
   factory BodyStructure.fromJson(Map<String, dynamic> json) =
@@ -29876,13 +30479,13 @@ abstract class BodyStructure implements Diagnostics {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   bool get active;
   CodeableConcept get morphology;
   CodeableConcept get location;
-  List<dynamic> get locationQualifier;
+  List<CodeableConcept> get locationQualifier;
   String get description;
-  List<dynamic> get image;
+  List<Attachment> get image;
   Reference get patient;
   @override
   $BodyStructureCopyWith<BodyStructure> get copyWith;
@@ -29915,6 +30518,8 @@ abstract class $QuestionnaireResponseCopyWith<$Res>
       Reference author,
       Reference source,
       List<dynamic> item});
+
+  $IdentifierCopyWith<$Res> get identifier;
 }
 
 class _$QuestionnaireResponseCopyWithImpl<$Res>
@@ -29988,6 +30593,16 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
       source: source == freezed ? _value.source : source as Reference,
       item: item == freezed ? _value.item : item as List<dynamic>,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
   }
 }
 
@@ -30166,9 +30781,9 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -30179,11 +30794,11 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -30230,7 +30845,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -30241,8 +30856,8 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -30272,7 +30887,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -30290,7 +30905,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -30409,11 +31024,11 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -30436,8 +31051,8 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -30454,7 +31069,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -30475,7 +31090,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -30488,13 +31103,13 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -30557,10 +31172,10 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -30574,8 +31189,8 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -30594,7 +31209,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -30607,7 +31222,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -30616,7 +31231,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -30681,9 +31296,9 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -30694,11 +31309,11 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -30741,7 +31356,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -30752,8 +31367,8 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -30780,7 +31395,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -30797,7 +31412,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -30907,11 +31522,11 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -30934,8 +31549,8 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -30951,7 +31566,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -30971,7 +31586,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -30983,13 +31598,13 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -31048,10 +31663,10 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -31065,8 +31680,8 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -31083,7 +31698,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -31096,7 +31711,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -31105,7 +31720,7 @@ class _$QuestionnaireResponse implements QuestionnaireResponse {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -31453,9 +32068,9 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -31466,11 +32081,11 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -31517,7 +32132,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -31528,8 +32143,8 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -31559,7 +32174,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -31577,7 +32192,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -31696,11 +32311,11 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -31723,8 +32338,8 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -31741,7 +32356,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -31762,7 +32377,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -31775,13 +32390,13 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -31844,10 +32459,10 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -31861,8 +32476,8 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -31881,7 +32496,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -31894,7 +32509,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -31903,7 +32518,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -31949,9 +32564,9 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -31962,11 +32577,11 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -32009,7 +32624,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -32020,8 +32635,8 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -32048,7 +32663,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -32065,7 +32680,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -32175,11 +32790,11 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -32202,8 +32817,8 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -32219,7 +32834,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -32239,7 +32854,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -32251,13 +32866,13 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -32316,10 +32931,10 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -32333,8 +32948,8 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -32351,7 +32966,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -32364,7 +32979,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -32373,7 +32988,7 @@ class _$QuestionnaireResponseItem implements QuestionnaireResponseItem {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -32551,6 +33166,10 @@ abstract class $QuestionnaireResponseAnswerCopyWith<$Res>
       Quantity valueQuantity,
       Reference valueReference,
       List<dynamic> item});
+
+  $AttachmentCopyWith<$Res> get valueAttachment;
+  $CodingCopyWith<$Res> get valueCoding;
+  $QuantityCopyWith<$Res> get valueQuantity;
 }
 
 class _$QuestionnaireResponseAnswerCopyWithImpl<$Res>
@@ -32619,6 +33238,36 @@ class _$QuestionnaireResponseAnswerCopyWithImpl<$Res>
           : valueReference as Reference,
       item: item == freezed ? _value.item : item as List<dynamic>,
     ));
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get valueAttachment {
+    if (_value.valueAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.valueAttachment, (value) {
+      return _then(_value.copyWith(valueAttachment: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get valueCoding {
+    if (_value.valueCoding == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.valueCoding, (value) {
+      return _then(_value.copyWith(valueCoding: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
   }
 }
 
@@ -32775,9 +33424,9 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -32788,11 +33437,11 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -32839,7 +33488,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -32850,8 +33499,8 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -32881,7 +33530,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -32899,7 +33548,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -33018,11 +33667,11 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -33045,8 +33694,8 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -33063,7 +33712,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -33084,7 +33733,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -33097,13 +33746,13 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -33166,10 +33815,10 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -33183,8 +33832,8 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -33203,7 +33852,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -33216,7 +33865,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -33225,7 +33874,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -33286,9 +33935,9 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -33299,11 +33948,11 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -33346,7 +33995,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -33357,8 +34006,8 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -33385,7 +34034,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -33402,7 +34051,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -33512,11 +34161,11 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -33539,8 +34188,8 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -33556,7 +34205,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -33576,7 +34225,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -33588,13 +34237,13 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -33653,10 +34302,10 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -33670,8 +34319,8 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -33688,7 +34337,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -33701,7 +34350,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -33710,7 +34359,7 @@ class _$QuestionnaireResponseAnswer implements QuestionnaireResponseAnswer {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -33912,10 +34561,10 @@ abstract class $DiagnosticReportCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<dynamic> basedOn,
       DiagnosticReportStatus status,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
       Reference encounter,
@@ -33929,8 +34578,11 @@ abstract class $DiagnosticReportCopyWith<$Res>
       List<dynamic> imagingStudy,
       List<dynamic> media,
       String conclusion,
-      List<dynamic> conclusionCode,
-      List<dynamic> presentedForm});
+      List<CodeableConcept> conclusionCode,
+      List<Attachment> presentedForm});
+
+  $CodeableConceptCopyWith<$Res> get code;
+  $PeriodCopyWith<$Res> get effectivePeriod;
 }
 
 class _$DiagnosticReportCopyWithImpl<$Res>
@@ -33995,12 +34647,13 @@ class _$DiagnosticReportCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<dynamic>,
       status:
           status == freezed ? _value.status : status as DiagnosticReportStatus,
-      category:
-          category == freezed ? _value.category : category as List<dynamic>,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
@@ -34028,11 +34681,31 @@ class _$DiagnosticReportCopyWithImpl<$Res>
           conclusion == freezed ? _value.conclusion : conclusion as String,
       conclusionCode: conclusionCode == freezed
           ? _value.conclusionCode
-          : conclusionCode as List<dynamic>,
+          : conclusionCode as List<CodeableConcept>,
       presentedForm: presentedForm == freezed
           ? _value.presentedForm
-          : presentedForm as List<dynamic>,
+          : presentedForm as List<Attachment>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get effectivePeriod {
+    if (_value.effectivePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
+      return _then(_value.copyWith(effectivePeriod: value));
+    });
   }
 }
 
@@ -34091,13 +34764,13 @@ class _$DiagnosticReport implements DiagnosticReport {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final List<dynamic> basedOn;
   @override
   final DiagnosticReportStatus status;
   @override
-  final List<dynamic> category;
+  final List<CodeableConcept> category;
   @override
   final CodeableConcept code;
   @override
@@ -34125,9 +34798,9 @@ class _$DiagnosticReport implements DiagnosticReport {
   @override
   final String conclusion;
   @override
-  final List<dynamic> conclusionCode;
+  final List<CodeableConcept> conclusionCode;
   @override
-  final List<dynamic> presentedForm;
+  final List<Attachment> presentedForm;
 
   @override
   String toString() {
@@ -34261,9 +34934,9 @@ class _$DiagnosticReport implements DiagnosticReport {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -34274,11 +34947,11 @@ class _$DiagnosticReport implements DiagnosticReport {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -34325,7 +34998,7 @@ class _$DiagnosticReport implements DiagnosticReport {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -34336,8 +35009,8 @@ class _$DiagnosticReport implements DiagnosticReport {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -34367,7 +35040,7 @@ class _$DiagnosticReport implements DiagnosticReport {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -34385,7 +35058,7 @@ class _$DiagnosticReport implements DiagnosticReport {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -34504,11 +35177,11 @@ class _$DiagnosticReport implements DiagnosticReport {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -34531,8 +35204,8 @@ class _$DiagnosticReport implements DiagnosticReport {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -34549,7 +35222,7 @@ class _$DiagnosticReport implements DiagnosticReport {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -34570,7 +35243,7 @@ class _$DiagnosticReport implements DiagnosticReport {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -34583,13 +35256,13 @@ class _$DiagnosticReport implements DiagnosticReport {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -34652,10 +35325,10 @@ class _$DiagnosticReport implements DiagnosticReport {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -34669,8 +35342,8 @@ class _$DiagnosticReport implements DiagnosticReport {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -34689,7 +35362,7 @@ class _$DiagnosticReport implements DiagnosticReport {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -34702,7 +35375,7 @@ class _$DiagnosticReport implements DiagnosticReport {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -34711,7 +35384,7 @@ class _$DiagnosticReport implements DiagnosticReport {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -34784,9 +35457,9 @@ class _$DiagnosticReport implements DiagnosticReport {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -34797,11 +35470,11 @@ class _$DiagnosticReport implements DiagnosticReport {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -34844,7 +35517,7 @@ class _$DiagnosticReport implements DiagnosticReport {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -34855,8 +35528,8 @@ class _$DiagnosticReport implements DiagnosticReport {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -34883,7 +35556,7 @@ class _$DiagnosticReport implements DiagnosticReport {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -34900,7 +35573,7 @@ class _$DiagnosticReport implements DiagnosticReport {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -35010,11 +35683,11 @@ class _$DiagnosticReport implements DiagnosticReport {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -35037,8 +35710,8 @@ class _$DiagnosticReport implements DiagnosticReport {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -35054,7 +35727,7 @@ class _$DiagnosticReport implements DiagnosticReport {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -35074,7 +35747,7 @@ class _$DiagnosticReport implements DiagnosticReport {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -35086,13 +35759,13 @@ class _$DiagnosticReport implements DiagnosticReport {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -35151,10 +35824,10 @@ class _$DiagnosticReport implements DiagnosticReport {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -35168,8 +35841,8 @@ class _$DiagnosticReport implements DiagnosticReport {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -35186,7 +35859,7 @@ class _$DiagnosticReport implements DiagnosticReport {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -35199,7 +35872,7 @@ class _$DiagnosticReport implements DiagnosticReport {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -35208,7 +35881,7 @@ class _$DiagnosticReport implements DiagnosticReport {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -35371,10 +36044,10 @@ abstract class DiagnosticReport implements Diagnostics {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<dynamic> basedOn,
       DiagnosticReportStatus status,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
       Reference encounter,
@@ -35388,8 +36061,8 @@ abstract class DiagnosticReport implements Diagnostics {
       List<dynamic> imagingStudy,
       List<dynamic> media,
       String conclusion,
-      List<dynamic> conclusionCode,
-      List<dynamic> presentedForm}) = _$DiagnosticReport;
+      List<CodeableConcept> conclusionCode,
+      List<Attachment> presentedForm}) = _$DiagnosticReport;
 
   factory DiagnosticReport.fromJson(Map<String, dynamic> json) =
       _$DiagnosticReport.fromJson;
@@ -35406,10 +36079,10 @@ abstract class DiagnosticReport implements Diagnostics {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   List<dynamic> get basedOn;
   DiagnosticReportStatus get status;
-  List<dynamic> get category;
+  List<CodeableConcept> get category;
   CodeableConcept get code;
   Reference get subject;
   Reference get encounter;
@@ -35423,8 +36096,8 @@ abstract class DiagnosticReport implements Diagnostics {
   List<dynamic> get imagingStudy;
   List<dynamic> get media;
   String get conclusion;
-  List<dynamic> get conclusionCode;
-  List<dynamic> get presentedForm;
+  List<CodeableConcept> get conclusionCode;
+  List<Attachment> get presentedForm;
   @override
   $DiagnosticReportCopyWith<DiagnosticReport> get copyWith;
 }
@@ -35551,9 +36224,9 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -35564,11 +36237,11 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -35615,7 +36288,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -35626,8 +36299,8 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -35657,7 +36330,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -35675,7 +36348,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -35794,11 +36467,11 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -35821,8 +36494,8 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -35839,7 +36512,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -35860,7 +36533,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -35873,13 +36546,13 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -35942,10 +36615,10 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -35959,8 +36632,8 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -35979,7 +36652,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -35992,7 +36665,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -36001,7 +36674,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -36047,9 +36720,9 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -36060,11 +36733,11 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -36107,7 +36780,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -36118,8 +36791,8 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -36146,7 +36819,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -36163,7 +36836,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -36273,11 +36946,11 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -36300,8 +36973,8 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -36317,7 +36990,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -36337,7 +37010,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -36349,13 +37022,13 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -36414,10 +37087,10 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -36431,8 +37104,8 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -36449,7 +37122,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -36462,7 +37135,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -36471,7 +37144,7 @@ class _$DiagnosticReportMedia implements DiagnosticReportMedia {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -36633,7 +37306,7 @@ abstract class $MediaCopyWith<$Res> implements $DiagnosticsCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<dynamic> basedOn,
       List<dynamic> partOf,
       Code status,
@@ -36646,7 +37319,7 @@ abstract class $MediaCopyWith<$Res> implements $DiagnosticsCopyWith<$Res> {
       Period createdPeriod,
       Instant issued,
       Reference operator,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       CodeableConcept bodySite,
       String deviceName,
       Reference device,
@@ -36655,7 +37328,14 @@ abstract class $MediaCopyWith<$Res> implements $DiagnosticsCopyWith<$Res> {
       int frames,
       double duration,
       Attachment content,
-      List<dynamic> note});
+      List<Annotation> note});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $CodeableConceptCopyWith<$Res> get modality;
+  $CodeableConceptCopyWith<$Res> get view;
+  $PeriodCopyWith<$Res> get createdPeriod;
+  $CodeableConceptCopyWith<$Res> get bodySite;
+  $AttachmentCopyWith<$Res> get content;
 }
 
 class _$MediaCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
@@ -36722,7 +37402,7 @@ class _$MediaCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<dynamic>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<dynamic>,
       status: status == freezed ? _value.status : status as Code,
@@ -36743,7 +37423,7 @@ class _$MediaCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
       operator: operator == freezed ? _value.operator : operator as Reference,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<dynamic>,
+          : reasonCode as List<CodeableConcept>,
       bodySite:
           bodySite == freezed ? _value.bodySite : bodySite as CodeableConcept,
       deviceName:
@@ -36754,8 +37434,68 @@ class _$MediaCopyWithImpl<$Res> extends _$DiagnosticsCopyWithImpl<$Res>
       frames: frames == freezed ? _value.frames : frames as int,
       duration: duration == freezed ? _value.duration : duration as double,
       content: content == freezed ? _value.content : content as Attachment,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get modality {
+    if (_value.modality == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.modality, (value) {
+      return _then(_value.copyWith(modality: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get view {
+    if (_value.view == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.view, (value) {
+      return _then(_value.copyWith(view: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get createdPeriod {
+    if (_value.createdPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.createdPeriod, (value) {
+      return _then(_value.copyWith(createdPeriod: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get bodySite {
+    if (_value.bodySite == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.bodySite, (value) {
+      return _then(_value.copyWith(bodySite: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get content {
+    if (_value.content == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.content, (value) {
+      return _then(_value.copyWith(content: value));
+    });
   }
 }
 
@@ -36818,7 +37558,7 @@ class _$Media implements Media {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final List<dynamic> basedOn;
   @override
@@ -36844,7 +37584,7 @@ class _$Media implements Media {
   @override
   final Reference operator;
   @override
-  final List<dynamic> reasonCode;
+  final List<CodeableConcept> reasonCode;
   @override
   final CodeableConcept bodySite;
   @override
@@ -36862,7 +37602,7 @@ class _$Media implements Media {
   @override
   final Attachment content;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
 
   @override
   String toString() {
@@ -37004,9 +37744,9 @@ class _$Media implements Media {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ImagingStudyStatus status,
-            List<dynamic> modality,
+            List<Coding> modality,
             Reference subject,
             Reference encounter,
             FhirDateTime started,
@@ -37017,11 +37757,11 @@ class _$Media implements Media {
             int numberOfSeries,
             int numberOfInstances,
             Reference procedureReference,
-            List<dynamic> procedureCode,
+            List<CodeableConcept> procedureCode,
             Reference location,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             String description,
             List<dynamic> series),
     @required
@@ -37068,7 +37808,7 @@ class _$Media implements Media {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Identifier accessionIdentifier,
             SpecimenStatus status,
             CodeableConcept type,
@@ -37079,8 +37819,8 @@ class _$Media implements Media {
             SpecimenCollection collection,
             List<dynamic> processing,
             List<dynamic> container,
-            List<dynamic> condition,
-            List<dynamic> note),
+            List<CodeableConcept> condition,
+            List<Annotation> note),
     @required
         Result specimenCollection(
             String id,
@@ -37110,7 +37850,7 @@ class _$Media implements Media {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String description,
             CodeableConcept type,
             Quantity capacity,
@@ -37128,7 +37868,7 @@ class _$Media implements Media {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             MolecularSequenceType type,
             int coordinateSystem,
             Reference patient,
@@ -37247,11 +37987,11 @@ class _$Media implements Media {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             ObservationStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             List<dynamic> focus,
@@ -37274,8 +38014,8 @@ class _$Media implements Media {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
-            List<dynamic> note,
+            List<CodeableConcept> interpretation,
+            List<Annotation> note,
             CodeableConcept bodySite,
             CodeableConcept method,
             Reference specimen,
@@ -37292,7 +38032,7 @@ class _$Media implements Media {
             Quantity low,
             Quantity high,
             CodeableConcept type,
-            List<dynamic> appliesTo,
+            List<CodeableConcept> appliesTo,
             Range age,
             String text),
     @required
@@ -37313,7 +38053,7 @@ class _$Media implements Media {
             FhirDateTime valueDateTime,
             Period valuePeriod,
             CodeableConcept dataAbsentReason,
-            List<dynamic> interpretation,
+            List<CodeableConcept> interpretation,
             List<dynamic> referenceRange),
     @required
         Result bodyStructure(
@@ -37326,13 +38066,13 @@ class _$Media implements Media {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
             CodeableConcept morphology,
             CodeableConcept location,
-            List<dynamic> locationQualifier,
+            List<CodeableConcept> locationQualifier,
             String description,
-            List<dynamic> image,
+            List<Attachment> image,
             Reference patient),
     @required
         Result questionnaireResponse(
@@ -37395,10 +38135,10 @@ class _$Media implements Media {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DiagnosticReportStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Reference encounter,
@@ -37412,8 +38152,8 @@ class _$Media implements Media {
             List<dynamic> imagingStudy,
             List<dynamic> media,
             String conclusion,
-            List<dynamic> conclusionCode,
-            List<dynamic> presentedForm),
+            List<CodeableConcept> conclusionCode,
+            List<Attachment> presentedForm),
     @required
         Result diagnosticReportMedia(
             String id,
@@ -37432,7 +38172,7 @@ class _$Media implements Media {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             Code status,
@@ -37445,7 +38185,7 @@ class _$Media implements Media {
             Period createdPeriod,
             Instant issued,
             Reference operator,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             CodeableConcept bodySite,
             String deviceName,
             Reference device,
@@ -37454,7 +38194,7 @@ class _$Media implements Media {
             int frames,
             double duration,
             Attachment content,
-            List<dynamic> note),
+            List<Annotation> note),
   }) {
     assert(imagingStudy != null);
     assert(imagingStudySeries != null);
@@ -37531,9 +38271,9 @@ class _$Media implements Media {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ImagingStudyStatus status,
-        List<dynamic> modality,
+        List<Coding> modality,
         Reference subject,
         Reference encounter,
         FhirDateTime started,
@@ -37544,11 +38284,11 @@ class _$Media implements Media {
         int numberOfSeries,
         int numberOfInstances,
         Reference procedureReference,
-        List<dynamic> procedureCode,
+        List<CodeableConcept> procedureCode,
         Reference location,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         String description,
         List<dynamic> series),
     Result imagingStudySeries(
@@ -37591,7 +38331,7 @@ class _$Media implements Media {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Identifier accessionIdentifier,
         SpecimenStatus status,
         CodeableConcept type,
@@ -37602,8 +38342,8 @@ class _$Media implements Media {
         SpecimenCollection collection,
         List<dynamic> processing,
         List<dynamic> container,
-        List<dynamic> condition,
-        List<dynamic> note),
+        List<CodeableConcept> condition,
+        List<Annotation> note),
     Result specimenCollection(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -37630,7 +38370,7 @@ class _$Media implements Media {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String description,
         CodeableConcept type,
         Quantity capacity,
@@ -37647,7 +38387,7 @@ class _$Media implements Media {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         MolecularSequenceType type,
         int coordinateSystem,
         Reference patient,
@@ -37757,11 +38497,11 @@ class _$Media implements Media {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         ObservationStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         List<dynamic> focus,
@@ -37784,8 +38524,8 @@ class _$Media implements Media {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
-        List<dynamic> note,
+        List<CodeableConcept> interpretation,
+        List<Annotation> note,
         CodeableConcept bodySite,
         CodeableConcept method,
         Reference specimen,
@@ -37801,7 +38541,7 @@ class _$Media implements Media {
         Quantity low,
         Quantity high,
         CodeableConcept type,
-        List<dynamic> appliesTo,
+        List<CodeableConcept> appliesTo,
         Range age,
         String text),
     Result observationComponent(
@@ -37821,7 +38561,7 @@ class _$Media implements Media {
         FhirDateTime valueDateTime,
         Period valuePeriod,
         CodeableConcept dataAbsentReason,
-        List<dynamic> interpretation,
+        List<CodeableConcept> interpretation,
         List<dynamic> referenceRange),
     Result bodyStructure(
         String resourceType,
@@ -37833,13 +38573,13 @@ class _$Media implements Media {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
         CodeableConcept morphology,
         CodeableConcept location,
-        List<dynamic> locationQualifier,
+        List<CodeableConcept> locationQualifier,
         String description,
-        List<dynamic> image,
+        List<Attachment> image,
         Reference patient),
     Result questionnaireResponse(
         String resourceType,
@@ -37898,10 +38638,10 @@ class _$Media implements Media {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DiagnosticReportStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Reference encounter,
@@ -37915,8 +38655,8 @@ class _$Media implements Media {
         List<dynamic> imagingStudy,
         List<dynamic> media,
         String conclusion,
-        List<dynamic> conclusionCode,
-        List<dynamic> presentedForm),
+        List<CodeableConcept> conclusionCode,
+        List<Attachment> presentedForm),
     Result diagnosticReportMedia(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -37933,7 +38673,7 @@ class _$Media implements Media {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         Code status,
@@ -37946,7 +38686,7 @@ class _$Media implements Media {
         Period createdPeriod,
         Instant issued,
         Reference operator,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         CodeableConcept bodySite,
         String deviceName,
         Reference device,
@@ -37955,7 +38695,7 @@ class _$Media implements Media {
         int frames,
         double duration,
         Attachment content,
-        List<dynamic> note),
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -38121,7 +38861,7 @@ abstract class Media implements Diagnostics {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<dynamic> basedOn,
       List<dynamic> partOf,
       Code status,
@@ -38134,7 +38874,7 @@ abstract class Media implements Diagnostics {
       Period createdPeriod,
       Instant issued,
       Reference operator,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       CodeableConcept bodySite,
       String deviceName,
       Reference device,
@@ -38143,7 +38883,7 @@ abstract class Media implements Diagnostics {
       int frames,
       double duration,
       Attachment content,
-      List<dynamic> note}) = _$Media;
+      List<Annotation> note}) = _$Media;
 
   factory Media.fromJson(Map<String, dynamic> json) = _$Media.fromJson;
 
@@ -38159,7 +38899,7 @@ abstract class Media implements Diagnostics {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   List<dynamic> get basedOn;
   List<dynamic> get partOf;
   Code get status;
@@ -38172,7 +38912,7 @@ abstract class Media implements Diagnostics {
   Period get createdPeriod;
   Instant get issued;
   Reference get operator;
-  List<dynamic> get reasonCode;
+  List<CodeableConcept> get reasonCode;
   CodeableConcept get bodySite;
   String get deviceName;
   Reference get device;
@@ -38181,7 +38921,7 @@ abstract class Media implements Diagnostics {
   int get frames;
   double get duration;
   Attachment get content;
-  List<dynamic> get note;
+  List<Annotation> get note;
   @override
   $MediaCopyWith<Media> get copyWith;
 }

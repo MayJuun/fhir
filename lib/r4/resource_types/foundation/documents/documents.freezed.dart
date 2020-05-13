@@ -55,18 +55,18 @@ class _$DocumentsTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       CodeableConcept type,
       bool orderable,
       Reference referencedItem,
-      List<dynamic> additionalIdentifier,
-      List<dynamic> classification,
+      List<Identifier> additionalIdentifier,
+      List<CodeableConcept> classification,
       CatalogEntryStatus status,
       Period validityPeriod,
       FhirDateTime validTo,
       FhirDateTime lastUpdated,
-      List<dynamic> additionalCharacteristic,
-      List<dynamic> additionalClassification,
+      List<CodeableConcept> additionalCharacteristic,
+      List<CodeableConcept> additionalClassification,
       List<dynamic> relatedEntry}) {
     return CatalogEntry(
       resourceType: resourceType,
@@ -122,7 +122,7 @@ class _$DocumentsTearOff {
       Identifier identifier,
       CompositionStatus status,
       CodeableConcept type,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Reference subject,
       Reference encounter,
       FhirDateTime date,
@@ -200,7 +200,7 @@ class _$DocumentsTearOff {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> code,
+      List<CodeableConcept> code,
       Period period,
       List<dynamic> detail}) {
     return CompositionEvent(
@@ -253,7 +253,7 @@ class _$DocumentsTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       Identifier masterIdentifier,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       DocumentManifestStatus status,
       CodeableConcept type,
       Reference subject,
@@ -313,18 +313,18 @@ class _$DocumentsTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       Identifier masterIdentifier,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       DocumentReferenceStatus status,
       Code docStatus,
       CodeableConcept type,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Reference subject,
       Instant date,
       List<dynamic> author,
       Reference custodian,
       List<dynamic> relatesTo,
       String description,
-      List<dynamic> securityLabel,
+      List<CodeableConcept> securityLabel,
       List<dynamic> content,
       DocumentReferenceContext context}) {
     return DocumentReference(
@@ -387,7 +387,7 @@ class _$DocumentsTearOff {
       {String id,
       List<dynamic> modifierExtension,
       List<dynamic> encounter,
-      List<dynamic> event,
+      List<CodeableConcept> event,
       Period period,
       CodeableConcept facilityType,
       CodeableConcept practiceSetting,
@@ -426,18 +426,18 @@ mixin _$Documents {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             bool orderable,
             Reference referencedItem,
-            List<dynamic> additionalIdentifier,
-            List<dynamic> classification,
+            List<Identifier> additionalIdentifier,
+            List<CodeableConcept> classification,
             CatalogEntryStatus status,
             Period validityPeriod,
             FhirDateTime validTo,
             FhirDateTime lastUpdated,
-            List<dynamic> additionalCharacteristic,
-            List<dynamic> additionalClassification,
+            List<CodeableConcept> additionalCharacteristic,
+            List<CodeableConcept> additionalClassification,
             List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
@@ -460,7 +460,7 @@ mixin _$Documents {
             Identifier identifier,
             CompositionStatus status,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
@@ -493,7 +493,7 @@ mixin _$Documents {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             Period period,
             List<dynamic> detail),
     @required
@@ -522,7 +522,7 @@ mixin _$Documents {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentManifestStatus status,
             CodeableConcept type,
             Reference subject,
@@ -551,18 +551,18 @@ mixin _$Documents {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentReferenceStatus status,
             Code docStatus,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Instant date,
             List<dynamic> author,
             Reference custodian,
             List<dynamic> relatesTo,
             String description,
-            List<dynamic> securityLabel,
+            List<CodeableConcept> securityLabel,
             List<dynamic> content,
             DocumentReferenceContext context),
     @required
@@ -583,7 +583,7 @@ mixin _$Documents {
             String id,
             List<dynamic> modifierExtension,
             List<dynamic> encounter,
-            List<dynamic> event,
+            List<CodeableConcept> event,
             Period period,
             CodeableConcept facilityType,
             CodeableConcept practiceSetting,
@@ -602,18 +602,18 @@ mixin _$Documents {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         bool orderable,
         Reference referencedItem,
-        List<dynamic> additionalIdentifier,
-        List<dynamic> classification,
+        List<Identifier> additionalIdentifier,
+        List<CodeableConcept> classification,
         CatalogEntryStatus status,
         Period validityPeriod,
         FhirDateTime validTo,
         FhirDateTime lastUpdated,
-        List<dynamic> additionalCharacteristic,
-        List<dynamic> additionalClassification,
+        List<CodeableConcept> additionalCharacteristic,
+        List<CodeableConcept> additionalClassification,
         List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
@@ -634,7 +634,7 @@ mixin _$Documents {
         Identifier identifier,
         CompositionStatus status,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
@@ -664,7 +664,7 @@ mixin _$Documents {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         Period period,
         List<dynamic> detail),
     Result compositionSection(
@@ -691,7 +691,7 @@ mixin _$Documents {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentManifestStatus status,
         CodeableConcept type,
         Reference subject,
@@ -718,18 +718,18 @@ mixin _$Documents {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentReferenceStatus status,
         Code docStatus,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Instant date,
         List<dynamic> author,
         Reference custodian,
         List<dynamic> relatesTo,
         String description,
-        List<dynamic> securityLabel,
+        List<CodeableConcept> securityLabel,
         List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
@@ -747,7 +747,7 @@ mixin _$Documents {
         String id,
         List<dynamic> modifierExtension,
         List<dynamic> encounter,
-        List<dynamic> event,
+        List<CodeableConcept> event,
         Period period,
         CodeableConcept facilityType,
         CodeableConcept practiceSetting,
@@ -833,19 +833,22 @@ abstract class $CatalogEntryCopyWith<$Res> implements $DocumentsCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       CodeableConcept type,
       bool orderable,
       Reference referencedItem,
-      List<dynamic> additionalIdentifier,
-      List<dynamic> classification,
+      List<Identifier> additionalIdentifier,
+      List<CodeableConcept> classification,
       CatalogEntryStatus status,
       Period validityPeriod,
       FhirDateTime validTo,
       FhirDateTime lastUpdated,
-      List<dynamic> additionalCharacteristic,
-      List<dynamic> additionalClassification,
+      List<CodeableConcept> additionalCharacteristic,
+      List<CodeableConcept> additionalClassification,
       List<dynamic> relatedEntry});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $PeriodCopyWith<$Res> get validityPeriod;
 }
 
 class _$CatalogEntryCopyWithImpl<$Res> extends _$DocumentsCopyWithImpl<$Res>
@@ -903,7 +906,7 @@ class _$CatalogEntryCopyWithImpl<$Res> extends _$DocumentsCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       type: type == freezed ? _value.type : type as CodeableConcept,
       orderable: orderable == freezed ? _value.orderable : orderable as bool,
       referencedItem: referencedItem == freezed
@@ -911,10 +914,10 @@ class _$CatalogEntryCopyWithImpl<$Res> extends _$DocumentsCopyWithImpl<$Res>
           : referencedItem as Reference,
       additionalIdentifier: additionalIdentifier == freezed
           ? _value.additionalIdentifier
-          : additionalIdentifier as List<dynamic>,
+          : additionalIdentifier as List<Identifier>,
       classification: classification == freezed
           ? _value.classification
-          : classification as List<dynamic>,
+          : classification as List<CodeableConcept>,
       status: status == freezed ? _value.status : status as CatalogEntryStatus,
       validityPeriod: validityPeriod == freezed
           ? _value.validityPeriod
@@ -925,14 +928,34 @@ class _$CatalogEntryCopyWithImpl<$Res> extends _$DocumentsCopyWithImpl<$Res>
           : lastUpdated as FhirDateTime,
       additionalCharacteristic: additionalCharacteristic == freezed
           ? _value.additionalCharacteristic
-          : additionalCharacteristic as List<dynamic>,
+          : additionalCharacteristic as List<CodeableConcept>,
       additionalClassification: additionalClassification == freezed
           ? _value.additionalClassification
-          : additionalClassification as List<dynamic>,
+          : additionalClassification as List<CodeableConcept>,
       relatedEntry: relatedEntry == freezed
           ? _value.relatedEntry
           : relatedEntry as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get validityPeriod {
+    if (_value.validityPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.validityPeriod, (value) {
+      return _then(_value.copyWith(validityPeriod: value));
+    });
   }
 }
 
@@ -985,7 +1008,7 @@ class _$CatalogEntry implements CatalogEntry {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final CodeableConcept type;
   @override
@@ -993,9 +1016,9 @@ class _$CatalogEntry implements CatalogEntry {
   @override
   final Reference referencedItem;
   @override
-  final List<dynamic> additionalIdentifier;
+  final List<Identifier> additionalIdentifier;
   @override
-  final List<dynamic> classification;
+  final List<CodeableConcept> classification;
   @override
   final CatalogEntryStatus status;
   @override
@@ -1005,9 +1028,9 @@ class _$CatalogEntry implements CatalogEntry {
   @override
   final FhirDateTime lastUpdated;
   @override
-  final List<dynamic> additionalCharacteristic;
+  final List<CodeableConcept> additionalCharacteristic;
   @override
-  final List<dynamic> additionalClassification;
+  final List<CodeableConcept> additionalClassification;
   @override
   final List<dynamic> relatedEntry;
 
@@ -1129,18 +1152,18 @@ class _$CatalogEntry implements CatalogEntry {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             bool orderable,
             Reference referencedItem,
-            List<dynamic> additionalIdentifier,
-            List<dynamic> classification,
+            List<Identifier> additionalIdentifier,
+            List<CodeableConcept> classification,
             CatalogEntryStatus status,
             Period validityPeriod,
             FhirDateTime validTo,
             FhirDateTime lastUpdated,
-            List<dynamic> additionalCharacteristic,
-            List<dynamic> additionalClassification,
+            List<CodeableConcept> additionalCharacteristic,
+            List<CodeableConcept> additionalClassification,
             List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
@@ -1163,7 +1186,7 @@ class _$CatalogEntry implements CatalogEntry {
             Identifier identifier,
             CompositionStatus status,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
@@ -1196,7 +1219,7 @@ class _$CatalogEntry implements CatalogEntry {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             Period period,
             List<dynamic> detail),
     @required
@@ -1225,7 +1248,7 @@ class _$CatalogEntry implements CatalogEntry {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentManifestStatus status,
             CodeableConcept type,
             Reference subject,
@@ -1254,18 +1277,18 @@ class _$CatalogEntry implements CatalogEntry {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentReferenceStatus status,
             Code docStatus,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Instant date,
             List<dynamic> author,
             Reference custodian,
             List<dynamic> relatesTo,
             String description,
-            List<dynamic> securityLabel,
+            List<CodeableConcept> securityLabel,
             List<dynamic> content,
             DocumentReferenceContext context),
     @required
@@ -1286,7 +1309,7 @@ class _$CatalogEntry implements CatalogEntry {
             String id,
             List<dynamic> modifierExtension,
             List<dynamic> encounter,
-            List<dynamic> event,
+            List<CodeableConcept> event,
             Period period,
             CodeableConcept facilityType,
             CodeableConcept practiceSetting,
@@ -1344,18 +1367,18 @@ class _$CatalogEntry implements CatalogEntry {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         bool orderable,
         Reference referencedItem,
-        List<dynamic> additionalIdentifier,
-        List<dynamic> classification,
+        List<Identifier> additionalIdentifier,
+        List<CodeableConcept> classification,
         CatalogEntryStatus status,
         Period validityPeriod,
         FhirDateTime validTo,
         FhirDateTime lastUpdated,
-        List<dynamic> additionalCharacteristic,
-        List<dynamic> additionalClassification,
+        List<CodeableConcept> additionalCharacteristic,
+        List<CodeableConcept> additionalClassification,
         List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
@@ -1376,7 +1399,7 @@ class _$CatalogEntry implements CatalogEntry {
         Identifier identifier,
         CompositionStatus status,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
@@ -1406,7 +1429,7 @@ class _$CatalogEntry implements CatalogEntry {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         Period period,
         List<dynamic> detail),
     Result compositionSection(
@@ -1433,7 +1456,7 @@ class _$CatalogEntry implements CatalogEntry {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentManifestStatus status,
         CodeableConcept type,
         Reference subject,
@@ -1460,18 +1483,18 @@ class _$CatalogEntry implements CatalogEntry {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentReferenceStatus status,
         Code docStatus,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Instant date,
         List<dynamic> author,
         Reference custodian,
         List<dynamic> relatesTo,
         String description,
-        List<dynamic> securityLabel,
+        List<CodeableConcept> securityLabel,
         List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
@@ -1489,7 +1512,7 @@ class _$CatalogEntry implements CatalogEntry {
         String id,
         List<dynamic> modifierExtension,
         List<dynamic> encounter,
-        List<dynamic> event,
+        List<CodeableConcept> event,
         Period period,
         CodeableConcept facilityType,
         CodeableConcept practiceSetting,
@@ -1602,18 +1625,18 @@ abstract class CatalogEntry implements Documents {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       CodeableConcept type,
       bool orderable,
       Reference referencedItem,
-      List<dynamic> additionalIdentifier,
-      List<dynamic> classification,
+      List<Identifier> additionalIdentifier,
+      List<CodeableConcept> classification,
       CatalogEntryStatus status,
       Period validityPeriod,
       FhirDateTime validTo,
       FhirDateTime lastUpdated,
-      List<dynamic> additionalCharacteristic,
-      List<dynamic> additionalClassification,
+      List<CodeableConcept> additionalCharacteristic,
+      List<CodeableConcept> additionalClassification,
       List<dynamic> relatedEntry}) = _$CatalogEntry;
 
   factory CatalogEntry.fromJson(Map<String, dynamic> json) =
@@ -1630,18 +1653,18 @@ abstract class CatalogEntry implements Documents {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   CodeableConcept get type;
   bool get orderable;
   Reference get referencedItem;
-  List<dynamic> get additionalIdentifier;
-  List<dynamic> get classification;
+  List<Identifier> get additionalIdentifier;
+  List<CodeableConcept> get classification;
   CatalogEntryStatus get status;
   Period get validityPeriod;
   FhirDateTime get validTo;
   FhirDateTime get lastUpdated;
-  List<dynamic> get additionalCharacteristic;
-  List<dynamic> get additionalClassification;
+  List<CodeableConcept> get additionalCharacteristic;
+  List<CodeableConcept> get additionalClassification;
   List<dynamic> get relatedEntry;
   @override
   $CatalogEntryCopyWith<CatalogEntry> get copyWith;
@@ -1772,18 +1795,18 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             bool orderable,
             Reference referencedItem,
-            List<dynamic> additionalIdentifier,
-            List<dynamic> classification,
+            List<Identifier> additionalIdentifier,
+            List<CodeableConcept> classification,
             CatalogEntryStatus status,
             Period validityPeriod,
             FhirDateTime validTo,
             FhirDateTime lastUpdated,
-            List<dynamic> additionalCharacteristic,
-            List<dynamic> additionalClassification,
+            List<CodeableConcept> additionalCharacteristic,
+            List<CodeableConcept> additionalClassification,
             List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
@@ -1806,7 +1829,7 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
             Identifier identifier,
             CompositionStatus status,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
@@ -1839,7 +1862,7 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             Period period,
             List<dynamic> detail),
     @required
@@ -1868,7 +1891,7 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentManifestStatus status,
             CodeableConcept type,
             Reference subject,
@@ -1897,18 +1920,18 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentReferenceStatus status,
             Code docStatus,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Instant date,
             List<dynamic> author,
             Reference custodian,
             List<dynamic> relatesTo,
             String description,
-            List<dynamic> securityLabel,
+            List<CodeableConcept> securityLabel,
             List<dynamic> content,
             DocumentReferenceContext context),
     @required
@@ -1929,7 +1952,7 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
             String id,
             List<dynamic> modifierExtension,
             List<dynamic> encounter,
-            List<dynamic> event,
+            List<CodeableConcept> event,
             Period period,
             CodeableConcept facilityType,
             CodeableConcept practiceSetting,
@@ -1966,18 +1989,18 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         bool orderable,
         Reference referencedItem,
-        List<dynamic> additionalIdentifier,
-        List<dynamic> classification,
+        List<Identifier> additionalIdentifier,
+        List<CodeableConcept> classification,
         CatalogEntryStatus status,
         Period validityPeriod,
         FhirDateTime validTo,
         FhirDateTime lastUpdated,
-        List<dynamic> additionalCharacteristic,
-        List<dynamic> additionalClassification,
+        List<CodeableConcept> additionalCharacteristic,
+        List<CodeableConcept> additionalClassification,
         List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
@@ -1998,7 +2021,7 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
         Identifier identifier,
         CompositionStatus status,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
@@ -2028,7 +2051,7 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         Period period,
         List<dynamic> detail),
     Result compositionSection(
@@ -2055,7 +2078,7 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentManifestStatus status,
         CodeableConcept type,
         Reference subject,
@@ -2082,18 +2105,18 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentReferenceStatus status,
         Code docStatus,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Instant date,
         List<dynamic> author,
         Reference custodian,
         List<dynamic> relatesTo,
         String description,
-        List<dynamic> securityLabel,
+        List<CodeableConcept> securityLabel,
         List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
@@ -2111,7 +2134,7 @@ class _$CatalogEntryRelatedEntry implements CatalogEntryRelatedEntry {
         String id,
         List<dynamic> modifierExtension,
         List<dynamic> encounter,
-        List<dynamic> event,
+        List<CodeableConcept> event,
         Period period,
         CodeableConcept facilityType,
         CodeableConcept practiceSetting,
@@ -2233,7 +2256,7 @@ abstract class $CompositionCopyWith<$Res> implements $DocumentsCopyWith<$Res> {
       Identifier identifier,
       CompositionStatus status,
       CodeableConcept type,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Reference subject,
       Reference encounter,
       FhirDateTime date,
@@ -2245,6 +2268,9 @@ abstract class $CompositionCopyWith<$Res> implements $DocumentsCopyWith<$Res> {
       List<dynamic> relatesTo,
       List<dynamic> event,
       List<dynamic> section});
+
+  $IdentifierCopyWith<$Res> get identifier;
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 class _$CompositionCopyWithImpl<$Res> extends _$DocumentsCopyWithImpl<$Res>
@@ -2306,8 +2332,9 @@ class _$CompositionCopyWithImpl<$Res> extends _$DocumentsCopyWithImpl<$Res>
           identifier == freezed ? _value.identifier : identifier as Identifier,
       status: status == freezed ? _value.status : status as CompositionStatus,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      category:
-          category == freezed ? _value.category : category as List<dynamic>,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference,
@@ -2326,6 +2353,26 @@ class _$CompositionCopyWithImpl<$Res> extends _$DocumentsCopyWithImpl<$Res>
       event: event == freezed ? _value.event : event as List<dynamic>,
       section: section == freezed ? _value.section : section as List<dynamic>,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
   }
 }
 
@@ -2386,7 +2433,7 @@ class _$Composition implements Composition {
   @override
   final CodeableConcept type;
   @override
-  final List<dynamic> category;
+  final List<CodeableConcept> category;
   @override
   final Reference subject;
   @override
@@ -2529,18 +2576,18 @@ class _$Composition implements Composition {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             bool orderable,
             Reference referencedItem,
-            List<dynamic> additionalIdentifier,
-            List<dynamic> classification,
+            List<Identifier> additionalIdentifier,
+            List<CodeableConcept> classification,
             CatalogEntryStatus status,
             Period validityPeriod,
             FhirDateTime validTo,
             FhirDateTime lastUpdated,
-            List<dynamic> additionalCharacteristic,
-            List<dynamic> additionalClassification,
+            List<CodeableConcept> additionalCharacteristic,
+            List<CodeableConcept> additionalClassification,
             List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
@@ -2563,7 +2610,7 @@ class _$Composition implements Composition {
             Identifier identifier,
             CompositionStatus status,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
@@ -2596,7 +2643,7 @@ class _$Composition implements Composition {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             Period period,
             List<dynamic> detail),
     @required
@@ -2625,7 +2672,7 @@ class _$Composition implements Composition {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentManifestStatus status,
             CodeableConcept type,
             Reference subject,
@@ -2654,18 +2701,18 @@ class _$Composition implements Composition {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentReferenceStatus status,
             Code docStatus,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Instant date,
             List<dynamic> author,
             Reference custodian,
             List<dynamic> relatesTo,
             String description,
-            List<dynamic> securityLabel,
+            List<CodeableConcept> securityLabel,
             List<dynamic> content,
             DocumentReferenceContext context),
     @required
@@ -2686,7 +2733,7 @@ class _$Composition implements Composition {
             String id,
             List<dynamic> modifierExtension,
             List<dynamic> encounter,
-            List<dynamic> event,
+            List<CodeableConcept> event,
             Period period,
             CodeableConcept facilityType,
             CodeableConcept practiceSetting,
@@ -2746,18 +2793,18 @@ class _$Composition implements Composition {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         bool orderable,
         Reference referencedItem,
-        List<dynamic> additionalIdentifier,
-        List<dynamic> classification,
+        List<Identifier> additionalIdentifier,
+        List<CodeableConcept> classification,
         CatalogEntryStatus status,
         Period validityPeriod,
         FhirDateTime validTo,
         FhirDateTime lastUpdated,
-        List<dynamic> additionalCharacteristic,
-        List<dynamic> additionalClassification,
+        List<CodeableConcept> additionalCharacteristic,
+        List<CodeableConcept> additionalClassification,
         List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
@@ -2778,7 +2825,7 @@ class _$Composition implements Composition {
         Identifier identifier,
         CompositionStatus status,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
@@ -2808,7 +2855,7 @@ class _$Composition implements Composition {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         Period period,
         List<dynamic> detail),
     Result compositionSection(
@@ -2835,7 +2882,7 @@ class _$Composition implements Composition {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentManifestStatus status,
         CodeableConcept type,
         Reference subject,
@@ -2862,18 +2909,18 @@ class _$Composition implements Composition {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentReferenceStatus status,
         Code docStatus,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Instant date,
         List<dynamic> author,
         Reference custodian,
         List<dynamic> relatesTo,
         String description,
-        List<dynamic> securityLabel,
+        List<CodeableConcept> securityLabel,
         List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
@@ -2891,7 +2938,7 @@ class _$Composition implements Composition {
         String id,
         List<dynamic> modifierExtension,
         List<dynamic> encounter,
-        List<dynamic> event,
+        List<CodeableConcept> event,
         Period period,
         CodeableConcept facilityType,
         CodeableConcept practiceSetting,
@@ -3009,7 +3056,7 @@ abstract class Composition implements Documents {
       Identifier identifier,
       CompositionStatus status,
       CodeableConcept type,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Reference subject,
       Reference encounter,
       FhirDateTime date,
@@ -3039,7 +3086,7 @@ abstract class Composition implements Documents {
   Identifier get identifier;
   CompositionStatus get status;
   CodeableConcept get type;
-  List<dynamic> get category;
+  List<CodeableConcept> get category;
   Reference get subject;
   Reference get encounter;
   FhirDateTime get date;
@@ -3184,18 +3231,18 @@ class _$CompositionAttester implements CompositionAttester {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             bool orderable,
             Reference referencedItem,
-            List<dynamic> additionalIdentifier,
-            List<dynamic> classification,
+            List<Identifier> additionalIdentifier,
+            List<CodeableConcept> classification,
             CatalogEntryStatus status,
             Period validityPeriod,
             FhirDateTime validTo,
             FhirDateTime lastUpdated,
-            List<dynamic> additionalCharacteristic,
-            List<dynamic> additionalClassification,
+            List<CodeableConcept> additionalCharacteristic,
+            List<CodeableConcept> additionalClassification,
             List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
@@ -3218,7 +3265,7 @@ class _$CompositionAttester implements CompositionAttester {
             Identifier identifier,
             CompositionStatus status,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
@@ -3251,7 +3298,7 @@ class _$CompositionAttester implements CompositionAttester {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             Period period,
             List<dynamic> detail),
     @required
@@ -3280,7 +3327,7 @@ class _$CompositionAttester implements CompositionAttester {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentManifestStatus status,
             CodeableConcept type,
             Reference subject,
@@ -3309,18 +3356,18 @@ class _$CompositionAttester implements CompositionAttester {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentReferenceStatus status,
             Code docStatus,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Instant date,
             List<dynamic> author,
             Reference custodian,
             List<dynamic> relatesTo,
             String description,
-            List<dynamic> securityLabel,
+            List<CodeableConcept> securityLabel,
             List<dynamic> content,
             DocumentReferenceContext context),
     @required
@@ -3341,7 +3388,7 @@ class _$CompositionAttester implements CompositionAttester {
             String id,
             List<dynamic> modifierExtension,
             List<dynamic> encounter,
-            List<dynamic> event,
+            List<CodeableConcept> event,
             Period period,
             CodeableConcept facilityType,
             CodeableConcept practiceSetting,
@@ -3378,18 +3425,18 @@ class _$CompositionAttester implements CompositionAttester {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         bool orderable,
         Reference referencedItem,
-        List<dynamic> additionalIdentifier,
-        List<dynamic> classification,
+        List<Identifier> additionalIdentifier,
+        List<CodeableConcept> classification,
         CatalogEntryStatus status,
         Period validityPeriod,
         FhirDateTime validTo,
         FhirDateTime lastUpdated,
-        List<dynamic> additionalCharacteristic,
-        List<dynamic> additionalClassification,
+        List<CodeableConcept> additionalCharacteristic,
+        List<CodeableConcept> additionalClassification,
         List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
@@ -3410,7 +3457,7 @@ class _$CompositionAttester implements CompositionAttester {
         Identifier identifier,
         CompositionStatus status,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
@@ -3440,7 +3487,7 @@ class _$CompositionAttester implements CompositionAttester {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         Period period,
         List<dynamic> detail),
     Result compositionSection(
@@ -3467,7 +3514,7 @@ class _$CompositionAttester implements CompositionAttester {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentManifestStatus status,
         CodeableConcept type,
         Reference subject,
@@ -3494,18 +3541,18 @@ class _$CompositionAttester implements CompositionAttester {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentReferenceStatus status,
         Code docStatus,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Instant date,
         List<dynamic> author,
         Reference custodian,
         List<dynamic> relatesTo,
         String description,
-        List<dynamic> securityLabel,
+        List<CodeableConcept> securityLabel,
         List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
@@ -3523,7 +3570,7 @@ class _$CompositionAttester implements CompositionAttester {
         String id,
         List<dynamic> modifierExtension,
         List<dynamic> encounter,
-        List<dynamic> event,
+        List<CodeableConcept> event,
         Period period,
         CodeableConcept facilityType,
         CodeableConcept practiceSetting,
@@ -3642,6 +3689,8 @@ abstract class $CompositionRelatesToCopyWith<$Res>
       Code code,
       Identifier targetIdentifier,
       Reference targetReference});
+
+  $IdentifierCopyWith<$Res> get targetIdentifier;
 }
 
 class _$CompositionRelatesToCopyWithImpl<$Res>
@@ -3679,6 +3728,16 @@ class _$CompositionRelatesToCopyWithImpl<$Res>
           ? _value.targetReference
           : targetReference as Reference,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get targetIdentifier {
+    if (_value.targetIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.targetIdentifier, (value) {
+      return _then(_value.copyWith(targetIdentifier: value));
+    });
   }
 }
 
@@ -3765,18 +3824,18 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             bool orderable,
             Reference referencedItem,
-            List<dynamic> additionalIdentifier,
-            List<dynamic> classification,
+            List<Identifier> additionalIdentifier,
+            List<CodeableConcept> classification,
             CatalogEntryStatus status,
             Period validityPeriod,
             FhirDateTime validTo,
             FhirDateTime lastUpdated,
-            List<dynamic> additionalCharacteristic,
-            List<dynamic> additionalClassification,
+            List<CodeableConcept> additionalCharacteristic,
+            List<CodeableConcept> additionalClassification,
             List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
@@ -3799,7 +3858,7 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
             Identifier identifier,
             CompositionStatus status,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
@@ -3832,7 +3891,7 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             Period period,
             List<dynamic> detail),
     @required
@@ -3861,7 +3920,7 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentManifestStatus status,
             CodeableConcept type,
             Reference subject,
@@ -3890,18 +3949,18 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentReferenceStatus status,
             Code docStatus,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Instant date,
             List<dynamic> author,
             Reference custodian,
             List<dynamic> relatesTo,
             String description,
-            List<dynamic> securityLabel,
+            List<CodeableConcept> securityLabel,
             List<dynamic> content,
             DocumentReferenceContext context),
     @required
@@ -3922,7 +3981,7 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
             String id,
             List<dynamic> modifierExtension,
             List<dynamic> encounter,
-            List<dynamic> event,
+            List<CodeableConcept> event,
             Period period,
             CodeableConcept facilityType,
             CodeableConcept practiceSetting,
@@ -3959,18 +4018,18 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         bool orderable,
         Reference referencedItem,
-        List<dynamic> additionalIdentifier,
-        List<dynamic> classification,
+        List<Identifier> additionalIdentifier,
+        List<CodeableConcept> classification,
         CatalogEntryStatus status,
         Period validityPeriod,
         FhirDateTime validTo,
         FhirDateTime lastUpdated,
-        List<dynamic> additionalCharacteristic,
-        List<dynamic> additionalClassification,
+        List<CodeableConcept> additionalCharacteristic,
+        List<CodeableConcept> additionalClassification,
         List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
@@ -3991,7 +4050,7 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
         Identifier identifier,
         CompositionStatus status,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
@@ -4021,7 +4080,7 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         Period period,
         List<dynamic> detail),
     Result compositionSection(
@@ -4048,7 +4107,7 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentManifestStatus status,
         CodeableConcept type,
         Reference subject,
@@ -4075,18 +4134,18 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentReferenceStatus status,
         Code docStatus,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Instant date,
         List<dynamic> author,
         Reference custodian,
         List<dynamic> relatesTo,
         String description,
-        List<dynamic> securityLabel,
+        List<CodeableConcept> securityLabel,
         List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
@@ -4104,7 +4163,7 @@ class _$CompositionRelatesTo implements CompositionRelatesTo {
         String id,
         List<dynamic> modifierExtension,
         List<dynamic> encounter,
-        List<dynamic> event,
+        List<CodeableConcept> event,
         Period period,
         CodeableConcept facilityType,
         CodeableConcept practiceSetting,
@@ -4220,9 +4279,11 @@ abstract class $CompositionEventCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> code,
+      List<CodeableConcept> code,
       Period period,
       List<dynamic> detail});
+
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$CompositionEventCopyWithImpl<$Res> extends _$DocumentsCopyWithImpl<$Res>
@@ -4251,10 +4312,20 @@ class _$CompositionEventCopyWithImpl<$Res> extends _$DocumentsCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
-      code: code == freezed ? _value.code : code as List<dynamic>,
+      code: code == freezed ? _value.code : code as List<CodeableConcept>,
       period: period == freezed ? _value.period : period as Period,
       detail: detail == freezed ? _value.detail : detail as List<dynamic>,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
   }
 }
 
@@ -4279,7 +4350,7 @@ class _$CompositionEvent implements CompositionEvent {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> code;
+  final List<CodeableConcept> code;
   @override
   final Period period;
   @override
@@ -4338,18 +4409,18 @@ class _$CompositionEvent implements CompositionEvent {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             bool orderable,
             Reference referencedItem,
-            List<dynamic> additionalIdentifier,
-            List<dynamic> classification,
+            List<Identifier> additionalIdentifier,
+            List<CodeableConcept> classification,
             CatalogEntryStatus status,
             Period validityPeriod,
             FhirDateTime validTo,
             FhirDateTime lastUpdated,
-            List<dynamic> additionalCharacteristic,
-            List<dynamic> additionalClassification,
+            List<CodeableConcept> additionalCharacteristic,
+            List<CodeableConcept> additionalClassification,
             List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
@@ -4372,7 +4443,7 @@ class _$CompositionEvent implements CompositionEvent {
             Identifier identifier,
             CompositionStatus status,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
@@ -4405,7 +4476,7 @@ class _$CompositionEvent implements CompositionEvent {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             Period period,
             List<dynamic> detail),
     @required
@@ -4434,7 +4505,7 @@ class _$CompositionEvent implements CompositionEvent {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentManifestStatus status,
             CodeableConcept type,
             Reference subject,
@@ -4463,18 +4534,18 @@ class _$CompositionEvent implements CompositionEvent {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentReferenceStatus status,
             Code docStatus,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Instant date,
             List<dynamic> author,
             Reference custodian,
             List<dynamic> relatesTo,
             String description,
-            List<dynamic> securityLabel,
+            List<CodeableConcept> securityLabel,
             List<dynamic> content,
             DocumentReferenceContext context),
     @required
@@ -4495,7 +4566,7 @@ class _$CompositionEvent implements CompositionEvent {
             String id,
             List<dynamic> modifierExtension,
             List<dynamic> encounter,
-            List<dynamic> event,
+            List<CodeableConcept> event,
             Period period,
             CodeableConcept facilityType,
             CodeableConcept practiceSetting,
@@ -4532,18 +4603,18 @@ class _$CompositionEvent implements CompositionEvent {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         bool orderable,
         Reference referencedItem,
-        List<dynamic> additionalIdentifier,
-        List<dynamic> classification,
+        List<Identifier> additionalIdentifier,
+        List<CodeableConcept> classification,
         CatalogEntryStatus status,
         Period validityPeriod,
         FhirDateTime validTo,
         FhirDateTime lastUpdated,
-        List<dynamic> additionalCharacteristic,
-        List<dynamic> additionalClassification,
+        List<CodeableConcept> additionalCharacteristic,
+        List<CodeableConcept> additionalClassification,
         List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
@@ -4564,7 +4635,7 @@ class _$CompositionEvent implements CompositionEvent {
         Identifier identifier,
         CompositionStatus status,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
@@ -4594,7 +4665,7 @@ class _$CompositionEvent implements CompositionEvent {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         Period period,
         List<dynamic> detail),
     Result compositionSection(
@@ -4621,7 +4692,7 @@ class _$CompositionEvent implements CompositionEvent {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentManifestStatus status,
         CodeableConcept type,
         Reference subject,
@@ -4648,18 +4719,18 @@ class _$CompositionEvent implements CompositionEvent {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentReferenceStatus status,
         Code docStatus,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Instant date,
         List<dynamic> author,
         Reference custodian,
         List<dynamic> relatesTo,
         String description,
-        List<dynamic> securityLabel,
+        List<CodeableConcept> securityLabel,
         List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
@@ -4677,7 +4748,7 @@ class _$CompositionEvent implements CompositionEvent {
         String id,
         List<dynamic> modifierExtension,
         List<dynamic> encounter,
-        List<dynamic> event,
+        List<CodeableConcept> event,
         Period period,
         CodeableConcept facilityType,
         CodeableConcept practiceSetting,
@@ -4764,7 +4835,7 @@ abstract class CompositionEvent implements Documents {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> code,
+      List<CodeableConcept> code,
       Period period,
       List<dynamic> detail}) = _$CompositionEvent;
 
@@ -4776,7 +4847,7 @@ abstract class CompositionEvent implements Documents {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get code;
+  List<CodeableConcept> get code;
   Period get period;
   List<dynamic> get detail;
   @override
@@ -4802,6 +4873,10 @@ abstract class $CompositionSectionCopyWith<$Res>
       CodeableConcept orderedBy,
       CodeableConcept emptyReason,
       List<dynamic> section});
+
+  $CodeableConceptCopyWith<$Res> get code;
+  $CodeableConceptCopyWith<$Res> get orderedBy;
+  $CodeableConceptCopyWith<$Res> get emptyReason;
 }
 
 class _$CompositionSectionCopyWithImpl<$Res>
@@ -4851,6 +4926,36 @@ class _$CompositionSectionCopyWithImpl<$Res>
           : emptyReason as CodeableConcept,
       section: section == freezed ? _value.section : section as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get orderedBy {
+    if (_value.orderedBy == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.orderedBy, (value) {
+      return _then(_value.copyWith(orderedBy: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get emptyReason {
+    if (_value.emptyReason == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.emptyReason, (value) {
+      return _then(_value.copyWith(emptyReason: value));
+    });
   }
 }
 
@@ -4972,18 +5077,18 @@ class _$CompositionSection implements CompositionSection {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             bool orderable,
             Reference referencedItem,
-            List<dynamic> additionalIdentifier,
-            List<dynamic> classification,
+            List<Identifier> additionalIdentifier,
+            List<CodeableConcept> classification,
             CatalogEntryStatus status,
             Period validityPeriod,
             FhirDateTime validTo,
             FhirDateTime lastUpdated,
-            List<dynamic> additionalCharacteristic,
-            List<dynamic> additionalClassification,
+            List<CodeableConcept> additionalCharacteristic,
+            List<CodeableConcept> additionalClassification,
             List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
@@ -5006,7 +5111,7 @@ class _$CompositionSection implements CompositionSection {
             Identifier identifier,
             CompositionStatus status,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
@@ -5039,7 +5144,7 @@ class _$CompositionSection implements CompositionSection {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             Period period,
             List<dynamic> detail),
     @required
@@ -5068,7 +5173,7 @@ class _$CompositionSection implements CompositionSection {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentManifestStatus status,
             CodeableConcept type,
             Reference subject,
@@ -5097,18 +5202,18 @@ class _$CompositionSection implements CompositionSection {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentReferenceStatus status,
             Code docStatus,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Instant date,
             List<dynamic> author,
             Reference custodian,
             List<dynamic> relatesTo,
             String description,
-            List<dynamic> securityLabel,
+            List<CodeableConcept> securityLabel,
             List<dynamic> content,
             DocumentReferenceContext context),
     @required
@@ -5129,7 +5234,7 @@ class _$CompositionSection implements CompositionSection {
             String id,
             List<dynamic> modifierExtension,
             List<dynamic> encounter,
-            List<dynamic> event,
+            List<CodeableConcept> event,
             Period period,
             CodeableConcept facilityType,
             CodeableConcept practiceSetting,
@@ -5166,18 +5271,18 @@ class _$CompositionSection implements CompositionSection {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         bool orderable,
         Reference referencedItem,
-        List<dynamic> additionalIdentifier,
-        List<dynamic> classification,
+        List<Identifier> additionalIdentifier,
+        List<CodeableConcept> classification,
         CatalogEntryStatus status,
         Period validityPeriod,
         FhirDateTime validTo,
         FhirDateTime lastUpdated,
-        List<dynamic> additionalCharacteristic,
-        List<dynamic> additionalClassification,
+        List<CodeableConcept> additionalCharacteristic,
+        List<CodeableConcept> additionalClassification,
         List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
@@ -5198,7 +5303,7 @@ class _$CompositionSection implements CompositionSection {
         Identifier identifier,
         CompositionStatus status,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
@@ -5228,7 +5333,7 @@ class _$CompositionSection implements CompositionSection {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         Period period,
         List<dynamic> detail),
     Result compositionSection(
@@ -5255,7 +5360,7 @@ class _$CompositionSection implements CompositionSection {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentManifestStatus status,
         CodeableConcept type,
         Reference subject,
@@ -5282,18 +5387,18 @@ class _$CompositionSection implements CompositionSection {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentReferenceStatus status,
         Code docStatus,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Instant date,
         List<dynamic> author,
         Reference custodian,
         List<dynamic> relatesTo,
         String description,
-        List<dynamic> securityLabel,
+        List<CodeableConcept> securityLabel,
         List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
@@ -5311,7 +5416,7 @@ class _$CompositionSection implements CompositionSection {
         String id,
         List<dynamic> modifierExtension,
         List<dynamic> encounter,
-        List<dynamic> event,
+        List<CodeableConcept> event,
         Period period,
         CodeableConcept facilityType,
         CodeableConcept practiceSetting,
@@ -5446,7 +5551,7 @@ abstract class $DocumentManifestCopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       Identifier masterIdentifier,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       DocumentManifestStatus status,
       CodeableConcept type,
       Reference subject,
@@ -5456,6 +5561,9 @@ abstract class $DocumentManifestCopyWith<$Res>
       FhirUri source,
       List<dynamic> content,
       List<dynamic> related});
+
+  $IdentifierCopyWith<$Res> get masterIdentifier;
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 class _$DocumentManifestCopyWithImpl<$Res> extends _$DocumentsCopyWithImpl<$Res>
@@ -5514,7 +5622,7 @@ class _$DocumentManifestCopyWithImpl<$Res> extends _$DocumentsCopyWithImpl<$Res>
           : masterIdentifier as Identifier,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status:
           status == freezed ? _value.status : status as DocumentManifestStatus,
       type: type == freezed ? _value.type : type as CodeableConcept,
@@ -5527,6 +5635,26 @@ class _$DocumentManifestCopyWithImpl<$Res> extends _$DocumentsCopyWithImpl<$Res>
       content: content == freezed ? _value.content : content as List<dynamic>,
       related: related == freezed ? _value.related : related as List<dynamic>,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get masterIdentifier {
+    if (_value.masterIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.masterIdentifier, (value) {
+      return _then(_value.copyWith(masterIdentifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
   }
 }
 
@@ -5579,7 +5707,7 @@ class _$DocumentManifest implements DocumentManifest {
   @override
   final Identifier masterIdentifier;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final DocumentManifestStatus status;
   @override
@@ -5704,18 +5832,18 @@ class _$DocumentManifest implements DocumentManifest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             bool orderable,
             Reference referencedItem,
-            List<dynamic> additionalIdentifier,
-            List<dynamic> classification,
+            List<Identifier> additionalIdentifier,
+            List<CodeableConcept> classification,
             CatalogEntryStatus status,
             Period validityPeriod,
             FhirDateTime validTo,
             FhirDateTime lastUpdated,
-            List<dynamic> additionalCharacteristic,
-            List<dynamic> additionalClassification,
+            List<CodeableConcept> additionalCharacteristic,
+            List<CodeableConcept> additionalClassification,
             List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
@@ -5738,7 +5866,7 @@ class _$DocumentManifest implements DocumentManifest {
             Identifier identifier,
             CompositionStatus status,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
@@ -5771,7 +5899,7 @@ class _$DocumentManifest implements DocumentManifest {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             Period period,
             List<dynamic> detail),
     @required
@@ -5800,7 +5928,7 @@ class _$DocumentManifest implements DocumentManifest {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentManifestStatus status,
             CodeableConcept type,
             Reference subject,
@@ -5829,18 +5957,18 @@ class _$DocumentManifest implements DocumentManifest {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentReferenceStatus status,
             Code docStatus,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Instant date,
             List<dynamic> author,
             Reference custodian,
             List<dynamic> relatesTo,
             String description,
-            List<dynamic> securityLabel,
+            List<CodeableConcept> securityLabel,
             List<dynamic> content,
             DocumentReferenceContext context),
     @required
@@ -5861,7 +5989,7 @@ class _$DocumentManifest implements DocumentManifest {
             String id,
             List<dynamic> modifierExtension,
             List<dynamic> encounter,
-            List<dynamic> event,
+            List<CodeableConcept> event,
             Period period,
             CodeableConcept facilityType,
             CodeableConcept practiceSetting,
@@ -5917,18 +6045,18 @@ class _$DocumentManifest implements DocumentManifest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         bool orderable,
         Reference referencedItem,
-        List<dynamic> additionalIdentifier,
-        List<dynamic> classification,
+        List<Identifier> additionalIdentifier,
+        List<CodeableConcept> classification,
         CatalogEntryStatus status,
         Period validityPeriod,
         FhirDateTime validTo,
         FhirDateTime lastUpdated,
-        List<dynamic> additionalCharacteristic,
-        List<dynamic> additionalClassification,
+        List<CodeableConcept> additionalCharacteristic,
+        List<CodeableConcept> additionalClassification,
         List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
@@ -5949,7 +6077,7 @@ class _$DocumentManifest implements DocumentManifest {
         Identifier identifier,
         CompositionStatus status,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
@@ -5979,7 +6107,7 @@ class _$DocumentManifest implements DocumentManifest {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         Period period,
         List<dynamic> detail),
     Result compositionSection(
@@ -6006,7 +6134,7 @@ class _$DocumentManifest implements DocumentManifest {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentManifestStatus status,
         CodeableConcept type,
         Reference subject,
@@ -6033,18 +6161,18 @@ class _$DocumentManifest implements DocumentManifest {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentReferenceStatus status,
         Code docStatus,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Instant date,
         List<dynamic> author,
         Reference custodian,
         List<dynamic> relatesTo,
         String description,
-        List<dynamic> securityLabel,
+        List<CodeableConcept> securityLabel,
         List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
@@ -6062,7 +6190,7 @@ class _$DocumentManifest implements DocumentManifest {
         String id,
         List<dynamic> modifierExtension,
         List<dynamic> encounter,
-        List<dynamic> event,
+        List<CodeableConcept> event,
         Period period,
         CodeableConcept facilityType,
         CodeableConcept practiceSetting,
@@ -6175,7 +6303,7 @@ abstract class DocumentManifest implements Documents {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       Identifier masterIdentifier,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       DocumentManifestStatus status,
       CodeableConcept type,
       Reference subject,
@@ -6201,7 +6329,7 @@ abstract class DocumentManifest implements Documents {
   @override
   List<dynamic> get modifierExtension;
   Identifier get masterIdentifier;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   DocumentManifestStatus get status;
   CodeableConcept get type;
   Reference get subject;
@@ -6227,6 +6355,8 @@ abstract class $DocumentManifestRelatedCopyWith<$Res>
       List<dynamic> modifierExtension,
       Identifier identifier,
       Reference ref});
+
+  $IdentifierCopyWith<$Res> get identifier;
 }
 
 class _$DocumentManifestRelatedCopyWithImpl<$Res>
@@ -6259,6 +6389,16 @@ class _$DocumentManifestRelatedCopyWithImpl<$Res>
           identifier == freezed ? _value.identifier : identifier as Identifier,
       ref: ref == freezed ? _value.ref : ref as Reference,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
   }
 }
 
@@ -6338,18 +6478,18 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             bool orderable,
             Reference referencedItem,
-            List<dynamic> additionalIdentifier,
-            List<dynamic> classification,
+            List<Identifier> additionalIdentifier,
+            List<CodeableConcept> classification,
             CatalogEntryStatus status,
             Period validityPeriod,
             FhirDateTime validTo,
             FhirDateTime lastUpdated,
-            List<dynamic> additionalCharacteristic,
-            List<dynamic> additionalClassification,
+            List<CodeableConcept> additionalCharacteristic,
+            List<CodeableConcept> additionalClassification,
             List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
@@ -6372,7 +6512,7 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
             Identifier identifier,
             CompositionStatus status,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
@@ -6405,7 +6545,7 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             Period period,
             List<dynamic> detail),
     @required
@@ -6434,7 +6574,7 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentManifestStatus status,
             CodeableConcept type,
             Reference subject,
@@ -6463,18 +6603,18 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentReferenceStatus status,
             Code docStatus,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Instant date,
             List<dynamic> author,
             Reference custodian,
             List<dynamic> relatesTo,
             String description,
-            List<dynamic> securityLabel,
+            List<CodeableConcept> securityLabel,
             List<dynamic> content,
             DocumentReferenceContext context),
     @required
@@ -6495,7 +6635,7 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
             String id,
             List<dynamic> modifierExtension,
             List<dynamic> encounter,
-            List<dynamic> event,
+            List<CodeableConcept> event,
             Period period,
             CodeableConcept facilityType,
             CodeableConcept practiceSetting,
@@ -6532,18 +6672,18 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         bool orderable,
         Reference referencedItem,
-        List<dynamic> additionalIdentifier,
-        List<dynamic> classification,
+        List<Identifier> additionalIdentifier,
+        List<CodeableConcept> classification,
         CatalogEntryStatus status,
         Period validityPeriod,
         FhirDateTime validTo,
         FhirDateTime lastUpdated,
-        List<dynamic> additionalCharacteristic,
-        List<dynamic> additionalClassification,
+        List<CodeableConcept> additionalCharacteristic,
+        List<CodeableConcept> additionalClassification,
         List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
@@ -6564,7 +6704,7 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
         Identifier identifier,
         CompositionStatus status,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
@@ -6594,7 +6734,7 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         Period period,
         List<dynamic> detail),
     Result compositionSection(
@@ -6621,7 +6761,7 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentManifestStatus status,
         CodeableConcept type,
         Reference subject,
@@ -6648,18 +6788,18 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentReferenceStatus status,
         Code docStatus,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Instant date,
         List<dynamic> author,
         Reference custodian,
         List<dynamic> relatesTo,
         String description,
-        List<dynamic> securityLabel,
+        List<CodeableConcept> securityLabel,
         List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
@@ -6677,7 +6817,7 @@ class _$DocumentManifestRelated implements DocumentManifestRelated {
         String id,
         List<dynamic> modifierExtension,
         List<dynamic> encounter,
-        List<dynamic> event,
+        List<CodeableConcept> event,
         Period period,
         CodeableConcept facilityType,
         CodeableConcept practiceSetting,
@@ -6798,20 +6938,23 @@ abstract class $DocumentReferenceCopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       Identifier masterIdentifier,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       DocumentReferenceStatus status,
       Code docStatus,
       CodeableConcept type,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Reference subject,
       Instant date,
       List<dynamic> author,
       Reference custodian,
       List<dynamic> relatesTo,
       String description,
-      List<dynamic> securityLabel,
+      List<CodeableConcept> securityLabel,
       List<dynamic> content,
       DocumentReferenceContext context});
+
+  $IdentifierCopyWith<$Res> get masterIdentifier;
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 class _$DocumentReferenceCopyWithImpl<$Res>
@@ -6875,13 +7018,14 @@ class _$DocumentReferenceCopyWithImpl<$Res>
           : masterIdentifier as Identifier,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status:
           status == freezed ? _value.status : status as DocumentReferenceStatus,
       docStatus: docStatus == freezed ? _value.docStatus : docStatus as Code,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      category:
-          category == freezed ? _value.category : category as List<dynamic>,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
       subject: subject == freezed ? _value.subject : subject as Reference,
       date: date == freezed ? _value.date : date as Instant,
       author: author == freezed ? _value.author : author as List<dynamic>,
@@ -6893,12 +7037,32 @@ class _$DocumentReferenceCopyWithImpl<$Res>
           description == freezed ? _value.description : description as String,
       securityLabel: securityLabel == freezed
           ? _value.securityLabel
-          : securityLabel as List<dynamic>,
+          : securityLabel as List<CodeableConcept>,
       content: content == freezed ? _value.content : content as List<dynamic>,
       context: context == freezed
           ? _value.context
           : context as DocumentReferenceContext,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get masterIdentifier {
+    if (_value.masterIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.masterIdentifier, (value) {
+      return _then(_value.copyWith(masterIdentifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
   }
 }
 
@@ -6955,7 +7119,7 @@ class _$DocumentReference implements DocumentReference {
   @override
   final Identifier masterIdentifier;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final DocumentReferenceStatus status;
   @override
@@ -6963,7 +7127,7 @@ class _$DocumentReference implements DocumentReference {
   @override
   final CodeableConcept type;
   @override
-  final List<dynamic> category;
+  final List<CodeableConcept> category;
   @override
   final Reference subject;
   @override
@@ -6977,7 +7141,7 @@ class _$DocumentReference implements DocumentReference {
   @override
   final String description;
   @override
-  final List<dynamic> securityLabel;
+  final List<CodeableConcept> securityLabel;
   @override
   final List<dynamic> content;
   @override
@@ -7104,18 +7268,18 @@ class _$DocumentReference implements DocumentReference {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             bool orderable,
             Reference referencedItem,
-            List<dynamic> additionalIdentifier,
-            List<dynamic> classification,
+            List<Identifier> additionalIdentifier,
+            List<CodeableConcept> classification,
             CatalogEntryStatus status,
             Period validityPeriod,
             FhirDateTime validTo,
             FhirDateTime lastUpdated,
-            List<dynamic> additionalCharacteristic,
-            List<dynamic> additionalClassification,
+            List<CodeableConcept> additionalCharacteristic,
+            List<CodeableConcept> additionalClassification,
             List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
@@ -7138,7 +7302,7 @@ class _$DocumentReference implements DocumentReference {
             Identifier identifier,
             CompositionStatus status,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
@@ -7171,7 +7335,7 @@ class _$DocumentReference implements DocumentReference {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             Period period,
             List<dynamic> detail),
     @required
@@ -7200,7 +7364,7 @@ class _$DocumentReference implements DocumentReference {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentManifestStatus status,
             CodeableConcept type,
             Reference subject,
@@ -7229,18 +7393,18 @@ class _$DocumentReference implements DocumentReference {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentReferenceStatus status,
             Code docStatus,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Instant date,
             List<dynamic> author,
             Reference custodian,
             List<dynamic> relatesTo,
             String description,
-            List<dynamic> securityLabel,
+            List<CodeableConcept> securityLabel,
             List<dynamic> content,
             DocumentReferenceContext context),
     @required
@@ -7261,7 +7425,7 @@ class _$DocumentReference implements DocumentReference {
             String id,
             List<dynamic> modifierExtension,
             List<dynamic> encounter,
-            List<dynamic> event,
+            List<CodeableConcept> event,
             Period period,
             CodeableConcept facilityType,
             CodeableConcept practiceSetting,
@@ -7321,18 +7485,18 @@ class _$DocumentReference implements DocumentReference {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         bool orderable,
         Reference referencedItem,
-        List<dynamic> additionalIdentifier,
-        List<dynamic> classification,
+        List<Identifier> additionalIdentifier,
+        List<CodeableConcept> classification,
         CatalogEntryStatus status,
         Period validityPeriod,
         FhirDateTime validTo,
         FhirDateTime lastUpdated,
-        List<dynamic> additionalCharacteristic,
-        List<dynamic> additionalClassification,
+        List<CodeableConcept> additionalCharacteristic,
+        List<CodeableConcept> additionalClassification,
         List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
@@ -7353,7 +7517,7 @@ class _$DocumentReference implements DocumentReference {
         Identifier identifier,
         CompositionStatus status,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
@@ -7383,7 +7547,7 @@ class _$DocumentReference implements DocumentReference {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         Period period,
         List<dynamic> detail),
     Result compositionSection(
@@ -7410,7 +7574,7 @@ class _$DocumentReference implements DocumentReference {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentManifestStatus status,
         CodeableConcept type,
         Reference subject,
@@ -7437,18 +7601,18 @@ class _$DocumentReference implements DocumentReference {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentReferenceStatus status,
         Code docStatus,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Instant date,
         List<dynamic> author,
         Reference custodian,
         List<dynamic> relatesTo,
         String description,
-        List<dynamic> securityLabel,
+        List<CodeableConcept> securityLabel,
         List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
@@ -7466,7 +7630,7 @@ class _$DocumentReference implements DocumentReference {
         String id,
         List<dynamic> modifierExtension,
         List<dynamic> encounter,
-        List<dynamic> event,
+        List<CodeableConcept> event,
         Period period,
         CodeableConcept facilityType,
         CodeableConcept practiceSetting,
@@ -7583,18 +7747,18 @@ abstract class DocumentReference implements Documents {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       Identifier masterIdentifier,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       DocumentReferenceStatus status,
       Code docStatus,
       CodeableConcept type,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Reference subject,
       Instant date,
       List<dynamic> author,
       Reference custodian,
       List<dynamic> relatesTo,
       String description,
-      List<dynamic> securityLabel,
+      List<CodeableConcept> securityLabel,
       List<dynamic> content,
       DocumentReferenceContext context}) = _$DocumentReference;
 
@@ -7613,18 +7777,18 @@ abstract class DocumentReference implements Documents {
   @override
   List<dynamic> get modifierExtension;
   Identifier get masterIdentifier;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   DocumentReferenceStatus get status;
   Code get docStatus;
   CodeableConcept get type;
-  List<dynamic> get category;
+  List<CodeableConcept> get category;
   Reference get subject;
   Instant get date;
   List<dynamic> get author;
   Reference get custodian;
   List<dynamic> get relatesTo;
   String get description;
-  List<dynamic> get securityLabel;
+  List<CodeableConcept> get securityLabel;
   List<dynamic> get content;
   DocumentReferenceContext get context;
   @override
@@ -7756,18 +7920,18 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             bool orderable,
             Reference referencedItem,
-            List<dynamic> additionalIdentifier,
-            List<dynamic> classification,
+            List<Identifier> additionalIdentifier,
+            List<CodeableConcept> classification,
             CatalogEntryStatus status,
             Period validityPeriod,
             FhirDateTime validTo,
             FhirDateTime lastUpdated,
-            List<dynamic> additionalCharacteristic,
-            List<dynamic> additionalClassification,
+            List<CodeableConcept> additionalCharacteristic,
+            List<CodeableConcept> additionalClassification,
             List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
@@ -7790,7 +7954,7 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
             Identifier identifier,
             CompositionStatus status,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
@@ -7823,7 +7987,7 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             Period period,
             List<dynamic> detail),
     @required
@@ -7852,7 +8016,7 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentManifestStatus status,
             CodeableConcept type,
             Reference subject,
@@ -7881,18 +8045,18 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentReferenceStatus status,
             Code docStatus,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Instant date,
             List<dynamic> author,
             Reference custodian,
             List<dynamic> relatesTo,
             String description,
-            List<dynamic> securityLabel,
+            List<CodeableConcept> securityLabel,
             List<dynamic> content,
             DocumentReferenceContext context),
     @required
@@ -7913,7 +8077,7 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
             String id,
             List<dynamic> modifierExtension,
             List<dynamic> encounter,
-            List<dynamic> event,
+            List<CodeableConcept> event,
             Period period,
             CodeableConcept facilityType,
             CodeableConcept practiceSetting,
@@ -7950,18 +8114,18 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         bool orderable,
         Reference referencedItem,
-        List<dynamic> additionalIdentifier,
-        List<dynamic> classification,
+        List<Identifier> additionalIdentifier,
+        List<CodeableConcept> classification,
         CatalogEntryStatus status,
         Period validityPeriod,
         FhirDateTime validTo,
         FhirDateTime lastUpdated,
-        List<dynamic> additionalCharacteristic,
-        List<dynamic> additionalClassification,
+        List<CodeableConcept> additionalCharacteristic,
+        List<CodeableConcept> additionalClassification,
         List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
@@ -7982,7 +8146,7 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
         Identifier identifier,
         CompositionStatus status,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
@@ -8012,7 +8176,7 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         Period period,
         List<dynamic> detail),
     Result compositionSection(
@@ -8039,7 +8203,7 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentManifestStatus status,
         CodeableConcept type,
         Reference subject,
@@ -8066,18 +8230,18 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentReferenceStatus status,
         Code docStatus,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Instant date,
         List<dynamic> author,
         Reference custodian,
         List<dynamic> relatesTo,
         String description,
-        List<dynamic> securityLabel,
+        List<CodeableConcept> securityLabel,
         List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
@@ -8095,7 +8259,7 @@ class _$DocumentReferenceRelatesTo implements DocumentReferenceRelatesTo {
         String id,
         List<dynamic> modifierExtension,
         List<dynamic> encounter,
-        List<dynamic> event,
+        List<CodeableConcept> event,
         Period period,
         CodeableConcept facilityType,
         CodeableConcept practiceSetting,
@@ -8210,6 +8374,9 @@ abstract class $DocumentReferenceContentCopyWith<$Res>
       List<dynamic> modifierExtension,
       Attachment attachment,
       Coding format});
+
+  $AttachmentCopyWith<$Res> get attachment;
+  $CodingCopyWith<$Res> get format;
 }
 
 class _$DocumentReferenceContentCopyWithImpl<$Res>
@@ -8241,6 +8408,26 @@ class _$DocumentReferenceContentCopyWithImpl<$Res>
           attachment == freezed ? _value.attachment : attachment as Attachment,
       format: format == freezed ? _value.format : format as Coding,
     ));
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get attachment {
+    if (_value.attachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.attachment, (value) {
+      return _then(_value.copyWith(attachment: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get format {
+    if (_value.format == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.format, (value) {
+      return _then(_value.copyWith(format: value));
+    });
   }
 }
 
@@ -8314,18 +8501,18 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             bool orderable,
             Reference referencedItem,
-            List<dynamic> additionalIdentifier,
-            List<dynamic> classification,
+            List<Identifier> additionalIdentifier,
+            List<CodeableConcept> classification,
             CatalogEntryStatus status,
             Period validityPeriod,
             FhirDateTime validTo,
             FhirDateTime lastUpdated,
-            List<dynamic> additionalCharacteristic,
-            List<dynamic> additionalClassification,
+            List<CodeableConcept> additionalCharacteristic,
+            List<CodeableConcept> additionalClassification,
             List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
@@ -8348,7 +8535,7 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
             Identifier identifier,
             CompositionStatus status,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
@@ -8381,7 +8568,7 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             Period period,
             List<dynamic> detail),
     @required
@@ -8410,7 +8597,7 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentManifestStatus status,
             CodeableConcept type,
             Reference subject,
@@ -8439,18 +8626,18 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentReferenceStatus status,
             Code docStatus,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Instant date,
             List<dynamic> author,
             Reference custodian,
             List<dynamic> relatesTo,
             String description,
-            List<dynamic> securityLabel,
+            List<CodeableConcept> securityLabel,
             List<dynamic> content,
             DocumentReferenceContext context),
     @required
@@ -8471,7 +8658,7 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
             String id,
             List<dynamic> modifierExtension,
             List<dynamic> encounter,
-            List<dynamic> event,
+            List<CodeableConcept> event,
             Period period,
             CodeableConcept facilityType,
             CodeableConcept practiceSetting,
@@ -8508,18 +8695,18 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         bool orderable,
         Reference referencedItem,
-        List<dynamic> additionalIdentifier,
-        List<dynamic> classification,
+        List<Identifier> additionalIdentifier,
+        List<CodeableConcept> classification,
         CatalogEntryStatus status,
         Period validityPeriod,
         FhirDateTime validTo,
         FhirDateTime lastUpdated,
-        List<dynamic> additionalCharacteristic,
-        List<dynamic> additionalClassification,
+        List<CodeableConcept> additionalCharacteristic,
+        List<CodeableConcept> additionalClassification,
         List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
@@ -8540,7 +8727,7 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
         Identifier identifier,
         CompositionStatus status,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
@@ -8570,7 +8757,7 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         Period period,
         List<dynamic> detail),
     Result compositionSection(
@@ -8597,7 +8784,7 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentManifestStatus status,
         CodeableConcept type,
         Reference subject,
@@ -8624,18 +8811,18 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentReferenceStatus status,
         Code docStatus,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Instant date,
         List<dynamic> author,
         Reference custodian,
         List<dynamic> relatesTo,
         String description,
-        List<dynamic> securityLabel,
+        List<CodeableConcept> securityLabel,
         List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
@@ -8653,7 +8840,7 @@ class _$DocumentReferenceContent implements DocumentReferenceContent {
         String id,
         List<dynamic> modifierExtension,
         List<dynamic> encounter,
-        List<dynamic> event,
+        List<CodeableConcept> event,
         Period period,
         CodeableConcept facilityType,
         CodeableConcept practiceSetting,
@@ -8765,12 +8952,16 @@ abstract class $DocumentReferenceContextCopyWith<$Res>
       {String id,
       List<dynamic> modifierExtension,
       List<dynamic> encounter,
-      List<dynamic> event,
+      List<CodeableConcept> event,
       Period period,
       CodeableConcept facilityType,
       CodeableConcept practiceSetting,
       Reference sourcePatientInfo,
       List<dynamic> related});
+
+  $PeriodCopyWith<$Res> get period;
+  $CodeableConceptCopyWith<$Res> get facilityType;
+  $CodeableConceptCopyWith<$Res> get practiceSetting;
 }
 
 class _$DocumentReferenceContextCopyWithImpl<$Res>
@@ -8803,7 +8994,7 @@ class _$DocumentReferenceContextCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       encounter:
           encounter == freezed ? _value.encounter : encounter as List<dynamic>,
-      event: event == freezed ? _value.event : event as List<dynamic>,
+      event: event == freezed ? _value.event : event as List<CodeableConcept>,
       period: period == freezed ? _value.period : period as Period,
       facilityType: facilityType == freezed
           ? _value.facilityType
@@ -8816,6 +9007,36 @@ class _$DocumentReferenceContextCopyWithImpl<$Res>
           : sourcePatientInfo as Reference,
       related: related == freezed ? _value.related : related as List<dynamic>,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get facilityType {
+    if (_value.facilityType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.facilityType, (value) {
+      return _then(_value.copyWith(facilityType: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get practiceSetting {
+    if (_value.practiceSetting == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.practiceSetting, (value) {
+      return _then(_value.copyWith(practiceSetting: value));
+    });
   }
 }
 
@@ -8842,7 +9063,7 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
   @override
   final List<dynamic> encounter;
   @override
-  final List<dynamic> event;
+  final List<CodeableConcept> event;
   @override
   final Period period;
   @override
@@ -8920,18 +9141,18 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CodeableConcept type,
             bool orderable,
             Reference referencedItem,
-            List<dynamic> additionalIdentifier,
-            List<dynamic> classification,
+            List<Identifier> additionalIdentifier,
+            List<CodeableConcept> classification,
             CatalogEntryStatus status,
             Period validityPeriod,
             FhirDateTime validTo,
             FhirDateTime lastUpdated,
-            List<dynamic> additionalCharacteristic,
-            List<dynamic> additionalClassification,
+            List<CodeableConcept> additionalCharacteristic,
+            List<CodeableConcept> additionalClassification,
             List<dynamic> relatedEntry),
     @required
         Result catalogEntryRelatedEntry(
@@ -8954,7 +9175,7 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
             Identifier identifier,
             CompositionStatus status,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Reference encounter,
             FhirDateTime date,
@@ -8987,7 +9208,7 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             Period period,
             List<dynamic> detail),
     @required
@@ -9016,7 +9237,7 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentManifestStatus status,
             CodeableConcept type,
             Reference subject,
@@ -9045,18 +9266,18 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier masterIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             DocumentReferenceStatus status,
             Code docStatus,
             CodeableConcept type,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Reference subject,
             Instant date,
             List<dynamic> author,
             Reference custodian,
             List<dynamic> relatesTo,
             String description,
-            List<dynamic> securityLabel,
+            List<CodeableConcept> securityLabel,
             List<dynamic> content,
             DocumentReferenceContext context),
     @required
@@ -9077,7 +9298,7 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
             String id,
             List<dynamic> modifierExtension,
             List<dynamic> encounter,
-            List<dynamic> event,
+            List<CodeableConcept> event,
             Period period,
             CodeableConcept facilityType,
             CodeableConcept practiceSetting,
@@ -9114,18 +9335,18 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CodeableConcept type,
         bool orderable,
         Reference referencedItem,
-        List<dynamic> additionalIdentifier,
-        List<dynamic> classification,
+        List<Identifier> additionalIdentifier,
+        List<CodeableConcept> classification,
         CatalogEntryStatus status,
         Period validityPeriod,
         FhirDateTime validTo,
         FhirDateTime lastUpdated,
-        List<dynamic> additionalCharacteristic,
-        List<dynamic> additionalClassification,
+        List<CodeableConcept> additionalCharacteristic,
+        List<CodeableConcept> additionalClassification,
         List<dynamic> relatedEntry),
     Result catalogEntryRelatedEntry(
         String id,
@@ -9146,7 +9367,7 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
         Identifier identifier,
         CompositionStatus status,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Reference encounter,
         FhirDateTime date,
@@ -9176,7 +9397,7 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         Period period,
         List<dynamic> detail),
     Result compositionSection(
@@ -9203,7 +9424,7 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentManifestStatus status,
         CodeableConcept type,
         Reference subject,
@@ -9230,18 +9451,18 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier masterIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         DocumentReferenceStatus status,
         Code docStatus,
         CodeableConcept type,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Reference subject,
         Instant date,
         List<dynamic> author,
         Reference custodian,
         List<dynamic> relatesTo,
         String description,
-        List<dynamic> securityLabel,
+        List<CodeableConcept> securityLabel,
         List<dynamic> content,
         DocumentReferenceContext context),
     Result documentReferenceRelatesTo(
@@ -9259,7 +9480,7 @@ class _$DocumentReferenceContext implements DocumentReferenceContext {
         String id,
         List<dynamic> modifierExtension,
         List<dynamic> encounter,
-        List<dynamic> event,
+        List<CodeableConcept> event,
         Period period,
         CodeableConcept facilityType,
         CodeableConcept practiceSetting,
@@ -9346,7 +9567,7 @@ abstract class DocumentReferenceContext implements Documents {
       {String id,
       List<dynamic> modifierExtension,
       List<dynamic> encounter,
-      List<dynamic> event,
+      List<CodeableConcept> event,
       Period period,
       CodeableConcept facilityType,
       CodeableConcept practiceSetting,
@@ -9360,7 +9581,7 @@ abstract class DocumentReferenceContext implements Documents {
   @override
   List<dynamic> get modifierExtension;
   List<dynamic> get encounter;
-  List<dynamic> get event;
+  List<CodeableConcept> get event;
   Period get period;
   CodeableConcept get facilityType;
   CodeableConcept get practiceSetting;

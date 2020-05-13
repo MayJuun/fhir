@@ -58,7 +58,7 @@ class _$ManagementTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -73,14 +73,14 @@ class _$ManagementTearOff {
       List<dynamic> contact,
       Markdown description,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown purpose,
       String usage,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -88,7 +88,7 @@ class _$ManagementTearOff {
       List<dynamic> relatedArtifact,
       List<dynamic> parameter,
       List<dynamic> dataRequirement,
-      List<dynamic> content}) {
+      List<Attachment> content}) {
     return Library(
       resourceType: resourceType,
       id: id,
@@ -144,7 +144,7 @@ class _$ManagementTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       ListStatus status,
       ListMode mode,
       String title,
@@ -154,7 +154,7 @@ class _$ManagementTearOff {
       FhirDateTime date,
       Reference source,
       CodeableConcept orderedBy,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> entry,
       CodeableConcept emptyReason}) {
     return Lists(
@@ -212,10 +212,10 @@ class _$ManagementTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       EpisodeOfCareStatus status,
       List<dynamic> statusHistory,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       List<dynamic> diagnosis,
       Reference patient,
       Reference managingOrganization,
@@ -291,12 +291,12 @@ class _$ManagementTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       EncounterStatus status,
       List<dynamic> statusHistory,
       @JsonKey(name: 'class') Coding clas,
       List<dynamic> classHistory,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       CodeableConcept serviceType,
       CodeableConcept priority,
       Reference subject,
@@ -306,7 +306,7 @@ class _$ManagementTearOff {
       List<dynamic> appointment,
       Period period,
       Duration length,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> diagnosis,
       List<dynamic> account,
@@ -384,7 +384,7 @@ class _$ManagementTearOff {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       Period period,
       Reference individual}) {
     return EncounterParticipant(
@@ -422,9 +422,9 @@ class _$ManagementTearOff {
       Reference origin,
       CodeableConcept admitSource,
       CodeableConcept reAdmission,
-      List<dynamic> dietPreference,
-      List<dynamic> specialCourtesy,
-      List<dynamic> specialArrangement,
+      List<CodeableConcept> dietPreference,
+      List<CodeableConcept> specialCourtesy,
+      List<CodeableConcept> specialArrangement,
       Reference destination,
       CodeableConcept dischargeDisposition}) {
     return EncounterHospitalization(
@@ -472,9 +472,9 @@ class _$ManagementTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       FlagStatus status,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
       Period period,
@@ -524,7 +524,7 @@ mixin _$Management {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -539,14 +539,14 @@ mixin _$Management {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -554,7 +554,7 @@ mixin _$Management {
             List<dynamic> relatedArtifact,
             List<dynamic> parameter,
             List<dynamic> dataRequirement,
-            List<dynamic> content),
+            List<Attachment> content),
     @required
         Result lists(
             String resourceType,
@@ -566,7 +566,7 @@ mixin _$Management {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -576,7 +576,7 @@ mixin _$Management {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
@@ -599,10 +599,10 @@ mixin _$Management {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
@@ -637,12 +637,12 @@ mixin _$Management {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             @JsonKey(name: 'class') Coding clas,
             List<dynamic> classHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
@@ -652,7 +652,7 @@ mixin _$Management {
             List<dynamic> appointment,
             Period period,
             Duration length,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> diagnosis,
             List<dynamic> account,
@@ -679,7 +679,7 @@ mixin _$Management {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Period period,
             Reference individual),
     @required
@@ -699,9 +699,9 @@ mixin _$Management {
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<dynamic> dietPreference,
-            List<dynamic> specialCourtesy,
-            List<dynamic> specialArrangement,
+            List<CodeableConcept> dietPreference,
+            List<CodeableConcept> specialCourtesy,
+            List<CodeableConcept> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
@@ -724,9 +724,9 @@ mixin _$Management {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FlagStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Period period,
@@ -746,7 +746,7 @@ mixin _$Management {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -761,14 +761,14 @@ mixin _$Management {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -776,7 +776,7 @@ mixin _$Management {
         List<dynamic> relatedArtifact,
         List<dynamic> parameter,
         List<dynamic> dataRequirement,
-        List<dynamic> content),
+        List<Attachment> content),
     Result lists(
         String resourceType,
         Id id,
@@ -787,7 +787,7 @@ mixin _$Management {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -797,7 +797,7 @@ mixin _$Management {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
@@ -818,10 +818,10 @@ mixin _$Management {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
@@ -853,12 +853,12 @@ mixin _$Management {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         @JsonKey(name: 'class') Coding clas,
         List<dynamic> classHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
@@ -868,7 +868,7 @@ mixin _$Management {
         List<dynamic> appointment,
         Period period,
         Duration length,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> diagnosis,
         List<dynamic> account,
@@ -892,7 +892,7 @@ mixin _$Management {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
@@ -910,9 +910,9 @@ mixin _$Management {
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<dynamic> dietPreference,
-        List<dynamic> specialCourtesy,
-        List<dynamic> specialArrangement,
+        List<CodeableConcept> dietPreference,
+        List<CodeableConcept> specialCourtesy,
+        List<CodeableConcept> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
@@ -933,9 +933,9 @@ mixin _$Management {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FlagStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Period period,
@@ -1030,7 +1030,7 @@ abstract class $LibraryCopyWith<$Res> implements $ManagementCopyWith<$Res> {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -1045,14 +1045,14 @@ abstract class $LibraryCopyWith<$Res> implements $ManagementCopyWith<$Res> {
       List<dynamic> contact,
       Markdown description,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown purpose,
       String usage,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -1060,7 +1060,11 @@ abstract class $LibraryCopyWith<$Res> implements $ManagementCopyWith<$Res> {
       List<dynamic> relatedArtifact,
       List<dynamic> parameter,
       List<dynamic> dataRequirement,
-      List<dynamic> content});
+      List<Attachment> content});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $CodeableConceptCopyWith<$Res> get subjectCodeableConcept;
+  $PeriodCopyWith<$Res> get effectivePeriod;
 }
 
 class _$LibraryCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
@@ -1137,7 +1141,7 @@ class _$LibraryCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as FhirUri,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
@@ -1162,7 +1166,7 @@ class _$LibraryCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
           : useContext as List<dynamic>,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<dynamic>,
+          : jurisdiction as List<CodeableConcept>,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown,
       usage: usage == freezed ? _value.usage : usage as String,
       copyright:
@@ -1175,7 +1179,7 @@ class _$LibraryCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
-      topic: topic == freezed ? _value.topic : topic as List<dynamic>,
+      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept>,
       author: author == freezed ? _value.author : author as List<dynamic>,
       editor: editor == freezed ? _value.editor : editor as List<dynamic>,
       reviewer:
@@ -1190,8 +1194,40 @@ class _$LibraryCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
       dataRequirement: dataRequirement == freezed
           ? _value.dataRequirement
           : dataRequirement as List<dynamic>,
-      content: content == freezed ? _value.content : content as List<dynamic>,
+      content:
+          content == freezed ? _value.content : content as List<Attachment>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get subjectCodeableConcept {
+    if (_value.subjectCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.subjectCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(subjectCodeableConcept: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get effectivePeriod {
+    if (_value.effectivePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
+      return _then(_value.copyWith(effectivePeriod: value));
+    });
   }
 }
 
@@ -1265,7 +1301,7 @@ class _$Library implements Library {
   @override
   final FhirUri url;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final String version;
   @override
@@ -1295,7 +1331,7 @@ class _$Library implements Library {
   @override
   final List<dynamic> useContext;
   @override
-  final List<dynamic> jurisdiction;
+  final List<CodeableConcept> jurisdiction;
   @override
   final Markdown purpose;
   @override
@@ -1309,7 +1345,7 @@ class _$Library implements Library {
   @override
   final Period effectivePeriod;
   @override
-  final List<dynamic> topic;
+  final List<CodeableConcept> topic;
   @override
   final List<dynamic> author;
   @override
@@ -1325,7 +1361,7 @@ class _$Library implements Library {
   @override
   final List<dynamic> dataRequirement;
   @override
-  final List<dynamic> content;
+  final List<Attachment> content;
 
   @override
   String toString() {
@@ -1485,7 +1521,7 @@ class _$Library implements Library {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -1500,14 +1536,14 @@ class _$Library implements Library {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -1515,7 +1551,7 @@ class _$Library implements Library {
             List<dynamic> relatedArtifact,
             List<dynamic> parameter,
             List<dynamic> dataRequirement,
-            List<dynamic> content),
+            List<Attachment> content),
     @required
         Result lists(
             String resourceType,
@@ -1527,7 +1563,7 @@ class _$Library implements Library {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -1537,7 +1573,7 @@ class _$Library implements Library {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
@@ -1560,10 +1596,10 @@ class _$Library implements Library {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
@@ -1598,12 +1634,12 @@ class _$Library implements Library {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             @JsonKey(name: 'class') Coding clas,
             List<dynamic> classHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
@@ -1613,7 +1649,7 @@ class _$Library implements Library {
             List<dynamic> appointment,
             Period period,
             Duration length,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> diagnosis,
             List<dynamic> account,
@@ -1640,7 +1676,7 @@ class _$Library implements Library {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Period period,
             Reference individual),
     @required
@@ -1660,9 +1696,9 @@ class _$Library implements Library {
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<dynamic> dietPreference,
-            List<dynamic> specialCourtesy,
-            List<dynamic> specialArrangement,
+            List<CodeableConcept> dietPreference,
+            List<CodeableConcept> specialCourtesy,
+            List<CodeableConcept> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
@@ -1685,9 +1721,9 @@ class _$Library implements Library {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FlagStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Period period,
@@ -1766,7 +1802,7 @@ class _$Library implements Library {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -1781,14 +1817,14 @@ class _$Library implements Library {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -1796,7 +1832,7 @@ class _$Library implements Library {
         List<dynamic> relatedArtifact,
         List<dynamic> parameter,
         List<dynamic> dataRequirement,
-        List<dynamic> content),
+        List<Attachment> content),
     Result lists(
         String resourceType,
         Id id,
@@ -1807,7 +1843,7 @@ class _$Library implements Library {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -1817,7 +1853,7 @@ class _$Library implements Library {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
@@ -1838,10 +1874,10 @@ class _$Library implements Library {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
@@ -1873,12 +1909,12 @@ class _$Library implements Library {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         @JsonKey(name: 'class') Coding clas,
         List<dynamic> classHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
@@ -1888,7 +1924,7 @@ class _$Library implements Library {
         List<dynamic> appointment,
         Period period,
         Duration length,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> diagnosis,
         List<dynamic> account,
@@ -1912,7 +1948,7 @@ class _$Library implements Library {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
@@ -1930,9 +1966,9 @@ class _$Library implements Library {
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<dynamic> dietPreference,
-        List<dynamic> specialCourtesy,
-        List<dynamic> specialArrangement,
+        List<CodeableConcept> dietPreference,
+        List<CodeableConcept> specialCourtesy,
+        List<CodeableConcept> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
@@ -1953,9 +1989,9 @@ class _$Library implements Library {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FlagStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Period period,
@@ -2091,7 +2127,7 @@ abstract class Library implements Management {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -2106,14 +2142,14 @@ abstract class Library implements Management {
       List<dynamic> contact,
       Markdown description,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown purpose,
       String usage,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -2121,7 +2157,7 @@ abstract class Library implements Management {
       List<dynamic> relatedArtifact,
       List<dynamic> parameter,
       List<dynamic> dataRequirement,
-      List<dynamic> content}) = _$Library;
+      List<Attachment> content}) = _$Library;
 
   factory Library.fromJson(Map<String, dynamic> json) = _$Library.fromJson;
 
@@ -2138,7 +2174,7 @@ abstract class Library implements Management {
   @override
   List<dynamic> get modifierExtension;
   FhirUri get url;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   String get version;
   String get name;
   String get title;
@@ -2153,14 +2189,14 @@ abstract class Library implements Management {
   List<dynamic> get contact;
   Markdown get description;
   List<dynamic> get useContext;
-  List<dynamic> get jurisdiction;
+  List<CodeableConcept> get jurisdiction;
   Markdown get purpose;
   String get usage;
   Markdown get copyright;
   Date get approvalDate;
   Date get lastReviewDate;
   Period get effectivePeriod;
-  List<dynamic> get topic;
+  List<CodeableConcept> get topic;
   List<dynamic> get author;
   List<dynamic> get editor;
   List<dynamic> get reviewer;
@@ -2168,7 +2204,7 @@ abstract class Library implements Management {
   List<dynamic> get relatedArtifact;
   List<dynamic> get parameter;
   List<dynamic> get dataRequirement;
-  List<dynamic> get content;
+  List<Attachment> get content;
   @override
   $LibraryCopyWith<Library> get copyWith;
 }
@@ -2187,7 +2223,7 @@ abstract class $ListsCopyWith<$Res> implements $ManagementCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       ListStatus status,
       ListMode mode,
       String title,
@@ -2197,9 +2233,13 @@ abstract class $ListsCopyWith<$Res> implements $ManagementCopyWith<$Res> {
       FhirDateTime date,
       Reference source,
       CodeableConcept orderedBy,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> entry,
       CodeableConcept emptyReason});
+
+  $CodeableConceptCopyWith<$Res> get code;
+  $CodeableConceptCopyWith<$Res> get orderedBy;
+  $CodeableConceptCopyWith<$Res> get emptyReason;
 }
 
 class _$ListsCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
@@ -2256,7 +2296,7 @@ class _$ListsCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as ListStatus,
       mode: mode == freezed ? _value.mode : mode as ListMode,
       title: title == freezed ? _value.title : title as String,
@@ -2269,12 +2309,42 @@ class _$ListsCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
       orderedBy: orderedBy == freezed
           ? _value.orderedBy
           : orderedBy as CodeableConcept,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
       entry: entry == freezed ? _value.entry : entry as List<dynamic>,
       emptyReason: emptyReason == freezed
           ? _value.emptyReason
           : emptyReason as CodeableConcept,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get orderedBy {
+    if (_value.orderedBy == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.orderedBy, (value) {
+      return _then(_value.copyWith(orderedBy: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get emptyReason {
+    if (_value.emptyReason == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.emptyReason, (value) {
+      return _then(_value.copyWith(emptyReason: value));
+    });
   }
 }
 
@@ -2327,7 +2397,7 @@ class _$Lists implements Lists {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final ListStatus status;
   @override
@@ -2347,7 +2417,7 @@ class _$Lists implements Lists {
   @override
   final CodeableConcept orderedBy;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
   @override
   final List<dynamic> entry;
   @override
@@ -2464,7 +2534,7 @@ class _$Lists implements Lists {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -2479,14 +2549,14 @@ class _$Lists implements Lists {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -2494,7 +2564,7 @@ class _$Lists implements Lists {
             List<dynamic> relatedArtifact,
             List<dynamic> parameter,
             List<dynamic> dataRequirement,
-            List<dynamic> content),
+            List<Attachment> content),
     @required
         Result lists(
             String resourceType,
@@ -2506,7 +2576,7 @@ class _$Lists implements Lists {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -2516,7 +2586,7 @@ class _$Lists implements Lists {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
@@ -2539,10 +2609,10 @@ class _$Lists implements Lists {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
@@ -2577,12 +2647,12 @@ class _$Lists implements Lists {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             @JsonKey(name: 'class') Coding clas,
             List<dynamic> classHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
@@ -2592,7 +2662,7 @@ class _$Lists implements Lists {
             List<dynamic> appointment,
             Period period,
             Duration length,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> diagnosis,
             List<dynamic> account,
@@ -2619,7 +2689,7 @@ class _$Lists implements Lists {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Period period,
             Reference individual),
     @required
@@ -2639,9 +2709,9 @@ class _$Lists implements Lists {
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<dynamic> dietPreference,
-            List<dynamic> specialCourtesy,
-            List<dynamic> specialArrangement,
+            List<CodeableConcept> dietPreference,
+            List<CodeableConcept> specialCourtesy,
+            List<CodeableConcept> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
@@ -2664,9 +2734,9 @@ class _$Lists implements Lists {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FlagStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Period period,
@@ -2726,7 +2796,7 @@ class _$Lists implements Lists {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -2741,14 +2811,14 @@ class _$Lists implements Lists {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -2756,7 +2826,7 @@ class _$Lists implements Lists {
         List<dynamic> relatedArtifact,
         List<dynamic> parameter,
         List<dynamic> dataRequirement,
-        List<dynamic> content),
+        List<Attachment> content),
     Result lists(
         String resourceType,
         Id id,
@@ -2767,7 +2837,7 @@ class _$Lists implements Lists {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -2777,7 +2847,7 @@ class _$Lists implements Lists {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
@@ -2798,10 +2868,10 @@ class _$Lists implements Lists {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
@@ -2833,12 +2903,12 @@ class _$Lists implements Lists {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         @JsonKey(name: 'class') Coding clas,
         List<dynamic> classHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
@@ -2848,7 +2918,7 @@ class _$Lists implements Lists {
         List<dynamic> appointment,
         Period period,
         Duration length,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> diagnosis,
         List<dynamic> account,
@@ -2872,7 +2942,7 @@ class _$Lists implements Lists {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
@@ -2890,9 +2960,9 @@ class _$Lists implements Lists {
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<dynamic> dietPreference,
-        List<dynamic> specialCourtesy,
-        List<dynamic> specialArrangement,
+        List<CodeableConcept> dietPreference,
+        List<CodeableConcept> specialCourtesy,
+        List<CodeableConcept> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
@@ -2913,9 +2983,9 @@ class _$Lists implements Lists {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FlagStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Period period,
@@ -3031,7 +3101,7 @@ abstract class Lists implements Management {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       ListStatus status,
       ListMode mode,
       String title,
@@ -3041,7 +3111,7 @@ abstract class Lists implements Management {
       FhirDateTime date,
       Reference source,
       CodeableConcept orderedBy,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> entry,
       CodeableConcept emptyReason}) = _$Lists;
 
@@ -3059,7 +3129,7 @@ abstract class Lists implements Management {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   ListStatus get status;
   ListMode get mode;
   String get title;
@@ -3069,7 +3139,7 @@ abstract class Lists implements Management {
   FhirDateTime get date;
   Reference get source;
   CodeableConcept get orderedBy;
-  List<dynamic> get note;
+  List<Annotation> get note;
   List<dynamic> get entry;
   CodeableConcept get emptyReason;
   @override
@@ -3088,6 +3158,8 @@ abstract class $ListEntryCopyWith<$Res> implements $ManagementCopyWith<$Res> {
       bool deleted,
       FhirDateTime date,
       Reference item});
+
+  $CodeableConceptCopyWith<$Res> get flag;
 }
 
 class _$ListEntryCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
@@ -3121,6 +3193,16 @@ class _$ListEntryCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
       date: date == freezed ? _value.date : date as FhirDateTime,
       item: item == freezed ? _value.item : item as Reference,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get flag {
+    if (_value.flag == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.flag, (value) {
+      return _then(_value.copyWith(flag: value));
+    });
   }
 }
 
@@ -3212,7 +3294,7 @@ class _$ListEntry implements ListEntry {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -3227,14 +3309,14 @@ class _$ListEntry implements ListEntry {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -3242,7 +3324,7 @@ class _$ListEntry implements ListEntry {
             List<dynamic> relatedArtifact,
             List<dynamic> parameter,
             List<dynamic> dataRequirement,
-            List<dynamic> content),
+            List<Attachment> content),
     @required
         Result lists(
             String resourceType,
@@ -3254,7 +3336,7 @@ class _$ListEntry implements ListEntry {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -3264,7 +3346,7 @@ class _$ListEntry implements ListEntry {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
@@ -3287,10 +3369,10 @@ class _$ListEntry implements ListEntry {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
@@ -3325,12 +3407,12 @@ class _$ListEntry implements ListEntry {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             @JsonKey(name: 'class') Coding clas,
             List<dynamic> classHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
@@ -3340,7 +3422,7 @@ class _$ListEntry implements ListEntry {
             List<dynamic> appointment,
             Period period,
             Duration length,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> diagnosis,
             List<dynamic> account,
@@ -3367,7 +3449,7 @@ class _$ListEntry implements ListEntry {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Period period,
             Reference individual),
     @required
@@ -3387,9 +3469,9 @@ class _$ListEntry implements ListEntry {
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<dynamic> dietPreference,
-            List<dynamic> specialCourtesy,
-            List<dynamic> specialArrangement,
+            List<CodeableConcept> dietPreference,
+            List<CodeableConcept> specialCourtesy,
+            List<CodeableConcept> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
@@ -3412,9 +3494,9 @@ class _$ListEntry implements ListEntry {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FlagStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Period period,
@@ -3453,7 +3535,7 @@ class _$ListEntry implements ListEntry {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -3468,14 +3550,14 @@ class _$ListEntry implements ListEntry {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -3483,7 +3565,7 @@ class _$ListEntry implements ListEntry {
         List<dynamic> relatedArtifact,
         List<dynamic> parameter,
         List<dynamic> dataRequirement,
-        List<dynamic> content),
+        List<Attachment> content),
     Result lists(
         String resourceType,
         Id id,
@@ -3494,7 +3576,7 @@ class _$ListEntry implements ListEntry {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -3504,7 +3586,7 @@ class _$ListEntry implements ListEntry {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
@@ -3525,10 +3607,10 @@ class _$ListEntry implements ListEntry {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
@@ -3560,12 +3642,12 @@ class _$ListEntry implements ListEntry {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         @JsonKey(name: 'class') Coding clas,
         List<dynamic> classHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
@@ -3575,7 +3657,7 @@ class _$ListEntry implements ListEntry {
         List<dynamic> appointment,
         Period period,
         Duration length,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> diagnosis,
         List<dynamic> account,
@@ -3599,7 +3681,7 @@ class _$ListEntry implements ListEntry {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
@@ -3617,9 +3699,9 @@ class _$ListEntry implements ListEntry {
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<dynamic> dietPreference,
-        List<dynamic> specialCourtesy,
-        List<dynamic> specialArrangement,
+        List<CodeableConcept> dietPreference,
+        List<CodeableConcept> specialCourtesy,
+        List<CodeableConcept> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
@@ -3640,9 +3722,9 @@ class _$ListEntry implements ListEntry {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FlagStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Period period,
@@ -3768,10 +3850,10 @@ abstract class $EpisodeOfCareCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       EpisodeOfCareStatus status,
       List<dynamic> statusHistory,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       List<dynamic> diagnosis,
       Reference patient,
       Reference managingOrganization,
@@ -3780,6 +3862,8 @@ abstract class $EpisodeOfCareCopyWith<$Res>
       Reference careManager,
       List<dynamic> team,
       List<dynamic> account});
+
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$EpisodeOfCareCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
@@ -3836,12 +3920,12 @@ class _$EpisodeOfCareCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as EpisodeOfCareStatus,
       statusHistory: statusHistory == freezed
           ? _value.statusHistory
           : statusHistory as List<dynamic>,
-      type: type == freezed ? _value.type : type as List<dynamic>,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>,
       diagnosis:
           diagnosis == freezed ? _value.diagnosis : diagnosis as List<dynamic>,
       patient: patient == freezed ? _value.patient : patient as Reference,
@@ -3858,6 +3942,16 @@ class _$EpisodeOfCareCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
       team: team == freezed ? _value.team : team as List<dynamic>,
       account: account == freezed ? _value.account : account as List<dynamic>,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
   }
 }
 
@@ -3909,13 +4003,13 @@ class _$EpisodeOfCare implements EpisodeOfCare {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final EpisodeOfCareStatus status;
   @override
   final List<dynamic> statusHistory;
   @override
-  final List<dynamic> type;
+  final List<CodeableConcept> type;
   @override
   final List<dynamic> diagnosis;
   @override
@@ -4043,7 +4137,7 @@ class _$EpisodeOfCare implements EpisodeOfCare {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -4058,14 +4152,14 @@ class _$EpisodeOfCare implements EpisodeOfCare {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -4073,7 +4167,7 @@ class _$EpisodeOfCare implements EpisodeOfCare {
             List<dynamic> relatedArtifact,
             List<dynamic> parameter,
             List<dynamic> dataRequirement,
-            List<dynamic> content),
+            List<Attachment> content),
     @required
         Result lists(
             String resourceType,
@@ -4085,7 +4179,7 @@ class _$EpisodeOfCare implements EpisodeOfCare {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -4095,7 +4189,7 @@ class _$EpisodeOfCare implements EpisodeOfCare {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
@@ -4118,10 +4212,10 @@ class _$EpisodeOfCare implements EpisodeOfCare {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
@@ -4156,12 +4250,12 @@ class _$EpisodeOfCare implements EpisodeOfCare {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             @JsonKey(name: 'class') Coding clas,
             List<dynamic> classHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
@@ -4171,7 +4265,7 @@ class _$EpisodeOfCare implements EpisodeOfCare {
             List<dynamic> appointment,
             Period period,
             Duration length,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> diagnosis,
             List<dynamic> account,
@@ -4198,7 +4292,7 @@ class _$EpisodeOfCare implements EpisodeOfCare {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Period period,
             Reference individual),
     @required
@@ -4218,9 +4312,9 @@ class _$EpisodeOfCare implements EpisodeOfCare {
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<dynamic> dietPreference,
-            List<dynamic> specialCourtesy,
-            List<dynamic> specialArrangement,
+            List<CodeableConcept> dietPreference,
+            List<CodeableConcept> specialCourtesy,
+            List<CodeableConcept> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
@@ -4243,9 +4337,9 @@ class _$EpisodeOfCare implements EpisodeOfCare {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FlagStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Period period,
@@ -4304,7 +4398,7 @@ class _$EpisodeOfCare implements EpisodeOfCare {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -4319,14 +4413,14 @@ class _$EpisodeOfCare implements EpisodeOfCare {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -4334,7 +4428,7 @@ class _$EpisodeOfCare implements EpisodeOfCare {
         List<dynamic> relatedArtifact,
         List<dynamic> parameter,
         List<dynamic> dataRequirement,
-        List<dynamic> content),
+        List<Attachment> content),
     Result lists(
         String resourceType,
         Id id,
@@ -4345,7 +4439,7 @@ class _$EpisodeOfCare implements EpisodeOfCare {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -4355,7 +4449,7 @@ class _$EpisodeOfCare implements EpisodeOfCare {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
@@ -4376,10 +4470,10 @@ class _$EpisodeOfCare implements EpisodeOfCare {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
@@ -4411,12 +4505,12 @@ class _$EpisodeOfCare implements EpisodeOfCare {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         @JsonKey(name: 'class') Coding clas,
         List<dynamic> classHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
@@ -4426,7 +4520,7 @@ class _$EpisodeOfCare implements EpisodeOfCare {
         List<dynamic> appointment,
         Period period,
         Duration length,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> diagnosis,
         List<dynamic> account,
@@ -4450,7 +4544,7 @@ class _$EpisodeOfCare implements EpisodeOfCare {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
@@ -4468,9 +4562,9 @@ class _$EpisodeOfCare implements EpisodeOfCare {
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<dynamic> dietPreference,
-        List<dynamic> specialCourtesy,
-        List<dynamic> specialArrangement,
+        List<CodeableConcept> dietPreference,
+        List<CodeableConcept> specialCourtesy,
+        List<CodeableConcept> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
@@ -4491,9 +4585,9 @@ class _$EpisodeOfCare implements EpisodeOfCare {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FlagStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Period period,
@@ -4608,10 +4702,10 @@ abstract class EpisodeOfCare implements Management {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       EpisodeOfCareStatus status,
       List<dynamic> statusHistory,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       List<dynamic> diagnosis,
       Reference patient,
       Reference managingOrganization,
@@ -4636,10 +4730,10 @@ abstract class EpisodeOfCare implements Management {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   EpisodeOfCareStatus get status;
   List<dynamic> get statusHistory;
-  List<dynamic> get type;
+  List<CodeableConcept> get type;
   List<dynamic> get diagnosis;
   Reference get patient;
   Reference get managingOrganization;
@@ -4664,6 +4758,8 @@ abstract class $EpisodeOfCareStatusHistoryCopyWith<$Res>
       List<dynamic> modifierExtension,
       EpisodeOfCareStatusHistoryStatus status,
       Period period});
+
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
@@ -4698,6 +4794,16 @@ class _$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
           : status as EpisodeOfCareStatusHistoryStatus,
       period: period == freezed ? _value.period : period as Period,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
   }
 }
 
@@ -4778,7 +4884,7 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -4793,14 +4899,14 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -4808,7 +4914,7 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
             List<dynamic> relatedArtifact,
             List<dynamic> parameter,
             List<dynamic> dataRequirement,
-            List<dynamic> content),
+            List<Attachment> content),
     @required
         Result lists(
             String resourceType,
@@ -4820,7 +4926,7 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -4830,7 +4936,7 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
@@ -4853,10 +4959,10 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
@@ -4891,12 +4997,12 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             @JsonKey(name: 'class') Coding clas,
             List<dynamic> classHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
@@ -4906,7 +5012,7 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
             List<dynamic> appointment,
             Period period,
             Duration length,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> diagnosis,
             List<dynamic> account,
@@ -4933,7 +5039,7 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Period period,
             Reference individual),
     @required
@@ -4953,9 +5059,9 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<dynamic> dietPreference,
-            List<dynamic> specialCourtesy,
-            List<dynamic> specialArrangement,
+            List<CodeableConcept> dietPreference,
+            List<CodeableConcept> specialCourtesy,
+            List<CodeableConcept> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
@@ -4978,9 +5084,9 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FlagStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Period period,
@@ -5019,7 +5125,7 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -5034,14 +5140,14 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -5049,7 +5155,7 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
         List<dynamic> relatedArtifact,
         List<dynamic> parameter,
         List<dynamic> dataRequirement,
-        List<dynamic> content),
+        List<Attachment> content),
     Result lists(
         String resourceType,
         Id id,
@@ -5060,7 +5166,7 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -5070,7 +5176,7 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
@@ -5091,10 +5197,10 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
@@ -5126,12 +5232,12 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         @JsonKey(name: 'class') Coding clas,
         List<dynamic> classHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
@@ -5141,7 +5247,7 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
         List<dynamic> appointment,
         Period period,
         Duration length,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> diagnosis,
         List<dynamic> account,
@@ -5165,7 +5271,7 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
@@ -5183,9 +5289,9 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<dynamic> dietPreference,
-        List<dynamic> specialCourtesy,
-        List<dynamic> specialArrangement,
+        List<CodeableConcept> dietPreference,
+        List<CodeableConcept> specialCourtesy,
+        List<CodeableConcept> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
@@ -5206,9 +5312,9 @@ class _$EpisodeOfCareStatusHistory implements EpisodeOfCareStatusHistory {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FlagStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Period period,
@@ -5329,6 +5435,8 @@ abstract class $EpisodeOfCareDiagnosisCopyWith<$Res>
       Reference condition,
       CodeableConcept role,
       int rank});
+
+  $CodeableConceptCopyWith<$Res> get role;
 }
 
 class _$EpisodeOfCareDiagnosisCopyWithImpl<$Res>
@@ -5363,6 +5471,16 @@ class _$EpisodeOfCareDiagnosisCopyWithImpl<$Res>
       role: role == freezed ? _value.role : role as CodeableConcept,
       rank: rank == freezed ? _value.rank : rank as int,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get role {
+    if (_value.role == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
+      return _then(_value.copyWith(role: value));
+    });
   }
 }
 
@@ -5449,7 +5567,7 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -5464,14 +5582,14 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -5479,7 +5597,7 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
             List<dynamic> relatedArtifact,
             List<dynamic> parameter,
             List<dynamic> dataRequirement,
-            List<dynamic> content),
+            List<Attachment> content),
     @required
         Result lists(
             String resourceType,
@@ -5491,7 +5609,7 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -5501,7 +5619,7 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
@@ -5524,10 +5642,10 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
@@ -5562,12 +5680,12 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             @JsonKey(name: 'class') Coding clas,
             List<dynamic> classHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
@@ -5577,7 +5695,7 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
             List<dynamic> appointment,
             Period period,
             Duration length,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> diagnosis,
             List<dynamic> account,
@@ -5604,7 +5722,7 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Period period,
             Reference individual),
     @required
@@ -5624,9 +5742,9 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<dynamic> dietPreference,
-            List<dynamic> specialCourtesy,
-            List<dynamic> specialArrangement,
+            List<CodeableConcept> dietPreference,
+            List<CodeableConcept> specialCourtesy,
+            List<CodeableConcept> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
@@ -5649,9 +5767,9 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FlagStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Period period,
@@ -5690,7 +5808,7 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -5705,14 +5823,14 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -5720,7 +5838,7 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
         List<dynamic> relatedArtifact,
         List<dynamic> parameter,
         List<dynamic> dataRequirement,
-        List<dynamic> content),
+        List<Attachment> content),
     Result lists(
         String resourceType,
         Id id,
@@ -5731,7 +5849,7 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -5741,7 +5859,7 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
@@ -5762,10 +5880,10 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
@@ -5797,12 +5915,12 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         @JsonKey(name: 'class') Coding clas,
         List<dynamic> classHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
@@ -5812,7 +5930,7 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
         List<dynamic> appointment,
         Period period,
         Duration length,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> diagnosis,
         List<dynamic> account,
@@ -5836,7 +5954,7 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
@@ -5854,9 +5972,9 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<dynamic> dietPreference,
-        List<dynamic> specialCourtesy,
-        List<dynamic> specialArrangement,
+        List<CodeableConcept> dietPreference,
+        List<CodeableConcept> specialCourtesy,
+        List<CodeableConcept> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
@@ -5877,9 +5995,9 @@ class _$EpisodeOfCareDiagnosis implements EpisodeOfCareDiagnosis {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FlagStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Period period,
@@ -6003,12 +6121,12 @@ abstract class $EncounterCopyWith<$Res> implements $ManagementCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       EncounterStatus status,
       List<dynamic> statusHistory,
       @JsonKey(name: 'class') Coding clas,
       List<dynamic> classHistory,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       CodeableConcept serviceType,
       CodeableConcept priority,
       Reference subject,
@@ -6018,7 +6136,7 @@ abstract class $EncounterCopyWith<$Res> implements $ManagementCopyWith<$Res> {
       List<dynamic> appointment,
       Period period,
       Duration length,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> diagnosis,
       List<dynamic> account,
@@ -6026,6 +6144,12 @@ abstract class $EncounterCopyWith<$Res> implements $ManagementCopyWith<$Res> {
       List<dynamic> location,
       Reference serviceProvider,
       Reference partOf});
+
+  $CodingCopyWith<$Res> get clas;
+  $CodeableConceptCopyWith<$Res> get serviceType;
+  $CodeableConceptCopyWith<$Res> get priority;
+  $PeriodCopyWith<$Res> get period;
+  $DurationCopyWith<$Res> get length;
 }
 
 class _$EncounterCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
@@ -6092,7 +6216,7 @@ class _$EncounterCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as EncounterStatus,
       statusHistory: statusHistory == freezed
           ? _value.statusHistory
@@ -6101,7 +6225,7 @@ class _$EncounterCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
       classHistory: classHistory == freezed
           ? _value.classHistory
           : classHistory as List<dynamic>,
-      type: type == freezed ? _value.type : type as List<dynamic>,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>,
       serviceType: serviceType == freezed
           ? _value.serviceType
           : serviceType as CodeableConcept,
@@ -6122,7 +6246,7 @@ class _$EncounterCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
       length: length == freezed ? _value.length : length as Duration,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<dynamic>,
+          : reasonCode as List<CodeableConcept>,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
           : reasonReference as List<dynamic>,
@@ -6139,6 +6263,56 @@ class _$EncounterCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
           : serviceProvider as Reference,
       partOf: partOf == freezed ? _value.partOf : partOf as Reference,
     ));
+  }
+
+  @override
+  $CodingCopyWith<$Res> get clas {
+    if (_value.clas == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.clas, (value) {
+      return _then(_value.copyWith(clas: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get serviceType {
+    if (_value.serviceType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.serviceType, (value) {
+      return _then(_value.copyWith(serviceType: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get priority {
+    if (_value.priority == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.priority, (value) {
+      return _then(_value.copyWith(priority: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get length {
+    if (_value.length == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.length, (value) {
+      return _then(_value.copyWith(length: value));
+    });
   }
 }
 
@@ -6201,7 +6375,7 @@ class _$Encounter implements Encounter {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final EncounterStatus status;
   @override
@@ -6212,7 +6386,7 @@ class _$Encounter implements Encounter {
   @override
   final List<dynamic> classHistory;
   @override
-  final List<dynamic> type;
+  final List<CodeableConcept> type;
   @override
   final CodeableConcept serviceType;
   @override
@@ -6232,7 +6406,7 @@ class _$Encounter implements Encounter {
   @override
   final Duration length;
   @override
-  final List<dynamic> reasonCode;
+  final List<CodeableConcept> reasonCode;
   @override
   final List<dynamic> reasonReference;
   @override
@@ -6389,7 +6563,7 @@ class _$Encounter implements Encounter {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -6404,14 +6578,14 @@ class _$Encounter implements Encounter {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -6419,7 +6593,7 @@ class _$Encounter implements Encounter {
             List<dynamic> relatedArtifact,
             List<dynamic> parameter,
             List<dynamic> dataRequirement,
-            List<dynamic> content),
+            List<Attachment> content),
     @required
         Result lists(
             String resourceType,
@@ -6431,7 +6605,7 @@ class _$Encounter implements Encounter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -6441,7 +6615,7 @@ class _$Encounter implements Encounter {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
@@ -6464,10 +6638,10 @@ class _$Encounter implements Encounter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
@@ -6502,12 +6676,12 @@ class _$Encounter implements Encounter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             @JsonKey(name: 'class') Coding clas,
             List<dynamic> classHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
@@ -6517,7 +6691,7 @@ class _$Encounter implements Encounter {
             List<dynamic> appointment,
             Period period,
             Duration length,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> diagnosis,
             List<dynamic> account,
@@ -6544,7 +6718,7 @@ class _$Encounter implements Encounter {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Period period,
             Reference individual),
     @required
@@ -6564,9 +6738,9 @@ class _$Encounter implements Encounter {
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<dynamic> dietPreference,
-            List<dynamic> specialCourtesy,
-            List<dynamic> specialArrangement,
+            List<CodeableConcept> dietPreference,
+            List<CodeableConcept> specialCourtesy,
+            List<CodeableConcept> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
@@ -6589,9 +6763,9 @@ class _$Encounter implements Encounter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FlagStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Period period,
@@ -6661,7 +6835,7 @@ class _$Encounter implements Encounter {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -6676,14 +6850,14 @@ class _$Encounter implements Encounter {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -6691,7 +6865,7 @@ class _$Encounter implements Encounter {
         List<dynamic> relatedArtifact,
         List<dynamic> parameter,
         List<dynamic> dataRequirement,
-        List<dynamic> content),
+        List<Attachment> content),
     Result lists(
         String resourceType,
         Id id,
@@ -6702,7 +6876,7 @@ class _$Encounter implements Encounter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -6712,7 +6886,7 @@ class _$Encounter implements Encounter {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
@@ -6733,10 +6907,10 @@ class _$Encounter implements Encounter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
@@ -6768,12 +6942,12 @@ class _$Encounter implements Encounter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         @JsonKey(name: 'class') Coding clas,
         List<dynamic> classHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
@@ -6783,7 +6957,7 @@ class _$Encounter implements Encounter {
         List<dynamic> appointment,
         Period period,
         Duration length,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> diagnosis,
         List<dynamic> account,
@@ -6807,7 +6981,7 @@ class _$Encounter implements Encounter {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
@@ -6825,9 +6999,9 @@ class _$Encounter implements Encounter {
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<dynamic> dietPreference,
-        List<dynamic> specialCourtesy,
-        List<dynamic> specialArrangement,
+        List<CodeableConcept> dietPreference,
+        List<CodeableConcept> specialCourtesy,
+        List<CodeableConcept> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
@@ -6848,9 +7022,9 @@ class _$Encounter implements Encounter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FlagStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Period period,
@@ -6976,12 +7150,12 @@ abstract class Encounter implements Management {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       EncounterStatus status,
       List<dynamic> statusHistory,
       @JsonKey(name: 'class') Coding clas,
       List<dynamic> classHistory,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       CodeableConcept serviceType,
       CodeableConcept priority,
       Reference subject,
@@ -6991,7 +7165,7 @@ abstract class Encounter implements Management {
       List<dynamic> appointment,
       Period period,
       Duration length,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> diagnosis,
       List<dynamic> account,
@@ -7014,13 +7188,13 @@ abstract class Encounter implements Management {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   EncounterStatus get status;
   List<dynamic> get statusHistory;
   @JsonKey(name: 'class')
   Coding get clas;
   List<dynamic> get classHistory;
-  List<dynamic> get type;
+  List<CodeableConcept> get type;
   CodeableConcept get serviceType;
   CodeableConcept get priority;
   Reference get subject;
@@ -7030,7 +7204,7 @@ abstract class Encounter implements Management {
   List<dynamic> get appointment;
   Period get period;
   Duration get length;
-  List<dynamic> get reasonCode;
+  List<CodeableConcept> get reasonCode;
   List<dynamic> get reasonReference;
   List<dynamic> get diagnosis;
   List<dynamic> get account;
@@ -7054,6 +7228,8 @@ abstract class $EncounterStatusHistoryCopyWith<$Res>
       List<dynamic> modifierExtension,
       EncounterStatusHistoryStatus status,
       Period period});
+
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$EncounterStatusHistoryCopyWithImpl<$Res>
@@ -7087,6 +7263,16 @@ class _$EncounterStatusHistoryCopyWithImpl<$Res>
           : status as EncounterStatusHistoryStatus,
       period: period == freezed ? _value.period : period as Period,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
   }
 }
 
@@ -7166,7 +7352,7 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -7181,14 +7367,14 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -7196,7 +7382,7 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
             List<dynamic> relatedArtifact,
             List<dynamic> parameter,
             List<dynamic> dataRequirement,
-            List<dynamic> content),
+            List<Attachment> content),
     @required
         Result lists(
             String resourceType,
@@ -7208,7 +7394,7 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -7218,7 +7404,7 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
@@ -7241,10 +7427,10 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
@@ -7279,12 +7465,12 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             @JsonKey(name: 'class') Coding clas,
             List<dynamic> classHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
@@ -7294,7 +7480,7 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
             List<dynamic> appointment,
             Period period,
             Duration length,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> diagnosis,
             List<dynamic> account,
@@ -7321,7 +7507,7 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Period period,
             Reference individual),
     @required
@@ -7341,9 +7527,9 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<dynamic> dietPreference,
-            List<dynamic> specialCourtesy,
-            List<dynamic> specialArrangement,
+            List<CodeableConcept> dietPreference,
+            List<CodeableConcept> specialCourtesy,
+            List<CodeableConcept> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
@@ -7366,9 +7552,9 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FlagStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Period period,
@@ -7407,7 +7593,7 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -7422,14 +7608,14 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -7437,7 +7623,7 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
         List<dynamic> relatedArtifact,
         List<dynamic> parameter,
         List<dynamic> dataRequirement,
-        List<dynamic> content),
+        List<Attachment> content),
     Result lists(
         String resourceType,
         Id id,
@@ -7448,7 +7634,7 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -7458,7 +7644,7 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
@@ -7479,10 +7665,10 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
@@ -7514,12 +7700,12 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         @JsonKey(name: 'class') Coding clas,
         List<dynamic> classHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
@@ -7529,7 +7715,7 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
         List<dynamic> appointment,
         Period period,
         Duration length,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> diagnosis,
         List<dynamic> account,
@@ -7553,7 +7739,7 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
@@ -7571,9 +7757,9 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<dynamic> dietPreference,
-        List<dynamic> specialCourtesy,
-        List<dynamic> specialArrangement,
+        List<CodeableConcept> dietPreference,
+        List<CodeableConcept> specialCourtesy,
+        List<CodeableConcept> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
@@ -7594,9 +7780,9 @@ class _$EncounterStatusHistory implements EncounterStatusHistory {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FlagStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Period period,
@@ -7716,6 +7902,9 @@ abstract class $EncounterClassHistoryCopyWith<$Res>
       List<dynamic> modifierExtension,
       @JsonKey(name: 'class') Coding clas,
       Period period});
+
+  $CodingCopyWith<$Res> get clas;
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$EncounterClassHistoryCopyWithImpl<$Res>
@@ -7747,6 +7936,26 @@ class _$EncounterClassHistoryCopyWithImpl<$Res>
       clas: clas == freezed ? _value.clas : clas as Coding,
       period: period == freezed ? _value.period : period as Period,
     ));
+  }
+
+  @override
+  $CodingCopyWith<$Res> get clas {
+    if (_value.clas == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.clas, (value) {
+      return _then(_value.copyWith(clas: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
   }
 }
 
@@ -7827,7 +8036,7 @@ class _$EncounterClassHistory implements EncounterClassHistory {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -7842,14 +8051,14 @@ class _$EncounterClassHistory implements EncounterClassHistory {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -7857,7 +8066,7 @@ class _$EncounterClassHistory implements EncounterClassHistory {
             List<dynamic> relatedArtifact,
             List<dynamic> parameter,
             List<dynamic> dataRequirement,
-            List<dynamic> content),
+            List<Attachment> content),
     @required
         Result lists(
             String resourceType,
@@ -7869,7 +8078,7 @@ class _$EncounterClassHistory implements EncounterClassHistory {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -7879,7 +8088,7 @@ class _$EncounterClassHistory implements EncounterClassHistory {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
@@ -7902,10 +8111,10 @@ class _$EncounterClassHistory implements EncounterClassHistory {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
@@ -7940,12 +8149,12 @@ class _$EncounterClassHistory implements EncounterClassHistory {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             @JsonKey(name: 'class') Coding clas,
             List<dynamic> classHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
@@ -7955,7 +8164,7 @@ class _$EncounterClassHistory implements EncounterClassHistory {
             List<dynamic> appointment,
             Period period,
             Duration length,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> diagnosis,
             List<dynamic> account,
@@ -7982,7 +8191,7 @@ class _$EncounterClassHistory implements EncounterClassHistory {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Period period,
             Reference individual),
     @required
@@ -8002,9 +8211,9 @@ class _$EncounterClassHistory implements EncounterClassHistory {
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<dynamic> dietPreference,
-            List<dynamic> specialCourtesy,
-            List<dynamic> specialArrangement,
+            List<CodeableConcept> dietPreference,
+            List<CodeableConcept> specialCourtesy,
+            List<CodeableConcept> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
@@ -8027,9 +8236,9 @@ class _$EncounterClassHistory implements EncounterClassHistory {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FlagStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Period period,
@@ -8068,7 +8277,7 @@ class _$EncounterClassHistory implements EncounterClassHistory {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -8083,14 +8292,14 @@ class _$EncounterClassHistory implements EncounterClassHistory {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -8098,7 +8307,7 @@ class _$EncounterClassHistory implements EncounterClassHistory {
         List<dynamic> relatedArtifact,
         List<dynamic> parameter,
         List<dynamic> dataRequirement,
-        List<dynamic> content),
+        List<Attachment> content),
     Result lists(
         String resourceType,
         Id id,
@@ -8109,7 +8318,7 @@ class _$EncounterClassHistory implements EncounterClassHistory {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -8119,7 +8328,7 @@ class _$EncounterClassHistory implements EncounterClassHistory {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
@@ -8140,10 +8349,10 @@ class _$EncounterClassHistory implements EncounterClassHistory {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
@@ -8175,12 +8384,12 @@ class _$EncounterClassHistory implements EncounterClassHistory {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         @JsonKey(name: 'class') Coding clas,
         List<dynamic> classHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
@@ -8190,7 +8399,7 @@ class _$EncounterClassHistory implements EncounterClassHistory {
         List<dynamic> appointment,
         Period period,
         Duration length,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> diagnosis,
         List<dynamic> account,
@@ -8214,7 +8423,7 @@ class _$EncounterClassHistory implements EncounterClassHistory {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
@@ -8232,9 +8441,9 @@ class _$EncounterClassHistory implements EncounterClassHistory {
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<dynamic> dietPreference,
-        List<dynamic> specialCourtesy,
-        List<dynamic> specialArrangement,
+        List<CodeableConcept> dietPreference,
+        List<CodeableConcept> specialCourtesy,
+        List<CodeableConcept> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
@@ -8255,9 +8464,9 @@ class _$EncounterClassHistory implements EncounterClassHistory {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FlagStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Period period,
@@ -8376,9 +8585,11 @@ abstract class $EncounterParticipantCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       Period period,
       Reference individual});
+
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$EncounterParticipantCopyWithImpl<$Res>
@@ -8408,11 +8619,21 @@ class _$EncounterParticipantCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
-      type: type == freezed ? _value.type : type as List<dynamic>,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>,
       period: period == freezed ? _value.period : period as Period,
       individual:
           individual == freezed ? _value.individual : individual as Reference,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
   }
 }
 
@@ -8437,7 +8658,7 @@ class _$EncounterParticipant implements EncounterParticipant {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> type;
+  final List<CodeableConcept> type;
   @override
   final Period period;
   @override
@@ -8499,7 +8720,7 @@ class _$EncounterParticipant implements EncounterParticipant {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -8514,14 +8735,14 @@ class _$EncounterParticipant implements EncounterParticipant {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -8529,7 +8750,7 @@ class _$EncounterParticipant implements EncounterParticipant {
             List<dynamic> relatedArtifact,
             List<dynamic> parameter,
             List<dynamic> dataRequirement,
-            List<dynamic> content),
+            List<Attachment> content),
     @required
         Result lists(
             String resourceType,
@@ -8541,7 +8762,7 @@ class _$EncounterParticipant implements EncounterParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -8551,7 +8772,7 @@ class _$EncounterParticipant implements EncounterParticipant {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
@@ -8574,10 +8795,10 @@ class _$EncounterParticipant implements EncounterParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
@@ -8612,12 +8833,12 @@ class _$EncounterParticipant implements EncounterParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             @JsonKey(name: 'class') Coding clas,
             List<dynamic> classHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
@@ -8627,7 +8848,7 @@ class _$EncounterParticipant implements EncounterParticipant {
             List<dynamic> appointment,
             Period period,
             Duration length,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> diagnosis,
             List<dynamic> account,
@@ -8654,7 +8875,7 @@ class _$EncounterParticipant implements EncounterParticipant {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Period period,
             Reference individual),
     @required
@@ -8674,9 +8895,9 @@ class _$EncounterParticipant implements EncounterParticipant {
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<dynamic> dietPreference,
-            List<dynamic> specialCourtesy,
-            List<dynamic> specialArrangement,
+            List<CodeableConcept> dietPreference,
+            List<CodeableConcept> specialCourtesy,
+            List<CodeableConcept> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
@@ -8699,9 +8920,9 @@ class _$EncounterParticipant implements EncounterParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FlagStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Period period,
@@ -8740,7 +8961,7 @@ class _$EncounterParticipant implements EncounterParticipant {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -8755,14 +8976,14 @@ class _$EncounterParticipant implements EncounterParticipant {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -8770,7 +8991,7 @@ class _$EncounterParticipant implements EncounterParticipant {
         List<dynamic> relatedArtifact,
         List<dynamic> parameter,
         List<dynamic> dataRequirement,
-        List<dynamic> content),
+        List<Attachment> content),
     Result lists(
         String resourceType,
         Id id,
@@ -8781,7 +9002,7 @@ class _$EncounterParticipant implements EncounterParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -8791,7 +9012,7 @@ class _$EncounterParticipant implements EncounterParticipant {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
@@ -8812,10 +9033,10 @@ class _$EncounterParticipant implements EncounterParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
@@ -8847,12 +9068,12 @@ class _$EncounterParticipant implements EncounterParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         @JsonKey(name: 'class') Coding clas,
         List<dynamic> classHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
@@ -8862,7 +9083,7 @@ class _$EncounterParticipant implements EncounterParticipant {
         List<dynamic> appointment,
         Period period,
         Duration length,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> diagnosis,
         List<dynamic> account,
@@ -8886,7 +9107,7 @@ class _$EncounterParticipant implements EncounterParticipant {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
@@ -8904,9 +9125,9 @@ class _$EncounterParticipant implements EncounterParticipant {
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<dynamic> dietPreference,
-        List<dynamic> specialCourtesy,
-        List<dynamic> specialArrangement,
+        List<CodeableConcept> dietPreference,
+        List<CodeableConcept> specialCourtesy,
+        List<CodeableConcept> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
@@ -8927,9 +9148,9 @@ class _$EncounterParticipant implements EncounterParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FlagStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Period period,
@@ -9019,7 +9240,7 @@ abstract class EncounterParticipant implements Management {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       Period period,
       Reference individual}) = _$EncounterParticipant;
 
@@ -9032,7 +9253,7 @@ abstract class EncounterParticipant implements Management {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get type;
+  List<CodeableConcept> get type;
   Period get period;
   Reference get individual;
   @override
@@ -9052,6 +9273,8 @@ abstract class $EncounterDiagnosisCopyWith<$Res>
       Reference condition,
       CodeableConcept use,
       int rank});
+
+  $CodeableConceptCopyWith<$Res> get use;
 }
 
 class _$EncounterDiagnosisCopyWithImpl<$Res>
@@ -9086,6 +9309,16 @@ class _$EncounterDiagnosisCopyWithImpl<$Res>
       use: use == freezed ? _value.use : use as CodeableConcept,
       rank: rank == freezed ? _value.rank : rank as int,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get use {
+    if (_value.use == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.use, (value) {
+      return _then(_value.copyWith(use: value));
+    });
   }
 }
 
@@ -9171,7 +9404,7 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -9186,14 +9419,14 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -9201,7 +9434,7 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
             List<dynamic> relatedArtifact,
             List<dynamic> parameter,
             List<dynamic> dataRequirement,
-            List<dynamic> content),
+            List<Attachment> content),
     @required
         Result lists(
             String resourceType,
@@ -9213,7 +9446,7 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -9223,7 +9456,7 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
@@ -9246,10 +9479,10 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
@@ -9284,12 +9517,12 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             @JsonKey(name: 'class') Coding clas,
             List<dynamic> classHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
@@ -9299,7 +9532,7 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
             List<dynamic> appointment,
             Period period,
             Duration length,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> diagnosis,
             List<dynamic> account,
@@ -9326,7 +9559,7 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Period period,
             Reference individual),
     @required
@@ -9346,9 +9579,9 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<dynamic> dietPreference,
-            List<dynamic> specialCourtesy,
-            List<dynamic> specialArrangement,
+            List<CodeableConcept> dietPreference,
+            List<CodeableConcept> specialCourtesy,
+            List<CodeableConcept> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
@@ -9371,9 +9604,9 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FlagStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Period period,
@@ -9412,7 +9645,7 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -9427,14 +9660,14 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -9442,7 +9675,7 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
         List<dynamic> relatedArtifact,
         List<dynamic> parameter,
         List<dynamic> dataRequirement,
-        List<dynamic> content),
+        List<Attachment> content),
     Result lists(
         String resourceType,
         Id id,
@@ -9453,7 +9686,7 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -9463,7 +9696,7 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
@@ -9484,10 +9717,10 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
@@ -9519,12 +9752,12 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         @JsonKey(name: 'class') Coding clas,
         List<dynamic> classHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
@@ -9534,7 +9767,7 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
         List<dynamic> appointment,
         Period period,
         Duration length,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> diagnosis,
         List<dynamic> account,
@@ -9558,7 +9791,7 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
@@ -9576,9 +9809,9 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<dynamic> dietPreference,
-        List<dynamic> specialCourtesy,
-        List<dynamic> specialArrangement,
+        List<CodeableConcept> dietPreference,
+        List<CodeableConcept> specialCourtesy,
+        List<CodeableConcept> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
@@ -9599,9 +9832,9 @@ class _$EncounterDiagnosis implements EncounterDiagnosis {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FlagStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Period period,
@@ -9725,11 +9958,16 @@ abstract class $EncounterHospitalizationCopyWith<$Res>
       Reference origin,
       CodeableConcept admitSource,
       CodeableConcept reAdmission,
-      List<dynamic> dietPreference,
-      List<dynamic> specialCourtesy,
-      List<dynamic> specialArrangement,
+      List<CodeableConcept> dietPreference,
+      List<CodeableConcept> specialCourtesy,
+      List<CodeableConcept> specialArrangement,
       Reference destination,
       CodeableConcept dischargeDisposition});
+
+  $IdentifierCopyWith<$Res> get preAdmissionIdentifier;
+  $CodeableConceptCopyWith<$Res> get admitSource;
+  $CodeableConceptCopyWith<$Res> get reAdmission;
+  $CodeableConceptCopyWith<$Res> get dischargeDisposition;
 }
 
 class _$EncounterHospitalizationCopyWithImpl<$Res>
@@ -9778,13 +10016,13 @@ class _$EncounterHospitalizationCopyWithImpl<$Res>
           : reAdmission as CodeableConcept,
       dietPreference: dietPreference == freezed
           ? _value.dietPreference
-          : dietPreference as List<dynamic>,
+          : dietPreference as List<CodeableConcept>,
       specialCourtesy: specialCourtesy == freezed
           ? _value.specialCourtesy
-          : specialCourtesy as List<dynamic>,
+          : specialCourtesy as List<CodeableConcept>,
       specialArrangement: specialArrangement == freezed
           ? _value.specialArrangement
-          : specialArrangement as List<dynamic>,
+          : specialArrangement as List<CodeableConcept>,
       destination: destination == freezed
           ? _value.destination
           : destination as Reference,
@@ -9792,6 +10030,46 @@ class _$EncounterHospitalizationCopyWithImpl<$Res>
           ? _value.dischargeDisposition
           : dischargeDisposition as CodeableConcept,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get preAdmissionIdentifier {
+    if (_value.preAdmissionIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.preAdmissionIdentifier, (value) {
+      return _then(_value.copyWith(preAdmissionIdentifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get admitSource {
+    if (_value.admitSource == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.admitSource, (value) {
+      return _then(_value.copyWith(admitSource: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get reAdmission {
+    if (_value.reAdmission == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.reAdmission, (value) {
+      return _then(_value.copyWith(reAdmission: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get dischargeDisposition {
+    if (_value.dischargeDisposition == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.dischargeDisposition, (value) {
+      return _then(_value.copyWith(dischargeDisposition: value));
+    });
   }
 }
 
@@ -9830,11 +10108,11 @@ class _$EncounterHospitalization implements EncounterHospitalization {
   @override
   final CodeableConcept reAdmission;
   @override
-  final List<dynamic> dietPreference;
+  final List<CodeableConcept> dietPreference;
   @override
-  final List<dynamic> specialCourtesy;
+  final List<CodeableConcept> specialCourtesy;
   @override
-  final List<dynamic> specialArrangement;
+  final List<CodeableConcept> specialArrangement;
   @override
   final Reference destination;
   @override
@@ -9921,7 +10199,7 @@ class _$EncounterHospitalization implements EncounterHospitalization {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -9936,14 +10214,14 @@ class _$EncounterHospitalization implements EncounterHospitalization {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -9951,7 +10229,7 @@ class _$EncounterHospitalization implements EncounterHospitalization {
             List<dynamic> relatedArtifact,
             List<dynamic> parameter,
             List<dynamic> dataRequirement,
-            List<dynamic> content),
+            List<Attachment> content),
     @required
         Result lists(
             String resourceType,
@@ -9963,7 +10241,7 @@ class _$EncounterHospitalization implements EncounterHospitalization {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -9973,7 +10251,7 @@ class _$EncounterHospitalization implements EncounterHospitalization {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
@@ -9996,10 +10274,10 @@ class _$EncounterHospitalization implements EncounterHospitalization {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
@@ -10034,12 +10312,12 @@ class _$EncounterHospitalization implements EncounterHospitalization {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             @JsonKey(name: 'class') Coding clas,
             List<dynamic> classHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
@@ -10049,7 +10327,7 @@ class _$EncounterHospitalization implements EncounterHospitalization {
             List<dynamic> appointment,
             Period period,
             Duration length,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> diagnosis,
             List<dynamic> account,
@@ -10076,7 +10354,7 @@ class _$EncounterHospitalization implements EncounterHospitalization {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Period period,
             Reference individual),
     @required
@@ -10096,9 +10374,9 @@ class _$EncounterHospitalization implements EncounterHospitalization {
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<dynamic> dietPreference,
-            List<dynamic> specialCourtesy,
-            List<dynamic> specialArrangement,
+            List<CodeableConcept> dietPreference,
+            List<CodeableConcept> specialCourtesy,
+            List<CodeableConcept> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
@@ -10121,9 +10399,9 @@ class _$EncounterHospitalization implements EncounterHospitalization {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FlagStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Period period,
@@ -10173,7 +10451,7 @@ class _$EncounterHospitalization implements EncounterHospitalization {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -10188,14 +10466,14 @@ class _$EncounterHospitalization implements EncounterHospitalization {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -10203,7 +10481,7 @@ class _$EncounterHospitalization implements EncounterHospitalization {
         List<dynamic> relatedArtifact,
         List<dynamic> parameter,
         List<dynamic> dataRequirement,
-        List<dynamic> content),
+        List<Attachment> content),
     Result lists(
         String resourceType,
         Id id,
@@ -10214,7 +10492,7 @@ class _$EncounterHospitalization implements EncounterHospitalization {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -10224,7 +10502,7 @@ class _$EncounterHospitalization implements EncounterHospitalization {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
@@ -10245,10 +10523,10 @@ class _$EncounterHospitalization implements EncounterHospitalization {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
@@ -10280,12 +10558,12 @@ class _$EncounterHospitalization implements EncounterHospitalization {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         @JsonKey(name: 'class') Coding clas,
         List<dynamic> classHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
@@ -10295,7 +10573,7 @@ class _$EncounterHospitalization implements EncounterHospitalization {
         List<dynamic> appointment,
         Period period,
         Duration length,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> diagnosis,
         List<dynamic> account,
@@ -10319,7 +10597,7 @@ class _$EncounterHospitalization implements EncounterHospitalization {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
@@ -10337,9 +10615,9 @@ class _$EncounterHospitalization implements EncounterHospitalization {
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<dynamic> dietPreference,
-        List<dynamic> specialCourtesy,
-        List<dynamic> specialArrangement,
+        List<CodeableConcept> dietPreference,
+        List<CodeableConcept> specialCourtesy,
+        List<CodeableConcept> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
@@ -10360,9 +10638,9 @@ class _$EncounterHospitalization implements EncounterHospitalization {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FlagStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Period period,
@@ -10467,9 +10745,9 @@ abstract class EncounterHospitalization implements Management {
       Reference origin,
       CodeableConcept admitSource,
       CodeableConcept reAdmission,
-      List<dynamic> dietPreference,
-      List<dynamic> specialCourtesy,
-      List<dynamic> specialArrangement,
+      List<CodeableConcept> dietPreference,
+      List<CodeableConcept> specialCourtesy,
+      List<CodeableConcept> specialArrangement,
       Reference destination,
       CodeableConcept dischargeDisposition}) = _$EncounterHospitalization;
 
@@ -10486,9 +10764,9 @@ abstract class EncounterHospitalization implements Management {
   Reference get origin;
   CodeableConcept get admitSource;
   CodeableConcept get reAdmission;
-  List<dynamic> get dietPreference;
-  List<dynamic> get specialCourtesy;
-  List<dynamic> get specialArrangement;
+  List<CodeableConcept> get dietPreference;
+  List<CodeableConcept> get specialCourtesy;
+  List<CodeableConcept> get specialArrangement;
   Reference get destination;
   CodeableConcept get dischargeDisposition;
   @override
@@ -10509,6 +10787,9 @@ abstract class $EncounterLocationCopyWith<$Res>
       EncounterLocationStatus status,
       CodeableConcept physicalType,
       Period period});
+
+  $CodeableConceptCopyWith<$Res> get physicalType;
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$EncounterLocationCopyWithImpl<$Res>
@@ -10547,6 +10828,26 @@ class _$EncounterLocationCopyWithImpl<$Res>
           : physicalType as CodeableConcept,
       period: period == freezed ? _value.period : period as Period,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get physicalType {
+    if (_value.physicalType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.physicalType, (value) {
+      return _then(_value.copyWith(physicalType: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
   }
 }
 
@@ -10639,7 +10940,7 @@ class _$EncounterLocation implements EncounterLocation {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -10654,14 +10955,14 @@ class _$EncounterLocation implements EncounterLocation {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -10669,7 +10970,7 @@ class _$EncounterLocation implements EncounterLocation {
             List<dynamic> relatedArtifact,
             List<dynamic> parameter,
             List<dynamic> dataRequirement,
-            List<dynamic> content),
+            List<Attachment> content),
     @required
         Result lists(
             String resourceType,
@@ -10681,7 +10982,7 @@ class _$EncounterLocation implements EncounterLocation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -10691,7 +10992,7 @@ class _$EncounterLocation implements EncounterLocation {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
@@ -10714,10 +11015,10 @@ class _$EncounterLocation implements EncounterLocation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
@@ -10752,12 +11053,12 @@ class _$EncounterLocation implements EncounterLocation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             @JsonKey(name: 'class') Coding clas,
             List<dynamic> classHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
@@ -10767,7 +11068,7 @@ class _$EncounterLocation implements EncounterLocation {
             List<dynamic> appointment,
             Period period,
             Duration length,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> diagnosis,
             List<dynamic> account,
@@ -10794,7 +11095,7 @@ class _$EncounterLocation implements EncounterLocation {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Period period,
             Reference individual),
     @required
@@ -10814,9 +11115,9 @@ class _$EncounterLocation implements EncounterLocation {
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<dynamic> dietPreference,
-            List<dynamic> specialCourtesy,
-            List<dynamic> specialArrangement,
+            List<CodeableConcept> dietPreference,
+            List<CodeableConcept> specialCourtesy,
+            List<CodeableConcept> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
@@ -10839,9 +11140,9 @@ class _$EncounterLocation implements EncounterLocation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FlagStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Period period,
@@ -10880,7 +11181,7 @@ class _$EncounterLocation implements EncounterLocation {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -10895,14 +11196,14 @@ class _$EncounterLocation implements EncounterLocation {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -10910,7 +11211,7 @@ class _$EncounterLocation implements EncounterLocation {
         List<dynamic> relatedArtifact,
         List<dynamic> parameter,
         List<dynamic> dataRequirement,
-        List<dynamic> content),
+        List<Attachment> content),
     Result lists(
         String resourceType,
         Id id,
@@ -10921,7 +11222,7 @@ class _$EncounterLocation implements EncounterLocation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -10931,7 +11232,7 @@ class _$EncounterLocation implements EncounterLocation {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
@@ -10952,10 +11253,10 @@ class _$EncounterLocation implements EncounterLocation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
@@ -10987,12 +11288,12 @@ class _$EncounterLocation implements EncounterLocation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         @JsonKey(name: 'class') Coding clas,
         List<dynamic> classHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
@@ -11002,7 +11303,7 @@ class _$EncounterLocation implements EncounterLocation {
         List<dynamic> appointment,
         Period period,
         Duration length,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> diagnosis,
         List<dynamic> account,
@@ -11026,7 +11327,7 @@ class _$EncounterLocation implements EncounterLocation {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
@@ -11044,9 +11345,9 @@ class _$EncounterLocation implements EncounterLocation {
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<dynamic> dietPreference,
-        List<dynamic> specialCourtesy,
-        List<dynamic> specialArrangement,
+        List<CodeableConcept> dietPreference,
+        List<CodeableConcept> specialCourtesy,
+        List<CodeableConcept> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
@@ -11067,9 +11368,9 @@ class _$EncounterLocation implements EncounterLocation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FlagStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Period period,
@@ -11195,14 +11496,17 @@ abstract class $FlagCopyWith<$Res> implements $ManagementCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       FlagStatus status,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
       Period period,
       Reference encounter,
       Reference author});
+
+  $CodeableConceptCopyWith<$Res> get code;
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$FlagCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
@@ -11254,10 +11558,11 @@ class _$FlagCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as FlagStatus,
-      category:
-          category == freezed ? _value.category : category as List<dynamic>,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
       code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference,
       period: period == freezed ? _value.period : period as Period,
@@ -11265,6 +11570,26 @@ class _$FlagCopyWithImpl<$Res> extends _$ManagementCopyWithImpl<$Res>
           encounter == freezed ? _value.encounter : encounter as Reference,
       author: author == freezed ? _value.author : author as Reference,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
   }
 }
 
@@ -11311,11 +11636,11 @@ class _$Flag implements Flag {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final FlagStatus status;
   @override
-  final List<dynamic> category;
+  final List<CodeableConcept> category;
   @override
   final CodeableConcept code;
   @override
@@ -11422,7 +11747,7 @@ class _$Flag implements Flag {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -11437,14 +11762,14 @@ class _$Flag implements Flag {
             List<dynamic> contact,
             Markdown description,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -11452,7 +11777,7 @@ class _$Flag implements Flag {
             List<dynamic> relatedArtifact,
             List<dynamic> parameter,
             List<dynamic> dataRequirement,
-            List<dynamic> content),
+            List<Attachment> content),
     @required
         Result lists(
             String resourceType,
@@ -11464,7 +11789,7 @@ class _$Flag implements Flag {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             ListStatus status,
             ListMode mode,
             String title,
@@ -11474,7 +11799,7 @@ class _$Flag implements Flag {
             FhirDateTime date,
             Reference source,
             CodeableConcept orderedBy,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> entry,
             CodeableConcept emptyReason),
     @required
@@ -11497,10 +11822,10 @@ class _$Flag implements Flag {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EpisodeOfCareStatus status,
             List<dynamic> statusHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             List<dynamic> diagnosis,
             Reference patient,
             Reference managingOrganization,
@@ -11535,12 +11860,12 @@ class _$Flag implements Flag {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             EncounterStatus status,
             List<dynamic> statusHistory,
             @JsonKey(name: 'class') Coding clas,
             List<dynamic> classHistory,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept serviceType,
             CodeableConcept priority,
             Reference subject,
@@ -11550,7 +11875,7 @@ class _$Flag implements Flag {
             List<dynamic> appointment,
             Period period,
             Duration length,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> diagnosis,
             List<dynamic> account,
@@ -11577,7 +11902,7 @@ class _$Flag implements Flag {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Period period,
             Reference individual),
     @required
@@ -11597,9 +11922,9 @@ class _$Flag implements Flag {
             Reference origin,
             CodeableConcept admitSource,
             CodeableConcept reAdmission,
-            List<dynamic> dietPreference,
-            List<dynamic> specialCourtesy,
-            List<dynamic> specialArrangement,
+            List<CodeableConcept> dietPreference,
+            List<CodeableConcept> specialCourtesy,
+            List<CodeableConcept> specialArrangement,
             Reference destination,
             CodeableConcept dischargeDisposition),
     @required
@@ -11622,9 +11947,9 @@ class _$Flag implements Flag {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FlagStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept code,
             Reference subject,
             Period period,
@@ -11679,7 +12004,7 @@ class _$Flag implements Flag {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -11694,14 +12019,14 @@ class _$Flag implements Flag {
         List<dynamic> contact,
         Markdown description,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -11709,7 +12034,7 @@ class _$Flag implements Flag {
         List<dynamic> relatedArtifact,
         List<dynamic> parameter,
         List<dynamic> dataRequirement,
-        List<dynamic> content),
+        List<Attachment> content),
     Result lists(
         String resourceType,
         Id id,
@@ -11720,7 +12045,7 @@ class _$Flag implements Flag {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         ListStatus status,
         ListMode mode,
         String title,
@@ -11730,7 +12055,7 @@ class _$Flag implements Flag {
         FhirDateTime date,
         Reference source,
         CodeableConcept orderedBy,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> entry,
         CodeableConcept emptyReason),
     Result listEntry(
@@ -11751,10 +12076,10 @@ class _$Flag implements Flag {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EpisodeOfCareStatus status,
         List<dynamic> statusHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         List<dynamic> diagnosis,
         Reference patient,
         Reference managingOrganization,
@@ -11786,12 +12111,12 @@ class _$Flag implements Flag {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         EncounterStatus status,
         List<dynamic> statusHistory,
         @JsonKey(name: 'class') Coding clas,
         List<dynamic> classHistory,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept serviceType,
         CodeableConcept priority,
         Reference subject,
@@ -11801,7 +12126,7 @@ class _$Flag implements Flag {
         List<dynamic> appointment,
         Period period,
         Duration length,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> diagnosis,
         List<dynamic> account,
@@ -11825,7 +12150,7 @@ class _$Flag implements Flag {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Period period,
         Reference individual),
     Result encounterDiagnosis(
@@ -11843,9 +12168,9 @@ class _$Flag implements Flag {
         Reference origin,
         CodeableConcept admitSource,
         CodeableConcept reAdmission,
-        List<dynamic> dietPreference,
-        List<dynamic> specialCourtesy,
-        List<dynamic> specialArrangement,
+        List<CodeableConcept> dietPreference,
+        List<CodeableConcept> specialCourtesy,
+        List<CodeableConcept> specialArrangement,
         Reference destination,
         CodeableConcept dischargeDisposition),
     Result encounterLocation(
@@ -11866,9 +12191,9 @@ class _$Flag implements Flag {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FlagStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept code,
         Reference subject,
         Period period,
@@ -11979,9 +12304,9 @@ abstract class Flag implements Management {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       FlagStatus status,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       CodeableConcept code,
       Reference subject,
       Period period,
@@ -12002,9 +12327,9 @@ abstract class Flag implements Management {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   FlagStatus get status;
-  List<dynamic> get category;
+  List<CodeableConcept> get category;
   CodeableConcept get code;
   Reference get subject;
   Period get period;

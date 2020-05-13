@@ -87,7 +87,7 @@ class _$BillingTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       CodeableConcept type,
       CodeableConcept subType,
@@ -247,7 +247,7 @@ class _$BillingTearOff {
       int sequence,
       CodeableConcept diagnosisCodeableConcept,
       Reference diagnosisReference,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       CodeableConcept onAdmission,
       CodeableConcept packageCode}) {
     return ClaimDiagnosis(
@@ -268,7 +268,7 @@ class _$BillingTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       int sequence,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       FhirDateTime date,
       CodeableConcept procedureCodeableConcept,
       Reference procedureReference,
@@ -342,8 +342,8 @@ class _$BillingTearOff {
       CodeableConcept revenue,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
-      List<dynamic> programCode,
+      List<CodeableConcept> modifier,
+      List<CodeableConcept> programCode,
       Date servicedDate,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
@@ -355,7 +355,7 @@ class _$BillingTearOff {
       Money net,
       List<dynamic> udi,
       CodeableConcept bodySite,
-      List<dynamic> subSite,
+      List<CodeableConcept> subSite,
       List<dynamic> encounter,
       List<dynamic> detail}) {
     return ClaimItem(
@@ -397,8 +397,8 @@ class _$BillingTearOff {
       CodeableConcept revenue,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
-      List<dynamic> programCode,
+      List<CodeableConcept> modifier,
+      List<CodeableConcept> programCode,
       Quantity quantity,
       Money unitPrice,
       double factor,
@@ -432,8 +432,8 @@ class _$BillingTearOff {
       CodeableConcept revenue,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
-      List<dynamic> programCode,
+      List<CodeableConcept> modifier,
+      List<CodeableConcept> programCode,
       Quantity quantity,
       Money unitPrice,
       double factor,
@@ -467,7 +467,7 @@ class _$BillingTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       InvoiceStatus status,
       String cancelledReason,
       CodeableConcept type,
@@ -482,7 +482,7 @@ class _$BillingTearOff {
       Money totalNet,
       Money totalGross,
       Markdown paymentTerms,
-      List<dynamic> note}) {
+      List<Annotation> note}) {
     return Invoice(
       resourceType: resourceType,
       id: id,
@@ -575,7 +575,7 @@ class _$BillingTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       CodeableConcept type,
       CodeableConcept subType,
@@ -725,8 +725,8 @@ class _$BillingTearOff {
       List<int> subdetailSequence,
       List<dynamic> provider,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
-      List<dynamic> programCode,
+      List<CodeableConcept> modifier,
+      List<CodeableConcept> programCode,
       Date servicedDate,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
@@ -737,7 +737,7 @@ class _$BillingTearOff {
       double factor,
       Money net,
       CodeableConcept bodySite,
-      List<dynamic> subSite,
+      List<CodeableConcept> subSite,
       List<int> noteNumber,
       List<dynamic> adjudication,
       List<dynamic> detail}) {
@@ -774,7 +774,7 @@ class _$BillingTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
+      List<CodeableConcept> modifier,
       Quantity quantity,
       Money unitPrice,
       double factor,
@@ -803,7 +803,7 @@ class _$BillingTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
+      List<CodeableConcept> modifier,
       Quantity quantity,
       Money unitPrice,
       double factor,
@@ -944,7 +944,7 @@ mixin _$Billing {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -1020,7 +1020,7 @@ mixin _$Billing {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -1029,7 +1029,7 @@ mixin _$Billing {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -1068,8 +1068,8 @@ mixin _$Billing {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -1081,7 +1081,7 @@ mixin _$Billing {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -1093,8 +1093,8 @@ mixin _$Billing {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -1110,8 +1110,8 @@ mixin _$Billing {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -1128,7 +1128,7 @@ mixin _$Billing {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -1143,7 +1143,7 @@ mixin _$Billing {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -1180,7 +1180,7 @@ mixin _$Billing {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -1252,8 +1252,8 @@ mixin _$Billing {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -1264,7 +1264,7 @@ mixin _$Billing {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -1274,7 +1274,7 @@ mixin _$Billing {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -1288,7 +1288,7 @@ mixin _$Billing {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -1354,7 +1354,7 @@ mixin _$Billing {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -1425,7 +1425,7 @@ mixin _$Billing {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -1433,7 +1433,7 @@ mixin _$Billing {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -1469,8 +1469,8 @@ mixin _$Billing {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -1482,7 +1482,7 @@ mixin _$Billing {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -1493,8 +1493,8 @@ mixin _$Billing {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -1509,8 +1509,8 @@ mixin _$Billing {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -1526,7 +1526,7 @@ mixin _$Billing {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -1541,7 +1541,7 @@ mixin _$Billing {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -1574,7 +1574,7 @@ mixin _$Billing {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -1641,8 +1641,8 @@ mixin _$Billing {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -1653,7 +1653,7 @@ mixin _$Billing {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -1662,7 +1662,7 @@ mixin _$Billing {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -1675,7 +1675,7 @@ mixin _$Billing {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -1839,7 +1839,7 @@ abstract class $ClaimCopyWith<$Res> implements $BillingCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       CodeableConcept type,
       CodeableConcept subType,
@@ -1866,6 +1866,13 @@ abstract class $ClaimCopyWith<$Res> implements $BillingCopyWith<$Res> {
       ClaimAccident accident,
       List<dynamic> item,
       Money total});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $CodeableConceptCopyWith<$Res> get subType;
+  $PeriodCopyWith<$Res> get billablePeriod;
+  $CodeableConceptCopyWith<$Res> get priority;
+  $CodeableConceptCopyWith<$Res> get fundsReserve;
+  $MoneyCopyWith<$Res> get total;
 }
 
 class _$ClaimCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -1936,7 +1943,7 @@ class _$ClaimCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
       type: type == freezed ? _value.type : type as CodeableConcept,
       subType: subType == freezed ? _value.subType : subType as CodeableConcept,
@@ -1980,6 +1987,66 @@ class _$ClaimCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
       item: item == freezed ? _value.item : item as List<dynamic>,
       total: total == freezed ? _value.total : total as Money,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get subType {
+    if (_value.subType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.subType, (value) {
+      return _then(_value.copyWith(subType: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get billablePeriod {
+    if (_value.billablePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.billablePeriod, (value) {
+      return _then(_value.copyWith(billablePeriod: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get priority {
+    if (_value.priority == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.priority, (value) {
+      return _then(_value.copyWith(priority: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get fundsReserve {
+    if (_value.fundsReserve == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.fundsReserve, (value) {
+      return _then(_value.copyWith(fundsReserve: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get total {
+    if (_value.total == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.total, (value) {
+      return _then(_value.copyWith(total: value));
+    });
   }
 }
 
@@ -2046,7 +2113,7 @@ class _$Claim implements Claim {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Code status;
   @override
@@ -2248,7 +2315,7 @@ class _$Claim implements Claim {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -2324,7 +2391,7 @@ class _$Claim implements Claim {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -2333,7 +2400,7 @@ class _$Claim implements Claim {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -2372,8 +2439,8 @@ class _$Claim implements Claim {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -2385,7 +2452,7 @@ class _$Claim implements Claim {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -2397,8 +2464,8 @@ class _$Claim implements Claim {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -2414,8 +2481,8 @@ class _$Claim implements Claim {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -2432,7 +2499,7 @@ class _$Claim implements Claim {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -2447,7 +2514,7 @@ class _$Claim implements Claim {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -2484,7 +2551,7 @@ class _$Claim implements Claim {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -2556,8 +2623,8 @@ class _$Claim implements Claim {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -2568,7 +2635,7 @@ class _$Claim implements Claim {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -2578,7 +2645,7 @@ class _$Claim implements Claim {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -2592,7 +2659,7 @@ class _$Claim implements Claim {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -2727,7 +2794,7 @@ class _$Claim implements Claim {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -2798,7 +2865,7 @@ class _$Claim implements Claim {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -2806,7 +2873,7 @@ class _$Claim implements Claim {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -2842,8 +2909,8 @@ class _$Claim implements Claim {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -2855,7 +2922,7 @@ class _$Claim implements Claim {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -2866,8 +2933,8 @@ class _$Claim implements Claim {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -2882,8 +2949,8 @@ class _$Claim implements Claim {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -2899,7 +2966,7 @@ class _$Claim implements Claim {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -2914,7 +2981,7 @@ class _$Claim implements Claim {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -2947,7 +3014,7 @@ class _$Claim implements Claim {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -3014,8 +3081,8 @@ class _$Claim implements Claim {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -3026,7 +3093,7 @@ class _$Claim implements Claim {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -3035,7 +3102,7 @@ class _$Claim implements Claim {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -3048,7 +3115,7 @@ class _$Claim implements Claim {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -3264,7 +3331,7 @@ abstract class Claim implements Billing {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       CodeableConcept type,
       CodeableConcept subType,
@@ -3306,7 +3373,7 @@ abstract class Claim implements Billing {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   Code get status;
   CodeableConcept get type;
   CodeableConcept get subType;
@@ -3349,6 +3416,9 @@ abstract class $ClaimRelatedCopyWith<$Res> implements $BillingCopyWith<$Res> {
       Reference claim,
       CodeableConcept relationship,
       Identifier reference});
+
+  $CodeableConceptCopyWith<$Res> get relationship;
+  $IdentifierCopyWith<$Res> get reference;
 }
 
 class _$ClaimRelatedCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -3384,6 +3454,26 @@ class _$ClaimRelatedCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
       reference:
           reference == freezed ? _value.reference : reference as Identifier,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get relationship {
+    if (_value.relationship == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.relationship, (value) {
+      return _then(_value.copyWith(relationship: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get reference {
+    if (_value.reference == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.reference, (value) {
+      return _then(_value.copyWith(reference: value));
+    });
   }
 }
 
@@ -3469,7 +3559,7 @@ class _$ClaimRelated implements ClaimRelated {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -3545,7 +3635,7 @@ class _$ClaimRelated implements ClaimRelated {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -3554,7 +3644,7 @@ class _$ClaimRelated implements ClaimRelated {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -3593,8 +3683,8 @@ class _$ClaimRelated implements ClaimRelated {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -3606,7 +3696,7 @@ class _$ClaimRelated implements ClaimRelated {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -3618,8 +3708,8 @@ class _$ClaimRelated implements ClaimRelated {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -3635,8 +3725,8 @@ class _$ClaimRelated implements ClaimRelated {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -3653,7 +3743,7 @@ class _$ClaimRelated implements ClaimRelated {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -3668,7 +3758,7 @@ class _$ClaimRelated implements ClaimRelated {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -3705,7 +3795,7 @@ class _$ClaimRelated implements ClaimRelated {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -3777,8 +3867,8 @@ class _$ClaimRelated implements ClaimRelated {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -3789,7 +3879,7 @@ class _$ClaimRelated implements ClaimRelated {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -3799,7 +3889,7 @@ class _$ClaimRelated implements ClaimRelated {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -3813,7 +3903,7 @@ class _$ClaimRelated implements ClaimRelated {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -3913,7 +4003,7 @@ class _$ClaimRelated implements ClaimRelated {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -3984,7 +4074,7 @@ class _$ClaimRelated implements ClaimRelated {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -3992,7 +4082,7 @@ class _$ClaimRelated implements ClaimRelated {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -4028,8 +4118,8 @@ class _$ClaimRelated implements ClaimRelated {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -4041,7 +4131,7 @@ class _$ClaimRelated implements ClaimRelated {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -4052,8 +4142,8 @@ class _$ClaimRelated implements ClaimRelated {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -4068,8 +4158,8 @@ class _$ClaimRelated implements ClaimRelated {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -4085,7 +4175,7 @@ class _$ClaimRelated implements ClaimRelated {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -4100,7 +4190,7 @@ class _$ClaimRelated implements ClaimRelated {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -4133,7 +4223,7 @@ class _$ClaimRelated implements ClaimRelated {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -4200,8 +4290,8 @@ class _$ClaimRelated implements ClaimRelated {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -4212,7 +4302,7 @@ class _$ClaimRelated implements ClaimRelated {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -4221,7 +4311,7 @@ class _$ClaimRelated implements ClaimRelated {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -4234,7 +4324,7 @@ class _$ClaimRelated implements ClaimRelated {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -4440,6 +4530,8 @@ abstract class $ClaimPayeeCopyWith<$Res> implements $BillingCopyWith<$Res> {
       List<dynamic> modifierExtension,
       CodeableConcept type,
       Reference party});
+
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 class _$ClaimPayeeCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -4469,6 +4561,16 @@ class _$ClaimPayeeCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as CodeableConcept,
       party: party == freezed ? _value.party : party as Reference,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
   }
 }
 
@@ -4546,7 +4648,7 @@ class _$ClaimPayee implements ClaimPayee {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -4622,7 +4724,7 @@ class _$ClaimPayee implements ClaimPayee {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -4631,7 +4733,7 @@ class _$ClaimPayee implements ClaimPayee {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -4670,8 +4772,8 @@ class _$ClaimPayee implements ClaimPayee {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -4683,7 +4785,7 @@ class _$ClaimPayee implements ClaimPayee {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -4695,8 +4797,8 @@ class _$ClaimPayee implements ClaimPayee {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -4712,8 +4814,8 @@ class _$ClaimPayee implements ClaimPayee {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -4730,7 +4832,7 @@ class _$ClaimPayee implements ClaimPayee {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -4745,7 +4847,7 @@ class _$ClaimPayee implements ClaimPayee {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -4782,7 +4884,7 @@ class _$ClaimPayee implements ClaimPayee {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -4854,8 +4956,8 @@ class _$ClaimPayee implements ClaimPayee {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -4866,7 +4968,7 @@ class _$ClaimPayee implements ClaimPayee {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -4876,7 +4978,7 @@ class _$ClaimPayee implements ClaimPayee {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -4890,7 +4992,7 @@ class _$ClaimPayee implements ClaimPayee {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -4989,7 +5091,7 @@ class _$ClaimPayee implements ClaimPayee {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -5060,7 +5162,7 @@ class _$ClaimPayee implements ClaimPayee {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -5068,7 +5170,7 @@ class _$ClaimPayee implements ClaimPayee {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -5104,8 +5206,8 @@ class _$ClaimPayee implements ClaimPayee {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -5117,7 +5219,7 @@ class _$ClaimPayee implements ClaimPayee {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -5128,8 +5230,8 @@ class _$ClaimPayee implements ClaimPayee {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -5144,8 +5246,8 @@ class _$ClaimPayee implements ClaimPayee {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -5161,7 +5263,7 @@ class _$ClaimPayee implements ClaimPayee {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -5176,7 +5278,7 @@ class _$ClaimPayee implements ClaimPayee {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -5209,7 +5311,7 @@ class _$ClaimPayee implements ClaimPayee {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -5276,8 +5378,8 @@ class _$ClaimPayee implements ClaimPayee {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -5288,7 +5390,7 @@ class _$ClaimPayee implements ClaimPayee {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -5297,7 +5399,7 @@ class _$ClaimPayee implements ClaimPayee {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -5310,7 +5412,7 @@ class _$ClaimPayee implements ClaimPayee {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -5516,6 +5618,9 @@ abstract class $ClaimCareTeamCopyWith<$Res> implements $BillingCopyWith<$Res> {
       bool responsible,
       CodeableConcept role,
       CodeableConcept qualification});
+
+  $CodeableConceptCopyWith<$Res> get role;
+  $CodeableConceptCopyWith<$Res> get qualification;
 }
 
 class _$ClaimCareTeamCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -5555,6 +5660,26 @@ class _$ClaimCareTeamCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
           ? _value.qualification
           : qualification as CodeableConcept,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get role {
+    if (_value.role == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
+      return _then(_value.copyWith(role: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get qualification {
+    if (_value.qualification == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.qualification, (value) {
+      return _then(_value.copyWith(qualification: value));
+    });
   }
 }
 
@@ -5654,7 +5779,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -5730,7 +5855,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -5739,7 +5864,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -5778,8 +5903,8 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -5791,7 +5916,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -5803,8 +5928,8 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -5820,8 +5945,8 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -5838,7 +5963,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -5853,7 +5978,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -5890,7 +6015,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -5962,8 +6087,8 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -5974,7 +6099,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -5984,7 +6109,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -5998,7 +6123,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -6098,7 +6223,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -6169,7 +6294,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -6177,7 +6302,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -6213,8 +6338,8 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -6226,7 +6351,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -6237,8 +6362,8 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -6253,8 +6378,8 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -6270,7 +6395,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -6285,7 +6410,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -6318,7 +6443,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -6385,8 +6510,8 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -6397,7 +6522,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -6406,7 +6531,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -6419,7 +6544,7 @@ class _$ClaimCareTeam implements ClaimCareTeam {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -6639,6 +6764,13 @@ abstract class $ClaimSupportingInfoCopyWith<$Res>
       Attachment valueAttachment,
       Reference valueReference,
       CodeableConcept reason});
+
+  $CodeableConceptCopyWith<$Res> get category;
+  $CodeableConceptCopyWith<$Res> get code;
+  $PeriodCopyWith<$Res> get timingPeriod;
+  $QuantityCopyWith<$Res> get valueQuantity;
+  $AttachmentCopyWith<$Res> get valueAttachment;
+  $CodeableConceptCopyWith<$Res> get reason;
 }
 
 class _$ClaimSupportingInfoCopyWithImpl<$Res>
@@ -6700,6 +6832,66 @@ class _$ClaimSupportingInfoCopyWithImpl<$Res>
           : valueReference as Reference,
       reason: reason == freezed ? _value.reason : reason as CodeableConcept,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get category {
+    if (_value.category == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
+      return _then(_value.copyWith(category: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get timingPeriod {
+    if (_value.timingPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.timingPeriod, (value) {
+      return _then(_value.copyWith(timingPeriod: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get valueAttachment {
+    if (_value.valueAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.valueAttachment, (value) {
+      return _then(_value.copyWith(valueAttachment: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get reason {
+    if (_value.reason == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.reason, (value) {
+      return _then(_value.copyWith(reason: value));
+    });
   }
 }
 
@@ -6840,7 +7032,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -6916,7 +7108,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -6925,7 +7117,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -6964,8 +7156,8 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -6977,7 +7169,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -6989,8 +7181,8 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -7006,8 +7198,8 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -7024,7 +7216,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -7039,7 +7231,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -7076,7 +7268,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -7148,8 +7340,8 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -7160,7 +7352,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -7170,7 +7362,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -7184,7 +7376,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -7297,7 +7489,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -7368,7 +7560,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -7376,7 +7568,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -7412,8 +7604,8 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -7425,7 +7617,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -7436,8 +7628,8 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -7452,8 +7644,8 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -7469,7 +7661,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -7484,7 +7676,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -7517,7 +7709,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -7584,8 +7776,8 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -7596,7 +7788,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -7605,7 +7797,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -7618,7 +7810,7 @@ class _$ClaimSupportingInfo implements ClaimSupportingInfo {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -7855,9 +8047,13 @@ abstract class $ClaimDiagnosisCopyWith<$Res> implements $BillingCopyWith<$Res> {
       int sequence,
       CodeableConcept diagnosisCodeableConcept,
       Reference diagnosisReference,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       CodeableConcept onAdmission,
       CodeableConcept packageCode});
+
+  $CodeableConceptCopyWith<$Res> get diagnosisCodeableConcept;
+  $CodeableConceptCopyWith<$Res> get onAdmission;
+  $CodeableConceptCopyWith<$Res> get packageCode;
 }
 
 class _$ClaimDiagnosisCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -7896,7 +8092,7 @@ class _$ClaimDiagnosisCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
       diagnosisReference: diagnosisReference == freezed
           ? _value.diagnosisReference
           : diagnosisReference as Reference,
-      type: type == freezed ? _value.type : type as List<dynamic>,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>,
       onAdmission: onAdmission == freezed
           ? _value.onAdmission
           : onAdmission as CodeableConcept,
@@ -7904,6 +8100,37 @@ class _$ClaimDiagnosisCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
           ? _value.packageCode
           : packageCode as CodeableConcept,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get diagnosisCodeableConcept {
+    if (_value.diagnosisCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.diagnosisCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(diagnosisCodeableConcept: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get onAdmission {
+    if (_value.onAdmission == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.onAdmission, (value) {
+      return _then(_value.copyWith(onAdmission: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get packageCode {
+    if (_value.packageCode == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.packageCode, (value) {
+      return _then(_value.copyWith(packageCode: value));
+    });
   }
 }
 
@@ -7937,7 +8164,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
   @override
   final Reference diagnosisReference;
   @override
-  final List<dynamic> type;
+  final List<CodeableConcept> type;
   @override
   final CodeableConcept onAdmission;
   @override
@@ -8012,7 +8239,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -8088,7 +8315,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -8097,7 +8324,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -8136,8 +8363,8 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -8149,7 +8376,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -8161,8 +8388,8 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -8178,8 +8405,8 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -8196,7 +8423,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -8211,7 +8438,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -8248,7 +8475,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -8320,8 +8547,8 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -8332,7 +8559,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -8342,7 +8569,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -8356,7 +8583,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -8464,7 +8691,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -8535,7 +8762,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -8543,7 +8770,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -8579,8 +8806,8 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -8592,7 +8819,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -8603,8 +8830,8 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -8619,8 +8846,8 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -8636,7 +8863,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -8651,7 +8878,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -8684,7 +8911,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -8751,8 +8978,8 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -8763,7 +8990,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -8772,7 +8999,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -8785,7 +9012,7 @@ class _$ClaimDiagnosis implements ClaimDiagnosis {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -8971,7 +9198,7 @@ abstract class ClaimDiagnosis implements Billing {
       int sequence,
       CodeableConcept diagnosisCodeableConcept,
       Reference diagnosisReference,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       CodeableConcept onAdmission,
       CodeableConcept packageCode}) = _$ClaimDiagnosis;
 
@@ -8987,7 +9214,7 @@ abstract class ClaimDiagnosis implements Billing {
   int get sequence;
   CodeableConcept get diagnosisCodeableConcept;
   Reference get diagnosisReference;
-  List<dynamic> get type;
+  List<CodeableConcept> get type;
   CodeableConcept get onAdmission;
   CodeableConcept get packageCode;
   @override
@@ -9004,11 +9231,13 @@ abstract class $ClaimProcedureCopyWith<$Res> implements $BillingCopyWith<$Res> {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       int sequence,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       FhirDateTime date,
       CodeableConcept procedureCodeableConcept,
       Reference procedureReference,
       List<dynamic> udi});
+
+  $CodeableConceptCopyWith<$Res> get procedureCodeableConcept;
 }
 
 class _$ClaimProcedureCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -9041,7 +9270,7 @@ class _$ClaimProcedureCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
       sequence: sequence == freezed ? _value.sequence : sequence as int,
-      type: type == freezed ? _value.type : type as List<dynamic>,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>,
       date: date == freezed ? _value.date : date as FhirDateTime,
       procedureCodeableConcept: procedureCodeableConcept == freezed
           ? _value.procedureCodeableConcept
@@ -9051,6 +9280,17 @@ class _$ClaimProcedureCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
           : procedureReference as Reference,
       udi: udi == freezed ? _value.udi : udi as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get procedureCodeableConcept {
+    if (_value.procedureCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.procedureCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(procedureCodeableConcept: value));
+    });
   }
 }
 
@@ -9080,7 +9320,7 @@ class _$ClaimProcedure implements ClaimProcedure {
   @override
   final int sequence;
   @override
-  final List<dynamic> type;
+  final List<CodeableConcept> type;
   @override
   final FhirDateTime date;
   @override
@@ -9157,7 +9397,7 @@ class _$ClaimProcedure implements ClaimProcedure {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -9233,7 +9473,7 @@ class _$ClaimProcedure implements ClaimProcedure {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -9242,7 +9482,7 @@ class _$ClaimProcedure implements ClaimProcedure {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -9281,8 +9521,8 @@ class _$ClaimProcedure implements ClaimProcedure {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -9294,7 +9534,7 @@ class _$ClaimProcedure implements ClaimProcedure {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -9306,8 +9546,8 @@ class _$ClaimProcedure implements ClaimProcedure {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -9323,8 +9563,8 @@ class _$ClaimProcedure implements ClaimProcedure {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -9341,7 +9581,7 @@ class _$ClaimProcedure implements ClaimProcedure {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -9356,7 +9596,7 @@ class _$ClaimProcedure implements ClaimProcedure {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -9393,7 +9633,7 @@ class _$ClaimProcedure implements ClaimProcedure {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -9465,8 +9705,8 @@ class _$ClaimProcedure implements ClaimProcedure {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -9477,7 +9717,7 @@ class _$ClaimProcedure implements ClaimProcedure {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -9487,7 +9727,7 @@ class _$ClaimProcedure implements ClaimProcedure {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -9501,7 +9741,7 @@ class _$ClaimProcedure implements ClaimProcedure {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -9601,7 +9841,7 @@ class _$ClaimProcedure implements ClaimProcedure {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -9672,7 +9912,7 @@ class _$ClaimProcedure implements ClaimProcedure {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -9680,7 +9920,7 @@ class _$ClaimProcedure implements ClaimProcedure {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -9716,8 +9956,8 @@ class _$ClaimProcedure implements ClaimProcedure {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -9729,7 +9969,7 @@ class _$ClaimProcedure implements ClaimProcedure {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -9740,8 +9980,8 @@ class _$ClaimProcedure implements ClaimProcedure {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -9756,8 +9996,8 @@ class _$ClaimProcedure implements ClaimProcedure {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -9773,7 +10013,7 @@ class _$ClaimProcedure implements ClaimProcedure {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -9788,7 +10028,7 @@ class _$ClaimProcedure implements ClaimProcedure {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -9821,7 +10061,7 @@ class _$ClaimProcedure implements ClaimProcedure {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -9888,8 +10128,8 @@ class _$ClaimProcedure implements ClaimProcedure {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -9900,7 +10140,7 @@ class _$ClaimProcedure implements ClaimProcedure {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -9909,7 +10149,7 @@ class _$ClaimProcedure implements ClaimProcedure {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -9922,7 +10162,7 @@ class _$ClaimProcedure implements ClaimProcedure {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -10098,7 +10338,7 @@ abstract class ClaimProcedure implements Billing {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       int sequence,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       FhirDateTime date,
       CodeableConcept procedureCodeableConcept,
       Reference procedureReference,
@@ -10114,7 +10354,7 @@ abstract class ClaimProcedure implements Billing {
   @override
   List<dynamic> get modifierExtension;
   int get sequence;
-  List<dynamic> get type;
+  List<CodeableConcept> get type;
   FhirDateTime get date;
   CodeableConcept get procedureCodeableConcept;
   Reference get procedureReference;
@@ -10139,6 +10379,8 @@ abstract class $ClaimInsuranceCopyWith<$Res> implements $BillingCopyWith<$Res> {
       String businessArrangement,
       List<String> preAuthRef,
       Reference claimResponse});
+
+  $IdentifierCopyWith<$Res> get identifier;
 }
 
 class _$ClaimInsuranceCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -10186,6 +10428,16 @@ class _$ClaimInsuranceCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
           ? _value.claimResponse
           : claimResponse as Reference,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
   }
 }
 
@@ -10299,7 +10551,7 @@ class _$ClaimInsurance implements ClaimInsurance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -10375,7 +10627,7 @@ class _$ClaimInsurance implements ClaimInsurance {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -10384,7 +10636,7 @@ class _$ClaimInsurance implements ClaimInsurance {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -10423,8 +10675,8 @@ class _$ClaimInsurance implements ClaimInsurance {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -10436,7 +10688,7 @@ class _$ClaimInsurance implements ClaimInsurance {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -10448,8 +10700,8 @@ class _$ClaimInsurance implements ClaimInsurance {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -10465,8 +10717,8 @@ class _$ClaimInsurance implements ClaimInsurance {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -10483,7 +10735,7 @@ class _$ClaimInsurance implements ClaimInsurance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -10498,7 +10750,7 @@ class _$ClaimInsurance implements ClaimInsurance {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -10535,7 +10787,7 @@ class _$ClaimInsurance implements ClaimInsurance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -10607,8 +10859,8 @@ class _$ClaimInsurance implements ClaimInsurance {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -10619,7 +10871,7 @@ class _$ClaimInsurance implements ClaimInsurance {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -10629,7 +10881,7 @@ class _$ClaimInsurance implements ClaimInsurance {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -10643,7 +10895,7 @@ class _$ClaimInsurance implements ClaimInsurance {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -10752,7 +11004,7 @@ class _$ClaimInsurance implements ClaimInsurance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -10823,7 +11075,7 @@ class _$ClaimInsurance implements ClaimInsurance {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -10831,7 +11083,7 @@ class _$ClaimInsurance implements ClaimInsurance {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -10867,8 +11119,8 @@ class _$ClaimInsurance implements ClaimInsurance {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -10880,7 +11132,7 @@ class _$ClaimInsurance implements ClaimInsurance {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -10891,8 +11143,8 @@ class _$ClaimInsurance implements ClaimInsurance {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -10907,8 +11159,8 @@ class _$ClaimInsurance implements ClaimInsurance {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -10924,7 +11176,7 @@ class _$ClaimInsurance implements ClaimInsurance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -10939,7 +11191,7 @@ class _$ClaimInsurance implements ClaimInsurance {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -10972,7 +11224,7 @@ class _$ClaimInsurance implements ClaimInsurance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -11039,8 +11291,8 @@ class _$ClaimInsurance implements ClaimInsurance {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -11051,7 +11303,7 @@ class _$ClaimInsurance implements ClaimInsurance {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -11060,7 +11312,7 @@ class _$ClaimInsurance implements ClaimInsurance {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -11073,7 +11325,7 @@ class _$ClaimInsurance implements ClaimInsurance {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -11298,6 +11550,9 @@ abstract class $ClaimAccidentCopyWith<$Res> implements $BillingCopyWith<$Res> {
       CodeableConcept type,
       Address locationAddress,
       Reference locationReference});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $AddressCopyWith<$Res> get locationAddress;
 }
 
 class _$ClaimAccidentCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -11336,6 +11591,26 @@ class _$ClaimAccidentCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
           ? _value.locationReference
           : locationReference as Reference,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $AddressCopyWith<$Res> get locationAddress {
+    if (_value.locationAddress == null) {
+      return null;
+    }
+    return $AddressCopyWith<$Res>(_value.locationAddress, (value) {
+      return _then(_value.copyWith(locationAddress: value));
+    });
   }
 }
 
@@ -11427,7 +11702,7 @@ class _$ClaimAccident implements ClaimAccident {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -11503,7 +11778,7 @@ class _$ClaimAccident implements ClaimAccident {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -11512,7 +11787,7 @@ class _$ClaimAccident implements ClaimAccident {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -11551,8 +11826,8 @@ class _$ClaimAccident implements ClaimAccident {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -11564,7 +11839,7 @@ class _$ClaimAccident implements ClaimAccident {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -11576,8 +11851,8 @@ class _$ClaimAccident implements ClaimAccident {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -11593,8 +11868,8 @@ class _$ClaimAccident implements ClaimAccident {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -11611,7 +11886,7 @@ class _$ClaimAccident implements ClaimAccident {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -11626,7 +11901,7 @@ class _$ClaimAccident implements ClaimAccident {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -11663,7 +11938,7 @@ class _$ClaimAccident implements ClaimAccident {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -11735,8 +12010,8 @@ class _$ClaimAccident implements ClaimAccident {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -11747,7 +12022,7 @@ class _$ClaimAccident implements ClaimAccident {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -11757,7 +12032,7 @@ class _$ClaimAccident implements ClaimAccident {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -11771,7 +12046,7 @@ class _$ClaimAccident implements ClaimAccident {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -11871,7 +12146,7 @@ class _$ClaimAccident implements ClaimAccident {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -11942,7 +12217,7 @@ class _$ClaimAccident implements ClaimAccident {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -11950,7 +12225,7 @@ class _$ClaimAccident implements ClaimAccident {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -11986,8 +12261,8 @@ class _$ClaimAccident implements ClaimAccident {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -11999,7 +12274,7 @@ class _$ClaimAccident implements ClaimAccident {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -12010,8 +12285,8 @@ class _$ClaimAccident implements ClaimAccident {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -12026,8 +12301,8 @@ class _$ClaimAccident implements ClaimAccident {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -12043,7 +12318,7 @@ class _$ClaimAccident implements ClaimAccident {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -12058,7 +12333,7 @@ class _$ClaimAccident implements ClaimAccident {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -12091,7 +12366,7 @@ class _$ClaimAccident implements ClaimAccident {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -12158,8 +12433,8 @@ class _$ClaimAccident implements ClaimAccident {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -12170,7 +12445,7 @@ class _$ClaimAccident implements ClaimAccident {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -12179,7 +12454,7 @@ class _$ClaimAccident implements ClaimAccident {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -12192,7 +12467,7 @@ class _$ClaimAccident implements ClaimAccident {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -12405,8 +12680,8 @@ abstract class $ClaimItemCopyWith<$Res> implements $BillingCopyWith<$Res> {
       CodeableConcept revenue,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
-      List<dynamic> programCode,
+      List<CodeableConcept> modifier,
+      List<CodeableConcept> programCode,
       Date servicedDate,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
@@ -12418,9 +12693,20 @@ abstract class $ClaimItemCopyWith<$Res> implements $BillingCopyWith<$Res> {
       Money net,
       List<dynamic> udi,
       CodeableConcept bodySite,
-      List<dynamic> subSite,
+      List<CodeableConcept> subSite,
       List<dynamic> encounter,
       List<dynamic> detail});
+
+  $CodeableConceptCopyWith<$Res> get revenue;
+  $CodeableConceptCopyWith<$Res> get category;
+  $CodeableConceptCopyWith<$Res> get productOrService;
+  $PeriodCopyWith<$Res> get servicedPeriod;
+  $CodeableConceptCopyWith<$Res> get locationCodeableConcept;
+  $AddressCopyWith<$Res> get locationAddress;
+  $QuantityCopyWith<$Res> get quantity;
+  $MoneyCopyWith<$Res> get unitPrice;
+  $MoneyCopyWith<$Res> get net;
+  $CodeableConceptCopyWith<$Res> get bodySite;
 }
 
 class _$ClaimItemCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -12488,11 +12774,12 @@ class _$ClaimItemCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
       productOrService: productOrService == freezed
           ? _value.productOrService
           : productOrService as CodeableConcept,
-      modifier:
-          modifier == freezed ? _value.modifier : modifier as List<dynamic>,
+      modifier: modifier == freezed
+          ? _value.modifier
+          : modifier as List<CodeableConcept>,
       programCode: programCode == freezed
           ? _value.programCode
-          : programCode as List<dynamic>,
+          : programCode as List<CodeableConcept>,
       servicedDate:
           servicedDate == freezed ? _value.servicedDate : servicedDate as Date,
       servicedPeriod: servicedPeriod == freezed
@@ -12514,11 +12801,114 @@ class _$ClaimItemCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
       udi: udi == freezed ? _value.udi : udi as List<dynamic>,
       bodySite:
           bodySite == freezed ? _value.bodySite : bodySite as CodeableConcept,
-      subSite: subSite == freezed ? _value.subSite : subSite as List<dynamic>,
+      subSite: subSite == freezed
+          ? _value.subSite
+          : subSite as List<CodeableConcept>,
       encounter:
           encounter == freezed ? _value.encounter : encounter as List<dynamic>,
       detail: detail == freezed ? _value.detail : detail as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get revenue {
+    if (_value.revenue == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.revenue, (value) {
+      return _then(_value.copyWith(revenue: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get category {
+    if (_value.category == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
+      return _then(_value.copyWith(category: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get productOrService {
+    if (_value.productOrService == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.productOrService, (value) {
+      return _then(_value.copyWith(productOrService: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get servicedPeriod {
+    if (_value.servicedPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.servicedPeriod, (value) {
+      return _then(_value.copyWith(servicedPeriod: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get locationCodeableConcept {
+    if (_value.locationCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.locationCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(locationCodeableConcept: value));
+    });
+  }
+
+  @override
+  $AddressCopyWith<$Res> get locationAddress {
+    if (_value.locationAddress == null) {
+      return null;
+    }
+    return $AddressCopyWith<$Res>(_value.locationAddress, (value) {
+      return _then(_value.copyWith(locationAddress: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get unitPrice {
+    if (_value.unitPrice == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.unitPrice, (value) {
+      return _then(_value.copyWith(unitPrice: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get net {
+    if (_value.net == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.net, (value) {
+      return _then(_value.copyWith(net: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get bodySite {
+    if (_value.bodySite == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.bodySite, (value) {
+      return _then(_value.copyWith(bodySite: value));
+    });
   }
 }
 
@@ -12580,9 +12970,9 @@ class _$ClaimItem implements ClaimItem {
   @override
   final CodeableConcept productOrService;
   @override
-  final List<dynamic> modifier;
+  final List<CodeableConcept> modifier;
   @override
-  final List<dynamic> programCode;
+  final List<CodeableConcept> programCode;
   @override
   final Date servicedDate;
   @override
@@ -12606,7 +12996,7 @@ class _$ClaimItem implements ClaimItem {
   @override
   final CodeableConcept bodySite;
   @override
-  final List<dynamic> subSite;
+  final List<CodeableConcept> subSite;
   @override
   final List<dynamic> encounter;
   @override
@@ -12740,7 +13130,7 @@ class _$ClaimItem implements ClaimItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -12816,7 +13206,7 @@ class _$ClaimItem implements ClaimItem {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -12825,7 +13215,7 @@ class _$ClaimItem implements ClaimItem {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -12864,8 +13254,8 @@ class _$ClaimItem implements ClaimItem {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -12877,7 +13267,7 @@ class _$ClaimItem implements ClaimItem {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -12889,8 +13279,8 @@ class _$ClaimItem implements ClaimItem {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -12906,8 +13296,8 @@ class _$ClaimItem implements ClaimItem {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -12924,7 +13314,7 @@ class _$ClaimItem implements ClaimItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -12939,7 +13329,7 @@ class _$ClaimItem implements ClaimItem {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -12976,7 +13366,7 @@ class _$ClaimItem implements ClaimItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -13048,8 +13438,8 @@ class _$ClaimItem implements ClaimItem {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -13060,7 +13450,7 @@ class _$ClaimItem implements ClaimItem {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -13070,7 +13460,7 @@ class _$ClaimItem implements ClaimItem {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -13084,7 +13474,7 @@ class _$ClaimItem implements ClaimItem {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -13210,7 +13600,7 @@ class _$ClaimItem implements ClaimItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -13281,7 +13671,7 @@ class _$ClaimItem implements ClaimItem {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -13289,7 +13679,7 @@ class _$ClaimItem implements ClaimItem {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -13325,8 +13715,8 @@ class _$ClaimItem implements ClaimItem {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -13338,7 +13728,7 @@ class _$ClaimItem implements ClaimItem {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -13349,8 +13739,8 @@ class _$ClaimItem implements ClaimItem {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -13365,8 +13755,8 @@ class _$ClaimItem implements ClaimItem {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -13382,7 +13772,7 @@ class _$ClaimItem implements ClaimItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -13397,7 +13787,7 @@ class _$ClaimItem implements ClaimItem {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -13430,7 +13820,7 @@ class _$ClaimItem implements ClaimItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -13497,8 +13887,8 @@ class _$ClaimItem implements ClaimItem {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -13509,7 +13899,7 @@ class _$ClaimItem implements ClaimItem {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -13518,7 +13908,7 @@ class _$ClaimItem implements ClaimItem {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -13531,7 +13921,7 @@ class _$ClaimItem implements ClaimItem {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -13740,8 +14130,8 @@ abstract class ClaimItem implements Billing {
       CodeableConcept revenue,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
-      List<dynamic> programCode,
+      List<CodeableConcept> modifier,
+      List<CodeableConcept> programCode,
       Date servicedDate,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
@@ -13753,7 +14143,7 @@ abstract class ClaimItem implements Billing {
       Money net,
       List<dynamic> udi,
       CodeableConcept bodySite,
-      List<dynamic> subSite,
+      List<CodeableConcept> subSite,
       List<dynamic> encounter,
       List<dynamic> detail}) = _$ClaimItem;
 
@@ -13773,8 +14163,8 @@ abstract class ClaimItem implements Billing {
   CodeableConcept get revenue;
   CodeableConcept get category;
   CodeableConcept get productOrService;
-  List<dynamic> get modifier;
-  List<dynamic> get programCode;
+  List<CodeableConcept> get modifier;
+  List<CodeableConcept> get programCode;
   Date get servicedDate;
   Period get servicedPeriod;
   CodeableConcept get locationCodeableConcept;
@@ -13786,7 +14176,7 @@ abstract class ClaimItem implements Billing {
   Money get net;
   List<dynamic> get udi;
   CodeableConcept get bodySite;
-  List<dynamic> get subSite;
+  List<CodeableConcept> get subSite;
   List<dynamic> get encounter;
   List<dynamic> get detail;
   @override
@@ -13806,14 +14196,21 @@ abstract class $ClaimDetailCopyWith<$Res> implements $BillingCopyWith<$Res> {
       CodeableConcept revenue,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
-      List<dynamic> programCode,
+      List<CodeableConcept> modifier,
+      List<CodeableConcept> programCode,
       Quantity quantity,
       Money unitPrice,
       double factor,
       Money net,
       List<dynamic> udi,
       List<dynamic> subDetail});
+
+  $CodeableConceptCopyWith<$Res> get revenue;
+  $CodeableConceptCopyWith<$Res> get category;
+  $CodeableConceptCopyWith<$Res> get productOrService;
+  $QuantityCopyWith<$Res> get quantity;
+  $MoneyCopyWith<$Res> get unitPrice;
+  $MoneyCopyWith<$Res> get net;
 }
 
 class _$ClaimDetailCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -13858,11 +14255,12 @@ class _$ClaimDetailCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
       productOrService: productOrService == freezed
           ? _value.productOrService
           : productOrService as CodeableConcept,
-      modifier:
-          modifier == freezed ? _value.modifier : modifier as List<dynamic>,
+      modifier: modifier == freezed
+          ? _value.modifier
+          : modifier as List<CodeableConcept>,
       programCode: programCode == freezed
           ? _value.programCode
-          : programCode as List<dynamic>,
+          : programCode as List<CodeableConcept>,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money,
       factor: factor == freezed ? _value.factor : factor as double,
@@ -13871,6 +14269,66 @@ class _$ClaimDetailCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
       subDetail:
           subDetail == freezed ? _value.subDetail : subDetail as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get revenue {
+    if (_value.revenue == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.revenue, (value) {
+      return _then(_value.copyWith(revenue: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get category {
+    if (_value.category == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
+      return _then(_value.copyWith(category: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get productOrService {
+    if (_value.productOrService == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.productOrService, (value) {
+      return _then(_value.copyWith(productOrService: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get unitPrice {
+    if (_value.unitPrice == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.unitPrice, (value) {
+      return _then(_value.copyWith(unitPrice: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get net {
+    if (_value.net == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.net, (value) {
+      return _then(_value.copyWith(net: value));
+    });
   }
 }
 
@@ -13912,9 +14370,9 @@ class _$ClaimDetail implements ClaimDetail {
   @override
   final CodeableConcept productOrService;
   @override
-  final List<dynamic> modifier;
+  final List<CodeableConcept> modifier;
   @override
-  final List<dynamic> programCode;
+  final List<CodeableConcept> programCode;
   @override
   final Quantity quantity;
   @override
@@ -14017,7 +14475,7 @@ class _$ClaimDetail implements ClaimDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -14093,7 +14551,7 @@ class _$ClaimDetail implements ClaimDetail {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -14102,7 +14560,7 @@ class _$ClaimDetail implements ClaimDetail {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -14141,8 +14599,8 @@ class _$ClaimDetail implements ClaimDetail {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -14154,7 +14612,7 @@ class _$ClaimDetail implements ClaimDetail {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -14166,8 +14624,8 @@ class _$ClaimDetail implements ClaimDetail {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -14183,8 +14641,8 @@ class _$ClaimDetail implements ClaimDetail {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -14201,7 +14659,7 @@ class _$ClaimDetail implements ClaimDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -14216,7 +14674,7 @@ class _$ClaimDetail implements ClaimDetail {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -14253,7 +14711,7 @@ class _$ClaimDetail implements ClaimDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -14325,8 +14783,8 @@ class _$ClaimDetail implements ClaimDetail {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -14337,7 +14795,7 @@ class _$ClaimDetail implements ClaimDetail {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -14347,7 +14805,7 @@ class _$ClaimDetail implements ClaimDetail {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -14361,7 +14819,7 @@ class _$ClaimDetail implements ClaimDetail {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -14475,7 +14933,7 @@ class _$ClaimDetail implements ClaimDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -14546,7 +15004,7 @@ class _$ClaimDetail implements ClaimDetail {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -14554,7 +15012,7 @@ class _$ClaimDetail implements ClaimDetail {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -14590,8 +15048,8 @@ class _$ClaimDetail implements ClaimDetail {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -14603,7 +15061,7 @@ class _$ClaimDetail implements ClaimDetail {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -14614,8 +15072,8 @@ class _$ClaimDetail implements ClaimDetail {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -14630,8 +15088,8 @@ class _$ClaimDetail implements ClaimDetail {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -14647,7 +15105,7 @@ class _$ClaimDetail implements ClaimDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -14662,7 +15120,7 @@ class _$ClaimDetail implements ClaimDetail {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -14695,7 +15153,7 @@ class _$ClaimDetail implements ClaimDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -14762,8 +15220,8 @@ class _$ClaimDetail implements ClaimDetail {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -14774,7 +15232,7 @@ class _$ClaimDetail implements ClaimDetail {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -14783,7 +15241,7 @@ class _$ClaimDetail implements ClaimDetail {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -14796,7 +15254,7 @@ class _$ClaimDetail implements ClaimDetail {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -14989,8 +15447,8 @@ abstract class ClaimDetail implements Billing {
       CodeableConcept revenue,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
-      List<dynamic> programCode,
+      List<CodeableConcept> modifier,
+      List<CodeableConcept> programCode,
       Quantity quantity,
       Money unitPrice,
       double factor,
@@ -15011,8 +15469,8 @@ abstract class ClaimDetail implements Billing {
   CodeableConcept get revenue;
   CodeableConcept get category;
   CodeableConcept get productOrService;
-  List<dynamic> get modifier;
-  List<dynamic> get programCode;
+  List<CodeableConcept> get modifier;
+  List<CodeableConcept> get programCode;
   Quantity get quantity;
   Money get unitPrice;
   double get factor;
@@ -15036,13 +15494,20 @@ abstract class $ClaimSubDetailCopyWith<$Res> implements $BillingCopyWith<$Res> {
       CodeableConcept revenue,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
-      List<dynamic> programCode,
+      List<CodeableConcept> modifier,
+      List<CodeableConcept> programCode,
       Quantity quantity,
       Money unitPrice,
       double factor,
       Money net,
       List<dynamic> udi});
+
+  $CodeableConceptCopyWith<$Res> get revenue;
+  $CodeableConceptCopyWith<$Res> get category;
+  $CodeableConceptCopyWith<$Res> get productOrService;
+  $QuantityCopyWith<$Res> get quantity;
+  $MoneyCopyWith<$Res> get unitPrice;
+  $MoneyCopyWith<$Res> get net;
 }
 
 class _$ClaimSubDetailCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -15086,17 +15551,78 @@ class _$ClaimSubDetailCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
       productOrService: productOrService == freezed
           ? _value.productOrService
           : productOrService as CodeableConcept,
-      modifier:
-          modifier == freezed ? _value.modifier : modifier as List<dynamic>,
+      modifier: modifier == freezed
+          ? _value.modifier
+          : modifier as List<CodeableConcept>,
       programCode: programCode == freezed
           ? _value.programCode
-          : programCode as List<dynamic>,
+          : programCode as List<CodeableConcept>,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money,
       factor: factor == freezed ? _value.factor : factor as double,
       net: net == freezed ? _value.net : net as Money,
       udi: udi == freezed ? _value.udi : udi as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get revenue {
+    if (_value.revenue == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.revenue, (value) {
+      return _then(_value.copyWith(revenue: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get category {
+    if (_value.category == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
+      return _then(_value.copyWith(category: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get productOrService {
+    if (_value.productOrService == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.productOrService, (value) {
+      return _then(_value.copyWith(productOrService: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get unitPrice {
+    if (_value.unitPrice == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.unitPrice, (value) {
+      return _then(_value.copyWith(unitPrice: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get net {
+    if (_value.net == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.net, (value) {
+      return _then(_value.copyWith(net: value));
+    });
   }
 }
 
@@ -15137,9 +15663,9 @@ class _$ClaimSubDetail implements ClaimSubDetail {
   @override
   final CodeableConcept productOrService;
   @override
-  final List<dynamic> modifier;
+  final List<CodeableConcept> modifier;
   @override
-  final List<dynamic> programCode;
+  final List<CodeableConcept> programCode;
   @override
   final Quantity quantity;
   @override
@@ -15236,7 +15762,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -15312,7 +15838,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -15321,7 +15847,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -15360,8 +15886,8 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -15373,7 +15899,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -15385,8 +15911,8 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -15402,8 +15928,8 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -15420,7 +15946,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -15435,7 +15961,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -15472,7 +15998,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -15544,8 +16070,8 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -15556,7 +16082,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -15566,7 +16092,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -15580,7 +16106,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -15693,7 +16219,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -15764,7 +16290,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -15772,7 +16298,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -15808,8 +16334,8 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -15821,7 +16347,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -15832,8 +16358,8 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -15848,8 +16374,8 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -15865,7 +16391,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -15880,7 +16406,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -15913,7 +16439,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -15980,8 +16506,8 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -15992,7 +16518,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -16001,7 +16527,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -16014,7 +16540,7 @@ class _$ClaimSubDetail implements ClaimSubDetail {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -16206,8 +16732,8 @@ abstract class ClaimSubDetail implements Billing {
       CodeableConcept revenue,
       CodeableConcept category,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
-      List<dynamic> programCode,
+      List<CodeableConcept> modifier,
+      List<CodeableConcept> programCode,
       Quantity quantity,
       Money unitPrice,
       double factor,
@@ -16227,8 +16753,8 @@ abstract class ClaimSubDetail implements Billing {
   CodeableConcept get revenue;
   CodeableConcept get category;
   CodeableConcept get productOrService;
-  List<dynamic> get modifier;
-  List<dynamic> get programCode;
+  List<CodeableConcept> get modifier;
+  List<CodeableConcept> get programCode;
   Quantity get quantity;
   Money get unitPrice;
   double get factor;
@@ -16252,7 +16778,7 @@ abstract class $InvoiceCopyWith<$Res> implements $BillingCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       InvoiceStatus status,
       String cancelledReason,
       CodeableConcept type,
@@ -16267,7 +16793,11 @@ abstract class $InvoiceCopyWith<$Res> implements $BillingCopyWith<$Res> {
       Money totalNet,
       Money totalGross,
       Markdown paymentTerms,
-      List<dynamic> note});
+      List<Annotation> note});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $MoneyCopyWith<$Res> get totalNet;
+  $MoneyCopyWith<$Res> get totalGross;
 }
 
 class _$InvoiceCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -16327,7 +16857,7 @@ class _$InvoiceCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as InvoiceStatus,
       cancelledReason: cancelledReason == freezed
           ? _value.cancelledReason
@@ -16353,8 +16883,38 @@ class _$InvoiceCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
       paymentTerms: paymentTerms == freezed
           ? _value.paymentTerms
           : paymentTerms as Markdown,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get totalNet {
+    if (_value.totalNet == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.totalNet, (value) {
+      return _then(_value.copyWith(totalNet: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get totalGross {
+    if (_value.totalGross == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.totalGross, (value) {
+      return _then(_value.copyWith(totalGross: value));
+    });
   }
 }
 
@@ -16410,7 +16970,7 @@ class _$Invoice implements Invoice {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final InvoiceStatus status;
   @override
@@ -16440,7 +17000,7 @@ class _$Invoice implements Invoice {
   @override
   final Markdown paymentTerms;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
 
   @override
   String toString() {
@@ -16567,7 +17127,7 @@ class _$Invoice implements Invoice {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -16643,7 +17203,7 @@ class _$Invoice implements Invoice {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -16652,7 +17212,7 @@ class _$Invoice implements Invoice {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -16691,8 +17251,8 @@ class _$Invoice implements Invoice {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -16704,7 +17264,7 @@ class _$Invoice implements Invoice {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -16716,8 +17276,8 @@ class _$Invoice implements Invoice {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -16733,8 +17293,8 @@ class _$Invoice implements Invoice {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -16751,7 +17311,7 @@ class _$Invoice implements Invoice {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -16766,7 +17326,7 @@ class _$Invoice implements Invoice {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -16803,7 +17363,7 @@ class _$Invoice implements Invoice {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -16875,8 +17435,8 @@ class _$Invoice implements Invoice {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -16887,7 +17447,7 @@ class _$Invoice implements Invoice {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -16897,7 +17457,7 @@ class _$Invoice implements Invoice {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -16911,7 +17471,7 @@ class _$Invoice implements Invoice {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -17035,7 +17595,7 @@ class _$Invoice implements Invoice {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -17106,7 +17666,7 @@ class _$Invoice implements Invoice {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -17114,7 +17674,7 @@ class _$Invoice implements Invoice {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -17150,8 +17710,8 @@ class _$Invoice implements Invoice {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -17163,7 +17723,7 @@ class _$Invoice implements Invoice {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -17174,8 +17734,8 @@ class _$Invoice implements Invoice {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -17190,8 +17750,8 @@ class _$Invoice implements Invoice {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -17207,7 +17767,7 @@ class _$Invoice implements Invoice {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -17222,7 +17782,7 @@ class _$Invoice implements Invoice {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -17255,7 +17815,7 @@ class _$Invoice implements Invoice {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -17322,8 +17882,8 @@ class _$Invoice implements Invoice {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -17334,7 +17894,7 @@ class _$Invoice implements Invoice {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -17343,7 +17903,7 @@ class _$Invoice implements Invoice {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -17356,7 +17916,7 @@ class _$Invoice implements Invoice {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -17561,7 +18121,7 @@ abstract class Invoice implements Billing {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       InvoiceStatus status,
       String cancelledReason,
       CodeableConcept type,
@@ -17576,7 +18136,7 @@ abstract class Invoice implements Billing {
       Money totalNet,
       Money totalGross,
       Markdown paymentTerms,
-      List<dynamic> note}) = _$Invoice;
+      List<Annotation> note}) = _$Invoice;
 
   factory Invoice.fromJson(Map<String, dynamic> json) = _$Invoice.fromJson;
 
@@ -17592,7 +18152,7 @@ abstract class Invoice implements Billing {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   InvoiceStatus get status;
   String get cancelledReason;
   CodeableConcept get type;
@@ -17607,7 +18167,7 @@ abstract class Invoice implements Billing {
   Money get totalNet;
   Money get totalGross;
   Markdown get paymentTerms;
-  List<dynamic> get note;
+  List<Annotation> get note;
   @override
   $InvoiceCopyWith<Invoice> get copyWith;
 }
@@ -17624,6 +18184,8 @@ abstract class $InvoiceParticipantCopyWith<$Res>
       List<dynamic> modifierExtension,
       CodeableConcept role,
       Reference actor});
+
+  $CodeableConceptCopyWith<$Res> get role;
 }
 
 class _$InvoiceParticipantCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -17654,6 +18216,16 @@ class _$InvoiceParticipantCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
       role: role == freezed ? _value.role : role as CodeableConcept,
       actor: actor == freezed ? _value.actor : actor as Reference,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get role {
+    if (_value.role == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
+      return _then(_value.copyWith(role: value));
+    });
   }
 }
 
@@ -17731,7 +18303,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -17807,7 +18379,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -17816,7 +18388,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -17855,8 +18427,8 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -17868,7 +18440,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -17880,8 +18452,8 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -17897,8 +18469,8 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -17915,7 +18487,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -17930,7 +18502,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -17967,7 +18539,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -18039,8 +18611,8 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -18051,7 +18623,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -18061,7 +18633,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -18075,7 +18647,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -18175,7 +18747,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -18246,7 +18818,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -18254,7 +18826,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -18290,8 +18862,8 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -18303,7 +18875,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -18314,8 +18886,8 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -18330,8 +18902,8 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -18347,7 +18919,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -18362,7 +18934,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -18395,7 +18967,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -18462,8 +19034,8 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -18474,7 +19046,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -18483,7 +19055,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -18496,7 +19068,7 @@ class _$InvoiceParticipant implements InvoiceParticipant {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -18704,6 +19276,8 @@ abstract class $InvoiceLineItemCopyWith<$Res>
       Reference chargeItemReference,
       CodeableConcept chargeItemCodeableConcept,
       List<dynamic> priceComponent});
+
+  $CodeableConceptCopyWith<$Res> get chargeItemCodeableConcept;
 }
 
 class _$InvoiceLineItemCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -18744,6 +19318,17 @@ class _$InvoiceLineItemCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
           ? _value.priceComponent
           : priceComponent as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get chargeItemCodeableConcept {
+    if (_value.chargeItemCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.chargeItemCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(chargeItemCodeableConcept: value));
+    });
   }
 }
 
@@ -18839,7 +19424,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -18915,7 +19500,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -18924,7 +19509,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -18963,8 +19548,8 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -18976,7 +19561,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -18988,8 +19573,8 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -19005,8 +19590,8 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -19023,7 +19608,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -19038,7 +19623,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -19075,7 +19660,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -19147,8 +19732,8 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -19159,7 +19744,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -19169,7 +19754,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -19183,7 +19768,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -19283,7 +19868,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -19354,7 +19939,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -19362,7 +19947,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -19398,8 +19983,8 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -19411,7 +19996,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -19422,8 +20007,8 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -19438,8 +20023,8 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -19455,7 +20040,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -19470,7 +20055,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -19503,7 +20088,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -19570,8 +20155,8 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -19582,7 +20167,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -19591,7 +20176,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -19604,7 +20189,7 @@ class _$InvoiceLineItem implements InvoiceLineItem {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -19815,6 +20400,9 @@ abstract class $InvoicePriceComponentCopyWith<$Res>
       CodeableConcept code,
       double factor,
       Money amount});
+
+  $CodeableConceptCopyWith<$Res> get code;
+  $MoneyCopyWith<$Res> get amount;
 }
 
 class _$InvoicePriceComponentCopyWithImpl<$Res>
@@ -19850,6 +20438,26 @@ class _$InvoicePriceComponentCopyWithImpl<$Res>
       factor: factor == freezed ? _value.factor : factor as double,
       amount: amount == freezed ? _value.amount : amount as Money,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get amount {
+    if (_value.amount == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.amount, (value) {
+      return _then(_value.copyWith(amount: value));
+    });
   }
 }
 
@@ -19940,7 +20548,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -20016,7 +20624,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -20025,7 +20633,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -20064,8 +20672,8 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -20077,7 +20685,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -20089,8 +20697,8 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -20106,8 +20714,8 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -20124,7 +20732,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -20139,7 +20747,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -20176,7 +20784,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -20248,8 +20856,8 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -20260,7 +20868,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -20270,7 +20878,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -20284,7 +20892,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -20384,7 +20992,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -20455,7 +21063,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -20463,7 +21071,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -20499,8 +21107,8 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -20512,7 +21120,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -20523,8 +21131,8 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -20539,8 +21147,8 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -20556,7 +21164,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -20571,7 +21179,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -20604,7 +21212,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -20671,8 +21279,8 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -20683,7 +21291,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -20692,7 +21300,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -20705,7 +21313,7 @@ class _$InvoicePriceComponent implements InvoicePriceComponent {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -20918,7 +21526,7 @@ abstract class $ClaimResponseCopyWith<$Res> implements $BillingCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       CodeableConcept type,
       CodeableConcept subType,
@@ -20945,6 +21553,14 @@ abstract class $ClaimResponseCopyWith<$Res> implements $BillingCopyWith<$Res> {
       List<dynamic> communicationRequest,
       List<dynamic> insurance,
       List<dynamic> error});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $CodeableConceptCopyWith<$Res> get subType;
+  $PeriodCopyWith<$Res> get preAuthPeriod;
+  $CodeableConceptCopyWith<$Res> get payeeType;
+  $CodeableConceptCopyWith<$Res> get fundsReserve;
+  $CodeableConceptCopyWith<$Res> get formCode;
+  $AttachmentCopyWith<$Res> get form;
 }
 
 class _$ClaimResponseCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -21016,7 +21632,7 @@ class _$ClaimResponseCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
       type: type == freezed ? _value.type : type as CodeableConcept,
       subType: subType == freezed ? _value.subType : subType as CodeableConcept,
@@ -21062,6 +21678,76 @@ class _$ClaimResponseCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
           insurance == freezed ? _value.insurance : insurance as List<dynamic>,
       error: error == freezed ? _value.error : error as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get subType {
+    if (_value.subType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.subType, (value) {
+      return _then(_value.copyWith(subType: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get preAuthPeriod {
+    if (_value.preAuthPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.preAuthPeriod, (value) {
+      return _then(_value.copyWith(preAuthPeriod: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get payeeType {
+    if (_value.payeeType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.payeeType, (value) {
+      return _then(_value.copyWith(payeeType: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get fundsReserve {
+    if (_value.fundsReserve == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.fundsReserve, (value) {
+      return _then(_value.copyWith(fundsReserve: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get formCode {
+    if (_value.formCode == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.formCode, (value) {
+      return _then(_value.copyWith(formCode: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get form {
+    if (_value.form == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.form, (value) {
+      return _then(_value.copyWith(form: value));
+    });
   }
 }
 
@@ -21128,7 +21814,7 @@ class _$ClaimResponse implements ClaimResponse {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Code status;
   @override
@@ -21330,7 +22016,7 @@ class _$ClaimResponse implements ClaimResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -21406,7 +22092,7 @@ class _$ClaimResponse implements ClaimResponse {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -21415,7 +22101,7 @@ class _$ClaimResponse implements ClaimResponse {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -21454,8 +22140,8 @@ class _$ClaimResponse implements ClaimResponse {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -21467,7 +22153,7 @@ class _$ClaimResponse implements ClaimResponse {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -21479,8 +22165,8 @@ class _$ClaimResponse implements ClaimResponse {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -21496,8 +22182,8 @@ class _$ClaimResponse implements ClaimResponse {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -21514,7 +22200,7 @@ class _$ClaimResponse implements ClaimResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -21529,7 +22215,7 @@ class _$ClaimResponse implements ClaimResponse {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -21566,7 +22252,7 @@ class _$ClaimResponse implements ClaimResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -21638,8 +22324,8 @@ class _$ClaimResponse implements ClaimResponse {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -21650,7 +22336,7 @@ class _$ClaimResponse implements ClaimResponse {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -21660,7 +22346,7 @@ class _$ClaimResponse implements ClaimResponse {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -21674,7 +22360,7 @@ class _$ClaimResponse implements ClaimResponse {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -21809,7 +22495,7 @@ class _$ClaimResponse implements ClaimResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -21880,7 +22566,7 @@ class _$ClaimResponse implements ClaimResponse {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -21888,7 +22574,7 @@ class _$ClaimResponse implements ClaimResponse {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -21924,8 +22610,8 @@ class _$ClaimResponse implements ClaimResponse {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -21937,7 +22623,7 @@ class _$ClaimResponse implements ClaimResponse {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -21948,8 +22634,8 @@ class _$ClaimResponse implements ClaimResponse {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -21964,8 +22650,8 @@ class _$ClaimResponse implements ClaimResponse {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -21981,7 +22667,7 @@ class _$ClaimResponse implements ClaimResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -21996,7 +22682,7 @@ class _$ClaimResponse implements ClaimResponse {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -22029,7 +22715,7 @@ class _$ClaimResponse implements ClaimResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -22096,8 +22782,8 @@ class _$ClaimResponse implements ClaimResponse {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -22108,7 +22794,7 @@ class _$ClaimResponse implements ClaimResponse {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -22117,7 +22803,7 @@ class _$ClaimResponse implements ClaimResponse {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -22130,7 +22816,7 @@ class _$ClaimResponse implements ClaimResponse {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -22346,7 +23032,7 @@ abstract class ClaimResponse implements Billing {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       CodeableConcept type,
       CodeableConcept subType,
@@ -22389,7 +23075,7 @@ abstract class ClaimResponse implements Billing {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   Code get status;
   CodeableConcept get type;
   CodeableConcept get subType;
@@ -22564,7 +23250,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -22640,7 +23326,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -22649,7 +23335,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -22688,8 +23374,8 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -22701,7 +23387,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -22713,8 +23399,8 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -22730,8 +23416,8 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -22748,7 +23434,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -22763,7 +23449,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -22800,7 +23486,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -22872,8 +23558,8 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -22884,7 +23570,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -22894,7 +23580,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -22908,7 +23594,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -23008,7 +23694,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -23079,7 +23765,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -23087,7 +23773,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -23123,8 +23809,8 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -23136,7 +23822,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -23147,8 +23833,8 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -23163,8 +23849,8 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -23180,7 +23866,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -23195,7 +23881,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -23228,7 +23914,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -23295,8 +23981,8 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -23307,7 +23993,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -23316,7 +24002,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -23329,7 +24015,7 @@ class _$ClaimResponseItem implements ClaimResponseItem {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -23541,6 +24227,10 @@ abstract class $ClaimResponseAdjudicationCopyWith<$Res>
       CodeableConcept reason,
       Money amount,
       double value});
+
+  $CodeableConceptCopyWith<$Res> get category;
+  $CodeableConceptCopyWith<$Res> get reason;
+  $MoneyCopyWith<$Res> get amount;
 }
 
 class _$ClaimResponseAdjudicationCopyWithImpl<$Res>
@@ -23578,6 +24268,36 @@ class _$ClaimResponseAdjudicationCopyWithImpl<$Res>
       amount: amount == freezed ? _value.amount : amount as Money,
       value: value == freezed ? _value.value : value as double,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get category {
+    if (_value.category == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
+      return _then(_value.copyWith(category: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get reason {
+    if (_value.reason == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.reason, (value) {
+      return _then(_value.copyWith(reason: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get amount {
+    if (_value.amount == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.amount, (value) {
+      return _then(_value.copyWith(amount: value));
+    });
   }
 }
 
@@ -23669,7 +24389,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -23745,7 +24465,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -23754,7 +24474,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -23793,8 +24513,8 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -23806,7 +24526,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -23818,8 +24538,8 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -23835,8 +24555,8 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -23853,7 +24573,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -23868,7 +24588,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -23905,7 +24625,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -23977,8 +24697,8 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -23989,7 +24709,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -23999,7 +24719,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -24013,7 +24733,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -24113,7 +24833,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -24184,7 +24904,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -24192,7 +24912,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -24228,8 +24948,8 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -24241,7 +24961,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -24252,8 +24972,8 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -24268,8 +24988,8 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -24285,7 +25005,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -24300,7 +25020,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -24333,7 +25053,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -24400,8 +25120,8 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -24412,7 +25132,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -24421,7 +25141,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -24434,7 +25154,7 @@ class _$ClaimResponseAdjudication implements ClaimResponseAdjudication {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -24780,7 +25500,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -24856,7 +25576,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -24865,7 +25585,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -24904,8 +25624,8 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -24917,7 +25637,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -24929,8 +25649,8 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -24946,8 +25666,8 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -24964,7 +25684,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -24979,7 +25699,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -25016,7 +25736,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -25088,8 +25808,8 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -25100,7 +25820,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -25110,7 +25830,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -25124,7 +25844,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -25224,7 +25944,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -25295,7 +26015,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -25303,7 +26023,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -25339,8 +26059,8 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -25352,7 +26072,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -25363,8 +26083,8 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -25379,8 +26099,8 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -25396,7 +26116,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -25411,7 +26131,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -25444,7 +26164,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -25511,8 +26231,8 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -25523,7 +26243,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -25532,7 +26252,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -25545,7 +26265,7 @@ class _$ClaimResponseDetail implements ClaimResponseDetail {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -25881,7 +26601,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -25957,7 +26677,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -25966,7 +26686,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -26005,8 +26725,8 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -26018,7 +26738,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -26030,8 +26750,8 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -26047,8 +26767,8 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -26065,7 +26785,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -26080,7 +26800,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -26117,7 +26837,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -26189,8 +26909,8 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -26201,7 +26921,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -26211,7 +26931,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -26225,7 +26945,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -26325,7 +27045,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -26396,7 +27116,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -26404,7 +27124,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -26440,8 +27160,8 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -26453,7 +27173,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -26464,8 +27184,8 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -26480,8 +27200,8 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -26497,7 +27217,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -26512,7 +27232,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -26545,7 +27265,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -26612,8 +27332,8 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -26624,7 +27344,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -26633,7 +27353,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -26646,7 +27366,7 @@ class _$ClaimResponseSubDetail implements ClaimResponseSubDetail {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -26857,8 +27577,8 @@ abstract class $ClaimResponseAddItemCopyWith<$Res>
       List<int> subdetailSequence,
       List<dynamic> provider,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
-      List<dynamic> programCode,
+      List<CodeableConcept> modifier,
+      List<CodeableConcept> programCode,
       Date servicedDate,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
@@ -26869,10 +27589,19 @@ abstract class $ClaimResponseAddItemCopyWith<$Res>
       double factor,
       Money net,
       CodeableConcept bodySite,
-      List<dynamic> subSite,
+      List<CodeableConcept> subSite,
       List<int> noteNumber,
       List<dynamic> adjudication,
       List<dynamic> detail});
+
+  $CodeableConceptCopyWith<$Res> get productOrService;
+  $PeriodCopyWith<$Res> get servicedPeriod;
+  $CodeableConceptCopyWith<$Res> get locationCodeableConcept;
+  $AddressCopyWith<$Res> get locationAddress;
+  $QuantityCopyWith<$Res> get quantity;
+  $MoneyCopyWith<$Res> get unitPrice;
+  $MoneyCopyWith<$Res> get net;
+  $CodeableConceptCopyWith<$Res> get bodySite;
 }
 
 class _$ClaimResponseAddItemCopyWithImpl<$Res>
@@ -26934,11 +27663,12 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res>
       productOrService: productOrService == freezed
           ? _value.productOrService
           : productOrService as CodeableConcept,
-      modifier:
-          modifier == freezed ? _value.modifier : modifier as List<dynamic>,
+      modifier: modifier == freezed
+          ? _value.modifier
+          : modifier as List<CodeableConcept>,
       programCode: programCode == freezed
           ? _value.programCode
-          : programCode as List<dynamic>,
+          : programCode as List<CodeableConcept>,
       servicedDate:
           servicedDate == freezed ? _value.servicedDate : servicedDate as Date,
       servicedPeriod: servicedPeriod == freezed
@@ -26959,7 +27689,9 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res>
       net: net == freezed ? _value.net : net as Money,
       bodySite:
           bodySite == freezed ? _value.bodySite : bodySite as CodeableConcept,
-      subSite: subSite == freezed ? _value.subSite : subSite as List<dynamic>,
+      subSite: subSite == freezed
+          ? _value.subSite
+          : subSite as List<CodeableConcept>,
       noteNumber:
           noteNumber == freezed ? _value.noteNumber : noteNumber as List<int>,
       adjudication: adjudication == freezed
@@ -26967,6 +27699,87 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res>
           : adjudication as List<dynamic>,
       detail: detail == freezed ? _value.detail : detail as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get productOrService {
+    if (_value.productOrService == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.productOrService, (value) {
+      return _then(_value.copyWith(productOrService: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get servicedPeriod {
+    if (_value.servicedPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.servicedPeriod, (value) {
+      return _then(_value.copyWith(servicedPeriod: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get locationCodeableConcept {
+    if (_value.locationCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.locationCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(locationCodeableConcept: value));
+    });
+  }
+
+  @override
+  $AddressCopyWith<$Res> get locationAddress {
+    if (_value.locationAddress == null) {
+      return null;
+    }
+    return $AddressCopyWith<$Res>(_value.locationAddress, (value) {
+      return _then(_value.copyWith(locationAddress: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get unitPrice {
+    if (_value.unitPrice == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.unitPrice, (value) {
+      return _then(_value.copyWith(unitPrice: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get net {
+    if (_value.net == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.net, (value) {
+      return _then(_value.copyWith(net: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get bodySite {
+    if (_value.bodySite == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.bodySite, (value) {
+      return _then(_value.copyWith(bodySite: value));
+    });
   }
 }
 
@@ -27019,9 +27832,9 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
   @override
   final CodeableConcept productOrService;
   @override
-  final List<dynamic> modifier;
+  final List<CodeableConcept> modifier;
   @override
-  final List<dynamic> programCode;
+  final List<CodeableConcept> programCode;
   @override
   final Date servicedDate;
   @override
@@ -27043,7 +27856,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
   @override
   final CodeableConcept bodySite;
   @override
-  final List<dynamic> subSite;
+  final List<CodeableConcept> subSite;
   @override
   final List<int> noteNumber;
   @override
@@ -27173,7 +27986,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -27249,7 +28062,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -27258,7 +28071,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -27297,8 +28110,8 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -27310,7 +28123,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -27322,8 +28135,8 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -27339,8 +28152,8 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -27357,7 +28170,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -27372,7 +28185,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -27409,7 +28222,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -27481,8 +28294,8 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -27493,7 +28306,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -27503,7 +28316,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -27517,7 +28330,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -27640,7 +28453,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -27711,7 +28524,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -27719,7 +28532,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -27755,8 +28568,8 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -27768,7 +28581,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -27779,8 +28592,8 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -27795,8 +28608,8 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -27812,7 +28625,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -27827,7 +28640,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -27860,7 +28673,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -27927,8 +28740,8 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -27939,7 +28752,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -27948,7 +28761,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -27961,7 +28774,7 @@ class _$ClaimResponseAddItem implements ClaimResponseAddItem {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -28165,8 +28978,8 @@ abstract class ClaimResponseAddItem implements Billing {
       List<int> subdetailSequence,
       List<dynamic> provider,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
-      List<dynamic> programCode,
+      List<CodeableConcept> modifier,
+      List<CodeableConcept> programCode,
       Date servicedDate,
       Period servicedPeriod,
       CodeableConcept locationCodeableConcept,
@@ -28177,7 +28990,7 @@ abstract class ClaimResponseAddItem implements Billing {
       double factor,
       Money net,
       CodeableConcept bodySite,
-      List<dynamic> subSite,
+      List<CodeableConcept> subSite,
       List<int> noteNumber,
       List<dynamic> adjudication,
       List<dynamic> detail}) = _$ClaimResponseAddItem;
@@ -28196,8 +29009,8 @@ abstract class ClaimResponseAddItem implements Billing {
   List<int> get subdetailSequence;
   List<dynamic> get provider;
   CodeableConcept get productOrService;
-  List<dynamic> get modifier;
-  List<dynamic> get programCode;
+  List<CodeableConcept> get modifier;
+  List<CodeableConcept> get programCode;
   Date get servicedDate;
   Period get servicedPeriod;
   CodeableConcept get locationCodeableConcept;
@@ -28208,7 +29021,7 @@ abstract class ClaimResponseAddItem implements Billing {
   double get factor;
   Money get net;
   CodeableConcept get bodySite;
-  List<dynamic> get subSite;
+  List<CodeableConcept> get subSite;
   List<int> get noteNumber;
   List<dynamic> get adjudication;
   List<dynamic> get detail;
@@ -28227,7 +29040,7 @@ abstract class $ClaimResponseDetail1CopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
+      List<CodeableConcept> modifier,
       Quantity quantity,
       Money unitPrice,
       double factor,
@@ -28235,6 +29048,11 @@ abstract class $ClaimResponseDetail1CopyWith<$Res>
       List<int> noteNumber,
       List<dynamic> adjudication,
       List<dynamic> subDetail});
+
+  $CodeableConceptCopyWith<$Res> get productOrService;
+  $QuantityCopyWith<$Res> get quantity;
+  $MoneyCopyWith<$Res> get unitPrice;
+  $MoneyCopyWith<$Res> get net;
 }
 
 class _$ClaimResponseDetail1CopyWithImpl<$Res>
@@ -28273,8 +29091,9 @@ class _$ClaimResponseDetail1CopyWithImpl<$Res>
       productOrService: productOrService == freezed
           ? _value.productOrService
           : productOrService as CodeableConcept,
-      modifier:
-          modifier == freezed ? _value.modifier : modifier as List<dynamic>,
+      modifier: modifier == freezed
+          ? _value.modifier
+          : modifier as List<CodeableConcept>,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money,
       factor: factor == freezed ? _value.factor : factor as double,
@@ -28287,6 +29106,46 @@ class _$ClaimResponseDetail1CopyWithImpl<$Res>
       subDetail:
           subDetail == freezed ? _value.subDetail : subDetail as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get productOrService {
+    if (_value.productOrService == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.productOrService, (value) {
+      return _then(_value.copyWith(productOrService: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get unitPrice {
+    if (_value.unitPrice == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.unitPrice, (value) {
+      return _then(_value.copyWith(unitPrice: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get net {
+    if (_value.net == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.net, (value) {
+      return _then(_value.copyWith(net: value));
+    });
   }
 }
 
@@ -28319,7 +29178,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
   @override
   final CodeableConcept productOrService;
   @override
-  final List<dynamic> modifier;
+  final List<CodeableConcept> modifier;
   @override
   final Quantity quantity;
   @override
@@ -28414,7 +29273,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -28490,7 +29349,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -28499,7 +29358,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -28538,8 +29397,8 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -28551,7 +29410,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -28563,8 +29422,8 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -28580,8 +29439,8 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -28598,7 +29457,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -28613,7 +29472,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -28650,7 +29509,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -28722,8 +29581,8 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -28734,7 +29593,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -28744,7 +29603,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -28758,7 +29617,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -28869,7 +29728,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -28940,7 +29799,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -28948,7 +29807,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -28984,8 +29843,8 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -28997,7 +29856,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -29008,8 +29867,8 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -29024,8 +29883,8 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -29041,7 +29900,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -29056,7 +29915,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -29089,7 +29948,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -29156,8 +30015,8 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -29168,7 +30027,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -29177,7 +30036,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -29190,7 +30049,7 @@ class _$ClaimResponseDetail1 implements ClaimResponseDetail1 {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -29378,7 +30237,7 @@ abstract class ClaimResponseDetail1 implements Billing {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
+      List<CodeableConcept> modifier,
       Quantity quantity,
       Money unitPrice,
       double factor,
@@ -29397,7 +30256,7 @@ abstract class ClaimResponseDetail1 implements Billing {
   @override
   List<dynamic> get modifierExtension;
   CodeableConcept get productOrService;
-  List<dynamic> get modifier;
+  List<CodeableConcept> get modifier;
   Quantity get quantity;
   Money get unitPrice;
   double get factor;
@@ -29420,13 +30279,18 @@ abstract class $ClaimResponseSubDetail1CopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
+      List<CodeableConcept> modifier,
       Quantity quantity,
       Money unitPrice,
       double factor,
       Money net,
       List<int> noteNumber,
       List<dynamic> adjudication});
+
+  $CodeableConceptCopyWith<$Res> get productOrService;
+  $QuantityCopyWith<$Res> get quantity;
+  $MoneyCopyWith<$Res> get unitPrice;
+  $MoneyCopyWith<$Res> get net;
 }
 
 class _$ClaimResponseSubDetail1CopyWithImpl<$Res>
@@ -29464,8 +30328,9 @@ class _$ClaimResponseSubDetail1CopyWithImpl<$Res>
       productOrService: productOrService == freezed
           ? _value.productOrService
           : productOrService as CodeableConcept,
-      modifier:
-          modifier == freezed ? _value.modifier : modifier as List<dynamic>,
+      modifier: modifier == freezed
+          ? _value.modifier
+          : modifier as List<CodeableConcept>,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money,
       factor: factor == freezed ? _value.factor : factor as double,
@@ -29476,6 +30341,46 @@ class _$ClaimResponseSubDetail1CopyWithImpl<$Res>
           ? _value.adjudication
           : adjudication as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get productOrService {
+    if (_value.productOrService == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.productOrService, (value) {
+      return _then(_value.copyWith(productOrService: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get unitPrice {
+    if (_value.unitPrice == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.unitPrice, (value) {
+      return _then(_value.copyWith(unitPrice: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get net {
+    if (_value.net == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.net, (value) {
+      return _then(_value.copyWith(net: value));
+    });
   }
 }
 
@@ -29507,7 +30412,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
   @override
   final CodeableConcept productOrService;
   @override
-  final List<dynamic> modifier;
+  final List<CodeableConcept> modifier;
   @override
   final Quantity quantity;
   @override
@@ -29596,7 +30501,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -29672,7 +30577,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -29681,7 +30586,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -29720,8 +30625,8 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -29733,7 +30638,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -29745,8 +30650,8 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -29762,8 +30667,8 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -29780,7 +30685,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -29795,7 +30700,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -29832,7 +30737,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -29904,8 +30809,8 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -29916,7 +30821,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -29926,7 +30831,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -29940,7 +30845,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -30050,7 +30955,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -30121,7 +31026,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -30129,7 +31034,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -30165,8 +31070,8 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -30178,7 +31083,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -30189,8 +31094,8 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -30205,8 +31110,8 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -30222,7 +31127,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -30237,7 +31142,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -30270,7 +31175,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -30337,8 +31242,8 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -30349,7 +31254,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -30358,7 +31263,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -30371,7 +31276,7 @@ class _$ClaimResponseSubDetail1 implements ClaimResponseSubDetail1 {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -30558,7 +31463,7 @@ abstract class ClaimResponseSubDetail1 implements Billing {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept productOrService,
-      List<dynamic> modifier,
+      List<CodeableConcept> modifier,
       Quantity quantity,
       Money unitPrice,
       double factor,
@@ -30576,7 +31481,7 @@ abstract class ClaimResponseSubDetail1 implements Billing {
   @override
   List<dynamic> get modifierExtension;
   CodeableConcept get productOrService;
-  List<dynamic> get modifier;
+  List<CodeableConcept> get modifier;
   Quantity get quantity;
   Money get unitPrice;
   double get factor;
@@ -30599,6 +31504,9 @@ abstract class $ClaimResponseTotalCopyWith<$Res>
       List<dynamic> modifierExtension,
       CodeableConcept category,
       Money amount});
+
+  $CodeableConceptCopyWith<$Res> get category;
+  $MoneyCopyWith<$Res> get amount;
 }
 
 class _$ClaimResponseTotalCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -30630,6 +31538,26 @@ class _$ClaimResponseTotalCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
           category == freezed ? _value.category : category as CodeableConcept,
       amount: amount == freezed ? _value.amount : amount as Money,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get category {
+    if (_value.category == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
+      return _then(_value.copyWith(category: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get amount {
+    if (_value.amount == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.amount, (value) {
+      return _then(_value.copyWith(amount: value));
+    });
   }
 }
 
@@ -30708,7 +31636,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -30784,7 +31712,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -30793,7 +31721,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -30832,8 +31760,8 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -30845,7 +31773,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -30857,8 +31785,8 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -30874,8 +31802,8 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -30892,7 +31820,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -30907,7 +31835,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -30944,7 +31872,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -31016,8 +31944,8 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -31028,7 +31956,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -31038,7 +31966,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -31052,7 +31980,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -31152,7 +32080,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -31223,7 +32151,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -31231,7 +32159,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -31267,8 +32195,8 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -31280,7 +32208,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -31291,8 +32219,8 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -31307,8 +32235,8 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -31324,7 +32252,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -31339,7 +32267,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -31372,7 +32300,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -31439,8 +32367,8 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -31451,7 +32379,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -31460,7 +32388,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -31473,7 +32401,7 @@ class _$ClaimResponseTotal implements ClaimResponseTotal {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -31683,6 +32611,12 @@ abstract class $ClaimResponsePaymentCopyWith<$Res>
       Date date,
       Money amount,
       Identifier identifier});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $MoneyCopyWith<$Res> get adjustment;
+  $CodeableConceptCopyWith<$Res> get adjustmentReason;
+  $MoneyCopyWith<$Res> get amount;
+  $IdentifierCopyWith<$Res> get identifier;
 }
 
 class _$ClaimResponsePaymentCopyWithImpl<$Res>
@@ -31726,6 +32660,56 @@ class _$ClaimResponsePaymentCopyWithImpl<$Res>
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get adjustment {
+    if (_value.adjustment == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.adjustment, (value) {
+      return _then(_value.copyWith(adjustment: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get adjustmentReason {
+    if (_value.adjustmentReason == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.adjustmentReason, (value) {
+      return _then(_value.copyWith(adjustmentReason: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get amount {
+    if (_value.amount == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.amount, (value) {
+      return _then(_value.copyWith(amount: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
   }
 }
 
@@ -31831,7 +32815,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -31907,7 +32891,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -31916,7 +32900,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -31955,8 +32939,8 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -31968,7 +32952,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -31980,8 +32964,8 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -31997,8 +32981,8 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -32015,7 +32999,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -32030,7 +33014,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -32067,7 +33051,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -32139,8 +33123,8 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -32151,7 +33135,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -32161,7 +33145,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -32175,7 +33159,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -32275,7 +33259,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -32346,7 +33330,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -32354,7 +33338,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -32390,8 +33374,8 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -32403,7 +33387,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -32414,8 +33398,8 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -32430,8 +33414,8 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -32447,7 +33431,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -32462,7 +33446,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -32495,7 +33479,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -32562,8 +33546,8 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -32574,7 +33558,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -32583,7 +33567,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -32596,7 +33580,7 @@ class _$ClaimResponsePayment implements ClaimResponsePayment {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -32812,6 +33796,8 @@ abstract class $ClaimResponseProcessNoteCopyWith<$Res>
       ClaimResponseProcessNoteType type,
       String text,
       CodeableConcept language});
+
+  $CodeableConceptCopyWith<$Res> get language;
 }
 
 class _$ClaimResponseProcessNoteCopyWithImpl<$Res>
@@ -32850,6 +33836,16 @@ class _$ClaimResponseProcessNoteCopyWithImpl<$Res>
       language:
           language == freezed ? _value.language : language as CodeableConcept,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get language {
+    if (_value.language == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.language, (value) {
+      return _then(_value.copyWith(language: value));
+    });
   }
 }
 
@@ -32941,7 +33937,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -33017,7 +34013,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -33026,7 +34022,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -33065,8 +34061,8 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -33078,7 +34074,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -33090,8 +34086,8 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -33107,8 +34103,8 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -33125,7 +34121,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -33140,7 +34136,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -33177,7 +34173,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -33249,8 +34245,8 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -33261,7 +34257,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -33271,7 +34267,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -33285,7 +34281,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -33385,7 +34381,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -33456,7 +34452,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -33464,7 +34460,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -33500,8 +34496,8 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -33513,7 +34509,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -33524,8 +34520,8 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -33540,8 +34536,8 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -33557,7 +34553,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -33572,7 +34568,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -33605,7 +34601,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -33672,8 +34668,8 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -33684,7 +34680,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -33693,7 +34689,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -33706,7 +34702,7 @@ class _$ClaimResponseProcessNote implements ClaimResponseProcessNote {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -34060,7 +35056,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -34136,7 +35132,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -34145,7 +35141,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -34184,8 +35180,8 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -34197,7 +35193,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -34209,8 +35205,8 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -34226,8 +35222,8 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -34244,7 +35240,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -34259,7 +35255,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -34296,7 +35292,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -34368,8 +35364,8 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -34380,7 +35376,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -34390,7 +35386,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -34404,7 +35400,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -34504,7 +35500,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -34575,7 +35571,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -34583,7 +35579,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -34619,8 +35615,8 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -34632,7 +35628,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -34643,8 +35639,8 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -34659,8 +35655,8 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -34676,7 +35672,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -34691,7 +35687,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -34724,7 +35720,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -34791,8 +35787,8 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -34803,7 +35799,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -34812,7 +35808,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -34825,7 +35821,7 @@ class _$ClaimResponseInsurance implements ClaimResponseInsurance {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -35039,6 +36035,8 @@ abstract class $ClaimResponseErrorCopyWith<$Res>
       int detailSequence,
       int subDetailSequence,
       CodeableConcept code});
+
+  $CodeableConceptCopyWith<$Res> get code;
 }
 
 class _$ClaimResponseErrorCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
@@ -35078,6 +36076,16 @@ class _$ClaimResponseErrorCopyWithImpl<$Res> extends _$BillingCopyWithImpl<$Res>
           : subDetailSequence as int,
       code: code == freezed ? _value.code : code as CodeableConcept,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
   }
 }
 
@@ -35170,7 +36178,7 @@ class _$ClaimResponseError implements ClaimResponseError {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -35246,7 +36254,7 @@ class _$ClaimResponseError implements ClaimResponseError {
             int sequence,
             CodeableConcept diagnosisCodeableConcept,
             Reference diagnosisReference,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             CodeableConcept onAdmission,
             CodeableConcept packageCode),
     @required
@@ -35255,7 +36263,7 @@ class _$ClaimResponseError implements ClaimResponseError {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             int sequence,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             FhirDateTime date,
             CodeableConcept procedureCodeableConcept,
             Reference procedureReference,
@@ -35294,8 +36302,8 @@ class _$ClaimResponseError implements ClaimResponseError {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -35307,7 +36315,7 @@ class _$ClaimResponseError implements ClaimResponseError {
             Money net,
             List<dynamic> udi,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<dynamic> encounter,
             List<dynamic> detail),
     @required
@@ -35319,8 +36327,8 @@ class _$ClaimResponseError implements ClaimResponseError {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -35336,8 +36344,8 @@ class _$ClaimResponseError implements ClaimResponseError {
             CodeableConcept revenue,
             CodeableConcept category,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -35354,7 +36362,7 @@ class _$ClaimResponseError implements ClaimResponseError {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             InvoiceStatus status,
             String cancelledReason,
             CodeableConcept type,
@@ -35369,7 +36377,7 @@ class _$ClaimResponseError implements ClaimResponseError {
             Money totalNet,
             Money totalGross,
             Markdown paymentTerms,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result invoiceParticipant(
             String id,
@@ -35406,7 +36414,7 @@ class _$ClaimResponseError implements ClaimResponseError {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             CodeableConcept type,
             CodeableConcept subType,
@@ -35478,8 +36486,8 @@ class _$ClaimResponseError implements ClaimResponseError {
             List<int> subdetailSequence,
             List<dynamic> provider,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
-            List<dynamic> programCode,
+            List<CodeableConcept> modifier,
+            List<CodeableConcept> programCode,
             Date servicedDate,
             Period servicedPeriod,
             CodeableConcept locationCodeableConcept,
@@ -35490,7 +36498,7 @@ class _$ClaimResponseError implements ClaimResponseError {
             double factor,
             Money net,
             CodeableConcept bodySite,
-            List<dynamic> subSite,
+            List<CodeableConcept> subSite,
             List<int> noteNumber,
             List<dynamic> adjudication,
             List<dynamic> detail),
@@ -35500,7 +36508,7 @@ class _$ClaimResponseError implements ClaimResponseError {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -35514,7 +36522,7 @@ class _$ClaimResponseError implements ClaimResponseError {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept productOrService,
-            List<dynamic> modifier,
+            List<CodeableConcept> modifier,
             Quantity quantity,
             Money unitPrice,
             double factor,
@@ -35614,7 +36622,7 @@ class _$ClaimResponseError implements ClaimResponseError {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -35685,7 +36693,7 @@ class _$ClaimResponseError implements ClaimResponseError {
         int sequence,
         CodeableConcept diagnosisCodeableConcept,
         Reference diagnosisReference,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         CodeableConcept onAdmission,
         CodeableConcept packageCode),
     Result claimProcedure(
@@ -35693,7 +36701,7 @@ class _$ClaimResponseError implements ClaimResponseError {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         int sequence,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         FhirDateTime date,
         CodeableConcept procedureCodeableConcept,
         Reference procedureReference,
@@ -35729,8 +36737,8 @@ class _$ClaimResponseError implements ClaimResponseError {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -35742,7 +36750,7 @@ class _$ClaimResponseError implements ClaimResponseError {
         Money net,
         List<dynamic> udi,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<dynamic> encounter,
         List<dynamic> detail),
     Result claimDetail(
@@ -35753,8 +36761,8 @@ class _$ClaimResponseError implements ClaimResponseError {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -35769,8 +36777,8 @@ class _$ClaimResponseError implements ClaimResponseError {
         CodeableConcept revenue,
         CodeableConcept category,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -35786,7 +36794,7 @@ class _$ClaimResponseError implements ClaimResponseError {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         InvoiceStatus status,
         String cancelledReason,
         CodeableConcept type,
@@ -35801,7 +36809,7 @@ class _$ClaimResponseError implements ClaimResponseError {
         Money totalNet,
         Money totalGross,
         Markdown paymentTerms,
-        List<dynamic> note),
+        List<Annotation> note),
     Result invoiceParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -35834,7 +36842,7 @@ class _$ClaimResponseError implements ClaimResponseError {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         CodeableConcept type,
         CodeableConcept subType,
@@ -35901,8 +36909,8 @@ class _$ClaimResponseError implements ClaimResponseError {
         List<int> subdetailSequence,
         List<dynamic> provider,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
-        List<dynamic> programCode,
+        List<CodeableConcept> modifier,
+        List<CodeableConcept> programCode,
         Date servicedDate,
         Period servicedPeriod,
         CodeableConcept locationCodeableConcept,
@@ -35913,7 +36921,7 @@ class _$ClaimResponseError implements ClaimResponseError {
         double factor,
         Money net,
         CodeableConcept bodySite,
-        List<dynamic> subSite,
+        List<CodeableConcept> subSite,
         List<int> noteNumber,
         List<dynamic> adjudication,
         List<dynamic> detail),
@@ -35922,7 +36930,7 @@ class _$ClaimResponseError implements ClaimResponseError {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,
@@ -35935,7 +36943,7 @@ class _$ClaimResponseError implements ClaimResponseError {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept productOrService,
-        List<dynamic> modifier,
+        List<CodeableConcept> modifier,
         Quantity quantity,
         Money unitPrice,
         double factor,

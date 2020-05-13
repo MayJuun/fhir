@@ -37,7 +37,7 @@ class _$PaymentTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       Reference request,
       Reference response,
@@ -84,7 +84,7 @@ class _$PaymentTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       Period period,
       FhirDateTime created,
@@ -195,7 +195,7 @@ mixin _$Payment {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             Reference response,
@@ -218,7 +218,7 @@ mixin _$Payment {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Period period,
             FhirDateTime created,
@@ -268,7 +268,7 @@ mixin _$Payment {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         Reference response,
@@ -290,7 +290,7 @@ mixin _$Payment {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Period period,
         FhirDateTime created,
@@ -396,7 +396,7 @@ abstract class $PaymentNoticeCopyWith<$Res> implements $PaymentCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       Reference request,
       Reference response,
@@ -408,6 +408,9 @@ abstract class $PaymentNoticeCopyWith<$Res> implements $PaymentCopyWith<$Res> {
       Reference recipient,
       Money amount,
       CodeableConcept paymentStatus});
+
+  $MoneyCopyWith<$Res> get amount;
+  $CodeableConceptCopyWith<$Res> get paymentStatus;
 }
 
 class _$PaymentNoticeCopyWithImpl<$Res> extends _$PaymentCopyWithImpl<$Res>
@@ -464,7 +467,7 @@ class _$PaymentNoticeCopyWithImpl<$Res> extends _$PaymentCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
       request: request == freezed ? _value.request : request as Reference,
       response: response == freezed ? _value.response : response as Reference,
@@ -481,6 +484,26 @@ class _$PaymentNoticeCopyWithImpl<$Res> extends _$PaymentCopyWithImpl<$Res>
           ? _value.paymentStatus
           : paymentStatus as CodeableConcept,
     ));
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get amount {
+    if (_value.amount == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.amount, (value) {
+      return _then(_value.copyWith(amount: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get paymentStatus {
+    if (_value.paymentStatus == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.paymentStatus, (value) {
+      return _then(_value.copyWith(paymentStatus: value));
+    });
   }
 }
 
@@ -532,7 +555,7 @@ class _$PaymentNotice implements PaymentNotice {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Code status;
   @override
@@ -667,7 +690,7 @@ class _$PaymentNotice implements PaymentNotice {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             Reference response,
@@ -690,7 +713,7 @@ class _$PaymentNotice implements PaymentNotice {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Period period,
             FhirDateTime created,
@@ -769,7 +792,7 @@ class _$PaymentNotice implements PaymentNotice {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         Reference response,
@@ -791,7 +814,7 @@ class _$PaymentNotice implements PaymentNotice {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Period period,
         FhirDateTime created,
@@ -908,7 +931,7 @@ abstract class PaymentNotice implements Payment {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       Reference request,
       Reference response,
@@ -936,7 +959,7 @@ abstract class PaymentNotice implements Payment {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   Code get status;
   Reference get request;
   Reference get response;
@@ -968,7 +991,7 @@ abstract class $PaymentReconciliationCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       Period period,
       FhirDateTime created,
@@ -983,6 +1006,11 @@ abstract class $PaymentReconciliationCopyWith<$Res>
       List<dynamic> detail,
       CodeableConcept formCode,
       List<dynamic> processNote});
+
+  $PeriodCopyWith<$Res> get period;
+  $MoneyCopyWith<$Res> get paymentAmount;
+  $IdentifierCopyWith<$Res> get paymentIdentifier;
+  $CodeableConceptCopyWith<$Res> get formCode;
 }
 
 class _$PaymentReconciliationCopyWithImpl<$Res>
@@ -1043,7 +1071,7 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
       period: period == freezed ? _value.period : period as Period,
       created: created == freezed ? _value.created : created as FhirDateTime,
@@ -1073,6 +1101,46 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
           ? _value.processNote
           : processNote as List<dynamic>,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get paymentAmount {
+    if (_value.paymentAmount == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.paymentAmount, (value) {
+      return _then(_value.copyWith(paymentAmount: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get paymentIdentifier {
+    if (_value.paymentIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.paymentIdentifier, (value) {
+      return _then(_value.copyWith(paymentIdentifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get formCode {
+    if (_value.formCode == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.formCode, (value) {
+      return _then(_value.copyWith(formCode: value));
+    });
   }
 }
 
@@ -1127,7 +1195,7 @@ class _$PaymentReconciliation implements PaymentReconciliation {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Code status;
   @override
@@ -1281,7 +1349,7 @@ class _$PaymentReconciliation implements PaymentReconciliation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             Reference response,
@@ -1304,7 +1372,7 @@ class _$PaymentReconciliation implements PaymentReconciliation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Period period,
             FhirDateTime created,
@@ -1386,7 +1454,7 @@ class _$PaymentReconciliation implements PaymentReconciliation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         Reference response,
@@ -1408,7 +1476,7 @@ class _$PaymentReconciliation implements PaymentReconciliation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Period period,
         FhirDateTime created,
@@ -1529,7 +1597,7 @@ abstract class PaymentReconciliation implements Payment {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       Period period,
       FhirDateTime created,
@@ -1560,7 +1628,7 @@ abstract class PaymentReconciliation implements Payment {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   Code get status;
   Period get period;
   FhirDateTime get created;
@@ -1600,6 +1668,11 @@ abstract class $PaymentReconciliationDetailCopyWith<$Res>
       Reference responsible,
       Reference payee,
       Money amount});
+
+  $IdentifierCopyWith<$Res> get identifier;
+  $IdentifierCopyWith<$Res> get predecessor;
+  $CodeableConceptCopyWith<$Res> get type;
+  $MoneyCopyWith<$Res> get amount;
 }
 
 class _$PaymentReconciliationDetailCopyWithImpl<$Res>
@@ -1654,6 +1727,46 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
       payee: payee == freezed ? _value.payee : payee as Reference,
       amount: amount == freezed ? _value.amount : amount as Money,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get identifier {
+    if (_value.identifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+      return _then(_value.copyWith(identifier: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get predecessor {
+    if (_value.predecessor == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.predecessor, (value) {
+      return _then(_value.copyWith(predecessor: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get amount {
+    if (_value.amount == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.amount, (value) {
+      return _then(_value.copyWith(amount: value));
+    });
   }
 }
 
@@ -1786,7 +1899,7 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             Reference response,
@@ -1809,7 +1922,7 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Period period,
             FhirDateTime created,
@@ -1880,7 +1993,7 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         Reference response,
@@ -1902,7 +2015,7 @@ class _$PaymentReconciliationDetail implements PaymentReconciliationDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Period period,
         FhirDateTime created,
@@ -2169,7 +2282,7 @@ class _$PaymentReconciliationProcessNote
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Reference request,
             Reference response,
@@ -2192,7 +2305,7 @@ class _$PaymentReconciliationProcessNote
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             Period period,
             FhirDateTime created,
@@ -2251,7 +2364,7 @@ class _$PaymentReconciliationProcessNote
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Reference request,
         Reference response,
@@ -2273,7 +2386,7 @@ class _$PaymentReconciliationProcessNote
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         Period period,
         FhirDateTime created,

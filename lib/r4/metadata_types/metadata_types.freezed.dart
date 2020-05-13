@@ -45,7 +45,7 @@ class _$MetadataTypesTearOff {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       String name,
-      List<dynamic> telecom}) {
+      List<ContactPoint> telecom}) {
     return ContactDetail(
       id: id,
       fhirExtension: fhirExtension,
@@ -103,7 +103,7 @@ class _$MetadataTypesTearOff {
       String path,
       String searchParam,
       Canonical valueSet,
-      List<dynamic> code}) {
+      List<Coding> code}) {
     return DataRequirementCodeFilter(
       id: id,
       fhirExtension: fhirExtension,
@@ -276,7 +276,7 @@ mixin _$MetadataTypes {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
@@ -305,7 +305,7 @@ mixin _$MetadataTypes {
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
@@ -382,7 +382,7 @@ mixin _$MetadataTypes {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -408,7 +408,7 @@ mixin _$MetadataTypes {
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -546,7 +546,7 @@ abstract class $ContactDetailCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       String name,
-      List<dynamic> telecom});
+      List<ContactPoint> telecom});
 }
 
 class _$ContactDetailCopyWithImpl<$Res>
@@ -572,7 +572,8 @@ class _$ContactDetailCopyWithImpl<$Res>
           ? _value.fhirExtension
           : fhirExtension as List<dynamic>,
       name: name == freezed ? _value.name : name as String,
-      telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
     ));
   }
 }
@@ -596,7 +597,7 @@ class _$ContactDetail implements ContactDetail {
   @override
   final String name;
   @override
-  final List<dynamic> telecom;
+  final List<ContactPoint> telecom;
 
   @override
   String toString() {
@@ -638,7 +639,7 @@ class _$ContactDetail implements ContactDetail {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
@@ -667,7 +668,7 @@ class _$ContactDetail implements ContactDetail {
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
@@ -759,7 +760,7 @@ class _$ContactDetail implements ContactDetail {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -785,7 +786,7 @@ class _$ContactDetail implements ContactDetail {
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -920,7 +921,7 @@ abstract class ContactDetail implements MetadataTypes {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       String name,
-      List<dynamic> telecom}) = _$ContactDetail;
+      List<ContactPoint> telecom}) = _$ContactDetail;
 
   factory ContactDetail.fromJson(Map<String, dynamic> json) =
       _$ContactDetail.fromJson;
@@ -931,7 +932,7 @@ abstract class ContactDetail implements MetadataTypes {
   @JsonKey(name: 'extension')
   List<dynamic> get fhirExtension;
   String get name;
-  List<dynamic> get telecom;
+  List<ContactPoint> get telecom;
   @override
   $ContactDetailCopyWith<ContactDetail> get copyWith;
 }
@@ -1046,7 +1047,7 @@ class _$Contributor implements Contributor {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
@@ -1075,7 +1076,7 @@ class _$Contributor implements Contributor {
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
@@ -1167,7 +1168,7 @@ class _$Contributor implements Contributor {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -1193,7 +1194,7 @@ class _$Contributor implements Contributor {
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -1364,6 +1365,8 @@ abstract class $DataRequirementCopyWith<$Res>
       List<dynamic> dateFilter,
       int limit,
       List<dynamic> sort});
+
+  $CodeableConceptCopyWith<$Res> get subjectCodeableConcept;
 }
 
 class _$DataRequirementCopyWithImpl<$Res>
@@ -1415,6 +1418,17 @@ class _$DataRequirementCopyWithImpl<$Res>
       limit: limit == freezed ? _value.limit : limit as int,
       sort: sort == freezed ? _value.sort : sort as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get subjectCodeableConcept {
+    if (_value.subjectCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.subjectCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(subjectCodeableConcept: value));
+    });
   }
 }
 
@@ -1527,7 +1541,7 @@ class _$DataRequirement implements DataRequirement {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
@@ -1556,7 +1570,7 @@ class _$DataRequirement implements DataRequirement {
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
@@ -1659,7 +1673,7 @@ class _$DataRequirement implements DataRequirement {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -1685,7 +1699,7 @@ class _$DataRequirement implements DataRequirement {
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -1874,7 +1888,7 @@ abstract class $DataRequirementCodeFilterCopyWith<$Res>
       String path,
       String searchParam,
       Canonical valueSet,
-      List<dynamic> code});
+      List<Coding> code});
 }
 
 class _$DataRequirementCodeFilterCopyWithImpl<$Res>
@@ -1910,7 +1924,7 @@ class _$DataRequirementCodeFilterCopyWithImpl<$Res>
       searchParam:
           searchParam == freezed ? _value.searchParam : searchParam as String,
       valueSet: valueSet == freezed ? _value.valueSet : valueSet as Canonical,
-      code: code == freezed ? _value.code : code as List<dynamic>,
+      code: code == freezed ? _value.code : code as List<Coding>,
     ));
   }
 }
@@ -1943,7 +1957,7 @@ class _$DataRequirementCodeFilter implements DataRequirementCodeFilter {
   @override
   final Canonical valueSet;
   @override
-  final List<dynamic> code;
+  final List<Coding> code;
 
   @override
   String toString() {
@@ -1998,7 +2012,7 @@ class _$DataRequirementCodeFilter implements DataRequirementCodeFilter {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
@@ -2027,7 +2041,7 @@ class _$DataRequirementCodeFilter implements DataRequirementCodeFilter {
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
@@ -2120,7 +2134,7 @@ class _$DataRequirementCodeFilter implements DataRequirementCodeFilter {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -2146,7 +2160,7 @@ class _$DataRequirementCodeFilter implements DataRequirementCodeFilter {
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -2286,7 +2300,7 @@ abstract class DataRequirementCodeFilter implements MetadataTypes {
       String path,
       String searchParam,
       Canonical valueSet,
-      List<dynamic> code}) = _$DataRequirementCodeFilter;
+      List<Coding> code}) = _$DataRequirementCodeFilter;
 
   factory DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =
       _$DataRequirementCodeFilter.fromJson;
@@ -2300,7 +2314,7 @@ abstract class DataRequirementCodeFilter implements MetadataTypes {
   String get path;
   String get searchParam;
   Canonical get valueSet;
-  List<dynamic> get code;
+  List<Coding> get code;
   @override
   $DataRequirementCodeFilterCopyWith<DataRequirementCodeFilter> get copyWith;
 }
@@ -2320,6 +2334,9 @@ abstract class $DataRequirementDateFilterCopyWith<$Res>
       FhirDateTime valueDateTime,
       Period valuePeriod,
       Duration valueDuration});
+
+  $PeriodCopyWith<$Res> get valuePeriod;
+  $DurationCopyWith<$Res> get valueDuration;
 }
 
 class _$DataRequirementDateFilterCopyWithImpl<$Res>
@@ -2364,6 +2381,26 @@ class _$DataRequirementDateFilterCopyWithImpl<$Res>
           ? _value.valueDuration
           : valueDuration as Duration,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get valuePeriod {
+    if (_value.valuePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.valuePeriod, (value) {
+      return _then(_value.copyWith(valuePeriod: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get valueDuration {
+    if (_value.valueDuration == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.valueDuration, (value) {
+      return _then(_value.copyWith(valueDuration: value));
+    });
   }
 }
 
@@ -2458,7 +2495,7 @@ class _$DataRequirementDateFilter implements DataRequirementDateFilter {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
@@ -2487,7 +2524,7 @@ class _$DataRequirementDateFilter implements DataRequirementDateFilter {
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
@@ -2580,7 +2617,7 @@ class _$DataRequirementDateFilter implements DataRequirementDateFilter {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -2606,7 +2643,7 @@ class _$DataRequirementDateFilter implements DataRequirementDateFilter {
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -2884,7 +2921,7 @@ class _$DataRequirementSort implements DataRequirementSort {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
@@ -2913,7 +2950,7 @@ class _$DataRequirementSort implements DataRequirementSort {
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
@@ -3006,7 +3043,7 @@ class _$DataRequirementSort implements DataRequirementSort {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -3032,7 +3069,7 @@ class _$DataRequirementSort implements DataRequirementSort {
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -3322,7 +3359,7 @@ class _$Expression implements Expression {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
@@ -3351,7 +3388,7 @@ class _$Expression implements Expression {
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
@@ -3444,7 +3481,7 @@ class _$Expression implements Expression {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -3470,7 +3507,7 @@ class _$Expression implements Expression {
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -3778,7 +3815,7 @@ class _$ParameterDefinition implements ParameterDefinition {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
@@ -3807,7 +3844,7 @@ class _$ParameterDefinition implements ParameterDefinition {
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
@@ -3900,7 +3937,7 @@ class _$ParameterDefinition implements ParameterDefinition {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -3926,7 +3963,7 @@ class _$ParameterDefinition implements ParameterDefinition {
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -4105,6 +4142,8 @@ abstract class $RelatedArtifactCopyWith<$Res>
       FhirUrl url,
       Attachment document,
       Canonical resource});
+
+  $AttachmentCopyWith<$Res> get document;
 }
 
 class _$RelatedArtifactCopyWithImpl<$Res>
@@ -4142,6 +4181,16 @@ class _$RelatedArtifactCopyWithImpl<$Res>
       document: document == freezed ? _value.document : document as Attachment,
       resource: resource == freezed ? _value.resource : resource as Canonical,
     ));
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get document {
+    if (_value.document == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.document, (value) {
+      return _then(_value.copyWith(document: value));
+    });
   }
 }
 
@@ -4240,7 +4289,7 @@ class _$RelatedArtifact implements RelatedArtifact {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
@@ -4269,7 +4318,7 @@ class _$RelatedArtifact implements RelatedArtifact {
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
@@ -4362,7 +4411,7 @@ class _$RelatedArtifact implements RelatedArtifact {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -4388,7 +4437,7 @@ class _$RelatedArtifact implements RelatedArtifact {
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -4567,6 +4616,8 @@ abstract class $TriggerDefinitionCopyWith<$Res>
       FhirDateTime timingDateTime,
       List<dynamic> data,
       Expression condition});
+
+  $TimingCopyWith<$Res> get timingTiming;
 }
 
 class _$TriggerDefinitionCopyWithImpl<$Res>
@@ -4614,6 +4665,16 @@ class _$TriggerDefinitionCopyWithImpl<$Res>
       condition:
           condition == freezed ? _value.condition : condition as Expression,
     ));
+  }
+
+  @override
+  $TimingCopyWith<$Res> get timingTiming {
+    if (_value.timingTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.timingTiming, (value) {
+      return _then(_value.copyWith(timingTiming: value));
+    });
   }
 }
 
@@ -4719,7 +4780,7 @@ class _$TriggerDefinition implements TriggerDefinition {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
@@ -4748,7 +4809,7 @@ class _$TriggerDefinition implements TriggerDefinition {
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
@@ -4841,7 +4902,7 @@ class _$TriggerDefinition implements TriggerDefinition {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -4867,7 +4928,7 @@ class _$TriggerDefinition implements TriggerDefinition {
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -5046,6 +5107,11 @@ abstract class $UsageContextCopyWith<$Res>
       Quantity valueQuantity,
       Range valueRange,
       Reference valueReference});
+
+  $CodingCopyWith<$Res> get code;
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  $QuantityCopyWith<$Res> get valueQuantity;
+  $RangeCopyWith<$Res> get valueRange;
 }
 
 class _$UsageContextCopyWithImpl<$Res> extends _$MetadataTypesCopyWithImpl<$Res>
@@ -5085,6 +5151,46 @@ class _$UsageContextCopyWithImpl<$Res> extends _$MetadataTypesCopyWithImpl<$Res>
           ? _value.valueReference
           : valueReference as Reference,
     ));
+  }
+
+  @override
+  $CodingCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept, (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.valueRange, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
   }
 }
 
@@ -5171,7 +5277,7 @@ class _$UsageContext implements UsageContext {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             String name,
-            List<dynamic> telecom),
+            List<ContactPoint> telecom),
     @required
         Result contributor(
             String id,
@@ -5200,7 +5306,7 @@ class _$UsageContext implements UsageContext {
             String path,
             String searchParam,
             Canonical valueSet,
-            List<dynamic> code),
+            List<Coding> code),
     @required
         Result dataRequirementDateFilter(
             String id,
@@ -5293,7 +5399,7 @@ class _$UsageContext implements UsageContext {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         String name,
-        List<dynamic> telecom),
+        List<ContactPoint> telecom),
     Result contributor(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -5319,7 +5425,7 @@ class _$UsageContext implements UsageContext {
         String path,
         String searchParam,
         Canonical valueSet,
-        List<dynamic> code),
+        List<Coding> code),
     Result dataRequirementDateFilter(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,

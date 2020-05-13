@@ -55,11 +55,11 @@ class _$WorkflowTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       bool active,
-      List<dynamic> serviceCategory,
-      List<dynamic> serviceType,
-      List<dynamic> specialty,
+      List<CodeableConcept> serviceCategory,
+      List<CodeableConcept> serviceType,
+      List<CodeableConcept> specialty,
       List<dynamic> actor,
       Period planningHorizon,
       String comment}) {
@@ -94,10 +94,10 @@ class _$WorkflowTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
-      List<dynamic> serviceCategory,
-      List<dynamic> serviceType,
-      List<dynamic> specialty,
+      List<Identifier> identifier,
+      List<CodeableConcept> serviceCategory,
+      List<CodeableConcept> serviceType,
+      List<CodeableConcept> specialty,
       CodeableConcept appointmentType,
       Reference schedule,
       SlotStatus status,
@@ -139,7 +139,7 @@ class _$WorkflowTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Canonical instantiatesCanonical,
       FhirUri instantiatesUri,
       List<dynamic> basedOn,
@@ -159,13 +159,13 @@ class _$WorkflowTearOff {
       FhirDateTime authoredOn,
       FhirDateTime lastModified,
       Reference requester,
-      List<dynamic> performerType,
+      List<CodeableConcept> performerType,
       Reference owner,
       Reference location,
       CodeableConcept reasonCode,
       Reference reasonReference,
       List<dynamic> insurance,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> relevantHistory,
       TaskRestriction restriction,
       List<dynamic> input,
@@ -467,14 +467,14 @@ class _$WorkflowTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       AppointmentStatus status,
       CodeableConcept cancelationReason,
-      List<dynamic> serviceCategory,
-      List<dynamic> serviceType,
-      List<dynamic> specialty,
+      List<CodeableConcept> serviceCategory,
+      List<CodeableConcept> serviceType,
+      List<CodeableConcept> specialty,
       CodeableConcept appointmentType,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       int priority,
       String description,
@@ -488,7 +488,7 @@ class _$WorkflowTearOff {
       String patientInstruction,
       List<dynamic> basedOn,
       List<dynamic> participant,
-      List<dynamic> requestedPeriod}) {
+      List<Period> requestedPeriod}) {
     return Appointment(
       resourceType: resourceType,
       id: id,
@@ -528,7 +528,7 @@ class _$WorkflowTearOff {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       Reference actor,
       @JsonKey(name: 'required') AppointmentParticipantRequired require,
       AppointmentParticipantStatus status,
@@ -555,11 +555,11 @@ class _$WorkflowTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Reference appointment,
       Instant start,
       Instant end,
-      List<dynamic> participantType,
+      List<CodeableConcept> participantType,
       Reference actor,
       Code participantStatus,
       String comment}) {
@@ -600,7 +600,7 @@ class _$WorkflowTearOff {
       Code status,
       FhirDateTime statusDate,
       CodeableConcept validationType,
-      List<dynamic> validationProcess,
+      List<CodeableConcept> validationProcess,
       Timing frequency,
       FhirDateTime lastPerformed,
       Date nextScheduled,
@@ -640,12 +640,12 @@ class _$WorkflowTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       Reference who,
-      List<dynamic> type,
-      List<dynamic> communicationMethod,
+      List<CodeableConcept> type,
+      List<CodeableConcept> communicationMethod,
       CodeableConcept validationStatus,
       FhirDateTime validationDate,
       CodeableConcept canPushUpdates,
-      List<dynamic> pushTypeAvailable}) {
+      List<CodeableConcept> pushTypeAvailable}) {
     return VerificationResultPrimarySource(
       id: id,
       fhirExtension: fhirExtension,
@@ -726,11 +726,11 @@ mixin _$Workflow {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             List<dynamic> actor,
             Period planningHorizon,
             String comment),
@@ -745,10 +745,10 @@ mixin _$Workflow {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<Identifier> identifier,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
             Reference schedule,
             SlotStatus status,
@@ -767,7 +767,7 @@ mixin _$Workflow {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Canonical instantiatesCanonical,
             FhirUri instantiatesUri,
             List<dynamic> basedOn,
@@ -787,13 +787,13 @@ mixin _$Workflow {
             FhirDateTime authoredOn,
             FhirDateTime lastModified,
             Reference requester,
-            List<dynamic> performerType,
+            List<CodeableConcept> performerType,
             Reference owner,
             Reference location,
             CodeableConcept reasonCode,
             Reference reasonReference,
             List<dynamic> insurance,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
             List<dynamic> input,
@@ -929,14 +929,14 @@ mixin _$Workflow {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             AppointmentStatus status,
             CodeableConcept cancelationReason,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             int priority,
             String description,
@@ -950,13 +950,13 @@ mixin _$Workflow {
             String patientInstruction,
             List<dynamic> basedOn,
             List<dynamic> participant,
-            List<dynamic> requestedPeriod),
+            List<Period> requestedPeriod),
     @required
         Result appointmentParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Reference actor,
             @JsonKey(name: 'required') AppointmentParticipantRequired require,
             AppointmentParticipantStatus status,
@@ -972,11 +972,11 @@ mixin _$Workflow {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference appointment,
             Instant start,
             Instant end,
-            List<dynamic> participantType,
+            List<CodeableConcept> participantType,
             Reference actor,
             Code participantStatus,
             String comment),
@@ -997,7 +997,7 @@ mixin _$Workflow {
             Code status,
             FhirDateTime statusDate,
             CodeableConcept validationType,
-            List<dynamic> validationProcess,
+            List<CodeableConcept> validationProcess,
             Timing frequency,
             FhirDateTime lastPerformed,
             Date nextScheduled,
@@ -1011,12 +1011,12 @@ mixin _$Workflow {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Reference who,
-            List<dynamic> type,
-            List<dynamic> communicationMethod,
+            List<CodeableConcept> type,
+            List<CodeableConcept> communicationMethod,
             CodeableConcept validationStatus,
             FhirDateTime validationDate,
             CodeableConcept canPushUpdates,
-            List<dynamic> pushTypeAvailable),
+            List<CodeableConcept> pushTypeAvailable),
     @required
         Result verificationResultAttestation(
             String id,
@@ -1051,11 +1051,11 @@ mixin _$Workflow {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         List<dynamic> actor,
         Period planningHorizon,
         String comment),
@@ -1069,10 +1069,10 @@ mixin _$Workflow {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<Identifier> identifier,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
         Reference schedule,
         SlotStatus status,
@@ -1090,7 +1090,7 @@ mixin _$Workflow {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Canonical instantiatesCanonical,
         FhirUri instantiatesUri,
         List<dynamic> basedOn,
@@ -1110,13 +1110,13 @@ mixin _$Workflow {
         FhirDateTime authoredOn,
         FhirDateTime lastModified,
         Reference requester,
-        List<dynamic> performerType,
+        List<CodeableConcept> performerType,
         Reference owner,
         Reference location,
         CodeableConcept reasonCode,
         Reference reasonReference,
         List<dynamic> insurance,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
         List<dynamic> input,
@@ -1248,14 +1248,14 @@ mixin _$Workflow {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         AppointmentStatus status,
         CodeableConcept cancelationReason,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         int priority,
         String description,
@@ -1269,12 +1269,12 @@ mixin _$Workflow {
         String patientInstruction,
         List<dynamic> basedOn,
         List<dynamic> participant,
-        List<dynamic> requestedPeriod),
+        List<Period> requestedPeriod),
     Result appointmentParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Reference actor,
         @JsonKey(name: 'required') AppointmentParticipantRequired require,
         AppointmentParticipantStatus status,
@@ -1289,11 +1289,11 @@ mixin _$Workflow {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference appointment,
         Instant start,
         Instant end,
-        List<dynamic> participantType,
+        List<CodeableConcept> participantType,
         Reference actor,
         Code participantStatus,
         String comment),
@@ -1313,7 +1313,7 @@ mixin _$Workflow {
         Code status,
         FhirDateTime statusDate,
         CodeableConcept validationType,
-        List<dynamic> validationProcess,
+        List<CodeableConcept> validationProcess,
         Timing frequency,
         FhirDateTime lastPerformed,
         Date nextScheduled,
@@ -1326,12 +1326,12 @@ mixin _$Workflow {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Reference who,
-        List<dynamic> type,
-        List<dynamic> communicationMethod,
+        List<CodeableConcept> type,
+        List<CodeableConcept> communicationMethod,
         CodeableConcept validationStatus,
         FhirDateTime validationDate,
         CodeableConcept canPushUpdates,
-        List<dynamic> pushTypeAvailable),
+        List<CodeableConcept> pushTypeAvailable),
     Result verificationResultAttestation(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -1441,14 +1441,16 @@ abstract class $ScheduleCopyWith<$Res> implements $WorkflowCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       bool active,
-      List<dynamic> serviceCategory,
-      List<dynamic> serviceType,
-      List<dynamic> specialty,
+      List<CodeableConcept> serviceCategory,
+      List<CodeableConcept> serviceType,
+      List<CodeableConcept> specialty,
       List<dynamic> actor,
       Period planningHorizon,
       String comment});
+
+  $PeriodCopyWith<$Res> get planningHorizon;
 }
 
 class _$ScheduleCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
@@ -1500,22 +1502,33 @@ class _$ScheduleCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       active: active == freezed ? _value.active : active as bool,
       serviceCategory: serviceCategory == freezed
           ? _value.serviceCategory
-          : serviceCategory as List<dynamic>,
+          : serviceCategory as List<CodeableConcept>,
       serviceType: serviceType == freezed
           ? _value.serviceType
-          : serviceType as List<dynamic>,
-      specialty:
-          specialty == freezed ? _value.specialty : specialty as List<dynamic>,
+          : serviceType as List<CodeableConcept>,
+      specialty: specialty == freezed
+          ? _value.specialty
+          : specialty as List<CodeableConcept>,
       actor: actor == freezed ? _value.actor : actor as List<dynamic>,
       planningHorizon: planningHorizon == freezed
           ? _value.planningHorizon
           : planningHorizon as Period,
       comment: comment == freezed ? _value.comment : comment as String,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get planningHorizon {
+    if (_value.planningHorizon == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.planningHorizon, (value) {
+      return _then(_value.copyWith(planningHorizon: value));
+    });
   }
 }
 
@@ -1563,15 +1576,15 @@ class _$Schedule implements Schedule {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final bool active;
   @override
-  final List<dynamic> serviceCategory;
+  final List<CodeableConcept> serviceCategory;
   @override
-  final List<dynamic> serviceType;
+  final List<CodeableConcept> serviceType;
   @override
-  final List<dynamic> specialty;
+  final List<CodeableConcept> specialty;
   @override
   final List<dynamic> actor;
   @override
@@ -1674,11 +1687,11 @@ class _$Schedule implements Schedule {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             List<dynamic> actor,
             Period planningHorizon,
             String comment),
@@ -1693,10 +1706,10 @@ class _$Schedule implements Schedule {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<Identifier> identifier,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
             Reference schedule,
             SlotStatus status,
@@ -1715,7 +1728,7 @@ class _$Schedule implements Schedule {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Canonical instantiatesCanonical,
             FhirUri instantiatesUri,
             List<dynamic> basedOn,
@@ -1735,13 +1748,13 @@ class _$Schedule implements Schedule {
             FhirDateTime authoredOn,
             FhirDateTime lastModified,
             Reference requester,
-            List<dynamic> performerType,
+            List<CodeableConcept> performerType,
             Reference owner,
             Reference location,
             CodeableConcept reasonCode,
             Reference reasonReference,
             List<dynamic> insurance,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
             List<dynamic> input,
@@ -1877,14 +1890,14 @@ class _$Schedule implements Schedule {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             AppointmentStatus status,
             CodeableConcept cancelationReason,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             int priority,
             String description,
@@ -1898,13 +1911,13 @@ class _$Schedule implements Schedule {
             String patientInstruction,
             List<dynamic> basedOn,
             List<dynamic> participant,
-            List<dynamic> requestedPeriod),
+            List<Period> requestedPeriod),
     @required
         Result appointmentParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Reference actor,
             @JsonKey(name: 'required') AppointmentParticipantRequired require,
             AppointmentParticipantStatus status,
@@ -1920,11 +1933,11 @@ class _$Schedule implements Schedule {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference appointment,
             Instant start,
             Instant end,
-            List<dynamic> participantType,
+            List<CodeableConcept> participantType,
             Reference actor,
             Code participantStatus,
             String comment),
@@ -1945,7 +1958,7 @@ class _$Schedule implements Schedule {
             Code status,
             FhirDateTime statusDate,
             CodeableConcept validationType,
-            List<dynamic> validationProcess,
+            List<CodeableConcept> validationProcess,
             Timing frequency,
             FhirDateTime lastPerformed,
             Date nextScheduled,
@@ -1959,12 +1972,12 @@ class _$Schedule implements Schedule {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Reference who,
-            List<dynamic> type,
-            List<dynamic> communicationMethod,
+            List<CodeableConcept> type,
+            List<CodeableConcept> communicationMethod,
             CodeableConcept validationStatus,
             FhirDateTime validationDate,
             CodeableConcept canPushUpdates,
-            List<dynamic> pushTypeAvailable),
+            List<CodeableConcept> pushTypeAvailable),
     @required
         Result verificationResultAttestation(
             String id,
@@ -2033,11 +2046,11 @@ class _$Schedule implements Schedule {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         List<dynamic> actor,
         Period planningHorizon,
         String comment),
@@ -2051,10 +2064,10 @@ class _$Schedule implements Schedule {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<Identifier> identifier,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
         Reference schedule,
         SlotStatus status,
@@ -2072,7 +2085,7 @@ class _$Schedule implements Schedule {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Canonical instantiatesCanonical,
         FhirUri instantiatesUri,
         List<dynamic> basedOn,
@@ -2092,13 +2105,13 @@ class _$Schedule implements Schedule {
         FhirDateTime authoredOn,
         FhirDateTime lastModified,
         Reference requester,
-        List<dynamic> performerType,
+        List<CodeableConcept> performerType,
         Reference owner,
         Reference location,
         CodeableConcept reasonCode,
         Reference reasonReference,
         List<dynamic> insurance,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
         List<dynamic> input,
@@ -2230,14 +2243,14 @@ class _$Schedule implements Schedule {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         AppointmentStatus status,
         CodeableConcept cancelationReason,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         int priority,
         String description,
@@ -2251,12 +2264,12 @@ class _$Schedule implements Schedule {
         String patientInstruction,
         List<dynamic> basedOn,
         List<dynamic> participant,
-        List<dynamic> requestedPeriod),
+        List<Period> requestedPeriod),
     Result appointmentParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Reference actor,
         @JsonKey(name: 'required') AppointmentParticipantRequired require,
         AppointmentParticipantStatus status,
@@ -2271,11 +2284,11 @@ class _$Schedule implements Schedule {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference appointment,
         Instant start,
         Instant end,
-        List<dynamic> participantType,
+        List<CodeableConcept> participantType,
         Reference actor,
         Code participantStatus,
         String comment),
@@ -2295,7 +2308,7 @@ class _$Schedule implements Schedule {
         Code status,
         FhirDateTime statusDate,
         CodeableConcept validationType,
-        List<dynamic> validationProcess,
+        List<CodeableConcept> validationProcess,
         Timing frequency,
         FhirDateTime lastPerformed,
         Date nextScheduled,
@@ -2308,12 +2321,12 @@ class _$Schedule implements Schedule {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Reference who,
-        List<dynamic> type,
-        List<dynamic> communicationMethod,
+        List<CodeableConcept> type,
+        List<CodeableConcept> communicationMethod,
         CodeableConcept validationStatus,
         FhirDateTime validationDate,
         CodeableConcept canPushUpdates,
-        List<dynamic> pushTypeAvailable),
+        List<CodeableConcept> pushTypeAvailable),
     Result verificationResultAttestation(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -2440,11 +2453,11 @@ abstract class Schedule implements Workflow {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       bool active,
-      List<dynamic> serviceCategory,
-      List<dynamic> serviceType,
-      List<dynamic> specialty,
+      List<CodeableConcept> serviceCategory,
+      List<CodeableConcept> serviceType,
+      List<CodeableConcept> specialty,
       List<dynamic> actor,
       Period planningHorizon,
       String comment}) = _$Schedule;
@@ -2463,11 +2476,11 @@ abstract class Schedule implements Workflow {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   bool get active;
-  List<dynamic> get serviceCategory;
-  List<dynamic> get serviceType;
-  List<dynamic> get specialty;
+  List<CodeableConcept> get serviceCategory;
+  List<CodeableConcept> get serviceType;
+  List<CodeableConcept> get specialty;
   List<dynamic> get actor;
   Period get planningHorizon;
   String get comment;
@@ -2489,10 +2502,10 @@ abstract class $SlotCopyWith<$Res> implements $WorkflowCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
-      List<dynamic> serviceCategory,
-      List<dynamic> serviceType,
-      List<dynamic> specialty,
+      List<Identifier> identifier,
+      List<CodeableConcept> serviceCategory,
+      List<CodeableConcept> serviceType,
+      List<CodeableConcept> specialty,
       CodeableConcept appointmentType,
       Reference schedule,
       SlotStatus status,
@@ -2500,6 +2513,8 @@ abstract class $SlotCopyWith<$Res> implements $WorkflowCopyWith<$Res> {
       Instant end,
       bool overbooked,
       String comment});
+
+  $CodeableConceptCopyWith<$Res> get appointmentType;
 }
 
 class _$SlotCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
@@ -2554,15 +2569,16 @@ class _$SlotCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       serviceCategory: serviceCategory == freezed
           ? _value.serviceCategory
-          : serviceCategory as List<dynamic>,
+          : serviceCategory as List<CodeableConcept>,
       serviceType: serviceType == freezed
           ? _value.serviceType
-          : serviceType as List<dynamic>,
-      specialty:
-          specialty == freezed ? _value.specialty : specialty as List<dynamic>,
+          : serviceType as List<CodeableConcept>,
+      specialty: specialty == freezed
+          ? _value.specialty
+          : specialty as List<CodeableConcept>,
       appointmentType: appointmentType == freezed
           ? _value.appointmentType
           : appointmentType as CodeableConcept,
@@ -2574,6 +2590,16 @@ class _$SlotCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
           overbooked == freezed ? _value.overbooked : overbooked as bool,
       comment: comment == freezed ? _value.comment : comment as String,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get appointmentType {
+    if (_value.appointmentType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.appointmentType, (value) {
+      return _then(_value.copyWith(appointmentType: value));
+    });
   }
 }
 
@@ -2623,13 +2649,13 @@ class _$Slot implements Slot {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
-  final List<dynamic> serviceCategory;
+  final List<CodeableConcept> serviceCategory;
   @override
-  final List<dynamic> serviceType;
+  final List<CodeableConcept> serviceType;
   @override
-  final List<dynamic> specialty;
+  final List<CodeableConcept> specialty;
   @override
   final CodeableConcept appointmentType;
   @override
@@ -2751,11 +2777,11 @@ class _$Slot implements Slot {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             List<dynamic> actor,
             Period planningHorizon,
             String comment),
@@ -2770,10 +2796,10 @@ class _$Slot implements Slot {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<Identifier> identifier,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
             Reference schedule,
             SlotStatus status,
@@ -2792,7 +2818,7 @@ class _$Slot implements Slot {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Canonical instantiatesCanonical,
             FhirUri instantiatesUri,
             List<dynamic> basedOn,
@@ -2812,13 +2838,13 @@ class _$Slot implements Slot {
             FhirDateTime authoredOn,
             FhirDateTime lastModified,
             Reference requester,
-            List<dynamic> performerType,
+            List<CodeableConcept> performerType,
             Reference owner,
             Reference location,
             CodeableConcept reasonCode,
             Reference reasonReference,
             List<dynamic> insurance,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
             List<dynamic> input,
@@ -2954,14 +2980,14 @@ class _$Slot implements Slot {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             AppointmentStatus status,
             CodeableConcept cancelationReason,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             int priority,
             String description,
@@ -2975,13 +3001,13 @@ class _$Slot implements Slot {
             String patientInstruction,
             List<dynamic> basedOn,
             List<dynamic> participant,
-            List<dynamic> requestedPeriod),
+            List<Period> requestedPeriod),
     @required
         Result appointmentParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Reference actor,
             @JsonKey(name: 'required') AppointmentParticipantRequired require,
             AppointmentParticipantStatus status,
@@ -2997,11 +3023,11 @@ class _$Slot implements Slot {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference appointment,
             Instant start,
             Instant end,
-            List<dynamic> participantType,
+            List<CodeableConcept> participantType,
             Reference actor,
             Code participantStatus,
             String comment),
@@ -3022,7 +3048,7 @@ class _$Slot implements Slot {
             Code status,
             FhirDateTime statusDate,
             CodeableConcept validationType,
-            List<dynamic> validationProcess,
+            List<CodeableConcept> validationProcess,
             Timing frequency,
             FhirDateTime lastPerformed,
             Date nextScheduled,
@@ -3036,12 +3062,12 @@ class _$Slot implements Slot {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Reference who,
-            List<dynamic> type,
-            List<dynamic> communicationMethod,
+            List<CodeableConcept> type,
+            List<CodeableConcept> communicationMethod,
             CodeableConcept validationStatus,
             FhirDateTime validationDate,
             CodeableConcept canPushUpdates,
-            List<dynamic> pushTypeAvailable),
+            List<CodeableConcept> pushTypeAvailable),
     @required
         Result verificationResultAttestation(
             String id,
@@ -3113,11 +3139,11 @@ class _$Slot implements Slot {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         List<dynamic> actor,
         Period planningHorizon,
         String comment),
@@ -3131,10 +3157,10 @@ class _$Slot implements Slot {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<Identifier> identifier,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
         Reference schedule,
         SlotStatus status,
@@ -3152,7 +3178,7 @@ class _$Slot implements Slot {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Canonical instantiatesCanonical,
         FhirUri instantiatesUri,
         List<dynamic> basedOn,
@@ -3172,13 +3198,13 @@ class _$Slot implements Slot {
         FhirDateTime authoredOn,
         FhirDateTime lastModified,
         Reference requester,
-        List<dynamic> performerType,
+        List<CodeableConcept> performerType,
         Reference owner,
         Reference location,
         CodeableConcept reasonCode,
         Reference reasonReference,
         List<dynamic> insurance,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
         List<dynamic> input,
@@ -3310,14 +3336,14 @@ class _$Slot implements Slot {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         AppointmentStatus status,
         CodeableConcept cancelationReason,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         int priority,
         String description,
@@ -3331,12 +3357,12 @@ class _$Slot implements Slot {
         String patientInstruction,
         List<dynamic> basedOn,
         List<dynamic> participant,
-        List<dynamic> requestedPeriod),
+        List<Period> requestedPeriod),
     Result appointmentParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Reference actor,
         @JsonKey(name: 'required') AppointmentParticipantRequired require,
         AppointmentParticipantStatus status,
@@ -3351,11 +3377,11 @@ class _$Slot implements Slot {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference appointment,
         Instant start,
         Instant end,
-        List<dynamic> participantType,
+        List<CodeableConcept> participantType,
         Reference actor,
         Code participantStatus,
         String comment),
@@ -3375,7 +3401,7 @@ class _$Slot implements Slot {
         Code status,
         FhirDateTime statusDate,
         CodeableConcept validationType,
-        List<dynamic> validationProcess,
+        List<CodeableConcept> validationProcess,
         Timing frequency,
         FhirDateTime lastPerformed,
         Date nextScheduled,
@@ -3388,12 +3414,12 @@ class _$Slot implements Slot {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Reference who,
-        List<dynamic> type,
-        List<dynamic> communicationMethod,
+        List<CodeableConcept> type,
+        List<CodeableConcept> communicationMethod,
         CodeableConcept validationStatus,
         FhirDateTime validationDate,
         CodeableConcept canPushUpdates,
-        List<dynamic> pushTypeAvailable),
+        List<CodeableConcept> pushTypeAvailable),
     Result verificationResultAttestation(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -3523,10 +3549,10 @@ abstract class Slot implements Workflow {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
-      List<dynamic> serviceCategory,
-      List<dynamic> serviceType,
-      List<dynamic> specialty,
+      List<Identifier> identifier,
+      List<CodeableConcept> serviceCategory,
+      List<CodeableConcept> serviceType,
+      List<CodeableConcept> specialty,
       CodeableConcept appointmentType,
       Reference schedule,
       SlotStatus status,
@@ -3549,10 +3575,10 @@ abstract class Slot implements Workflow {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
-  List<dynamic> get serviceCategory;
-  List<dynamic> get serviceType;
-  List<dynamic> get specialty;
+  List<Identifier> get identifier;
+  List<CodeableConcept> get serviceCategory;
+  List<CodeableConcept> get serviceType;
+  List<CodeableConcept> get specialty;
   CodeableConcept get appointmentType;
   Reference get schedule;
   SlotStatus get status;
@@ -3578,7 +3604,7 @@ abstract class $TaskCopyWith<$Res> implements $WorkflowCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Canonical instantiatesCanonical,
       FhirUri instantiatesUri,
       List<dynamic> basedOn,
@@ -3598,17 +3624,24 @@ abstract class $TaskCopyWith<$Res> implements $WorkflowCopyWith<$Res> {
       FhirDateTime authoredOn,
       FhirDateTime lastModified,
       Reference requester,
-      List<dynamic> performerType,
+      List<CodeableConcept> performerType,
       Reference owner,
       Reference location,
       CodeableConcept reasonCode,
       Reference reasonReference,
       List<dynamic> insurance,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> relevantHistory,
       TaskRestriction restriction,
       List<dynamic> input,
       List<dynamic> output});
+
+  $IdentifierCopyWith<$Res> get groupIdentifier;
+  $CodeableConceptCopyWith<$Res> get statusReason;
+  $CodeableConceptCopyWith<$Res> get businessStatus;
+  $CodeableConceptCopyWith<$Res> get code;
+  $PeriodCopyWith<$Res> get executionPeriod;
+  $CodeableConceptCopyWith<$Res> get reasonCode;
 }
 
 class _$TaskCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
@@ -3683,7 +3716,7 @@ class _$TaskCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       instantiatesCanonical: instantiatesCanonical == freezed
           ? _value.instantiatesCanonical
           : instantiatesCanonical as Canonical,
@@ -3724,7 +3757,7 @@ class _$TaskCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
           requester == freezed ? _value.requester : requester as Reference,
       performerType: performerType == freezed
           ? _value.performerType
-          : performerType as List<dynamic>,
+          : performerType as List<CodeableConcept>,
       owner: owner == freezed ? _value.owner : owner as Reference,
       location: location == freezed ? _value.location : location as Reference,
       reasonCode: reasonCode == freezed
@@ -3735,7 +3768,7 @@ class _$TaskCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
           : reasonReference as Reference,
       insurance:
           insurance == freezed ? _value.insurance : insurance as List<dynamic>,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
       relevantHistory: relevantHistory == freezed
           ? _value.relevantHistory
           : relevantHistory as List<dynamic>,
@@ -3745,6 +3778,66 @@ class _$TaskCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
       input: input == freezed ? _value.input : input as List<dynamic>,
       output: output == freezed ? _value.output : output as List<dynamic>,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get groupIdentifier {
+    if (_value.groupIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.groupIdentifier, (value) {
+      return _then(_value.copyWith(groupIdentifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get statusReason {
+    if (_value.statusReason == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.statusReason, (value) {
+      return _then(_value.copyWith(statusReason: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get businessStatus {
+    if (_value.businessStatus == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.businessStatus, (value) {
+      return _then(_value.copyWith(businessStatus: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get executionPeriod {
+    if (_value.executionPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.executionPeriod, (value) {
+      return _then(_value.copyWith(executionPeriod: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get reasonCode {
+    if (_value.reasonCode == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.reasonCode, (value) {
+      return _then(_value.copyWith(reasonCode: value));
+    });
   }
 }
 
@@ -3814,7 +3907,7 @@ class _$Task implements Task {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Canonical instantiatesCanonical;
   @override
@@ -3855,7 +3948,7 @@ class _$Task implements Task {
   @override
   final Reference requester;
   @override
-  final List<dynamic> performerType;
+  final List<CodeableConcept> performerType;
   @override
   final Reference owner;
   @override
@@ -3867,7 +3960,7 @@ class _$Task implements Task {
   @override
   final List<dynamic> insurance;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
   @override
   final List<dynamic> relevantHistory;
   @override
@@ -4033,11 +4126,11 @@ class _$Task implements Task {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             List<dynamic> actor,
             Period planningHorizon,
             String comment),
@@ -4052,10 +4145,10 @@ class _$Task implements Task {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<Identifier> identifier,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
             Reference schedule,
             SlotStatus status,
@@ -4074,7 +4167,7 @@ class _$Task implements Task {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Canonical instantiatesCanonical,
             FhirUri instantiatesUri,
             List<dynamic> basedOn,
@@ -4094,13 +4187,13 @@ class _$Task implements Task {
             FhirDateTime authoredOn,
             FhirDateTime lastModified,
             Reference requester,
-            List<dynamic> performerType,
+            List<CodeableConcept> performerType,
             Reference owner,
             Reference location,
             CodeableConcept reasonCode,
             Reference reasonReference,
             List<dynamic> insurance,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
             List<dynamic> input,
@@ -4236,14 +4329,14 @@ class _$Task implements Task {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             AppointmentStatus status,
             CodeableConcept cancelationReason,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             int priority,
             String description,
@@ -4257,13 +4350,13 @@ class _$Task implements Task {
             String patientInstruction,
             List<dynamic> basedOn,
             List<dynamic> participant,
-            List<dynamic> requestedPeriod),
+            List<Period> requestedPeriod),
     @required
         Result appointmentParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Reference actor,
             @JsonKey(name: 'required') AppointmentParticipantRequired require,
             AppointmentParticipantStatus status,
@@ -4279,11 +4372,11 @@ class _$Task implements Task {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference appointment,
             Instant start,
             Instant end,
-            List<dynamic> participantType,
+            List<CodeableConcept> participantType,
             Reference actor,
             Code participantStatus,
             String comment),
@@ -4304,7 +4397,7 @@ class _$Task implements Task {
             Code status,
             FhirDateTime statusDate,
             CodeableConcept validationType,
-            List<dynamic> validationProcess,
+            List<CodeableConcept> validationProcess,
             Timing frequency,
             FhirDateTime lastPerformed,
             Date nextScheduled,
@@ -4318,12 +4411,12 @@ class _$Task implements Task {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Reference who,
-            List<dynamic> type,
-            List<dynamic> communicationMethod,
+            List<CodeableConcept> type,
+            List<CodeableConcept> communicationMethod,
             CodeableConcept validationStatus,
             FhirDateTime validationDate,
             CodeableConcept canPushUpdates,
-            List<dynamic> pushTypeAvailable),
+            List<CodeableConcept> pushTypeAvailable),
     @required
         Result verificationResultAttestation(
             String id,
@@ -4415,11 +4508,11 @@ class _$Task implements Task {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         List<dynamic> actor,
         Period planningHorizon,
         String comment),
@@ -4433,10 +4526,10 @@ class _$Task implements Task {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<Identifier> identifier,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
         Reference schedule,
         SlotStatus status,
@@ -4454,7 +4547,7 @@ class _$Task implements Task {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Canonical instantiatesCanonical,
         FhirUri instantiatesUri,
         List<dynamic> basedOn,
@@ -4474,13 +4567,13 @@ class _$Task implements Task {
         FhirDateTime authoredOn,
         FhirDateTime lastModified,
         Reference requester,
-        List<dynamic> performerType,
+        List<CodeableConcept> performerType,
         Reference owner,
         Reference location,
         CodeableConcept reasonCode,
         Reference reasonReference,
         List<dynamic> insurance,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
         List<dynamic> input,
@@ -4612,14 +4705,14 @@ class _$Task implements Task {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         AppointmentStatus status,
         CodeableConcept cancelationReason,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         int priority,
         String description,
@@ -4633,12 +4726,12 @@ class _$Task implements Task {
         String patientInstruction,
         List<dynamic> basedOn,
         List<dynamic> participant,
-        List<dynamic> requestedPeriod),
+        List<Period> requestedPeriod),
     Result appointmentParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Reference actor,
         @JsonKey(name: 'required') AppointmentParticipantRequired require,
         AppointmentParticipantStatus status,
@@ -4653,11 +4746,11 @@ class _$Task implements Task {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference appointment,
         Instant start,
         Instant end,
-        List<dynamic> participantType,
+        List<CodeableConcept> participantType,
         Reference actor,
         Code participantStatus,
         String comment),
@@ -4677,7 +4770,7 @@ class _$Task implements Task {
         Code status,
         FhirDateTime statusDate,
         CodeableConcept validationType,
-        List<dynamic> validationProcess,
+        List<CodeableConcept> validationProcess,
         Timing frequency,
         FhirDateTime lastPerformed,
         Date nextScheduled,
@@ -4690,12 +4783,12 @@ class _$Task implements Task {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Reference who,
-        List<dynamic> type,
-        List<dynamic> communicationMethod,
+        List<CodeableConcept> type,
+        List<CodeableConcept> communicationMethod,
         CodeableConcept validationStatus,
         FhirDateTime validationDate,
         CodeableConcept canPushUpdates,
-        List<dynamic> pushTypeAvailable),
+        List<CodeableConcept> pushTypeAvailable),
     Result verificationResultAttestation(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -4845,7 +4938,7 @@ abstract class Task implements Workflow {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Canonical instantiatesCanonical,
       FhirUri instantiatesUri,
       List<dynamic> basedOn,
@@ -4865,13 +4958,13 @@ abstract class Task implements Workflow {
       FhirDateTime authoredOn,
       FhirDateTime lastModified,
       Reference requester,
-      List<dynamic> performerType,
+      List<CodeableConcept> performerType,
       Reference owner,
       Reference location,
       CodeableConcept reasonCode,
       Reference reasonReference,
       List<dynamic> insurance,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> relevantHistory,
       TaskRestriction restriction,
       List<dynamic> input,
@@ -4891,7 +4984,7 @@ abstract class Task implements Workflow {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   Canonical get instantiatesCanonical;
   FhirUri get instantiatesUri;
   List<dynamic> get basedOn;
@@ -4912,13 +5005,13 @@ abstract class Task implements Workflow {
   FhirDateTime get authoredOn;
   FhirDateTime get lastModified;
   Reference get requester;
-  List<dynamic> get performerType;
+  List<CodeableConcept> get performerType;
   Reference get owner;
   Reference get location;
   CodeableConcept get reasonCode;
   Reference get reasonReference;
   List<dynamic> get insurance;
-  List<dynamic> get note;
+  List<Annotation> get note;
   List<dynamic> get relevantHistory;
   TaskRestriction get restriction;
   List<dynamic> get input;
@@ -4940,6 +5033,8 @@ abstract class $TaskRestrictionCopyWith<$Res>
       int repetitions,
       Period period,
       List<dynamic> recipient});
+
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$TaskRestrictionCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
@@ -4974,6 +5069,16 @@ class _$TaskRestrictionCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
       recipient:
           recipient == freezed ? _value.recipient : recipient as List<dynamic>,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
   }
 }
 
@@ -5059,11 +5164,11 @@ class _$TaskRestriction implements TaskRestriction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             List<dynamic> actor,
             Period planningHorizon,
             String comment),
@@ -5078,10 +5183,10 @@ class _$TaskRestriction implements TaskRestriction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<Identifier> identifier,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
             Reference schedule,
             SlotStatus status,
@@ -5100,7 +5205,7 @@ class _$TaskRestriction implements TaskRestriction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Canonical instantiatesCanonical,
             FhirUri instantiatesUri,
             List<dynamic> basedOn,
@@ -5120,13 +5225,13 @@ class _$TaskRestriction implements TaskRestriction {
             FhirDateTime authoredOn,
             FhirDateTime lastModified,
             Reference requester,
-            List<dynamic> performerType,
+            List<CodeableConcept> performerType,
             Reference owner,
             Reference location,
             CodeableConcept reasonCode,
             Reference reasonReference,
             List<dynamic> insurance,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
             List<dynamic> input,
@@ -5262,14 +5367,14 @@ class _$TaskRestriction implements TaskRestriction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             AppointmentStatus status,
             CodeableConcept cancelationReason,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             int priority,
             String description,
@@ -5283,13 +5388,13 @@ class _$TaskRestriction implements TaskRestriction {
             String patientInstruction,
             List<dynamic> basedOn,
             List<dynamic> participant,
-            List<dynamic> requestedPeriod),
+            List<Period> requestedPeriod),
     @required
         Result appointmentParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Reference actor,
             @JsonKey(name: 'required') AppointmentParticipantRequired require,
             AppointmentParticipantStatus status,
@@ -5305,11 +5410,11 @@ class _$TaskRestriction implements TaskRestriction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference appointment,
             Instant start,
             Instant end,
-            List<dynamic> participantType,
+            List<CodeableConcept> participantType,
             Reference actor,
             Code participantStatus,
             String comment),
@@ -5330,7 +5435,7 @@ class _$TaskRestriction implements TaskRestriction {
             Code status,
             FhirDateTime statusDate,
             CodeableConcept validationType,
-            List<dynamic> validationProcess,
+            List<CodeableConcept> validationProcess,
             Timing frequency,
             FhirDateTime lastPerformed,
             Date nextScheduled,
@@ -5344,12 +5449,12 @@ class _$TaskRestriction implements TaskRestriction {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Reference who,
-            List<dynamic> type,
-            List<dynamic> communicationMethod,
+            List<CodeableConcept> type,
+            List<CodeableConcept> communicationMethod,
             CodeableConcept validationStatus,
             FhirDateTime validationDate,
             CodeableConcept canPushUpdates,
-            List<dynamic> pushTypeAvailable),
+            List<CodeableConcept> pushTypeAvailable),
     @required
         Result verificationResultAttestation(
             String id,
@@ -5402,11 +5507,11 @@ class _$TaskRestriction implements TaskRestriction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         List<dynamic> actor,
         Period planningHorizon,
         String comment),
@@ -5420,10 +5525,10 @@ class _$TaskRestriction implements TaskRestriction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<Identifier> identifier,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
         Reference schedule,
         SlotStatus status,
@@ -5441,7 +5546,7 @@ class _$TaskRestriction implements TaskRestriction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Canonical instantiatesCanonical,
         FhirUri instantiatesUri,
         List<dynamic> basedOn,
@@ -5461,13 +5566,13 @@ class _$TaskRestriction implements TaskRestriction {
         FhirDateTime authoredOn,
         FhirDateTime lastModified,
         Reference requester,
-        List<dynamic> performerType,
+        List<CodeableConcept> performerType,
         Reference owner,
         Reference location,
         CodeableConcept reasonCode,
         Reference reasonReference,
         List<dynamic> insurance,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
         List<dynamic> input,
@@ -5599,14 +5704,14 @@ class _$TaskRestriction implements TaskRestriction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         AppointmentStatus status,
         CodeableConcept cancelationReason,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         int priority,
         String description,
@@ -5620,12 +5725,12 @@ class _$TaskRestriction implements TaskRestriction {
         String patientInstruction,
         List<dynamic> basedOn,
         List<dynamic> participant,
-        List<dynamic> requestedPeriod),
+        List<Period> requestedPeriod),
     Result appointmentParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Reference actor,
         @JsonKey(name: 'required') AppointmentParticipantRequired require,
         AppointmentParticipantStatus status,
@@ -5640,11 +5745,11 @@ class _$TaskRestriction implements TaskRestriction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference appointment,
         Instant start,
         Instant end,
-        List<dynamic> participantType,
+        List<CodeableConcept> participantType,
         Reference actor,
         Code participantStatus,
         String comment),
@@ -5664,7 +5769,7 @@ class _$TaskRestriction implements TaskRestriction {
         Code status,
         FhirDateTime statusDate,
         CodeableConcept validationType,
-        List<dynamic> validationProcess,
+        List<CodeableConcept> validationProcess,
         Timing frequency,
         FhirDateTime lastPerformed,
         Date nextScheduled,
@@ -5677,12 +5782,12 @@ class _$TaskRestriction implements TaskRestriction {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Reference who,
-        List<dynamic> type,
-        List<dynamic> communicationMethod,
+        List<CodeableConcept> type,
+        List<CodeableConcept> communicationMethod,
         CodeableConcept validationStatus,
         FhirDateTime validationDate,
         CodeableConcept canPushUpdates,
-        List<dynamic> pushTypeAvailable),
+        List<CodeableConcept> pushTypeAvailable),
     Result verificationResultAttestation(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -5866,6 +5971,28 @@ abstract class $TaskInputCopyWith<$Res> implements $WorkflowCopyWith<$Res> {
       UsageContext valueUsageContext,
       Dosage valueDosage,
       Meta valueMeta});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $AddressCopyWith<$Res> get valueAddress;
+  $AgeCopyWith<$Res> get valueAge;
+  $AnnotationCopyWith<$Res> get valueAnnotation;
+  $AttachmentCopyWith<$Res> get valueAttachment;
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  $CodingCopyWith<$Res> get valueCoding;
+  $ContactPointCopyWith<$Res> get valueContactPoint;
+  $CountCopyWith<$Res> get valueCount;
+  $DistanceCopyWith<$Res> get valueDistance;
+  $DurationCopyWith<$Res> get valueDuration;
+  $HumanNameCopyWith<$Res> get valueHumanName;
+  $IdentifierCopyWith<$Res> get valueIdentifier;
+  $MoneyCopyWith<$Res> get valueMoney;
+  $PeriodCopyWith<$Res> get valuePeriod;
+  $QuantityCopyWith<$Res> get valueQuantity;
+  $RangeCopyWith<$Res> get valueRange;
+  $RatioCopyWith<$Res> get valueRatio;
+  $SampledDataCopyWith<$Res> get valueSampledData;
+  $SignatureCopyWith<$Res> get valueSignature;
+  $TimingCopyWith<$Res> get valueTiming;
 }
 
 class _$TaskInputCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
@@ -6062,6 +6189,216 @@ class _$TaskInputCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
           valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage,
       valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $AddressCopyWith<$Res> get valueAddress {
+    if (_value.valueAddress == null) {
+      return null;
+    }
+    return $AddressCopyWith<$Res>(_value.valueAddress, (value) {
+      return _then(_value.copyWith(valueAddress: value));
+    });
+  }
+
+  @override
+  $AgeCopyWith<$Res> get valueAge {
+    if (_value.valueAge == null) {
+      return null;
+    }
+    return $AgeCopyWith<$Res>(_value.valueAge, (value) {
+      return _then(_value.copyWith(valueAge: value));
+    });
+  }
+
+  @override
+  $AnnotationCopyWith<$Res> get valueAnnotation {
+    if (_value.valueAnnotation == null) {
+      return null;
+    }
+    return $AnnotationCopyWith<$Res>(_value.valueAnnotation, (value) {
+      return _then(_value.copyWith(valueAnnotation: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get valueAttachment {
+    if (_value.valueAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.valueAttachment, (value) {
+      return _then(_value.copyWith(valueAttachment: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept, (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get valueCoding {
+    if (_value.valueCoding == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.valueCoding, (value) {
+      return _then(_value.copyWith(valueCoding: value));
+    });
+  }
+
+  @override
+  $ContactPointCopyWith<$Res> get valueContactPoint {
+    if (_value.valueContactPoint == null) {
+      return null;
+    }
+    return $ContactPointCopyWith<$Res>(_value.valueContactPoint, (value) {
+      return _then(_value.copyWith(valueContactPoint: value));
+    });
+  }
+
+  @override
+  $CountCopyWith<$Res> get valueCount {
+    if (_value.valueCount == null) {
+      return null;
+    }
+    return $CountCopyWith<$Res>(_value.valueCount, (value) {
+      return _then(_value.copyWith(valueCount: value));
+    });
+  }
+
+  @override
+  $DistanceCopyWith<$Res> get valueDistance {
+    if (_value.valueDistance == null) {
+      return null;
+    }
+    return $DistanceCopyWith<$Res>(_value.valueDistance, (value) {
+      return _then(_value.copyWith(valueDistance: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get valueDuration {
+    if (_value.valueDuration == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.valueDuration, (value) {
+      return _then(_value.copyWith(valueDuration: value));
+    });
+  }
+
+  @override
+  $HumanNameCopyWith<$Res> get valueHumanName {
+    if (_value.valueHumanName == null) {
+      return null;
+    }
+    return $HumanNameCopyWith<$Res>(_value.valueHumanName, (value) {
+      return _then(_value.copyWith(valueHumanName: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get valueIdentifier {
+    if (_value.valueIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.valueIdentifier, (value) {
+      return _then(_value.copyWith(valueIdentifier: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get valueMoney {
+    if (_value.valueMoney == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.valueMoney, (value) {
+      return _then(_value.copyWith(valueMoney: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get valuePeriod {
+    if (_value.valuePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.valuePeriod, (value) {
+      return _then(_value.copyWith(valuePeriod: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.valueRange, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get valueRatio {
+    if (_value.valueRatio == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.valueRatio, (value) {
+      return _then(_value.copyWith(valueRatio: value));
+    });
+  }
+
+  @override
+  $SampledDataCopyWith<$Res> get valueSampledData {
+    if (_value.valueSampledData == null) {
+      return null;
+    }
+    return $SampledDataCopyWith<$Res>(_value.valueSampledData, (value) {
+      return _then(_value.copyWith(valueSampledData: value));
+    });
+  }
+
+  @override
+  $SignatureCopyWith<$Res> get valueSignature {
+    if (_value.valueSignature == null) {
+      return null;
+    }
+    return $SignatureCopyWith<$Res>(_value.valueSignature, (value) {
+      return _then(_value.copyWith(valueSignature: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get valueTiming {
+    if (_value.valueTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.valueTiming, (value) {
+      return _then(_value.copyWith(valueTiming: value));
+    });
   }
 }
 
@@ -6420,11 +6757,11 @@ class _$TaskInput implements TaskInput {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             List<dynamic> actor,
             Period planningHorizon,
             String comment),
@@ -6439,10 +6776,10 @@ class _$TaskInput implements TaskInput {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<Identifier> identifier,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
             Reference schedule,
             SlotStatus status,
@@ -6461,7 +6798,7 @@ class _$TaskInput implements TaskInput {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Canonical instantiatesCanonical,
             FhirUri instantiatesUri,
             List<dynamic> basedOn,
@@ -6481,13 +6818,13 @@ class _$TaskInput implements TaskInput {
             FhirDateTime authoredOn,
             FhirDateTime lastModified,
             Reference requester,
-            List<dynamic> performerType,
+            List<CodeableConcept> performerType,
             Reference owner,
             Reference location,
             CodeableConcept reasonCode,
             Reference reasonReference,
             List<dynamic> insurance,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
             List<dynamic> input,
@@ -6623,14 +6960,14 @@ class _$TaskInput implements TaskInput {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             AppointmentStatus status,
             CodeableConcept cancelationReason,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             int priority,
             String description,
@@ -6644,13 +6981,13 @@ class _$TaskInput implements TaskInput {
             String patientInstruction,
             List<dynamic> basedOn,
             List<dynamic> participant,
-            List<dynamic> requestedPeriod),
+            List<Period> requestedPeriod),
     @required
         Result appointmentParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Reference actor,
             @JsonKey(name: 'required') AppointmentParticipantRequired require,
             AppointmentParticipantStatus status,
@@ -6666,11 +7003,11 @@ class _$TaskInput implements TaskInput {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference appointment,
             Instant start,
             Instant end,
-            List<dynamic> participantType,
+            List<CodeableConcept> participantType,
             Reference actor,
             Code participantStatus,
             String comment),
@@ -6691,7 +7028,7 @@ class _$TaskInput implements TaskInput {
             Code status,
             FhirDateTime statusDate,
             CodeableConcept validationType,
-            List<dynamic> validationProcess,
+            List<CodeableConcept> validationProcess,
             Timing frequency,
             FhirDateTime lastPerformed,
             Date nextScheduled,
@@ -6705,12 +7042,12 @@ class _$TaskInput implements TaskInput {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Reference who,
-            List<dynamic> type,
-            List<dynamic> communicationMethod,
+            List<CodeableConcept> type,
+            List<CodeableConcept> communicationMethod,
             CodeableConcept validationStatus,
             FhirDateTime validationDate,
             CodeableConcept canPushUpdates,
-            List<dynamic> pushTypeAvailable),
+            List<CodeableConcept> pushTypeAvailable),
     @required
         Result verificationResultAttestation(
             String id,
@@ -6816,11 +7153,11 @@ class _$TaskInput implements TaskInput {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         List<dynamic> actor,
         Period planningHorizon,
         String comment),
@@ -6834,10 +7171,10 @@ class _$TaskInput implements TaskInput {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<Identifier> identifier,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
         Reference schedule,
         SlotStatus status,
@@ -6855,7 +7192,7 @@ class _$TaskInput implements TaskInput {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Canonical instantiatesCanonical,
         FhirUri instantiatesUri,
         List<dynamic> basedOn,
@@ -6875,13 +7212,13 @@ class _$TaskInput implements TaskInput {
         FhirDateTime authoredOn,
         FhirDateTime lastModified,
         Reference requester,
-        List<dynamic> performerType,
+        List<CodeableConcept> performerType,
         Reference owner,
         Reference location,
         CodeableConcept reasonCode,
         Reference reasonReference,
         List<dynamic> insurance,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
         List<dynamic> input,
@@ -7013,14 +7350,14 @@ class _$TaskInput implements TaskInput {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         AppointmentStatus status,
         CodeableConcept cancelationReason,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         int priority,
         String description,
@@ -7034,12 +7371,12 @@ class _$TaskInput implements TaskInput {
         String patientInstruction,
         List<dynamic> basedOn,
         List<dynamic> participant,
-        List<dynamic> requestedPeriod),
+        List<Period> requestedPeriod),
     Result appointmentParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Reference actor,
         @JsonKey(name: 'required') AppointmentParticipantRequired require,
         AppointmentParticipantStatus status,
@@ -7054,11 +7391,11 @@ class _$TaskInput implements TaskInput {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference appointment,
         Instant start,
         Instant end,
-        List<dynamic> participantType,
+        List<CodeableConcept> participantType,
         Reference actor,
         Code participantStatus,
         String comment),
@@ -7078,7 +7415,7 @@ class _$TaskInput implements TaskInput {
         Code status,
         FhirDateTime statusDate,
         CodeableConcept validationType,
-        List<dynamic> validationProcess,
+        List<CodeableConcept> validationProcess,
         Timing frequency,
         FhirDateTime lastPerformed,
         Date nextScheduled,
@@ -7091,12 +7428,12 @@ class _$TaskInput implements TaskInput {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Reference who,
-        List<dynamic> type,
-        List<dynamic> communicationMethod,
+        List<CodeableConcept> type,
+        List<CodeableConcept> communicationMethod,
         CodeableConcept validationStatus,
         FhirDateTime validationDate,
         CodeableConcept canPushUpdates,
-        List<dynamic> pushTypeAvailable),
+        List<CodeableConcept> pushTypeAvailable),
     Result verificationResultAttestation(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -7429,6 +7766,28 @@ abstract class $TaskOutputCopyWith<$Res> implements $WorkflowCopyWith<$Res> {
       UsageContext valueUsageContext,
       Dosage valueDosage,
       Meta valueMeta});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $AddressCopyWith<$Res> get valueAddress;
+  $AgeCopyWith<$Res> get valueAge;
+  $AnnotationCopyWith<$Res> get valueAnnotation;
+  $AttachmentCopyWith<$Res> get valueAttachment;
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  $CodingCopyWith<$Res> get valueCoding;
+  $ContactPointCopyWith<$Res> get valueContactPoint;
+  $CountCopyWith<$Res> get valueCount;
+  $DistanceCopyWith<$Res> get valueDistance;
+  $DurationCopyWith<$Res> get valueDuration;
+  $HumanNameCopyWith<$Res> get valueHumanName;
+  $IdentifierCopyWith<$Res> get valueIdentifier;
+  $MoneyCopyWith<$Res> get valueMoney;
+  $PeriodCopyWith<$Res> get valuePeriod;
+  $QuantityCopyWith<$Res> get valueQuantity;
+  $RangeCopyWith<$Res> get valueRange;
+  $RatioCopyWith<$Res> get valueRatio;
+  $SampledDataCopyWith<$Res> get valueSampledData;
+  $SignatureCopyWith<$Res> get valueSignature;
+  $TimingCopyWith<$Res> get valueTiming;
 }
 
 class _$TaskOutputCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
@@ -7625,6 +7984,216 @@ class _$TaskOutputCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
           valueDosage == freezed ? _value.valueDosage : valueDosage as Dosage,
       valueMeta: valueMeta == freezed ? _value.valueMeta : valueMeta as Meta,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $AddressCopyWith<$Res> get valueAddress {
+    if (_value.valueAddress == null) {
+      return null;
+    }
+    return $AddressCopyWith<$Res>(_value.valueAddress, (value) {
+      return _then(_value.copyWith(valueAddress: value));
+    });
+  }
+
+  @override
+  $AgeCopyWith<$Res> get valueAge {
+    if (_value.valueAge == null) {
+      return null;
+    }
+    return $AgeCopyWith<$Res>(_value.valueAge, (value) {
+      return _then(_value.copyWith(valueAge: value));
+    });
+  }
+
+  @override
+  $AnnotationCopyWith<$Res> get valueAnnotation {
+    if (_value.valueAnnotation == null) {
+      return null;
+    }
+    return $AnnotationCopyWith<$Res>(_value.valueAnnotation, (value) {
+      return _then(_value.copyWith(valueAnnotation: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get valueAttachment {
+    if (_value.valueAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.valueAttachment, (value) {
+      return _then(_value.copyWith(valueAttachment: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept, (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res> get valueCoding {
+    if (_value.valueCoding == null) {
+      return null;
+    }
+    return $CodingCopyWith<$Res>(_value.valueCoding, (value) {
+      return _then(_value.copyWith(valueCoding: value));
+    });
+  }
+
+  @override
+  $ContactPointCopyWith<$Res> get valueContactPoint {
+    if (_value.valueContactPoint == null) {
+      return null;
+    }
+    return $ContactPointCopyWith<$Res>(_value.valueContactPoint, (value) {
+      return _then(_value.copyWith(valueContactPoint: value));
+    });
+  }
+
+  @override
+  $CountCopyWith<$Res> get valueCount {
+    if (_value.valueCount == null) {
+      return null;
+    }
+    return $CountCopyWith<$Res>(_value.valueCount, (value) {
+      return _then(_value.copyWith(valueCount: value));
+    });
+  }
+
+  @override
+  $DistanceCopyWith<$Res> get valueDistance {
+    if (_value.valueDistance == null) {
+      return null;
+    }
+    return $DistanceCopyWith<$Res>(_value.valueDistance, (value) {
+      return _then(_value.copyWith(valueDistance: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get valueDuration {
+    if (_value.valueDuration == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.valueDuration, (value) {
+      return _then(_value.copyWith(valueDuration: value));
+    });
+  }
+
+  @override
+  $HumanNameCopyWith<$Res> get valueHumanName {
+    if (_value.valueHumanName == null) {
+      return null;
+    }
+    return $HumanNameCopyWith<$Res>(_value.valueHumanName, (value) {
+      return _then(_value.copyWith(valueHumanName: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get valueIdentifier {
+    if (_value.valueIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.valueIdentifier, (value) {
+      return _then(_value.copyWith(valueIdentifier: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res> get valueMoney {
+    if (_value.valueMoney == null) {
+      return null;
+    }
+    return $MoneyCopyWith<$Res>(_value.valueMoney, (value) {
+      return _then(_value.copyWith(valueMoney: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get valuePeriod {
+    if (_value.valuePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.valuePeriod, (value) {
+      return _then(_value.copyWith(valuePeriod: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.valueRange, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get valueRatio {
+    if (_value.valueRatio == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.valueRatio, (value) {
+      return _then(_value.copyWith(valueRatio: value));
+    });
+  }
+
+  @override
+  $SampledDataCopyWith<$Res> get valueSampledData {
+    if (_value.valueSampledData == null) {
+      return null;
+    }
+    return $SampledDataCopyWith<$Res>(_value.valueSampledData, (value) {
+      return _then(_value.copyWith(valueSampledData: value));
+    });
+  }
+
+  @override
+  $SignatureCopyWith<$Res> get valueSignature {
+    if (_value.valueSignature == null) {
+      return null;
+    }
+    return $SignatureCopyWith<$Res>(_value.valueSignature, (value) {
+      return _then(_value.copyWith(valueSignature: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get valueTiming {
+    if (_value.valueTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.valueTiming, (value) {
+      return _then(_value.copyWith(valueTiming: value));
+    });
   }
 }
 
@@ -7983,11 +8552,11 @@ class _$TaskOutput implements TaskOutput {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             List<dynamic> actor,
             Period planningHorizon,
             String comment),
@@ -8002,10 +8571,10 @@ class _$TaskOutput implements TaskOutput {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<Identifier> identifier,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
             Reference schedule,
             SlotStatus status,
@@ -8024,7 +8593,7 @@ class _$TaskOutput implements TaskOutput {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Canonical instantiatesCanonical,
             FhirUri instantiatesUri,
             List<dynamic> basedOn,
@@ -8044,13 +8613,13 @@ class _$TaskOutput implements TaskOutput {
             FhirDateTime authoredOn,
             FhirDateTime lastModified,
             Reference requester,
-            List<dynamic> performerType,
+            List<CodeableConcept> performerType,
             Reference owner,
             Reference location,
             CodeableConcept reasonCode,
             Reference reasonReference,
             List<dynamic> insurance,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
             List<dynamic> input,
@@ -8186,14 +8755,14 @@ class _$TaskOutput implements TaskOutput {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             AppointmentStatus status,
             CodeableConcept cancelationReason,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             int priority,
             String description,
@@ -8207,13 +8776,13 @@ class _$TaskOutput implements TaskOutput {
             String patientInstruction,
             List<dynamic> basedOn,
             List<dynamic> participant,
-            List<dynamic> requestedPeriod),
+            List<Period> requestedPeriod),
     @required
         Result appointmentParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Reference actor,
             @JsonKey(name: 'required') AppointmentParticipantRequired require,
             AppointmentParticipantStatus status,
@@ -8229,11 +8798,11 @@ class _$TaskOutput implements TaskOutput {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference appointment,
             Instant start,
             Instant end,
-            List<dynamic> participantType,
+            List<CodeableConcept> participantType,
             Reference actor,
             Code participantStatus,
             String comment),
@@ -8254,7 +8823,7 @@ class _$TaskOutput implements TaskOutput {
             Code status,
             FhirDateTime statusDate,
             CodeableConcept validationType,
-            List<dynamic> validationProcess,
+            List<CodeableConcept> validationProcess,
             Timing frequency,
             FhirDateTime lastPerformed,
             Date nextScheduled,
@@ -8268,12 +8837,12 @@ class _$TaskOutput implements TaskOutput {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Reference who,
-            List<dynamic> type,
-            List<dynamic> communicationMethod,
+            List<CodeableConcept> type,
+            List<CodeableConcept> communicationMethod,
             CodeableConcept validationStatus,
             FhirDateTime validationDate,
             CodeableConcept canPushUpdates,
-            List<dynamic> pushTypeAvailable),
+            List<CodeableConcept> pushTypeAvailable),
     @required
         Result verificationResultAttestation(
             String id,
@@ -8379,11 +8948,11 @@ class _$TaskOutput implements TaskOutput {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         List<dynamic> actor,
         Period planningHorizon,
         String comment),
@@ -8397,10 +8966,10 @@ class _$TaskOutput implements TaskOutput {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<Identifier> identifier,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
         Reference schedule,
         SlotStatus status,
@@ -8418,7 +8987,7 @@ class _$TaskOutput implements TaskOutput {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Canonical instantiatesCanonical,
         FhirUri instantiatesUri,
         List<dynamic> basedOn,
@@ -8438,13 +9007,13 @@ class _$TaskOutput implements TaskOutput {
         FhirDateTime authoredOn,
         FhirDateTime lastModified,
         Reference requester,
-        List<dynamic> performerType,
+        List<CodeableConcept> performerType,
         Reference owner,
         Reference location,
         CodeableConcept reasonCode,
         Reference reasonReference,
         List<dynamic> insurance,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
         List<dynamic> input,
@@ -8576,14 +9145,14 @@ class _$TaskOutput implements TaskOutput {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         AppointmentStatus status,
         CodeableConcept cancelationReason,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         int priority,
         String description,
@@ -8597,12 +9166,12 @@ class _$TaskOutput implements TaskOutput {
         String patientInstruction,
         List<dynamic> basedOn,
         List<dynamic> participant,
-        List<dynamic> requestedPeriod),
+        List<Period> requestedPeriod),
     Result appointmentParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Reference actor,
         @JsonKey(name: 'required') AppointmentParticipantRequired require,
         AppointmentParticipantStatus status,
@@ -8617,11 +9186,11 @@ class _$TaskOutput implements TaskOutput {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference appointment,
         Instant start,
         Instant end,
-        List<dynamic> participantType,
+        List<CodeableConcept> participantType,
         Reference actor,
         Code participantStatus,
         String comment),
@@ -8641,7 +9210,7 @@ class _$TaskOutput implements TaskOutput {
         Code status,
         FhirDateTime statusDate,
         CodeableConcept validationType,
-        List<dynamic> validationProcess,
+        List<CodeableConcept> validationProcess,
         Timing frequency,
         FhirDateTime lastPerformed,
         Date nextScheduled,
@@ -8654,12 +9223,12 @@ class _$TaskOutput implements TaskOutput {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Reference who,
-        List<dynamic> type,
-        List<dynamic> communicationMethod,
+        List<CodeableConcept> type,
+        List<CodeableConcept> communicationMethod,
         CodeableConcept validationStatus,
         FhirDateTime validationDate,
         CodeableConcept canPushUpdates,
-        List<dynamic> pushTypeAvailable),
+        List<CodeableConcept> pushTypeAvailable),
     Result verificationResultAttestation(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -8948,14 +9517,14 @@ abstract class $AppointmentCopyWith<$Res> implements $WorkflowCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       AppointmentStatus status,
       CodeableConcept cancelationReason,
-      List<dynamic> serviceCategory,
-      List<dynamic> serviceType,
-      List<dynamic> specialty,
+      List<CodeableConcept> serviceCategory,
+      List<CodeableConcept> serviceType,
+      List<CodeableConcept> specialty,
       CodeableConcept appointmentType,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       int priority,
       String description,
@@ -8969,7 +9538,10 @@ abstract class $AppointmentCopyWith<$Res> implements $WorkflowCopyWith<$Res> {
       String patientInstruction,
       List<dynamic> basedOn,
       List<dynamic> participant,
-      List<dynamic> requestedPeriod});
+      List<Period> requestedPeriod});
+
+  $CodeableConceptCopyWith<$Res> get cancelationReason;
+  $CodeableConceptCopyWith<$Res> get appointmentType;
 }
 
 class _$AppointmentCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
@@ -9036,25 +9608,26 @@ class _$AppointmentCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as AppointmentStatus,
       cancelationReason: cancelationReason == freezed
           ? _value.cancelationReason
           : cancelationReason as CodeableConcept,
       serviceCategory: serviceCategory == freezed
           ? _value.serviceCategory
-          : serviceCategory as List<dynamic>,
+          : serviceCategory as List<CodeableConcept>,
       serviceType: serviceType == freezed
           ? _value.serviceType
-          : serviceType as List<dynamic>,
-      specialty:
-          specialty == freezed ? _value.specialty : specialty as List<dynamic>,
+          : serviceType as List<CodeableConcept>,
+      specialty: specialty == freezed
+          ? _value.specialty
+          : specialty as List<CodeableConcept>,
       appointmentType: appointmentType == freezed
           ? _value.appointmentType
           : appointmentType as CodeableConcept,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<dynamic>,
+          : reasonCode as List<CodeableConcept>,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
           : reasonReference as List<dynamic>,
@@ -9081,8 +9654,28 @@ class _$AppointmentCopyWithImpl<$Res> extends _$WorkflowCopyWithImpl<$Res>
           : participant as List<dynamic>,
       requestedPeriod: requestedPeriod == freezed
           ? _value.requestedPeriod
-          : requestedPeriod as List<dynamic>,
+          : requestedPeriod as List<Period>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get cancelationReason {
+    if (_value.cancelationReason == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.cancelationReason, (value) {
+      return _then(_value.copyWith(cancelationReason: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get appointmentType {
+    if (_value.appointmentType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.appointmentType, (value) {
+      return _then(_value.copyWith(appointmentType: value));
+    });
   }
 }
 
@@ -9144,21 +9737,21 @@ class _$Appointment implements Appointment {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final AppointmentStatus status;
   @override
   final CodeableConcept cancelationReason;
   @override
-  final List<dynamic> serviceCategory;
+  final List<CodeableConcept> serviceCategory;
   @override
-  final List<dynamic> serviceType;
+  final List<CodeableConcept> serviceType;
   @override
-  final List<dynamic> specialty;
+  final List<CodeableConcept> specialty;
   @override
   final CodeableConcept appointmentType;
   @override
-  final List<dynamic> reasonCode;
+  final List<CodeableConcept> reasonCode;
   @override
   final List<dynamic> reasonReference;
   @override
@@ -9186,7 +9779,7 @@ class _$Appointment implements Appointment {
   @override
   final List<dynamic> participant;
   @override
-  final List<dynamic> requestedPeriod;
+  final List<Period> requestedPeriod;
 
   @override
   String toString() {
@@ -9325,11 +9918,11 @@ class _$Appointment implements Appointment {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             List<dynamic> actor,
             Period planningHorizon,
             String comment),
@@ -9344,10 +9937,10 @@ class _$Appointment implements Appointment {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<Identifier> identifier,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
             Reference schedule,
             SlotStatus status,
@@ -9366,7 +9959,7 @@ class _$Appointment implements Appointment {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Canonical instantiatesCanonical,
             FhirUri instantiatesUri,
             List<dynamic> basedOn,
@@ -9386,13 +9979,13 @@ class _$Appointment implements Appointment {
             FhirDateTime authoredOn,
             FhirDateTime lastModified,
             Reference requester,
-            List<dynamic> performerType,
+            List<CodeableConcept> performerType,
             Reference owner,
             Reference location,
             CodeableConcept reasonCode,
             Reference reasonReference,
             List<dynamic> insurance,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
             List<dynamic> input,
@@ -9528,14 +10121,14 @@ class _$Appointment implements Appointment {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             AppointmentStatus status,
             CodeableConcept cancelationReason,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             int priority,
             String description,
@@ -9549,13 +10142,13 @@ class _$Appointment implements Appointment {
             String patientInstruction,
             List<dynamic> basedOn,
             List<dynamic> participant,
-            List<dynamic> requestedPeriod),
+            List<Period> requestedPeriod),
     @required
         Result appointmentParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Reference actor,
             @JsonKey(name: 'required') AppointmentParticipantRequired require,
             AppointmentParticipantStatus status,
@@ -9571,11 +10164,11 @@ class _$Appointment implements Appointment {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference appointment,
             Instant start,
             Instant end,
-            List<dynamic> participantType,
+            List<CodeableConcept> participantType,
             Reference actor,
             Code participantStatus,
             String comment),
@@ -9596,7 +10189,7 @@ class _$Appointment implements Appointment {
             Code status,
             FhirDateTime statusDate,
             CodeableConcept validationType,
-            List<dynamic> validationProcess,
+            List<CodeableConcept> validationProcess,
             Timing frequency,
             FhirDateTime lastPerformed,
             Date nextScheduled,
@@ -9610,12 +10203,12 @@ class _$Appointment implements Appointment {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Reference who,
-            List<dynamic> type,
-            List<dynamic> communicationMethod,
+            List<CodeableConcept> type,
+            List<CodeableConcept> communicationMethod,
             CodeableConcept validationStatus,
             FhirDateTime validationDate,
             CodeableConcept canPushUpdates,
-            List<dynamic> pushTypeAvailable),
+            List<CodeableConcept> pushTypeAvailable),
     @required
         Result verificationResultAttestation(
             String id,
@@ -9698,11 +10291,11 @@ class _$Appointment implements Appointment {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         List<dynamic> actor,
         Period planningHorizon,
         String comment),
@@ -9716,10 +10309,10 @@ class _$Appointment implements Appointment {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<Identifier> identifier,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
         Reference schedule,
         SlotStatus status,
@@ -9737,7 +10330,7 @@ class _$Appointment implements Appointment {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Canonical instantiatesCanonical,
         FhirUri instantiatesUri,
         List<dynamic> basedOn,
@@ -9757,13 +10350,13 @@ class _$Appointment implements Appointment {
         FhirDateTime authoredOn,
         FhirDateTime lastModified,
         Reference requester,
-        List<dynamic> performerType,
+        List<CodeableConcept> performerType,
         Reference owner,
         Reference location,
         CodeableConcept reasonCode,
         Reference reasonReference,
         List<dynamic> insurance,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
         List<dynamic> input,
@@ -9895,14 +10488,14 @@ class _$Appointment implements Appointment {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         AppointmentStatus status,
         CodeableConcept cancelationReason,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         int priority,
         String description,
@@ -9916,12 +10509,12 @@ class _$Appointment implements Appointment {
         String patientInstruction,
         List<dynamic> basedOn,
         List<dynamic> participant,
-        List<dynamic> requestedPeriod),
+        List<Period> requestedPeriod),
     Result appointmentParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Reference actor,
         @JsonKey(name: 'required') AppointmentParticipantRequired require,
         AppointmentParticipantStatus status,
@@ -9936,11 +10529,11 @@ class _$Appointment implements Appointment {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference appointment,
         Instant start,
         Instant end,
-        List<dynamic> participantType,
+        List<CodeableConcept> participantType,
         Reference actor,
         Code participantStatus,
         String comment),
@@ -9960,7 +10553,7 @@ class _$Appointment implements Appointment {
         Code status,
         FhirDateTime statusDate,
         CodeableConcept validationType,
-        List<dynamic> validationProcess,
+        List<CodeableConcept> validationProcess,
         Timing frequency,
         FhirDateTime lastPerformed,
         Date nextScheduled,
@@ -9973,12 +10566,12 @@ class _$Appointment implements Appointment {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Reference who,
-        List<dynamic> type,
-        List<dynamic> communicationMethod,
+        List<CodeableConcept> type,
+        List<CodeableConcept> communicationMethod,
         CodeableConcept validationStatus,
         FhirDateTime validationDate,
         CodeableConcept canPushUpdates,
-        List<dynamic> pushTypeAvailable),
+        List<CodeableConcept> pushTypeAvailable),
     Result verificationResultAttestation(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -10119,14 +10712,14 @@ abstract class Appointment implements Workflow {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       AppointmentStatus status,
       CodeableConcept cancelationReason,
-      List<dynamic> serviceCategory,
-      List<dynamic> serviceType,
-      List<dynamic> specialty,
+      List<CodeableConcept> serviceCategory,
+      List<CodeableConcept> serviceType,
+      List<CodeableConcept> specialty,
       CodeableConcept appointmentType,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       int priority,
       String description,
@@ -10140,7 +10733,7 @@ abstract class Appointment implements Workflow {
       String patientInstruction,
       List<dynamic> basedOn,
       List<dynamic> participant,
-      List<dynamic> requestedPeriod}) = _$Appointment;
+      List<Period> requestedPeriod}) = _$Appointment;
 
   factory Appointment.fromJson(Map<String, dynamic> json) =
       _$Appointment.fromJson;
@@ -10157,14 +10750,14 @@ abstract class Appointment implements Workflow {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   AppointmentStatus get status;
   CodeableConcept get cancelationReason;
-  List<dynamic> get serviceCategory;
-  List<dynamic> get serviceType;
-  List<dynamic> get specialty;
+  List<CodeableConcept> get serviceCategory;
+  List<CodeableConcept> get serviceType;
+  List<CodeableConcept> get specialty;
   CodeableConcept get appointmentType;
-  List<dynamic> get reasonCode;
+  List<CodeableConcept> get reasonCode;
   List<dynamic> get reasonReference;
   int get priority;
   String get description;
@@ -10178,7 +10771,7 @@ abstract class Appointment implements Workflow {
   String get patientInstruction;
   List<dynamic> get basedOn;
   List<dynamic> get participant;
-  List<dynamic> get requestedPeriod;
+  List<Period> get requestedPeriod;
   @override
   $AppointmentCopyWith<Appointment> get copyWith;
 }
@@ -10193,11 +10786,13 @@ abstract class $AppointmentParticipantCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       Reference actor,
       @JsonKey(name: 'required') AppointmentParticipantRequired require,
       AppointmentParticipantStatus status,
       Period period});
+
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$AppointmentParticipantCopyWithImpl<$Res>
@@ -10229,7 +10824,7 @@ class _$AppointmentParticipantCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
-      type: type == freezed ? _value.type : type as List<dynamic>,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>,
       actor: actor == freezed ? _value.actor : actor as Reference,
       require: require == freezed
           ? _value.require
@@ -10239,6 +10834,16 @@ class _$AppointmentParticipantCopyWithImpl<$Res>
           : status as AppointmentParticipantStatus,
       period: period == freezed ? _value.period : period as Period,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
   }
 }
 
@@ -10265,7 +10870,7 @@ class _$AppointmentParticipant implements AppointmentParticipant {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> type;
+  final List<CodeableConcept> type;
   @override
   final Reference actor;
   @override
@@ -10337,11 +10942,11 @@ class _$AppointmentParticipant implements AppointmentParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             List<dynamic> actor,
             Period planningHorizon,
             String comment),
@@ -10356,10 +10961,10 @@ class _$AppointmentParticipant implements AppointmentParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<Identifier> identifier,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
             Reference schedule,
             SlotStatus status,
@@ -10378,7 +10983,7 @@ class _$AppointmentParticipant implements AppointmentParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Canonical instantiatesCanonical,
             FhirUri instantiatesUri,
             List<dynamic> basedOn,
@@ -10398,13 +11003,13 @@ class _$AppointmentParticipant implements AppointmentParticipant {
             FhirDateTime authoredOn,
             FhirDateTime lastModified,
             Reference requester,
-            List<dynamic> performerType,
+            List<CodeableConcept> performerType,
             Reference owner,
             Reference location,
             CodeableConcept reasonCode,
             Reference reasonReference,
             List<dynamic> insurance,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
             List<dynamic> input,
@@ -10540,14 +11145,14 @@ class _$AppointmentParticipant implements AppointmentParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             AppointmentStatus status,
             CodeableConcept cancelationReason,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             int priority,
             String description,
@@ -10561,13 +11166,13 @@ class _$AppointmentParticipant implements AppointmentParticipant {
             String patientInstruction,
             List<dynamic> basedOn,
             List<dynamic> participant,
-            List<dynamic> requestedPeriod),
+            List<Period> requestedPeriod),
     @required
         Result appointmentParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Reference actor,
             @JsonKey(name: 'required') AppointmentParticipantRequired require,
             AppointmentParticipantStatus status,
@@ -10583,11 +11188,11 @@ class _$AppointmentParticipant implements AppointmentParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference appointment,
             Instant start,
             Instant end,
-            List<dynamic> participantType,
+            List<CodeableConcept> participantType,
             Reference actor,
             Code participantStatus,
             String comment),
@@ -10608,7 +11213,7 @@ class _$AppointmentParticipant implements AppointmentParticipant {
             Code status,
             FhirDateTime statusDate,
             CodeableConcept validationType,
-            List<dynamic> validationProcess,
+            List<CodeableConcept> validationProcess,
             Timing frequency,
             FhirDateTime lastPerformed,
             Date nextScheduled,
@@ -10622,12 +11227,12 @@ class _$AppointmentParticipant implements AppointmentParticipant {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Reference who,
-            List<dynamic> type,
-            List<dynamic> communicationMethod,
+            List<CodeableConcept> type,
+            List<CodeableConcept> communicationMethod,
             CodeableConcept validationStatus,
             FhirDateTime validationDate,
             CodeableConcept canPushUpdates,
-            List<dynamic> pushTypeAvailable),
+            List<CodeableConcept> pushTypeAvailable),
     @required
         Result verificationResultAttestation(
             String id,
@@ -10680,11 +11285,11 @@ class _$AppointmentParticipant implements AppointmentParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         List<dynamic> actor,
         Period planningHorizon,
         String comment),
@@ -10698,10 +11303,10 @@ class _$AppointmentParticipant implements AppointmentParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<Identifier> identifier,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
         Reference schedule,
         SlotStatus status,
@@ -10719,7 +11324,7 @@ class _$AppointmentParticipant implements AppointmentParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Canonical instantiatesCanonical,
         FhirUri instantiatesUri,
         List<dynamic> basedOn,
@@ -10739,13 +11344,13 @@ class _$AppointmentParticipant implements AppointmentParticipant {
         FhirDateTime authoredOn,
         FhirDateTime lastModified,
         Reference requester,
-        List<dynamic> performerType,
+        List<CodeableConcept> performerType,
         Reference owner,
         Reference location,
         CodeableConcept reasonCode,
         Reference reasonReference,
         List<dynamic> insurance,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
         List<dynamic> input,
@@ -10877,14 +11482,14 @@ class _$AppointmentParticipant implements AppointmentParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         AppointmentStatus status,
         CodeableConcept cancelationReason,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         int priority,
         String description,
@@ -10898,12 +11503,12 @@ class _$AppointmentParticipant implements AppointmentParticipant {
         String patientInstruction,
         List<dynamic> basedOn,
         List<dynamic> participant,
-        List<dynamic> requestedPeriod),
+        List<Period> requestedPeriod),
     Result appointmentParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Reference actor,
         @JsonKey(name: 'required') AppointmentParticipantRequired require,
         AppointmentParticipantStatus status,
@@ -10918,11 +11523,11 @@ class _$AppointmentParticipant implements AppointmentParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference appointment,
         Instant start,
         Instant end,
-        List<dynamic> participantType,
+        List<CodeableConcept> participantType,
         Reference actor,
         Code participantStatus,
         String comment),
@@ -10942,7 +11547,7 @@ class _$AppointmentParticipant implements AppointmentParticipant {
         Code status,
         FhirDateTime statusDate,
         CodeableConcept validationType,
-        List<dynamic> validationProcess,
+        List<CodeableConcept> validationProcess,
         Timing frequency,
         FhirDateTime lastPerformed,
         Date nextScheduled,
@@ -10955,12 +11560,12 @@ class _$AppointmentParticipant implements AppointmentParticipant {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Reference who,
-        List<dynamic> type,
-        List<dynamic> communicationMethod,
+        List<CodeableConcept> type,
+        List<CodeableConcept> communicationMethod,
         CodeableConcept validationStatus,
         FhirDateTime validationDate,
         CodeableConcept canPushUpdates,
-        List<dynamic> pushTypeAvailable),
+        List<CodeableConcept> pushTypeAvailable),
     Result verificationResultAttestation(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -11066,7 +11671,7 @@ abstract class AppointmentParticipant implements Workflow {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> type,
+      List<CodeableConcept> type,
       Reference actor,
       @JsonKey(name: 'required') AppointmentParticipantRequired require,
       AppointmentParticipantStatus status,
@@ -11081,7 +11686,7 @@ abstract class AppointmentParticipant implements Workflow {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get type;
+  List<CodeableConcept> get type;
   Reference get actor;
   @JsonKey(name: 'required')
   AppointmentParticipantRequired get require;
@@ -11107,11 +11712,11 @@ abstract class $AppointmentResponseCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Reference appointment,
       Instant start,
       Instant end,
-      List<dynamic> participantType,
+      List<CodeableConcept> participantType,
       Reference actor,
       Code participantStatus,
       String comment});
@@ -11168,7 +11773,7 @@ class _$AppointmentResponseCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       appointment: appointment == freezed
           ? _value.appointment
           : appointment as Reference,
@@ -11176,7 +11781,7 @@ class _$AppointmentResponseCopyWithImpl<$Res>
       end: end == freezed ? _value.end : end as Instant,
       participantType: participantType == freezed
           ? _value.participantType
-          : participantType as List<dynamic>,
+          : participantType as List<CodeableConcept>,
       actor: actor == freezed ? _value.actor : actor as Reference,
       participantStatus: participantStatus == freezed
           ? _value.participantStatus
@@ -11230,7 +11835,7 @@ class _$AppointmentResponse implements AppointmentResponse {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Reference appointment;
   @override
@@ -11238,7 +11843,7 @@ class _$AppointmentResponse implements AppointmentResponse {
   @override
   final Instant end;
   @override
-  final List<dynamic> participantType;
+  final List<CodeableConcept> participantType;
   @override
   final Reference actor;
   @override
@@ -11340,11 +11945,11 @@ class _$AppointmentResponse implements AppointmentResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             List<dynamic> actor,
             Period planningHorizon,
             String comment),
@@ -11359,10 +11964,10 @@ class _$AppointmentResponse implements AppointmentResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<Identifier> identifier,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
             Reference schedule,
             SlotStatus status,
@@ -11381,7 +11986,7 @@ class _$AppointmentResponse implements AppointmentResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Canonical instantiatesCanonical,
             FhirUri instantiatesUri,
             List<dynamic> basedOn,
@@ -11401,13 +12006,13 @@ class _$AppointmentResponse implements AppointmentResponse {
             FhirDateTime authoredOn,
             FhirDateTime lastModified,
             Reference requester,
-            List<dynamic> performerType,
+            List<CodeableConcept> performerType,
             Reference owner,
             Reference location,
             CodeableConcept reasonCode,
             Reference reasonReference,
             List<dynamic> insurance,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
             List<dynamic> input,
@@ -11543,14 +12148,14 @@ class _$AppointmentResponse implements AppointmentResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             AppointmentStatus status,
             CodeableConcept cancelationReason,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             int priority,
             String description,
@@ -11564,13 +12169,13 @@ class _$AppointmentResponse implements AppointmentResponse {
             String patientInstruction,
             List<dynamic> basedOn,
             List<dynamic> participant,
-            List<dynamic> requestedPeriod),
+            List<Period> requestedPeriod),
     @required
         Result appointmentParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Reference actor,
             @JsonKey(name: 'required') AppointmentParticipantRequired require,
             AppointmentParticipantStatus status,
@@ -11586,11 +12191,11 @@ class _$AppointmentResponse implements AppointmentResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference appointment,
             Instant start,
             Instant end,
-            List<dynamic> participantType,
+            List<CodeableConcept> participantType,
             Reference actor,
             Code participantStatus,
             String comment),
@@ -11611,7 +12216,7 @@ class _$AppointmentResponse implements AppointmentResponse {
             Code status,
             FhirDateTime statusDate,
             CodeableConcept validationType,
-            List<dynamic> validationProcess,
+            List<CodeableConcept> validationProcess,
             Timing frequency,
             FhirDateTime lastPerformed,
             Date nextScheduled,
@@ -11625,12 +12230,12 @@ class _$AppointmentResponse implements AppointmentResponse {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Reference who,
-            List<dynamic> type,
-            List<dynamic> communicationMethod,
+            List<CodeableConcept> type,
+            List<CodeableConcept> communicationMethod,
             CodeableConcept validationStatus,
             FhirDateTime validationDate,
             CodeableConcept canPushUpdates,
-            List<dynamic> pushTypeAvailable),
+            List<CodeableConcept> pushTypeAvailable),
     @required
         Result verificationResultAttestation(
             String id,
@@ -11699,11 +12304,11 @@ class _$AppointmentResponse implements AppointmentResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         List<dynamic> actor,
         Period planningHorizon,
         String comment),
@@ -11717,10 +12322,10 @@ class _$AppointmentResponse implements AppointmentResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<Identifier> identifier,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
         Reference schedule,
         SlotStatus status,
@@ -11738,7 +12343,7 @@ class _$AppointmentResponse implements AppointmentResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Canonical instantiatesCanonical,
         FhirUri instantiatesUri,
         List<dynamic> basedOn,
@@ -11758,13 +12363,13 @@ class _$AppointmentResponse implements AppointmentResponse {
         FhirDateTime authoredOn,
         FhirDateTime lastModified,
         Reference requester,
-        List<dynamic> performerType,
+        List<CodeableConcept> performerType,
         Reference owner,
         Reference location,
         CodeableConcept reasonCode,
         Reference reasonReference,
         List<dynamic> insurance,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
         List<dynamic> input,
@@ -11896,14 +12501,14 @@ class _$AppointmentResponse implements AppointmentResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         AppointmentStatus status,
         CodeableConcept cancelationReason,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         int priority,
         String description,
@@ -11917,12 +12522,12 @@ class _$AppointmentResponse implements AppointmentResponse {
         String patientInstruction,
         List<dynamic> basedOn,
         List<dynamic> participant,
-        List<dynamic> requestedPeriod),
+        List<Period> requestedPeriod),
     Result appointmentParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Reference actor,
         @JsonKey(name: 'required') AppointmentParticipantRequired require,
         AppointmentParticipantStatus status,
@@ -11937,11 +12542,11 @@ class _$AppointmentResponse implements AppointmentResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference appointment,
         Instant start,
         Instant end,
-        List<dynamic> participantType,
+        List<CodeableConcept> participantType,
         Reference actor,
         Code participantStatus,
         String comment),
@@ -11961,7 +12566,7 @@ class _$AppointmentResponse implements AppointmentResponse {
         Code status,
         FhirDateTime statusDate,
         CodeableConcept validationType,
-        List<dynamic> validationProcess,
+        List<CodeableConcept> validationProcess,
         Timing frequency,
         FhirDateTime lastPerformed,
         Date nextScheduled,
@@ -11974,12 +12579,12 @@ class _$AppointmentResponse implements AppointmentResponse {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Reference who,
-        List<dynamic> type,
-        List<dynamic> communicationMethod,
+        List<CodeableConcept> type,
+        List<CodeableConcept> communicationMethod,
         CodeableConcept validationStatus,
         FhirDateTime validationDate,
         CodeableConcept canPushUpdates,
-        List<dynamic> pushTypeAvailable),
+        List<CodeableConcept> pushTypeAvailable),
     Result verificationResultAttestation(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -12107,11 +12712,11 @@ abstract class AppointmentResponse implements Workflow {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Reference appointment,
       Instant start,
       Instant end,
-      List<dynamic> participantType,
+      List<CodeableConcept> participantType,
       Reference actor,
       Code participantStatus,
       String comment}) = _$AppointmentResponse;
@@ -12131,11 +12736,11 @@ abstract class AppointmentResponse implements Workflow {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   Reference get appointment;
   Instant get start;
   Instant get end;
-  List<dynamic> get participantType;
+  List<CodeableConcept> get participantType;
   Reference get actor;
   Code get participantStatus;
   String get comment;
@@ -12165,7 +12770,7 @@ abstract class $VerificationResultCopyWith<$Res>
       Code status,
       FhirDateTime statusDate,
       CodeableConcept validationType,
-      List<dynamic> validationProcess,
+      List<CodeableConcept> validationProcess,
       Timing frequency,
       FhirDateTime lastPerformed,
       Date nextScheduled,
@@ -12173,6 +12778,11 @@ abstract class $VerificationResultCopyWith<$Res>
       List<dynamic> primarySource,
       VerificationResultAttestation attestation,
       List<dynamic> validator});
+
+  $CodeableConceptCopyWith<$Res> get need;
+  $CodeableConceptCopyWith<$Res> get validationType;
+  $TimingCopyWith<$Res> get frequency;
+  $CodeableConceptCopyWith<$Res> get failureAction;
 }
 
 class _$VerificationResultCopyWithImpl<$Res>
@@ -12244,7 +12854,7 @@ class _$VerificationResultCopyWithImpl<$Res>
           : validationType as CodeableConcept,
       validationProcess: validationProcess == freezed
           ? _value.validationProcess
-          : validationProcess as List<dynamic>,
+          : validationProcess as List<CodeableConcept>,
       frequency: frequency == freezed ? _value.frequency : frequency as Timing,
       lastPerformed: lastPerformed == freezed
           ? _value.lastPerformed
@@ -12264,6 +12874,46 @@ class _$VerificationResultCopyWithImpl<$Res>
       validator:
           validator == freezed ? _value.validator : validator as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get need {
+    if (_value.need == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.need, (value) {
+      return _then(_value.copyWith(need: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get validationType {
+    if (_value.validationType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.validationType, (value) {
+      return _then(_value.copyWith(validationType: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get frequency {
+    if (_value.frequency == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.frequency, (value) {
+      return _then(_value.copyWith(frequency: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get failureAction {
+    if (_value.failureAction == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.failureAction, (value) {
+      return _then(_value.copyWith(failureAction: value));
+    });
   }
 }
 
@@ -12329,7 +12979,7 @@ class _$VerificationResult implements VerificationResult {
   @override
   final CodeableConcept validationType;
   @override
-  final List<dynamic> validationProcess;
+  final List<CodeableConcept> validationProcess;
   @override
   final Timing frequency;
   @override
@@ -12464,11 +13114,11 @@ class _$VerificationResult implements VerificationResult {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             List<dynamic> actor,
             Period planningHorizon,
             String comment),
@@ -12483,10 +13133,10 @@ class _$VerificationResult implements VerificationResult {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<Identifier> identifier,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
             Reference schedule,
             SlotStatus status,
@@ -12505,7 +13155,7 @@ class _$VerificationResult implements VerificationResult {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Canonical instantiatesCanonical,
             FhirUri instantiatesUri,
             List<dynamic> basedOn,
@@ -12525,13 +13175,13 @@ class _$VerificationResult implements VerificationResult {
             FhirDateTime authoredOn,
             FhirDateTime lastModified,
             Reference requester,
-            List<dynamic> performerType,
+            List<CodeableConcept> performerType,
             Reference owner,
             Reference location,
             CodeableConcept reasonCode,
             Reference reasonReference,
             List<dynamic> insurance,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
             List<dynamic> input,
@@ -12667,14 +13317,14 @@ class _$VerificationResult implements VerificationResult {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             AppointmentStatus status,
             CodeableConcept cancelationReason,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             int priority,
             String description,
@@ -12688,13 +13338,13 @@ class _$VerificationResult implements VerificationResult {
             String patientInstruction,
             List<dynamic> basedOn,
             List<dynamic> participant,
-            List<dynamic> requestedPeriod),
+            List<Period> requestedPeriod),
     @required
         Result appointmentParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Reference actor,
             @JsonKey(name: 'required') AppointmentParticipantRequired require,
             AppointmentParticipantStatus status,
@@ -12710,11 +13360,11 @@ class _$VerificationResult implements VerificationResult {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference appointment,
             Instant start,
             Instant end,
-            List<dynamic> participantType,
+            List<CodeableConcept> participantType,
             Reference actor,
             Code participantStatus,
             String comment),
@@ -12735,7 +13385,7 @@ class _$VerificationResult implements VerificationResult {
             Code status,
             FhirDateTime statusDate,
             CodeableConcept validationType,
-            List<dynamic> validationProcess,
+            List<CodeableConcept> validationProcess,
             Timing frequency,
             FhirDateTime lastPerformed,
             Date nextScheduled,
@@ -12749,12 +13399,12 @@ class _$VerificationResult implements VerificationResult {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Reference who,
-            List<dynamic> type,
-            List<dynamic> communicationMethod,
+            List<CodeableConcept> type,
+            List<CodeableConcept> communicationMethod,
             CodeableConcept validationStatus,
             FhirDateTime validationDate,
             CodeableConcept canPushUpdates,
-            List<dynamic> pushTypeAvailable),
+            List<CodeableConcept> pushTypeAvailable),
     @required
         Result verificationResultAttestation(
             String id,
@@ -12829,11 +13479,11 @@ class _$VerificationResult implements VerificationResult {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         List<dynamic> actor,
         Period planningHorizon,
         String comment),
@@ -12847,10 +13497,10 @@ class _$VerificationResult implements VerificationResult {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<Identifier> identifier,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
         Reference schedule,
         SlotStatus status,
@@ -12868,7 +13518,7 @@ class _$VerificationResult implements VerificationResult {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Canonical instantiatesCanonical,
         FhirUri instantiatesUri,
         List<dynamic> basedOn,
@@ -12888,13 +13538,13 @@ class _$VerificationResult implements VerificationResult {
         FhirDateTime authoredOn,
         FhirDateTime lastModified,
         Reference requester,
-        List<dynamic> performerType,
+        List<CodeableConcept> performerType,
         Reference owner,
         Reference location,
         CodeableConcept reasonCode,
         Reference reasonReference,
         List<dynamic> insurance,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
         List<dynamic> input,
@@ -13026,14 +13676,14 @@ class _$VerificationResult implements VerificationResult {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         AppointmentStatus status,
         CodeableConcept cancelationReason,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         int priority,
         String description,
@@ -13047,12 +13697,12 @@ class _$VerificationResult implements VerificationResult {
         String patientInstruction,
         List<dynamic> basedOn,
         List<dynamic> participant,
-        List<dynamic> requestedPeriod),
+        List<Period> requestedPeriod),
     Result appointmentParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Reference actor,
         @JsonKey(name: 'required') AppointmentParticipantRequired require,
         AppointmentParticipantStatus status,
@@ -13067,11 +13717,11 @@ class _$VerificationResult implements VerificationResult {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference appointment,
         Instant start,
         Instant end,
-        List<dynamic> participantType,
+        List<CodeableConcept> participantType,
         Reference actor,
         Code participantStatus,
         String comment),
@@ -13091,7 +13741,7 @@ class _$VerificationResult implements VerificationResult {
         Code status,
         FhirDateTime statusDate,
         CodeableConcept validationType,
-        List<dynamic> validationProcess,
+        List<CodeableConcept> validationProcess,
         Timing frequency,
         FhirDateTime lastPerformed,
         Date nextScheduled,
@@ -13104,12 +13754,12 @@ class _$VerificationResult implements VerificationResult {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Reference who,
-        List<dynamic> type,
-        List<dynamic> communicationMethod,
+        List<CodeableConcept> type,
+        List<CodeableConcept> communicationMethod,
         CodeableConcept validationStatus,
         FhirDateTime validationDate,
         CodeableConcept canPushUpdates,
-        List<dynamic> pushTypeAvailable),
+        List<CodeableConcept> pushTypeAvailable),
     Result verificationResultAttestation(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -13249,7 +13899,7 @@ abstract class VerificationResult implements Workflow {
       Code status,
       FhirDateTime statusDate,
       CodeableConcept validationType,
-      List<dynamic> validationProcess,
+      List<CodeableConcept> validationProcess,
       Timing frequency,
       FhirDateTime lastPerformed,
       Date nextScheduled,
@@ -13279,7 +13929,7 @@ abstract class VerificationResult implements Workflow {
   Code get status;
   FhirDateTime get statusDate;
   CodeableConcept get validationType;
-  List<dynamic> get validationProcess;
+  List<CodeableConcept> get validationProcess;
   Timing get frequency;
   FhirDateTime get lastPerformed;
   Date get nextScheduled;
@@ -13303,12 +13953,15 @@ abstract class $VerificationResultPrimarySourceCopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       Reference who,
-      List<dynamic> type,
-      List<dynamic> communicationMethod,
+      List<CodeableConcept> type,
+      List<CodeableConcept> communicationMethod,
       CodeableConcept validationStatus,
       FhirDateTime validationDate,
       CodeableConcept canPushUpdates,
-      List<dynamic> pushTypeAvailable});
+      List<CodeableConcept> pushTypeAvailable});
+
+  $CodeableConceptCopyWith<$Res> get validationStatus;
+  $CodeableConceptCopyWith<$Res> get canPushUpdates;
 }
 
 class _$VerificationResultPrimarySourceCopyWithImpl<$Res>
@@ -13345,10 +13998,10 @@ class _$VerificationResultPrimarySourceCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
       who: who == freezed ? _value.who : who as Reference,
-      type: type == freezed ? _value.type : type as List<dynamic>,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>,
       communicationMethod: communicationMethod == freezed
           ? _value.communicationMethod
-          : communicationMethod as List<dynamic>,
+          : communicationMethod as List<CodeableConcept>,
       validationStatus: validationStatus == freezed
           ? _value.validationStatus
           : validationStatus as CodeableConcept,
@@ -13360,8 +14013,28 @@ class _$VerificationResultPrimarySourceCopyWithImpl<$Res>
           : canPushUpdates as CodeableConcept,
       pushTypeAvailable: pushTypeAvailable == freezed
           ? _value.pushTypeAvailable
-          : pushTypeAvailable as List<dynamic>,
+          : pushTypeAvailable as List<CodeableConcept>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get validationStatus {
+    if (_value.validationStatus == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.validationStatus, (value) {
+      return _then(_value.copyWith(validationStatus: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get canPushUpdates {
+    if (_value.canPushUpdates == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.canPushUpdates, (value) {
+      return _then(_value.copyWith(canPushUpdates: value));
+    });
   }
 }
 
@@ -13394,9 +14067,9 @@ class _$VerificationResultPrimarySource
   @override
   final Reference who;
   @override
-  final List<dynamic> type;
+  final List<CodeableConcept> type;
   @override
-  final List<dynamic> communicationMethod;
+  final List<CodeableConcept> communicationMethod;
   @override
   final CodeableConcept validationStatus;
   @override
@@ -13404,7 +14077,7 @@ class _$VerificationResultPrimarySource
   @override
   final CodeableConcept canPushUpdates;
   @override
-  final List<dynamic> pushTypeAvailable;
+  final List<CodeableConcept> pushTypeAvailable;
 
   @override
   String toString() {
@@ -13477,11 +14150,11 @@ class _$VerificationResultPrimarySource
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             List<dynamic> actor,
             Period planningHorizon,
             String comment),
@@ -13496,10 +14169,10 @@ class _$VerificationResultPrimarySource
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<Identifier> identifier,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
             Reference schedule,
             SlotStatus status,
@@ -13518,7 +14191,7 @@ class _$VerificationResultPrimarySource
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Canonical instantiatesCanonical,
             FhirUri instantiatesUri,
             List<dynamic> basedOn,
@@ -13538,13 +14211,13 @@ class _$VerificationResultPrimarySource
             FhirDateTime authoredOn,
             FhirDateTime lastModified,
             Reference requester,
-            List<dynamic> performerType,
+            List<CodeableConcept> performerType,
             Reference owner,
             Reference location,
             CodeableConcept reasonCode,
             Reference reasonReference,
             List<dynamic> insurance,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
             List<dynamic> input,
@@ -13680,14 +14353,14 @@ class _$VerificationResultPrimarySource
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             AppointmentStatus status,
             CodeableConcept cancelationReason,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             int priority,
             String description,
@@ -13701,13 +14374,13 @@ class _$VerificationResultPrimarySource
             String patientInstruction,
             List<dynamic> basedOn,
             List<dynamic> participant,
-            List<dynamic> requestedPeriod),
+            List<Period> requestedPeriod),
     @required
         Result appointmentParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Reference actor,
             @JsonKey(name: 'required') AppointmentParticipantRequired require,
             AppointmentParticipantStatus status,
@@ -13723,11 +14396,11 @@ class _$VerificationResultPrimarySource
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference appointment,
             Instant start,
             Instant end,
-            List<dynamic> participantType,
+            List<CodeableConcept> participantType,
             Reference actor,
             Code participantStatus,
             String comment),
@@ -13748,7 +14421,7 @@ class _$VerificationResultPrimarySource
             Code status,
             FhirDateTime statusDate,
             CodeableConcept validationType,
-            List<dynamic> validationProcess,
+            List<CodeableConcept> validationProcess,
             Timing frequency,
             FhirDateTime lastPerformed,
             Date nextScheduled,
@@ -13762,12 +14435,12 @@ class _$VerificationResultPrimarySource
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Reference who,
-            List<dynamic> type,
-            List<dynamic> communicationMethod,
+            List<CodeableConcept> type,
+            List<CodeableConcept> communicationMethod,
             CodeableConcept validationStatus,
             FhirDateTime validationDate,
             CodeableConcept canPushUpdates,
-            List<dynamic> pushTypeAvailable),
+            List<CodeableConcept> pushTypeAvailable),
     @required
         Result verificationResultAttestation(
             String id,
@@ -13829,11 +14502,11 @@ class _$VerificationResultPrimarySource
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         List<dynamic> actor,
         Period planningHorizon,
         String comment),
@@ -13847,10 +14520,10 @@ class _$VerificationResultPrimarySource
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<Identifier> identifier,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
         Reference schedule,
         SlotStatus status,
@@ -13868,7 +14541,7 @@ class _$VerificationResultPrimarySource
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Canonical instantiatesCanonical,
         FhirUri instantiatesUri,
         List<dynamic> basedOn,
@@ -13888,13 +14561,13 @@ class _$VerificationResultPrimarySource
         FhirDateTime authoredOn,
         FhirDateTime lastModified,
         Reference requester,
-        List<dynamic> performerType,
+        List<CodeableConcept> performerType,
         Reference owner,
         Reference location,
         CodeableConcept reasonCode,
         Reference reasonReference,
         List<dynamic> insurance,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
         List<dynamic> input,
@@ -14026,14 +14699,14 @@ class _$VerificationResultPrimarySource
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         AppointmentStatus status,
         CodeableConcept cancelationReason,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         int priority,
         String description,
@@ -14047,12 +14720,12 @@ class _$VerificationResultPrimarySource
         String patientInstruction,
         List<dynamic> basedOn,
         List<dynamic> participant,
-        List<dynamic> requestedPeriod),
+        List<Period> requestedPeriod),
     Result appointmentParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Reference actor,
         @JsonKey(name: 'required') AppointmentParticipantRequired require,
         AppointmentParticipantStatus status,
@@ -14067,11 +14740,11 @@ class _$VerificationResultPrimarySource
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference appointment,
         Instant start,
         Instant end,
-        List<dynamic> participantType,
+        List<CodeableConcept> participantType,
         Reference actor,
         Code participantStatus,
         String comment),
@@ -14091,7 +14764,7 @@ class _$VerificationResultPrimarySource
         Code status,
         FhirDateTime statusDate,
         CodeableConcept validationType,
-        List<dynamic> validationProcess,
+        List<CodeableConcept> validationProcess,
         Timing frequency,
         FhirDateTime lastPerformed,
         Date nextScheduled,
@@ -14104,12 +14777,12 @@ class _$VerificationResultPrimarySource
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Reference who,
-        List<dynamic> type,
-        List<dynamic> communicationMethod,
+        List<CodeableConcept> type,
+        List<CodeableConcept> communicationMethod,
         CodeableConcept validationStatus,
         FhirDateTime validationDate,
         CodeableConcept canPushUpdates,
-        List<dynamic> pushTypeAvailable),
+        List<CodeableConcept> pushTypeAvailable),
     Result verificationResultAttestation(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -14221,16 +14894,17 @@ class _$VerificationResultPrimarySource
 
 abstract class VerificationResultPrimarySource implements Workflow {
   const factory VerificationResultPrimarySource(
-      {String id,
-      @JsonKey(name: 'extension') List<dynamic> fhirExtension,
-      List<dynamic> modifierExtension,
-      Reference who,
-      List<dynamic> type,
-      List<dynamic> communicationMethod,
-      CodeableConcept validationStatus,
-      FhirDateTime validationDate,
-      CodeableConcept canPushUpdates,
-      List<dynamic> pushTypeAvailable}) = _$VerificationResultPrimarySource;
+          {String id,
+          @JsonKey(name: 'extension') List<dynamic> fhirExtension,
+          List<dynamic> modifierExtension,
+          Reference who,
+          List<CodeableConcept> type,
+          List<CodeableConcept> communicationMethod,
+          CodeableConcept validationStatus,
+          FhirDateTime validationDate,
+          CodeableConcept canPushUpdates,
+          List<CodeableConcept> pushTypeAvailable}) =
+      _$VerificationResultPrimarySource;
 
   factory VerificationResultPrimarySource.fromJson(Map<String, dynamic> json) =
       _$VerificationResultPrimarySource.fromJson;
@@ -14242,12 +14916,12 @@ abstract class VerificationResultPrimarySource implements Workflow {
   @override
   List<dynamic> get modifierExtension;
   Reference get who;
-  List<dynamic> get type;
-  List<dynamic> get communicationMethod;
+  List<CodeableConcept> get type;
+  List<CodeableConcept> get communicationMethod;
   CodeableConcept get validationStatus;
   FhirDateTime get validationDate;
   CodeableConcept get canPushUpdates;
-  List<dynamic> get pushTypeAvailable;
+  List<CodeableConcept> get pushTypeAvailable;
   @override
   $VerificationResultPrimarySourceCopyWith<VerificationResultPrimarySource>
       get copyWith;
@@ -14272,6 +14946,10 @@ abstract class $VerificationResultAttestationCopyWith<$Res>
       String proxyIdentityCertificate,
       Signature proxySignature,
       Signature sourceSignature});
+
+  $CodeableConceptCopyWith<$Res> get communicationMethod;
+  $SignatureCopyWith<$Res> get proxySignature;
+  $SignatureCopyWith<$Res> get sourceSignature;
 }
 
 class _$VerificationResultAttestationCopyWithImpl<$Res>
@@ -14328,6 +15006,36 @@ class _$VerificationResultAttestationCopyWithImpl<$Res>
           ? _value.sourceSignature
           : sourceSignature as Signature,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get communicationMethod {
+    if (_value.communicationMethod == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.communicationMethod, (value) {
+      return _then(_value.copyWith(communicationMethod: value));
+    });
+  }
+
+  @override
+  $SignatureCopyWith<$Res> get proxySignature {
+    if (_value.proxySignature == null) {
+      return null;
+    }
+    return $SignatureCopyWith<$Res>(_value.proxySignature, (value) {
+      return _then(_value.copyWith(proxySignature: value));
+    });
+  }
+
+  @override
+  $SignatureCopyWith<$Res> get sourceSignature {
+    if (_value.sourceSignature == null) {
+      return null;
+    }
+    return $SignatureCopyWith<$Res>(_value.sourceSignature, (value) {
+      return _then(_value.copyWith(sourceSignature: value));
+    });
   }
 }
 
@@ -14452,11 +15160,11 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             List<dynamic> actor,
             Period planningHorizon,
             String comment),
@@ -14471,10 +15179,10 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<Identifier> identifier,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
             Reference schedule,
             SlotStatus status,
@@ -14493,7 +15201,7 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Canonical instantiatesCanonical,
             FhirUri instantiatesUri,
             List<dynamic> basedOn,
@@ -14513,13 +15221,13 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
             FhirDateTime authoredOn,
             FhirDateTime lastModified,
             Reference requester,
-            List<dynamic> performerType,
+            List<CodeableConcept> performerType,
             Reference owner,
             Reference location,
             CodeableConcept reasonCode,
             Reference reasonReference,
             List<dynamic> insurance,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
             List<dynamic> input,
@@ -14655,14 +15363,14 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             AppointmentStatus status,
             CodeableConcept cancelationReason,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             int priority,
             String description,
@@ -14676,13 +15384,13 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
             String patientInstruction,
             List<dynamic> basedOn,
             List<dynamic> participant,
-            List<dynamic> requestedPeriod),
+            List<Period> requestedPeriod),
     @required
         Result appointmentParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Reference actor,
             @JsonKey(name: 'required') AppointmentParticipantRequired require,
             AppointmentParticipantStatus status,
@@ -14698,11 +15406,11 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference appointment,
             Instant start,
             Instant end,
-            List<dynamic> participantType,
+            List<CodeableConcept> participantType,
             Reference actor,
             Code participantStatus,
             String comment),
@@ -14723,7 +15431,7 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
             Code status,
             FhirDateTime statusDate,
             CodeableConcept validationType,
-            List<dynamic> validationProcess,
+            List<CodeableConcept> validationProcess,
             Timing frequency,
             FhirDateTime lastPerformed,
             Date nextScheduled,
@@ -14737,12 +15445,12 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Reference who,
-            List<dynamic> type,
-            List<dynamic> communicationMethod,
+            List<CodeableConcept> type,
+            List<CodeableConcept> communicationMethod,
             CodeableConcept validationStatus,
             FhirDateTime validationDate,
             CodeableConcept canPushUpdates,
-            List<dynamic> pushTypeAvailable),
+            List<CodeableConcept> pushTypeAvailable),
     @required
         Result verificationResultAttestation(
             String id,
@@ -14805,11 +15513,11 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         List<dynamic> actor,
         Period planningHorizon,
         String comment),
@@ -14823,10 +15531,10 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<Identifier> identifier,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
         Reference schedule,
         SlotStatus status,
@@ -14844,7 +15552,7 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Canonical instantiatesCanonical,
         FhirUri instantiatesUri,
         List<dynamic> basedOn,
@@ -14864,13 +15572,13 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
         FhirDateTime authoredOn,
         FhirDateTime lastModified,
         Reference requester,
-        List<dynamic> performerType,
+        List<CodeableConcept> performerType,
         Reference owner,
         Reference location,
         CodeableConcept reasonCode,
         Reference reasonReference,
         List<dynamic> insurance,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
         List<dynamic> input,
@@ -15002,14 +15710,14 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         AppointmentStatus status,
         CodeableConcept cancelationReason,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         int priority,
         String description,
@@ -15023,12 +15731,12 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
         String patientInstruction,
         List<dynamic> basedOn,
         List<dynamic> participant,
-        List<dynamic> requestedPeriod),
+        List<Period> requestedPeriod),
     Result appointmentParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Reference actor,
         @JsonKey(name: 'required') AppointmentParticipantRequired require,
         AppointmentParticipantStatus status,
@@ -15043,11 +15751,11 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference appointment,
         Instant start,
         Instant end,
-        List<dynamic> participantType,
+        List<CodeableConcept> participantType,
         Reference actor,
         Code participantStatus,
         String comment),
@@ -15067,7 +15775,7 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
         Code status,
         FhirDateTime statusDate,
         CodeableConcept validationType,
-        List<dynamic> validationProcess,
+        List<CodeableConcept> validationProcess,
         Timing frequency,
         FhirDateTime lastPerformed,
         Date nextScheduled,
@@ -15080,12 +15788,12 @@ class _$VerificationResultAttestation implements VerificationResultAttestation {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Reference who,
-        List<dynamic> type,
-        List<dynamic> communicationMethod,
+        List<CodeableConcept> type,
+        List<CodeableConcept> communicationMethod,
         CodeableConcept validationStatus,
         FhirDateTime validationDate,
         CodeableConcept canPushUpdates,
-        List<dynamic> pushTypeAvailable),
+        List<CodeableConcept> pushTypeAvailable),
     Result verificationResultAttestation(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -15246,6 +15954,8 @@ abstract class $VerificationResultValidatorCopyWith<$Res>
       Reference organization,
       String identityCertificate,
       Signature attestationSignature});
+
+  $SignatureCopyWith<$Res> get attestationSignature;
 }
 
 class _$VerificationResultValidatorCopyWithImpl<$Res>
@@ -15286,6 +15996,16 @@ class _$VerificationResultValidatorCopyWithImpl<$Res>
           ? _value.attestationSignature
           : attestationSignature as Signature,
     ));
+  }
+
+  @override
+  $SignatureCopyWith<$Res> get attestationSignature {
+    if (_value.attestationSignature == null) {
+      return null;
+    }
+    return $SignatureCopyWith<$Res>(_value.attestationSignature, (value) {
+      return _then(_value.copyWith(attestationSignature: value));
+    });
   }
 }
 
@@ -15373,11 +16093,11 @@ class _$VerificationResultValidator implements VerificationResultValidator {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             bool active,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             List<dynamic> actor,
             Period planningHorizon,
             String comment),
@@ -15392,10 +16112,10 @@ class _$VerificationResultValidator implements VerificationResultValidator {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<Identifier> identifier,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
             Reference schedule,
             SlotStatus status,
@@ -15414,7 +16134,7 @@ class _$VerificationResultValidator implements VerificationResultValidator {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Canonical instantiatesCanonical,
             FhirUri instantiatesUri,
             List<dynamic> basedOn,
@@ -15434,13 +16154,13 @@ class _$VerificationResultValidator implements VerificationResultValidator {
             FhirDateTime authoredOn,
             FhirDateTime lastModified,
             Reference requester,
-            List<dynamic> performerType,
+            List<CodeableConcept> performerType,
             Reference owner,
             Reference location,
             CodeableConcept reasonCode,
             Reference reasonReference,
             List<dynamic> insurance,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory,
             TaskRestriction restriction,
             List<dynamic> input,
@@ -15576,14 +16296,14 @@ class _$VerificationResultValidator implements VerificationResultValidator {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             AppointmentStatus status,
             CodeableConcept cancelationReason,
-            List<dynamic> serviceCategory,
-            List<dynamic> serviceType,
-            List<dynamic> specialty,
+            List<CodeableConcept> serviceCategory,
+            List<CodeableConcept> serviceType,
+            List<CodeableConcept> specialty,
             CodeableConcept appointmentType,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             int priority,
             String description,
@@ -15597,13 +16317,13 @@ class _$VerificationResultValidator implements VerificationResultValidator {
             String patientInstruction,
             List<dynamic> basedOn,
             List<dynamic> participant,
-            List<dynamic> requestedPeriod),
+            List<Period> requestedPeriod),
     @required
         Result appointmentParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
+            List<CodeableConcept> type,
             Reference actor,
             @JsonKey(name: 'required') AppointmentParticipantRequired require,
             AppointmentParticipantStatus status,
@@ -15619,11 +16339,11 @@ class _$VerificationResultValidator implements VerificationResultValidator {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference appointment,
             Instant start,
             Instant end,
-            List<dynamic> participantType,
+            List<CodeableConcept> participantType,
             Reference actor,
             Code participantStatus,
             String comment),
@@ -15644,7 +16364,7 @@ class _$VerificationResultValidator implements VerificationResultValidator {
             Code status,
             FhirDateTime statusDate,
             CodeableConcept validationType,
-            List<dynamic> validationProcess,
+            List<CodeableConcept> validationProcess,
             Timing frequency,
             FhirDateTime lastPerformed,
             Date nextScheduled,
@@ -15658,12 +16378,12 @@ class _$VerificationResultValidator implements VerificationResultValidator {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Reference who,
-            List<dynamic> type,
-            List<dynamic> communicationMethod,
+            List<CodeableConcept> type,
+            List<CodeableConcept> communicationMethod,
             CodeableConcept validationStatus,
             FhirDateTime validationDate,
             CodeableConcept canPushUpdates,
-            List<dynamic> pushTypeAvailable),
+            List<CodeableConcept> pushTypeAvailable),
     @required
         Result verificationResultAttestation(
             String id,
@@ -15716,11 +16436,11 @@ class _$VerificationResultValidator implements VerificationResultValidator {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         bool active,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         List<dynamic> actor,
         Period planningHorizon,
         String comment),
@@ -15734,10 +16454,10 @@ class _$VerificationResultValidator implements VerificationResultValidator {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<Identifier> identifier,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
         Reference schedule,
         SlotStatus status,
@@ -15755,7 +16475,7 @@ class _$VerificationResultValidator implements VerificationResultValidator {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Canonical instantiatesCanonical,
         FhirUri instantiatesUri,
         List<dynamic> basedOn,
@@ -15775,13 +16495,13 @@ class _$VerificationResultValidator implements VerificationResultValidator {
         FhirDateTime authoredOn,
         FhirDateTime lastModified,
         Reference requester,
-        List<dynamic> performerType,
+        List<CodeableConcept> performerType,
         Reference owner,
         Reference location,
         CodeableConcept reasonCode,
         Reference reasonReference,
         List<dynamic> insurance,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory,
         TaskRestriction restriction,
         List<dynamic> input,
@@ -15913,14 +16633,14 @@ class _$VerificationResultValidator implements VerificationResultValidator {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         AppointmentStatus status,
         CodeableConcept cancelationReason,
-        List<dynamic> serviceCategory,
-        List<dynamic> serviceType,
-        List<dynamic> specialty,
+        List<CodeableConcept> serviceCategory,
+        List<CodeableConcept> serviceType,
+        List<CodeableConcept> specialty,
         CodeableConcept appointmentType,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         int priority,
         String description,
@@ -15934,12 +16654,12 @@ class _$VerificationResultValidator implements VerificationResultValidator {
         String patientInstruction,
         List<dynamic> basedOn,
         List<dynamic> participant,
-        List<dynamic> requestedPeriod),
+        List<Period> requestedPeriod),
     Result appointmentParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
+        List<CodeableConcept> type,
         Reference actor,
         @JsonKey(name: 'required') AppointmentParticipantRequired require,
         AppointmentParticipantStatus status,
@@ -15954,11 +16674,11 @@ class _$VerificationResultValidator implements VerificationResultValidator {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference appointment,
         Instant start,
         Instant end,
-        List<dynamic> participantType,
+        List<CodeableConcept> participantType,
         Reference actor,
         Code participantStatus,
         String comment),
@@ -15978,7 +16698,7 @@ class _$VerificationResultValidator implements VerificationResultValidator {
         Code status,
         FhirDateTime statusDate,
         CodeableConcept validationType,
-        List<dynamic> validationProcess,
+        List<CodeableConcept> validationProcess,
         Timing frequency,
         FhirDateTime lastPerformed,
         Date nextScheduled,
@@ -15991,12 +16711,12 @@ class _$VerificationResultValidator implements VerificationResultValidator {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Reference who,
-        List<dynamic> type,
-        List<dynamic> communicationMethod,
+        List<CodeableConcept> type,
+        List<CodeableConcept> communicationMethod,
         CodeableConcept validationStatus,
         FhirDateTime validationDate,
         CodeableConcept canPushUpdates,
-        List<dynamic> pushTypeAvailable),
+        List<CodeableConcept> pushTypeAvailable),
     Result verificationResultAttestation(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,

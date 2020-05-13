@@ -53,7 +53,7 @@ class _$RequestAndResponseTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<dynamic> basedOn,
       DeviceUseStatementStatus status,
       Reference subject,
@@ -64,10 +64,10 @@ class _$RequestAndResponseTearOff {
       FhirDateTime recordedOn,
       Reference source,
       Reference device,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       CodeableConcept bodySite,
-      List<dynamic> note}) {
+      List<Annotation> note}) {
     return DeviceUseStatement(
       resourceType: resourceType,
       id: id,
@@ -106,7 +106,7 @@ class _$RequestAndResponseTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<dynamic> basedOn,
       List<dynamic> partOf,
       SupplyDeliveryStatus status,
@@ -172,7 +172,7 @@ class _$RequestAndResponseTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       SupplyRequestStatus status,
       CodeableConcept category,
       Code priority,
@@ -186,7 +186,7 @@ class _$RequestAndResponseTearOff {
       FhirDateTime authoredOn,
       Reference requester,
       List<dynamic> supplier,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       Reference deliverFrom,
       Reference deliverTo}) {
@@ -253,7 +253,7 @@ class _$RequestAndResponseTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       Identifier requestIdentifier,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       FhirUri moduleUri,
       Canonical moduleCanonical,
       CodeableConcept moduleCodeableConcept,
@@ -262,9 +262,9 @@ class _$RequestAndResponseTearOff {
       Reference encounter,
       FhirDateTime occurrenceDateTime,
       Reference performer,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> evaluationMessage,
       Reference outputParameters,
       Reference result,
@@ -309,7 +309,7 @@ class _$RequestAndResponseTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<dynamic> basedOn,
@@ -330,11 +330,11 @@ class _$RequestAndResponseTearOff {
       Reference requester,
       CodeableConcept performerType,
       Reference performer,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> insurance,
       List<dynamic> supportingInfo,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> relevantHistory}) {
     return DeviceRequest(
       resourceType: resourceType,
@@ -407,16 +407,16 @@ class _$RequestAndResponseTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<dynamic> basedOn,
       List<dynamic> replaces,
       Identifier groupIdentifier,
       Code status,
       CodeableConcept statusReason,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Code priority,
       bool doNotPerform,
-      List<dynamic> medium,
+      List<CodeableConcept> medium,
       Reference subject,
       List<dynamic> about,
       Reference encounter,
@@ -427,9 +427,9 @@ class _$RequestAndResponseTearOff {
       Reference requester,
       List<dynamic> recipient,
       Reference sender,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
-      List<dynamic> note}) {
+      List<Annotation> note}) {
     return CommunicationRequest(
       resourceType: resourceType,
       id: id,
@@ -493,7 +493,7 @@ class _$RequestAndResponseTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<dynamic> basedOn,
@@ -501,9 +501,9 @@ class _$RequestAndResponseTearOff {
       List<dynamic> inResponseTo,
       Code status,
       CodeableConcept statusReason,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Code priority,
-      List<dynamic> medium,
+      List<CodeableConcept> medium,
       Reference subject,
       CodeableConcept topic,
       List<dynamic> about,
@@ -512,10 +512,10 @@ class _$RequestAndResponseTearOff {
       FhirDateTime received,
       List<dynamic> recipient,
       Reference sender,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> payload,
-      List<dynamic> note}) {
+      List<Annotation> note}) {
     return Communication(
       resourceType: resourceType,
       id: id,
@@ -591,7 +591,7 @@ mixin _$RequestAndResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DeviceUseStatementStatus status,
             Reference subject,
@@ -602,10 +602,10 @@ mixin _$RequestAndResponse {
             FhirDateTime recordedOn,
             Reference source,
             Reference device,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             CodeableConcept bodySite,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result supplyDelivery(
             String resourceType,
@@ -617,7 +617,7 @@ mixin _$RequestAndResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             SupplyDeliveryStatus status,
@@ -649,7 +649,7 @@ mixin _$RequestAndResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SupplyRequestStatus status,
             CodeableConcept category,
             Code priority,
@@ -663,7 +663,7 @@ mixin _$RequestAndResponse {
             FhirDateTime authoredOn,
             Reference requester,
             List<dynamic> supplier,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             Reference deliverFrom,
             Reference deliverTo),
@@ -689,7 +689,7 @@ mixin _$RequestAndResponse {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier requestIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FhirUri moduleUri,
             Canonical moduleCanonical,
             CodeableConcept moduleCodeableConcept,
@@ -698,9 +698,9 @@ mixin _$RequestAndResponse {
             Reference encounter,
             FhirDateTime occurrenceDateTime,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> evaluationMessage,
             Reference outputParameters,
             Reference result,
@@ -716,7 +716,7 @@ mixin _$RequestAndResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -737,11 +737,11 @@ mixin _$RequestAndResponse {
             Reference requester,
             CodeableConcept performerType,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory),
     @required
         Result deviceRequestParameter(
@@ -764,16 +764,16 @@ mixin _$RequestAndResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             Identifier groupIdentifier,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             List<dynamic> about,
             Reference encounter,
@@ -784,9 +784,9 @@ mixin _$RequestAndResponse {
             Reference requester,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationRequestPayload(
             String id,
@@ -806,7 +806,7 @@ mixin _$RequestAndResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -814,9 +814,9 @@ mixin _$RequestAndResponse {
             List<dynamic> inResponseTo,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             CodeableConcept topic,
             List<dynamic> about,
@@ -825,10 +825,10 @@ mixin _$RequestAndResponse {
             FhirDateTime received,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> payload,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationPayload(
             String id,
@@ -850,7 +850,7 @@ mixin _$RequestAndResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DeviceUseStatementStatus status,
         Reference subject,
@@ -861,10 +861,10 @@ mixin _$RequestAndResponse {
         FhirDateTime recordedOn,
         Reference source,
         Reference device,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         CodeableConcept bodySite,
-        List<dynamic> note),
+        List<Annotation> note),
     Result supplyDelivery(
         String resourceType,
         Id id,
@@ -875,7 +875,7 @@ mixin _$RequestAndResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         SupplyDeliveryStatus status,
@@ -905,7 +905,7 @@ mixin _$RequestAndResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SupplyRequestStatus status,
         CodeableConcept category,
         Code priority,
@@ -919,7 +919,7 @@ mixin _$RequestAndResponse {
         FhirDateTime authoredOn,
         Reference requester,
         List<dynamic> supplier,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         Reference deliverFrom,
         Reference deliverTo),
@@ -943,7 +943,7 @@ mixin _$RequestAndResponse {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier requestIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FhirUri moduleUri,
         Canonical moduleCanonical,
         CodeableConcept moduleCodeableConcept,
@@ -952,9 +952,9 @@ mixin _$RequestAndResponse {
         Reference encounter,
         FhirDateTime occurrenceDateTime,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> evaluationMessage,
         Reference outputParameters,
         Reference result,
@@ -969,7 +969,7 @@ mixin _$RequestAndResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -990,11 +990,11 @@ mixin _$RequestAndResponse {
         Reference requester,
         CodeableConcept performerType,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory),
     Result deviceRequestParameter(
         String id,
@@ -1015,16 +1015,16 @@ mixin _$RequestAndResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         Identifier groupIdentifier,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         List<dynamic> about,
         Reference encounter,
@@ -1035,9 +1035,9 @@ mixin _$RequestAndResponse {
         Reference requester,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationRequestPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -1055,7 +1055,7 @@ mixin _$RequestAndResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -1063,9 +1063,9 @@ mixin _$RequestAndResponse {
         List<dynamic> inResponseTo,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         CodeableConcept topic,
         List<dynamic> about,
@@ -1074,10 +1074,10 @@ mixin _$RequestAndResponse {
         FhirDateTime received,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> payload,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -1173,7 +1173,7 @@ abstract class $DeviceUseStatementCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<dynamic> basedOn,
       DeviceUseStatementStatus status,
       Reference subject,
@@ -1184,10 +1184,14 @@ abstract class $DeviceUseStatementCopyWith<$Res>
       FhirDateTime recordedOn,
       Reference source,
       Reference device,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       CodeableConcept bodySite,
-      List<dynamic> note});
+      List<Annotation> note});
+
+  $TimingCopyWith<$Res> get timingTiming;
+  $PeriodCopyWith<$Res> get timingPeriod;
+  $CodeableConceptCopyWith<$Res> get bodySite;
 }
 
 class _$DeviceUseStatementCopyWithImpl<$Res>
@@ -1248,7 +1252,7 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<dynamic>,
       status: status == freezed
           ? _value.status
@@ -1273,14 +1277,44 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
       device: device == freezed ? _value.device : device as Reference,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<dynamic>,
+          : reasonCode as List<CodeableConcept>,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
           : reasonReference as List<dynamic>,
       bodySite:
           bodySite == freezed ? _value.bodySite : bodySite as CodeableConcept,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
     ));
+  }
+
+  @override
+  $TimingCopyWith<$Res> get timingTiming {
+    if (_value.timingTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.timingTiming, (value) {
+      return _then(_value.copyWith(timingTiming: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get timingPeriod {
+    if (_value.timingPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.timingPeriod, (value) {
+      return _then(_value.copyWith(timingPeriod: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get bodySite {
+    if (_value.bodySite == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.bodySite, (value) {
+      return _then(_value.copyWith(bodySite: value));
+    });
   }
 }
 
@@ -1335,7 +1369,7 @@ class _$DeviceUseStatement implements DeviceUseStatement {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final List<dynamic> basedOn;
   @override
@@ -1357,13 +1391,13 @@ class _$DeviceUseStatement implements DeviceUseStatement {
   @override
   final Reference device;
   @override
-  final List<dynamic> reasonCode;
+  final List<CodeableConcept> reasonCode;
   @override
   final List<dynamic> reasonReference;
   @override
   final CodeableConcept bodySite;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
 
   @override
   String toString() {
@@ -1487,7 +1521,7 @@ class _$DeviceUseStatement implements DeviceUseStatement {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DeviceUseStatementStatus status,
             Reference subject,
@@ -1498,10 +1532,10 @@ class _$DeviceUseStatement implements DeviceUseStatement {
             FhirDateTime recordedOn,
             Reference source,
             Reference device,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             CodeableConcept bodySite,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result supplyDelivery(
             String resourceType,
@@ -1513,7 +1547,7 @@ class _$DeviceUseStatement implements DeviceUseStatement {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             SupplyDeliveryStatus status,
@@ -1545,7 +1579,7 @@ class _$DeviceUseStatement implements DeviceUseStatement {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SupplyRequestStatus status,
             CodeableConcept category,
             Code priority,
@@ -1559,7 +1593,7 @@ class _$DeviceUseStatement implements DeviceUseStatement {
             FhirDateTime authoredOn,
             Reference requester,
             List<dynamic> supplier,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             Reference deliverFrom,
             Reference deliverTo),
@@ -1585,7 +1619,7 @@ class _$DeviceUseStatement implements DeviceUseStatement {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier requestIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FhirUri moduleUri,
             Canonical moduleCanonical,
             CodeableConcept moduleCodeableConcept,
@@ -1594,9 +1628,9 @@ class _$DeviceUseStatement implements DeviceUseStatement {
             Reference encounter,
             FhirDateTime occurrenceDateTime,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> evaluationMessage,
             Reference outputParameters,
             Reference result,
@@ -1612,7 +1646,7 @@ class _$DeviceUseStatement implements DeviceUseStatement {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -1633,11 +1667,11 @@ class _$DeviceUseStatement implements DeviceUseStatement {
             Reference requester,
             CodeableConcept performerType,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory),
     @required
         Result deviceRequestParameter(
@@ -1660,16 +1694,16 @@ class _$DeviceUseStatement implements DeviceUseStatement {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             Identifier groupIdentifier,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             List<dynamic> about,
             Reference encounter,
@@ -1680,9 +1714,9 @@ class _$DeviceUseStatement implements DeviceUseStatement {
             Reference requester,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationRequestPayload(
             String id,
@@ -1702,7 +1736,7 @@ class _$DeviceUseStatement implements DeviceUseStatement {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -1710,9 +1744,9 @@ class _$DeviceUseStatement implements DeviceUseStatement {
             List<dynamic> inResponseTo,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             CodeableConcept topic,
             List<dynamic> about,
@@ -1721,10 +1755,10 @@ class _$DeviceUseStatement implements DeviceUseStatement {
             FhirDateTime received,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> payload,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationPayload(
             String id,
@@ -1786,7 +1820,7 @@ class _$DeviceUseStatement implements DeviceUseStatement {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DeviceUseStatementStatus status,
         Reference subject,
@@ -1797,10 +1831,10 @@ class _$DeviceUseStatement implements DeviceUseStatement {
         FhirDateTime recordedOn,
         Reference source,
         Reference device,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         CodeableConcept bodySite,
-        List<dynamic> note),
+        List<Annotation> note),
     Result supplyDelivery(
         String resourceType,
         Id id,
@@ -1811,7 +1845,7 @@ class _$DeviceUseStatement implements DeviceUseStatement {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         SupplyDeliveryStatus status,
@@ -1841,7 +1875,7 @@ class _$DeviceUseStatement implements DeviceUseStatement {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SupplyRequestStatus status,
         CodeableConcept category,
         Code priority,
@@ -1855,7 +1889,7 @@ class _$DeviceUseStatement implements DeviceUseStatement {
         FhirDateTime authoredOn,
         Reference requester,
         List<dynamic> supplier,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         Reference deliverFrom,
         Reference deliverTo),
@@ -1879,7 +1913,7 @@ class _$DeviceUseStatement implements DeviceUseStatement {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier requestIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FhirUri moduleUri,
         Canonical moduleCanonical,
         CodeableConcept moduleCodeableConcept,
@@ -1888,9 +1922,9 @@ class _$DeviceUseStatement implements DeviceUseStatement {
         Reference encounter,
         FhirDateTime occurrenceDateTime,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> evaluationMessage,
         Reference outputParameters,
         Reference result,
@@ -1905,7 +1939,7 @@ class _$DeviceUseStatement implements DeviceUseStatement {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -1926,11 +1960,11 @@ class _$DeviceUseStatement implements DeviceUseStatement {
         Reference requester,
         CodeableConcept performerType,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory),
     Result deviceRequestParameter(
         String id,
@@ -1951,16 +1985,16 @@ class _$DeviceUseStatement implements DeviceUseStatement {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         Identifier groupIdentifier,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         List<dynamic> about,
         Reference encounter,
@@ -1971,9 +2005,9 @@ class _$DeviceUseStatement implements DeviceUseStatement {
         Reference requester,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationRequestPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -1991,7 +2025,7 @@ class _$DeviceUseStatement implements DeviceUseStatement {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -1999,9 +2033,9 @@ class _$DeviceUseStatement implements DeviceUseStatement {
         List<dynamic> inResponseTo,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         CodeableConcept topic,
         List<dynamic> about,
@@ -2010,10 +2044,10 @@ class _$DeviceUseStatement implements DeviceUseStatement {
         FhirDateTime received,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> payload,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -2129,7 +2163,7 @@ abstract class DeviceUseStatement implements RequestAndResponse {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<dynamic> basedOn,
       DeviceUseStatementStatus status,
       Reference subject,
@@ -2140,10 +2174,10 @@ abstract class DeviceUseStatement implements RequestAndResponse {
       FhirDateTime recordedOn,
       Reference source,
       Reference device,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       CodeableConcept bodySite,
-      List<dynamic> note}) = _$DeviceUseStatement;
+      List<Annotation> note}) = _$DeviceUseStatement;
 
   factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =
       _$DeviceUseStatement.fromJson;
@@ -2160,7 +2194,7 @@ abstract class DeviceUseStatement implements RequestAndResponse {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   List<dynamic> get basedOn;
   DeviceUseStatementStatus get status;
   Reference get subject;
@@ -2171,10 +2205,10 @@ abstract class DeviceUseStatement implements RequestAndResponse {
   FhirDateTime get recordedOn;
   Reference get source;
   Reference get device;
-  List<dynamic> get reasonCode;
+  List<CodeableConcept> get reasonCode;
   List<dynamic> get reasonReference;
   CodeableConcept get bodySite;
-  List<dynamic> get note;
+  List<Annotation> get note;
   @override
   $DeviceUseStatementCopyWith<DeviceUseStatement> get copyWith;
 }
@@ -2195,7 +2229,7 @@ abstract class $SupplyDeliveryCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<dynamic> basedOn,
       List<dynamic> partOf,
       SupplyDeliveryStatus status,
@@ -2208,6 +2242,10 @@ abstract class $SupplyDeliveryCopyWith<$Res>
       Reference supplier,
       Reference destination,
       List<dynamic> receiver});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $PeriodCopyWith<$Res> get occurrencePeriod;
+  $TimingCopyWith<$Res> get occurrenceTiming;
 }
 
 class _$SupplyDeliveryCopyWithImpl<$Res>
@@ -2266,7 +2304,7 @@ class _$SupplyDeliveryCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<dynamic>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<dynamic>,
       status:
@@ -2292,6 +2330,36 @@ class _$SupplyDeliveryCopyWithImpl<$Res>
       receiver:
           receiver == freezed ? _value.receiver : receiver as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get occurrencePeriod {
+    if (_value.occurrencePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.occurrencePeriod, (value) {
+      return _then(_value.copyWith(occurrencePeriod: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get occurrenceTiming {
+    if (_value.occurrenceTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.occurrenceTiming, (value) {
+      return _then(_value.copyWith(occurrenceTiming: value));
+    });
   }
 }
 
@@ -2344,7 +2412,7 @@ class _$SupplyDelivery implements SupplyDelivery {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final List<dynamic> basedOn;
   @override
@@ -2485,7 +2553,7 @@ class _$SupplyDelivery implements SupplyDelivery {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DeviceUseStatementStatus status,
             Reference subject,
@@ -2496,10 +2564,10 @@ class _$SupplyDelivery implements SupplyDelivery {
             FhirDateTime recordedOn,
             Reference source,
             Reference device,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             CodeableConcept bodySite,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result supplyDelivery(
             String resourceType,
@@ -2511,7 +2579,7 @@ class _$SupplyDelivery implements SupplyDelivery {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             SupplyDeliveryStatus status,
@@ -2543,7 +2611,7 @@ class _$SupplyDelivery implements SupplyDelivery {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SupplyRequestStatus status,
             CodeableConcept category,
             Code priority,
@@ -2557,7 +2625,7 @@ class _$SupplyDelivery implements SupplyDelivery {
             FhirDateTime authoredOn,
             Reference requester,
             List<dynamic> supplier,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             Reference deliverFrom,
             Reference deliverTo),
@@ -2583,7 +2651,7 @@ class _$SupplyDelivery implements SupplyDelivery {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier requestIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FhirUri moduleUri,
             Canonical moduleCanonical,
             CodeableConcept moduleCodeableConcept,
@@ -2592,9 +2660,9 @@ class _$SupplyDelivery implements SupplyDelivery {
             Reference encounter,
             FhirDateTime occurrenceDateTime,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> evaluationMessage,
             Reference outputParameters,
             Reference result,
@@ -2610,7 +2678,7 @@ class _$SupplyDelivery implements SupplyDelivery {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -2631,11 +2699,11 @@ class _$SupplyDelivery implements SupplyDelivery {
             Reference requester,
             CodeableConcept performerType,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory),
     @required
         Result deviceRequestParameter(
@@ -2658,16 +2726,16 @@ class _$SupplyDelivery implements SupplyDelivery {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             Identifier groupIdentifier,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             List<dynamic> about,
             Reference encounter,
@@ -2678,9 +2746,9 @@ class _$SupplyDelivery implements SupplyDelivery {
             Reference requester,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationRequestPayload(
             String id,
@@ -2700,7 +2768,7 @@ class _$SupplyDelivery implements SupplyDelivery {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -2708,9 +2776,9 @@ class _$SupplyDelivery implements SupplyDelivery {
             List<dynamic> inResponseTo,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             CodeableConcept topic,
             List<dynamic> about,
@@ -2719,10 +2787,10 @@ class _$SupplyDelivery implements SupplyDelivery {
             FhirDateTime received,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> payload,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationPayload(
             String id,
@@ -2782,7 +2850,7 @@ class _$SupplyDelivery implements SupplyDelivery {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DeviceUseStatementStatus status,
         Reference subject,
@@ -2793,10 +2861,10 @@ class _$SupplyDelivery implements SupplyDelivery {
         FhirDateTime recordedOn,
         Reference source,
         Reference device,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         CodeableConcept bodySite,
-        List<dynamic> note),
+        List<Annotation> note),
     Result supplyDelivery(
         String resourceType,
         Id id,
@@ -2807,7 +2875,7 @@ class _$SupplyDelivery implements SupplyDelivery {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         SupplyDeliveryStatus status,
@@ -2837,7 +2905,7 @@ class _$SupplyDelivery implements SupplyDelivery {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SupplyRequestStatus status,
         CodeableConcept category,
         Code priority,
@@ -2851,7 +2919,7 @@ class _$SupplyDelivery implements SupplyDelivery {
         FhirDateTime authoredOn,
         Reference requester,
         List<dynamic> supplier,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         Reference deliverFrom,
         Reference deliverTo),
@@ -2875,7 +2943,7 @@ class _$SupplyDelivery implements SupplyDelivery {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier requestIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FhirUri moduleUri,
         Canonical moduleCanonical,
         CodeableConcept moduleCodeableConcept,
@@ -2884,9 +2952,9 @@ class _$SupplyDelivery implements SupplyDelivery {
         Reference encounter,
         FhirDateTime occurrenceDateTime,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> evaluationMessage,
         Reference outputParameters,
         Reference result,
@@ -2901,7 +2969,7 @@ class _$SupplyDelivery implements SupplyDelivery {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -2922,11 +2990,11 @@ class _$SupplyDelivery implements SupplyDelivery {
         Reference requester,
         CodeableConcept performerType,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory),
     Result deviceRequestParameter(
         String id,
@@ -2947,16 +3015,16 @@ class _$SupplyDelivery implements SupplyDelivery {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         Identifier groupIdentifier,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         List<dynamic> about,
         Reference encounter,
@@ -2967,9 +3035,9 @@ class _$SupplyDelivery implements SupplyDelivery {
         Reference requester,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationRequestPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -2987,7 +3055,7 @@ class _$SupplyDelivery implements SupplyDelivery {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -2995,9 +3063,9 @@ class _$SupplyDelivery implements SupplyDelivery {
         List<dynamic> inResponseTo,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         CodeableConcept topic,
         List<dynamic> about,
@@ -3006,10 +3074,10 @@ class _$SupplyDelivery implements SupplyDelivery {
         FhirDateTime received,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> payload,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -3122,7 +3190,7 @@ abstract class SupplyDelivery implements RequestAndResponse {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<dynamic> basedOn,
       List<dynamic> partOf,
       SupplyDeliveryStatus status,
@@ -3151,7 +3219,7 @@ abstract class SupplyDelivery implements RequestAndResponse {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   List<dynamic> get basedOn;
   List<dynamic> get partOf;
   SupplyDeliveryStatus get status;
@@ -3181,6 +3249,9 @@ abstract class $SupplyDeliverySuppliedItemCopyWith<$Res>
       Quantity quantity,
       CodeableConcept itemCodeableConcept,
       Reference itemReference});
+
+  $QuantityCopyWith<$Res> get quantity;
+  $CodeableConceptCopyWith<$Res> get itemCodeableConcept;
 }
 
 class _$SupplyDeliverySuppliedItemCopyWithImpl<$Res>
@@ -3219,6 +3290,26 @@ class _$SupplyDeliverySuppliedItemCopyWithImpl<$Res>
           ? _value.itemReference
           : itemReference as Reference,
     ));
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get itemCodeableConcept {
+    if (_value.itemCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.itemCodeableConcept, (value) {
+      return _then(_value.copyWith(itemCodeableConcept: value));
+    });
   }
 }
 
@@ -3307,7 +3398,7 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DeviceUseStatementStatus status,
             Reference subject,
@@ -3318,10 +3409,10 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
             FhirDateTime recordedOn,
             Reference source,
             Reference device,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             CodeableConcept bodySite,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result supplyDelivery(
             String resourceType,
@@ -3333,7 +3424,7 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             SupplyDeliveryStatus status,
@@ -3365,7 +3456,7 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SupplyRequestStatus status,
             CodeableConcept category,
             Code priority,
@@ -3379,7 +3470,7 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
             FhirDateTime authoredOn,
             Reference requester,
             List<dynamic> supplier,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             Reference deliverFrom,
             Reference deliverTo),
@@ -3405,7 +3496,7 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier requestIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FhirUri moduleUri,
             Canonical moduleCanonical,
             CodeableConcept moduleCodeableConcept,
@@ -3414,9 +3505,9 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
             Reference encounter,
             FhirDateTime occurrenceDateTime,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> evaluationMessage,
             Reference outputParameters,
             Reference result,
@@ -3432,7 +3523,7 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -3453,11 +3544,11 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
             Reference requester,
             CodeableConcept performerType,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory),
     @required
         Result deviceRequestParameter(
@@ -3480,16 +3571,16 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             Identifier groupIdentifier,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             List<dynamic> about,
             Reference encounter,
@@ -3500,9 +3591,9 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
             Reference requester,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationRequestPayload(
             String id,
@@ -3522,7 +3613,7 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -3530,9 +3621,9 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
             List<dynamic> inResponseTo,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             CodeableConcept topic,
             List<dynamic> about,
@@ -3541,10 +3632,10 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
             FhirDateTime received,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> payload,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationPayload(
             String id,
@@ -3583,7 +3674,7 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DeviceUseStatementStatus status,
         Reference subject,
@@ -3594,10 +3685,10 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
         FhirDateTime recordedOn,
         Reference source,
         Reference device,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         CodeableConcept bodySite,
-        List<dynamic> note),
+        List<Annotation> note),
     Result supplyDelivery(
         String resourceType,
         Id id,
@@ -3608,7 +3699,7 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         SupplyDeliveryStatus status,
@@ -3638,7 +3729,7 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SupplyRequestStatus status,
         CodeableConcept category,
         Code priority,
@@ -3652,7 +3743,7 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
         FhirDateTime authoredOn,
         Reference requester,
         List<dynamic> supplier,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         Reference deliverFrom,
         Reference deliverTo),
@@ -3676,7 +3767,7 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier requestIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FhirUri moduleUri,
         Canonical moduleCanonical,
         CodeableConcept moduleCodeableConcept,
@@ -3685,9 +3776,9 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
         Reference encounter,
         FhirDateTime occurrenceDateTime,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> evaluationMessage,
         Reference outputParameters,
         Reference result,
@@ -3702,7 +3793,7 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -3723,11 +3814,11 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
         Reference requester,
         CodeableConcept performerType,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory),
     Result deviceRequestParameter(
         String id,
@@ -3748,16 +3839,16 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         Identifier groupIdentifier,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         List<dynamic> about,
         Reference encounter,
@@ -3768,9 +3859,9 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
         Reference requester,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationRequestPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -3788,7 +3879,7 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -3796,9 +3887,9 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
         List<dynamic> inResponseTo,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         CodeableConcept topic,
         List<dynamic> about,
@@ -3807,10 +3898,10 @@ class _$SupplyDeliverySuppliedItem implements SupplyDeliverySuppliedItem {
         FhirDateTime received,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> payload,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -3933,7 +4024,7 @@ abstract class $SupplyRequestCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       SupplyRequestStatus status,
       CodeableConcept category,
       Code priority,
@@ -3947,10 +4038,16 @@ abstract class $SupplyRequestCopyWith<$Res>
       FhirDateTime authoredOn,
       Reference requester,
       List<dynamic> supplier,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       Reference deliverFrom,
       Reference deliverTo});
+
+  $CodeableConceptCopyWith<$Res> get category;
+  $CodeableConceptCopyWith<$Res> get itemCodeableConcept;
+  $QuantityCopyWith<$Res> get quantity;
+  $PeriodCopyWith<$Res> get occurrencePeriod;
+  $TimingCopyWith<$Res> get occurrenceTiming;
 }
 
 class _$SupplyRequestCopyWithImpl<$Res>
@@ -4014,7 +4111,7 @@ class _$SupplyRequestCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as SupplyRequestStatus,
       category:
           category == freezed ? _value.category : category as CodeableConcept,
@@ -4046,7 +4143,7 @@ class _$SupplyRequestCopyWithImpl<$Res>
           supplier == freezed ? _value.supplier : supplier as List<dynamic>,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<dynamic>,
+          : reasonCode as List<CodeableConcept>,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
           : reasonReference as List<dynamic>,
@@ -4056,6 +4153,56 @@ class _$SupplyRequestCopyWithImpl<$Res>
       deliverTo:
           deliverTo == freezed ? _value.deliverTo : deliverTo as Reference,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get category {
+    if (_value.category == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
+      return _then(_value.copyWith(category: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get itemCodeableConcept {
+    if (_value.itemCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.itemCodeableConcept, (value) {
+      return _then(_value.copyWith(itemCodeableConcept: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get occurrencePeriod {
+    if (_value.occurrencePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.occurrencePeriod, (value) {
+      return _then(_value.copyWith(occurrencePeriod: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get occurrenceTiming {
+    if (_value.occurrenceTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.occurrenceTiming, (value) {
+      return _then(_value.copyWith(occurrenceTiming: value));
+    });
   }
 }
 
@@ -4113,7 +4260,7 @@ class _$SupplyRequest implements SupplyRequest {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final SupplyRequestStatus status;
   @override
@@ -4141,7 +4288,7 @@ class _$SupplyRequest implements SupplyRequest {
   @override
   final List<dynamic> supplier;
   @override
-  final List<dynamic> reasonCode;
+  final List<CodeableConcept> reasonCode;
   @override
   final List<dynamic> reasonReference;
   @override
@@ -4279,7 +4426,7 @@ class _$SupplyRequest implements SupplyRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DeviceUseStatementStatus status,
             Reference subject,
@@ -4290,10 +4437,10 @@ class _$SupplyRequest implements SupplyRequest {
             FhirDateTime recordedOn,
             Reference source,
             Reference device,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             CodeableConcept bodySite,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result supplyDelivery(
             String resourceType,
@@ -4305,7 +4452,7 @@ class _$SupplyRequest implements SupplyRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             SupplyDeliveryStatus status,
@@ -4337,7 +4484,7 @@ class _$SupplyRequest implements SupplyRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SupplyRequestStatus status,
             CodeableConcept category,
             Code priority,
@@ -4351,7 +4498,7 @@ class _$SupplyRequest implements SupplyRequest {
             FhirDateTime authoredOn,
             Reference requester,
             List<dynamic> supplier,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             Reference deliverFrom,
             Reference deliverTo),
@@ -4377,7 +4524,7 @@ class _$SupplyRequest implements SupplyRequest {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier requestIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FhirUri moduleUri,
             Canonical moduleCanonical,
             CodeableConcept moduleCodeableConcept,
@@ -4386,9 +4533,9 @@ class _$SupplyRequest implements SupplyRequest {
             Reference encounter,
             FhirDateTime occurrenceDateTime,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> evaluationMessage,
             Reference outputParameters,
             Reference result,
@@ -4404,7 +4551,7 @@ class _$SupplyRequest implements SupplyRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -4425,11 +4572,11 @@ class _$SupplyRequest implements SupplyRequest {
             Reference requester,
             CodeableConcept performerType,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory),
     @required
         Result deviceRequestParameter(
@@ -4452,16 +4599,16 @@ class _$SupplyRequest implements SupplyRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             Identifier groupIdentifier,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             List<dynamic> about,
             Reference encounter,
@@ -4472,9 +4619,9 @@ class _$SupplyRequest implements SupplyRequest {
             Reference requester,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationRequestPayload(
             String id,
@@ -4494,7 +4641,7 @@ class _$SupplyRequest implements SupplyRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -4502,9 +4649,9 @@ class _$SupplyRequest implements SupplyRequest {
             List<dynamic> inResponseTo,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             CodeableConcept topic,
             List<dynamic> about,
@@ -4513,10 +4660,10 @@ class _$SupplyRequest implements SupplyRequest {
             FhirDateTime received,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> payload,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationPayload(
             String id,
@@ -4581,7 +4728,7 @@ class _$SupplyRequest implements SupplyRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DeviceUseStatementStatus status,
         Reference subject,
@@ -4592,10 +4739,10 @@ class _$SupplyRequest implements SupplyRequest {
         FhirDateTime recordedOn,
         Reference source,
         Reference device,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         CodeableConcept bodySite,
-        List<dynamic> note),
+        List<Annotation> note),
     Result supplyDelivery(
         String resourceType,
         Id id,
@@ -4606,7 +4753,7 @@ class _$SupplyRequest implements SupplyRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         SupplyDeliveryStatus status,
@@ -4636,7 +4783,7 @@ class _$SupplyRequest implements SupplyRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SupplyRequestStatus status,
         CodeableConcept category,
         Code priority,
@@ -4650,7 +4797,7 @@ class _$SupplyRequest implements SupplyRequest {
         FhirDateTime authoredOn,
         Reference requester,
         List<dynamic> supplier,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         Reference deliverFrom,
         Reference deliverTo),
@@ -4674,7 +4821,7 @@ class _$SupplyRequest implements SupplyRequest {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier requestIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FhirUri moduleUri,
         Canonical moduleCanonical,
         CodeableConcept moduleCodeableConcept,
@@ -4683,9 +4830,9 @@ class _$SupplyRequest implements SupplyRequest {
         Reference encounter,
         FhirDateTime occurrenceDateTime,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> evaluationMessage,
         Reference outputParameters,
         Reference result,
@@ -4700,7 +4847,7 @@ class _$SupplyRequest implements SupplyRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -4721,11 +4868,11 @@ class _$SupplyRequest implements SupplyRequest {
         Reference requester,
         CodeableConcept performerType,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory),
     Result deviceRequestParameter(
         String id,
@@ -4746,16 +4893,16 @@ class _$SupplyRequest implements SupplyRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         Identifier groupIdentifier,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         List<dynamic> about,
         Reference encounter,
@@ -4766,9 +4913,9 @@ class _$SupplyRequest implements SupplyRequest {
         Reference requester,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationRequestPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -4786,7 +4933,7 @@ class _$SupplyRequest implements SupplyRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -4794,9 +4941,9 @@ class _$SupplyRequest implements SupplyRequest {
         List<dynamic> inResponseTo,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         CodeableConcept topic,
         List<dynamic> about,
@@ -4805,10 +4952,10 @@ class _$SupplyRequest implements SupplyRequest {
         FhirDateTime received,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> payload,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -4926,7 +5073,7 @@ abstract class SupplyRequest implements RequestAndResponse {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       SupplyRequestStatus status,
       CodeableConcept category,
       Code priority,
@@ -4940,7 +5087,7 @@ abstract class SupplyRequest implements RequestAndResponse {
       FhirDateTime authoredOn,
       Reference requester,
       List<dynamic> supplier,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       Reference deliverFrom,
       Reference deliverTo}) = _$SupplyRequest;
@@ -4960,7 +5107,7 @@ abstract class SupplyRequest implements RequestAndResponse {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   SupplyRequestStatus get status;
   CodeableConcept get category;
   Code get priority;
@@ -4974,7 +5121,7 @@ abstract class SupplyRequest implements RequestAndResponse {
   FhirDateTime get authoredOn;
   Reference get requester;
   List<dynamic> get supplier;
-  List<dynamic> get reasonCode;
+  List<CodeableConcept> get reasonCode;
   List<dynamic> get reasonReference;
   Reference get deliverFrom;
   Reference get deliverTo;
@@ -4997,6 +5144,11 @@ abstract class $SupplyRequestParameterCopyWith<$Res>
       Quantity valueQuantity,
       Range valueRange,
       bool valueBoolean});
+
+  $CodeableConceptCopyWith<$Res> get code;
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  $QuantityCopyWith<$Res> get valueQuantity;
+  $RangeCopyWith<$Res> get valueRange;
 }
 
 class _$SupplyRequestParameterCopyWithImpl<$Res>
@@ -5040,6 +5192,46 @@ class _$SupplyRequestParameterCopyWithImpl<$Res>
       valueBoolean:
           valueBoolean == freezed ? _value.valueBoolean : valueBoolean as bool,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept, (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.valueRange, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
   }
 }
 
@@ -5140,7 +5332,7 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DeviceUseStatementStatus status,
             Reference subject,
@@ -5151,10 +5343,10 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
             FhirDateTime recordedOn,
             Reference source,
             Reference device,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             CodeableConcept bodySite,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result supplyDelivery(
             String resourceType,
@@ -5166,7 +5358,7 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             SupplyDeliveryStatus status,
@@ -5198,7 +5390,7 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SupplyRequestStatus status,
             CodeableConcept category,
             Code priority,
@@ -5212,7 +5404,7 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
             FhirDateTime authoredOn,
             Reference requester,
             List<dynamic> supplier,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             Reference deliverFrom,
             Reference deliverTo),
@@ -5238,7 +5430,7 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier requestIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FhirUri moduleUri,
             Canonical moduleCanonical,
             CodeableConcept moduleCodeableConcept,
@@ -5247,9 +5439,9 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
             Reference encounter,
             FhirDateTime occurrenceDateTime,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> evaluationMessage,
             Reference outputParameters,
             Reference result,
@@ -5265,7 +5457,7 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -5286,11 +5478,11 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
             Reference requester,
             CodeableConcept performerType,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory),
     @required
         Result deviceRequestParameter(
@@ -5313,16 +5505,16 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             Identifier groupIdentifier,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             List<dynamic> about,
             Reference encounter,
@@ -5333,9 +5525,9 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
             Reference requester,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationRequestPayload(
             String id,
@@ -5355,7 +5547,7 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -5363,9 +5555,9 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
             List<dynamic> inResponseTo,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             CodeableConcept topic,
             List<dynamic> about,
@@ -5374,10 +5566,10 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
             FhirDateTime received,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> payload,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationPayload(
             String id,
@@ -5416,7 +5608,7 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DeviceUseStatementStatus status,
         Reference subject,
@@ -5427,10 +5619,10 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
         FhirDateTime recordedOn,
         Reference source,
         Reference device,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         CodeableConcept bodySite,
-        List<dynamic> note),
+        List<Annotation> note),
     Result supplyDelivery(
         String resourceType,
         Id id,
@@ -5441,7 +5633,7 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         SupplyDeliveryStatus status,
@@ -5471,7 +5663,7 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SupplyRequestStatus status,
         CodeableConcept category,
         Code priority,
@@ -5485,7 +5677,7 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
         FhirDateTime authoredOn,
         Reference requester,
         List<dynamic> supplier,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         Reference deliverFrom,
         Reference deliverTo),
@@ -5509,7 +5701,7 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier requestIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FhirUri moduleUri,
         Canonical moduleCanonical,
         CodeableConcept moduleCodeableConcept,
@@ -5518,9 +5710,9 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
         Reference encounter,
         FhirDateTime occurrenceDateTime,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> evaluationMessage,
         Reference outputParameters,
         Reference result,
@@ -5535,7 +5727,7 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -5556,11 +5748,11 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
         Reference requester,
         CodeableConcept performerType,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory),
     Result deviceRequestParameter(
         String id,
@@ -5581,16 +5773,16 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         Identifier groupIdentifier,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         List<dynamic> about,
         Reference encounter,
@@ -5601,9 +5793,9 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
         Reference requester,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationRequestPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -5621,7 +5813,7 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -5629,9 +5821,9 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
         List<dynamic> inResponseTo,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         CodeableConcept topic,
         List<dynamic> about,
@@ -5640,10 +5832,10 @@ class _$SupplyRequestParameter implements SupplyRequestParameter {
         FhirDateTime received,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> payload,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -5771,7 +5963,7 @@ abstract class $GuidanceResponseCopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       Identifier requestIdentifier,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       FhirUri moduleUri,
       Canonical moduleCanonical,
       CodeableConcept moduleCodeableConcept,
@@ -5780,13 +5972,16 @@ abstract class $GuidanceResponseCopyWith<$Res>
       Reference encounter,
       FhirDateTime occurrenceDateTime,
       Reference performer,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> evaluationMessage,
       Reference outputParameters,
       Reference result,
       List<dynamic> dataRequirement});
+
+  $IdentifierCopyWith<$Res> get requestIdentifier;
+  $CodeableConceptCopyWith<$Res> get moduleCodeableConcept;
 }
 
 class _$GuidanceResponseCopyWithImpl<$Res>
@@ -5852,7 +6047,7 @@ class _$GuidanceResponseCopyWithImpl<$Res>
           : requestIdentifier as Identifier,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       moduleUri: moduleUri == freezed ? _value.moduleUri : moduleUri as FhirUri,
       moduleCanonical: moduleCanonical == freezed
           ? _value.moduleCanonical
@@ -5872,11 +6067,11 @@ class _$GuidanceResponseCopyWithImpl<$Res>
           performer == freezed ? _value.performer : performer as Reference,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<dynamic>,
+          : reasonCode as List<CodeableConcept>,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
           : reasonReference as List<dynamic>,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
       evaluationMessage: evaluationMessage == freezed
           ? _value.evaluationMessage
           : evaluationMessage as List<dynamic>,
@@ -5888,6 +6083,27 @@ class _$GuidanceResponseCopyWithImpl<$Res>
           ? _value.dataRequirement
           : dataRequirement as List<dynamic>,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get requestIdentifier {
+    if (_value.requestIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.requestIdentifier, (value) {
+      return _then(_value.copyWith(requestIdentifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get moduleCodeableConcept {
+    if (_value.moduleCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.moduleCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(moduleCodeableConcept: value));
+    });
   }
 }
 
@@ -5946,7 +6162,7 @@ class _$GuidanceResponse implements GuidanceResponse {
   @override
   final Identifier requestIdentifier;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final FhirUri moduleUri;
   @override
@@ -5964,11 +6180,11 @@ class _$GuidanceResponse implements GuidanceResponse {
   @override
   final Reference performer;
   @override
-  final List<dynamic> reasonCode;
+  final List<CodeableConcept> reasonCode;
   @override
   final List<dynamic> reasonReference;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
   @override
   final List<dynamic> evaluationMessage;
   @override
@@ -6106,7 +6322,7 @@ class _$GuidanceResponse implements GuidanceResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DeviceUseStatementStatus status,
             Reference subject,
@@ -6117,10 +6333,10 @@ class _$GuidanceResponse implements GuidanceResponse {
             FhirDateTime recordedOn,
             Reference source,
             Reference device,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             CodeableConcept bodySite,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result supplyDelivery(
             String resourceType,
@@ -6132,7 +6348,7 @@ class _$GuidanceResponse implements GuidanceResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             SupplyDeliveryStatus status,
@@ -6164,7 +6380,7 @@ class _$GuidanceResponse implements GuidanceResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SupplyRequestStatus status,
             CodeableConcept category,
             Code priority,
@@ -6178,7 +6394,7 @@ class _$GuidanceResponse implements GuidanceResponse {
             FhirDateTime authoredOn,
             Reference requester,
             List<dynamic> supplier,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             Reference deliverFrom,
             Reference deliverTo),
@@ -6204,7 +6420,7 @@ class _$GuidanceResponse implements GuidanceResponse {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier requestIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FhirUri moduleUri,
             Canonical moduleCanonical,
             CodeableConcept moduleCodeableConcept,
@@ -6213,9 +6429,9 @@ class _$GuidanceResponse implements GuidanceResponse {
             Reference encounter,
             FhirDateTime occurrenceDateTime,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> evaluationMessage,
             Reference outputParameters,
             Reference result,
@@ -6231,7 +6447,7 @@ class _$GuidanceResponse implements GuidanceResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -6252,11 +6468,11 @@ class _$GuidanceResponse implements GuidanceResponse {
             Reference requester,
             CodeableConcept performerType,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory),
     @required
         Result deviceRequestParameter(
@@ -6279,16 +6495,16 @@ class _$GuidanceResponse implements GuidanceResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             Identifier groupIdentifier,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             List<dynamic> about,
             Reference encounter,
@@ -6299,9 +6515,9 @@ class _$GuidanceResponse implements GuidanceResponse {
             Reference requester,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationRequestPayload(
             String id,
@@ -6321,7 +6537,7 @@ class _$GuidanceResponse implements GuidanceResponse {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -6329,9 +6545,9 @@ class _$GuidanceResponse implements GuidanceResponse {
             List<dynamic> inResponseTo,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             CodeableConcept topic,
             List<dynamic> about,
@@ -6340,10 +6556,10 @@ class _$GuidanceResponse implements GuidanceResponse {
             FhirDateTime received,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> payload,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationPayload(
             String id,
@@ -6407,7 +6623,7 @@ class _$GuidanceResponse implements GuidanceResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DeviceUseStatementStatus status,
         Reference subject,
@@ -6418,10 +6634,10 @@ class _$GuidanceResponse implements GuidanceResponse {
         FhirDateTime recordedOn,
         Reference source,
         Reference device,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         CodeableConcept bodySite,
-        List<dynamic> note),
+        List<Annotation> note),
     Result supplyDelivery(
         String resourceType,
         Id id,
@@ -6432,7 +6648,7 @@ class _$GuidanceResponse implements GuidanceResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         SupplyDeliveryStatus status,
@@ -6462,7 +6678,7 @@ class _$GuidanceResponse implements GuidanceResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SupplyRequestStatus status,
         CodeableConcept category,
         Code priority,
@@ -6476,7 +6692,7 @@ class _$GuidanceResponse implements GuidanceResponse {
         FhirDateTime authoredOn,
         Reference requester,
         List<dynamic> supplier,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         Reference deliverFrom,
         Reference deliverTo),
@@ -6500,7 +6716,7 @@ class _$GuidanceResponse implements GuidanceResponse {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier requestIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FhirUri moduleUri,
         Canonical moduleCanonical,
         CodeableConcept moduleCodeableConcept,
@@ -6509,9 +6725,9 @@ class _$GuidanceResponse implements GuidanceResponse {
         Reference encounter,
         FhirDateTime occurrenceDateTime,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> evaluationMessage,
         Reference outputParameters,
         Reference result,
@@ -6526,7 +6742,7 @@ class _$GuidanceResponse implements GuidanceResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -6547,11 +6763,11 @@ class _$GuidanceResponse implements GuidanceResponse {
         Reference requester,
         CodeableConcept performerType,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory),
     Result deviceRequestParameter(
         String id,
@@ -6572,16 +6788,16 @@ class _$GuidanceResponse implements GuidanceResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         Identifier groupIdentifier,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         List<dynamic> about,
         Reference encounter,
@@ -6592,9 +6808,9 @@ class _$GuidanceResponse implements GuidanceResponse {
         Reference requester,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationRequestPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -6612,7 +6828,7 @@ class _$GuidanceResponse implements GuidanceResponse {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -6620,9 +6836,9 @@ class _$GuidanceResponse implements GuidanceResponse {
         List<dynamic> inResponseTo,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         CodeableConcept topic,
         List<dynamic> about,
@@ -6631,10 +6847,10 @@ class _$GuidanceResponse implements GuidanceResponse {
         FhirDateTime received,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> payload,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -6753,7 +6969,7 @@ abstract class GuidanceResponse implements RequestAndResponse {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       Identifier requestIdentifier,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       FhirUri moduleUri,
       Canonical moduleCanonical,
       CodeableConcept moduleCodeableConcept,
@@ -6762,9 +6978,9 @@ abstract class GuidanceResponse implements RequestAndResponse {
       Reference encounter,
       FhirDateTime occurrenceDateTime,
       Reference performer,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> evaluationMessage,
       Reference outputParameters,
       Reference result,
@@ -6786,7 +7002,7 @@ abstract class GuidanceResponse implements RequestAndResponse {
   @override
   List<dynamic> get modifierExtension;
   Identifier get requestIdentifier;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   FhirUri get moduleUri;
   Canonical get moduleCanonical;
   CodeableConcept get moduleCodeableConcept;
@@ -6795,9 +7011,9 @@ abstract class GuidanceResponse implements RequestAndResponse {
   Reference get encounter;
   FhirDateTime get occurrenceDateTime;
   Reference get performer;
-  List<dynamic> get reasonCode;
+  List<CodeableConcept> get reasonCode;
   List<dynamic> get reasonReference;
-  List<dynamic> get note;
+  List<Annotation> get note;
   List<dynamic> get evaluationMessage;
   Reference get outputParameters;
   Reference get result;
@@ -6822,7 +7038,7 @@ abstract class $DeviceRequestCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<dynamic> basedOn,
@@ -6843,12 +7059,18 @@ abstract class $DeviceRequestCopyWith<$Res>
       Reference requester,
       CodeableConcept performerType,
       Reference performer,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> insurance,
       List<dynamic> supportingInfo,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> relevantHistory});
+
+  $IdentifierCopyWith<$Res> get groupIdentifier;
+  $CodeableConceptCopyWith<$Res> get codeCodeableConcept;
+  $PeriodCopyWith<$Res> get occurrencePeriod;
+  $TimingCopyWith<$Res> get occurrenceTiming;
+  $CodeableConceptCopyWith<$Res> get performerType;
 }
 
 class _$DeviceRequestCopyWithImpl<$Res>
@@ -6921,7 +7143,7 @@ class _$DeviceRequestCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       instantiatesCanonical: instantiatesCanonical == freezed
           ? _value.instantiatesCanonical
           : instantiatesCanonical as List<Canonical>,
@@ -6970,7 +7192,7 @@ class _$DeviceRequestCopyWithImpl<$Res>
           performer == freezed ? _value.performer : performer as Reference,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<dynamic>,
+          : reasonCode as List<CodeableConcept>,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
           : reasonReference as List<dynamic>,
@@ -6979,11 +7201,61 @@ class _$DeviceRequestCopyWithImpl<$Res>
       supportingInfo: supportingInfo == freezed
           ? _value.supportingInfo
           : supportingInfo as List<dynamic>,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
       relevantHistory: relevantHistory == freezed
           ? _value.relevantHistory
           : relevantHistory as List<dynamic>,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get groupIdentifier {
+    if (_value.groupIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.groupIdentifier, (value) {
+      return _then(_value.copyWith(groupIdentifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get codeCodeableConcept {
+    if (_value.codeCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.codeCodeableConcept, (value) {
+      return _then(_value.copyWith(codeCodeableConcept: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get occurrencePeriod {
+    if (_value.occurrencePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.occurrencePeriod, (value) {
+      return _then(_value.copyWith(occurrencePeriod: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get occurrenceTiming {
+    if (_value.occurrenceTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.occurrenceTiming, (value) {
+      return _then(_value.copyWith(occurrenceTiming: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get performerType {
+    if (_value.performerType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.performerType, (value) {
+      return _then(_value.copyWith(performerType: value));
+    });
   }
 }
 
@@ -7050,7 +7322,7 @@ class _$DeviceRequest implements DeviceRequest {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final List<Canonical> instantiatesCanonical;
   @override
@@ -7092,7 +7364,7 @@ class _$DeviceRequest implements DeviceRequest {
   @override
   final Reference performer;
   @override
-  final List<dynamic> reasonCode;
+  final List<CodeableConcept> reasonCode;
   @override
   final List<dynamic> reasonReference;
   @override
@@ -7100,7 +7372,7 @@ class _$DeviceRequest implements DeviceRequest {
   @override
   final List<dynamic> supportingInfo;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
   @override
   final List<dynamic> relevantHistory;
 
@@ -7252,7 +7524,7 @@ class _$DeviceRequest implements DeviceRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DeviceUseStatementStatus status,
             Reference subject,
@@ -7263,10 +7535,10 @@ class _$DeviceRequest implements DeviceRequest {
             FhirDateTime recordedOn,
             Reference source,
             Reference device,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             CodeableConcept bodySite,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result supplyDelivery(
             String resourceType,
@@ -7278,7 +7550,7 @@ class _$DeviceRequest implements DeviceRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             SupplyDeliveryStatus status,
@@ -7310,7 +7582,7 @@ class _$DeviceRequest implements DeviceRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SupplyRequestStatus status,
             CodeableConcept category,
             Code priority,
@@ -7324,7 +7596,7 @@ class _$DeviceRequest implements DeviceRequest {
             FhirDateTime authoredOn,
             Reference requester,
             List<dynamic> supplier,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             Reference deliverFrom,
             Reference deliverTo),
@@ -7350,7 +7622,7 @@ class _$DeviceRequest implements DeviceRequest {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier requestIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FhirUri moduleUri,
             Canonical moduleCanonical,
             CodeableConcept moduleCodeableConcept,
@@ -7359,9 +7631,9 @@ class _$DeviceRequest implements DeviceRequest {
             Reference encounter,
             FhirDateTime occurrenceDateTime,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> evaluationMessage,
             Reference outputParameters,
             Reference result,
@@ -7377,7 +7649,7 @@ class _$DeviceRequest implements DeviceRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -7398,11 +7670,11 @@ class _$DeviceRequest implements DeviceRequest {
             Reference requester,
             CodeableConcept performerType,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory),
     @required
         Result deviceRequestParameter(
@@ -7425,16 +7697,16 @@ class _$DeviceRequest implements DeviceRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             Identifier groupIdentifier,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             List<dynamic> about,
             Reference encounter,
@@ -7445,9 +7717,9 @@ class _$DeviceRequest implements DeviceRequest {
             Reference requester,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationRequestPayload(
             String id,
@@ -7467,7 +7739,7 @@ class _$DeviceRequest implements DeviceRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -7475,9 +7747,9 @@ class _$DeviceRequest implements DeviceRequest {
             List<dynamic> inResponseTo,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             CodeableConcept topic,
             List<dynamic> about,
@@ -7486,10 +7758,10 @@ class _$DeviceRequest implements DeviceRequest {
             FhirDateTime received,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> payload,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationPayload(
             String id,
@@ -7563,7 +7835,7 @@ class _$DeviceRequest implements DeviceRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DeviceUseStatementStatus status,
         Reference subject,
@@ -7574,10 +7846,10 @@ class _$DeviceRequest implements DeviceRequest {
         FhirDateTime recordedOn,
         Reference source,
         Reference device,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         CodeableConcept bodySite,
-        List<dynamic> note),
+        List<Annotation> note),
     Result supplyDelivery(
         String resourceType,
         Id id,
@@ -7588,7 +7860,7 @@ class _$DeviceRequest implements DeviceRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         SupplyDeliveryStatus status,
@@ -7618,7 +7890,7 @@ class _$DeviceRequest implements DeviceRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SupplyRequestStatus status,
         CodeableConcept category,
         Code priority,
@@ -7632,7 +7904,7 @@ class _$DeviceRequest implements DeviceRequest {
         FhirDateTime authoredOn,
         Reference requester,
         List<dynamic> supplier,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         Reference deliverFrom,
         Reference deliverTo),
@@ -7656,7 +7928,7 @@ class _$DeviceRequest implements DeviceRequest {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier requestIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FhirUri moduleUri,
         Canonical moduleCanonical,
         CodeableConcept moduleCodeableConcept,
@@ -7665,9 +7937,9 @@ class _$DeviceRequest implements DeviceRequest {
         Reference encounter,
         FhirDateTime occurrenceDateTime,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> evaluationMessage,
         Reference outputParameters,
         Reference result,
@@ -7682,7 +7954,7 @@ class _$DeviceRequest implements DeviceRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -7703,11 +7975,11 @@ class _$DeviceRequest implements DeviceRequest {
         Reference requester,
         CodeableConcept performerType,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory),
     Result deviceRequestParameter(
         String id,
@@ -7728,16 +8000,16 @@ class _$DeviceRequest implements DeviceRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         Identifier groupIdentifier,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         List<dynamic> about,
         Reference encounter,
@@ -7748,9 +8020,9 @@ class _$DeviceRequest implements DeviceRequest {
         Reference requester,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationRequestPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -7768,7 +8040,7 @@ class _$DeviceRequest implements DeviceRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -7776,9 +8048,9 @@ class _$DeviceRequest implements DeviceRequest {
         List<dynamic> inResponseTo,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         CodeableConcept topic,
         List<dynamic> about,
@@ -7787,10 +8059,10 @@ class _$DeviceRequest implements DeviceRequest {
         FhirDateTime received,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> payload,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -7917,7 +8189,7 @@ abstract class DeviceRequest implements RequestAndResponse {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<dynamic> basedOn,
@@ -7938,11 +8210,11 @@ abstract class DeviceRequest implements RequestAndResponse {
       Reference requester,
       CodeableConcept performerType,
       Reference performer,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> insurance,
       List<dynamic> supportingInfo,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> relevantHistory}) = _$DeviceRequest;
 
   factory DeviceRequest.fromJson(Map<String, dynamic> json) =
@@ -7960,7 +8232,7 @@ abstract class DeviceRequest implements RequestAndResponse {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   List<Canonical> get instantiatesCanonical;
   List<FhirUri> get instantiatesUri;
   List<dynamic> get basedOn;
@@ -7981,11 +8253,11 @@ abstract class DeviceRequest implements RequestAndResponse {
   Reference get requester;
   CodeableConcept get performerType;
   Reference get performer;
-  List<dynamic> get reasonCode;
+  List<CodeableConcept> get reasonCode;
   List<dynamic> get reasonReference;
   List<dynamic> get insurance;
   List<dynamic> get supportingInfo;
-  List<dynamic> get note;
+  List<Annotation> get note;
   List<dynamic> get relevantHistory;
   @override
   $DeviceRequestCopyWith<DeviceRequest> get copyWith;
@@ -8006,6 +8278,11 @@ abstract class $DeviceRequestParameterCopyWith<$Res>
       Quantity valueQuantity,
       Range valueRange,
       bool valueBoolean});
+
+  $CodeableConceptCopyWith<$Res> get code;
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  $QuantityCopyWith<$Res> get valueQuantity;
+  $RangeCopyWith<$Res> get valueRange;
 }
 
 class _$DeviceRequestParameterCopyWithImpl<$Res>
@@ -8049,6 +8326,46 @@ class _$DeviceRequestParameterCopyWithImpl<$Res>
       valueBoolean:
           valueBoolean == freezed ? _value.valueBoolean : valueBoolean as bool,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept, (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.valueRange, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
   }
 }
 
@@ -8149,7 +8466,7 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DeviceUseStatementStatus status,
             Reference subject,
@@ -8160,10 +8477,10 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
             FhirDateTime recordedOn,
             Reference source,
             Reference device,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             CodeableConcept bodySite,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result supplyDelivery(
             String resourceType,
@@ -8175,7 +8492,7 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             SupplyDeliveryStatus status,
@@ -8207,7 +8524,7 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SupplyRequestStatus status,
             CodeableConcept category,
             Code priority,
@@ -8221,7 +8538,7 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
             FhirDateTime authoredOn,
             Reference requester,
             List<dynamic> supplier,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             Reference deliverFrom,
             Reference deliverTo),
@@ -8247,7 +8564,7 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier requestIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FhirUri moduleUri,
             Canonical moduleCanonical,
             CodeableConcept moduleCodeableConcept,
@@ -8256,9 +8573,9 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
             Reference encounter,
             FhirDateTime occurrenceDateTime,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> evaluationMessage,
             Reference outputParameters,
             Reference result,
@@ -8274,7 +8591,7 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -8295,11 +8612,11 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
             Reference requester,
             CodeableConcept performerType,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory),
     @required
         Result deviceRequestParameter(
@@ -8322,16 +8639,16 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             Identifier groupIdentifier,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             List<dynamic> about,
             Reference encounter,
@@ -8342,9 +8659,9 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
             Reference requester,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationRequestPayload(
             String id,
@@ -8364,7 +8681,7 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -8372,9 +8689,9 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
             List<dynamic> inResponseTo,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             CodeableConcept topic,
             List<dynamic> about,
@@ -8383,10 +8700,10 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
             FhirDateTime received,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> payload,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationPayload(
             String id,
@@ -8425,7 +8742,7 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DeviceUseStatementStatus status,
         Reference subject,
@@ -8436,10 +8753,10 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
         FhirDateTime recordedOn,
         Reference source,
         Reference device,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         CodeableConcept bodySite,
-        List<dynamic> note),
+        List<Annotation> note),
     Result supplyDelivery(
         String resourceType,
         Id id,
@@ -8450,7 +8767,7 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         SupplyDeliveryStatus status,
@@ -8480,7 +8797,7 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SupplyRequestStatus status,
         CodeableConcept category,
         Code priority,
@@ -8494,7 +8811,7 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
         FhirDateTime authoredOn,
         Reference requester,
         List<dynamic> supplier,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         Reference deliverFrom,
         Reference deliverTo),
@@ -8518,7 +8835,7 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier requestIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FhirUri moduleUri,
         Canonical moduleCanonical,
         CodeableConcept moduleCodeableConcept,
@@ -8527,9 +8844,9 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
         Reference encounter,
         FhirDateTime occurrenceDateTime,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> evaluationMessage,
         Reference outputParameters,
         Reference result,
@@ -8544,7 +8861,7 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -8565,11 +8882,11 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
         Reference requester,
         CodeableConcept performerType,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory),
     Result deviceRequestParameter(
         String id,
@@ -8590,16 +8907,16 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         Identifier groupIdentifier,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         List<dynamic> about,
         Reference encounter,
@@ -8610,9 +8927,9 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
         Reference requester,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationRequestPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -8630,7 +8947,7 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -8638,9 +8955,9 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
         List<dynamic> inResponseTo,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         CodeableConcept topic,
         List<dynamic> about,
@@ -8649,10 +8966,10 @@ class _$DeviceRequestParameter implements DeviceRequestParameter {
         FhirDateTime received,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> payload,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -8779,16 +9096,16 @@ abstract class $CommunicationRequestCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<dynamic> basedOn,
       List<dynamic> replaces,
       Identifier groupIdentifier,
       Code status,
       CodeableConcept statusReason,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Code priority,
       bool doNotPerform,
-      List<dynamic> medium,
+      List<CodeableConcept> medium,
       Reference subject,
       List<dynamic> about,
       Reference encounter,
@@ -8799,9 +9116,13 @@ abstract class $CommunicationRequestCopyWith<$Res>
       Reference requester,
       List<dynamic> recipient,
       Reference sender,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
-      List<dynamic> note});
+      List<Annotation> note});
+
+  $IdentifierCopyWith<$Res> get groupIdentifier;
+  $CodeableConceptCopyWith<$Res> get statusReason;
+  $PeriodCopyWith<$Res> get occurrencePeriod;
 }
 
 class _$CommunicationRequestCopyWithImpl<$Res>
@@ -8870,7 +9191,7 @@ class _$CommunicationRequestCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<dynamic>,
       replaces:
           replaces == freezed ? _value.replaces : replaces as List<dynamic>,
@@ -8881,12 +9202,14 @@ class _$CommunicationRequestCopyWithImpl<$Res>
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as CodeableConcept,
-      category:
-          category == freezed ? _value.category : category as List<dynamic>,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
       priority: priority == freezed ? _value.priority : priority as Code,
       doNotPerform:
           doNotPerform == freezed ? _value.doNotPerform : doNotPerform as bool,
-      medium: medium == freezed ? _value.medium : medium as List<dynamic>,
+      medium:
+          medium == freezed ? _value.medium : medium as List<CodeableConcept>,
       subject: subject == freezed ? _value.subject : subject as Reference,
       about: about == freezed ? _value.about : about as List<dynamic>,
       encounter:
@@ -8908,12 +9231,42 @@ class _$CommunicationRequestCopyWithImpl<$Res>
       sender: sender == freezed ? _value.sender : sender as Reference,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<dynamic>,
+          : reasonCode as List<CodeableConcept>,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
           : reasonReference as List<dynamic>,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get groupIdentifier {
+    if (_value.groupIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.groupIdentifier, (value) {
+      return _then(_value.copyWith(groupIdentifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get statusReason {
+    if (_value.statusReason == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.statusReason, (value) {
+      return _then(_value.copyWith(statusReason: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get occurrencePeriod {
+    if (_value.occurrencePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.occurrencePeriod, (value) {
+      return _then(_value.copyWith(occurrencePeriod: value));
+    });
   }
 }
 
@@ -8976,7 +9329,7 @@ class _$CommunicationRequest implements CommunicationRequest {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final List<dynamic> basedOn;
   @override
@@ -8988,13 +9341,13 @@ class _$CommunicationRequest implements CommunicationRequest {
   @override
   final CodeableConcept statusReason;
   @override
-  final List<dynamic> category;
+  final List<CodeableConcept> category;
   @override
   final Code priority;
   @override
   final bool doNotPerform;
   @override
-  final List<dynamic> medium;
+  final List<CodeableConcept> medium;
   @override
   final Reference subject;
   @override
@@ -9016,11 +9369,11 @@ class _$CommunicationRequest implements CommunicationRequest {
   @override
   final Reference sender;
   @override
-  final List<dynamic> reasonCode;
+  final List<CodeableConcept> reasonCode;
   @override
   final List<dynamic> reasonReference;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
 
   @override
   String toString() {
@@ -9163,7 +9516,7 @@ class _$CommunicationRequest implements CommunicationRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DeviceUseStatementStatus status,
             Reference subject,
@@ -9174,10 +9527,10 @@ class _$CommunicationRequest implements CommunicationRequest {
             FhirDateTime recordedOn,
             Reference source,
             Reference device,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             CodeableConcept bodySite,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result supplyDelivery(
             String resourceType,
@@ -9189,7 +9542,7 @@ class _$CommunicationRequest implements CommunicationRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             SupplyDeliveryStatus status,
@@ -9221,7 +9574,7 @@ class _$CommunicationRequest implements CommunicationRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SupplyRequestStatus status,
             CodeableConcept category,
             Code priority,
@@ -9235,7 +9588,7 @@ class _$CommunicationRequest implements CommunicationRequest {
             FhirDateTime authoredOn,
             Reference requester,
             List<dynamic> supplier,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             Reference deliverFrom,
             Reference deliverTo),
@@ -9261,7 +9614,7 @@ class _$CommunicationRequest implements CommunicationRequest {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier requestIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FhirUri moduleUri,
             Canonical moduleCanonical,
             CodeableConcept moduleCodeableConcept,
@@ -9270,9 +9623,9 @@ class _$CommunicationRequest implements CommunicationRequest {
             Reference encounter,
             FhirDateTime occurrenceDateTime,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> evaluationMessage,
             Reference outputParameters,
             Reference result,
@@ -9288,7 +9641,7 @@ class _$CommunicationRequest implements CommunicationRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -9309,11 +9662,11 @@ class _$CommunicationRequest implements CommunicationRequest {
             Reference requester,
             CodeableConcept performerType,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory),
     @required
         Result deviceRequestParameter(
@@ -9336,16 +9689,16 @@ class _$CommunicationRequest implements CommunicationRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             Identifier groupIdentifier,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             List<dynamic> about,
             Reference encounter,
@@ -9356,9 +9709,9 @@ class _$CommunicationRequest implements CommunicationRequest {
             Reference requester,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationRequestPayload(
             String id,
@@ -9378,7 +9731,7 @@ class _$CommunicationRequest implements CommunicationRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -9386,9 +9739,9 @@ class _$CommunicationRequest implements CommunicationRequest {
             List<dynamic> inResponseTo,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             CodeableConcept topic,
             List<dynamic> about,
@@ -9397,10 +9750,10 @@ class _$CommunicationRequest implements CommunicationRequest {
             FhirDateTime received,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> payload,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationPayload(
             String id,
@@ -9470,7 +9823,7 @@ class _$CommunicationRequest implements CommunicationRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DeviceUseStatementStatus status,
         Reference subject,
@@ -9481,10 +9834,10 @@ class _$CommunicationRequest implements CommunicationRequest {
         FhirDateTime recordedOn,
         Reference source,
         Reference device,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         CodeableConcept bodySite,
-        List<dynamic> note),
+        List<Annotation> note),
     Result supplyDelivery(
         String resourceType,
         Id id,
@@ -9495,7 +9848,7 @@ class _$CommunicationRequest implements CommunicationRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         SupplyDeliveryStatus status,
@@ -9525,7 +9878,7 @@ class _$CommunicationRequest implements CommunicationRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SupplyRequestStatus status,
         CodeableConcept category,
         Code priority,
@@ -9539,7 +9892,7 @@ class _$CommunicationRequest implements CommunicationRequest {
         FhirDateTime authoredOn,
         Reference requester,
         List<dynamic> supplier,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         Reference deliverFrom,
         Reference deliverTo),
@@ -9563,7 +9916,7 @@ class _$CommunicationRequest implements CommunicationRequest {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier requestIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FhirUri moduleUri,
         Canonical moduleCanonical,
         CodeableConcept moduleCodeableConcept,
@@ -9572,9 +9925,9 @@ class _$CommunicationRequest implements CommunicationRequest {
         Reference encounter,
         FhirDateTime occurrenceDateTime,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> evaluationMessage,
         Reference outputParameters,
         Reference result,
@@ -9589,7 +9942,7 @@ class _$CommunicationRequest implements CommunicationRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -9610,11 +9963,11 @@ class _$CommunicationRequest implements CommunicationRequest {
         Reference requester,
         CodeableConcept performerType,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory),
     Result deviceRequestParameter(
         String id,
@@ -9635,16 +9988,16 @@ class _$CommunicationRequest implements CommunicationRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         Identifier groupIdentifier,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         List<dynamic> about,
         Reference encounter,
@@ -9655,9 +10008,9 @@ class _$CommunicationRequest implements CommunicationRequest {
         Reference requester,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationRequestPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -9675,7 +10028,7 @@ class _$CommunicationRequest implements CommunicationRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -9683,9 +10036,9 @@ class _$CommunicationRequest implements CommunicationRequest {
         List<dynamic> inResponseTo,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         CodeableConcept topic,
         List<dynamic> about,
@@ -9694,10 +10047,10 @@ class _$CommunicationRequest implements CommunicationRequest {
         FhirDateTime received,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> payload,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -9821,16 +10174,16 @@ abstract class CommunicationRequest implements RequestAndResponse {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<dynamic> basedOn,
       List<dynamic> replaces,
       Identifier groupIdentifier,
       Code status,
       CodeableConcept statusReason,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Code priority,
       bool doNotPerform,
-      List<dynamic> medium,
+      List<CodeableConcept> medium,
       Reference subject,
       List<dynamic> about,
       Reference encounter,
@@ -9841,9 +10194,9 @@ abstract class CommunicationRequest implements RequestAndResponse {
       Reference requester,
       List<dynamic> recipient,
       Reference sender,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
-      List<dynamic> note}) = _$CommunicationRequest;
+      List<Annotation> note}) = _$CommunicationRequest;
 
   factory CommunicationRequest.fromJson(Map<String, dynamic> json) =
       _$CommunicationRequest.fromJson;
@@ -9860,16 +10213,16 @@ abstract class CommunicationRequest implements RequestAndResponse {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   List<dynamic> get basedOn;
   List<dynamic> get replaces;
   Identifier get groupIdentifier;
   Code get status;
   CodeableConcept get statusReason;
-  List<dynamic> get category;
+  List<CodeableConcept> get category;
   Code get priority;
   bool get doNotPerform;
-  List<dynamic> get medium;
+  List<CodeableConcept> get medium;
   Reference get subject;
   List<dynamic> get about;
   Reference get encounter;
@@ -9880,9 +10233,9 @@ abstract class CommunicationRequest implements RequestAndResponse {
   Reference get requester;
   List<dynamic> get recipient;
   Reference get sender;
-  List<dynamic> get reasonCode;
+  List<CodeableConcept> get reasonCode;
   List<dynamic> get reasonReference;
-  List<dynamic> get note;
+  List<Annotation> get note;
   @override
   $CommunicationRequestCopyWith<CommunicationRequest> get copyWith;
 }
@@ -9901,6 +10254,8 @@ abstract class $CommunicationRequestPayloadCopyWith<$Res>
       String contentString,
       Attachment contentAttachment,
       Reference contentReference});
+
+  $AttachmentCopyWith<$Res> get contentAttachment;
 }
 
 class _$CommunicationRequestPayloadCopyWithImpl<$Res>
@@ -9941,6 +10296,16 @@ class _$CommunicationRequestPayloadCopyWithImpl<$Res>
           ? _value.contentReference
           : contentReference as Reference,
     ));
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get contentAttachment {
+    if (_value.contentAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.contentAttachment, (value) {
+      return _then(_value.copyWith(contentAttachment: value));
+    });
   }
 }
 
@@ -10028,7 +10393,7 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DeviceUseStatementStatus status,
             Reference subject,
@@ -10039,10 +10404,10 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
             FhirDateTime recordedOn,
             Reference source,
             Reference device,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             CodeableConcept bodySite,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result supplyDelivery(
             String resourceType,
@@ -10054,7 +10419,7 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             SupplyDeliveryStatus status,
@@ -10086,7 +10451,7 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SupplyRequestStatus status,
             CodeableConcept category,
             Code priority,
@@ -10100,7 +10465,7 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
             FhirDateTime authoredOn,
             Reference requester,
             List<dynamic> supplier,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             Reference deliverFrom,
             Reference deliverTo),
@@ -10126,7 +10491,7 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier requestIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FhirUri moduleUri,
             Canonical moduleCanonical,
             CodeableConcept moduleCodeableConcept,
@@ -10135,9 +10500,9 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
             Reference encounter,
             FhirDateTime occurrenceDateTime,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> evaluationMessage,
             Reference outputParameters,
             Reference result,
@@ -10153,7 +10518,7 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -10174,11 +10539,11 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
             Reference requester,
             CodeableConcept performerType,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory),
     @required
         Result deviceRequestParameter(
@@ -10201,16 +10566,16 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             Identifier groupIdentifier,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             List<dynamic> about,
             Reference encounter,
@@ -10221,9 +10586,9 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
             Reference requester,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationRequestPayload(
             String id,
@@ -10243,7 +10608,7 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -10251,9 +10616,9 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
             List<dynamic> inResponseTo,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             CodeableConcept topic,
             List<dynamic> about,
@@ -10262,10 +10627,10 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
             FhirDateTime received,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> payload,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationPayload(
             String id,
@@ -10304,7 +10669,7 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DeviceUseStatementStatus status,
         Reference subject,
@@ -10315,10 +10680,10 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
         FhirDateTime recordedOn,
         Reference source,
         Reference device,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         CodeableConcept bodySite,
-        List<dynamic> note),
+        List<Annotation> note),
     Result supplyDelivery(
         String resourceType,
         Id id,
@@ -10329,7 +10694,7 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         SupplyDeliveryStatus status,
@@ -10359,7 +10724,7 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SupplyRequestStatus status,
         CodeableConcept category,
         Code priority,
@@ -10373,7 +10738,7 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
         FhirDateTime authoredOn,
         Reference requester,
         List<dynamic> supplier,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         Reference deliverFrom,
         Reference deliverTo),
@@ -10397,7 +10762,7 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier requestIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FhirUri moduleUri,
         Canonical moduleCanonical,
         CodeableConcept moduleCodeableConcept,
@@ -10406,9 +10771,9 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
         Reference encounter,
         FhirDateTime occurrenceDateTime,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> evaluationMessage,
         Reference outputParameters,
         Reference result,
@@ -10423,7 +10788,7 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -10444,11 +10809,11 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
         Reference requester,
         CodeableConcept performerType,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory),
     Result deviceRequestParameter(
         String id,
@@ -10469,16 +10834,16 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         Identifier groupIdentifier,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         List<dynamic> about,
         Reference encounter,
@@ -10489,9 +10854,9 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
         Reference requester,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationRequestPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -10509,7 +10874,7 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -10517,9 +10882,9 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
         List<dynamic> inResponseTo,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         CodeableConcept topic,
         List<dynamic> about,
@@ -10528,10 +10893,10 @@ class _$CommunicationRequestPayload implements CommunicationRequestPayload {
         FhirDateTime received,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> payload,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -10655,7 +11020,7 @@ abstract class $CommunicationCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<dynamic> basedOn,
@@ -10663,9 +11028,9 @@ abstract class $CommunicationCopyWith<$Res>
       List<dynamic> inResponseTo,
       Code status,
       CodeableConcept statusReason,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Code priority,
-      List<dynamic> medium,
+      List<CodeableConcept> medium,
       Reference subject,
       CodeableConcept topic,
       List<dynamic> about,
@@ -10674,10 +11039,13 @@ abstract class $CommunicationCopyWith<$Res>
       FhirDateTime received,
       List<dynamic> recipient,
       Reference sender,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> payload,
-      List<dynamic> note});
+      List<Annotation> note});
+
+  $CodeableConceptCopyWith<$Res> get statusReason;
+  $CodeableConceptCopyWith<$Res> get topic;
 }
 
 class _$CommunicationCopyWithImpl<$Res>
@@ -10746,7 +11114,7 @@ class _$CommunicationCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       instantiatesCanonical: instantiatesCanonical == freezed
           ? _value.instantiatesCanonical
           : instantiatesCanonical as List<Canonical>,
@@ -10762,10 +11130,12 @@ class _$CommunicationCopyWithImpl<$Res>
       statusReason: statusReason == freezed
           ? _value.statusReason
           : statusReason as CodeableConcept,
-      category:
-          category == freezed ? _value.category : category as List<dynamic>,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
       priority: priority == freezed ? _value.priority : priority as Code,
-      medium: medium == freezed ? _value.medium : medium as List<dynamic>,
+      medium:
+          medium == freezed ? _value.medium : medium as List<CodeableConcept>,
       subject: subject == freezed ? _value.subject : subject as Reference,
       topic: topic == freezed ? _value.topic : topic as CodeableConcept,
       about: about == freezed ? _value.about : about as List<dynamic>,
@@ -10779,13 +11149,33 @@ class _$CommunicationCopyWithImpl<$Res>
       sender: sender == freezed ? _value.sender : sender as Reference,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<dynamic>,
+          : reasonCode as List<CodeableConcept>,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
           : reasonReference as List<dynamic>,
       payload: payload == freezed ? _value.payload : payload as List<dynamic>,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get statusReason {
+    if (_value.statusReason == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.statusReason, (value) {
+      return _then(_value.copyWith(statusReason: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get topic {
+    if (_value.topic == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.topic, (value) {
+      return _then(_value.copyWith(topic: value));
+    });
   }
 }
 
@@ -10848,7 +11238,7 @@ class _$Communication implements Communication {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final List<Canonical> instantiatesCanonical;
   @override
@@ -10864,11 +11254,11 @@ class _$Communication implements Communication {
   @override
   final CodeableConcept statusReason;
   @override
-  final List<dynamic> category;
+  final List<CodeableConcept> category;
   @override
   final Code priority;
   @override
-  final List<dynamic> medium;
+  final List<CodeableConcept> medium;
   @override
   final Reference subject;
   @override
@@ -10886,13 +11276,13 @@ class _$Communication implements Communication {
   @override
   final Reference sender;
   @override
-  final List<dynamic> reasonCode;
+  final List<CodeableConcept> reasonCode;
   @override
   final List<dynamic> reasonReference;
   @override
   final List<dynamic> payload;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
 
   @override
   String toString() {
@@ -11034,7 +11424,7 @@ class _$Communication implements Communication {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DeviceUseStatementStatus status,
             Reference subject,
@@ -11045,10 +11435,10 @@ class _$Communication implements Communication {
             FhirDateTime recordedOn,
             Reference source,
             Reference device,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             CodeableConcept bodySite,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result supplyDelivery(
             String resourceType,
@@ -11060,7 +11450,7 @@ class _$Communication implements Communication {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             SupplyDeliveryStatus status,
@@ -11092,7 +11482,7 @@ class _$Communication implements Communication {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SupplyRequestStatus status,
             CodeableConcept category,
             Code priority,
@@ -11106,7 +11496,7 @@ class _$Communication implements Communication {
             FhirDateTime authoredOn,
             Reference requester,
             List<dynamic> supplier,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             Reference deliverFrom,
             Reference deliverTo),
@@ -11132,7 +11522,7 @@ class _$Communication implements Communication {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier requestIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FhirUri moduleUri,
             Canonical moduleCanonical,
             CodeableConcept moduleCodeableConcept,
@@ -11141,9 +11531,9 @@ class _$Communication implements Communication {
             Reference encounter,
             FhirDateTime occurrenceDateTime,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> evaluationMessage,
             Reference outputParameters,
             Reference result,
@@ -11159,7 +11549,7 @@ class _$Communication implements Communication {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -11180,11 +11570,11 @@ class _$Communication implements Communication {
             Reference requester,
             CodeableConcept performerType,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory),
     @required
         Result deviceRequestParameter(
@@ -11207,16 +11597,16 @@ class _$Communication implements Communication {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             Identifier groupIdentifier,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             List<dynamic> about,
             Reference encounter,
@@ -11227,9 +11617,9 @@ class _$Communication implements Communication {
             Reference requester,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationRequestPayload(
             String id,
@@ -11249,7 +11639,7 @@ class _$Communication implements Communication {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -11257,9 +11647,9 @@ class _$Communication implements Communication {
             List<dynamic> inResponseTo,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             CodeableConcept topic,
             List<dynamic> about,
@@ -11268,10 +11658,10 @@ class _$Communication implements Communication {
             FhirDateTime received,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> payload,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationPayload(
             String id,
@@ -11341,7 +11731,7 @@ class _$Communication implements Communication {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DeviceUseStatementStatus status,
         Reference subject,
@@ -11352,10 +11742,10 @@ class _$Communication implements Communication {
         FhirDateTime recordedOn,
         Reference source,
         Reference device,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         CodeableConcept bodySite,
-        List<dynamic> note),
+        List<Annotation> note),
     Result supplyDelivery(
         String resourceType,
         Id id,
@@ -11366,7 +11756,7 @@ class _$Communication implements Communication {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         SupplyDeliveryStatus status,
@@ -11396,7 +11786,7 @@ class _$Communication implements Communication {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SupplyRequestStatus status,
         CodeableConcept category,
         Code priority,
@@ -11410,7 +11800,7 @@ class _$Communication implements Communication {
         FhirDateTime authoredOn,
         Reference requester,
         List<dynamic> supplier,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         Reference deliverFrom,
         Reference deliverTo),
@@ -11434,7 +11824,7 @@ class _$Communication implements Communication {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier requestIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FhirUri moduleUri,
         Canonical moduleCanonical,
         CodeableConcept moduleCodeableConcept,
@@ -11443,9 +11833,9 @@ class _$Communication implements Communication {
         Reference encounter,
         FhirDateTime occurrenceDateTime,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> evaluationMessage,
         Reference outputParameters,
         Reference result,
@@ -11460,7 +11850,7 @@ class _$Communication implements Communication {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -11481,11 +11871,11 @@ class _$Communication implements Communication {
         Reference requester,
         CodeableConcept performerType,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory),
     Result deviceRequestParameter(
         String id,
@@ -11506,16 +11896,16 @@ class _$Communication implements Communication {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         Identifier groupIdentifier,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         List<dynamic> about,
         Reference encounter,
@@ -11526,9 +11916,9 @@ class _$Communication implements Communication {
         Reference requester,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationRequestPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -11546,7 +11936,7 @@ class _$Communication implements Communication {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -11554,9 +11944,9 @@ class _$Communication implements Communication {
         List<dynamic> inResponseTo,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         CodeableConcept topic,
         List<dynamic> about,
@@ -11565,10 +11955,10 @@ class _$Communication implements Communication {
         FhirDateTime received,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> payload,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -11691,7 +12081,7 @@ abstract class Communication implements RequestAndResponse {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<dynamic> basedOn,
@@ -11699,9 +12089,9 @@ abstract class Communication implements RequestAndResponse {
       List<dynamic> inResponseTo,
       Code status,
       CodeableConcept statusReason,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Code priority,
-      List<dynamic> medium,
+      List<CodeableConcept> medium,
       Reference subject,
       CodeableConcept topic,
       List<dynamic> about,
@@ -11710,10 +12100,10 @@ abstract class Communication implements RequestAndResponse {
       FhirDateTime received,
       List<dynamic> recipient,
       Reference sender,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> payload,
-      List<dynamic> note}) = _$Communication;
+      List<Annotation> note}) = _$Communication;
 
   factory Communication.fromJson(Map<String, dynamic> json) =
       _$Communication.fromJson;
@@ -11730,7 +12120,7 @@ abstract class Communication implements RequestAndResponse {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   List<Canonical> get instantiatesCanonical;
   List<FhirUri> get instantiatesUri;
   List<dynamic> get basedOn;
@@ -11738,9 +12128,9 @@ abstract class Communication implements RequestAndResponse {
   List<dynamic> get inResponseTo;
   Code get status;
   CodeableConcept get statusReason;
-  List<dynamic> get category;
+  List<CodeableConcept> get category;
   Code get priority;
-  List<dynamic> get medium;
+  List<CodeableConcept> get medium;
   Reference get subject;
   CodeableConcept get topic;
   List<dynamic> get about;
@@ -11749,10 +12139,10 @@ abstract class Communication implements RequestAndResponse {
   FhirDateTime get received;
   List<dynamic> get recipient;
   Reference get sender;
-  List<dynamic> get reasonCode;
+  List<CodeableConcept> get reasonCode;
   List<dynamic> get reasonReference;
   List<dynamic> get payload;
-  List<dynamic> get note;
+  List<Annotation> get note;
   @override
   $CommunicationCopyWith<Communication> get copyWith;
 }
@@ -11770,6 +12160,8 @@ abstract class $CommunicationPayloadCopyWith<$Res>
       String contentString,
       Attachment contentAttachment,
       Reference contentReference});
+
+  $AttachmentCopyWith<$Res> get contentAttachment;
 }
 
 class _$CommunicationPayloadCopyWithImpl<$Res>
@@ -11809,6 +12201,16 @@ class _$CommunicationPayloadCopyWithImpl<$Res>
           ? _value.contentReference
           : contentReference as Reference,
     ));
+  }
+
+  @override
+  $AttachmentCopyWith<$Res> get contentAttachment {
+    if (_value.contentAttachment == null) {
+      return null;
+    }
+    return $AttachmentCopyWith<$Res>(_value.contentAttachment, (value) {
+      return _then(_value.copyWith(contentAttachment: value));
+    });
   }
 }
 
@@ -11896,7 +12298,7 @@ class _$CommunicationPayload implements CommunicationPayload {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             DeviceUseStatementStatus status,
             Reference subject,
@@ -11907,10 +12309,10 @@ class _$CommunicationPayload implements CommunicationPayload {
             FhirDateTime recordedOn,
             Reference source,
             Reference device,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             CodeableConcept bodySite,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result supplyDelivery(
             String resourceType,
@@ -11922,7 +12324,7 @@ class _$CommunicationPayload implements CommunicationPayload {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> partOf,
             SupplyDeliveryStatus status,
@@ -11954,7 +12356,7 @@ class _$CommunicationPayload implements CommunicationPayload {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             SupplyRequestStatus status,
             CodeableConcept category,
             Code priority,
@@ -11968,7 +12370,7 @@ class _$CommunicationPayload implements CommunicationPayload {
             FhirDateTime authoredOn,
             Reference requester,
             List<dynamic> supplier,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             Reference deliverFrom,
             Reference deliverTo),
@@ -11994,7 +12396,7 @@ class _$CommunicationPayload implements CommunicationPayload {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             Identifier requestIdentifier,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             FhirUri moduleUri,
             Canonical moduleCanonical,
             CodeableConcept moduleCodeableConcept,
@@ -12003,9 +12405,9 @@ class _$CommunicationPayload implements CommunicationPayload {
             Reference encounter,
             FhirDateTime occurrenceDateTime,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> evaluationMessage,
             Reference outputParameters,
             Reference result,
@@ -12021,7 +12423,7 @@ class _$CommunicationPayload implements CommunicationPayload {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -12042,11 +12444,11 @@ class _$CommunicationPayload implements CommunicationPayload {
             Reference requester,
             CodeableConcept performerType,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> relevantHistory),
     @required
         Result deviceRequestParameter(
@@ -12069,16 +12471,16 @@ class _$CommunicationPayload implements CommunicationPayload {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             Identifier groupIdentifier,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             List<dynamic> about,
             Reference encounter,
@@ -12089,9 +12491,9 @@ class _$CommunicationPayload implements CommunicationPayload {
             Reference requester,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationRequestPayload(
             String id,
@@ -12111,7 +12513,7 @@ class _$CommunicationPayload implements CommunicationPayload {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -12119,9 +12521,9 @@ class _$CommunicationPayload implements CommunicationPayload {
             List<dynamic> inResponseTo,
             Code status,
             CodeableConcept statusReason,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
-            List<dynamic> medium,
+            List<CodeableConcept> medium,
             Reference subject,
             CodeableConcept topic,
             List<dynamic> about,
@@ -12130,10 +12532,10 @@ class _$CommunicationPayload implements CommunicationPayload {
             FhirDateTime received,
             List<dynamic> recipient,
             Reference sender,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> payload,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result communicationPayload(
             String id,
@@ -12172,7 +12574,7 @@ class _$CommunicationPayload implements CommunicationPayload {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         DeviceUseStatementStatus status,
         Reference subject,
@@ -12183,10 +12585,10 @@ class _$CommunicationPayload implements CommunicationPayload {
         FhirDateTime recordedOn,
         Reference source,
         Reference device,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         CodeableConcept bodySite,
-        List<dynamic> note),
+        List<Annotation> note),
     Result supplyDelivery(
         String resourceType,
         Id id,
@@ -12197,7 +12599,7 @@ class _$CommunicationPayload implements CommunicationPayload {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> partOf,
         SupplyDeliveryStatus status,
@@ -12227,7 +12629,7 @@ class _$CommunicationPayload implements CommunicationPayload {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         SupplyRequestStatus status,
         CodeableConcept category,
         Code priority,
@@ -12241,7 +12643,7 @@ class _$CommunicationPayload implements CommunicationPayload {
         FhirDateTime authoredOn,
         Reference requester,
         List<dynamic> supplier,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         Reference deliverFrom,
         Reference deliverTo),
@@ -12265,7 +12667,7 @@ class _$CommunicationPayload implements CommunicationPayload {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         Identifier requestIdentifier,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         FhirUri moduleUri,
         Canonical moduleCanonical,
         CodeableConcept moduleCodeableConcept,
@@ -12274,9 +12676,9 @@ class _$CommunicationPayload implements CommunicationPayload {
         Reference encounter,
         FhirDateTime occurrenceDateTime,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> evaluationMessage,
         Reference outputParameters,
         Reference result,
@@ -12291,7 +12693,7 @@ class _$CommunicationPayload implements CommunicationPayload {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -12312,11 +12714,11 @@ class _$CommunicationPayload implements CommunicationPayload {
         Reference requester,
         CodeableConcept performerType,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> relevantHistory),
     Result deviceRequestParameter(
         String id,
@@ -12337,16 +12739,16 @@ class _$CommunicationPayload implements CommunicationPayload {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         Identifier groupIdentifier,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         List<dynamic> about,
         Reference encounter,
@@ -12357,9 +12759,9 @@ class _$CommunicationPayload implements CommunicationPayload {
         Reference requester,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationRequestPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -12377,7 +12779,7 @@ class _$CommunicationPayload implements CommunicationPayload {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -12385,9 +12787,9 @@ class _$CommunicationPayload implements CommunicationPayload {
         List<dynamic> inResponseTo,
         Code status,
         CodeableConcept statusReason,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
-        List<dynamic> medium,
+        List<CodeableConcept> medium,
         Reference subject,
         CodeableConcept topic,
         List<dynamic> about,
@@ -12396,10 +12798,10 @@ class _$CommunicationPayload implements CommunicationPayload {
         FhirDateTime received,
         List<dynamic> recipient,
         Reference sender,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> payload,
-        List<dynamic> note),
+        List<Annotation> note),
     Result communicationPayload(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,

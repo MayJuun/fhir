@@ -69,7 +69,7 @@ class _$EvidenceBasedMedicineTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -78,14 +78,14 @@ class _$EvidenceBasedMedicineTearOff {
       String publisher,
       List<dynamic> contact,
       Markdown description,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -208,8 +208,8 @@ class _$EvidenceBasedMedicineTearOff {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> rating,
-      List<dynamic> note,
+      List<CodeableConcept> rating,
+      List<Annotation> note,
       List<dynamic> certaintySubcomponent}) {
     return RiskEvidenceSynthesisCertainty(
       id: id,
@@ -227,8 +227,8 @@ class _$EvidenceBasedMedicineTearOff {
           @JsonKey(name: 'extension') List<dynamic> fhirExtension,
           List<dynamic> modifierExtension,
           CodeableConcept type,
-          List<dynamic> rating,
-          List<dynamic> note}) {
+          List<CodeableConcept> rating,
+          List<Annotation> note}) {
     return RiskEvidenceSynthesisCertaintySubcomponent(
       id: id,
       fhirExtension: fhirExtension,
@@ -250,7 +250,7 @@ class _$EvidenceBasedMedicineTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -261,14 +261,14 @@ class _$EvidenceBasedMedicineTearOff {
       String publisher,
       List<dynamic> contact,
       Markdown description,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -368,7 +368,7 @@ class _$EvidenceBasedMedicineTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -379,14 +379,14 @@ class _$EvidenceBasedMedicineTearOff {
       String publisher,
       List<dynamic> contact,
       Markdown description,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -447,7 +447,7 @@ class _$EvidenceBasedMedicineTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -463,14 +463,14 @@ class _$EvidenceBasedMedicineTearOff {
       Markdown description,
       List<String> comment,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown purpose,
       String usage,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -594,7 +594,7 @@ class _$EvidenceBasedMedicineTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -610,14 +610,14 @@ class _$EvidenceBasedMedicineTearOff {
       Markdown description,
       List<String> comment,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown purpose,
       String usage,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -687,7 +687,7 @@ class _$EvidenceBasedMedicineTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -696,14 +696,14 @@ class _$EvidenceBasedMedicineTearOff {
       String publisher,
       List<dynamic> contact,
       Markdown description,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -849,8 +849,8 @@ class _$EvidenceBasedMedicineTearOff {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> rating,
-      List<dynamic> note,
+      List<CodeableConcept> rating,
+      List<Annotation> note,
       List<dynamic> certaintySubcomponent}) {
     return EffectEvidenceSynthesisCertainty(
       id: id,
@@ -868,8 +868,8 @@ class _$EvidenceBasedMedicineTearOff {
           @JsonKey(name: 'extension') List<dynamic> fhirExtension,
           List<dynamic> modifierExtension,
           CodeableConcept type,
-          List<dynamic> rating,
-          List<dynamic> note}) {
+          List<CodeableConcept> rating,
+          List<Annotation> note}) {
     return EffectEvidenceSynthesisCertaintySubcomponent(
       id: id,
       fhirExtension: fhirExtension,
@@ -903,7 +903,7 @@ mixin _$EvidenceBasedMedicine {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -912,14 +912,14 @@ mixin _$EvidenceBasedMedicine {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -967,8 +967,8 @@ mixin _$EvidenceBasedMedicine {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -976,8 +976,8 @@ mixin _$EvidenceBasedMedicine {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -990,7 +990,7 @@ mixin _$EvidenceBasedMedicine {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -1001,14 +1001,14 @@ mixin _$EvidenceBasedMedicine {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -1048,7 +1048,7 @@ mixin _$EvidenceBasedMedicine {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -1059,14 +1059,14 @@ mixin _$EvidenceBasedMedicine {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -1087,7 +1087,7 @@ mixin _$EvidenceBasedMedicine {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -1103,14 +1103,14 @@ mixin _$EvidenceBasedMedicine {
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -1160,7 +1160,7 @@ mixin _$EvidenceBasedMedicine {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -1176,14 +1176,14 @@ mixin _$EvidenceBasedMedicine {
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -1206,7 +1206,7 @@ mixin _$EvidenceBasedMedicine {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -1215,14 +1215,14 @@ mixin _$EvidenceBasedMedicine {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -1280,8 +1280,8 @@ mixin _$EvidenceBasedMedicine {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -1289,8 +1289,8 @@ mixin _$EvidenceBasedMedicine {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
@@ -1305,7 +1305,7 @@ mixin _$EvidenceBasedMedicine {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -1314,14 +1314,14 @@ mixin _$EvidenceBasedMedicine {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -1365,16 +1365,16 @@ mixin _$EvidenceBasedMedicine {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -1386,7 +1386,7 @@ mixin _$EvidenceBasedMedicine {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -1397,14 +1397,14 @@ mixin _$EvidenceBasedMedicine {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -1442,7 +1442,7 @@ mixin _$EvidenceBasedMedicine {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -1453,14 +1453,14 @@ mixin _$EvidenceBasedMedicine {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -1480,7 +1480,7 @@ mixin _$EvidenceBasedMedicine {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -1496,14 +1496,14 @@ mixin _$EvidenceBasedMedicine {
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -1551,7 +1551,7 @@ mixin _$EvidenceBasedMedicine {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -1567,14 +1567,14 @@ mixin _$EvidenceBasedMedicine {
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -1596,7 +1596,7 @@ mixin _$EvidenceBasedMedicine {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -1605,14 +1605,14 @@ mixin _$EvidenceBasedMedicine {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -1665,16 +1665,16 @@ mixin _$EvidenceBasedMedicine {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -1813,7 +1813,7 @@ abstract class $RiskEvidenceSynthesisCopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -1822,14 +1822,14 @@ abstract class $RiskEvidenceSynthesisCopyWith<$Res>
       String publisher,
       List<dynamic> contact,
       Markdown description,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -1843,6 +1843,10 @@ abstract class $RiskEvidenceSynthesisCopyWith<$Res>
       RiskEvidenceSynthesisSampleSize sampleSize,
       RiskEvidenceSynthesisRiskEstimate riskEstimate,
       List<dynamic> certainty});
+
+  $PeriodCopyWith<$Res> get effectivePeriod;
+  $CodeableConceptCopyWith<$Res> get synthesisType;
+  $CodeableConceptCopyWith<$Res> get studyType;
 }
 
 class _$RiskEvidenceSynthesisCopyWithImpl<$Res>
@@ -1920,7 +1924,7 @@ class _$RiskEvidenceSynthesisCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as FhirUri,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
@@ -1932,13 +1936,13 @@ class _$RiskEvidenceSynthesisCopyWithImpl<$Res>
       contact: contact == freezed ? _value.contact : contact as List<dynamic>,
       description:
           description == freezed ? _value.description : description as Markdown,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
       useContext: useContext == freezed
           ? _value.useContext
           : useContext as List<dynamic>,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<dynamic>,
+          : jurisdiction as List<CodeableConcept>,
       copyright:
           copyright == freezed ? _value.copyright : copyright as Markdown,
       approvalDate:
@@ -1949,7 +1953,7 @@ class _$RiskEvidenceSynthesisCopyWithImpl<$Res>
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
-      topic: topic == freezed ? _value.topic : topic as List<dynamic>,
+      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept>,
       author: author == freezed ? _value.author : author as List<dynamic>,
       editor: editor == freezed ? _value.editor : editor as List<dynamic>,
       reviewer:
@@ -1978,6 +1982,36 @@ class _$RiskEvidenceSynthesisCopyWithImpl<$Res>
       certainty:
           certainty == freezed ? _value.certainty : certainty as List<dynamic>,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get effectivePeriod {
+    if (_value.effectivePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
+      return _then(_value.copyWith(effectivePeriod: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get synthesisType {
+    if (_value.synthesisType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.synthesisType, (value) {
+      return _then(_value.copyWith(synthesisType: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get studyType {
+    if (_value.studyType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.studyType, (value) {
+      return _then(_value.copyWith(studyType: value));
+    });
   }
 }
 
@@ -2050,7 +2084,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
   @override
   final FhirUri url;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final String version;
   @override
@@ -2068,11 +2102,11 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
   @override
   final Markdown description;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
   @override
   final List<dynamic> useContext;
   @override
-  final List<dynamic> jurisdiction;
+  final List<CodeableConcept> jurisdiction;
   @override
   final Markdown copyright;
   @override
@@ -2082,7 +2116,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
   @override
   final Period effectivePeriod;
   @override
-  final List<dynamic> topic;
+  final List<CodeableConcept> topic;
   @override
   final List<dynamic> author;
   @override
@@ -2268,7 +2302,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -2277,14 +2311,14 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -2332,8 +2366,8 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -2341,8 +2375,8 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -2355,7 +2389,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -2366,14 +2400,14 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -2413,7 +2447,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -2424,14 +2458,14 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -2452,7 +2486,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -2468,14 +2502,14 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -2525,7 +2559,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -2541,14 +2575,14 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -2571,7 +2605,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -2580,14 +2614,14 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -2645,8 +2679,8 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -2654,8 +2688,8 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   }) {
     assert(riskEvidenceSynthesis != null);
     assert(riskEvidenceSynthesisSampleSize != null);
@@ -2733,7 +2767,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -2742,14 +2776,14 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -2793,16 +2827,16 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -2814,7 +2848,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -2825,14 +2859,14 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -2870,7 +2904,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -2881,14 +2915,14 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -2908,7 +2942,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -2924,14 +2958,14 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -2979,7 +3013,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -2995,14 +3029,14 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -3024,7 +3058,7 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -3033,14 +3067,14 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -3093,16 +3127,16 @@ class _$RiskEvidenceSynthesis implements RiskEvidenceSynthesis {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3284,7 +3318,7 @@ abstract class RiskEvidenceSynthesis implements EvidenceBasedMedicine {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -3293,14 +3327,14 @@ abstract class RiskEvidenceSynthesis implements EvidenceBasedMedicine {
       String publisher,
       List<dynamic> contact,
       Markdown description,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -3331,7 +3365,7 @@ abstract class RiskEvidenceSynthesis implements EvidenceBasedMedicine {
   @override
   List<dynamic> get modifierExtension;
   FhirUri get url;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   String get version;
   String get name;
   String get title;
@@ -3340,14 +3374,14 @@ abstract class RiskEvidenceSynthesis implements EvidenceBasedMedicine {
   String get publisher;
   List<dynamic> get contact;
   Markdown get description;
-  List<dynamic> get note;
+  List<Annotation> get note;
   List<dynamic> get useContext;
-  List<dynamic> get jurisdiction;
+  List<CodeableConcept> get jurisdiction;
   Markdown get copyright;
   Date get approvalDate;
   Date get lastReviewDate;
   Period get effectivePeriod;
-  List<dynamic> get topic;
+  List<CodeableConcept> get topic;
   List<dynamic> get author;
   List<dynamic> get editor;
   List<dynamic> get reviewer;
@@ -3509,7 +3543,7 @@ class _$RiskEvidenceSynthesisSampleSize
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -3518,14 +3552,14 @@ class _$RiskEvidenceSynthesisSampleSize
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -3573,8 +3607,8 @@ class _$RiskEvidenceSynthesisSampleSize
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -3582,8 +3616,8 @@ class _$RiskEvidenceSynthesisSampleSize
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -3596,7 +3630,7 @@ class _$RiskEvidenceSynthesisSampleSize
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -3607,14 +3641,14 @@ class _$RiskEvidenceSynthesisSampleSize
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -3654,7 +3688,7 @@ class _$RiskEvidenceSynthesisSampleSize
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -3665,14 +3699,14 @@ class _$RiskEvidenceSynthesisSampleSize
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -3693,7 +3727,7 @@ class _$RiskEvidenceSynthesisSampleSize
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -3709,14 +3743,14 @@ class _$RiskEvidenceSynthesisSampleSize
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -3766,7 +3800,7 @@ class _$RiskEvidenceSynthesisSampleSize
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -3782,14 +3816,14 @@ class _$RiskEvidenceSynthesisSampleSize
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -3812,7 +3846,7 @@ class _$RiskEvidenceSynthesisSampleSize
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -3821,14 +3855,14 @@ class _$RiskEvidenceSynthesisSampleSize
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -3886,8 +3920,8 @@ class _$RiskEvidenceSynthesisSampleSize
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -3895,8 +3929,8 @@ class _$RiskEvidenceSynthesisSampleSize
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   }) {
     assert(riskEvidenceSynthesis != null);
     assert(riskEvidenceSynthesisSampleSize != null);
@@ -3935,7 +3969,7 @@ class _$RiskEvidenceSynthesisSampleSize
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -3944,14 +3978,14 @@ class _$RiskEvidenceSynthesisSampleSize
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -3995,16 +4029,16 @@ class _$RiskEvidenceSynthesisSampleSize
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -4016,7 +4050,7 @@ class _$RiskEvidenceSynthesisSampleSize
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -4027,14 +4061,14 @@ class _$RiskEvidenceSynthesisSampleSize
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -4072,7 +4106,7 @@ class _$RiskEvidenceSynthesisSampleSize
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -4083,14 +4117,14 @@ class _$RiskEvidenceSynthesisSampleSize
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -4110,7 +4144,7 @@ class _$RiskEvidenceSynthesisSampleSize
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -4126,14 +4160,14 @@ class _$RiskEvidenceSynthesisSampleSize
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -4181,7 +4215,7 @@ class _$RiskEvidenceSynthesisSampleSize
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -4197,14 +4231,14 @@ class _$RiskEvidenceSynthesisSampleSize
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -4226,7 +4260,7 @@ class _$RiskEvidenceSynthesisSampleSize
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -4235,14 +4269,14 @@ class _$RiskEvidenceSynthesisSampleSize
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -4295,16 +4329,16 @@ class _$RiskEvidenceSynthesisSampleSize
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -4485,6 +4519,9 @@ abstract class $RiskEvidenceSynthesisRiskEstimateCopyWith<$Res>
       int denominatorCount,
       int numeratorCount,
       List<dynamic> precisionEstimate});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $CodeableConceptCopyWith<$Res> get unitOfMeasure;
 }
 
 class _$RiskEvidenceSynthesisRiskEstimateCopyWithImpl<$Res>
@@ -4537,6 +4574,26 @@ class _$RiskEvidenceSynthesisRiskEstimateCopyWithImpl<$Res>
           ? _value.precisionEstimate
           : precisionEstimate as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get unitOfMeasure {
+    if (_value.unitOfMeasure == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.unitOfMeasure, (value) {
+      return _then(_value.copyWith(unitOfMeasure: value));
+    });
   }
 }
 
@@ -4653,7 +4710,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -4662,14 +4719,14 @@ class _$RiskEvidenceSynthesisRiskEstimate
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -4717,8 +4774,8 @@ class _$RiskEvidenceSynthesisRiskEstimate
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -4726,8 +4783,8 @@ class _$RiskEvidenceSynthesisRiskEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -4740,7 +4797,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -4751,14 +4808,14 @@ class _$RiskEvidenceSynthesisRiskEstimate
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -4798,7 +4855,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -4809,14 +4866,14 @@ class _$RiskEvidenceSynthesisRiskEstimate
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -4837,7 +4894,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -4853,14 +4910,14 @@ class _$RiskEvidenceSynthesisRiskEstimate
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -4910,7 +4967,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -4926,14 +4983,14 @@ class _$RiskEvidenceSynthesisRiskEstimate
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -4956,7 +5013,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -4965,14 +5022,14 @@ class _$RiskEvidenceSynthesisRiskEstimate
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -5030,8 +5087,8 @@ class _$RiskEvidenceSynthesisRiskEstimate
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -5039,8 +5096,8 @@ class _$RiskEvidenceSynthesisRiskEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   }) {
     assert(riskEvidenceSynthesis != null);
     assert(riskEvidenceSynthesisSampleSize != null);
@@ -5088,7 +5145,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -5097,14 +5154,14 @@ class _$RiskEvidenceSynthesisRiskEstimate
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -5148,16 +5205,16 @@ class _$RiskEvidenceSynthesisRiskEstimate
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -5169,7 +5226,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -5180,14 +5237,14 @@ class _$RiskEvidenceSynthesisRiskEstimate
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -5225,7 +5282,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -5236,14 +5293,14 @@ class _$RiskEvidenceSynthesisRiskEstimate
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -5263,7 +5320,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -5279,14 +5336,14 @@ class _$RiskEvidenceSynthesisRiskEstimate
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -5334,7 +5391,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -5350,14 +5407,14 @@ class _$RiskEvidenceSynthesisRiskEstimate
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -5379,7 +5436,7 @@ class _$RiskEvidenceSynthesisRiskEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -5388,14 +5445,14 @@ class _$RiskEvidenceSynthesisRiskEstimate
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -5448,16 +5505,16 @@ class _$RiskEvidenceSynthesisRiskEstimate
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -5647,6 +5704,8 @@ abstract class $RiskEvidenceSynthesisPrecisionEstimateCopyWith<$Res>
       double level,
       double from,
       double to});
+
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 class _$RiskEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
@@ -5685,6 +5744,16 @@ class _$RiskEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
       from: from == freezed ? _value.from : from as double,
       to: to == freezed ? _value.to : to as double,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
   }
 }
 
@@ -5779,7 +5848,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -5788,14 +5857,14 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -5843,8 +5912,8 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -5852,8 +5921,8 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -5866,7 +5935,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -5877,14 +5946,14 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -5924,7 +5993,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -5935,14 +6004,14 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -5963,7 +6032,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -5979,14 +6048,14 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -6036,7 +6105,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -6052,14 +6121,14 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -6082,7 +6151,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -6091,14 +6160,14 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -6156,8 +6225,8 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -6165,8 +6234,8 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   }) {
     assert(riskEvidenceSynthesis != null);
     assert(riskEvidenceSynthesisSampleSize != null);
@@ -6205,7 +6274,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -6214,14 +6283,14 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -6265,16 +6334,16 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -6286,7 +6355,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -6297,14 +6366,14 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -6342,7 +6411,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -6353,14 +6422,14 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -6380,7 +6449,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -6396,14 +6465,14 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -6451,7 +6520,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -6467,14 +6536,14 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -6496,7 +6565,7 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -6505,14 +6574,14 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -6565,16 +6634,16 @@ class _$RiskEvidenceSynthesisPrecisionEstimate
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -6746,8 +6815,8 @@ abstract class $RiskEvidenceSynthesisCertaintyCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> rating,
-      List<dynamic> note,
+      List<CodeableConcept> rating,
+      List<Annotation> note,
       List<dynamic> certaintySubcomponent});
 }
 
@@ -6780,8 +6849,9 @@ class _$RiskEvidenceSynthesisCertaintyCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
-      rating: rating == freezed ? _value.rating : rating as List<dynamic>,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      rating:
+          rating == freezed ? _value.rating : rating as List<CodeableConcept>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
       certaintySubcomponent: certaintySubcomponent == freezed
           ? _value.certaintySubcomponent
           : certaintySubcomponent as List<dynamic>,
@@ -6812,9 +6882,9 @@ class _$RiskEvidenceSynthesisCertainty
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> rating;
+  final List<CodeableConcept> rating;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
   @override
   final List<dynamic> certaintySubcomponent;
 
@@ -6874,7 +6944,7 @@ class _$RiskEvidenceSynthesisCertainty
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -6883,14 +6953,14 @@ class _$RiskEvidenceSynthesisCertainty
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -6938,8 +7008,8 @@ class _$RiskEvidenceSynthesisCertainty
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -6947,8 +7017,8 @@ class _$RiskEvidenceSynthesisCertainty
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -6961,7 +7031,7 @@ class _$RiskEvidenceSynthesisCertainty
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -6972,14 +7042,14 @@ class _$RiskEvidenceSynthesisCertainty
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -7019,7 +7089,7 @@ class _$RiskEvidenceSynthesisCertainty
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -7030,14 +7100,14 @@ class _$RiskEvidenceSynthesisCertainty
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -7058,7 +7128,7 @@ class _$RiskEvidenceSynthesisCertainty
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -7074,14 +7144,14 @@ class _$RiskEvidenceSynthesisCertainty
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -7131,7 +7201,7 @@ class _$RiskEvidenceSynthesisCertainty
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -7147,14 +7217,14 @@ class _$RiskEvidenceSynthesisCertainty
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -7177,7 +7247,7 @@ class _$RiskEvidenceSynthesisCertainty
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -7186,14 +7256,14 @@ class _$RiskEvidenceSynthesisCertainty
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -7251,8 +7321,8 @@ class _$RiskEvidenceSynthesisCertainty
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -7260,8 +7330,8 @@ class _$RiskEvidenceSynthesisCertainty
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   }) {
     assert(riskEvidenceSynthesis != null);
     assert(riskEvidenceSynthesisSampleSize != null);
@@ -7300,7 +7370,7 @@ class _$RiskEvidenceSynthesisCertainty
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -7309,14 +7379,14 @@ class _$RiskEvidenceSynthesisCertainty
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -7360,16 +7430,16 @@ class _$RiskEvidenceSynthesisCertainty
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -7381,7 +7451,7 @@ class _$RiskEvidenceSynthesisCertainty
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -7392,14 +7462,14 @@ class _$RiskEvidenceSynthesisCertainty
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -7437,7 +7507,7 @@ class _$RiskEvidenceSynthesisCertainty
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -7448,14 +7518,14 @@ class _$RiskEvidenceSynthesisCertainty
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -7475,7 +7545,7 @@ class _$RiskEvidenceSynthesisCertainty
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -7491,14 +7561,14 @@ class _$RiskEvidenceSynthesisCertainty
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -7546,7 +7616,7 @@ class _$RiskEvidenceSynthesisCertainty
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -7562,14 +7632,14 @@ class _$RiskEvidenceSynthesisCertainty
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -7591,7 +7661,7 @@ class _$RiskEvidenceSynthesisCertainty
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -7600,14 +7670,14 @@ class _$RiskEvidenceSynthesisCertainty
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -7660,16 +7730,16 @@ class _$RiskEvidenceSynthesisCertainty
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -7805,8 +7875,8 @@ abstract class RiskEvidenceSynthesisCertainty implements EvidenceBasedMedicine {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> rating,
-      List<dynamic> note,
+      List<CodeableConcept> rating,
+      List<Annotation> note,
       List<dynamic> certaintySubcomponent}) = _$RiskEvidenceSynthesisCertainty;
 
   factory RiskEvidenceSynthesisCertainty.fromJson(Map<String, dynamic> json) =
@@ -7818,8 +7888,8 @@ abstract class RiskEvidenceSynthesisCertainty implements EvidenceBasedMedicine {
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get rating;
-  List<dynamic> get note;
+  List<CodeableConcept> get rating;
+  List<Annotation> get note;
   List<dynamic> get certaintySubcomponent;
   @override
   $RiskEvidenceSynthesisCertaintyCopyWith<RiskEvidenceSynthesisCertainty>
@@ -7838,8 +7908,10 @@ abstract class $RiskEvidenceSynthesisCertaintySubcomponentCopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept type,
-      List<dynamic> rating,
-      List<dynamic> note});
+      List<CodeableConcept> rating,
+      List<Annotation> note});
+
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 class _$RiskEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
@@ -7873,9 +7945,20 @@ class _$RiskEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      rating: rating == freezed ? _value.rating : rating as List<dynamic>,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      rating:
+          rating == freezed ? _value.rating : rating as List<CodeableConcept>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
   }
 }
 
@@ -7904,9 +7987,9 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
   @override
   final CodeableConcept type;
   @override
-  final List<dynamic> rating;
+  final List<CodeableConcept> rating;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
 
   @override
   String toString() {
@@ -7964,7 +8047,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -7973,14 +8056,14 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -8028,8 +8111,8 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -8037,8 +8120,8 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -8051,7 +8134,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -8062,14 +8145,14 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -8109,7 +8192,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -8120,14 +8203,14 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -8148,7 +8231,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -8164,14 +8247,14 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -8221,7 +8304,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -8237,14 +8320,14 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -8267,7 +8350,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -8276,14 +8359,14 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -8341,8 +8424,8 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -8350,8 +8433,8 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   }) {
     assert(riskEvidenceSynthesis != null);
     assert(riskEvidenceSynthesisSampleSize != null);
@@ -8390,7 +8473,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -8399,14 +8482,14 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -8450,16 +8533,16 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -8471,7 +8554,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -8482,14 +8565,14 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -8527,7 +8610,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -8538,14 +8621,14 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -8565,7 +8648,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -8581,14 +8664,14 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -8636,7 +8719,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -8652,14 +8735,14 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -8681,7 +8764,7 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -8690,14 +8773,14 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -8750,16 +8833,16 @@ class _$RiskEvidenceSynthesisCertaintySubcomponent
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -8897,8 +8980,8 @@ abstract class RiskEvidenceSynthesisCertaintySubcomponent
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept type,
-      List<dynamic> rating,
-      List<dynamic> note}) = _$RiskEvidenceSynthesisCertaintySubcomponent;
+      List<CodeableConcept> rating,
+      List<Annotation> note}) = _$RiskEvidenceSynthesisCertaintySubcomponent;
 
   factory RiskEvidenceSynthesisCertaintySubcomponent.fromJson(
           Map<String, dynamic> json) =
@@ -8911,8 +8994,8 @@ abstract class RiskEvidenceSynthesisCertaintySubcomponent
   @override
   List<dynamic> get modifierExtension;
   CodeableConcept get type;
-  List<dynamic> get rating;
-  List<dynamic> get note;
+  List<CodeableConcept> get rating;
+  List<Annotation> get note;
   @override
   $RiskEvidenceSynthesisCertaintySubcomponentCopyWith<
       RiskEvidenceSynthesisCertaintySubcomponent> get copyWith;
@@ -8935,7 +9018,7 @@ abstract class $EvidenceVariableCopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -8946,14 +9029,14 @@ abstract class $EvidenceVariableCopyWith<$Res>
       String publisher,
       List<dynamic> contact,
       Markdown description,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -8961,6 +9044,8 @@ abstract class $EvidenceVariableCopyWith<$Res>
       List<dynamic> relatedArtifact,
       EvidenceVariableType type,
       List<dynamic> characteristic});
+
+  $PeriodCopyWith<$Res> get effectivePeriod;
 }
 
 class _$EvidenceVariableCopyWithImpl<$Res>
@@ -9034,7 +9119,7 @@ class _$EvidenceVariableCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as FhirUri,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
@@ -9048,13 +9133,13 @@ class _$EvidenceVariableCopyWithImpl<$Res>
       contact: contact == freezed ? _value.contact : contact as List<dynamic>,
       description:
           description == freezed ? _value.description : description as Markdown,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
       useContext: useContext == freezed
           ? _value.useContext
           : useContext as List<dynamic>,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<dynamic>,
+          : jurisdiction as List<CodeableConcept>,
       copyright:
           copyright == freezed ? _value.copyright : copyright as Markdown,
       approvalDate:
@@ -9065,7 +9150,7 @@ class _$EvidenceVariableCopyWithImpl<$Res>
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
-      topic: topic == freezed ? _value.topic : topic as List<dynamic>,
+      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept>,
       author: author == freezed ? _value.author : author as List<dynamic>,
       editor: editor == freezed ? _value.editor : editor as List<dynamic>,
       reviewer:
@@ -9080,6 +9165,16 @@ class _$EvidenceVariableCopyWithImpl<$Res>
           ? _value.characteristic
           : characteristic as List<dynamic>,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get effectivePeriod {
+    if (_value.effectivePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
+      return _then(_value.copyWith(effectivePeriod: value));
+    });
   }
 }
 
@@ -9148,7 +9243,7 @@ class _$EvidenceVariable implements EvidenceVariable {
   @override
   final FhirUri url;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final String version;
   @override
@@ -9170,11 +9265,11 @@ class _$EvidenceVariable implements EvidenceVariable {
   @override
   final Markdown description;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
   @override
   final List<dynamic> useContext;
   @override
-  final List<dynamic> jurisdiction;
+  final List<CodeableConcept> jurisdiction;
   @override
   final Markdown copyright;
   @override
@@ -9184,7 +9279,7 @@ class _$EvidenceVariable implements EvidenceVariable {
   @override
   final Period effectivePeriod;
   @override
-  final List<dynamic> topic;
+  final List<CodeableConcept> topic;
   @override
   final List<dynamic> author;
   @override
@@ -9349,7 +9444,7 @@ class _$EvidenceVariable implements EvidenceVariable {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -9358,14 +9453,14 @@ class _$EvidenceVariable implements EvidenceVariable {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -9413,8 +9508,8 @@ class _$EvidenceVariable implements EvidenceVariable {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -9422,8 +9517,8 @@ class _$EvidenceVariable implements EvidenceVariable {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -9436,7 +9531,7 @@ class _$EvidenceVariable implements EvidenceVariable {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -9447,14 +9542,14 @@ class _$EvidenceVariable implements EvidenceVariable {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -9494,7 +9589,7 @@ class _$EvidenceVariable implements EvidenceVariable {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -9505,14 +9600,14 @@ class _$EvidenceVariable implements EvidenceVariable {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -9533,7 +9628,7 @@ class _$EvidenceVariable implements EvidenceVariable {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -9549,14 +9644,14 @@ class _$EvidenceVariable implements EvidenceVariable {
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -9606,7 +9701,7 @@ class _$EvidenceVariable implements EvidenceVariable {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -9622,14 +9717,14 @@ class _$EvidenceVariable implements EvidenceVariable {
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -9652,7 +9747,7 @@ class _$EvidenceVariable implements EvidenceVariable {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -9661,14 +9756,14 @@ class _$EvidenceVariable implements EvidenceVariable {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -9726,8 +9821,8 @@ class _$EvidenceVariable implements EvidenceVariable {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -9735,8 +9830,8 @@ class _$EvidenceVariable implements EvidenceVariable {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   }) {
     assert(riskEvidenceSynthesis != null);
     assert(riskEvidenceSynthesisSampleSize != null);
@@ -9810,7 +9905,7 @@ class _$EvidenceVariable implements EvidenceVariable {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -9819,14 +9914,14 @@ class _$EvidenceVariable implements EvidenceVariable {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -9870,16 +9965,16 @@ class _$EvidenceVariable implements EvidenceVariable {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -9891,7 +9986,7 @@ class _$EvidenceVariable implements EvidenceVariable {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -9902,14 +9997,14 @@ class _$EvidenceVariable implements EvidenceVariable {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -9947,7 +10042,7 @@ class _$EvidenceVariable implements EvidenceVariable {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -9958,14 +10053,14 @@ class _$EvidenceVariable implements EvidenceVariable {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -9985,7 +10080,7 @@ class _$EvidenceVariable implements EvidenceVariable {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -10001,14 +10096,14 @@ class _$EvidenceVariable implements EvidenceVariable {
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -10056,7 +10151,7 @@ class _$EvidenceVariable implements EvidenceVariable {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -10072,14 +10167,14 @@ class _$EvidenceVariable implements EvidenceVariable {
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -10101,7 +10196,7 @@ class _$EvidenceVariable implements EvidenceVariable {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -10110,14 +10205,14 @@ class _$EvidenceVariable implements EvidenceVariable {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -10170,16 +10265,16 @@ class _$EvidenceVariable implements EvidenceVariable {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -10357,7 +10452,7 @@ abstract class EvidenceVariable implements EvidenceBasedMedicine {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -10368,14 +10463,14 @@ abstract class EvidenceVariable implements EvidenceBasedMedicine {
       String publisher,
       List<dynamic> contact,
       Markdown description,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -10400,7 +10495,7 @@ abstract class EvidenceVariable implements EvidenceBasedMedicine {
   @override
   List<dynamic> get modifierExtension;
   FhirUri get url;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   String get version;
   String get name;
   String get title;
@@ -10411,14 +10506,14 @@ abstract class EvidenceVariable implements EvidenceBasedMedicine {
   String get publisher;
   List<dynamic> get contact;
   Markdown get description;
-  List<dynamic> get note;
+  List<Annotation> get note;
   List<dynamic> get useContext;
-  List<dynamic> get jurisdiction;
+  List<CodeableConcept> get jurisdiction;
   Markdown get copyright;
   Date get approvalDate;
   Date get lastReviewDate;
   Period get effectivePeriod;
-  List<dynamic> get topic;
+  List<CodeableConcept> get topic;
   List<dynamic> get author;
   List<dynamic> get editor;
   List<dynamic> get reviewer;
@@ -10456,6 +10551,12 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res>
       Timing participantEffectiveTiming,
       Duration timeFromStart,
       EvidenceVariableCharacteristicGroupMeasure groupMeasure});
+
+  $CodeableConceptCopyWith<$Res> get definitionCodeableConcept;
+  $PeriodCopyWith<$Res> get participantEffectivePeriod;
+  $DurationCopyWith<$Res> get participantEffectiveDuration;
+  $TimingCopyWith<$Res> get participantEffectiveTiming;
+  $DurationCopyWith<$Res> get timeFromStart;
 }
 
 class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
@@ -10542,6 +10643,58 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
           ? _value.groupMeasure
           : groupMeasure as EvidenceVariableCharacteristicGroupMeasure,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get definitionCodeableConcept {
+    if (_value.definitionCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.definitionCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(definitionCodeableConcept: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get participantEffectivePeriod {
+    if (_value.participantEffectivePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.participantEffectivePeriod, (value) {
+      return _then(_value.copyWith(participantEffectivePeriod: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get participantEffectiveDuration {
+    if (_value.participantEffectiveDuration == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.participantEffectiveDuration,
+        (value) {
+      return _then(_value.copyWith(participantEffectiveDuration: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get participantEffectiveTiming {
+    if (_value.participantEffectiveTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.participantEffectiveTiming, (value) {
+      return _then(_value.copyWith(participantEffectiveTiming: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get timeFromStart {
+    if (_value.timeFromStart == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.timeFromStart, (value) {
+      return _then(_value.copyWith(timeFromStart: value));
+    });
   }
 }
 
@@ -10713,7 +10866,7 @@ class _$EvidenceVariableCharacteristic
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -10722,14 +10875,14 @@ class _$EvidenceVariableCharacteristic
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -10777,8 +10930,8 @@ class _$EvidenceVariableCharacteristic
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -10786,8 +10939,8 @@ class _$EvidenceVariableCharacteristic
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -10800,7 +10953,7 @@ class _$EvidenceVariableCharacteristic
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -10811,14 +10964,14 @@ class _$EvidenceVariableCharacteristic
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -10858,7 +11011,7 @@ class _$EvidenceVariableCharacteristic
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -10869,14 +11022,14 @@ class _$EvidenceVariableCharacteristic
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -10897,7 +11050,7 @@ class _$EvidenceVariableCharacteristic
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -10913,14 +11066,14 @@ class _$EvidenceVariableCharacteristic
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -10970,7 +11123,7 @@ class _$EvidenceVariableCharacteristic
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -10986,14 +11139,14 @@ class _$EvidenceVariableCharacteristic
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -11016,7 +11169,7 @@ class _$EvidenceVariableCharacteristic
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -11025,14 +11178,14 @@ class _$EvidenceVariableCharacteristic
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -11090,8 +11243,8 @@ class _$EvidenceVariableCharacteristic
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -11099,8 +11252,8 @@ class _$EvidenceVariableCharacteristic
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   }) {
     assert(riskEvidenceSynthesis != null);
     assert(riskEvidenceSynthesisSampleSize != null);
@@ -11156,7 +11309,7 @@ class _$EvidenceVariableCharacteristic
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -11165,14 +11318,14 @@ class _$EvidenceVariableCharacteristic
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -11216,16 +11369,16 @@ class _$EvidenceVariableCharacteristic
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -11237,7 +11390,7 @@ class _$EvidenceVariableCharacteristic
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -11248,14 +11401,14 @@ class _$EvidenceVariableCharacteristic
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -11293,7 +11446,7 @@ class _$EvidenceVariableCharacteristic
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -11304,14 +11457,14 @@ class _$EvidenceVariableCharacteristic
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -11331,7 +11484,7 @@ class _$EvidenceVariableCharacteristic
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -11347,14 +11500,14 @@ class _$EvidenceVariableCharacteristic
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -11402,7 +11555,7 @@ class _$EvidenceVariableCharacteristic
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -11418,14 +11571,14 @@ class _$EvidenceVariableCharacteristic
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -11447,7 +11600,7 @@ class _$EvidenceVariableCharacteristic
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -11456,14 +11609,14 @@ class _$EvidenceVariableCharacteristic
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -11516,16 +11669,16 @@ class _$EvidenceVariableCharacteristic
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -11740,7 +11893,7 @@ abstract class $EvidenceCopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -11751,14 +11904,14 @@ abstract class $EvidenceCopyWith<$Res>
       String publisher,
       List<dynamic> contact,
       Markdown description,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -11767,6 +11920,8 @@ abstract class $EvidenceCopyWith<$Res>
       Reference exposureBackground,
       List<dynamic> exposureVariant,
       List<dynamic> outcome});
+
+  $PeriodCopyWith<$Res> get effectivePeriod;
 }
 
 class _$EvidenceCopyWithImpl<$Res>
@@ -11840,7 +11995,7 @@ class _$EvidenceCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as FhirUri,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
@@ -11853,13 +12008,13 @@ class _$EvidenceCopyWithImpl<$Res>
       contact: contact == freezed ? _value.contact : contact as List<dynamic>,
       description:
           description == freezed ? _value.description : description as Markdown,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
       useContext: useContext == freezed
           ? _value.useContext
           : useContext as List<dynamic>,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<dynamic>,
+          : jurisdiction as List<CodeableConcept>,
       copyright:
           copyright == freezed ? _value.copyright : copyright as Markdown,
       approvalDate:
@@ -11870,7 +12025,7 @@ class _$EvidenceCopyWithImpl<$Res>
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
-      topic: topic == freezed ? _value.topic : topic as List<dynamic>,
+      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept>,
       author: author == freezed ? _value.author : author as List<dynamic>,
       editor: editor == freezed ? _value.editor : editor as List<dynamic>,
       reviewer:
@@ -11888,6 +12043,16 @@ class _$EvidenceCopyWithImpl<$Res>
           : exposureVariant as List<dynamic>,
       outcome: outcome == freezed ? _value.outcome : outcome as List<dynamic>,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get effectivePeriod {
+    if (_value.effectivePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
+      return _then(_value.copyWith(effectivePeriod: value));
+    });
   }
 }
 
@@ -11959,7 +12124,7 @@ class _$Evidence implements Evidence {
   @override
   final FhirUri url;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final String version;
   @override
@@ -11981,11 +12146,11 @@ class _$Evidence implements Evidence {
   @override
   final Markdown description;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
   @override
   final List<dynamic> useContext;
   @override
-  final List<dynamic> jurisdiction;
+  final List<CodeableConcept> jurisdiction;
   @override
   final Markdown copyright;
   @override
@@ -11995,7 +12160,7 @@ class _$Evidence implements Evidence {
   @override
   final Period effectivePeriod;
   @override
-  final List<dynamic> topic;
+  final List<CodeableConcept> topic;
   @override
   final List<dynamic> author;
   @override
@@ -12164,7 +12329,7 @@ class _$Evidence implements Evidence {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -12173,14 +12338,14 @@ class _$Evidence implements Evidence {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -12228,8 +12393,8 @@ class _$Evidence implements Evidence {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -12237,8 +12402,8 @@ class _$Evidence implements Evidence {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -12251,7 +12416,7 @@ class _$Evidence implements Evidence {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -12262,14 +12427,14 @@ class _$Evidence implements Evidence {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -12309,7 +12474,7 @@ class _$Evidence implements Evidence {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -12320,14 +12485,14 @@ class _$Evidence implements Evidence {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -12348,7 +12513,7 @@ class _$Evidence implements Evidence {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -12364,14 +12529,14 @@ class _$Evidence implements Evidence {
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -12421,7 +12586,7 @@ class _$Evidence implements Evidence {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -12437,14 +12602,14 @@ class _$Evidence implements Evidence {
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -12467,7 +12632,7 @@ class _$Evidence implements Evidence {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -12476,14 +12641,14 @@ class _$Evidence implements Evidence {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -12541,8 +12706,8 @@ class _$Evidence implements Evidence {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -12550,8 +12715,8 @@ class _$Evidence implements Evidence {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   }) {
     assert(riskEvidenceSynthesis != null);
     assert(riskEvidenceSynthesisSampleSize != null);
@@ -12626,7 +12791,7 @@ class _$Evidence implements Evidence {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -12635,14 +12800,14 @@ class _$Evidence implements Evidence {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -12686,16 +12851,16 @@ class _$Evidence implements Evidence {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -12707,7 +12872,7 @@ class _$Evidence implements Evidence {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -12718,14 +12883,14 @@ class _$Evidence implements Evidence {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -12763,7 +12928,7 @@ class _$Evidence implements Evidence {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -12774,14 +12939,14 @@ class _$Evidence implements Evidence {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -12801,7 +12966,7 @@ class _$Evidence implements Evidence {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -12817,14 +12982,14 @@ class _$Evidence implements Evidence {
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -12872,7 +13037,7 @@ class _$Evidence implements Evidence {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -12888,14 +13053,14 @@ class _$Evidence implements Evidence {
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -12917,7 +13082,7 @@ class _$Evidence implements Evidence {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -12926,14 +13091,14 @@ class _$Evidence implements Evidence {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -12986,16 +13151,16 @@ class _$Evidence implements Evidence {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -13173,7 +13338,7 @@ abstract class Evidence implements EvidenceBasedMedicine {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -13184,14 +13349,14 @@ abstract class Evidence implements EvidenceBasedMedicine {
       String publisher,
       List<dynamic> contact,
       Markdown description,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -13216,7 +13381,7 @@ abstract class Evidence implements EvidenceBasedMedicine {
   @override
   List<dynamic> get modifierExtension;
   FhirUri get url;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   String get version;
   String get name;
   String get title;
@@ -13227,14 +13392,14 @@ abstract class Evidence implements EvidenceBasedMedicine {
   String get publisher;
   List<dynamic> get contact;
   Markdown get description;
-  List<dynamic> get note;
+  List<Annotation> get note;
   List<dynamic> get useContext;
-  List<dynamic> get jurisdiction;
+  List<CodeableConcept> get jurisdiction;
   Markdown get copyright;
   Date get approvalDate;
   Date get lastReviewDate;
   Period get effectivePeriod;
-  List<dynamic> get topic;
+  List<CodeableConcept> get topic;
   List<dynamic> get author;
   List<dynamic> get editor;
   List<dynamic> get reviewer;
@@ -13264,7 +13429,7 @@ abstract class $ResearchElementDefinitionCopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -13280,14 +13445,14 @@ abstract class $ResearchElementDefinitionCopyWith<$Res>
       Markdown description,
       List<String> comment,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown purpose,
       String usage,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -13297,6 +13462,9 @@ abstract class $ResearchElementDefinitionCopyWith<$Res>
       ResearchElementDefinitionType type,
       ResearchElementDefinitionVariableType variableType,
       List<dynamic> characteristic});
+
+  $CodeableConceptCopyWith<$Res> get subjectCodeableConcept;
+  $PeriodCopyWith<$Res> get effectivePeriod;
 }
 
 class _$ResearchElementDefinitionCopyWithImpl<$Res>
@@ -13378,7 +13546,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as FhirUri,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
@@ -13407,7 +13575,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res>
           : useContext as List<dynamic>,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<dynamic>,
+          : jurisdiction as List<CodeableConcept>,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown,
       usage: usage == freezed ? _value.usage : usage as String,
       copyright:
@@ -13420,7 +13588,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res>
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
-      topic: topic == freezed ? _value.topic : topic as List<dynamic>,
+      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept>,
       author: author == freezed ? _value.author : author as List<dynamic>,
       editor: editor == freezed ? _value.editor : editor as List<dynamic>,
       reviewer:
@@ -13440,6 +13608,27 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res>
           ? _value.characteristic
           : characteristic as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get subjectCodeableConcept {
+    if (_value.subjectCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.subjectCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(subjectCodeableConcept: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get effectivePeriod {
+    if (_value.effectivePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
+      return _then(_value.copyWith(effectivePeriod: value));
+    });
   }
 }
 
@@ -13515,7 +13704,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
   @override
   final FhirUri url;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final String version;
   @override
@@ -13547,7 +13736,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
   @override
   final List<dynamic> useContext;
   @override
-  final List<dynamic> jurisdiction;
+  final List<CodeableConcept> jurisdiction;
   @override
   final Markdown purpose;
   @override
@@ -13561,7 +13750,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
   @override
   final Period effectivePeriod;
   @override
-  final List<dynamic> topic;
+  final List<CodeableConcept> topic;
   @override
   final List<dynamic> author;
   @override
@@ -13744,7 +13933,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -13753,14 +13942,14 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -13808,8 +13997,8 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -13817,8 +14006,8 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -13831,7 +14020,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -13842,14 +14031,14 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -13889,7 +14078,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -13900,14 +14089,14 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -13928,7 +14117,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -13944,14 +14133,14 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -14001,7 +14190,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -14017,14 +14206,14 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -14047,7 +14236,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -14056,14 +14245,14 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -14121,8 +14310,8 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -14130,8 +14319,8 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   }) {
     assert(riskEvidenceSynthesis != null);
     assert(riskEvidenceSynthesisSampleSize != null);
@@ -14212,7 +14401,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -14221,14 +14410,14 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -14272,16 +14461,16 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -14293,7 +14482,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -14304,14 +14493,14 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -14349,7 +14538,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -14360,14 +14549,14 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -14387,7 +14576,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -14403,14 +14592,14 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -14458,7 +14647,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -14474,14 +14663,14 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -14503,7 +14692,7 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -14512,14 +14701,14 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -14572,16 +14761,16 @@ class _$ResearchElementDefinition implements ResearchElementDefinition {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -14766,7 +14955,7 @@ abstract class ResearchElementDefinition implements EvidenceBasedMedicine {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -14782,14 +14971,14 @@ abstract class ResearchElementDefinition implements EvidenceBasedMedicine {
       Markdown description,
       List<String> comment,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown purpose,
       String usage,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -14816,7 +15005,7 @@ abstract class ResearchElementDefinition implements EvidenceBasedMedicine {
   @override
   List<dynamic> get modifierExtension;
   FhirUri get url;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   String get version;
   String get name;
   String get title;
@@ -14832,14 +15021,14 @@ abstract class ResearchElementDefinition implements EvidenceBasedMedicine {
   Markdown get description;
   List<String> get comment;
   List<dynamic> get useContext;
-  List<dynamic> get jurisdiction;
+  List<CodeableConcept> get jurisdiction;
   Markdown get purpose;
   String get usage;
   Markdown get copyright;
   Date get approvalDate;
   Date get lastReviewDate;
   Period get effectivePeriod;
-  List<dynamic> get topic;
+  List<CodeableConcept> get topic;
   List<dynamic> get author;
   List<dynamic> get editor;
   List<dynamic> get reviewer;
@@ -14887,6 +15076,17 @@ abstract class $ResearchElementDefinitionCharacteristicCopyWith<$Res>
       Duration participantEffectiveTimeFromStart,
       ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure
           participantEffectiveGroupMeasure});
+
+  $CodeableConceptCopyWith<$Res> get definitionCodeableConcept;
+  $CodeableConceptCopyWith<$Res> get unitOfMeasure;
+  $PeriodCopyWith<$Res> get studyEffectivePeriod;
+  $DurationCopyWith<$Res> get studyEffectiveDuration;
+  $TimingCopyWith<$Res> get studyEffectiveTiming;
+  $DurationCopyWith<$Res> get studyEffectiveTimeFromStart;
+  $PeriodCopyWith<$Res> get participantEffectivePeriod;
+  $DurationCopyWith<$Res> get participantEffectiveDuration;
+  $TimingCopyWith<$Res> get participantEffectiveTiming;
+  $DurationCopyWith<$Res> get participantEffectiveTimeFromStart;
 }
 
 class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
@@ -15004,6 +15204,109 @@ class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
           : participantEffectiveGroupMeasure
               as ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get definitionCodeableConcept {
+    if (_value.definitionCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.definitionCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(definitionCodeableConcept: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get unitOfMeasure {
+    if (_value.unitOfMeasure == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.unitOfMeasure, (value) {
+      return _then(_value.copyWith(unitOfMeasure: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get studyEffectivePeriod {
+    if (_value.studyEffectivePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.studyEffectivePeriod, (value) {
+      return _then(_value.copyWith(studyEffectivePeriod: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get studyEffectiveDuration {
+    if (_value.studyEffectiveDuration == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.studyEffectiveDuration, (value) {
+      return _then(_value.copyWith(studyEffectiveDuration: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get studyEffectiveTiming {
+    if (_value.studyEffectiveTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.studyEffectiveTiming, (value) {
+      return _then(_value.copyWith(studyEffectiveTiming: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get studyEffectiveTimeFromStart {
+    if (_value.studyEffectiveTimeFromStart == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.studyEffectiveTimeFromStart, (value) {
+      return _then(_value.copyWith(studyEffectiveTimeFromStart: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get participantEffectivePeriod {
+    if (_value.participantEffectivePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.participantEffectivePeriod, (value) {
+      return _then(_value.copyWith(participantEffectivePeriod: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get participantEffectiveDuration {
+    if (_value.participantEffectiveDuration == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.participantEffectiveDuration,
+        (value) {
+      return _then(_value.copyWith(participantEffectiveDuration: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get participantEffectiveTiming {
+    if (_value.participantEffectiveTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.participantEffectiveTiming, (value) {
+      return _then(_value.copyWith(participantEffectiveTiming: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get participantEffectiveTimeFromStart {
+    if (_value.participantEffectiveTimeFromStart == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.participantEffectiveTimeFromStart,
+        (value) {
+      return _then(_value.copyWith(participantEffectiveTimeFromStart: value));
+    });
   }
 }
 
@@ -15206,7 +15509,7 @@ class _$ResearchElementDefinitionCharacteristic
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -15215,14 +15518,14 @@ class _$ResearchElementDefinitionCharacteristic
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -15270,8 +15573,8 @@ class _$ResearchElementDefinitionCharacteristic
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -15279,8 +15582,8 @@ class _$ResearchElementDefinitionCharacteristic
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -15293,7 +15596,7 @@ class _$ResearchElementDefinitionCharacteristic
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -15304,14 +15607,14 @@ class _$ResearchElementDefinitionCharacteristic
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -15351,7 +15654,7 @@ class _$ResearchElementDefinitionCharacteristic
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -15362,14 +15665,14 @@ class _$ResearchElementDefinitionCharacteristic
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -15390,7 +15693,7 @@ class _$ResearchElementDefinitionCharacteristic
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -15406,14 +15709,14 @@ class _$ResearchElementDefinitionCharacteristic
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -15463,7 +15766,7 @@ class _$ResearchElementDefinitionCharacteristic
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -15479,14 +15782,14 @@ class _$ResearchElementDefinitionCharacteristic
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -15509,7 +15812,7 @@ class _$ResearchElementDefinitionCharacteristic
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -15518,14 +15821,14 @@ class _$ResearchElementDefinitionCharacteristic
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -15583,8 +15886,8 @@ class _$ResearchElementDefinitionCharacteristic
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -15592,8 +15895,8 @@ class _$ResearchElementDefinitionCharacteristic
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   }) {
     assert(riskEvidenceSynthesis != null);
     assert(riskEvidenceSynthesisSampleSize != null);
@@ -15655,7 +15958,7 @@ class _$ResearchElementDefinitionCharacteristic
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -15664,14 +15967,14 @@ class _$ResearchElementDefinitionCharacteristic
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -15715,16 +16018,16 @@ class _$ResearchElementDefinitionCharacteristic
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -15736,7 +16039,7 @@ class _$ResearchElementDefinitionCharacteristic
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -15747,14 +16050,14 @@ class _$ResearchElementDefinitionCharacteristic
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -15792,7 +16095,7 @@ class _$ResearchElementDefinitionCharacteristic
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -15803,14 +16106,14 @@ class _$ResearchElementDefinitionCharacteristic
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -15830,7 +16133,7 @@ class _$ResearchElementDefinitionCharacteristic
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -15846,14 +16149,14 @@ class _$ResearchElementDefinitionCharacteristic
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -15901,7 +16204,7 @@ class _$ResearchElementDefinitionCharacteristic
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -15917,14 +16220,14 @@ class _$ResearchElementDefinitionCharacteristic
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -15946,7 +16249,7 @@ class _$ResearchElementDefinitionCharacteristic
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -15955,14 +16258,14 @@ class _$ResearchElementDefinitionCharacteristic
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -16015,16 +16318,16 @@ class _$ResearchElementDefinitionCharacteristic
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -16264,7 +16567,7 @@ abstract class $ResearchDefinitionCopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -16280,14 +16583,14 @@ abstract class $ResearchDefinitionCopyWith<$Res>
       Markdown description,
       List<String> comment,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown purpose,
       String usage,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -16298,6 +16601,9 @@ abstract class $ResearchDefinitionCopyWith<$Res>
       Reference exposure,
       Reference exposureAlternative,
       Reference outcome});
+
+  $CodeableConceptCopyWith<$Res> get subjectCodeableConcept;
+  $PeriodCopyWith<$Res> get effectivePeriod;
 }
 
 class _$ResearchDefinitionCopyWithImpl<$Res>
@@ -16379,7 +16685,7 @@ class _$ResearchDefinitionCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as FhirUri,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
@@ -16408,7 +16714,7 @@ class _$ResearchDefinitionCopyWithImpl<$Res>
           : useContext as List<dynamic>,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<dynamic>,
+          : jurisdiction as List<CodeableConcept>,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown,
       usage: usage == freezed ? _value.usage : usage as String,
       copyright:
@@ -16421,7 +16727,7 @@ class _$ResearchDefinitionCopyWithImpl<$Res>
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
-      topic: topic == freezed ? _value.topic : topic as List<dynamic>,
+      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept>,
       author: author == freezed ? _value.author : author as List<dynamic>,
       editor: editor == freezed ? _value.editor : editor as List<dynamic>,
       reviewer:
@@ -16440,6 +16746,27 @@ class _$ResearchDefinitionCopyWithImpl<$Res>
           : exposureAlternative as Reference,
       outcome: outcome == freezed ? _value.outcome : outcome as Reference,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get subjectCodeableConcept {
+    if (_value.subjectCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.subjectCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(subjectCodeableConcept: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get effectivePeriod {
+    if (_value.effectivePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
+      return _then(_value.copyWith(effectivePeriod: value));
+    });
   }
 }
 
@@ -16516,7 +16843,7 @@ class _$ResearchDefinition implements ResearchDefinition {
   @override
   final FhirUri url;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final String version;
   @override
@@ -16548,7 +16875,7 @@ class _$ResearchDefinition implements ResearchDefinition {
   @override
   final List<dynamic> useContext;
   @override
-  final List<dynamic> jurisdiction;
+  final List<CodeableConcept> jurisdiction;
   @override
   final Markdown purpose;
   @override
@@ -16562,7 +16889,7 @@ class _$ResearchDefinition implements ResearchDefinition {
   @override
   final Period effectivePeriod;
   @override
-  final List<dynamic> topic;
+  final List<CodeableConcept> topic;
   @override
   final List<dynamic> author;
   @override
@@ -16748,7 +17075,7 @@ class _$ResearchDefinition implements ResearchDefinition {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -16757,14 +17084,14 @@ class _$ResearchDefinition implements ResearchDefinition {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -16812,8 +17139,8 @@ class _$ResearchDefinition implements ResearchDefinition {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -16821,8 +17148,8 @@ class _$ResearchDefinition implements ResearchDefinition {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -16835,7 +17162,7 @@ class _$ResearchDefinition implements ResearchDefinition {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -16846,14 +17173,14 @@ class _$ResearchDefinition implements ResearchDefinition {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -16893,7 +17220,7 @@ class _$ResearchDefinition implements ResearchDefinition {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -16904,14 +17231,14 @@ class _$ResearchDefinition implements ResearchDefinition {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -16932,7 +17259,7 @@ class _$ResearchDefinition implements ResearchDefinition {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -16948,14 +17275,14 @@ class _$ResearchDefinition implements ResearchDefinition {
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -17005,7 +17332,7 @@ class _$ResearchDefinition implements ResearchDefinition {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -17021,14 +17348,14 @@ class _$ResearchDefinition implements ResearchDefinition {
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -17051,7 +17378,7 @@ class _$ResearchDefinition implements ResearchDefinition {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -17060,14 +17387,14 @@ class _$ResearchDefinition implements ResearchDefinition {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -17125,8 +17452,8 @@ class _$ResearchDefinition implements ResearchDefinition {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -17134,8 +17461,8 @@ class _$ResearchDefinition implements ResearchDefinition {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   }) {
     assert(riskEvidenceSynthesis != null);
     assert(riskEvidenceSynthesisSampleSize != null);
@@ -17217,7 +17544,7 @@ class _$ResearchDefinition implements ResearchDefinition {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -17226,14 +17553,14 @@ class _$ResearchDefinition implements ResearchDefinition {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -17277,16 +17604,16 @@ class _$ResearchDefinition implements ResearchDefinition {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -17298,7 +17625,7 @@ class _$ResearchDefinition implements ResearchDefinition {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -17309,14 +17636,14 @@ class _$ResearchDefinition implements ResearchDefinition {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -17354,7 +17681,7 @@ class _$ResearchDefinition implements ResearchDefinition {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -17365,14 +17692,14 @@ class _$ResearchDefinition implements ResearchDefinition {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -17392,7 +17719,7 @@ class _$ResearchDefinition implements ResearchDefinition {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -17408,14 +17735,14 @@ class _$ResearchDefinition implements ResearchDefinition {
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -17463,7 +17790,7 @@ class _$ResearchDefinition implements ResearchDefinition {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -17479,14 +17806,14 @@ class _$ResearchDefinition implements ResearchDefinition {
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -17508,7 +17835,7 @@ class _$ResearchDefinition implements ResearchDefinition {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -17517,14 +17844,14 @@ class _$ResearchDefinition implements ResearchDefinition {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -17577,16 +17904,16 @@ class _$ResearchDefinition implements ResearchDefinition {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -17772,7 +18099,7 @@ abstract class ResearchDefinition implements EvidenceBasedMedicine {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -17788,14 +18115,14 @@ abstract class ResearchDefinition implements EvidenceBasedMedicine {
       Markdown description,
       List<String> comment,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown purpose,
       String usage,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -17823,7 +18150,7 @@ abstract class ResearchDefinition implements EvidenceBasedMedicine {
   @override
   List<dynamic> get modifierExtension;
   FhirUri get url;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   String get version;
   String get name;
   String get title;
@@ -17839,14 +18166,14 @@ abstract class ResearchDefinition implements EvidenceBasedMedicine {
   Markdown get description;
   List<String> get comment;
   List<dynamic> get useContext;
-  List<dynamic> get jurisdiction;
+  List<CodeableConcept> get jurisdiction;
   Markdown get purpose;
   String get usage;
   Markdown get copyright;
   Date get approvalDate;
   Date get lastReviewDate;
   Period get effectivePeriod;
-  List<dynamic> get topic;
+  List<CodeableConcept> get topic;
   List<dynamic> get author;
   List<dynamic> get editor;
   List<dynamic> get reviewer;
@@ -17878,7 +18205,7 @@ abstract class $EffectEvidenceSynthesisCopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -17887,14 +18214,14 @@ abstract class $EffectEvidenceSynthesisCopyWith<$Res>
       String publisher,
       List<dynamic> contact,
       Markdown description,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -17910,6 +18237,10 @@ abstract class $EffectEvidenceSynthesisCopyWith<$Res>
       List<dynamic> resultsByExposure,
       List<dynamic> effectEstimate,
       List<dynamic> certainty});
+
+  $PeriodCopyWith<$Res> get effectivePeriod;
+  $CodeableConceptCopyWith<$Res> get synthesisType;
+  $CodeableConceptCopyWith<$Res> get studyType;
 }
 
 class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
@@ -17989,7 +18320,7 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
       url: url == freezed ? _value.url : url as FhirUri,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       version: version == freezed ? _value.version : version as String,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
@@ -18001,13 +18332,13 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
       contact: contact == freezed ? _value.contact : contact as List<dynamic>,
       description:
           description == freezed ? _value.description : description as Markdown,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
       useContext: useContext == freezed
           ? _value.useContext
           : useContext as List<dynamic>,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<dynamic>,
+          : jurisdiction as List<CodeableConcept>,
       copyright:
           copyright == freezed ? _value.copyright : copyright as Markdown,
       approvalDate:
@@ -18018,7 +18349,7 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period,
-      topic: topic == freezed ? _value.topic : topic as List<dynamic>,
+      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept>,
       author: author == freezed ? _value.author : author as List<dynamic>,
       editor: editor == freezed ? _value.editor : editor as List<dynamic>,
       reviewer:
@@ -18053,6 +18384,36 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
       certainty:
           certainty == freezed ? _value.certainty : certainty as List<dynamic>,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get effectivePeriod {
+    if (_value.effectivePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.effectivePeriod, (value) {
+      return _then(_value.copyWith(effectivePeriod: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get synthesisType {
+    if (_value.synthesisType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.synthesisType, (value) {
+      return _then(_value.copyWith(synthesisType: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get studyType {
+    if (_value.studyType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.studyType, (value) {
+      return _then(_value.copyWith(studyType: value));
+    });
   }
 }
 
@@ -18127,7 +18488,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
   @override
   final FhirUri url;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final String version;
   @override
@@ -18145,11 +18506,11 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
   @override
   final Markdown description;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
   @override
   final List<dynamic> useContext;
   @override
-  final List<dynamic> jurisdiction;
+  final List<CodeableConcept> jurisdiction;
   @override
   final Markdown copyright;
   @override
@@ -18159,7 +18520,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
   @override
   final Period effectivePeriod;
   @override
-  final List<dynamic> topic;
+  final List<CodeableConcept> topic;
   @override
   final List<dynamic> author;
   @override
@@ -18353,7 +18714,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -18362,14 +18723,14 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -18417,8 +18778,8 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -18426,8 +18787,8 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -18440,7 +18801,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -18451,14 +18812,14 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -18498,7 +18859,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -18509,14 +18870,14 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -18537,7 +18898,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -18553,14 +18914,14 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -18610,7 +18971,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -18626,14 +18987,14 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -18656,7 +19017,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -18665,14 +19026,14 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -18730,8 +19091,8 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -18739,8 +19100,8 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   }) {
     assert(riskEvidenceSynthesis != null);
     assert(riskEvidenceSynthesisSampleSize != null);
@@ -18820,7 +19181,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -18829,14 +19190,14 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -18880,16 +19241,16 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -18901,7 +19262,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -18912,14 +19273,14 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -18957,7 +19318,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -18968,14 +19329,14 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -18995,7 +19356,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -19011,14 +19372,14 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -19066,7 +19427,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -19082,14 +19443,14 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -19111,7 +19472,7 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -19120,14 +19481,14 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -19180,16 +19541,16 @@ class _$EffectEvidenceSynthesis implements EffectEvidenceSynthesis {
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -19373,7 +19734,7 @@ abstract class EffectEvidenceSynthesis implements EvidenceBasedMedicine {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       FhirUri url,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       String version,
       String name,
       String title,
@@ -19382,14 +19743,14 @@ abstract class EffectEvidenceSynthesis implements EvidenceBasedMedicine {
       String publisher,
       List<dynamic> contact,
       Markdown description,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> useContext,
-      List<dynamic> jurisdiction,
+      List<CodeableConcept> jurisdiction,
       Markdown copyright,
       Date approvalDate,
       Date lastReviewDate,
       Period effectivePeriod,
-      List<dynamic> topic,
+      List<CodeableConcept> topic,
       List<dynamic> author,
       List<dynamic> editor,
       List<dynamic> reviewer,
@@ -19422,7 +19783,7 @@ abstract class EffectEvidenceSynthesis implements EvidenceBasedMedicine {
   @override
   List<dynamic> get modifierExtension;
   FhirUri get url;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   String get version;
   String get name;
   String get title;
@@ -19431,14 +19792,14 @@ abstract class EffectEvidenceSynthesis implements EvidenceBasedMedicine {
   String get publisher;
   List<dynamic> get contact;
   Markdown get description;
-  List<dynamic> get note;
+  List<Annotation> get note;
   List<dynamic> get useContext;
-  List<dynamic> get jurisdiction;
+  List<CodeableConcept> get jurisdiction;
   Markdown get copyright;
   Date get approvalDate;
   Date get lastReviewDate;
   Period get effectivePeriod;
-  List<dynamic> get topic;
+  List<CodeableConcept> get topic;
   List<dynamic> get author;
   List<dynamic> get editor;
   List<dynamic> get reviewer;
@@ -19602,7 +19963,7 @@ class _$EffectEvidenceSynthesisSampleSize
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -19611,14 +19972,14 @@ class _$EffectEvidenceSynthesisSampleSize
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -19666,8 +20027,8 @@ class _$EffectEvidenceSynthesisSampleSize
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -19675,8 +20036,8 @@ class _$EffectEvidenceSynthesisSampleSize
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -19689,7 +20050,7 @@ class _$EffectEvidenceSynthesisSampleSize
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -19700,14 +20061,14 @@ class _$EffectEvidenceSynthesisSampleSize
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -19747,7 +20108,7 @@ class _$EffectEvidenceSynthesisSampleSize
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -19758,14 +20119,14 @@ class _$EffectEvidenceSynthesisSampleSize
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -19786,7 +20147,7 @@ class _$EffectEvidenceSynthesisSampleSize
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -19802,14 +20163,14 @@ class _$EffectEvidenceSynthesisSampleSize
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -19859,7 +20220,7 @@ class _$EffectEvidenceSynthesisSampleSize
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -19875,14 +20236,14 @@ class _$EffectEvidenceSynthesisSampleSize
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -19905,7 +20266,7 @@ class _$EffectEvidenceSynthesisSampleSize
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -19914,14 +20275,14 @@ class _$EffectEvidenceSynthesisSampleSize
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -19979,8 +20340,8 @@ class _$EffectEvidenceSynthesisSampleSize
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -19988,8 +20349,8 @@ class _$EffectEvidenceSynthesisSampleSize
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   }) {
     assert(riskEvidenceSynthesis != null);
     assert(riskEvidenceSynthesisSampleSize != null);
@@ -20028,7 +20389,7 @@ class _$EffectEvidenceSynthesisSampleSize
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -20037,14 +20398,14 @@ class _$EffectEvidenceSynthesisSampleSize
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -20088,16 +20449,16 @@ class _$EffectEvidenceSynthesisSampleSize
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -20109,7 +20470,7 @@ class _$EffectEvidenceSynthesisSampleSize
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -20120,14 +20481,14 @@ class _$EffectEvidenceSynthesisSampleSize
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -20165,7 +20526,7 @@ class _$EffectEvidenceSynthesisSampleSize
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -20176,14 +20537,14 @@ class _$EffectEvidenceSynthesisSampleSize
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -20203,7 +20564,7 @@ class _$EffectEvidenceSynthesisSampleSize
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -20219,14 +20580,14 @@ class _$EffectEvidenceSynthesisSampleSize
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -20274,7 +20635,7 @@ class _$EffectEvidenceSynthesisSampleSize
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -20290,14 +20651,14 @@ class _$EffectEvidenceSynthesisSampleSize
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -20319,7 +20680,7 @@ class _$EffectEvidenceSynthesisSampleSize
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -20328,14 +20689,14 @@ class _$EffectEvidenceSynthesisSampleSize
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -20388,16 +20749,16 @@ class _$EffectEvidenceSynthesisSampleSize
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -20575,6 +20936,8 @@ abstract class $EffectEvidenceSynthesisResultsByExposureCopyWith<$Res>
       EffectEvidenceSynthesisResultsByExposureState exposureState,
       CodeableConcept variantState,
       Reference riskEvidenceSynthesis});
+
+  $CodeableConceptCopyWith<$Res> get variantState;
 }
 
 class _$EffectEvidenceSynthesisResultsByExposureCopyWithImpl<$Res>
@@ -20620,6 +20983,16 @@ class _$EffectEvidenceSynthesisResultsByExposureCopyWithImpl<$Res>
           ? _value.riskEvidenceSynthesis
           : riskEvidenceSynthesis as Reference,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get variantState {
+    if (_value.variantState == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.variantState, (value) {
+      return _then(_value.copyWith(variantState: value));
+    });
   }
 }
 
@@ -20718,7 +21091,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -20727,14 +21100,14 @@ class _$EffectEvidenceSynthesisResultsByExposure
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -20782,8 +21155,8 @@ class _$EffectEvidenceSynthesisResultsByExposure
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -20791,8 +21164,8 @@ class _$EffectEvidenceSynthesisResultsByExposure
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -20805,7 +21178,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -20816,14 +21189,14 @@ class _$EffectEvidenceSynthesisResultsByExposure
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -20863,7 +21236,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -20874,14 +21247,14 @@ class _$EffectEvidenceSynthesisResultsByExposure
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -20902,7 +21275,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -20918,14 +21291,14 @@ class _$EffectEvidenceSynthesisResultsByExposure
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -20975,7 +21348,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -20991,14 +21364,14 @@ class _$EffectEvidenceSynthesisResultsByExposure
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -21021,7 +21394,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -21030,14 +21403,14 @@ class _$EffectEvidenceSynthesisResultsByExposure
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -21095,8 +21468,8 @@ class _$EffectEvidenceSynthesisResultsByExposure
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -21104,8 +21477,8 @@ class _$EffectEvidenceSynthesisResultsByExposure
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   }) {
     assert(riskEvidenceSynthesis != null);
     assert(riskEvidenceSynthesisSampleSize != null);
@@ -21150,7 +21523,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -21159,14 +21532,14 @@ class _$EffectEvidenceSynthesisResultsByExposure
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -21210,16 +21583,16 @@ class _$EffectEvidenceSynthesisResultsByExposure
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -21231,7 +21604,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -21242,14 +21615,14 @@ class _$EffectEvidenceSynthesisResultsByExposure
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -21287,7 +21660,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -21298,14 +21671,14 @@ class _$EffectEvidenceSynthesisResultsByExposure
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -21325,7 +21698,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -21341,14 +21714,14 @@ class _$EffectEvidenceSynthesisResultsByExposure
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -21396,7 +21769,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -21412,14 +21785,14 @@ class _$EffectEvidenceSynthesisResultsByExposure
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -21441,7 +21814,7 @@ class _$EffectEvidenceSynthesisResultsByExposure
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -21450,14 +21823,14 @@ class _$EffectEvidenceSynthesisResultsByExposure
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -21510,16 +21883,16 @@ class _$EffectEvidenceSynthesisResultsByExposure
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -21704,6 +22077,10 @@ abstract class $EffectEvidenceSynthesisEffectEstimateCopyWith<$Res>
       double value,
       CodeableConcept unitOfMeasure,
       List<dynamic> precisionEstimate});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $CodeableConceptCopyWith<$Res> get variantState;
+  $CodeableConceptCopyWith<$Res> get unitOfMeasure;
 }
 
 class _$EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>
@@ -21752,6 +22129,36 @@ class _$EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>
           ? _value.precisionEstimate
           : precisionEstimate as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get variantState {
+    if (_value.variantState == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.variantState, (value) {
+      return _then(_value.copyWith(variantState: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get unitOfMeasure {
+    if (_value.unitOfMeasure == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.unitOfMeasure, (value) {
+      return _then(_value.copyWith(unitOfMeasure: value));
+    });
   }
 }
 
@@ -21862,7 +22269,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -21871,14 +22278,14 @@ class _$EffectEvidenceSynthesisEffectEstimate
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -21926,8 +22333,8 @@ class _$EffectEvidenceSynthesisEffectEstimate
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -21935,8 +22342,8 @@ class _$EffectEvidenceSynthesisEffectEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -21949,7 +22356,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -21960,14 +22367,14 @@ class _$EffectEvidenceSynthesisEffectEstimate
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -22007,7 +22414,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -22018,14 +22425,14 @@ class _$EffectEvidenceSynthesisEffectEstimate
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -22046,7 +22453,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -22062,14 +22469,14 @@ class _$EffectEvidenceSynthesisEffectEstimate
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -22119,7 +22526,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -22135,14 +22542,14 @@ class _$EffectEvidenceSynthesisEffectEstimate
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -22165,7 +22572,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -22174,14 +22581,14 @@ class _$EffectEvidenceSynthesisEffectEstimate
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -22239,8 +22646,8 @@ class _$EffectEvidenceSynthesisEffectEstimate
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -22248,8 +22655,8 @@ class _$EffectEvidenceSynthesisEffectEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   }) {
     assert(riskEvidenceSynthesis != null);
     assert(riskEvidenceSynthesisSampleSize != null);
@@ -22296,7 +22703,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -22305,14 +22712,14 @@ class _$EffectEvidenceSynthesisEffectEstimate
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -22356,16 +22763,16 @@ class _$EffectEvidenceSynthesisEffectEstimate
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -22377,7 +22784,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -22388,14 +22795,14 @@ class _$EffectEvidenceSynthesisEffectEstimate
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -22433,7 +22840,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -22444,14 +22851,14 @@ class _$EffectEvidenceSynthesisEffectEstimate
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -22471,7 +22878,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -22487,14 +22894,14 @@ class _$EffectEvidenceSynthesisEffectEstimate
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -22542,7 +22949,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -22558,14 +22965,14 @@ class _$EffectEvidenceSynthesisEffectEstimate
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -22587,7 +22994,7 @@ class _$EffectEvidenceSynthesisEffectEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -22596,14 +23003,14 @@ class _$EffectEvidenceSynthesisEffectEstimate
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -22656,16 +23063,16 @@ class _$EffectEvidenceSynthesisEffectEstimate
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -22854,6 +23261,8 @@ abstract class $EffectEvidenceSynthesisPrecisionEstimateCopyWith<$Res>
       double level,
       double from,
       double to});
+
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 class _$EffectEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
@@ -22892,6 +23301,16 @@ class _$EffectEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
       from: from == freezed ? _value.from : from as double,
       to: to == freezed ? _value.to : to as double,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
   }
 }
 
@@ -22986,7 +23405,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -22995,14 +23414,14 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -23050,8 +23469,8 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -23059,8 +23478,8 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -23073,7 +23492,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -23084,14 +23503,14 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -23131,7 +23550,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -23142,14 +23561,14 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -23170,7 +23589,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -23186,14 +23605,14 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -23243,7 +23662,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -23259,14 +23678,14 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -23289,7 +23708,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -23298,14 +23717,14 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -23363,8 +23782,8 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -23372,8 +23791,8 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   }) {
     assert(riskEvidenceSynthesis != null);
     assert(riskEvidenceSynthesisSampleSize != null);
@@ -23412,7 +23831,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -23421,14 +23840,14 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -23472,16 +23891,16 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -23493,7 +23912,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -23504,14 +23923,14 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -23549,7 +23968,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -23560,14 +23979,14 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -23587,7 +24006,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -23603,14 +24022,14 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -23658,7 +24077,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -23674,14 +24093,14 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -23703,7 +24122,7 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -23712,14 +24131,14 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -23772,16 +24191,16 @@ class _$EffectEvidenceSynthesisPrecisionEstimate
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -23953,8 +24372,8 @@ abstract class $EffectEvidenceSynthesisCertaintyCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> rating,
-      List<dynamic> note,
+      List<CodeableConcept> rating,
+      List<Annotation> note,
       List<dynamic> certaintySubcomponent});
 }
 
@@ -23987,8 +24406,9 @@ class _$EffectEvidenceSynthesisCertaintyCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
-      rating: rating == freezed ? _value.rating : rating as List<dynamic>,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      rating:
+          rating == freezed ? _value.rating : rating as List<CodeableConcept>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
       certaintySubcomponent: certaintySubcomponent == freezed
           ? _value.certaintySubcomponent
           : certaintySubcomponent as List<dynamic>,
@@ -24019,9 +24439,9 @@ class _$EffectEvidenceSynthesisCertainty
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> rating;
+  final List<CodeableConcept> rating;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
   @override
   final List<dynamic> certaintySubcomponent;
 
@@ -24081,7 +24501,7 @@ class _$EffectEvidenceSynthesisCertainty
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -24090,14 +24510,14 @@ class _$EffectEvidenceSynthesisCertainty
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -24145,8 +24565,8 @@ class _$EffectEvidenceSynthesisCertainty
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -24154,8 +24574,8 @@ class _$EffectEvidenceSynthesisCertainty
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -24168,7 +24588,7 @@ class _$EffectEvidenceSynthesisCertainty
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -24179,14 +24599,14 @@ class _$EffectEvidenceSynthesisCertainty
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -24226,7 +24646,7 @@ class _$EffectEvidenceSynthesisCertainty
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -24237,14 +24657,14 @@ class _$EffectEvidenceSynthesisCertainty
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -24265,7 +24685,7 @@ class _$EffectEvidenceSynthesisCertainty
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -24281,14 +24701,14 @@ class _$EffectEvidenceSynthesisCertainty
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -24338,7 +24758,7 @@ class _$EffectEvidenceSynthesisCertainty
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -24354,14 +24774,14 @@ class _$EffectEvidenceSynthesisCertainty
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -24384,7 +24804,7 @@ class _$EffectEvidenceSynthesisCertainty
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -24393,14 +24813,14 @@ class _$EffectEvidenceSynthesisCertainty
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -24458,8 +24878,8 @@ class _$EffectEvidenceSynthesisCertainty
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -24467,8 +24887,8 @@ class _$EffectEvidenceSynthesisCertainty
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   }) {
     assert(riskEvidenceSynthesis != null);
     assert(riskEvidenceSynthesisSampleSize != null);
@@ -24507,7 +24927,7 @@ class _$EffectEvidenceSynthesisCertainty
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -24516,14 +24936,14 @@ class _$EffectEvidenceSynthesisCertainty
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -24567,16 +24987,16 @@ class _$EffectEvidenceSynthesisCertainty
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -24588,7 +25008,7 @@ class _$EffectEvidenceSynthesisCertainty
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -24599,14 +25019,14 @@ class _$EffectEvidenceSynthesisCertainty
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -24644,7 +25064,7 @@ class _$EffectEvidenceSynthesisCertainty
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -24655,14 +25075,14 @@ class _$EffectEvidenceSynthesisCertainty
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -24682,7 +25102,7 @@ class _$EffectEvidenceSynthesisCertainty
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -24698,14 +25118,14 @@ class _$EffectEvidenceSynthesisCertainty
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -24753,7 +25173,7 @@ class _$EffectEvidenceSynthesisCertainty
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -24769,14 +25189,14 @@ class _$EffectEvidenceSynthesisCertainty
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -24798,7 +25218,7 @@ class _$EffectEvidenceSynthesisCertainty
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -24807,14 +25227,14 @@ class _$EffectEvidenceSynthesisCertainty
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -24867,16 +25287,16 @@ class _$EffectEvidenceSynthesisCertainty
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -25013,8 +25433,8 @@ abstract class EffectEvidenceSynthesisCertainty
           {String id,
           @JsonKey(name: 'extension') List<dynamic> fhirExtension,
           List<dynamic> modifierExtension,
-          List<dynamic> rating,
-          List<dynamic> note,
+          List<CodeableConcept> rating,
+          List<Annotation> note,
           List<dynamic> certaintySubcomponent}) =
       _$EffectEvidenceSynthesisCertainty;
 
@@ -25027,8 +25447,8 @@ abstract class EffectEvidenceSynthesisCertainty
   List<dynamic> get fhirExtension;
   @override
   List<dynamic> get modifierExtension;
-  List<dynamic> get rating;
-  List<dynamic> get note;
+  List<CodeableConcept> get rating;
+  List<Annotation> get note;
   List<dynamic> get certaintySubcomponent;
   @override
   $EffectEvidenceSynthesisCertaintyCopyWith<EffectEvidenceSynthesisCertainty>
@@ -25047,8 +25467,10 @@ abstract class $EffectEvidenceSynthesisCertaintySubcomponentCopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept type,
-      List<dynamic> rating,
-      List<dynamic> note});
+      List<CodeableConcept> rating,
+      List<Annotation> note});
+
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 class _$EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
@@ -25082,9 +25504,20 @@ class _$EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
       type: type == freezed ? _value.type : type as CodeableConcept,
-      rating: rating == freezed ? _value.rating : rating as List<dynamic>,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      rating:
+          rating == freezed ? _value.rating : rating as List<CodeableConcept>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
   }
 }
 
@@ -25113,9 +25546,9 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
   @override
   final CodeableConcept type;
   @override
-  final List<dynamic> rating;
+  final List<CodeableConcept> rating;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
 
   @override
   String toString() {
@@ -25174,7 +25607,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -25183,14 +25616,14 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -25238,8 +25671,8 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result riskEvidenceSynthesisCertaintySubcomponent(
@@ -25247,8 +25680,8 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
     @required
         Result evidenceVariable(
             String resourceType,
@@ -25261,7 +25694,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -25272,14 +25705,14 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -25319,7 +25752,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -25330,14 +25763,14 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -25358,7 +25791,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -25374,14 +25807,14 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -25431,7 +25864,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -25447,14 +25880,14 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             Markdown description,
             List<String> comment,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown purpose,
             String usage,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -25477,7 +25910,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             FhirUri url,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             String version,
             String name,
             String title,
@@ -25486,14 +25919,14 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             String publisher,
             List<dynamic> contact,
             Markdown description,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> useContext,
-            List<dynamic> jurisdiction,
+            List<CodeableConcept> jurisdiction,
             Markdown copyright,
             Date approvalDate,
             Date lastReviewDate,
             Period effectivePeriod,
-            List<dynamic> topic,
+            List<CodeableConcept> topic,
             List<dynamic> author,
             List<dynamic> editor,
             List<dynamic> reviewer,
@@ -25551,8 +25984,8 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> rating,
-            List<dynamic> note,
+            List<CodeableConcept> rating,
+            List<Annotation> note,
             List<dynamic> certaintySubcomponent),
     @required
         Result effectEvidenceSynthesisCertaintySubcomponent(
@@ -25560,8 +25993,8 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
             CodeableConcept type,
-            List<dynamic> rating,
-            List<dynamic> note),
+            List<CodeableConcept> rating,
+            List<Annotation> note),
   }) {
     assert(riskEvidenceSynthesis != null);
     assert(riskEvidenceSynthesisSampleSize != null);
@@ -25600,7 +26033,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -25609,14 +26042,14 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -25660,16 +26093,16 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result riskEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     Result evidenceVariable(
         String resourceType,
         Id id,
@@ -25681,7 +26114,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -25692,14 +26125,14 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -25737,7 +26170,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -25748,14 +26181,14 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -25775,7 +26208,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -25791,14 +26224,14 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -25846,7 +26279,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -25862,14 +26295,14 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         Markdown description,
         List<String> comment,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown purpose,
         String usage,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -25891,7 +26324,7 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         FhirUri url,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         String version,
         String name,
         String title,
@@ -25900,14 +26333,14 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         String publisher,
         List<dynamic> contact,
         Markdown description,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> useContext,
-        List<dynamic> jurisdiction,
+        List<CodeableConcept> jurisdiction,
         Markdown copyright,
         Date approvalDate,
         Date lastReviewDate,
         Period effectivePeriod,
-        List<dynamic> topic,
+        List<CodeableConcept> topic,
         List<dynamic> author,
         List<dynamic> editor,
         List<dynamic> reviewer,
@@ -25960,16 +26393,16 @@ class _$EffectEvidenceSynthesisCertaintySubcomponent
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> rating,
-        List<dynamic> note,
+        List<CodeableConcept> rating,
+        List<Annotation> note,
         List<dynamic> certaintySubcomponent),
     Result effectEvidenceSynthesisCertaintySubcomponent(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
         CodeableConcept type,
-        List<dynamic> rating,
-        List<dynamic> note),
+        List<CodeableConcept> rating,
+        List<Annotation> note),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -26107,8 +26540,8 @@ abstract class EffectEvidenceSynthesisCertaintySubcomponent
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
       CodeableConcept type,
-      List<dynamic> rating,
-      List<dynamic> note}) = _$EffectEvidenceSynthesisCertaintySubcomponent;
+      List<CodeableConcept> rating,
+      List<Annotation> note}) = _$EffectEvidenceSynthesisCertaintySubcomponent;
 
   factory EffectEvidenceSynthesisCertaintySubcomponent.fromJson(
           Map<String, dynamic> json) =
@@ -26121,8 +26554,8 @@ abstract class EffectEvidenceSynthesisCertaintySubcomponent
   @override
   List<dynamic> get modifierExtension;
   CodeableConcept get type;
-  List<dynamic> get rating;
-  List<dynamic> get note;
+  List<CodeableConcept> get rating;
+  List<Annotation> get note;
   @override
   $EffectEvidenceSynthesisCertaintySubcomponentCopyWith<
       EffectEvidenceSynthesisCertaintySubcomponent> get copyWith;

@@ -13,7 +13,11 @@ _$Dosage _$_$DosageFromJson(Map<String, dynamic> json) {
     modifierExtension: json['modifierExtension'] as List,
     sequence: json['sequence'] as int,
     text: json['text'] as String,
-    additionalInstruction: json['additionalInstruction'] as List,
+    additionalInstruction: (json['additionalInstruction'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     patientInstruction: json['patientInstruction'] as String,
     timing: json['timing'] == null
         ? null
@@ -119,7 +123,10 @@ _$ElementDefinition _$_$ElementDefinitionFromJson(Map<String, dynamic> json) {
     sliceName: json['sliceName'] as String,
     sliceIsConstraining: json['sliceIsConstraining'] as bool,
     label: json['label'] as String,
-    code: json['code'] as List,
+    code: (json['code'] as List)
+        ?.map((e) =>
+            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     slicing: json['slicing'] == null
         ? null
         : ElementDefinitionSlicing.fromJson(
@@ -1577,8 +1584,14 @@ _$Meta _$_$MetaFromJson(Map<String, dynamic> json) {
     profile: (json['profile'] as List)
         ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
         ?.toList(),
-    security: json['security'] as List,
-    tag: json['tag'] as List,
+    security: (json['security'] as List)
+        ?.map((e) =>
+            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    tag: (json['tag'] as List)
+        ?.map((e) =>
+            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 

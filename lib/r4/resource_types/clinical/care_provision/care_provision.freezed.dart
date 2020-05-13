@@ -77,7 +77,7 @@ class _$CareProvisionTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       FhirDateTime created,
       Reference patient,
@@ -123,7 +123,7 @@ class _$CareProvisionTearOff {
       Quantity duration,
       String color,
       String brand,
-      List<dynamic> note}) {
+      List<Annotation> note}) {
     return VisionPrescriptionLensSpecification(
       id: id,
       fhirExtension: fhirExtension,
@@ -170,7 +170,7 @@ class _$CareProvisionTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Reference basedOn,
       Reference parent,
       Code status,
@@ -182,12 +182,12 @@ class _$CareProvisionTearOff {
       Period occurrencePeriod,
       Reference condition,
       Reference performer,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> basis,
       List<dynamic> prediction,
       String mitigation,
-      List<dynamic> note}) {
+      List<Annotation> note}) {
     return RiskAssessment(
       resourceType: resourceType,
       id: id,
@@ -254,7 +254,7 @@ class _$CareProvisionTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<dynamic> basedOn,
@@ -262,11 +262,11 @@ class _$CareProvisionTearOff {
       Identifier requisition,
       Code status,
       Code intent,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Code priority,
       bool doNotPerform,
       CodeableConcept code,
-      List<dynamic> orderDetail,
+      List<CodeableConcept> orderDetail,
       Quantity quantityQuantity,
       Ratio quantityRatio,
       Range quantityRange,
@@ -281,15 +281,15 @@ class _$CareProvisionTearOff {
       Reference requester,
       CodeableConcept performerType,
       List<dynamic> performer,
-      List<dynamic> locationCode,
+      List<CodeableConcept> locationCode,
       List<dynamic> locationReference,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> insurance,
       List<dynamic> supportingInfo,
       List<dynamic> specimen,
-      List<dynamic> bodySite,
-      List<dynamic> note,
+      List<CodeableConcept> bodySite,
+      List<Annotation> note,
       String patientInstruction,
       List<dynamic> relevantHistory}) {
     return ServiceRequest(
@@ -352,10 +352,10 @@ class _$CareProvisionTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       GoalLifecycleStatus lifecycleStatus,
       CodeableConcept achievementStatus,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       CodeableConcept priority,
       CodeableConcept description,
       Reference subject,
@@ -366,8 +366,8 @@ class _$CareProvisionTearOff {
       String statusReason,
       Reference expressedBy,
       List<dynamic> addresses,
-      List<dynamic> note,
-      List<dynamic> outcomeCode,
+      List<Annotation> note,
+      List<CodeableConcept> outcomeCode,
       List<dynamic> outcomeReference}) {
     return Goal(
       resourceType: resourceType,
@@ -439,7 +439,7 @@ class _$CareProvisionTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<FhirUri> instantiates,
@@ -449,12 +449,12 @@ class _$CareProvisionTearOff {
       FhirDateTime dateTime,
       Reference orderer,
       List<dynamic> allergyIntolerance,
-      List<dynamic> foodPreferenceModifier,
-      List<dynamic> excludeFoodModifier,
+      List<CodeableConcept> foodPreferenceModifier,
+      List<CodeableConcept> excludeFoodModifier,
       NutritionOrderOralDiet oralDiet,
       List<dynamic> supplement,
       NutritionOrderEnteralFormula enteralFormula,
-      List<dynamic> note}) {
+      List<Annotation> note}) {
     return NutritionOrder(
       resourceType: resourceType,
       id: id,
@@ -488,11 +488,11 @@ class _$CareProvisionTearOff {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> type,
-      List<dynamic> schedule,
+      List<CodeableConcept> type,
+      List<Timing> schedule,
       List<dynamic> nutrient,
       List<dynamic> texture,
-      List<dynamic> fluidConsistencyType,
+      List<CodeableConcept> fluidConsistencyType,
       String instruction}) {
     return NutritionOrderOralDiet(
       id: id,
@@ -542,7 +542,7 @@ class _$CareProvisionTearOff {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       CodeableConcept type,
       String productName,
-      List<dynamic> schedule,
+      List<Timing> schedule,
       Quantity quantity,
       String instruction}) {
     return NutritionOrderSupplement(
@@ -612,14 +612,14 @@ class _$CareProvisionTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<dynamic> basedOn,
       List<dynamic> replaces,
       List<dynamic> partOf,
       Code status,
       Code intent,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       String title,
       String description,
       Reference subject,
@@ -632,7 +632,7 @@ class _$CareProvisionTearOff {
       List<dynamic> supportingInfo,
       List<dynamic> goal,
       List<dynamic> activity,
-      List<dynamic> note}) {
+      List<Annotation> note}) {
     return CarePlan(
       resourceType: resourceType,
       id: id,
@@ -671,8 +671,8 @@ class _$CareProvisionTearOff {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> outcomeCodeableConcept,
-      List<dynamic> progress,
+      List<CodeableConcept> outcomeCodeableConcept,
+      List<Annotation> progress,
       Reference reference,
       CarePlanDetail detail}) {
     return CarePlanActivity(
@@ -693,7 +693,7 @@ class _$CareProvisionTearOff {
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       CodeableConcept code,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> goal,
       CarePlanDetailStatus status,
@@ -745,19 +745,19 @@ class _$CareProvisionTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       CareTeamStatus status,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       String name,
       Reference subject,
       Reference encounter,
       Period period,
       List<dynamic> participant,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> managingOrganization,
-      List<dynamic> telecom,
-      List<dynamic> note}) {
+      List<ContactPoint> telecom,
+      List<Annotation> note}) {
     return CareTeam(
       resourceType: resourceType,
       id: id,
@@ -788,7 +788,7 @@ class _$CareProvisionTearOff {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> role,
+      List<CodeableConcept> role,
       Reference member,
       Reference onBehalfOf,
       Period period}) {
@@ -813,7 +813,7 @@ class _$CareProvisionTearOff {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<dynamic> basedOn,
@@ -827,9 +827,9 @@ class _$CareProvisionTearOff {
       Reference encounter,
       FhirDateTime authoredOn,
       Reference author,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> action}) {
     return RequestGroup(
       resourceType: resourceType,
@@ -871,7 +871,7 @@ class _$CareProvisionTearOff {
       String description,
       String textEquivalent,
       Code priority,
-      List<dynamic> code,
+      List<CodeableConcept> code,
       List<dynamic> documentation,
       List<dynamic> condition,
       List<dynamic> relatedAction,
@@ -976,7 +976,7 @@ mixin _$CareProvision {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -1002,7 +1002,7 @@ mixin _$CareProvision {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -1021,7 +1021,7 @@ mixin _$CareProvision {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -1033,12 +1033,12 @@ mixin _$CareProvision {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -1062,7 +1062,7 @@ mixin _$CareProvision {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -1070,11 +1070,11 @@ mixin _$CareProvision {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -1089,15 +1089,15 @@ mixin _$CareProvision {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -1110,10 +1110,10 @@ mixin _$CareProvision {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -1124,8 +1124,8 @@ mixin _$CareProvision {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -1153,7 +1153,7 @@ mixin _$CareProvision {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -1163,22 +1163,22 @@ mixin _$CareProvision {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -1200,7 +1200,7 @@ mixin _$CareProvision {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -1236,14 +1236,14 @@ mixin _$CareProvision {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -1256,14 +1256,14 @@ mixin _$CareProvision {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -1274,7 +1274,7 @@ mixin _$CareProvision {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -1301,25 +1301,25 @@ mixin _$CareProvision {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -1334,7 +1334,7 @@ mixin _$CareProvision {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -1348,9 +1348,9 @@ mixin _$CareProvision {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -1362,7 +1362,7 @@ mixin _$CareProvision {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -1410,7 +1410,7 @@ mixin _$CareProvision {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -1435,7 +1435,7 @@ mixin _$CareProvision {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -1452,7 +1452,7 @@ mixin _$CareProvision {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -1464,12 +1464,12 @@ mixin _$CareProvision {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -1491,7 +1491,7 @@ mixin _$CareProvision {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -1499,11 +1499,11 @@ mixin _$CareProvision {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -1518,15 +1518,15 @@ mixin _$CareProvision {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -1538,10 +1538,10 @@ mixin _$CareProvision {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -1552,8 +1552,8 @@ mixin _$CareProvision {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -1579,7 +1579,7 @@ mixin _$CareProvision {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -1589,21 +1589,21 @@ mixin _$CareProvision {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -1622,7 +1622,7 @@ mixin _$CareProvision {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -1655,14 +1655,14 @@ mixin _$CareProvision {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -1675,13 +1675,13 @@ mixin _$CareProvision {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -1691,7 +1691,7 @@ mixin _$CareProvision {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -1717,24 +1717,24 @@ mixin _$CareProvision {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -1748,7 +1748,7 @@ mixin _$CareProvision {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -1762,9 +1762,9 @@ mixin _$CareProvision {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -1775,7 +1775,7 @@ mixin _$CareProvision {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -1917,7 +1917,7 @@ abstract class $VisionPrescriptionCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       FhirDateTime created,
       Reference patient,
@@ -1978,7 +1978,7 @@ class _$VisionPrescriptionCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as Code,
       created: created == freezed ? _value.created : created as FhirDateTime,
       patient: patient == freezed ? _value.patient : patient as Reference,
@@ -2040,7 +2040,7 @@ class _$VisionPrescription implements VisionPrescription {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Code status;
   @override
@@ -2153,7 +2153,7 @@ class _$VisionPrescription implements VisionPrescription {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -2179,7 +2179,7 @@ class _$VisionPrescription implements VisionPrescription {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -2198,7 +2198,7 @@ class _$VisionPrescription implements VisionPrescription {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -2210,12 +2210,12 @@ class _$VisionPrescription implements VisionPrescription {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -2239,7 +2239,7 @@ class _$VisionPrescription implements VisionPrescription {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -2247,11 +2247,11 @@ class _$VisionPrescription implements VisionPrescription {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -2266,15 +2266,15 @@ class _$VisionPrescription implements VisionPrescription {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -2287,10 +2287,10 @@ class _$VisionPrescription implements VisionPrescription {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -2301,8 +2301,8 @@ class _$VisionPrescription implements VisionPrescription {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -2330,7 +2330,7 @@ class _$VisionPrescription implements VisionPrescription {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -2340,22 +2340,22 @@ class _$VisionPrescription implements VisionPrescription {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -2377,7 +2377,7 @@ class _$VisionPrescription implements VisionPrescription {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -2413,14 +2413,14 @@ class _$VisionPrescription implements VisionPrescription {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -2433,14 +2433,14 @@ class _$VisionPrescription implements VisionPrescription {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -2451,7 +2451,7 @@ class _$VisionPrescription implements VisionPrescription {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -2478,25 +2478,25 @@ class _$VisionPrescription implements VisionPrescription {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -2511,7 +2511,7 @@ class _$VisionPrescription implements VisionPrescription {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -2525,9 +2525,9 @@ class _$VisionPrescription implements VisionPrescription {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -2539,7 +2539,7 @@ class _$VisionPrescription implements VisionPrescription {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -2632,7 +2632,7 @@ class _$VisionPrescription implements VisionPrescription {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -2657,7 +2657,7 @@ class _$VisionPrescription implements VisionPrescription {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -2674,7 +2674,7 @@ class _$VisionPrescription implements VisionPrescription {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -2686,12 +2686,12 @@ class _$VisionPrescription implements VisionPrescription {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -2713,7 +2713,7 @@ class _$VisionPrescription implements VisionPrescription {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -2721,11 +2721,11 @@ class _$VisionPrescription implements VisionPrescription {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -2740,15 +2740,15 @@ class _$VisionPrescription implements VisionPrescription {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -2760,10 +2760,10 @@ class _$VisionPrescription implements VisionPrescription {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -2774,8 +2774,8 @@ class _$VisionPrescription implements VisionPrescription {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -2801,7 +2801,7 @@ class _$VisionPrescription implements VisionPrescription {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -2811,21 +2811,21 @@ class _$VisionPrescription implements VisionPrescription {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -2844,7 +2844,7 @@ class _$VisionPrescription implements VisionPrescription {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -2877,14 +2877,14 @@ class _$VisionPrescription implements VisionPrescription {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -2897,13 +2897,13 @@ class _$VisionPrescription implements VisionPrescription {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -2913,7 +2913,7 @@ class _$VisionPrescription implements VisionPrescription {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -2939,24 +2939,24 @@ class _$VisionPrescription implements VisionPrescription {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -2970,7 +2970,7 @@ class _$VisionPrescription implements VisionPrescription {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -2984,9 +2984,9 @@ class _$VisionPrescription implements VisionPrescription {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -2997,7 +2997,7 @@ class _$VisionPrescription implements VisionPrescription {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -3170,7 +3170,7 @@ abstract class VisionPrescription implements CareProvision {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Code status,
       FhirDateTime created,
       Reference patient,
@@ -3193,7 +3193,7 @@ abstract class VisionPrescription implements CareProvision {
   @JsonKey(name: 'extension')
   List<dynamic> get fhirExtension;
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   Code get status;
   FhirDateTime get created;
   Reference get patient;
@@ -3229,7 +3229,10 @@ abstract class $VisionPrescriptionLensSpecificationCopyWith<$Res>
       Quantity duration,
       String color,
       String brand,
-      List<dynamic> note});
+      List<Annotation> note});
+
+  $CodeableConceptCopyWith<$Res> get product;
+  $QuantityCopyWith<$Res> get duration;
 }
 
 class _$VisionPrescriptionLensSpecificationCopyWithImpl<$Res>
@@ -3287,8 +3290,28 @@ class _$VisionPrescriptionLensSpecificationCopyWithImpl<$Res>
       duration: duration == freezed ? _value.duration : duration as Quantity,
       color: color == freezed ? _value.color : color as String,
       brand: brand == freezed ? _value.brand : brand as String,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get product {
+    if (_value.product == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.product, (value) {
+      return _then(_value.copyWith(product: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get duration {
+    if (_value.duration == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.duration, (value) {
+      return _then(_value.copyWith(duration: value));
+    });
   }
 }
 
@@ -3352,7 +3375,7 @@ class _$VisionPrescriptionLensSpecification
   @override
   final String brand;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
 
   @override
   String toString() {
@@ -3447,7 +3470,7 @@ class _$VisionPrescriptionLensSpecification
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -3473,7 +3496,7 @@ class _$VisionPrescriptionLensSpecification
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -3492,7 +3515,7 @@ class _$VisionPrescriptionLensSpecification
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -3504,12 +3527,12 @@ class _$VisionPrescriptionLensSpecification
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -3533,7 +3556,7 @@ class _$VisionPrescriptionLensSpecification
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -3541,11 +3564,11 @@ class _$VisionPrescriptionLensSpecification
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -3560,15 +3583,15 @@ class _$VisionPrescriptionLensSpecification
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -3581,10 +3604,10 @@ class _$VisionPrescriptionLensSpecification
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -3595,8 +3618,8 @@ class _$VisionPrescriptionLensSpecification
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -3624,7 +3647,7 @@ class _$VisionPrescriptionLensSpecification
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -3634,22 +3657,22 @@ class _$VisionPrescriptionLensSpecification
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -3671,7 +3694,7 @@ class _$VisionPrescriptionLensSpecification
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -3707,14 +3730,14 @@ class _$VisionPrescriptionLensSpecification
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -3727,14 +3750,14 @@ class _$VisionPrescriptionLensSpecification
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -3745,7 +3768,7 @@ class _$VisionPrescriptionLensSpecification
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -3772,25 +3795,25 @@ class _$VisionPrescriptionLensSpecification
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -3805,7 +3828,7 @@ class _$VisionPrescriptionLensSpecification
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -3819,9 +3842,9 @@ class _$VisionPrescriptionLensSpecification
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -3833,7 +3856,7 @@ class _$VisionPrescriptionLensSpecification
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -3926,7 +3949,7 @@ class _$VisionPrescriptionLensSpecification
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -3951,7 +3974,7 @@ class _$VisionPrescriptionLensSpecification
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -3968,7 +3991,7 @@ class _$VisionPrescriptionLensSpecification
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -3980,12 +4003,12 @@ class _$VisionPrescriptionLensSpecification
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -4007,7 +4030,7 @@ class _$VisionPrescriptionLensSpecification
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -4015,11 +4038,11 @@ class _$VisionPrescriptionLensSpecification
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -4034,15 +4057,15 @@ class _$VisionPrescriptionLensSpecification
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -4054,10 +4077,10 @@ class _$VisionPrescriptionLensSpecification
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -4068,8 +4091,8 @@ class _$VisionPrescriptionLensSpecification
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -4095,7 +4118,7 @@ class _$VisionPrescriptionLensSpecification
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -4105,21 +4128,21 @@ class _$VisionPrescriptionLensSpecification
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -4138,7 +4161,7 @@ class _$VisionPrescriptionLensSpecification
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -4171,14 +4194,14 @@ class _$VisionPrescriptionLensSpecification
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -4191,13 +4214,13 @@ class _$VisionPrescriptionLensSpecification
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -4207,7 +4230,7 @@ class _$VisionPrescriptionLensSpecification
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -4233,24 +4256,24 @@ class _$VisionPrescriptionLensSpecification
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -4264,7 +4287,7 @@ class _$VisionPrescriptionLensSpecification
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -4278,9 +4301,9 @@ class _$VisionPrescriptionLensSpecification
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -4291,7 +4314,7 @@ class _$VisionPrescriptionLensSpecification
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -4471,7 +4494,7 @@ abstract class VisionPrescriptionLensSpecification implements CareProvision {
       Quantity duration,
       String color,
       String brand,
-      List<dynamic> note}) = _$VisionPrescriptionLensSpecification;
+      List<Annotation> note}) = _$VisionPrescriptionLensSpecification;
 
   factory VisionPrescriptionLensSpecification.fromJson(
           Map<String, dynamic> json) =
@@ -4495,7 +4518,7 @@ abstract class VisionPrescriptionLensSpecification implements CareProvision {
   Quantity get duration;
   String get color;
   String get brand;
-  List<dynamic> get note;
+  List<Annotation> get note;
   @override
   $VisionPrescriptionLensSpecificationCopyWith<
       VisionPrescriptionLensSpecification> get copyWith;
@@ -4622,7 +4645,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -4648,7 +4671,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -4667,7 +4690,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -4679,12 +4702,12 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -4708,7 +4731,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -4716,11 +4739,11 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -4735,15 +4758,15 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -4756,10 +4779,10 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -4770,8 +4793,8 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -4799,7 +4822,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -4809,22 +4832,22 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -4846,7 +4869,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -4882,14 +4905,14 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -4902,14 +4925,14 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -4920,7 +4943,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -4947,25 +4970,25 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -4980,7 +5003,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -4994,9 +5017,9 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -5008,7 +5031,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -5085,7 +5108,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -5110,7 +5133,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -5127,7 +5150,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -5139,12 +5162,12 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -5166,7 +5189,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -5174,11 +5197,11 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -5193,15 +5216,15 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -5213,10 +5236,10 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -5227,8 +5250,8 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -5254,7 +5277,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -5264,21 +5287,21 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -5297,7 +5320,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -5330,14 +5353,14 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -5350,13 +5373,13 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -5366,7 +5389,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -5392,24 +5415,24 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -5423,7 +5446,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -5437,9 +5460,9 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -5450,7 +5473,7 @@ class _$VisionPrescriptionPrism implements VisionPrescriptionPrism {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -5634,7 +5657,7 @@ abstract class $RiskAssessmentCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Reference basedOn,
       Reference parent,
       Code status,
@@ -5646,12 +5669,16 @@ abstract class $RiskAssessmentCopyWith<$Res>
       Period occurrencePeriod,
       Reference condition,
       Reference performer,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> basis,
       List<dynamic> prediction,
       String mitigation,
-      List<dynamic> note});
+      List<Annotation> note});
+
+  $CodeableConceptCopyWith<$Res> get method;
+  $CodeableConceptCopyWith<$Res> get code;
+  $PeriodCopyWith<$Res> get occurrencePeriod;
 }
 
 class _$RiskAssessmentCopyWithImpl<$Res>
@@ -5715,7 +5742,7 @@ class _$RiskAssessmentCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as Reference,
       parent: parent == freezed ? _value.parent : parent as Reference,
       status: status == freezed ? _value.status : status as Code,
@@ -5736,7 +5763,7 @@ class _$RiskAssessmentCopyWithImpl<$Res>
           performer == freezed ? _value.performer : performer as Reference,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<dynamic>,
+          : reasonCode as List<CodeableConcept>,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
           : reasonReference as List<dynamic>,
@@ -5746,8 +5773,38 @@ class _$RiskAssessmentCopyWithImpl<$Res>
           : prediction as List<dynamic>,
       mitigation:
           mitigation == freezed ? _value.mitigation : mitigation as String,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get method {
+    if (_value.method == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.method, (value) {
+      return _then(_value.copyWith(method: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get occurrencePeriod {
+    if (_value.occurrencePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.occurrencePeriod, (value) {
+      return _then(_value.copyWith(occurrencePeriod: value));
+    });
   }
 }
 
@@ -5805,7 +5862,7 @@ class _$RiskAssessment implements RiskAssessment {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final Reference basedOn;
   @override
@@ -5829,7 +5886,7 @@ class _$RiskAssessment implements RiskAssessment {
   @override
   final Reference performer;
   @override
-  final List<dynamic> reasonCode;
+  final List<CodeableConcept> reasonCode;
   @override
   final List<dynamic> reasonReference;
   @override
@@ -5839,7 +5896,7 @@ class _$RiskAssessment implements RiskAssessment {
   @override
   final String mitigation;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
 
   @override
   String toString() {
@@ -5971,7 +6028,7 @@ class _$RiskAssessment implements RiskAssessment {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -5997,7 +6054,7 @@ class _$RiskAssessment implements RiskAssessment {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -6016,7 +6073,7 @@ class _$RiskAssessment implements RiskAssessment {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -6028,12 +6085,12 @@ class _$RiskAssessment implements RiskAssessment {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -6057,7 +6114,7 @@ class _$RiskAssessment implements RiskAssessment {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -6065,11 +6122,11 @@ class _$RiskAssessment implements RiskAssessment {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -6084,15 +6141,15 @@ class _$RiskAssessment implements RiskAssessment {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -6105,10 +6162,10 @@ class _$RiskAssessment implements RiskAssessment {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -6119,8 +6176,8 @@ class _$RiskAssessment implements RiskAssessment {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -6148,7 +6205,7 @@ class _$RiskAssessment implements RiskAssessment {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -6158,22 +6215,22 @@ class _$RiskAssessment implements RiskAssessment {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -6195,7 +6252,7 @@ class _$RiskAssessment implements RiskAssessment {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -6231,14 +6288,14 @@ class _$RiskAssessment implements RiskAssessment {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -6251,14 +6308,14 @@ class _$RiskAssessment implements RiskAssessment {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -6269,7 +6326,7 @@ class _$RiskAssessment implements RiskAssessment {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -6296,25 +6353,25 @@ class _$RiskAssessment implements RiskAssessment {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -6329,7 +6386,7 @@ class _$RiskAssessment implements RiskAssessment {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -6343,9 +6400,9 @@ class _$RiskAssessment implements RiskAssessment {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -6357,7 +6414,7 @@ class _$RiskAssessment implements RiskAssessment {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -6460,7 +6517,7 @@ class _$RiskAssessment implements RiskAssessment {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -6485,7 +6542,7 @@ class _$RiskAssessment implements RiskAssessment {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -6502,7 +6559,7 @@ class _$RiskAssessment implements RiskAssessment {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -6514,12 +6571,12 @@ class _$RiskAssessment implements RiskAssessment {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -6541,7 +6598,7 @@ class _$RiskAssessment implements RiskAssessment {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -6549,11 +6606,11 @@ class _$RiskAssessment implements RiskAssessment {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -6568,15 +6625,15 @@ class _$RiskAssessment implements RiskAssessment {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -6588,10 +6645,10 @@ class _$RiskAssessment implements RiskAssessment {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -6602,8 +6659,8 @@ class _$RiskAssessment implements RiskAssessment {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -6629,7 +6686,7 @@ class _$RiskAssessment implements RiskAssessment {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -6639,21 +6696,21 @@ class _$RiskAssessment implements RiskAssessment {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -6672,7 +6729,7 @@ class _$RiskAssessment implements RiskAssessment {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -6705,14 +6762,14 @@ class _$RiskAssessment implements RiskAssessment {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -6725,13 +6782,13 @@ class _$RiskAssessment implements RiskAssessment {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -6741,7 +6798,7 @@ class _$RiskAssessment implements RiskAssessment {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -6767,24 +6824,24 @@ class _$RiskAssessment implements RiskAssessment {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -6798,7 +6855,7 @@ class _$RiskAssessment implements RiskAssessment {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -6812,9 +6869,9 @@ class _$RiskAssessment implements RiskAssessment {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -6825,7 +6882,7 @@ class _$RiskAssessment implements RiskAssessment {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -7007,7 +7064,7 @@ abstract class RiskAssessment implements CareProvision {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       Reference basedOn,
       Reference parent,
       Code status,
@@ -7019,12 +7076,12 @@ abstract class RiskAssessment implements CareProvision {
       Period occurrencePeriod,
       Reference condition,
       Reference performer,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> basis,
       List<dynamic> prediction,
       String mitigation,
-      List<dynamic> note}) = _$RiskAssessment;
+      List<Annotation> note}) = _$RiskAssessment;
 
   factory RiskAssessment.fromJson(Map<String, dynamic> json) =
       _$RiskAssessment.fromJson;
@@ -7040,7 +7097,7 @@ abstract class RiskAssessment implements CareProvision {
   @JsonKey(name: 'extension')
   List<dynamic> get fhirExtension;
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   Reference get basedOn;
   Reference get parent;
   Code get status;
@@ -7052,12 +7109,12 @@ abstract class RiskAssessment implements CareProvision {
   Period get occurrencePeriod;
   Reference get condition;
   Reference get performer;
-  List<dynamic> get reasonCode;
+  List<CodeableConcept> get reasonCode;
   List<dynamic> get reasonReference;
   List<dynamic> get basis;
   List<dynamic> get prediction;
   String get mitigation;
-  List<dynamic> get note;
+  List<Annotation> get note;
   @override
   $RiskAssessmentCopyWith<RiskAssessment> get copyWith;
 }
@@ -7079,6 +7136,11 @@ abstract class $RiskAssessmentPredictionCopyWith<$Res>
       Period whenPeriod,
       Range whenRange,
       String rationale});
+
+  $RangeCopyWith<$Res> get probabilityRange;
+  $CodeableConceptCopyWith<$Res> get qualitativeRisk;
+  $PeriodCopyWith<$Res> get whenPeriod;
+  $RangeCopyWith<$Res> get whenRange;
 }
 
 class _$RiskAssessmentPredictionCopyWithImpl<$Res>
@@ -7130,6 +7192,46 @@ class _$RiskAssessmentPredictionCopyWithImpl<$Res>
       whenRange: whenRange == freezed ? _value.whenRange : whenRange as Range,
       rationale: rationale == freezed ? _value.rationale : rationale as String,
     ));
+  }
+
+  @override
+  $RangeCopyWith<$Res> get probabilityRange {
+    if (_value.probabilityRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.probabilityRange, (value) {
+      return _then(_value.copyWith(probabilityRange: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get qualitativeRisk {
+    if (_value.qualitativeRisk == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.qualitativeRisk, (value) {
+      return _then(_value.copyWith(qualitativeRisk: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get whenPeriod {
+    if (_value.whenPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.whenPeriod, (value) {
+      return _then(_value.copyWith(whenPeriod: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get whenRange {
+    if (_value.whenRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.whenRange, (value) {
+      return _then(_value.copyWith(whenRange: value));
+    });
   }
 }
 
@@ -7245,7 +7347,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -7271,7 +7373,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -7290,7 +7392,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -7302,12 +7404,12 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -7331,7 +7433,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -7339,11 +7441,11 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -7358,15 +7460,15 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -7379,10 +7481,10 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -7393,8 +7495,8 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -7422,7 +7524,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -7432,22 +7534,22 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -7469,7 +7571,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -7505,14 +7607,14 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -7525,14 +7627,14 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -7543,7 +7645,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -7570,25 +7672,25 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -7603,7 +7705,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -7617,9 +7719,9 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -7631,7 +7733,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -7717,7 +7819,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -7742,7 +7844,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -7759,7 +7861,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -7771,12 +7873,12 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -7798,7 +7900,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -7806,11 +7908,11 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -7825,15 +7927,15 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -7845,10 +7947,10 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -7859,8 +7961,8 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -7886,7 +7988,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -7896,21 +7998,21 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -7929,7 +8031,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -7962,14 +8064,14 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -7982,13 +8084,13 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -7998,7 +8100,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -8024,24 +8126,24 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -8055,7 +8157,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -8069,9 +8171,9 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -8082,7 +8184,7 @@ class _$RiskAssessmentPrediction implements RiskAssessmentPrediction {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -8285,7 +8387,7 @@ abstract class $ServiceRequestCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<dynamic> basedOn,
@@ -8293,11 +8395,11 @@ abstract class $ServiceRequestCopyWith<$Res>
       Identifier requisition,
       Code status,
       Code intent,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Code priority,
       bool doNotPerform,
       CodeableConcept code,
-      List<dynamic> orderDetail,
+      List<CodeableConcept> orderDetail,
       Quantity quantityQuantity,
       Ratio quantityRatio,
       Range quantityRange,
@@ -8312,17 +8414,27 @@ abstract class $ServiceRequestCopyWith<$Res>
       Reference requester,
       CodeableConcept performerType,
       List<dynamic> performer,
-      List<dynamic> locationCode,
+      List<CodeableConcept> locationCode,
       List<dynamic> locationReference,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> insurance,
       List<dynamic> supportingInfo,
       List<dynamic> specimen,
-      List<dynamic> bodySite,
-      List<dynamic> note,
+      List<CodeableConcept> bodySite,
+      List<Annotation> note,
       String patientInstruction,
       List<dynamic> relevantHistory});
+
+  $IdentifierCopyWith<$Res> get requisition;
+  $CodeableConceptCopyWith<$Res> get code;
+  $QuantityCopyWith<$Res> get quantityQuantity;
+  $RatioCopyWith<$Res> get quantityRatio;
+  $RangeCopyWith<$Res> get quantityRange;
+  $PeriodCopyWith<$Res> get occurrencePeriod;
+  $TimingCopyWith<$Res> get occurrenceTiming;
+  $CodeableConceptCopyWith<$Res> get asNeededCodeableConcept;
+  $CodeableConceptCopyWith<$Res> get performerType;
 }
 
 class _$ServiceRequestCopyWithImpl<$Res>
@@ -8406,7 +8518,7 @@ class _$ServiceRequestCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       instantiatesCanonical: instantiatesCanonical == freezed
           ? _value.instantiatesCanonical
           : instantiatesCanonical as List<Canonical>,
@@ -8421,15 +8533,16 @@ class _$ServiceRequestCopyWithImpl<$Res>
           : requisition as Identifier,
       status: status == freezed ? _value.status : status as Code,
       intent: intent == freezed ? _value.intent : intent as Code,
-      category:
-          category == freezed ? _value.category : category as List<dynamic>,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
       priority: priority == freezed ? _value.priority : priority as Code,
       doNotPerform:
           doNotPerform == freezed ? _value.doNotPerform : doNotPerform as bool,
       code: code == freezed ? _value.code : code as CodeableConcept,
       orderDetail: orderDetail == freezed
           ? _value.orderDetail
-          : orderDetail as List<dynamic>,
+          : orderDetail as List<CodeableConcept>,
       quantityQuantity: quantityQuantity == freezed
           ? _value.quantityQuantity
           : quantityQuantity as Quantity,
@@ -8469,13 +8582,13 @@ class _$ServiceRequestCopyWithImpl<$Res>
           performer == freezed ? _value.performer : performer as List<dynamic>,
       locationCode: locationCode == freezed
           ? _value.locationCode
-          : locationCode as List<dynamic>,
+          : locationCode as List<CodeableConcept>,
       locationReference: locationReference == freezed
           ? _value.locationReference
           : locationReference as List<dynamic>,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<dynamic>,
+          : reasonCode as List<CodeableConcept>,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
           : reasonReference as List<dynamic>,
@@ -8486,9 +8599,10 @@ class _$ServiceRequestCopyWithImpl<$Res>
           : supportingInfo as List<dynamic>,
       specimen:
           specimen == freezed ? _value.specimen : specimen as List<dynamic>,
-      bodySite:
-          bodySite == freezed ? _value.bodySite : bodySite as List<dynamic>,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      bodySite: bodySite == freezed
+          ? _value.bodySite
+          : bodySite as List<CodeableConcept>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
       patientInstruction: patientInstruction == freezed
           ? _value.patientInstruction
           : patientInstruction as String,
@@ -8496,6 +8610,97 @@ class _$ServiceRequestCopyWithImpl<$Res>
           ? _value.relevantHistory
           : relevantHistory as List<dynamic>,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get requisition {
+    if (_value.requisition == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.requisition, (value) {
+      return _then(_value.copyWith(requisition: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get quantityQuantity {
+    if (_value.quantityQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.quantityQuantity, (value) {
+      return _then(_value.copyWith(quantityQuantity: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get quantityRatio {
+    if (_value.quantityRatio == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.quantityRatio, (value) {
+      return _then(_value.copyWith(quantityRatio: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get quantityRange {
+    if (_value.quantityRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.quantityRange, (value) {
+      return _then(_value.copyWith(quantityRange: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get occurrencePeriod {
+    if (_value.occurrencePeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.occurrencePeriod, (value) {
+      return _then(_value.copyWith(occurrencePeriod: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get occurrenceTiming {
+    if (_value.occurrenceTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.occurrenceTiming, (value) {
+      return _then(_value.copyWith(occurrenceTiming: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get asNeededCodeableConcept {
+    if (_value.asNeededCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.asNeededCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(asNeededCodeableConcept: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get performerType {
+    if (_value.performerType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.performerType, (value) {
+      return _then(_value.copyWith(performerType: value));
+    });
   }
 }
 
@@ -8573,7 +8778,7 @@ class _$ServiceRequest implements ServiceRequest {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final List<Canonical> instantiatesCanonical;
   @override
@@ -8589,7 +8794,7 @@ class _$ServiceRequest implements ServiceRequest {
   @override
   final Code intent;
   @override
-  final List<dynamic> category;
+  final List<CodeableConcept> category;
   @override
   final Code priority;
   @override
@@ -8597,7 +8802,7 @@ class _$ServiceRequest implements ServiceRequest {
   @override
   final CodeableConcept code;
   @override
-  final List<dynamic> orderDetail;
+  final List<CodeableConcept> orderDetail;
   @override
   final Quantity quantityQuantity;
   @override
@@ -8627,11 +8832,11 @@ class _$ServiceRequest implements ServiceRequest {
   @override
   final List<dynamic> performer;
   @override
-  final List<dynamic> locationCode;
+  final List<CodeableConcept> locationCode;
   @override
   final List<dynamic> locationReference;
   @override
-  final List<dynamic> reasonCode;
+  final List<CodeableConcept> reasonCode;
   @override
   final List<dynamic> reasonReference;
   @override
@@ -8641,9 +8846,9 @@ class _$ServiceRequest implements ServiceRequest {
   @override
   final List<dynamic> specimen;
   @override
-  final List<dynamic> bodySite;
+  final List<CodeableConcept> bodySite;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
   @override
   final String patientInstruction;
   @override
@@ -8819,7 +9024,7 @@ class _$ServiceRequest implements ServiceRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -8845,7 +9050,7 @@ class _$ServiceRequest implements ServiceRequest {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -8864,7 +9069,7 @@ class _$ServiceRequest implements ServiceRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -8876,12 +9081,12 @@ class _$ServiceRequest implements ServiceRequest {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -8905,7 +9110,7 @@ class _$ServiceRequest implements ServiceRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -8913,11 +9118,11 @@ class _$ServiceRequest implements ServiceRequest {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -8932,15 +9137,15 @@ class _$ServiceRequest implements ServiceRequest {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -8953,10 +9158,10 @@ class _$ServiceRequest implements ServiceRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -8967,8 +9172,8 @@ class _$ServiceRequest implements ServiceRequest {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -8996,7 +9201,7 @@ class _$ServiceRequest implements ServiceRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -9006,22 +9211,22 @@ class _$ServiceRequest implements ServiceRequest {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -9043,7 +9248,7 @@ class _$ServiceRequest implements ServiceRequest {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -9079,14 +9284,14 @@ class _$ServiceRequest implements ServiceRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -9099,14 +9304,14 @@ class _$ServiceRequest implements ServiceRequest {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -9117,7 +9322,7 @@ class _$ServiceRequest implements ServiceRequest {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -9144,25 +9349,25 @@ class _$ServiceRequest implements ServiceRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -9177,7 +9382,7 @@ class _$ServiceRequest implements ServiceRequest {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -9191,9 +9396,9 @@ class _$ServiceRequest implements ServiceRequest {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -9205,7 +9410,7 @@ class _$ServiceRequest implements ServiceRequest {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -9328,7 +9533,7 @@ class _$ServiceRequest implements ServiceRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -9353,7 +9558,7 @@ class _$ServiceRequest implements ServiceRequest {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -9370,7 +9575,7 @@ class _$ServiceRequest implements ServiceRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -9382,12 +9587,12 @@ class _$ServiceRequest implements ServiceRequest {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -9409,7 +9614,7 @@ class _$ServiceRequest implements ServiceRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -9417,11 +9622,11 @@ class _$ServiceRequest implements ServiceRequest {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -9436,15 +9641,15 @@ class _$ServiceRequest implements ServiceRequest {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -9456,10 +9661,10 @@ class _$ServiceRequest implements ServiceRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -9470,8 +9675,8 @@ class _$ServiceRequest implements ServiceRequest {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -9497,7 +9702,7 @@ class _$ServiceRequest implements ServiceRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -9507,21 +9712,21 @@ class _$ServiceRequest implements ServiceRequest {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -9540,7 +9745,7 @@ class _$ServiceRequest implements ServiceRequest {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -9573,14 +9778,14 @@ class _$ServiceRequest implements ServiceRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -9593,13 +9798,13 @@ class _$ServiceRequest implements ServiceRequest {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -9609,7 +9814,7 @@ class _$ServiceRequest implements ServiceRequest {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -9635,24 +9840,24 @@ class _$ServiceRequest implements ServiceRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -9666,7 +9871,7 @@ class _$ServiceRequest implements ServiceRequest {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -9680,9 +9885,9 @@ class _$ServiceRequest implements ServiceRequest {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -9693,7 +9898,7 @@ class _$ServiceRequest implements ServiceRequest {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -9895,7 +10100,7 @@ abstract class ServiceRequest implements CareProvision {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<dynamic> basedOn,
@@ -9903,11 +10108,11 @@ abstract class ServiceRequest implements CareProvision {
       Identifier requisition,
       Code status,
       Code intent,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       Code priority,
       bool doNotPerform,
       CodeableConcept code,
-      List<dynamic> orderDetail,
+      List<CodeableConcept> orderDetail,
       Quantity quantityQuantity,
       Ratio quantityRatio,
       Range quantityRange,
@@ -9922,15 +10127,15 @@ abstract class ServiceRequest implements CareProvision {
       Reference requester,
       CodeableConcept performerType,
       List<dynamic> performer,
-      List<dynamic> locationCode,
+      List<CodeableConcept> locationCode,
       List<dynamic> locationReference,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> insurance,
       List<dynamic> supportingInfo,
       List<dynamic> specimen,
-      List<dynamic> bodySite,
-      List<dynamic> note,
+      List<CodeableConcept> bodySite,
+      List<Annotation> note,
       String patientInstruction,
       List<dynamic> relevantHistory}) = _$ServiceRequest;
 
@@ -9948,7 +10153,7 @@ abstract class ServiceRequest implements CareProvision {
   @JsonKey(name: 'extension')
   List<dynamic> get fhirExtension;
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   List<Canonical> get instantiatesCanonical;
   List<FhirUri> get instantiatesUri;
   List<dynamic> get basedOn;
@@ -9956,11 +10161,11 @@ abstract class ServiceRequest implements CareProvision {
   Identifier get requisition;
   Code get status;
   Code get intent;
-  List<dynamic> get category;
+  List<CodeableConcept> get category;
   Code get priority;
   bool get doNotPerform;
   CodeableConcept get code;
-  List<dynamic> get orderDetail;
+  List<CodeableConcept> get orderDetail;
   Quantity get quantityQuantity;
   Ratio get quantityRatio;
   Range get quantityRange;
@@ -9975,15 +10180,15 @@ abstract class ServiceRequest implements CareProvision {
   Reference get requester;
   CodeableConcept get performerType;
   List<dynamic> get performer;
-  List<dynamic> get locationCode;
+  List<CodeableConcept> get locationCode;
   List<dynamic> get locationReference;
-  List<dynamic> get reasonCode;
+  List<CodeableConcept> get reasonCode;
   List<dynamic> get reasonReference;
   List<dynamic> get insurance;
   List<dynamic> get supportingInfo;
   List<dynamic> get specimen;
-  List<dynamic> get bodySite;
-  List<dynamic> get note;
+  List<CodeableConcept> get bodySite;
+  List<Annotation> get note;
   String get patientInstruction;
   List<dynamic> get relevantHistory;
   @override
@@ -10003,10 +10208,10 @@ abstract class $GoalCopyWith<$Res> implements $CareProvisionCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       GoalLifecycleStatus lifecycleStatus,
       CodeableConcept achievementStatus,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       CodeableConcept priority,
       CodeableConcept description,
       Reference subject,
@@ -10017,9 +10222,14 @@ abstract class $GoalCopyWith<$Res> implements $CareProvisionCopyWith<$Res> {
       String statusReason,
       Reference expressedBy,
       List<dynamic> addresses,
-      List<dynamic> note,
-      List<dynamic> outcomeCode,
+      List<Annotation> note,
+      List<CodeableConcept> outcomeCode,
       List<dynamic> outcomeReference});
+
+  $CodeableConceptCopyWith<$Res> get achievementStatus;
+  $CodeableConceptCopyWith<$Res> get priority;
+  $CodeableConceptCopyWith<$Res> get description;
+  $CodeableConceptCopyWith<$Res> get startCodeableConcept;
 }
 
 class _$GoalCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
@@ -10078,15 +10288,16 @@ class _$GoalCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       lifecycleStatus: lifecycleStatus == freezed
           ? _value.lifecycleStatus
           : lifecycleStatus as GoalLifecycleStatus,
       achievementStatus: achievementStatus == freezed
           ? _value.achievementStatus
           : achievementStatus as CodeableConcept,
-      category:
-          category == freezed ? _value.category : category as List<dynamic>,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
       priority:
           priority == freezed ? _value.priority : priority as CodeableConcept,
       description: description == freezed
@@ -10108,14 +10319,54 @@ class _$GoalCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
           : expressedBy as Reference,
       addresses:
           addresses == freezed ? _value.addresses : addresses as List<dynamic>,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
       outcomeCode: outcomeCode == freezed
           ? _value.outcomeCode
-          : outcomeCode as List<dynamic>,
+          : outcomeCode as List<CodeableConcept>,
       outcomeReference: outcomeReference == freezed
           ? _value.outcomeReference
           : outcomeReference as List<dynamic>,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get achievementStatus {
+    if (_value.achievementStatus == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.achievementStatus, (value) {
+      return _then(_value.copyWith(achievementStatus: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get priority {
+    if (_value.priority == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.priority, (value) {
+      return _then(_value.copyWith(priority: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get description {
+    if (_value.description == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.description, (value) {
+      return _then(_value.copyWith(description: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get startCodeableConcept {
+    if (_value.startCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.startCodeableConcept, (value) {
+      return _then(_value.copyWith(startCodeableConcept: value));
+    });
   }
 }
 
@@ -10168,13 +10419,13 @@ class _$Goal implements Goal {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final GoalLifecycleStatus lifecycleStatus;
   @override
   final CodeableConcept achievementStatus;
   @override
-  final List<dynamic> category;
+  final List<CodeableConcept> category;
   @override
   final CodeableConcept priority;
   @override
@@ -10196,9 +10447,9 @@ class _$Goal implements Goal {
   @override
   final List<dynamic> addresses;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
   @override
-  final List<dynamic> outcomeCode;
+  final List<CodeableConcept> outcomeCode;
   @override
   final List<dynamic> outcomeReference;
 
@@ -10328,7 +10579,7 @@ class _$Goal implements Goal {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -10354,7 +10605,7 @@ class _$Goal implements Goal {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -10373,7 +10624,7 @@ class _$Goal implements Goal {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -10385,12 +10636,12 @@ class _$Goal implements Goal {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -10414,7 +10665,7 @@ class _$Goal implements Goal {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -10422,11 +10673,11 @@ class _$Goal implements Goal {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -10441,15 +10692,15 @@ class _$Goal implements Goal {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -10462,10 +10713,10 @@ class _$Goal implements Goal {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -10476,8 +10727,8 @@ class _$Goal implements Goal {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -10505,7 +10756,7 @@ class _$Goal implements Goal {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -10515,22 +10766,22 @@ class _$Goal implements Goal {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -10552,7 +10803,7 @@ class _$Goal implements Goal {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -10588,14 +10839,14 @@ class _$Goal implements Goal {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -10608,14 +10859,14 @@ class _$Goal implements Goal {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -10626,7 +10877,7 @@ class _$Goal implements Goal {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -10653,25 +10904,25 @@ class _$Goal implements Goal {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -10686,7 +10937,7 @@ class _$Goal implements Goal {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -10700,9 +10951,9 @@ class _$Goal implements Goal {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -10714,7 +10965,7 @@ class _$Goal implements Goal {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -10815,7 +11066,7 @@ class _$Goal implements Goal {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -10840,7 +11091,7 @@ class _$Goal implements Goal {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -10857,7 +11108,7 @@ class _$Goal implements Goal {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -10869,12 +11120,12 @@ class _$Goal implements Goal {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -10896,7 +11147,7 @@ class _$Goal implements Goal {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -10904,11 +11155,11 @@ class _$Goal implements Goal {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -10923,15 +11174,15 @@ class _$Goal implements Goal {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -10943,10 +11194,10 @@ class _$Goal implements Goal {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -10957,8 +11208,8 @@ class _$Goal implements Goal {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -10984,7 +11235,7 @@ class _$Goal implements Goal {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -10994,21 +11245,21 @@ class _$Goal implements Goal {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -11027,7 +11278,7 @@ class _$Goal implements Goal {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -11060,14 +11311,14 @@ class _$Goal implements Goal {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -11080,13 +11331,13 @@ class _$Goal implements Goal {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -11096,7 +11347,7 @@ class _$Goal implements Goal {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -11122,24 +11373,24 @@ class _$Goal implements Goal {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -11153,7 +11404,7 @@ class _$Goal implements Goal {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -11167,9 +11418,9 @@ class _$Goal implements Goal {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -11180,7 +11431,7 @@ class _$Goal implements Goal {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -11359,10 +11610,10 @@ abstract class Goal implements CareProvision {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       GoalLifecycleStatus lifecycleStatus,
       CodeableConcept achievementStatus,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       CodeableConcept priority,
       CodeableConcept description,
       Reference subject,
@@ -11373,8 +11624,8 @@ abstract class Goal implements CareProvision {
       String statusReason,
       Reference expressedBy,
       List<dynamic> addresses,
-      List<dynamic> note,
-      List<dynamic> outcomeCode,
+      List<Annotation> note,
+      List<CodeableConcept> outcomeCode,
       List<dynamic> outcomeReference}) = _$Goal;
 
   factory Goal.fromJson(Map<String, dynamic> json) = _$Goal.fromJson;
@@ -11389,10 +11640,10 @@ abstract class Goal implements CareProvision {
   @JsonKey(name: 'extension')
   List<dynamic> get fhirExtension;
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   GoalLifecycleStatus get lifecycleStatus;
   CodeableConcept get achievementStatus;
-  List<dynamic> get category;
+  List<CodeableConcept> get category;
   CodeableConcept get priority;
   CodeableConcept get description;
   Reference get subject;
@@ -11403,8 +11654,8 @@ abstract class Goal implements CareProvision {
   String get statusReason;
   Reference get expressedBy;
   List<dynamic> get addresses;
-  List<dynamic> get note;
-  List<dynamic> get outcomeCode;
+  List<Annotation> get note;
+  List<CodeableConcept> get outcomeCode;
   List<dynamic> get outcomeReference;
   @override
   $GoalCopyWith<Goal> get copyWith;
@@ -11430,6 +11681,13 @@ abstract class $GoalTargetCopyWith<$Res>
       Ratio detailRatio,
       Date dueDate,
       Duration dueDuration});
+
+  $CodeableConceptCopyWith<$Res> get measure;
+  $QuantityCopyWith<$Res> get detailQuantity;
+  $RangeCopyWith<$Res> get detailRange;
+  $CodeableConceptCopyWith<$Res> get detailCodeableConcept;
+  $RatioCopyWith<$Res> get detailRatio;
+  $DurationCopyWith<$Res> get dueDuration;
 }
 
 class _$GoalTargetCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
@@ -11488,6 +11746,67 @@ class _$GoalTargetCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
       dueDuration:
           dueDuration == freezed ? _value.dueDuration : dueDuration as Duration,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get measure {
+    if (_value.measure == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.measure, (value) {
+      return _then(_value.copyWith(measure: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get detailQuantity {
+    if (_value.detailQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.detailQuantity, (value) {
+      return _then(_value.copyWith(detailQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get detailRange {
+    if (_value.detailRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.detailRange, (value) {
+      return _then(_value.copyWith(detailRange: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get detailCodeableConcept {
+    if (_value.detailCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.detailCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(detailCodeableConcept: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get detailRatio {
+    if (_value.detailRatio == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.detailRatio, (value) {
+      return _then(_value.copyWith(detailRatio: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get dueDuration {
+    if (_value.dueDuration == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.dueDuration, (value) {
+      return _then(_value.copyWith(dueDuration: value));
+    });
   }
 }
 
@@ -11623,7 +11942,7 @@ class _$GoalTarget implements GoalTarget {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -11649,7 +11968,7 @@ class _$GoalTarget implements GoalTarget {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -11668,7 +11987,7 @@ class _$GoalTarget implements GoalTarget {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -11680,12 +11999,12 @@ class _$GoalTarget implements GoalTarget {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -11709,7 +12028,7 @@ class _$GoalTarget implements GoalTarget {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -11717,11 +12036,11 @@ class _$GoalTarget implements GoalTarget {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -11736,15 +12055,15 @@ class _$GoalTarget implements GoalTarget {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -11757,10 +12076,10 @@ class _$GoalTarget implements GoalTarget {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -11771,8 +12090,8 @@ class _$GoalTarget implements GoalTarget {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -11800,7 +12119,7 @@ class _$GoalTarget implements GoalTarget {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -11810,22 +12129,22 @@ class _$GoalTarget implements GoalTarget {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -11847,7 +12166,7 @@ class _$GoalTarget implements GoalTarget {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -11883,14 +12202,14 @@ class _$GoalTarget implements GoalTarget {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -11903,14 +12222,14 @@ class _$GoalTarget implements GoalTarget {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -11921,7 +12240,7 @@ class _$GoalTarget implements GoalTarget {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -11948,25 +12267,25 @@ class _$GoalTarget implements GoalTarget {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -11981,7 +12300,7 @@ class _$GoalTarget implements GoalTarget {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -11995,9 +12314,9 @@ class _$GoalTarget implements GoalTarget {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -12009,7 +12328,7 @@ class _$GoalTarget implements GoalTarget {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -12098,7 +12417,7 @@ class _$GoalTarget implements GoalTarget {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -12123,7 +12442,7 @@ class _$GoalTarget implements GoalTarget {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -12140,7 +12459,7 @@ class _$GoalTarget implements GoalTarget {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -12152,12 +12471,12 @@ class _$GoalTarget implements GoalTarget {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -12179,7 +12498,7 @@ class _$GoalTarget implements GoalTarget {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -12187,11 +12506,11 @@ class _$GoalTarget implements GoalTarget {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -12206,15 +12525,15 @@ class _$GoalTarget implements GoalTarget {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -12226,10 +12545,10 @@ class _$GoalTarget implements GoalTarget {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -12240,8 +12559,8 @@ class _$GoalTarget implements GoalTarget {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -12267,7 +12586,7 @@ class _$GoalTarget implements GoalTarget {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -12277,21 +12596,21 @@ class _$GoalTarget implements GoalTarget {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -12310,7 +12629,7 @@ class _$GoalTarget implements GoalTarget {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -12343,14 +12662,14 @@ class _$GoalTarget implements GoalTarget {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -12363,13 +12682,13 @@ class _$GoalTarget implements GoalTarget {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -12379,7 +12698,7 @@ class _$GoalTarget implements GoalTarget {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -12405,24 +12724,24 @@ class _$GoalTarget implements GoalTarget {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -12436,7 +12755,7 @@ class _$GoalTarget implements GoalTarget {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -12450,9 +12769,9 @@ class _$GoalTarget implements GoalTarget {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -12463,7 +12782,7 @@ class _$GoalTarget implements GoalTarget {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -12674,7 +12993,7 @@ abstract class $NutritionOrderCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<FhirUri> instantiates,
@@ -12684,12 +13003,12 @@ abstract class $NutritionOrderCopyWith<$Res>
       FhirDateTime dateTime,
       Reference orderer,
       List<dynamic> allergyIntolerance,
-      List<dynamic> foodPreferenceModifier,
-      List<dynamic> excludeFoodModifier,
+      List<CodeableConcept> foodPreferenceModifier,
+      List<CodeableConcept> excludeFoodModifier,
       NutritionOrderOralDiet oralDiet,
       List<dynamic> supplement,
       NutritionOrderEnteralFormula enteralFormula,
-      List<dynamic> note});
+      List<Annotation> note});
 }
 
 class _$NutritionOrderCopyWithImpl<$Res>
@@ -12751,7 +13070,7 @@ class _$NutritionOrderCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       instantiatesCanonical: instantiatesCanonical == freezed
           ? _value.instantiatesCanonical
           : instantiatesCanonical as List<Canonical>,
@@ -12772,10 +13091,10 @@ class _$NutritionOrderCopyWithImpl<$Res>
           : allergyIntolerance as List<dynamic>,
       foodPreferenceModifier: foodPreferenceModifier == freezed
           ? _value.foodPreferenceModifier
-          : foodPreferenceModifier as List<dynamic>,
+          : foodPreferenceModifier as List<CodeableConcept>,
       excludeFoodModifier: excludeFoodModifier == freezed
           ? _value.excludeFoodModifier
-          : excludeFoodModifier as List<dynamic>,
+          : excludeFoodModifier as List<CodeableConcept>,
       oralDiet: oralDiet == freezed
           ? _value.oralDiet
           : oralDiet as NutritionOrderOralDiet,
@@ -12785,7 +13104,7 @@ class _$NutritionOrderCopyWithImpl<$Res>
       enteralFormula: enteralFormula == freezed
           ? _value.enteralFormula
           : enteralFormula as NutritionOrderEnteralFormula,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
     ));
   }
 }
@@ -12842,7 +13161,7 @@ class _$NutritionOrder implements NutritionOrder {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final List<Canonical> instantiatesCanonical;
   @override
@@ -12862,9 +13181,9 @@ class _$NutritionOrder implements NutritionOrder {
   @override
   final List<dynamic> allergyIntolerance;
   @override
-  final List<dynamic> foodPreferenceModifier;
+  final List<CodeableConcept> foodPreferenceModifier;
   @override
-  final List<dynamic> excludeFoodModifier;
+  final List<CodeableConcept> excludeFoodModifier;
   @override
   final NutritionOrderOralDiet oralDiet;
   @override
@@ -12872,7 +13191,7 @@ class _$NutritionOrder implements NutritionOrder {
   @override
   final NutritionOrderEnteralFormula enteralFormula;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
 
   @override
   String toString() {
@@ -12999,7 +13318,7 @@ class _$NutritionOrder implements NutritionOrder {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -13025,7 +13344,7 @@ class _$NutritionOrder implements NutritionOrder {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -13044,7 +13363,7 @@ class _$NutritionOrder implements NutritionOrder {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -13056,12 +13375,12 @@ class _$NutritionOrder implements NutritionOrder {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -13085,7 +13404,7 @@ class _$NutritionOrder implements NutritionOrder {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -13093,11 +13412,11 @@ class _$NutritionOrder implements NutritionOrder {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -13112,15 +13431,15 @@ class _$NutritionOrder implements NutritionOrder {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -13133,10 +13452,10 @@ class _$NutritionOrder implements NutritionOrder {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -13147,8 +13466,8 @@ class _$NutritionOrder implements NutritionOrder {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -13176,7 +13495,7 @@ class _$NutritionOrder implements NutritionOrder {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -13186,22 +13505,22 @@ class _$NutritionOrder implements NutritionOrder {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -13223,7 +13542,7 @@ class _$NutritionOrder implements NutritionOrder {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -13259,14 +13578,14 @@ class _$NutritionOrder implements NutritionOrder {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -13279,14 +13598,14 @@ class _$NutritionOrder implements NutritionOrder {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -13297,7 +13616,7 @@ class _$NutritionOrder implements NutritionOrder {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -13324,25 +13643,25 @@ class _$NutritionOrder implements NutritionOrder {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -13357,7 +13676,7 @@ class _$NutritionOrder implements NutritionOrder {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -13371,9 +13690,9 @@ class _$NutritionOrder implements NutritionOrder {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -13385,7 +13704,7 @@ class _$NutritionOrder implements NutritionOrder {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -13486,7 +13805,7 @@ class _$NutritionOrder implements NutritionOrder {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -13511,7 +13830,7 @@ class _$NutritionOrder implements NutritionOrder {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -13528,7 +13847,7 @@ class _$NutritionOrder implements NutritionOrder {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -13540,12 +13859,12 @@ class _$NutritionOrder implements NutritionOrder {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -13567,7 +13886,7 @@ class _$NutritionOrder implements NutritionOrder {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -13575,11 +13894,11 @@ class _$NutritionOrder implements NutritionOrder {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -13594,15 +13913,15 @@ class _$NutritionOrder implements NutritionOrder {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -13614,10 +13933,10 @@ class _$NutritionOrder implements NutritionOrder {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -13628,8 +13947,8 @@ class _$NutritionOrder implements NutritionOrder {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -13655,7 +13974,7 @@ class _$NutritionOrder implements NutritionOrder {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -13665,21 +13984,21 @@ class _$NutritionOrder implements NutritionOrder {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -13698,7 +14017,7 @@ class _$NutritionOrder implements NutritionOrder {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -13731,14 +14050,14 @@ class _$NutritionOrder implements NutritionOrder {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -13751,13 +14070,13 @@ class _$NutritionOrder implements NutritionOrder {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -13767,7 +14086,7 @@ class _$NutritionOrder implements NutritionOrder {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -13793,24 +14112,24 @@ class _$NutritionOrder implements NutritionOrder {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -13824,7 +14143,7 @@ class _$NutritionOrder implements NutritionOrder {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -13838,9 +14157,9 @@ class _$NutritionOrder implements NutritionOrder {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -13851,7 +14170,7 @@ class _$NutritionOrder implements NutritionOrder {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -14031,7 +14350,7 @@ abstract class NutritionOrder implements CareProvision {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<FhirUri> instantiates,
@@ -14041,12 +14360,12 @@ abstract class NutritionOrder implements CareProvision {
       FhirDateTime dateTime,
       Reference orderer,
       List<dynamic> allergyIntolerance,
-      List<dynamic> foodPreferenceModifier,
-      List<dynamic> excludeFoodModifier,
+      List<CodeableConcept> foodPreferenceModifier,
+      List<CodeableConcept> excludeFoodModifier,
       NutritionOrderOralDiet oralDiet,
       List<dynamic> supplement,
       NutritionOrderEnteralFormula enteralFormula,
-      List<dynamic> note}) = _$NutritionOrder;
+      List<Annotation> note}) = _$NutritionOrder;
 
   factory NutritionOrder.fromJson(Map<String, dynamic> json) =
       _$NutritionOrder.fromJson;
@@ -14062,7 +14381,7 @@ abstract class NutritionOrder implements CareProvision {
   @JsonKey(name: 'extension')
   List<dynamic> get fhirExtension;
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   List<Canonical> get instantiatesCanonical;
   List<FhirUri> get instantiatesUri;
   List<FhirUri> get instantiates;
@@ -14072,12 +14391,12 @@ abstract class NutritionOrder implements CareProvision {
   FhirDateTime get dateTime;
   Reference get orderer;
   List<dynamic> get allergyIntolerance;
-  List<dynamic> get foodPreferenceModifier;
-  List<dynamic> get excludeFoodModifier;
+  List<CodeableConcept> get foodPreferenceModifier;
+  List<CodeableConcept> get excludeFoodModifier;
   NutritionOrderOralDiet get oralDiet;
   List<dynamic> get supplement;
   NutritionOrderEnteralFormula get enteralFormula;
-  List<dynamic> get note;
+  List<Annotation> get note;
   @override
   $NutritionOrderCopyWith<NutritionOrder> get copyWith;
 }
@@ -14092,11 +14411,11 @@ abstract class $NutritionOrderOralDietCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> type,
-      List<dynamic> schedule,
+      List<CodeableConcept> type,
+      List<Timing> schedule,
       List<dynamic> nutrient,
       List<dynamic> texture,
-      List<dynamic> fluidConsistencyType,
+      List<CodeableConcept> fluidConsistencyType,
       String instruction});
 }
 
@@ -14130,15 +14449,15 @@ class _$NutritionOrderOralDietCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
-      type: type == freezed ? _value.type : type as List<dynamic>,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>,
       schedule:
-          schedule == freezed ? _value.schedule : schedule as List<dynamic>,
+          schedule == freezed ? _value.schedule : schedule as List<Timing>,
       nutrient:
           nutrient == freezed ? _value.nutrient : nutrient as List<dynamic>,
       texture: texture == freezed ? _value.texture : texture as List<dynamic>,
       fluidConsistencyType: fluidConsistencyType == freezed
           ? _value.fluidConsistencyType
-          : fluidConsistencyType as List<dynamic>,
+          : fluidConsistencyType as List<CodeableConcept>,
       instruction:
           instruction == freezed ? _value.instruction : instruction as String,
     ));
@@ -14169,15 +14488,15 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> type;
+  final List<CodeableConcept> type;
   @override
-  final List<dynamic> schedule;
+  final List<Timing> schedule;
   @override
   final List<dynamic> nutrient;
   @override
   final List<dynamic> texture;
   @override
-  final List<dynamic> fluidConsistencyType;
+  final List<CodeableConcept> fluidConsistencyType;
   @override
   final String instruction;
 
@@ -14249,7 +14568,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -14275,7 +14594,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -14294,7 +14613,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -14306,12 +14625,12 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -14335,7 +14654,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -14343,11 +14662,11 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -14362,15 +14681,15 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -14383,10 +14702,10 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -14397,8 +14716,8 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -14426,7 +14745,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -14436,22 +14755,22 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -14473,7 +14792,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -14509,14 +14828,14 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -14529,14 +14848,14 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -14547,7 +14866,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -14574,25 +14893,25 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -14607,7 +14926,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -14621,9 +14940,9 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -14635,7 +14954,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -14712,7 +15031,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -14737,7 +15056,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -14754,7 +15073,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -14766,12 +15085,12 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -14793,7 +15112,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -14801,11 +15120,11 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -14820,15 +15139,15 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -14840,10 +15159,10 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -14854,8 +15173,8 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -14881,7 +15200,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -14891,21 +15210,21 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -14924,7 +15243,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -14957,14 +15276,14 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -14977,13 +15296,13 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -14993,7 +15312,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -15019,24 +15338,24 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -15050,7 +15369,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -15064,9 +15383,9 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -15077,7 +15396,7 @@ class _$NutritionOrderOralDiet implements NutritionOrderOralDiet {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -15228,11 +15547,11 @@ abstract class NutritionOrderOralDiet implements CareProvision {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> type,
-      List<dynamic> schedule,
+      List<CodeableConcept> type,
+      List<Timing> schedule,
       List<dynamic> nutrient,
       List<dynamic> texture,
-      List<dynamic> fluidConsistencyType,
+      List<CodeableConcept> fluidConsistencyType,
       String instruction}) = _$NutritionOrderOralDiet;
 
   factory NutritionOrderOralDiet.fromJson(Map<String, dynamic> json) =
@@ -15243,11 +15562,11 @@ abstract class NutritionOrderOralDiet implements CareProvision {
   @JsonKey(name: 'extension')
   List<dynamic> get fhirExtension;
   List<dynamic> get modifierExtension;
-  List<dynamic> get type;
-  List<dynamic> get schedule;
+  List<CodeableConcept> get type;
+  List<Timing> get schedule;
   List<dynamic> get nutrient;
   List<dynamic> get texture;
-  List<dynamic> get fluidConsistencyType;
+  List<CodeableConcept> get fluidConsistencyType;
   String get instruction;
   @override
   $NutritionOrderOralDietCopyWith<NutritionOrderOralDiet> get copyWith;
@@ -15265,6 +15584,9 @@ abstract class $NutritionOrderNutrientCopyWith<$Res>
       List<dynamic> modifierExtension,
       CodeableConcept modifier,
       Quantity amount});
+
+  $CodeableConceptCopyWith<$Res> get modifier;
+  $QuantityCopyWith<$Res> get amount;
 }
 
 class _$NutritionOrderNutrientCopyWithImpl<$Res>
@@ -15297,6 +15619,26 @@ class _$NutritionOrderNutrientCopyWithImpl<$Res>
           modifier == freezed ? _value.modifier : modifier as CodeableConcept,
       amount: amount == freezed ? _value.amount : amount as Quantity,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get modifier {
+    if (_value.modifier == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.modifier, (value) {
+      return _then(_value.copyWith(modifier: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get amount {
+    if (_value.amount == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.amount, (value) {
+      return _then(_value.copyWith(amount: value));
+    });
   }
 }
 
@@ -15376,7 +15718,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -15402,7 +15744,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -15421,7 +15763,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -15433,12 +15775,12 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -15462,7 +15804,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -15470,11 +15812,11 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -15489,15 +15831,15 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -15510,10 +15852,10 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -15524,8 +15866,8 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -15553,7 +15895,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -15563,22 +15905,22 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -15600,7 +15942,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -15636,14 +15978,14 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -15656,14 +15998,14 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -15674,7 +16016,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -15701,25 +16043,25 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -15734,7 +16076,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -15748,9 +16090,9 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -15762,7 +16104,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -15839,7 +16181,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -15864,7 +16206,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -15881,7 +16223,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -15893,12 +16235,12 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -15920,7 +16262,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -15928,11 +16270,11 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -15947,15 +16289,15 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -15967,10 +16309,10 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -15981,8 +16323,8 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -16008,7 +16350,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -16018,21 +16360,21 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -16051,7 +16393,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -16084,14 +16426,14 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -16104,13 +16446,13 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -16120,7 +16462,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -16146,24 +16488,24 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -16177,7 +16519,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -16191,9 +16533,9 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -16204,7 +16546,7 @@ class _$NutritionOrderNutrient implements NutritionOrderNutrient {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -16384,6 +16726,9 @@ abstract class $NutritionOrderTextureCopyWith<$Res>
       List<dynamic> modifierExtension,
       CodeableConcept modifier,
       CodeableConcept foodType});
+
+  $CodeableConceptCopyWith<$Res> get modifier;
+  $CodeableConceptCopyWith<$Res> get foodType;
 }
 
 class _$NutritionOrderTextureCopyWithImpl<$Res>
@@ -16417,6 +16762,26 @@ class _$NutritionOrderTextureCopyWithImpl<$Res>
       foodType:
           foodType == freezed ? _value.foodType : foodType as CodeableConcept,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get modifier {
+    if (_value.modifier == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.modifier, (value) {
+      return _then(_value.copyWith(modifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get foodType {
+    if (_value.foodType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.foodType, (value) {
+      return _then(_value.copyWith(foodType: value));
+    });
   }
 }
 
@@ -16497,7 +16862,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -16523,7 +16888,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -16542,7 +16907,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -16554,12 +16919,12 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -16583,7 +16948,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -16591,11 +16956,11 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -16610,15 +16975,15 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -16631,10 +16996,10 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -16645,8 +17010,8 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -16674,7 +17039,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -16684,22 +17049,22 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -16721,7 +17086,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -16757,14 +17122,14 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -16777,14 +17142,14 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -16795,7 +17160,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -16822,25 +17187,25 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -16855,7 +17220,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -16869,9 +17234,9 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -16883,7 +17248,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -16960,7 +17325,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -16985,7 +17350,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -17002,7 +17367,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -17014,12 +17379,12 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -17041,7 +17406,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -17049,11 +17414,11 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -17068,15 +17433,15 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -17088,10 +17453,10 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -17102,8 +17467,8 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -17129,7 +17494,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -17139,21 +17504,21 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -17172,7 +17537,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -17205,14 +17570,14 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -17225,13 +17590,13 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -17241,7 +17606,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -17267,24 +17632,24 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -17298,7 +17663,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -17312,9 +17677,9 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -17325,7 +17690,7 @@ class _$NutritionOrderTexture implements NutritionOrderTexture {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -17504,9 +17869,12 @@ abstract class $NutritionOrderSupplementCopyWith<$Res>
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       CodeableConcept type,
       String productName,
-      List<dynamic> schedule,
+      List<Timing> schedule,
       Quantity quantity,
       String instruction});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $QuantityCopyWith<$Res> get quantity;
 }
 
 class _$NutritionOrderSupplementCopyWithImpl<$Res>
@@ -17539,11 +17907,31 @@ class _$NutritionOrderSupplementCopyWithImpl<$Res>
       productName:
           productName == freezed ? _value.productName : productName as String,
       schedule:
-          schedule == freezed ? _value.schedule : schedule as List<dynamic>,
+          schedule == freezed ? _value.schedule : schedule as List<Timing>,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       instruction:
           instruction == freezed ? _value.instruction : instruction as String,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
   }
 }
 
@@ -17571,7 +17959,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
   @override
   final String productName;
   @override
-  final List<dynamic> schedule;
+  final List<Timing> schedule;
   @override
   final Quantity quantity;
   @override
@@ -17637,7 +18025,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -17663,7 +18051,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -17682,7 +18070,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -17694,12 +18082,12 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -17723,7 +18111,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -17731,11 +18119,11 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -17750,15 +18138,15 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -17771,10 +18159,10 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -17785,8 +18173,8 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -17814,7 +18202,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -17824,22 +18212,22 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -17861,7 +18249,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -17897,14 +18285,14 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -17917,14 +18305,14 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -17935,7 +18323,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -17962,25 +18350,25 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -17995,7 +18383,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -18009,9 +18397,9 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -18023,7 +18411,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -18100,7 +18488,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -18125,7 +18513,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -18142,7 +18530,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -18154,12 +18542,12 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -18181,7 +18569,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -18189,11 +18577,11 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -18208,15 +18596,15 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -18228,10 +18616,10 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -18242,8 +18630,8 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -18269,7 +18657,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -18279,21 +18667,21 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -18312,7 +18700,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -18345,14 +18733,14 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -18365,13 +18753,13 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -18381,7 +18769,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -18407,24 +18795,24 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -18438,7 +18826,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -18452,9 +18840,9 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -18465,7 +18853,7 @@ class _$NutritionOrderSupplement implements NutritionOrderSupplement {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -18617,7 +19005,7 @@ abstract class NutritionOrderSupplement implements CareProvision {
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       CodeableConcept type,
       String productName,
-      List<dynamic> schedule,
+      List<Timing> schedule,
       Quantity quantity,
       String instruction}) = _$NutritionOrderSupplement;
 
@@ -18630,7 +19018,7 @@ abstract class NutritionOrderSupplement implements CareProvision {
   List<dynamic> get fhirExtension;
   CodeableConcept get type;
   String get productName;
-  List<dynamic> get schedule;
+  List<Timing> get schedule;
   Quantity get quantity;
   String get instruction;
   @override
@@ -18656,6 +19044,12 @@ abstract class $NutritionOrderEnteralFormulaCopyWith<$Res>
       CodeableConcept routeofAdministration,
       List<dynamic> administration,
       Quantity maxVolumeToDeliver});
+
+  $CodeableConceptCopyWith<$Res> get baseFormulaType;
+  $CodeableConceptCopyWith<$Res> get additiveType;
+  $QuantityCopyWith<$Res> get caloricDensity;
+  $CodeableConceptCopyWith<$Res> get routeofAdministration;
+  $QuantityCopyWith<$Res> get maxVolumeToDeliver;
 }
 
 class _$NutritionOrderEnteralFormulaCopyWithImpl<$Res>
@@ -18717,6 +19111,57 @@ class _$NutritionOrderEnteralFormulaCopyWithImpl<$Res>
           ? _value.maxVolumeToDeliver
           : maxVolumeToDeliver as Quantity,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get baseFormulaType {
+    if (_value.baseFormulaType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.baseFormulaType, (value) {
+      return _then(_value.copyWith(baseFormulaType: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get additiveType {
+    if (_value.additiveType == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.additiveType, (value) {
+      return _then(_value.copyWith(additiveType: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get caloricDensity {
+    if (_value.caloricDensity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.caloricDensity, (value) {
+      return _then(_value.copyWith(caloricDensity: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get routeofAdministration {
+    if (_value.routeofAdministration == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.routeofAdministration,
+        (value) {
+      return _then(_value.copyWith(routeofAdministration: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get maxVolumeToDeliver {
+    if (_value.maxVolumeToDeliver == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.maxVolumeToDeliver, (value) {
+      return _then(_value.copyWith(maxVolumeToDeliver: value));
+    });
   }
 }
 
@@ -18839,7 +19284,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -18865,7 +19310,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -18884,7 +19329,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -18896,12 +19341,12 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -18925,7 +19370,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -18933,11 +19378,11 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -18952,15 +19397,15 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -18973,10 +19418,10 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -18987,8 +19432,8 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -19016,7 +19461,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -19026,22 +19471,22 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -19063,7 +19508,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -19099,14 +19544,14 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -19119,14 +19564,14 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -19137,7 +19582,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -19164,25 +19609,25 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -19197,7 +19642,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -19211,9 +19656,9 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -19225,7 +19670,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -19312,7 +19757,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -19337,7 +19782,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -19354,7 +19799,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -19366,12 +19811,12 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -19393,7 +19838,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -19401,11 +19846,11 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -19420,15 +19865,15 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -19440,10 +19885,10 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -19454,8 +19899,8 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -19481,7 +19926,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -19491,21 +19936,21 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -19524,7 +19969,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -19557,14 +20002,14 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -19577,13 +20022,13 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -19593,7 +20038,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -19619,24 +20064,24 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -19650,7 +20095,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -19664,9 +20109,9 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -19677,7 +20122,7 @@ class _$NutritionOrderEnteralFormula implements NutritionOrderEnteralFormula {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -19883,6 +20328,11 @@ abstract class $NutritionOrderAdministrationCopyWith<$Res>
       Quantity quantity,
       Quantity rateQuantity,
       Ratio rateRatio});
+
+  $TimingCopyWith<$Res> get schedule;
+  $QuantityCopyWith<$Res> get quantity;
+  $QuantityCopyWith<$Res> get rateQuantity;
+  $RatioCopyWith<$Res> get rateRatio;
 }
 
 class _$NutritionOrderAdministrationCopyWithImpl<$Res>
@@ -19922,6 +20372,46 @@ class _$NutritionOrderAdministrationCopyWithImpl<$Res>
           : rateQuantity as Quantity,
       rateRatio: rateRatio == freezed ? _value.rateRatio : rateRatio as Ratio,
     ));
+  }
+
+  @override
+  $TimingCopyWith<$Res> get schedule {
+    if (_value.schedule == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.schedule, (value) {
+      return _then(_value.copyWith(schedule: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get rateQuantity {
+    if (_value.rateQuantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.rateQuantity, (value) {
+      return _then(_value.copyWith(rateQuantity: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res> get rateRatio {
+    if (_value.rateRatio == null) {
+      return null;
+    }
+    return $RatioCopyWith<$Res>(_value.rateRatio, (value) {
+      return _then(_value.copyWith(rateRatio: value));
+    });
   }
 }
 
@@ -20016,7 +20506,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -20042,7 +20532,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -20061,7 +20551,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -20073,12 +20563,12 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -20102,7 +20592,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -20110,11 +20600,11 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -20129,15 +20619,15 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -20150,10 +20640,10 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -20164,8 +20654,8 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -20193,7 +20683,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -20203,22 +20693,22 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -20240,7 +20730,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -20276,14 +20766,14 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -20296,14 +20786,14 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -20314,7 +20804,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -20341,25 +20831,25 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -20374,7 +20864,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -20388,9 +20878,9 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -20402,7 +20892,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -20479,7 +20969,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -20504,7 +20994,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -20521,7 +21011,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -20533,12 +21023,12 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -20560,7 +21050,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -20568,11 +21058,11 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -20587,15 +21077,15 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -20607,10 +21097,10 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -20621,8 +21111,8 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -20648,7 +21138,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -20658,21 +21148,21 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -20691,7 +21181,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -20724,14 +21214,14 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -20744,13 +21234,13 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -20760,7 +21250,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -20786,24 +21276,24 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -20817,7 +21307,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -20831,9 +21321,9 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -20844,7 +21334,7 @@ class _$NutritionOrderAdministration implements NutritionOrderAdministration {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -21031,14 +21521,14 @@ abstract class $CarePlanCopyWith<$Res> implements $CareProvisionCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<dynamic> basedOn,
       List<dynamic> replaces,
       List<dynamic> partOf,
       Code status,
       Code intent,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       String title,
       String description,
       Reference subject,
@@ -21051,7 +21541,9 @@ abstract class $CarePlanCopyWith<$Res> implements $CareProvisionCopyWith<$Res> {
       List<dynamic> supportingInfo,
       List<dynamic> goal,
       List<dynamic> activity,
-      List<dynamic> note});
+      List<Annotation> note});
+
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$CarePlanCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
@@ -21116,7 +21608,7 @@ class _$CarePlanCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       instantiatesCanonical: instantiatesCanonical == freezed
           ? _value.instantiatesCanonical
           : instantiatesCanonical as List<Canonical>,
@@ -21126,8 +21618,9 @@ class _$CarePlanCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
       partOf: partOf == freezed ? _value.partOf : partOf as List<dynamic>,
       status: status == freezed ? _value.status : status as Code,
       intent: intent == freezed ? _value.intent : intent as Code,
-      category:
-          category == freezed ? _value.category : category as List<dynamic>,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
       title: title == freezed ? _value.title : title as String,
       description:
           description == freezed ? _value.description : description as String,
@@ -21147,8 +21640,18 @@ class _$CarePlanCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
       goal: goal == freezed ? _value.goal : goal as List<dynamic>,
       activity:
           activity == freezed ? _value.activity : activity as List<dynamic>,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
   }
 }
 
@@ -21209,7 +21712,7 @@ class _$CarePlan implements CarePlan {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final List<Canonical> instantiatesCanonical;
   @override
@@ -21223,7 +21726,7 @@ class _$CarePlan implements CarePlan {
   @override
   final Code intent;
   @override
-  final List<dynamic> category;
+  final List<CodeableConcept> category;
   @override
   final String title;
   @override
@@ -21249,7 +21752,7 @@ class _$CarePlan implements CarePlan {
   @override
   final List<dynamic> activity;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
 
   @override
   String toString() {
@@ -21387,7 +21890,7 @@ class _$CarePlan implements CarePlan {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -21413,7 +21916,7 @@ class _$CarePlan implements CarePlan {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -21432,7 +21935,7 @@ class _$CarePlan implements CarePlan {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -21444,12 +21947,12 @@ class _$CarePlan implements CarePlan {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -21473,7 +21976,7 @@ class _$CarePlan implements CarePlan {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -21481,11 +21984,11 @@ class _$CarePlan implements CarePlan {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -21500,15 +22003,15 @@ class _$CarePlan implements CarePlan {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -21521,10 +22024,10 @@ class _$CarePlan implements CarePlan {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -21535,8 +22038,8 @@ class _$CarePlan implements CarePlan {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -21564,7 +22067,7 @@ class _$CarePlan implements CarePlan {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -21574,22 +22077,22 @@ class _$CarePlan implements CarePlan {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -21611,7 +22114,7 @@ class _$CarePlan implements CarePlan {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -21647,14 +22150,14 @@ class _$CarePlan implements CarePlan {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -21667,14 +22170,14 @@ class _$CarePlan implements CarePlan {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -21685,7 +22188,7 @@ class _$CarePlan implements CarePlan {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -21712,25 +22215,25 @@ class _$CarePlan implements CarePlan {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -21745,7 +22248,7 @@ class _$CarePlan implements CarePlan {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -21759,9 +22262,9 @@ class _$CarePlan implements CarePlan {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -21773,7 +22276,7 @@ class _$CarePlan implements CarePlan {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -21879,7 +22382,7 @@ class _$CarePlan implements CarePlan {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -21904,7 +22407,7 @@ class _$CarePlan implements CarePlan {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -21921,7 +22424,7 @@ class _$CarePlan implements CarePlan {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -21933,12 +22436,12 @@ class _$CarePlan implements CarePlan {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -21960,7 +22463,7 @@ class _$CarePlan implements CarePlan {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -21968,11 +22471,11 @@ class _$CarePlan implements CarePlan {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -21987,15 +22490,15 @@ class _$CarePlan implements CarePlan {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -22007,10 +22510,10 @@ class _$CarePlan implements CarePlan {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -22021,8 +22524,8 @@ class _$CarePlan implements CarePlan {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -22048,7 +22551,7 @@ class _$CarePlan implements CarePlan {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -22058,21 +22561,21 @@ class _$CarePlan implements CarePlan {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -22091,7 +22594,7 @@ class _$CarePlan implements CarePlan {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -22124,14 +22627,14 @@ class _$CarePlan implements CarePlan {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -22144,13 +22647,13 @@ class _$CarePlan implements CarePlan {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -22160,7 +22663,7 @@ class _$CarePlan implements CarePlan {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -22186,24 +22689,24 @@ class _$CarePlan implements CarePlan {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -22217,7 +22720,7 @@ class _$CarePlan implements CarePlan {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -22231,9 +22734,9 @@ class _$CarePlan implements CarePlan {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -22244,7 +22747,7 @@ class _$CarePlan implements CarePlan {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -22429,14 +22932,14 @@ abstract class CarePlan implements CareProvision {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<dynamic> basedOn,
       List<dynamic> replaces,
       List<dynamic> partOf,
       Code status,
       Code intent,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       String title,
       String description,
       Reference subject,
@@ -22449,7 +22952,7 @@ abstract class CarePlan implements CareProvision {
       List<dynamic> supportingInfo,
       List<dynamic> goal,
       List<dynamic> activity,
-      List<dynamic> note}) = _$CarePlan;
+      List<Annotation> note}) = _$CarePlan;
 
   factory CarePlan.fromJson(Map<String, dynamic> json) = _$CarePlan.fromJson;
 
@@ -22464,14 +22967,14 @@ abstract class CarePlan implements CareProvision {
   @JsonKey(name: 'extension')
   List<dynamic> get fhirExtension;
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   List<Canonical> get instantiatesCanonical;
   List<dynamic> get basedOn;
   List<dynamic> get replaces;
   List<dynamic> get partOf;
   Code get status;
   Code get intent;
-  List<dynamic> get category;
+  List<CodeableConcept> get category;
   String get title;
   String get description;
   Reference get subject;
@@ -22484,7 +22987,7 @@ abstract class CarePlan implements CareProvision {
   List<dynamic> get supportingInfo;
   List<dynamic> get goal;
   List<dynamic> get activity;
-  List<dynamic> get note;
+  List<Annotation> get note;
   @override
   $CarePlanCopyWith<CarePlan> get copyWith;
 }
@@ -22499,8 +23002,8 @@ abstract class $CarePlanActivityCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> outcomeCodeableConcept,
-      List<dynamic> progress,
+      List<CodeableConcept> outcomeCodeableConcept,
+      List<Annotation> progress,
       Reference reference,
       CarePlanDetail detail});
 }
@@ -22535,9 +23038,9 @@ class _$CarePlanActivityCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       outcomeCodeableConcept: outcomeCodeableConcept == freezed
           ? _value.outcomeCodeableConcept
-          : outcomeCodeableConcept as List<dynamic>,
+          : outcomeCodeableConcept as List<CodeableConcept>,
       progress:
-          progress == freezed ? _value.progress : progress as List<dynamic>,
+          progress == freezed ? _value.progress : progress as List<Annotation>,
       reference:
           reference == freezed ? _value.reference : reference as Reference,
       detail: detail == freezed ? _value.detail : detail as CarePlanDetail,
@@ -22567,9 +23070,9 @@ class _$CarePlanActivity implements CarePlanActivity {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> outcomeCodeableConcept;
+  final List<CodeableConcept> outcomeCodeableConcept;
   @override
-  final List<dynamic> progress;
+  final List<Annotation> progress;
   @override
   final Reference reference;
   @override
@@ -22634,7 +23137,7 @@ class _$CarePlanActivity implements CarePlanActivity {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -22660,7 +23163,7 @@ class _$CarePlanActivity implements CarePlanActivity {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -22679,7 +23182,7 @@ class _$CarePlanActivity implements CarePlanActivity {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -22691,12 +23194,12 @@ class _$CarePlanActivity implements CarePlanActivity {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -22720,7 +23223,7 @@ class _$CarePlanActivity implements CarePlanActivity {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -22728,11 +23231,11 @@ class _$CarePlanActivity implements CarePlanActivity {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -22747,15 +23250,15 @@ class _$CarePlanActivity implements CarePlanActivity {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -22768,10 +23271,10 @@ class _$CarePlanActivity implements CarePlanActivity {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -22782,8 +23285,8 @@ class _$CarePlanActivity implements CarePlanActivity {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -22811,7 +23314,7 @@ class _$CarePlanActivity implements CarePlanActivity {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -22821,22 +23324,22 @@ class _$CarePlanActivity implements CarePlanActivity {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -22858,7 +23361,7 @@ class _$CarePlanActivity implements CarePlanActivity {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -22894,14 +23397,14 @@ class _$CarePlanActivity implements CarePlanActivity {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -22914,14 +23417,14 @@ class _$CarePlanActivity implements CarePlanActivity {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -22932,7 +23435,7 @@ class _$CarePlanActivity implements CarePlanActivity {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -22959,25 +23462,25 @@ class _$CarePlanActivity implements CarePlanActivity {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -22992,7 +23495,7 @@ class _$CarePlanActivity implements CarePlanActivity {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -23006,9 +23509,9 @@ class _$CarePlanActivity implements CarePlanActivity {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -23020,7 +23523,7 @@ class _$CarePlanActivity implements CarePlanActivity {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -23097,7 +23600,7 @@ class _$CarePlanActivity implements CarePlanActivity {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -23122,7 +23625,7 @@ class _$CarePlanActivity implements CarePlanActivity {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -23139,7 +23642,7 @@ class _$CarePlanActivity implements CarePlanActivity {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -23151,12 +23654,12 @@ class _$CarePlanActivity implements CarePlanActivity {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -23178,7 +23681,7 @@ class _$CarePlanActivity implements CarePlanActivity {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -23186,11 +23689,11 @@ class _$CarePlanActivity implements CarePlanActivity {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -23205,15 +23708,15 @@ class _$CarePlanActivity implements CarePlanActivity {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -23225,10 +23728,10 @@ class _$CarePlanActivity implements CarePlanActivity {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -23239,8 +23742,8 @@ class _$CarePlanActivity implements CarePlanActivity {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -23266,7 +23769,7 @@ class _$CarePlanActivity implements CarePlanActivity {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -23276,21 +23779,21 @@ class _$CarePlanActivity implements CarePlanActivity {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -23309,7 +23812,7 @@ class _$CarePlanActivity implements CarePlanActivity {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -23342,14 +23845,14 @@ class _$CarePlanActivity implements CarePlanActivity {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -23362,13 +23865,13 @@ class _$CarePlanActivity implements CarePlanActivity {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -23378,7 +23881,7 @@ class _$CarePlanActivity implements CarePlanActivity {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -23404,24 +23907,24 @@ class _$CarePlanActivity implements CarePlanActivity {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -23435,7 +23938,7 @@ class _$CarePlanActivity implements CarePlanActivity {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -23449,9 +23952,9 @@ class _$CarePlanActivity implements CarePlanActivity {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -23462,7 +23965,7 @@ class _$CarePlanActivity implements CarePlanActivity {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -23613,8 +24116,8 @@ abstract class CarePlanActivity implements CareProvision {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> outcomeCodeableConcept,
-      List<dynamic> progress,
+      List<CodeableConcept> outcomeCodeableConcept,
+      List<Annotation> progress,
       Reference reference,
       CarePlanDetail detail}) = _$CarePlanActivity;
 
@@ -23626,8 +24129,8 @@ abstract class CarePlanActivity implements CareProvision {
   @JsonKey(name: 'extension')
   List<dynamic> get fhirExtension;
   List<dynamic> get modifierExtension;
-  List<dynamic> get outcomeCodeableConcept;
-  List<dynamic> get progress;
+  List<CodeableConcept> get outcomeCodeableConcept;
+  List<Annotation> get progress;
   Reference get reference;
   CarePlanDetail get detail;
   @override
@@ -23647,7 +24150,7 @@ abstract class $CarePlanDetailCopyWith<$Res>
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       CodeableConcept code,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> goal,
       CarePlanDetailStatus status,
@@ -23663,6 +24166,14 @@ abstract class $CarePlanDetailCopyWith<$Res>
       Quantity dailyAmount,
       Quantity quantity,
       String description});
+
+  $CodeableConceptCopyWith<$Res> get code;
+  $CodeableConceptCopyWith<$Res> get statusReason;
+  $TimingCopyWith<$Res> get scheduledTiming;
+  $PeriodCopyWith<$Res> get scheduledPeriod;
+  $CodeableConceptCopyWith<$Res> get productCodeableConcept;
+  $QuantityCopyWith<$Res> get dailyAmount;
+  $QuantityCopyWith<$Res> get quantity;
 }
 
 class _$CarePlanDetailCopyWithImpl<$Res>
@@ -23715,7 +24226,7 @@ class _$CarePlanDetailCopyWithImpl<$Res>
       code: code == freezed ? _value.code : code as CodeableConcept,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<dynamic>,
+          : reasonCode as List<CodeableConcept>,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
           : reasonReference as List<dynamic>,
@@ -23751,6 +24262,77 @@ class _$CarePlanDetailCopyWithImpl<$Res>
       description:
           description == freezed ? _value.description : description as String,
     ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get statusReason {
+    if (_value.statusReason == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.statusReason, (value) {
+      return _then(_value.copyWith(statusReason: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get scheduledTiming {
+    if (_value.scheduledTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.scheduledTiming, (value) {
+      return _then(_value.copyWith(scheduledTiming: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get scheduledPeriod {
+    if (_value.scheduledPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.scheduledPeriod, (value) {
+      return _then(_value.copyWith(scheduledPeriod: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get productCodeableConcept {
+    if (_value.productCodeableConcept == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.productCodeableConcept,
+        (value) {
+      return _then(_value.copyWith(productCodeableConcept: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get dailyAmount {
+    if (_value.dailyAmount == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.dailyAmount, (value) {
+      return _then(_value.copyWith(dailyAmount: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res> get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
   }
 }
 
@@ -23797,7 +24379,7 @@ class _$CarePlanDetail implements CarePlanDetail {
   @override
   final CodeableConcept code;
   @override
-  final List<dynamic> reasonCode;
+  final List<CodeableConcept> reasonCode;
   @override
   final List<dynamic> reasonReference;
   @override
@@ -23945,7 +24527,7 @@ class _$CarePlanDetail implements CarePlanDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -23971,7 +24553,7 @@ class _$CarePlanDetail implements CarePlanDetail {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -23990,7 +24572,7 @@ class _$CarePlanDetail implements CarePlanDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -24002,12 +24584,12 @@ class _$CarePlanDetail implements CarePlanDetail {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -24031,7 +24613,7 @@ class _$CarePlanDetail implements CarePlanDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -24039,11 +24621,11 @@ class _$CarePlanDetail implements CarePlanDetail {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -24058,15 +24640,15 @@ class _$CarePlanDetail implements CarePlanDetail {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -24079,10 +24661,10 @@ class _$CarePlanDetail implements CarePlanDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -24093,8 +24675,8 @@ class _$CarePlanDetail implements CarePlanDetail {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -24122,7 +24704,7 @@ class _$CarePlanDetail implements CarePlanDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -24132,22 +24714,22 @@ class _$CarePlanDetail implements CarePlanDetail {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -24169,7 +24751,7 @@ class _$CarePlanDetail implements CarePlanDetail {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -24205,14 +24787,14 @@ class _$CarePlanDetail implements CarePlanDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -24225,14 +24807,14 @@ class _$CarePlanDetail implements CarePlanDetail {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -24243,7 +24825,7 @@ class _$CarePlanDetail implements CarePlanDetail {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -24270,25 +24852,25 @@ class _$CarePlanDetail implements CarePlanDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -24303,7 +24885,7 @@ class _$CarePlanDetail implements CarePlanDetail {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -24317,9 +24899,9 @@ class _$CarePlanDetail implements CarePlanDetail {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -24331,7 +24913,7 @@ class _$CarePlanDetail implements CarePlanDetail {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -24429,7 +25011,7 @@ class _$CarePlanDetail implements CarePlanDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -24454,7 +25036,7 @@ class _$CarePlanDetail implements CarePlanDetail {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -24471,7 +25053,7 @@ class _$CarePlanDetail implements CarePlanDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -24483,12 +25065,12 @@ class _$CarePlanDetail implements CarePlanDetail {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -24510,7 +25092,7 @@ class _$CarePlanDetail implements CarePlanDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -24518,11 +25100,11 @@ class _$CarePlanDetail implements CarePlanDetail {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -24537,15 +25119,15 @@ class _$CarePlanDetail implements CarePlanDetail {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -24557,10 +25139,10 @@ class _$CarePlanDetail implements CarePlanDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -24571,8 +25153,8 @@ class _$CarePlanDetail implements CarePlanDetail {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -24598,7 +25180,7 @@ class _$CarePlanDetail implements CarePlanDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -24608,21 +25190,21 @@ class _$CarePlanDetail implements CarePlanDetail {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -24641,7 +25223,7 @@ class _$CarePlanDetail implements CarePlanDetail {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -24674,14 +25256,14 @@ class _$CarePlanDetail implements CarePlanDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -24694,13 +25276,13 @@ class _$CarePlanDetail implements CarePlanDetail {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -24710,7 +25292,7 @@ class _$CarePlanDetail implements CarePlanDetail {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -24736,24 +25318,24 @@ class _$CarePlanDetail implements CarePlanDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -24767,7 +25349,7 @@ class _$CarePlanDetail implements CarePlanDetail {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -24781,9 +25363,9 @@ class _$CarePlanDetail implements CarePlanDetail {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -24794,7 +25376,7 @@ class _$CarePlanDetail implements CarePlanDetail {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -24968,7 +25550,7 @@ abstract class CarePlanDetail implements CareProvision {
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       CodeableConcept code,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> goal,
       CarePlanDetailStatus status,
@@ -24996,7 +25578,7 @@ abstract class CarePlanDetail implements CareProvision {
   List<Canonical> get instantiatesCanonical;
   List<FhirUri> get instantiatesUri;
   CodeableConcept get code;
-  List<dynamic> get reasonCode;
+  List<CodeableConcept> get reasonCode;
   List<dynamic> get reasonReference;
   List<dynamic> get goal;
   CarePlanDetailStatus get status;
@@ -25030,19 +25612,21 @@ abstract class $CareTeamCopyWith<$Res> implements $CareProvisionCopyWith<$Res> {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       CareTeamStatus status,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       String name,
       Reference subject,
       Reference encounter,
       Period period,
       List<dynamic> participant,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> managingOrganization,
-      List<dynamic> telecom,
-      List<dynamic> note});
+      List<ContactPoint> telecom,
+      List<Annotation> note});
+
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$CareTeamCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
@@ -25099,10 +25683,11 @@ class _$CareTeamCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       status: status == freezed ? _value.status : status as CareTeamStatus,
-      category:
-          category == freezed ? _value.category : category as List<dynamic>,
+      category: category == freezed
+          ? _value.category
+          : category as List<CodeableConcept>,
       name: name == freezed ? _value.name : name as String,
       subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
@@ -25113,16 +25698,27 @@ class _$CareTeamCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
           : participant as List<dynamic>,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<dynamic>,
+          : reasonCode as List<CodeableConcept>,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
           : reasonReference as List<dynamic>,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
           : managingOrganization as List<dynamic>,
-      telecom: telecom == freezed ? _value.telecom : telecom as List<dynamic>,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      telecom:
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
   }
 }
 
@@ -25175,11 +25771,11 @@ class _$CareTeam implements CareTeam {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final CareTeamStatus status;
   @override
-  final List<dynamic> category;
+  final List<CodeableConcept> category;
   @override
   final String name;
   @override
@@ -25191,15 +25787,15 @@ class _$CareTeam implements CareTeam {
   @override
   final List<dynamic> participant;
   @override
-  final List<dynamic> reasonCode;
+  final List<CodeableConcept> reasonCode;
   @override
   final List<dynamic> reasonReference;
   @override
   final List<dynamic> managingOrganization;
   @override
-  final List<dynamic> telecom;
+  final List<ContactPoint> telecom;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
 
   @override
   String toString() {
@@ -25315,7 +25911,7 @@ class _$CareTeam implements CareTeam {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -25341,7 +25937,7 @@ class _$CareTeam implements CareTeam {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -25360,7 +25956,7 @@ class _$CareTeam implements CareTeam {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -25372,12 +25968,12 @@ class _$CareTeam implements CareTeam {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -25401,7 +25997,7 @@ class _$CareTeam implements CareTeam {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -25409,11 +26005,11 @@ class _$CareTeam implements CareTeam {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -25428,15 +26024,15 @@ class _$CareTeam implements CareTeam {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -25449,10 +26045,10 @@ class _$CareTeam implements CareTeam {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -25463,8 +26059,8 @@ class _$CareTeam implements CareTeam {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -25492,7 +26088,7 @@ class _$CareTeam implements CareTeam {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -25502,22 +26098,22 @@ class _$CareTeam implements CareTeam {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -25539,7 +26135,7 @@ class _$CareTeam implements CareTeam {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -25575,14 +26171,14 @@ class _$CareTeam implements CareTeam {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -25595,14 +26191,14 @@ class _$CareTeam implements CareTeam {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -25613,7 +26209,7 @@ class _$CareTeam implements CareTeam {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -25640,25 +26236,25 @@ class _$CareTeam implements CareTeam {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -25673,7 +26269,7 @@ class _$CareTeam implements CareTeam {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -25687,9 +26283,9 @@ class _$CareTeam implements CareTeam {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -25701,7 +26297,7 @@ class _$CareTeam implements CareTeam {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -25799,7 +26395,7 @@ class _$CareTeam implements CareTeam {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -25824,7 +26420,7 @@ class _$CareTeam implements CareTeam {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -25841,7 +26437,7 @@ class _$CareTeam implements CareTeam {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -25853,12 +26449,12 @@ class _$CareTeam implements CareTeam {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -25880,7 +26476,7 @@ class _$CareTeam implements CareTeam {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -25888,11 +26484,11 @@ class _$CareTeam implements CareTeam {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -25907,15 +26503,15 @@ class _$CareTeam implements CareTeam {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -25927,10 +26523,10 @@ class _$CareTeam implements CareTeam {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -25941,8 +26537,8 @@ class _$CareTeam implements CareTeam {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -25968,7 +26564,7 @@ class _$CareTeam implements CareTeam {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -25978,21 +26574,21 @@ class _$CareTeam implements CareTeam {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -26011,7 +26607,7 @@ class _$CareTeam implements CareTeam {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -26044,14 +26640,14 @@ class _$CareTeam implements CareTeam {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -26064,13 +26660,13 @@ class _$CareTeam implements CareTeam {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -26080,7 +26676,7 @@ class _$CareTeam implements CareTeam {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -26106,24 +26702,24 @@ class _$CareTeam implements CareTeam {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -26137,7 +26733,7 @@ class _$CareTeam implements CareTeam {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -26151,9 +26747,9 @@ class _$CareTeam implements CareTeam {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -26164,7 +26760,7 @@ class _$CareTeam implements CareTeam {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -26341,19 +26937,19 @@ abstract class CareTeam implements CareProvision {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       CareTeamStatus status,
-      List<dynamic> category,
+      List<CodeableConcept> category,
       String name,
       Reference subject,
       Reference encounter,
       Period period,
       List<dynamic> participant,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
       List<dynamic> managingOrganization,
-      List<dynamic> telecom,
-      List<dynamic> note}) = _$CareTeam;
+      List<ContactPoint> telecom,
+      List<Annotation> note}) = _$CareTeam;
 
   factory CareTeam.fromJson(Map<String, dynamic> json) = _$CareTeam.fromJson;
 
@@ -26368,19 +26964,19 @@ abstract class CareTeam implements CareProvision {
   @JsonKey(name: 'extension')
   List<dynamic> get fhirExtension;
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   CareTeamStatus get status;
-  List<dynamic> get category;
+  List<CodeableConcept> get category;
   String get name;
   Reference get subject;
   Reference get encounter;
   Period get period;
   List<dynamic> get participant;
-  List<dynamic> get reasonCode;
+  List<CodeableConcept> get reasonCode;
   List<dynamic> get reasonReference;
   List<dynamic> get managingOrganization;
-  List<dynamic> get telecom;
-  List<dynamic> get note;
+  List<ContactPoint> get telecom;
+  List<Annotation> get note;
   @override
   $CareTeamCopyWith<CareTeam> get copyWith;
 }
@@ -26395,10 +26991,12 @@ abstract class $CareTeamParticipantCopyWith<$Res>
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> role,
+      List<CodeableConcept> role,
       Reference member,
       Reference onBehalfOf,
       Period period});
+
+  $PeriodCopyWith<$Res> get period;
 }
 
 class _$CareTeamParticipantCopyWithImpl<$Res>
@@ -26429,12 +27027,22 @@ class _$CareTeamParticipantCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<dynamic>,
-      role: role == freezed ? _value.role : role as List<dynamic>,
+      role: role == freezed ? _value.role : role as List<CodeableConcept>,
       member: member == freezed ? _value.member : member as Reference,
       onBehalfOf:
           onBehalfOf == freezed ? _value.onBehalfOf : onBehalfOf as Reference,
       period: period == freezed ? _value.period : period as Period,
     ));
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get period {
+    if (_value.period == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
+      return _then(_value.copyWith(period: value));
+    });
   }
 }
 
@@ -26460,7 +27068,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> role;
+  final List<CodeableConcept> role;
   @override
   final Reference member;
   @override
@@ -26525,7 +27133,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -26551,7 +27159,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -26570,7 +27178,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -26582,12 +27190,12 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -26611,7 +27219,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -26619,11 +27227,11 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -26638,15 +27246,15 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -26659,10 +27267,10 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -26673,8 +27281,8 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -26702,7 +27310,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -26712,22 +27320,22 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -26749,7 +27357,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -26785,14 +27393,14 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -26805,14 +27413,14 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -26823,7 +27431,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -26850,25 +27458,25 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -26883,7 +27491,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -26897,9 +27505,9 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -26911,7 +27519,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -26988,7 +27596,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -27013,7 +27621,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -27030,7 +27638,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -27042,12 +27650,12 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -27069,7 +27677,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -27077,11 +27685,11 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -27096,15 +27704,15 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -27116,10 +27724,10 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -27130,8 +27738,8 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -27157,7 +27765,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -27167,21 +27775,21 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -27200,7 +27808,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -27233,14 +27841,14 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -27253,13 +27861,13 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -27269,7 +27877,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -27295,24 +27903,24 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -27326,7 +27934,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -27340,9 +27948,9 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -27353,7 +27961,7 @@ class _$CareTeamParticipant implements CareTeamParticipant {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -27504,7 +28112,7 @@ abstract class CareTeamParticipant implements CareProvision {
       {String id,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> role,
+      List<CodeableConcept> role,
       Reference member,
       Reference onBehalfOf,
       Period period}) = _$CareTeamParticipant;
@@ -27517,7 +28125,7 @@ abstract class CareTeamParticipant implements CareProvision {
   @JsonKey(name: 'extension')
   List<dynamic> get fhirExtension;
   List<dynamic> get modifierExtension;
-  List<dynamic> get role;
+  List<CodeableConcept> get role;
   Reference get member;
   Reference get onBehalfOf;
   Period get period;
@@ -27541,7 +28149,7 @@ abstract class $RequestGroupCopyWith<$Res>
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<dynamic> basedOn,
@@ -27555,10 +28163,13 @@ abstract class $RequestGroupCopyWith<$Res>
       Reference encounter,
       FhirDateTime authoredOn,
       Reference author,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> action});
+
+  $IdentifierCopyWith<$Res> get groupIdentifier;
+  $CodeableConceptCopyWith<$Res> get code;
 }
 
 class _$RequestGroupCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
@@ -27621,7 +28232,7 @@ class _$RequestGroupCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
           : modifierExtension as List<dynamic>,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<dynamic>,
+          : identifier as List<Identifier>,
       instantiatesCanonical: instantiatesCanonical == freezed
           ? _value.instantiatesCanonical
           : instantiatesCanonical as List<Canonical>,
@@ -27647,13 +28258,33 @@ class _$RequestGroupCopyWithImpl<$Res> extends _$CareProvisionCopyWithImpl<$Res>
       author: author == freezed ? _value.author : author as Reference,
       reasonCode: reasonCode == freezed
           ? _value.reasonCode
-          : reasonCode as List<dynamic>,
+          : reasonCode as List<CodeableConcept>,
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
           : reasonReference as List<dynamic>,
-      note: note == freezed ? _value.note : note as List<dynamic>,
+      note: note == freezed ? _value.note : note as List<Annotation>,
       action: action == freezed ? _value.action : action as List<dynamic>,
     ));
+  }
+
+  @override
+  $IdentifierCopyWith<$Res> get groupIdentifier {
+    if (_value.groupIdentifier == null) {
+      return null;
+    }
+    return $IdentifierCopyWith<$Res>(_value.groupIdentifier, (value) {
+      return _then(_value.copyWith(groupIdentifier: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get code {
+    if (_value.code == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
+      return _then(_value.copyWith(code: value));
+    });
   }
 }
 
@@ -27711,7 +28342,7 @@ class _$RequestGroup implements RequestGroup {
   @override
   final List<dynamic> modifierExtension;
   @override
-  final List<dynamic> identifier;
+  final List<Identifier> identifier;
   @override
   final List<Canonical> instantiatesCanonical;
   @override
@@ -27739,11 +28370,11 @@ class _$RequestGroup implements RequestGroup {
   @override
   final Reference author;
   @override
-  final List<dynamic> reasonCode;
+  final List<CodeableConcept> reasonCode;
   @override
   final List<dynamic> reasonReference;
   @override
-  final List<dynamic> note;
+  final List<Annotation> note;
   @override
   final List<dynamic> action;
 
@@ -27877,7 +28508,7 @@ class _$RequestGroup implements RequestGroup {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -27903,7 +28534,7 @@ class _$RequestGroup implements RequestGroup {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -27922,7 +28553,7 @@ class _$RequestGroup implements RequestGroup {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -27934,12 +28565,12 @@ class _$RequestGroup implements RequestGroup {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -27963,7 +28594,7 @@ class _$RequestGroup implements RequestGroup {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -27971,11 +28602,11 @@ class _$RequestGroup implements RequestGroup {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -27990,15 +28621,15 @@ class _$RequestGroup implements RequestGroup {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -28011,10 +28642,10 @@ class _$RequestGroup implements RequestGroup {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -28025,8 +28656,8 @@ class _$RequestGroup implements RequestGroup {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -28054,7 +28685,7 @@ class _$RequestGroup implements RequestGroup {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -28064,22 +28695,22 @@ class _$RequestGroup implements RequestGroup {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -28101,7 +28732,7 @@ class _$RequestGroup implements RequestGroup {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -28137,14 +28768,14 @@ class _$RequestGroup implements RequestGroup {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -28157,14 +28788,14 @@ class _$RequestGroup implements RequestGroup {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -28175,7 +28806,7 @@ class _$RequestGroup implements RequestGroup {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -28202,25 +28833,25 @@ class _$RequestGroup implements RequestGroup {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -28235,7 +28866,7 @@ class _$RequestGroup implements RequestGroup {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -28249,9 +28880,9 @@ class _$RequestGroup implements RequestGroup {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -28263,7 +28894,7 @@ class _$RequestGroup implements RequestGroup {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -28366,7 +28997,7 @@ class _$RequestGroup implements RequestGroup {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -28391,7 +29022,7 @@ class _$RequestGroup implements RequestGroup {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -28408,7 +29039,7 @@ class _$RequestGroup implements RequestGroup {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -28420,12 +29051,12 @@ class _$RequestGroup implements RequestGroup {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -28447,7 +29078,7 @@ class _$RequestGroup implements RequestGroup {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -28455,11 +29086,11 @@ class _$RequestGroup implements RequestGroup {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -28474,15 +29105,15 @@ class _$RequestGroup implements RequestGroup {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -28494,10 +29125,10 @@ class _$RequestGroup implements RequestGroup {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -28508,8 +29139,8 @@ class _$RequestGroup implements RequestGroup {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -28535,7 +29166,7 @@ class _$RequestGroup implements RequestGroup {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -28545,21 +29176,21 @@ class _$RequestGroup implements RequestGroup {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -28578,7 +29209,7 @@ class _$RequestGroup implements RequestGroup {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -28611,14 +29242,14 @@ class _$RequestGroup implements RequestGroup {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -28631,13 +29262,13 @@ class _$RequestGroup implements RequestGroup {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -28647,7 +29278,7 @@ class _$RequestGroup implements RequestGroup {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -28673,24 +29304,24 @@ class _$RequestGroup implements RequestGroup {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -28704,7 +29335,7 @@ class _$RequestGroup implements RequestGroup {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -28718,9 +29349,9 @@ class _$RequestGroup implements RequestGroup {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -28731,7 +29362,7 @@ class _$RequestGroup implements RequestGroup {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -28913,7 +29544,7 @@ abstract class RequestGroup implements CareProvision {
       List<dynamic> contained,
       @JsonKey(name: 'extension') List<dynamic> fhirExtension,
       List<dynamic> modifierExtension,
-      List<dynamic> identifier,
+      List<Identifier> identifier,
       List<Canonical> instantiatesCanonical,
       List<FhirUri> instantiatesUri,
       List<dynamic> basedOn,
@@ -28927,9 +29558,9 @@ abstract class RequestGroup implements CareProvision {
       Reference encounter,
       FhirDateTime authoredOn,
       Reference author,
-      List<dynamic> reasonCode,
+      List<CodeableConcept> reasonCode,
       List<dynamic> reasonReference,
-      List<dynamic> note,
+      List<Annotation> note,
       List<dynamic> action}) = _$RequestGroup;
 
   factory RequestGroup.fromJson(Map<String, dynamic> json) =
@@ -28946,7 +29577,7 @@ abstract class RequestGroup implements CareProvision {
   @JsonKey(name: 'extension')
   List<dynamic> get fhirExtension;
   List<dynamic> get modifierExtension;
-  List<dynamic> get identifier;
+  List<Identifier> get identifier;
   List<Canonical> get instantiatesCanonical;
   List<FhirUri> get instantiatesUri;
   List<dynamic> get basedOn;
@@ -28960,9 +29591,9 @@ abstract class RequestGroup implements CareProvision {
   Reference get encounter;
   FhirDateTime get authoredOn;
   Reference get author;
-  List<dynamic> get reasonCode;
+  List<CodeableConcept> get reasonCode;
   List<dynamic> get reasonReference;
-  List<dynamic> get note;
+  List<Annotation> get note;
   List<dynamic> get action;
   @override
   $RequestGroupCopyWith<RequestGroup> get copyWith;
@@ -28983,7 +29614,7 @@ abstract class $RequestGroupActionCopyWith<$Res>
       String description,
       String textEquivalent,
       Code priority,
-      List<dynamic> code,
+      List<CodeableConcept> code,
       List<dynamic> documentation,
       List<dynamic> condition,
       List<dynamic> relatedAction,
@@ -29002,6 +29633,13 @@ abstract class $RequestGroupActionCopyWith<$Res>
       Code cardinalityBehavior,
       Reference resource,
       List<dynamic> action});
+
+  $AgeCopyWith<$Res> get timingAge;
+  $PeriodCopyWith<$Res> get timingPeriod;
+  $DurationCopyWith<$Res> get timingDuration;
+  $RangeCopyWith<$Res> get timingRange;
+  $TimingCopyWith<$Res> get timingTiming;
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 class _$RequestGroupActionCopyWithImpl<$Res>
@@ -29060,7 +29698,7 @@ class _$RequestGroupActionCopyWithImpl<$Res>
           ? _value.textEquivalent
           : textEquivalent as String,
       priority: priority == freezed ? _value.priority : priority as Code,
-      code: code == freezed ? _value.code : code as List<dynamic>,
+      code: code == freezed ? _value.code : code as List<CodeableConcept>,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as List<dynamic>,
@@ -29106,6 +29744,66 @@ class _$RequestGroupActionCopyWithImpl<$Res>
       resource: resource == freezed ? _value.resource : resource as Reference,
       action: action == freezed ? _value.action : action as List<dynamic>,
     ));
+  }
+
+  @override
+  $AgeCopyWith<$Res> get timingAge {
+    if (_value.timingAge == null) {
+      return null;
+    }
+    return $AgeCopyWith<$Res>(_value.timingAge, (value) {
+      return _then(_value.copyWith(timingAge: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res> get timingPeriod {
+    if (_value.timingPeriod == null) {
+      return null;
+    }
+    return $PeriodCopyWith<$Res>(_value.timingPeriod, (value) {
+      return _then(_value.copyWith(timingPeriod: value));
+    });
+  }
+
+  @override
+  $DurationCopyWith<$Res> get timingDuration {
+    if (_value.timingDuration == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.timingDuration, (value) {
+      return _then(_value.copyWith(timingDuration: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get timingRange {
+    if (_value.timingRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.timingRange, (value) {
+      return _then(_value.copyWith(timingRange: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res> get timingTiming {
+    if (_value.timingTiming == null) {
+      return null;
+    }
+    return $TimingCopyWith<$Res>(_value.timingTiming, (value) {
+      return _then(_value.copyWith(timingTiming: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    if (_value.type == null) {
+      return null;
+    }
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
   }
 }
 
@@ -29161,7 +29859,7 @@ class _$RequestGroupAction implements RequestGroupAction {
   @override
   final Code priority;
   @override
-  final List<dynamic> code;
+  final List<CodeableConcept> code;
   @override
   final List<dynamic> documentation;
   @override
@@ -29329,7 +30027,7 @@ class _$RequestGroupAction implements RequestGroupAction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -29355,7 +30053,7 @@ class _$RequestGroupAction implements RequestGroupAction {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -29374,7 +30072,7 @@ class _$RequestGroupAction implements RequestGroupAction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -29386,12 +30084,12 @@ class _$RequestGroupAction implements RequestGroupAction {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -29415,7 +30113,7 @@ class _$RequestGroupAction implements RequestGroupAction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -29423,11 +30121,11 @@ class _$RequestGroupAction implements RequestGroupAction {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -29442,15 +30140,15 @@ class _$RequestGroupAction implements RequestGroupAction {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -29463,10 +30161,10 @@ class _$RequestGroupAction implements RequestGroupAction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -29477,8 +30175,8 @@ class _$RequestGroupAction implements RequestGroupAction {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -29506,7 +30204,7 @@ class _$RequestGroupAction implements RequestGroupAction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -29516,22 +30214,22 @@ class _$RequestGroupAction implements RequestGroupAction {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -29553,7 +30251,7 @@ class _$RequestGroupAction implements RequestGroupAction {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -29589,14 +30287,14 @@ class _$RequestGroupAction implements RequestGroupAction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -29609,14 +30307,14 @@ class _$RequestGroupAction implements RequestGroupAction {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -29627,7 +30325,7 @@ class _$RequestGroupAction implements RequestGroupAction {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -29654,25 +30352,25 @@ class _$RequestGroupAction implements RequestGroupAction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -29687,7 +30385,7 @@ class _$RequestGroupAction implements RequestGroupAction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -29701,9 +30399,9 @@ class _$RequestGroupAction implements RequestGroupAction {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -29715,7 +30413,7 @@ class _$RequestGroupAction implements RequestGroupAction {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -29818,7 +30516,7 @@ class _$RequestGroupAction implements RequestGroupAction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -29843,7 +30541,7 @@ class _$RequestGroupAction implements RequestGroupAction {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -29860,7 +30558,7 @@ class _$RequestGroupAction implements RequestGroupAction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -29872,12 +30570,12 @@ class _$RequestGroupAction implements RequestGroupAction {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -29899,7 +30597,7 @@ class _$RequestGroupAction implements RequestGroupAction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -29907,11 +30605,11 @@ class _$RequestGroupAction implements RequestGroupAction {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -29926,15 +30624,15 @@ class _$RequestGroupAction implements RequestGroupAction {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -29946,10 +30644,10 @@ class _$RequestGroupAction implements RequestGroupAction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -29960,8 +30658,8 @@ class _$RequestGroupAction implements RequestGroupAction {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -29987,7 +30685,7 @@ class _$RequestGroupAction implements RequestGroupAction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -29997,21 +30695,21 @@ class _$RequestGroupAction implements RequestGroupAction {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -30030,7 +30728,7 @@ class _$RequestGroupAction implements RequestGroupAction {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -30063,14 +30761,14 @@ class _$RequestGroupAction implements RequestGroupAction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -30083,13 +30781,13 @@ class _$RequestGroupAction implements RequestGroupAction {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -30099,7 +30797,7 @@ class _$RequestGroupAction implements RequestGroupAction {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -30125,24 +30823,24 @@ class _$RequestGroupAction implements RequestGroupAction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -30156,7 +30854,7 @@ class _$RequestGroupAction implements RequestGroupAction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -30170,9 +30868,9 @@ class _$RequestGroupAction implements RequestGroupAction {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -30183,7 +30881,7 @@ class _$RequestGroupAction implements RequestGroupAction {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -30365,7 +31063,7 @@ abstract class RequestGroupAction implements CareProvision {
       String description,
       String textEquivalent,
       Code priority,
-      List<dynamic> code,
+      List<CodeableConcept> code,
       List<dynamic> documentation,
       List<dynamic> condition,
       List<dynamic> relatedAction,
@@ -30398,7 +31096,7 @@ abstract class RequestGroupAction implements CareProvision {
   String get description;
   String get textEquivalent;
   Code get priority;
-  List<dynamic> get code;
+  List<CodeableConcept> get code;
   List<dynamic> get documentation;
   List<dynamic> get condition;
   List<dynamic> get relatedAction;
@@ -30544,7 +31242,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -30570,7 +31268,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -30589,7 +31287,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -30601,12 +31299,12 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -30630,7 +31328,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -30638,11 +31336,11 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -30657,15 +31355,15 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -30678,10 +31376,10 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -30692,8 +31390,8 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -30721,7 +31419,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -30731,22 +31429,22 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -30768,7 +31466,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -30804,14 +31502,14 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -30824,14 +31522,14 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -30842,7 +31540,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -30869,25 +31567,25 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -30902,7 +31600,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -30916,9 +31614,9 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -30930,7 +31628,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -31007,7 +31705,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -31032,7 +31730,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -31049,7 +31747,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -31061,12 +31759,12 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -31088,7 +31786,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -31096,11 +31794,11 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -31115,15 +31813,15 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -31135,10 +31833,10 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -31149,8 +31847,8 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -31176,7 +31874,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -31186,21 +31884,21 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -31219,7 +31917,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -31252,14 +31950,14 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -31272,13 +31970,13 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -31288,7 +31986,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -31314,24 +32012,24 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -31345,7 +32043,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -31359,9 +32057,9 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -31372,7 +32070,7 @@ class _$RequestGroupCondition implements RequestGroupCondition {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
@@ -31554,6 +32252,9 @@ abstract class $RequestGroupRelatedActionCopyWith<$Res>
       Code relationship,
       Duration offsetDuration,
       Range offsetRange});
+
+  $DurationCopyWith<$Res> get offsetDuration;
+  $RangeCopyWith<$Res> get offsetRange;
 }
 
 class _$RequestGroupRelatedActionCopyWithImpl<$Res>
@@ -31594,6 +32295,26 @@ class _$RequestGroupRelatedActionCopyWithImpl<$Res>
       offsetRange:
           offsetRange == freezed ? _value.offsetRange : offsetRange as Range,
     ));
+  }
+
+  @override
+  $DurationCopyWith<$Res> get offsetDuration {
+    if (_value.offsetDuration == null) {
+      return null;
+    }
+    return $DurationCopyWith<$Res>(_value.offsetDuration, (value) {
+      return _then(_value.copyWith(offsetDuration: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res> get offsetRange {
+    if (_value.offsetRange == null) {
+      return null;
+    }
+    return $RangeCopyWith<$Res>(_value.offsetRange, (value) {
+      return _then(_value.copyWith(offsetRange: value));
+    });
   }
 }
 
@@ -31688,7 +32409,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Code status,
             FhirDateTime created,
             Reference patient,
@@ -31714,7 +32435,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             Quantity duration,
             String color,
             String brand,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result visionPrescriptionPrism(
             String id,
@@ -31733,7 +32454,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             Reference basedOn,
             Reference parent,
             Code status,
@@ -31745,12 +32466,12 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             Period occurrencePeriod,
             Reference condition,
             Reference performer,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> basis,
             List<dynamic> prediction,
             String mitigation,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result riskAssessmentPrediction(
             String id,
@@ -31774,7 +32495,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -31782,11 +32503,11 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             Identifier requisition,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             Code priority,
             bool doNotPerform,
             CodeableConcept code,
-            List<dynamic> orderDetail,
+            List<CodeableConcept> orderDetail,
             Quantity quantityQuantity,
             Ratio quantityRatio,
             Range quantityRange,
@@ -31801,15 +32522,15 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             Reference requester,
             CodeableConcept performerType,
             List<dynamic> performer,
-            List<dynamic> locationCode,
+            List<CodeableConcept> locationCode,
             List<dynamic> locationReference,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> insurance,
             List<dynamic> supportingInfo,
             List<dynamic> specimen,
-            List<dynamic> bodySite,
-            List<dynamic> note,
+            List<CodeableConcept> bodySite,
+            List<Annotation> note,
             String patientInstruction,
             List<dynamic> relevantHistory),
     @required
@@ -31822,10 +32543,10 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             GoalLifecycleStatus lifecycleStatus,
             CodeableConcept achievementStatus,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             CodeableConcept priority,
             CodeableConcept description,
             Reference subject,
@@ -31836,8 +32557,8 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             String statusReason,
             Reference expressedBy,
             List<dynamic> addresses,
-            List<dynamic> note,
-            List<dynamic> outcomeCode,
+            List<Annotation> note,
+            List<CodeableConcept> outcomeCode,
             List<dynamic> outcomeReference),
     @required
         Result goalTarget(
@@ -31865,7 +32586,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<FhirUri> instantiates,
@@ -31875,22 +32596,22 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             FhirDateTime dateTime,
             Reference orderer,
             List<dynamic> allergyIntolerance,
-            List<dynamic> foodPreferenceModifier,
-            List<dynamic> excludeFoodModifier,
+            List<CodeableConcept> foodPreferenceModifier,
+            List<CodeableConcept> excludeFoodModifier,
             NutritionOrderOralDiet oralDiet,
             List<dynamic> supplement,
             NutritionOrderEnteralFormula enteralFormula,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result nutritionOrderOralDiet(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> type,
-            List<dynamic> schedule,
+            List<CodeableConcept> type,
+            List<Timing> schedule,
             List<dynamic> nutrient,
             List<dynamic> texture,
-            List<dynamic> fluidConsistencyType,
+            List<CodeableConcept> fluidConsistencyType,
             String instruction),
     @required
         Result nutritionOrderNutrient(
@@ -31912,7 +32633,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             CodeableConcept type,
             String productName,
-            List<dynamic> schedule,
+            List<Timing> schedule,
             Quantity quantity,
             String instruction),
     @required
@@ -31948,14 +32669,14 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<dynamic> basedOn,
             List<dynamic> replaces,
             List<dynamic> partOf,
             Code status,
             Code intent,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String title,
             String description,
             Reference subject,
@@ -31968,14 +32689,14 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             List<dynamic> supportingInfo,
             List<dynamic> goal,
             List<dynamic> activity,
-            List<dynamic> note),
+            List<Annotation> note),
     @required
         Result carePlanActivity(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> outcomeCodeableConcept,
-            List<dynamic> progress,
+            List<CodeableConcept> outcomeCodeableConcept,
+            List<Annotation> progress,
             Reference reference,
             CarePlanDetail detail),
     @required
@@ -31986,7 +32707,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             CodeableConcept code,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> goal,
             CarePlanDetailStatus status,
@@ -32013,25 +32734,25 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             CareTeamStatus status,
-            List<dynamic> category,
+            List<CodeableConcept> category,
             String name,
             Reference subject,
             Reference encounter,
             Period period,
             List<dynamic> participant,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
             List<dynamic> managingOrganization,
-            List<dynamic> telecom,
-            List<dynamic> note),
+            List<ContactPoint> telecom,
+            List<Annotation> note),
     @required
         Result careTeamParticipant(
             String id,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> role,
+            List<CodeableConcept> role,
             Reference member,
             Reference onBehalfOf,
             Period period),
@@ -32046,7 +32767,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             List<dynamic> contained,
             @JsonKey(name: 'extension') List<dynamic> fhirExtension,
             List<dynamic> modifierExtension,
-            List<dynamic> identifier,
+            List<Identifier> identifier,
             List<Canonical> instantiatesCanonical,
             List<FhirUri> instantiatesUri,
             List<dynamic> basedOn,
@@ -32060,9 +32781,9 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             Reference encounter,
             FhirDateTime authoredOn,
             Reference author,
-            List<dynamic> reasonCode,
+            List<CodeableConcept> reasonCode,
             List<dynamic> reasonReference,
-            List<dynamic> note,
+            List<Annotation> note,
             List<dynamic> action),
     @required
         Result requestGroupAction(
@@ -32074,7 +32795,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
             String description,
             String textEquivalent,
             Code priority,
-            List<dynamic> code,
+            List<CodeableConcept> code,
             List<dynamic> documentation,
             List<dynamic> condition,
             List<dynamic> relatedAction,
@@ -32151,7 +32872,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Code status,
         FhirDateTime created,
         Reference patient,
@@ -32176,7 +32897,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         Quantity duration,
         String color,
         String brand,
-        List<dynamic> note),
+        List<Annotation> note),
     Result visionPrescriptionPrism(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -32193,7 +32914,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         Reference basedOn,
         Reference parent,
         Code status,
@@ -32205,12 +32926,12 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         Period occurrencePeriod,
         Reference condition,
         Reference performer,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> basis,
         List<dynamic> prediction,
         String mitigation,
-        List<dynamic> note),
+        List<Annotation> note),
     Result riskAssessmentPrediction(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
@@ -32232,7 +32953,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -32240,11 +32961,11 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         Identifier requisition,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         Code priority,
         bool doNotPerform,
         CodeableConcept code,
-        List<dynamic> orderDetail,
+        List<CodeableConcept> orderDetail,
         Quantity quantityQuantity,
         Ratio quantityRatio,
         Range quantityRange,
@@ -32259,15 +32980,15 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         Reference requester,
         CodeableConcept performerType,
         List<dynamic> performer,
-        List<dynamic> locationCode,
+        List<CodeableConcept> locationCode,
         List<dynamic> locationReference,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> insurance,
         List<dynamic> supportingInfo,
         List<dynamic> specimen,
-        List<dynamic> bodySite,
-        List<dynamic> note,
+        List<CodeableConcept> bodySite,
+        List<Annotation> note,
         String patientInstruction,
         List<dynamic> relevantHistory),
     Result goal(
@@ -32279,10 +33000,10 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         GoalLifecycleStatus lifecycleStatus,
         CodeableConcept achievementStatus,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         CodeableConcept priority,
         CodeableConcept description,
         Reference subject,
@@ -32293,8 +33014,8 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         String statusReason,
         Reference expressedBy,
         List<dynamic> addresses,
-        List<dynamic> note,
-        List<dynamic> outcomeCode,
+        List<Annotation> note,
+        List<CodeableConcept> outcomeCode,
         List<dynamic> outcomeReference),
     Result goalTarget(
         String id,
@@ -32320,7 +33041,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<FhirUri> instantiates,
@@ -32330,21 +33051,21 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         FhirDateTime dateTime,
         Reference orderer,
         List<dynamic> allergyIntolerance,
-        List<dynamic> foodPreferenceModifier,
-        List<dynamic> excludeFoodModifier,
+        List<CodeableConcept> foodPreferenceModifier,
+        List<CodeableConcept> excludeFoodModifier,
         NutritionOrderOralDiet oralDiet,
         List<dynamic> supplement,
         NutritionOrderEnteralFormula enteralFormula,
-        List<dynamic> note),
+        List<Annotation> note),
     Result nutritionOrderOralDiet(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> type,
-        List<dynamic> schedule,
+        List<CodeableConcept> type,
+        List<Timing> schedule,
         List<dynamic> nutrient,
         List<dynamic> texture,
-        List<dynamic> fluidConsistencyType,
+        List<CodeableConcept> fluidConsistencyType,
         String instruction),
     Result nutritionOrderNutrient(
         String id,
@@ -32363,7 +33084,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         CodeableConcept type,
         String productName,
-        List<dynamic> schedule,
+        List<Timing> schedule,
         Quantity quantity,
         String instruction),
     Result nutritionOrderEnteralFormula(
@@ -32396,14 +33117,14 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<dynamic> basedOn,
         List<dynamic> replaces,
         List<dynamic> partOf,
         Code status,
         Code intent,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String title,
         String description,
         Reference subject,
@@ -32416,13 +33137,13 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         List<dynamic> supportingInfo,
         List<dynamic> goal,
         List<dynamic> activity,
-        List<dynamic> note),
+        List<Annotation> note),
     Result carePlanActivity(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> outcomeCodeableConcept,
-        List<dynamic> progress,
+        List<CodeableConcept> outcomeCodeableConcept,
+        List<Annotation> progress,
         Reference reference,
         CarePlanDetail detail),
     Result carePlanDetail(
@@ -32432,7 +33153,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         CodeableConcept code,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> goal,
         CarePlanDetailStatus status,
@@ -32458,24 +33179,24 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         CareTeamStatus status,
-        List<dynamic> category,
+        List<CodeableConcept> category,
         String name,
         Reference subject,
         Reference encounter,
         Period period,
         List<dynamic> participant,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
         List<dynamic> managingOrganization,
-        List<dynamic> telecom,
-        List<dynamic> note),
+        List<ContactPoint> telecom,
+        List<Annotation> note),
     Result careTeamParticipant(
         String id,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> role,
+        List<CodeableConcept> role,
         Reference member,
         Reference onBehalfOf,
         Period period),
@@ -32489,7 +33210,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         List<dynamic> contained,
         @JsonKey(name: 'extension') List<dynamic> fhirExtension,
         List<dynamic> modifierExtension,
-        List<dynamic> identifier,
+        List<Identifier> identifier,
         List<Canonical> instantiatesCanonical,
         List<FhirUri> instantiatesUri,
         List<dynamic> basedOn,
@@ -32503,9 +33224,9 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         Reference encounter,
         FhirDateTime authoredOn,
         Reference author,
-        List<dynamic> reasonCode,
+        List<CodeableConcept> reasonCode,
         List<dynamic> reasonReference,
-        List<dynamic> note,
+        List<Annotation> note,
         List<dynamic> action),
     Result requestGroupAction(
         String id,
@@ -32516,7 +33237,7 @@ class _$RequestGroupRelatedAction implements RequestGroupRelatedAction {
         String description,
         String textEquivalent,
         Code priority,
-        List<dynamic> code,
+        List<CodeableConcept> code,
         List<dynamic> documentation,
         List<dynamic> condition,
         List<dynamic> relatedAction,
